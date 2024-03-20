@@ -13,6 +13,6 @@ replace_path="common/country_tag_aliases"
 tags={
 	"Historical"
 }
-name="Hoi-Ice-and-Fire-Content-Mod - Github"
+name="A-Hoi-Ice-and-Fire-Content-Mod - Github"
 supported_version="1.14.1"
 remote_file_id="1161161166"
