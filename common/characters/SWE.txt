@@ -1,0 +1,55 @@
+characters={
+
+	VAL_jonarryn={
+		name=SWE_per_albin_hansson
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_per_albin_hansson
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	VAL_eonhunter={
+		name="Eon Hunter"
+		portraits={
+			army={
+				large="gfx/leaders/SWE/Portrait_Eon_Hunter.dds"
+				small=GFX_idea_eonhunter
+			}
+			civilian={
+				large="gfx/leaders/SWE/Portrait_Eon_Hunter.dds"
+				small=GFX_idea_eonhunter
+			}
+		}
+		corps_commander={
+			traits={ old_guard infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = VAL_eonhunter
+			ledger = army
+			cost = 100
+			allowed  = {
+					original_tag  = SWE
+				}
+				available  = {
+#					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				traits  = {
+					army_cavalry_2
+				}
+		}
+	}
+
+}

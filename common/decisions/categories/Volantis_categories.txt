@@ -1,0 +1,81 @@
+##########################
+#### Volantis + Essos ####
+##########################
+
+VOL_slaver_leader = {
+	
+	allowed = {
+		original_tag = POR
+	}
+
+	visible = {
+		POR = { has_completed_focus = VOL_allyslaversbay }
+	}
+}
+
+VOL_join_daenerys = {
+	
+	allowed = {
+		original_tag = POR
+	}
+
+	visible = {
+		POR = { has_completed_focus = VOL_slavevictory }
+		SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+	}
+}
+
+VOL_second_sons = {
+	
+#	allowed = {
+#		capital_scope = { is_on_continent = north_america } }
+#	}
+
+	visible = {
+		AND = {
+			NOT = {	has_global_flag = second_sons_not_4_hire }
+			OR = {
+				original_tag = SWI
+				original_tag = POR
+				original_tag = LUX
+				original_tag = ALB
+				original_tag = GRE
+				original_tag = LUX
+				original_tag = TUR
+				original_tag = LIT
+				original_tag = LAT
+				original_tag = EGY
+				original_tag = IRQ
+				original_tag = PER
+				original_tag = ECU	
+			}
+		}
+	}
+}
+
+VOL_golden_company = {
+	
+#	allowed = {
+#		capital_scope = { is_on_continent = north_america } }
+#	}
+
+	visible = {
+		OR = {
+			original_tag = SWI
+			original_tag = POR
+			original_tag = LUX
+			original_tag = ALB
+			original_tag = GRE
+			original_tag = LUX
+			original_tag = TUR
+			original_tag = LIT
+			original_tag = LAT
+			AND = {
+				original_tag = HUN
+				HUN = { has_completed_focus = STN_employ_golden_company }	
+			}
+		}
+	}
+}
+	
+

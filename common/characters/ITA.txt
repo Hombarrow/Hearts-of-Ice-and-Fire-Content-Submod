@@ -1,0 +1,275 @@
+characters={
+	BOL_roose={
+		name="Roose Bolton"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Roose_Bolton.dds"
+				small=GFX_idea_roose_bolton
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Roose_Bolton.dds"
+				small=GFX_idea_roose_bolton
+			}
+		}
+
+		country_leader={
+			ideology=conservatism	
+			traits={ red_kings_legacy }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=centrism	
+			traits={ red_kings_legacy }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=leninism	
+			traits={ red_kings_legacy }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+		field_marshal={
+			traits={ offensive_doctrine old_guard }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=34
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = BOL_roose
+			ledger = army
+			cost = 95
+			allowed  = {
+#					original_tag  = SOV
+#					NOT = { has_country_flag = jorah_exiled }
+				}
+				traits  = {
+					army_chief_morale_3
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	BOL_ramsay={
+		name="Ramsay Snow"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Ramsay_2_Bolton2.dds"
+				small=GFX_idea_ramsay
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Ramsay_Bolton.dds"
+				small=GFX_idea_ramsay
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ hardened_bastard }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ trickster trait_reckless }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BOL_ramsay
+			allowed  = {
+#					original_tag  = ITA
+				}
+				available  = {
+#					if  = {
+#						limit  = {
+#							has_dlc = "Man the Guns"
+#						}
+#						not  = {
+#							has_autonomy_state  = autonomy_supervised_state
+#						}
+#					}
+				}
+				traits  = {
+					prince_of_terror
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	BOL_myranda={
+		name="Myranda of the Dreadfort"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Myranda_Snow.dds"
+				small=generic_army_europe_3
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Myranda_Snow.dds"
+				small=generic_army_europe_3
+			}
+		}
+		corps_commander={
+			traits={ ranger }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	BOL_locke={
+		name="Loche"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_General_Locke.dds"
+				small=generic_army_europe_3
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_General_Locke.dds"
+				small=generic_army_europe_3
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	BOL_walda={
+		name="Walda Bolton nee Frey"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Walda.dds"
+				small=GFX_idea_walda
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Walda.dds"
+				small=GFX_idea_walda
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = BOL_walda
+
+			allowed_civil_war = {
+				NOT = { has_government = fascism }
+			}
+
+			cost = 115
+
+			allowed  = {
+				original_tag  = ITA
+			}
+
+			available  = {
+				has_completed_focus = BLT_MarryFreyGirl
+			}
+
+			traits  = {
+				frey_legacy
+			}
+
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+	}
+
+	BOL_damon={
+		name="Damon Dance-for-Me"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Damon.dds"
+				small=GFX_idea_damon
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Damon.dds"
+				small=GFX_idea_damon
+			}
+		}
+
+	}
+
+	BOL_steelshanks={
+		name="Steelshanks Walton"
+		portraits={
+			army={
+				large="gfx/leaders/ITA/Portrait_Steelshanks.dds"
+				small=GFX_idea_steelshanks
+			}
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Steelshanks.dds"
+				small=GFX_idea_steelshanks
+			}
+		}
+
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 0
+		}
+
+	}
+
+	BOL_wolkan={
+		name="Maester Wolkan"
+		portraits={
+			civilian={
+				large="gfx/leaders/ITA/Portrait_Damon.dds"
+				small=GFX_idea_wolkan
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BOL_wolkan
+			allowed = {
+				original_tag = ITA
+			}
+#			available = {
+#				has_country_flag = BUL_appointed_zveno_members_flag 
+#				NOT = {
+#					has_country_leader = {
+#						character = BUL_kimon_georgiev
+#						ruling_only = yes 
+#					}
+#				}
+#			}
+			traits = {
+				technocrat 
+			}
+			ai_will_do = {
+				factor = 3.000
+			}
+		}
+
+	}
+
+}

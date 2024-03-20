@@ -1,0 +1,11 @@
+WTT_dragons = {
+	
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+#		SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+#		NOT = { has_war_with = ISR }
+	}
+}

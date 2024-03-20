@@ -1,0 +1,157 @@
+characters={
+	SIS_stannis={
+		name="Stannis Baratheon"
+		portraits={
+			army={
+				large="gfx/leaders/HUN/Portrait_Stannis_Baratheon.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/HUN/Portrait_Stannis_Baratheon.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=socialism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=stalinism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+#		field_marshal={
+#			traits={ defensive_doctrine }
+#			traits={ brilliant_strategist offensive_doctrine war_hero }
+#			skill=4
+#			attack_skill=3
+#			defense_skill=1
+#			planning_skill=4
+#			logistics_skill=4
+#			legacy_id=-1
+#		}
+		navy_leader={
+			traits={ superior_tactician }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=-1
+		}
+		field_marshal={
+			traits={ brilliant_strategist offensive_doctrine war_hero }
+			skill=4
+			attack_skill=3
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	SIS_davos={
+		name = "Davos Seaworth"
+		portraits={
+			army={
+				large="gfx/leaders/HUN/Portrait_Ser_Davos.dds"
+				small=GFX_idea_ser_davos
+			}
+			civilian={
+				large="gfx/leaders/HUN/Portrait_Ser_Davos.dds"
+				small=GFX_idea_ser_davos
+			}
+		}
+		navy_leader={
+			traits={ seawolf blockade_runner naval_lineage }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=4
+			coordination_skill=4
+			legacy_id=-1
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SIS_davos
+			allowed = {
+				always = yes
+#				original_tag = GER
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0.100
+			}
+		}
+	}
+	SIS_melisandre={
+		name="Melisandre"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_melisandre
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_melisandre
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = SIS_melisandre
+			allowed  = {
+					original_tag  = HUN
+				}
+				available  = {
+					NOT = { has_completed_focus = SIS_sandreason }
+				}
+				traits  = {
+					worship_ruhlor
+				}
+		}
+	}
+	SIS_cressin={
+		name="Maester Cressen"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_generic_political_advisor_europe_1
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_generic_political_advisor_europe_1
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIS_cressin
+			allowed  = {
+					original_tag  = HUN
+				}
+				available  = {
+					NOT = { has_completed_focus = SIS_lordoflight }
+				}
+				traits  = {
+					democratic_reformer 
+				}
+		}
+	}
+}

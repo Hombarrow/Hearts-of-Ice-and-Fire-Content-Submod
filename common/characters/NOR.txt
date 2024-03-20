@@ -1,0 +1,30 @@
+characters={
+	KAR_rickard_karstark={
+		name="Rickard Karstark"
+		portraits={
+			army={
+				large="gfx/leaders/NOR/Portrait_Rickard_Karstark.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/NOR/Portrait_Rickard_Karstark.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ offensive_doctrine old_guard }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}

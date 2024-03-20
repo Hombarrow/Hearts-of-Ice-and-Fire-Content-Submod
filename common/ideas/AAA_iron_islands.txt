@@ -1,0 +1,578 @@
+ideas = { 
+	country = {
+		IRN_pyke_treaty = { 
+
+			picture = HUN_treaty_of_triannon
+
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			modifier = { 
+				production_speed_dockyard_factor = -0.45
+				industrial_capacity_dockyard = -0.25
+			}
+
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_quellons_achievements = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+				research_speed_factor = 0.05
+				experience_gain_navy = 0.025
+				experience_gain_army = 0.025
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_new_way = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_buildings_factor = 0.1
+			army_defence_factor = 0.05
+			army_attack_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_imperial_glory = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			
+			army_defence_factor = 0.10
+			army_attack_factor = 0.10
+			political_power_factor = 0.15
+			research_speed_factor = 0.075
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_ironborn_targaryen_loyalists_agents = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			communism_drift = 0.2
+			communism_acceptance = 85 
+			drift_defence_factor = -0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_northern_military_industry = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_factory = 0.10
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_captains_from_iron_islands = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_dockyard = 0.15
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_engineers_from_iron_islands = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_buildings_factor = 0.15
+			production_speed_dockyard_factor = 0.10
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_engineers_from_the_north = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			global_building_slots_factor = 0.10
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_superior_shipbuilding = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_dockyard_factor = 0.15
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_advanced_shipbuilding = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_dockyard_factor = 0.25
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_construction_of_dockyards = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_dockyard = 0.15
+#			global_building_slots_factor = 0.10
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_university_of_lordsport = { 
+			picture = generic_research_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			research_speed_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_ironborn_warrior_traditions = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			army_defence_factor = 0.10
+			experience_gain_army_unit_factor = 0.05
+			experience_gain_navy_unit_factor = 0.10
+			}
+		}
+
+		IRN_conscription = { 
+			removal_cost = -1 
+			picture = generic_infantry_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = 0.065
+			training_time_army_factor = -0.1
+			}
+		}
+
+		IRN_drowned_god_faith = { 
+			removal_cost = -1 
+			picture = generic_infantry_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = 0.005
+			army_morale_factor = 0.10
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_religious_reform = { 
+			removal_cost = -1 
+			picture = generic_production_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			local_building_slots_factor = 0.20
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_old_gods_followers_on_iron_islands = { 
+			removal_cost = -1 
+			picture = generic_production_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			local_resources = 0.10
+			local_manpower = 0.05
+			army_morale_factor = 0.05
+			conscription_factor = 0.25
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_followers_of_the_seven_on_iron_islands = { 
+			removal_cost = -1 
+			picture = generic_production_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			local_building_slots_factor = 0.10
+			local_manpower = 0.10
+			conscription_factor = 0.15
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_marine_traditions = { 
+			removal_cost = -1 
+			picture = generic_infantry_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_naval_base_factor = 0.33
+			army_attack_factor = 0.10
+			conscription = 0.02
+			}
+		}
+	}
+}
+
+
+
+ideas = { 
+	country = {
+		IRN_ironborn_naval_traditions = { 
+			removal_cost = -1 
+			picture = generic_navy_bonus_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_dockyard = 0.10
+			}
+				 equipment_bonus = {
+				heavy_cruiser = {
+#					attack = 0.05
+					armor_value = 0.05
+					instant = yes }
+			}
+				equipment_bonus = {
+				battle_cruiser = {
+#					attack = 0.05
+					armor_value = 0.05
+					instant = yes }
+			}
+				equipment_bonus = {
+				light_cruiser = {
+#					attack = 0.05
+					armor_value = 0.05
+					instant = yes }
+			}
+				equipment_bonus = {
+#				battleship = {
+#					attack = 0.05
+#					instant = yes }
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_ironborn_naval_conscription = { 
+			removal_cost = -1 
+			picture = generic_navy_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = 0.015
+			experience_gain_navy_unit_factor = -0.20
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_huge_naval_forces_reform = { 
+			removal_cost = -1 
+			picture = generic_navy_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			experience_gain_navy = 0.20
+			experience_gain_navy_unit_factor = 0.20
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_control_over_sunset_sea = { 
+			removal_cost = -1 
+			picture = generic_navy_bonus	
+			allowed = { always = no} 
+
+
+			 equipment_bonus = {
+				heavy_cruiser = {
+					naval_speed = 0.15
+					instant = yes }
+			}
+				equipment_bonus = {
+				battle_cruiser = {
+					naval_speed = 0.15
+					instant = yes }
+			}
+				equipment_bonus = {
+				light_cruiser = {
+					naval_speed = 0.10
+					instant = yes }
+			}
+				equipment_bonus = {
+				battleship = {
+					naval_speed = 0.15
+					instant = yes }
+			}
+				equipment_bonus = {
+				destroyer = {
+					naval_speed = 0.10
+					instant = yes }
+				}
+			
+		}
+	}
+}
+
+
+
+ideas = { 
+	country = {
+		IRN_shipbuilding_traditions = { 
+			removal_cost = -1 
+			picture = generic_navy_bonus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_dockyard_factor = 0.10
+			
+			}
+			
+			equipment_bonus = {
+				light_cruiser = {
+					build_cost_ic = -0.10
+					instant = yes }
+			}
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.10
+					instant = yes }
+				}
+				
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes }
+				}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		IRN_heavy_ships_armor = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			    equipment_bonus = {
+				battle_cruiser = {
+					armor_value = 0.10
+					instant = yes }
+			}
+				equipment_bonus = {
+				heavy_cruiser = {
+					armor_value = 0.10
+					instant = yes }
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_heavy_ships_guns = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			    equipment_bonus = {
+				battle_cruiser = {
+					fire_range = 0.10
+					shore_bombardment = 0.20
+					ap_attack = 0.05
+					attack = 0.15
+					instant = yes }
+			}
+				equipment_bonus = {
+				battleship = {
+					fire_range = 0.15
+					shore_bombardment = 0.20
+					ap_attack = 0.05
+					attack = 0.15
+					instant = yes }
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_torpedoes = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			equipment_bonus = {
+				submarine = {
+					torpedo_attack = 0.15
+					attack = 0.15
+					instant = yes }
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		IRN_develop_light_ships_mobility = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			    equipment_bonus = {
+				destroyer = {
+					evasion = 0.15
+					surface_visibility = -0.15
+					instant = yes }
+			}
+				equipment_bonus = {
+				light_cruiser = {
+					evasion = 0.10
+					surface_visibility = -0.10
+					instant = yes }
+			}
+				equipment_bonus = {
+				submarine = {
+					evasion = 0.20
+					surface_visibility = -0.20
+					sub_visibility = -0.10
+					instant = yes }
+			}
+		}
+	}
+}

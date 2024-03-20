@@ -1,0 +1,199 @@
+ideas = { 
+	country = {
+		SWI_war_loan = { 
+			picture = generic_goods_red_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = -0.10
+			production_speed_buildings_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_loan_extended = { 
+			picture = generic_goods_red_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_buildings_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.15
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		BAN_science_effort = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			research_speed_factor = -0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		BAN_military_economy = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.10
+			industrial_capacity_dockyard = 0.10
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+		BAN_fortifications = { 
+			removal_cost = -1 
+			picture = FRA_fortification_focus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_bunker_factor = 0.25
+			production_speed_coastal_bunker_factor = 0.25
+			conscription = 0.002
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+		BAN_trainings = { 
+			removal_cost = -1 	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			training_time_army_factor = -0.15
+			}
+				equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_pending_lannister_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+			modifier = { 
+			consumer_goods_factor = 0.10
+			}
+
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		SWI_pending_stark_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no}
+			modifier = { 
+			consumer_goods_factor = 0.10
+			}
+
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_repayed_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no}
+			modifier = { 
+			consumer_goods_factor = -0.20
+			research_speed_factor = -0.10
+			}
+
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_extended_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no}
+			modifier = { 
+			consumer_goods_factor = -0.10
+			research_speed_factor = -0.05
+			}
+
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_failed_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no}
+			modifier = { 
+			consumer_goods_factor = 0.25
+			research_speed_factor = 0.05
+			}
+
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SWI_paying_loan = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no}
+			modifier = { 
+			consumer_goods_factor = 0.20
+			}
+
+		}
+	}
+}

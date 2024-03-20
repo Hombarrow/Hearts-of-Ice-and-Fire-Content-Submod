@@ -1,0 +1,25 @@
+characters={
+	FER_strickland={
+		name="Harry Strickland"
+		portraits={
+			army={
+				large="gfx/leaders/GRE/Portrait_Harry_Strickland.dds"
+				small=GFX_idea_mountain
+			}
+			civilian={
+				large="gfx/leaders/GRE/Portrait_Harry_Strickland.dds"
+				small=GFX_idea_mountain
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}
+	

@@ -1,0 +1,290 @@
+TYR_quest_for_queen = {
+	hurry_wedding = {
+
+		icon = generic_political_discourse
+
+		available = {
+			IRE = { is_in_faction_with = HOL }
+		}
+
+		visible = {
+			IRE = { has_government = fascism }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 150
+
+		days_remove = 3
+		
+		complete_effect = {
+			hidden_effect = {
+				news_event = { id = news.328 days = 3 }
+				set_global_flag = margery_tommen_together
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	befriend_joffrey = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = margery_tommen_together
+			33 = { is_owned_and_controlled_by = ENG }
+			ENG = { has_country_leader = { ruling_only = yes name = "Joffrey I Baratheon" } }
+		}
+
+		visible = {
+			IRE = { has_government = fascism }
+			has_global_flag = margery_tommen_together
+		}
+
+		remove_trigger = {
+			NOT = { ENG = { has_country_leader = { ruling_only = yes name = "Joffrey I Baratheon" } } }
+		}
+		
+		fire_only_once = yes
+
+		modifier = {
+			political_power_factor = 0.50
+		}
+		
+		cost = 100
+
+		days_remove = 60
+		
+		complete_effect = {
+			ENG = { country_event = { id = ireland.5 days = 5 } }
+			hidden_effect = {
+#				set_global_flag = margery_in_kingslanding
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	feed_poor = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = margery_in_kingslanding
+			33 = { is_owned_and_controlled_by = ENG }
+		}
+
+		visible = {
+			has_global_flag = margery_in_kingslanding
+			IRE = { has_government = fascism }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+
+		days_remove = 3
+		
+		complete_effect = {
+			ENG = { country_event = { id = ireland.7 } }
+			hidden_effect = {
+#				set_global_flag = margery_popular
+			}
+		}
+		
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	help_orphans = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = margery_in_kingslanding
+			33 = { is_owned_and_controlled_by = ENG }
+			ENG = { has_war = yes }
+		}
+
+		visible = {
+			has_global_flag = margery_in_kingslanding
+			IRE = { has_government = fascism }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+		
+		complete_effect = {
+			ENG = { country_event = { id = ireland.6 } }
+			hidden_effect = {
+#				set_global_flag = margery_popular
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	poison_joffrey = {
+
+		icon = generic_army_support
+
+		available = {
+			ENG = { has_war = no }
+			ENG = { has_country_leader = { ruling_only = yes name = "Joffrey I Baratheon" } }
+#			has_global_flag = margery_in_kingslanding
+		}
+
+		visible = {
+			has_global_flag = margery_in_kingslanding
+			33 = { is_owned_and_controlled_by = ENG }
+			IRE = { has_government = fascism }
+		}
+	
+		fire_only_once = yes
+	
+		cost = 200
+		
+		complete_effect = {
+
+			if = {
+				limit = {
+					AND = {
+						NOT = { has_global_flag = margery_popular }
+						NOT = { has_global_flag = margery_very_popular }
+					}
+				} 
+				custom_effect_tooltip = help_margery_tt
+				random_list = {
+					15 = {
+						ENG = { country_event = { id = britain.10 days = 3 } }
+					}
+					85 = {
+						ENG = { country_event = { id = britain.11 days = 3 } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_global_flag = margery_popular
+						NOT = { has_global_flag = margery_very_popular }
+					}
+				} 
+				custom_effect_tooltip = help_margery_tt
+				random_list = {
+					50 = {
+						ENG = { country_event = { id = britain.10 days = 3 } }
+					}
+					50 = {
+						ENG = { country_event = { id = britain.11 days = 3 } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						has_global_flag = margery_popular
+						has_global_flag = margery_very_popular
+					}
+				} 
+				random_list = {
+					85 = {
+						ENG = { country_event = { id = britain.10 days = 3 } }
+					}
+					15 = {
+						ENG = { country_event = { id = britain.11 days = 3 } }
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				has_global_flag = margery_popular
+			}
+			modifier = {
+				factor = 140
+				has_global_flag = margery_very_popular
+			}
+		}
+	}
+
+}
+
+operations = {
+
+	TYR_margery_takes_over = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				NOT = { has_country_leader = { ruling_only = yes name = "Tommen I Baratheon" } }
+				has_civil_war = yes
+				has_war_with = IRE
+			}
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 33
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 356
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+#			NOT = { has_government = fascism  }
+#			OR = {
+				NOT = { country_exists = IRE }
+#				has_war_with = IRE
+#			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+
+			add_political_power = 150
+
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			add_political_power = -200
+			add_stability = 0.05
+
+			hidden_effect = {
+
+			}
+		}
+
+		timeout_effect = {
+			IRE = { country_event = ireland.10 }
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

@@ -1,0 +1,42 @@
+ideas = {
+
+	country = {
+
+		dothraki_bloodriders = {
+
+			picture = generic_armor
+
+			allowed_civil_war = {
+				
+			}
+		
+#		cavalry_attack_factor = 0.05
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				army_morale_factor = 0.25
+			}
+		}
+
+		dothraki_plunder = {
+			
+			picture = generic_foreign_capital
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+	}
+
+}

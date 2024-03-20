@@ -1,0 +1,29 @@
+characters={
+	QAR_thirteen={
+		name = "Council of Thirteen"
+		portraits={
+			civilian={
+				large="gfx/leaders/ISR/Portrait_Thirteen.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	QAR_Xaro={
+		name = "Xaro Xhoan Daxos"
+		portraits={
+			civilian={
+				large="gfx/leaders/ISR/Portrait_Xaro_daxhos.dds"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,61 @@
+#################
+#### Lannister ####
+#################
+
+LAN_loyalists = {
+	
+	allowed = {
+		original_tag = HOL
+	}
+
+	visible = {
+		has_completed_focus = LAN_poisoning_king
+	}
+}
+
+LAN_northrebels = {
+	
+	allowed = {
+		original_tag = HOL
+	}
+
+	visible = {
+		has_completed_focus = LAN_north_revolt
+	}
+}
+
+LAN_tribesmenvale = {
+	
+	allowed = {
+		original_tag = HOL
+	}
+
+	visible = {
+		AND = {
+			SWE = { has_completed_focus = VAL_huntClansmen }
+			SWE = { NOT = { has_idea = VAL_clansmen } }
+		}
+	}
+}
+
+LAN_purchase_equipment = {
+	icon = generic_arms_trade
+
+	allowed = {
+		original_tag = HOL
+		HOL = { has_completed_focus = LAN_iron_bank }
+#		has_dlc = "Battle for the Bosporus"
+	}
+}
+
+LAN_tyrion_stories = {
+	icon = generic_political_actions
+	
+	allowed = {
+		original_tag = HOL
+	}
+	visible = {
+		original_tag = HOL
+		NOT = { has_global_flag = tyrion_exiled }	
+	}
+}

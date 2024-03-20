@@ -1,0 +1,145 @@
+VOL_second_sons = {
+	hire_second_sons = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			NOT = { has_global_flag = secondsons_hired }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+#			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			political_power_gain = -0.7
+		}
+		
+		cost = 175
+
+		days_remove = 185
+		days_re_enable = 360
+		
+		complete_effect = {
+			custom_effect_tooltip = ssons_6inf_tt
+			if = {
+				limit = { has_tech = basic_light_tank }
+				custom_effect_tooltip = ssons_4larm_tt
+			}else = {
+				custom_effect_tooltip = ssons_4cav_tt
+			}
+
+			hidden_effect = {
+				country_event = { id = baltic.3 days = 1 }
+				set_global_flag = secondsons_hired
+			}
+		}
+		remove_effect = {
+			country_event = { id = baltic.5 }
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	bribe_second_sons = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			Root = { NOT = { has_country_flag = ssons_hired } }
+			any_enemy_country = { has_country_flag = ssons_hired }
+#			every_country = { limit = { has_country_flag = ssons_hired }
+#			has_war_with = Root }
+		}
+
+		visible = {
+#			every_country = { limit = { has_country_flag = ssons_hired }
+#			has_war_with = Root }
+		}
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.15
+		}
+		
+		cost = 200
+
+		days_remove = 30
+		days_re_enable = 360
+		
+		complete_effect = {
+			every_country = { limit = { has_country_flag = ssons_hired }
+			country_event = { id = baltic.7 days = 1 } }
+		}
+		remove_effect = {
+#			clr_global_flag = secondsons_hired
+#			country_event = { id = baltic.2 }
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+}
+
+VOL_golden_company = {
+	hire_golden_company = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			NOT = { has_global_flag = goldencompany_hired }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+#			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = no
+
+		modifier = {
+			consumer_goods_factor = 0.2
+			political_power_gain = -0.5
+		}
+		
+		cost = 400
+
+		days_remove = 185
+		days_re_enable = 360
+		
+		complete_effect = {
+			custom_effect_tooltip = gc_10inf_tt
+			custom_effect_tooltip = gc_4cav_tt
+			if = {
+				limit = { has_tech = basic_heavy_tank }
+				custom_effect_tooltip = gc_2harm_tt
+			}
+
+			hidden_effect = {
+				country_event = { id = baltic.1 days = 1 }
+				set_global_flag = goldencompany_hired
+			}
+		}
+		remove_effect = {
+			clr_global_flag = goldencompany_hired
+			country_event = { id = baltic.2 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+}

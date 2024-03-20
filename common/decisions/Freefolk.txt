@@ -1,0 +1,326 @@
+political_actions = {
+	
+	ff_pass_thewall = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			original_tag = USA
+			has_global_flag = wildlings_can_pass
+			DEN = { NOT =  { has_war_with = CAN } }
+		}
+
+		visible = {
+			original_tag = DEN
+			has_global_flag = wildlings_can_pass
+			NOT = { 142 = { is_owned_by = DEN } }
+		}
+
+#		target_trigger = { 
+#			exists = yes
+#			FROM = { is_neighbor_of = ROOT }
+#		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+#			limit = { every_country = { 142 = { is_owned_by = Root } }
+#			owner = 142
+			limit = { all_country = { owns_state = 142 }
+			PREV = { country_event = { id = freefolk.5 days = 5 } } }
+			DEN = {
+				transfer_state = 142
+				add_state_core = 142
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+}
+
+DEN_go_south = {
+
+	DEN_south_or_die = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				DEN = { controls_state = 466 }
+				DEN = { controls_state = 468 }
+				any_allied_country = { controls_state = 466 }
+				any_allied_country = { controls_state = 468 }
+			}
+#			has_war_with = ENG
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 466
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_war_with = GER
+#			NOT = { has_war_with = ENG }
+			hidden_trigger = {
+#				OR = {
+#					NOT = { GER_has_mefo_bills = yes }
+#					has_idea = GER_mefo_bills_ended
+#				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+#			OR = {
+				466 = { is_controlled_by = DEN }
+#				468 = { is_controlled_by = DEN }
+#			}
+#			DEN = {	country_event = britain.1 }
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+#			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			add_political_power = 400
+			country_event = freefolk.4
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			DEN = {	country_event = freefolk.7 }		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	evac_hardhome = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			DEN = { controls_state = 331 }
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 331
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 200
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.8 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	evac_supplyroute = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			DEN = { controls_state = 331 }
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 331
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 75
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.9 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	evac_thenn = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			DEN = { controls_state = 357 }
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 357
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 180
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.10 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	evac_mines_thenn = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			DEN = { controls_state = 357 }
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 357
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 120
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.11 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	evac_industry = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			OR = {
+				DEN = { controls_state = 331 }
+				DEN = { controls_state = 357 }
+				DEN = { controls_state = 464 }
+			}
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 464
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 250
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.12 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	evac_civilians = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = wildlings_in_gift
+			OR = {
+				DEN = { controls_state = 464 }
+				DEN = { controls_state = 379 }
+				DEN = { controls_state = 125 }
+			}
+			DEN = { controls_state = 142 }
+		}
+
+		visible = {
+			has_country_flag = wildlings_in_gift
+		}
+
+		highlight_states = {
+			state = 125
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 15
+	
+		cost = 75
+		
+		complete_effect = {
+			ROOT = { country_event = { id = freefolk.13 days = 15 } }
+		}
+		
+		ai_will_do = {
+			factor = 40
+		}
+	}
+			
+}

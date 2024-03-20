@@ -1,0 +1,28 @@
+ideas = { 
+	country = {
+		SWI_braavos_mercs = { 
+			picture = generic_volunteer_expedition_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			send_volunteers_tension = -0.75
+			send_volunteer_divisions_required = -0.25
+			}
+		}
+
+		VOL_draft_excuse = { 
+			picture = generic_pp_unity_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = -0.01
+			}
+		}
+	}
+}

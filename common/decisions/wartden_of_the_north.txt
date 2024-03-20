@@ -1,0 +1,69 @@
+#Lannister puppets
+
+Warden_north = {
+	control_north = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = warden_of_north
+		}
+
+#		days_mission_timeout = MAN_main_control_timer?180
+
+		visible = {
+			has_country_flag = warden_of_north
+#			NOT = { has_government = fascism }
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 20
+	
+		cost = 200
+
+#		timeout_effect = {
+#			custom_effect_tooltip = MAN_hunt_down_northern_bandits_tt
+#			army_experience = 10
+#			ROOT = { country_event = { id = ireland.5 days = 5 } }
+#		}
+		
+		complete_effect = {
+			ROOT = { country_event = { id = wardennorth.1 days = 20 } }
+		}
+		
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	control_winterfell = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_flag = warden_of_north
+		}
+
+#		days_mission_timeout = MAN_main_control_timer?180
+
+		visible = {
+			has_country_flag = warden_of_north
+#			NOT = { has_government = fascism }
+		}
+	
+		fire_only_once = yes
+
+		days_remove = 25
+	
+		cost = 250
+		
+		complete_effect = {
+			ROOT = { country_event = { id = wardennorth.2 days = 25 } }
+		}
+		
+		ai_will_do = {
+			factor = 60
+		}
+	}
+}

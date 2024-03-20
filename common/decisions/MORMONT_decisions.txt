@@ -1,0 +1,48 @@
+political_actions = {
+	
+	recruit_lyanna = {
+
+		icon = generic_army_support
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Lyanna Mormont" }
+		}
+
+		visible = {
+			original_tag = BUL
+			has_country_leader = { ruling_only = yes name = "Lyanna Mormont" }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 3
+
+		complete_effect = {
+
+			
+create_field_marshal = {
+				name = "Lyanna Mormont"
+				picture = "Portrait_Lyanna_Mormont.dds"
+
+	
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+
+			hidden_effect = {
+#				ROM = { country_event = { id = ironborn.23 } }
+			}
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+	}
+			
+}

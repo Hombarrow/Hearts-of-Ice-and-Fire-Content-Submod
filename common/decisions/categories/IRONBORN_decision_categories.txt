@@ -1,0 +1,13 @@
+IRN_sneak_attacks = {
+	allowed = {
+		original_tag = ROM
+	}
+	icon = revolt
+	visible = {
+		OR = {
+			ROM = { has_completed_focus = IRN_nobody_is_safe }
+			ROM = { has_completed_focus = IRN_proclaim_overlordship_over_westerlands }
+			ROM = { has_completed_focus = IRN_proclaim_overlordship_over_north }	
+		}
+	}
+}

@@ -1,0 +1,26 @@
+ideas = {
+
+	# MILITARY
+	high_command = {
+#		nymeria = {
+			
+#			picture = idea_nymeria
+			
+#			allowed = {
+#				original_tag = SPR
+#			}
+			
+#			available = {
+#				has_completed_focus = MRT_sandsnakes
+#			}
+			
+#			traits = { army_regrouping_2 }
+			
+#			ai_will_do = {
+#				factor = 1
+#			}
+#		}
+
+	}
+
+}

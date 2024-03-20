@@ -1,0 +1,56 @@
+characters={
+
+	WTT_night_king={
+		name = "The Night King"
+		desc = "POLITICS_NIGHT_KING_DESC"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Night_King.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Night_King.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ mistery_other }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine offensive_doctrine }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	WTT_daryl={
+		name = "Darius"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Daryl.dds"
+				small=GFX_idea_daryl
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Daryl.dds"
+				small=GFX_idea_daryl
+			}
+		}
+		corps_commander={
+			traits = { trickster panzer_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+
+}

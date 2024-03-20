@@ -1,0 +1,232 @@
+ideas = { 
+	country = {
+		STN_funds_from_braavos_for_city = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_industrial_complex_factor  = 0.15
+			production_speed_arms_factory_factor  = 0.15
+			production_speed_dockyard_factor  = 0.15
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_time_to_pay_debts = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_industrial_complex_factor  = -0.15
+			production_speed_arms_factory_factor  = -0.10
+			economy_cost_factor = 0.25 
+			mobilization_laws_cost_factor = 0.25 
+			consumer_goods_factor = 0.15 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_paying_by_their_debts = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = -0.15 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_paying_for_factories = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = 0.15 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_new_strong_realm = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			stability_factor = 0.10 
+			non_core_manpower = 0.10
+			army_core_defence_factor = 0.1 
+			army_core_attack_factor = 0.1 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_glory_of_the_battle_of_fair_isle = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			naval_hit_chance = 0.10
+			naval_coordination = 0.02
+			navy_capital_ship_attack_factor = 0.075
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		STN_storms_end_siege = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			out_of_supply_factor = -0.15
+			supply_consumption_factor = -0.05 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_paying_to_ironborns = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = 0.15 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_paying_to_ibbennians = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = 0.15 
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_paying_to_mercenaries = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_researches_speeded_up = { 
+			picture = generic_research_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			research_speed_factor = 0.075
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_ironborns_helping_managing_our_shipbuilding = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_dockyard = 0.25
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_military_factories_producing_equipment_for_ironborns = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_factory = -0.20
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STN_army_mobilisation = { 
+			picture = generic_army_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = 0.05
+			non_core_manpower = 0.04 
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+#################
+#### Stark ####
+#################
+
+STR_contingency_skaagos = {
+	
+	allowed = {
+		original_tag = FIN
+	}
+
+	visible = {
+#		SWE = { has_completed_focus = VAL_knightsoftheVale }
+	}
+}

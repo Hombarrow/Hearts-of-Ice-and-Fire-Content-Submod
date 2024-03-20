@@ -1,0 +1,1802 @@
+focus_tree = {
+	id = dorne_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = { 
+		id = MRT_army_focus
+		icon = GFX_goal_rhineland
+		x = 16
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			army_experience = 10				
+   		}
+	}
+
+	focus = {
+		id = MRT_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MRT_army_focus }
+		x = -1
+		y = 1
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+	
+		focus = {
+		id = MRT_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MRT_doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = MRT_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = MRT_doctrine_effort_3
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MRT_doctrine_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = MRT_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = MRT_support_batallions
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = MRT_army_focus }
+		x = 1
+		y = 1
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = MRT_infantry_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MRT_army_focus }
+		x = -3
+		y = 1
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = MRT_artillery_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = MRT_infantry_equipment_effort }
+		x = -3
+		y = 2
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = MRT_new_weapons
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = MRT_artillery_effort }
+		x = -3
+		y = 3
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+			
+		}
+	}
+		
+	focus = {
+		id = MRT_consolidate_nation
+		icon = GFX_goal_generic_national_unity
+		x = 9
+		y = 0
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = MRT_stony_dornishmens
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MRT_consolidate_nation }
+		x = -4
+		y = 1
+		relative_position_id = MRT_consolidate_nation
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = MRT_stony_dornishmens
+		}
+	}
+	
+	focus = {
+	id = MRT_orphans_of_the_greenblood
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = MRT_consolidate_nation }
+	x = -2
+	y = 1
+		relative_position_id = MRT_consolidate_nation
+	cost = 10
+
+	available_if_capitulated = yes
+	completion_reward = {
+		add_political_power = 50
+		}
+	}
+		
+		
+	focus = {
+	id = MRT_sandy_dornishmens
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = MRT_consolidate_nation }
+	x = 0
+	y = 1
+	relative_position_id = MRT_consolidate_nation
+	cost = 10
+
+	available_if_capitulated = yes
+	completion_reward = {
+		add_political_power = 25
+		add_ideas = MRT_sandy_dornishmens
+		}
+	}
+	
+	focus = {
+	id = MRT_salty_dornishmens
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = MRT_consolidate_nation }
+	prerequisite = { focus = MRT_navy_focus }
+	x = 4
+	y = 1
+	relative_position_id = MRT_consolidate_nation
+	cost = 10
+
+	available_if_capitulated = yes
+	completion_reward = {
+		add_political_power = 25
+		add_ideas = MRT_salty_dornishmens
+		}
+	}
+	
+	focus = {
+		id = MRT_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MRT_stony_dornishmens }
+		x = -1
+		y = 1
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = MRT_arms_factories_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MRT_arms_factories }
+		x = -1
+		y = 2
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			add_ideas = MRT_arms_factories_building
+		}
+	}
+	
+		focus = {
+		id = MRT_arms_factories_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MRT_arms_factories_2 }
+		x = -1
+		y = 3
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = MRT_military_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MRT_arms_factories_3 }
+		x = -1
+		y = 4
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MRT_red_mountains_mountaineers
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MRT_stony_dornishmens }
+		mutually_exclusive = { focus = MRT_desert_cavalry }
+		x = 1
+		y = 2
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        set_technology = { red_mountain_warriors = 1 }  
+		}
+	}
+	
+	focus = {
+		id = MRT_desert_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MRT_sandy_dornishmens }
+		mutually_exclusive = { focus = MRT_red_mountains_mountaineers }
+		x = 3
+		y = 2
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		if = {
+			limit = {
+				has_dlc = "Battle for the Bosporus"
+			}
+			set_technology = { camelry = 1 }
+		}
+		else = { set_technology = { desert_cavalry = 1 } }
+
+		}
+	}
+	
+		focus = {
+		id = MRT_mountain_warfare
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MRT_red_mountains_mountaineers }
+		x = 1
+		y = 3
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        set_technology = { mountain_warfare = 1 }  
+		}
+	}	
+	
+		focus = {
+		id = MRT_plain_warfare
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MRT_desert_cavalry }
+		x = 3
+		y = 3
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        set_technology = { plain_warfare = 1 }  
+		}
+	}	
+	
+	focus = {
+		id = MRT_inf_equipment_defensive_mod
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MRT_mountain_warfare }
+		x = 1
+		y = 4
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        add_ideas = MRT_defensive_modification 
+		}
+	}	
+	
+		focus = {
+		id = MRT_inf_equipment_offensive_mod
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MRT_plain_warfare }
+		x = 3
+		y = 4
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        add_ideas = MRT_offensive_modification
+		}
+	}	
+	
+		focus = {
+		id = MRT_defence_in_depth
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = MRT_inf_equipment_offensive_mod  focus = MRT_inf_equipment_defensive_mod }
+		x = 2
+		y = 5
+		relative_position_id = MRT_stony_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        add_ideas = MRT_defence_in_depth
+		}
+	}	
+	
+	
+	focus = {
+		id = MRT_industrial_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MRT_sandy_dornishmens }
+		x = 1
+		y = 1
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+	
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+	}
+	
+	focus = {
+		id = MRT_industrial_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MRT_industrial_effort }
+		x = 1
+		y = 2
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = MRT_industrial_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MRT_industrial_effort_2 }
+		x = 1
+		y = 3
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+	
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MRT_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MRT_industrial_effort_3 }
+		x = 1
+		y = 4
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	
+	
+	focus = {
+		id = MRT_construction_effort
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MRT_salty_dornishmens }
+		x = 3
+		y = 1
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+        		add_tech_bonus = {
+				name = construction_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+	
+		focus = {
+		id = MRT_industry_effort
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = MRT_construction_effort }
+		x = 3
+		y = 2
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = MRT_research_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = MRT_industry_effort }
+		x = 3
+		y = 3
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = MRT_construction_speed
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = MRT_research_slot }
+		x = 3
+		y = 4
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			add_ideas = MRT_construction_speed
+		}
+	}
+	
+	focus = {
+		id = MRT_research_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = MRT_construction_speed }
+		prerequisite = { focus = MRT_infrastructure_effort }
+		x = 2
+		y = 5
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MRT_navy_focus
+		icon = GFX_goal_generic_navy_cruiser
+		x = 8
+		y = 0
+		relative_position_id = MRT_consolidate_nation
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 20			
+		}
+	}
+
+	focus = {
+		id = MRT_ships_researchments
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = MRT_navy_focus }
+		x = 0
+		y = 1
+		relative_position_id = MRT_navy_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+				add_tech_bonus = {
+				name = capital_ship_bonus
+				bonus = 0.5
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+	
+	focus = { 
+		id = MRT_dockyard_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MRT_salty_dornishmens }
+		prerequisite = { focus = MRT_ships_researchments }
+		x = -2
+		y = 1
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+		focus = { 
+		id = MRT_dockyard_effort_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MRT_dockyard_effort }
+		x = -2
+		y = 2
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+		focus = { 
+		id = MRT_dockyard_effort_3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MRT_ship_quantity focus = MRT_dockyard_output }
+		x = -2
+		y = 4
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = MRT_dockyard_production
+
+		}
+	}
+
+	focus = {
+		id = MRT_dockyard_output
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = MRT_dockyard_effort_2 }
+		x = -1
+		y = 3
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+		mutually_exclusive = { focus = MRT_ship_quantity }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 5
+			add_ideas = MRT_dockyard_output
+		}
+	}
+	
+	focus = { 
+		id = MRT_develop_sunspear
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MRT_dockyard_effort_3 }
+		x = -3
+		y = 5
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+					    168 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 5
+                        add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes						
+                        }
+						add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes						
+                        }
+						add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes						
+                        }
+                        }
+                        }  
+                        }
+}
+
+	focus = { 
+		id = MRT_develop_greenblood
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MRT_orphans_of_the_greenblood }
+		x = -2
+		y = 1
+		relative_position_id = MRT_sandy_dornishmens
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+					    168 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 3
+                        add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes						
+                        }
+						add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes						
+                        }
+                        }
+                        }  
+                        }
+}
+	
+	focus = {
+		id = MRT_navy_doctrines
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = MRT_ships_researchments }
+		x = 2
+		y = 1
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 5
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	
+		focus = {
+		id = MRT_navy_doctrines_2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = MRT_navy_doctrines }
+		x = 2
+		y = 2
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 15
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}			
+		}
+	}
+	
+	focus = {
+		id = MRT_ship_quantity
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = MRT_navy_doctrines_2 }
+		mutually_exclusive = { focus = MRT_dockyard_output }
+		x = 1
+		y = 3
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 5
+			add_ideas = MRT_ship_quantity
+		}
+	}
+
+	focus = {
+		id = MRT_navy_doctrines_3
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = MRT_ship_quantity focus = MRT_dockyard_output }
+		x = 2
+		y = 4
+		relative_position_id = MRT_ships_researchments
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}			
+		}
+	}
+
+
+	focus = {
+		id = MRT_motorized
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = MRT_army_focus }
+		x = 3
+		y = 1
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				army_experience = 5
+				add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = MRT_mobile_hospitals
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = MRT_motorized }
+		prerequisite = { focus = MRT_support_batallions }
+		x = 2
+		y = 2
+		relative_position_id = MRT_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				army_experience = 5
+				add_tech_bonus = {
+				name = med_bonus
+				bonus = 0.5
+				uses = 1
+				category = hospital_tech
+			}
+		}
+	}
+
+	### POLITICAL FOCUS ###
+
+	focus = {
+		id = MRT_dornish_politics
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+	id = MRT_lannisters_never
+	icon = GFX_goal_support_communism
+	prerequisite = { focus = MRT_dornish_politics }
+	mutually_exclusive = { focus = MRT_grand_plan }
+	x = -4
+	y = 1
+	relative_position_id = MRT_dornish_politics
+	cost = 10
+
+	available_if_capitulated = yes
+	completion_reward = {
+			if = {
+				limit = { has_idea = ENG_the_war_to_end_all_wars }
+				remove_ideas = ENG_the_war_to_end_all_wars
+			}
+		}
+	}
+
+	focus = {
+		id = MRT_become_empire
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = MRT_lannisters_never }
+		mutually_exclusive = { focus = MRT_become_commune }
+		x = -2
+		y = 1
+		relative_position_id = MRT_lannisters_never
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = fascist_influence
+		}
+	}
+
+	focus = {
+		id = MRT_become_commune
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = MRT_lannisters_never }
+		mutually_exclusive = { focus = MRT_become_empire }
+		x = 2
+		y = 1
+		relative_position_id = MRT_lannisters_never
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = communist_influence
+		}
+	}
+
+	focus = {
+		id = MRT_pacify_tyrell
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = MRT_become_empire }
+		available = {
+			is_puppet = no
+			has_government = fascism
+#			has_war = yes
+			NOT = {
+				is_in_faction_with = HOL
+				is_in_faction_with = IRE
+			}
+			IRE = {
+				is_in_faction_with = HOL
+			}
+		}
+#	mutually_exclusive = { focus = MRT_grand_plan }
+		x = 0
+		y = 1
+		relative_position_id = MRT_become_empire
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = IRE }
+		}
+	}
+
+	focus = {
+		id = MRT_claim_marches
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = MRT_become_empire focus = MRT_become_commune }
+		available = {
+			is_puppet = no
+			NOT = {
+				SPR = {
+					owns_state = 479
+					owns_state = 148
+				}
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = MRT_become_empire
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SPR = {
+				add_state_claim = 479
+				add_state_claim = 148
+			}
+		}
+	}
+
+	focus = {
+	id = MRT_grand_plan
+	icon = GFX_goal_support_fascism
+	prerequisite = { focus = MRT_dornish_politics }
+	mutually_exclusive = { focus = MRT_lannisters_never }
+	x = 2
+	y = 1
+	relative_position_id = MRT_dornish_politics
+	cost = 10
+
+	available_if_capitulated = yes
+	completion_reward = {
+			if = {
+				limit = { has_idea = anti_german_military }
+				remove_ideas = anti_german_military
+			}
+		}
+	}
+
+	focus = {
+		id = MRT_engagement_for_myrcella
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = MRT_grand_plan }
+#		mutually_exclusive = { focus = LAN_royal_marriage_with_tyrell }
+		available =
+		{
+			SPR = {
+				NOT = { has_war_with = HOL }
+				country_exists = HOL
+			}
+			HOL = {
+				is_puppet = no
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = MRT_grand_plan
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}
+			
+#		available = { has_war = yes }
+
+		bypass = {
+			has_opinion_modifier = marriage_between_myrcella_and_trystane
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+			
+		completion_reward = { 
+			HOL = {
+				country_event = { id = dorne.16 }
+#				add_opinion_modifier = { target = SPR modifier = marriage_between_myrcella_and_trystane } 
+			}
+		}
+	
+	}
+
+	focus = {
+		id = MRT_invite_myrcella
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MRT_engagement_for_myrcella }
+#		mutually_exclusive = { focus = LAN_royal_marriage_with_tyrell }
+		available =
+		{
+			SPR = {
+				NOT = { has_war_with = HOL }
+				country_exists = HOL
+				has_war = no
+			}
+			HOL = {
+				is_puppet = no
+			}
+			OR = {
+				threat > 0.10
+				HOL = { has_war = yes }
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = MRT_grand_plan
+		cost = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+			
+#		available = { has_war = yes }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		bypass = {
+
+		}
+			
+		completion_reward = { 
+			HOL = {
+				country_event = { id = dorne.3 days = 3 } 
+			}
+		}
+	
+	}
+
+	focus = {
+		id = MRT_remove_ellaria
+		available = {
+			has_country_flag = promise_of_vengeance
+			SPR = { has_country_leader = { ruling_only = yes name = "Doran Martell" } }
+		}
+		prerequisite = { focus = MRT_engagement_for_myrcella }
+		icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+		x = 1
+		y = 1
+		relative_position_id = MRT_engagement_for_myrcella
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = MRT_revoke_promise_tt
+			clr_country_flag = promise_of_vengeance
+			kill_ideology_leader = communism
+#			create_country_leader = {
+
+#				name = "Nymeria Sand"
+#				desc = "POLITICS_JOSE_DIAZ_DESC"
+	
+#				picture = "Portrait_Nymeria_Sand.dds"
+	
+#				expire = "1965.1.1"
+	
+#				ideology = leninism
+	
+#				traits = {
+		#
+#	}
+
+#			}
+
+
+
+		}
+	}
+
+	focus = {
+	id = MRT_operation_tiger
+	icon = GFX_goal_generic_attack_allies
+	prerequisite = { focus = MRT_sandsnakes }
+	prerequisite = { focus = MRT_invite_myrcella }
+	x = 0
+	y = 3
+	relative_position_id = MRT_grand_plan
+	cost = 20
+
+		available = {
+			is_puppet = no
+			has_war = no
+#			has_idea = myrcella
+			has_country_flag = myrcella_in_dorne
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 300
+			if = {
+				limit = { has_idea = ENG_the_war_to_end_all_wars }
+				remove_ideas = ENG_the_war_to_end_all_wars
+			}
+			country_event = { id = dorne.14 } 
+		}
+	}	
+
+	focus = {
+	id = MRT_sandsnakes
+	icon = GFX_goal_generic_allies_build_infantry
+	prerequisite = { focus = MRT_grand_plan focus = MRT_lannisters_never }
+	x = 0
+	y = 2
+	relative_position_id = MRT_dornish_politics
+	cost = 10
+
+	available_if_capitulated = yes
+					
+
+	completion_reward = {
+		custom_effect_tooltip = MRT_recruit_sandsnakes_tt
+
+			add_corps_commander_role = {
+				Character = DOR_lady_nym
+				traits = { desert_fox cavalry_officer }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 4
+				legacy_id=325
+			}
+			add_corps_commander_role = {
+				Character = DOR_tyene
+				traits = { commando desert_fox }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 2
+				legacy_id=326
+			}
+
+		hidden_effect = {
+				create_corps_commander = {
+				name = "Obara Sand"
+				portrait_path = "gfx/leaders/SPR/Portrait_Obara_Sand.dds"
+				traits = { panzer_leader desert_fox }
+				skill = 4
+				female = yes
+				id = 324
+				}
+#				create_corps_commander = {
+#				name = "Nymeria Sand"
+#				portrait_path = "gfx/leaders/SPR/Portrait_Nymeria_Sand.dds"
+#				traits = { trickster desert_fox }
+#				skill = 4
+#				female = yes
+#				id = 325
+#				}
+#				create_corps_commander = {
+#				name = "Tyene Sand"
+#				portrait_path = "gfx/leaders/SPR/Portrait_Tyene_Sand.dds"
+#				traits = { commando desert_fox }
+#				skill = 4
+#				female = yes
+#				id = 326
+#				}
+			}	
+		}
+	}
+
+	focus = {
+		id = MRT_assassinate_doran
+		icon = GFX_focus_hun_assassinate_horthy
+		x = 0
+		y = 1
+		relative_position_id = MRT_become_commune
+		prerequisite = { focus = MRT_become_commune }
+		prerequisite = { focus = MRT_sandsnakes }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			communism > 0.3
+
+		}
+
+		bypass = {
+			has_government = communism
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+
+		completion_reward = {
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+#			news_event = { id = news.314 }
+		}
+	}
+
+	focus = {
+		id = MRT_joinDany
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = MRT_assassinate_doran
+		}
+		x = 0
+		y = 1
+		relative_position_id = MRT_assassinate_doran
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			NOT = { has_war_with = SOV }
+			is_puppet = no
+			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+			any_state = {
+				is_controlled_by = SOV
+				is_coastal = yes
+			}
+		}
+		
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+#			if = {
+#				limit = { has_idea = VAL_clansmen }
+#				remove_ideas = VAL_clansmen
+#			}
+
+			SOV = {	country_event = { id = germany.89 } }
+
+			hidden_effect = {
+
+			}
+		}
+
+	}
+
+#	focus = {
+#		id = MRT_capture_storms_for_Dany
+#		icon = GFX_IRN_aegon_in_stormlands
+#		cost = 10
+#		prerequisite = {
+#			focus = MRT_joinDany
+#		}
+#		x = 0
+#		y = 2
+#		relative_position_id = MRT_assassinate_doran
+
+#		ai_will_do = {
+#			factor = 5
+#		}
+
+#		available = {
+#			is_puppet = no
+#			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+#			is_in_faction_with = SOV
+#		}
+		
+#		bypass = {
+#			is_in_faction_with = SOV
+#		}
+
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+
+#		complete_tooltip = {
+
+#		}
+
+#		completion_reward = {
+#			add_political_power = 20
+
+#			SOV = {	country_event = { id = germany.89 } }
+
+#			hidden_effect = {
+
+#			}
+#		}
+
+#	}		
+	

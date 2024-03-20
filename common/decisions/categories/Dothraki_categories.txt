@@ -1,0 +1,30 @@
+#################################
+#### Dothraki and Barbarians ####
+#################################
+
+DOT_plunder_people = {
+	picture = generic_border_conflicts
+	icon = border_conflicts	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea = dothraki_horde
+	}
+}
+
+SOT_tribal_wars = {
+	picture = generic_border_conflicts
+	icon = border_conflicts	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea = brindled_men
+	}
+}
+
+	
+

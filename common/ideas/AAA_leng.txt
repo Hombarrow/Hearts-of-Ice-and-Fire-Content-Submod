@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		LNG_unity_treaty = {
+
+			picture = chi_chinese_unity
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes			
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+
+		}
+	}
+
+}
+

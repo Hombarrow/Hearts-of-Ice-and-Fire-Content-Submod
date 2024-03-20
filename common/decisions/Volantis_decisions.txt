@@ -1,0 +1,180 @@
+VOL_join_daenerys = {
+	ally_dany_vol = {
+
+		icon = generic_political_discourse
+
+		available = {
+			SOV = { is_puppet = no }
+			POR = { is_puppet = no }
+			SOV = { has_government = Root }
+#			POR = { is_faction_leader = yes }
+		}
+
+		visible = {
+			SOV = { exists = yes }
+			POR = { NOT =  { has_war_with = SOV } }
+#			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+		
+		complete_effect = {
+			SOV = {	country_event = soviet.36 days = 1 }
+			if = {
+				limit = { POR = { is_ai = no } }
+				SOV = { change_tag_from = POR }
+			}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+#	annexed_by_dany = {
+#
+#		icon = generic_political_discourse
+#
+#		available = {
+#			POR = { is_neighbor_of = ECU }
+#			NOT = { ECU = { is_subject_of = POR } }
+#		}
+#
+#		visible = {
+#			ECU = { exists = yes }
+#			NOT = { ECU = { is_in_faction_with = POR } }
+#		}
+#		
+#		fire_only_once = yes
+#		
+#		cost = 100
+#
+#		days_remove = 5
+#		
+#		complete_effect = {
+#			ECU = { country_event = { id = volantis.8 days = 5 } }
+#			hidden_effect = {
+#				set_global_flag = margery_in_kingslanding
+#			}
+#		}
+#		
+#		ai_will_do = {
+#			factor = 30
+#		}
+#	}
+
+}
+
+VOL_slaver_leader = {
+	ally_mantarys = {
+
+		icon = generic_political_discourse
+
+		available = {
+			ECU = { is_puppet = no }
+			ECU = { has_government = Root }
+			POR = { is_faction_leader = yes }
+		}
+
+		visible = {
+			ECU = { exists = yes }
+			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+		
+		complete_effect = {
+			ECU = {
+				country_event = generic.5
+			}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	puppet_mantarys = {
+
+		icon = generic_political_discourse
+
+		available = {
+			POR = { is_neighbor_of = ECU }
+			NOT = { ECU = { is_subject_of = POR } }
+		}
+
+		visible = {
+			ECU = { exists = yes }
+			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 100
+
+		days_remove = 5
+		
+		complete_effect = {
+			ECU = { country_event = { id = volantis.8 days = 5 } }
+			hidden_effect = {
+#				set_global_flag = margery_in_kingslanding
+			}
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	conquer_mantarys = {
+
+		icon = generic_army_support
+
+		available = {
+			POR = { is_neighbor_of = ECU }
+			ECU = { NOT =  { has_war_with = POR } }
+			NOT = { ECU = { is_subject_of = POR } }
+		}
+
+		visible = {
+			ECU = { exists = yes }
+			NOT = { ECU = { is_in_faction_with = POR } }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 150
+
+		days_remove = 3
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ECU
+			}
+#			ECU = { country_event = { id = volantis.9 days = 5 } }
+			hidden_effect = {
+#				set_global_flag = margery_popular
+			}
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+}

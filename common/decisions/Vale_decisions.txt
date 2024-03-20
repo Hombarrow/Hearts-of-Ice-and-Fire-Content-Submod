@@ -1,0 +1,428 @@
+VAL_knights_recruit = {
+	corbray_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			15 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 15 }
+				create_unit = { 
+				division = "name = \"Corbray Bannermen\" division_template = \"Knights of the Vale\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	grafton_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			6 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 6 }
+				create_unit = { 
+				division = "name = \"Grafton Bannermen\" division_template = \"Knights of the Vale\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	lynderly_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			14 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 14 }
+				create_unit = { 
+				division = "name = \"Lynderly Bannermen\" division_template = \"Knights of the Vale\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	royce_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			6 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 6 }
+				create_unit = { 
+				division = "name = \"Royce Bannermen\" division_template = \"Knights of the Vale\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	waynwood_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			653 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 653 }
+				create_unit = { 
+				division = "name = \"Waynwood Bannermen\" division_template = \"Knights of the Vale\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+}
+
+VAL_marines_recruit = {
+	pebble_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			697 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 697 }
+				create_unit = { 
+				division = "name = \"Pebble Group\" division_template = \"Naval Strike Division\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	paps_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			698 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 698 }
+				create_unit = { 
+				division = "name = \"Paps Group\" division_template = \"Naval Strike Division\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	sisterton_bannermen = {
+
+		icon = generic_army_support
+
+		available = {
+			177 = { is_owned_and_controlled_by = SWE }
+		}
+
+		visible = {
+#			ECU = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+		
+		complete_effect = {
+		random_owned_controlled_state = {
+			prioritize = { 177 }
+				create_unit = { 
+				division = "name = \"Sisterton Group\" division_template = \"Naval Strike Division\" 				start_experience_factor = 0.4"
+				owner = SWE
+					}
+
+				}
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+
+}
+
+operations = {
+
+	VAL_timeout_for_royce = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				has_country_leader = { ruling_only = yes name = "Robyn Arryn" }
+				has_civil_war = yes
+			}
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+#		highlight_states = {
+#			state = 33
+#		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { has_country_leader = { ruling_only = yes name = "Yohn Royce" } }
+			hidden_trigger = {
+#			OR = {
+#				has_country_leader = { ruling_only = yes name = "Robyn Arryn" }
+#				has_idea = GER_mefo_bills_ended
+#			}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+#			33 = { is_controlled_by = FIN }
+
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.10
+
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			country_event = vale.10		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	VAL_timeout_for_baelish = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				SWE = { has_completed_focus = VAL_mockRoyce }
+				has_civil_war = yes
+			}
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 23
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { has_government = fascism  }
+			hidden_trigger = {
+#			OR = {
+#				has_country_leader = { ruling_only = yes name = "Robyn Arryn" }
+#				has_idea = GER_mefo_bills_ended
+#			}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+#			33 = { is_controlled_by = FIN }
+
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.10
+
+			hidden_effect = {
+
+			}
+		}
+
+		timeout_effect = {
+			country_event = vale.12	
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

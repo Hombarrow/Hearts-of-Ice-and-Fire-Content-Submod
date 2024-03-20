@@ -1,0 +1,15 @@
+characters={
+	BRA_ironbank={
+		name="The Iron Bank"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWI/portrait_SWI_federal_building.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

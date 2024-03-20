@@ -1,0 +1,303 @@
+political_actions = {
+	
+	bring_silence = {
+
+		icon = generic_industry
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Euron Greyjoy" }
+			2 = { is_owned_and_controlled_by = ROM }
+		}
+
+		visible = {
+			original_tag = ROM
+#			has_country_leader = { ruling_only = yes name = "Euron Greyjoy" }
+		}
+
+		fire_only_once = yes
+		
+		cost = 200
+
+		days_remove = 4
+
+		complete_effect = {
+			ROM = { country_event = { id = ironborn.18 days = 5 } }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}
+
+IRN_sneak_attacks = {
+
+	sneakattack_stark = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = ROM
+			FIN = { exists = yes }
+		}
+
+		visible = {
+			original_tag = ROM
+			ROM = { NOT =  { has_war_with = FIN } }
+			ROM = { NOT =  { is_in_faction_with = FIN } }
+		}
+
+		target_trigger = { 
+#			FIN = { exists = yes }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = FIN
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				FIN = { has_war = no }
+			}
+			modifier = {
+				factor = 40
+				FIN = {
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war_with = HOL
+			}
+			modifier = {
+				FIN = { has_government = Root }
+				factor = 0
+			}
+		}
+	}
+
+	sneakattack_lannister = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = ROM
+			HOL = { exists = yes }
+		}
+
+		visible = {
+			original_tag = ROM
+			ROM = { NOT =  { has_war_with = HOL } }
+			ROM = { NOT =  { is_in_faction_with = HOL } }
+		}
+
+		target_trigger = { 
+#			exists = yes
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = HOL
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				HOL = { has_war = no }
+			}
+			modifier = {
+				factor = 40
+				HOL = {
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+			modifier = {
+				has_war_with = FIN
+				factor = 0
+			}
+			modifier = {
+				HOL = { has_government = Root }
+				factor = 0
+			}
+		}
+	}
+
+	IRN_execute_war_plan_lion = {
+		icon = generic_operation
+		available = {
+			has_war_with = HOL
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_lion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = HOL
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}	
+	IRN_execute_war_plan_wolf = {
+		icon = generic_operation
+		available = {
+			has_war_with = FIN
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_wolf
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = FIN
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	IRN_execute_war_plan_fist = {
+		icon = generic_operation
+		available = {
+			has_war_with = GEO
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_wolf
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = GEO
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	IRN_execute_war_plan_bear = {
+		icon = generic_operation
+		available = {
+			has_war_with = BUL
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_wolf
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = BUL
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	IRN_execute_war_plan_rose = {
+		icon = generic_operation
+		available = {
+			has_war_with = IRE
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_rose
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = IRE
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}	
+	IRN_execute_war_plan_archer = {
+		icon = generic_operation
+		available = {
+			has_war_with = MNT
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_rose
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = MNT
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	IRN_execute_war_plan_fish = {
+		icon = generic_operation
+		available = {
+			has_war_with = FRA
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_fish
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = FRA
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+	IRN_execute_war_plan_grandpa = {
+		icon = generic_operation
+		available = {
+			has_war_with = SER
+		}
+		visible = {
+			has_completed_focus = IRN_war_plan_fish
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		days_remove = 180
+		targeted_modifier = {
+			tag = SER
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
+			
+}

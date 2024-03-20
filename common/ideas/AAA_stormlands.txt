@@ -1,0 +1,302 @@
+ideas = { 
+	country = {
+		SRL_civ_construction = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_industrial_complex_factor  = 0.20
+			}
+		}
+
+		SRL_doctrine_effort_4 = {
+
+			allowed = {
+				original_tag = BEL
+			}
+
+			allowed_civil_war = {
+			
+			}
+			
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				military_leader_cost_factor = -0.50
+				army_leader_start_level = 1
+			}
+		}
+
+		SRL_mil_construction = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_arms_factory_factor   = 0.20
+			}
+		}
+
+		SRL_construction_speed = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_buildings_factor    = 0.1
+			}
+		}
+
+		SRL_dockyard_construction = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_dockyard_factor = 0.15
+			}
+		}
+
+		SRL_arms_production = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_factory = 0.10
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		SRL_dockyard_efficiency = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		SRL_increase_population = { 
+			picture = generic_manpower_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+				MONTHLY_POPULATION  = 0.55
+				conscription = 0.015
+				consumer_goods_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SRL_defence_in_forests = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			army_core_defence_factor = 0.15
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SRL_forts_construction = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_bunker_factor  = 0.25
+			production_speed_coastal_bunker_factor = 0.25
+			}
+		}
+
+		SRL_engineers_effort = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			max_dig_in = 1
+			dig_in_speed_factor = 0.08
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SRL_knight_traditions = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			cavalry_attack_factor = 0.15
+			cavalry_defence_factor = 0.15
+			}
+		}
+
+		SRL_army_recruitment = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			conscription = 0.055
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		SRL_army_training = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			training_time_army_factor = -0.25
+			}
+		}
+
+		SRL_destroyers_quality = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			    equipment_bonus = {
+				destroyer = {
+
+				}
+			}
+		}
+	}
+}	
+
+
+
+ideas = { 
+	country = {
+		SRL_lc_quality = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			    equipment_bonus = {
+				light_cruiser = {
+					attack = 0.10
+					armor_value = 0.10
+					instant = yes }
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SRL_hc_quality = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			equipment_bonus = {
+				heavy_cruiser = {
+#					attack = 0.10
+					armor_value = 0.10
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				battle_cruiser = {
+#					attack = 0.10
+					armor_value = 0.10
+					instant = yes
+					}
+				battleship = {
+					armor_value = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		SRL_bb_quality = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+			
+			equipment_bonus = {
+				battleship = {
+#					attack = 0.10
+					armor_value = 0.10
+#					shore_bombardment = 0.10
+					instant = yes
+				}
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		SRL_claim_king = { 
+			picture = HUN_hungarian_monarchy
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+	}
+}

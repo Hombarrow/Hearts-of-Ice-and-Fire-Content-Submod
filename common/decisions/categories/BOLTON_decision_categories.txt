@@ -1,0 +1,20 @@
+BOL_hornwoodborder = {
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+		is_puppet = no
+		has_completed_focus = BLT_borderskirmish
+	}
+}
+
+BOL_lordoddreadfort = {
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+		has_completed_focus = BLT_MarryFreyGirl
+	}
+}

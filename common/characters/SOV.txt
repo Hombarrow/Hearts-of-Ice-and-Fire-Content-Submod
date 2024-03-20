@@ -1,0 +1,199 @@
+characters={
+	TAR_daenerys={
+		name = "Daenerys Targaryen"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_Dany_Targ.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Dany_Targ.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=stalinism
+			traits={ blood_of_the_dragon }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	TAR_ser_jorah={
+#		name="Jorah The Explorer"
+		name="Jorah Mormont"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_Ser_Jorah.dds"
+				small=GFX_idea_ser_jorah
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Ser_Jorah.dds"
+				small=GFX_idea_ser_jorah
+			}
+		}
+		corps_commander={
+			traits = { winter_specialist trickster }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = TAR_ser_jorah
+			cost = 150
+			allowed  = {
+#					original_tag  = SOV
+					NOT = { has_country_flag = jorah_exiled }
+				}
+				traits  = {
+					army_chief_defensive_2
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	TAR_kinvara={
+		name="Kinvara"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_kinvara
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_kinvara
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = TAR_kinvara
+			cost = 150
+			allowed  = {
+					original_tag  = SOV
+				}
+				available  = {
+					has_completed_focus = TAR_redpriests
+				}
+				traits  = {
+					worship_ruhlor
+				}
+#				ai_will_do = {
+#					factor = 1.000
+#				}
+		}
+	}
+
+	TAR_irri={
+		name="Irri"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_irri
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_irri
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = TAR_irri
+			cost = 150
+			allowed  = {
+					original_tag  = SOV
+				}
+#				available  = {
+#					has_completed_focus = TAR_redpriests
+#				}
+				traits  = {
+					silent_workhorse
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	TAR_GreyWorm={
+		name="Grey Worm"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_Grey_Worm.dds"
+				small=GFX_idea_greyworm
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Grey_Worm.dds"
+				small=GFX_idea_greyworm
+			}
+		}
+	}
+
+	TAR_WhiteRat={
+		name="White Rat"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_White_Rat.dds"
+				small=GFX_idea_greyworm
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_White_Rat.dds"
+				small=GFX_idea_greyworm
+			}
+		}
+	}
+
+	TAR_barristan={
+		name="Barristan Selmy"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_Ser_Barristan.dds"
+				small=GFX_idea_barristan
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Ser_Barristan.dds"
+				small=GFX_idea_barristan
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits = { fortress_buster war_hero bold }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = TAR_barristan
+			cost = 150
+			ledger = army
+			allowed  = {
+#					original_tag  = SOV
+#					has_country_flag = selmyis_here
+					always = yes
+				}
+				traits  = {
+					army_regrouping_3
+				}
+				ai_will_do = {
+					factor = 2.000
+				}
+		}
+	}
+}

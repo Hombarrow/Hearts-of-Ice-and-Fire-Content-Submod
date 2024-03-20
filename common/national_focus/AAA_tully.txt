@@ -1,0 +1,3258 @@
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = TLY_lordofRiverrun
+		icon = GFX_focus_eng_liberate_the_home_of_marx
+		cost = 10.00
+		mutually_exclusive = {
+			focus = TLY_newLord
+		}
+		x = 3
+		y = 0
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = TLY_newLord
+		icon = GFX_focus_eng_the_kings_party
+		cost = 10.00
+		mutually_exclusive = {
+			focus = TLY_lordofRiverrun
+		}
+		x = 7
+		y = 0
+		relative_position_id = TLY_lordofRiverrun
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = -150
+		}
+
+	}
+	focus = {
+		id = TLY_renegotiateFrey
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_lordofRiverrun
+		}
+		x = -2
+		y = 1
+		relative_position_id = TLY_lordofRiverrun
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+			has_idea = TLY_payingFrey_1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = TLY_payingFrey_2
+				remove_idea = TLY_payingFrey_1
+			}	
+		}
+
+	}
+	focus = {
+		id = TLY_forgiveWalderDebts
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_renegotiateFrey
+		}
+		x = 0
+		y = 1
+		relative_position_id = TLY_renegotiateFrey
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+			has_idea = TLY_payingFrey_2
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = TLY_payingFrey_3
+				remove_idea = TLY_payingFrey_2
+			}	
+		}
+
+	}
+	focus = {
+		id = TLY_usereservesForDebt
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_forgiveWalderDebts
+		}
+		x = 0
+		y = 2
+		relative_position_id = TLY_renegotiateFrey
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+			has_idea = TLY_payingFrey_3
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = TLY_payingFrey_1 }
+				remove_ideas = TLY_payingFrey_1
+			}
+			if = {
+				limit = { has_idea = TLY_payingFrey_2 }
+				remove_ideas = TLY_payingFrey_2
+			}
+			if = {
+				limit = { has_idea = TLY_payingFrey_3 }
+				remove_ideas = TLY_payingFrey_3
+			}
+			custom_effect_tooltip = Frey_loyal_tt
+		}
+
+	}
+	focus = {
+		id = TLY_upholdHonorValues
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_newLord
+		}
+		mutually_exclusive = {
+			focus = TLY_praisenationalism
+			focus = TLY_trustBrotherhood
+		}
+		x = 4
+		y = 1
+		relative_position_id = TLY_lordofRiverrun
+
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 90
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = democratic_influence days = 365 }
+
+			hidden_effect = {
+
+			}
+		}
+
+	}
+	focus = {
+		id = TLY_amendsWithBlackfish
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_lordofRiverrun
+		}
+		x = 2
+		y = 1
+		relative_position_id = TLY_lordofRiverrun
+
+		ai_will_do = {
+			factor = 15
+#			modifier = {
+#				factor = 90
+#				is_historical_focus_on = yes
+#			}
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Hoster Tully" }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			create_field_marshal = {
+				name = "Brynden Tully"
+				picture = "Portrait_Blackfish_Tully.dds"
+				traits = { defensive_doctrine }
+				id = 412
+				skill = 4
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 4
+			}
+			hidden_effect = {
+
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_lordBlackfish
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = TLY_upholdHonorValues
+			focus = TLY_amendsWithBlackfish
+		}
+		x = 1
+		y = 1
+		relative_position_id = TLY_amendsWithBlackfish
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			 democratic > 0.4
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.10
+			if = {
+				limit = { NOT = { has_completed_focus = TLY_amendsWithBlackfish } }
+				create_field_marshal = {
+					name = "Brynden Tully"
+					picture = "Portrait_Blackfish_Tully.dds"
+					traits = { defensive_doctrine }
+					id = 412
+					skill = 4
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 4
+				}
+			}
+			if = {
+				limit = { has_country_leader = { ruling_only = yes name = "Hoster Tully" } }
+				create_country_leader = {
+					name = "Brynden Tully"
+					desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+					picture = "Portrait_Blackfish_Tully.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+						
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.25
+				}
+			}
+		}
+
+
+	}
+
+	focus = {
+		id = TLY_FreyCiv
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_usereservesForDebt
+		}
+		x = 1
+		y = 3
+		relative_position_id = TLY_renegotiateFrey
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 179 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 393 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = TLY_FreyInfra
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_usereservesForDebt
+		}
+		x = -1
+		y = 3
+		relative_position_id = TLY_renegotiateFrey
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 179 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 393 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = TLY_praisenationalism
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_newLord
+		}
+		mutually_exclusive = {
+			focus = TLY_upholdHonorValues
+			focus = TLY_trustBrotherhood
+		}
+		x = 0
+		y = 1
+		relative_position_id = TLY_newLord
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = fascist_influence days = 365 }
+
+			hidden_effect = {
+
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_LordEdmure
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 5
+		prerequisite = {
+			focus = TLY_praisenationalism
+		}
+		x = 0
+		y = 1
+		relative_position_id = TLY_praisenationalism
+
+		available = {
+			 fascism > 0.4
+		} 
+
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.25
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = TLY_trustBrotherhood
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_newLord
+		}
+		mutually_exclusive = {
+			focus = TLY_praisenationalism
+			focus = TLY_upholdHonorValues
+		}
+		x = 3
+		y = 1
+		relative_position_id = TLY_newLord
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = neutrality_influence days = 365 }
+
+			hidden_effect = {
+
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_BerricDondarion
+		icon = GFX_focus_mex_caudillo_private_armies
+		cost = 5
+		prerequisite = {
+			focus = TLY_trustBrotherhood
+		}
+		x = 0
+		y = 1
+		relative_position_id = TLY_trustBrotherhood
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+			 neutrality > 0.4
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.10
+#			if = {
+#				limit = { NOT = { has_completed_focus = TLY_amendsWithBlackfish } }
+#				create_field_marshal = {
+#					name = "Brynden Tully"
+#					picture = "Portrait_Blackfish_Tully.dds"
+#					traits = { defensive_doctrine }
+#					id = 412
+#					skill = 4
+#					attack_skill = 2
+#					defense_skill = 3
+#					planning_skill = 1
+#					logistics_skill = 4
+#				}
+#			}
+			if = {
+				limit = { NOT = { has_government = neutrality } }
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.25
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_allowRedPriests
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_BerricDondarion
+		}
+		x = 0
+		y = 2
+		relative_position_id = TLY_trustBrotherhood
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Beric Dondarrion" }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MEX_CHURCH_AUTHORITY}
+		completion_reward = {
+			if = {
+				limit = { has_idea = faith_of_7 }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = faith_of_7
+				}
+			}
+			if = {
+				limit = { has_idea = old_gods }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = old_gods
+				}
+			}
+			if = {
+				limit = { has_idea = drowned_god }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = drowned_god
+				}
+			}
+			if = {
+				limit = { has_idea = harpylady }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = harpylady
+				}
+			}
+			if = {
+				limit = { has_idea = atheist }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = atheist
+				}
+			}
+
+			recruit_character = TLY_thoros
+
+#			create_corps_commander = {
+#				name = "Thoros of Myr"
+#				picture = "Portrait_Thoros.dds"
+#				traits = { ranger }
+#				skill = 3
+#				attack_skill = 3
+#				defense_skill = 3
+#				planning_skill = 3
+#				logistics_skill = 2
+#			}
+
+			custom_effect_tooltip = Lady_Stoneheart_tt
+		}
+
+	}
+
+	focus = {
+		id = TLY_legitimacy
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10.00
+		prerequisite = {
+			focus = TLY_LordEdmure
+			focus = TLY_lordBlackfish
+		}
+		x = -2
+		y = 1
+		relative_position_id = TLY_LordEdmure
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 200
+		}
+
+	}
+	focus = {
+		id = TLY_joinLannister
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = TLY_legitimacy
+		}
+		prerequisite = {
+			focus = TLY_LordEdmure
+		}
+		x = 0
+		y = 2
+		relative_position_id = TLY_LordEdmure
+
+		available = {
+			country_exists = HOL
+			NOT = { is_in_faction_with = HOL }
+		}
+
+		bypass = {
+			is_in_faction_with = HOL
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			HOL = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = befriend
+					id = "HOL"			
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "HOL"			
+					value = 200
+				}	
+#				add_opinion_modifier = { target = FRA modifier = improve_relation } 
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_militarised_economy
+		icon = GFX_focus_military_economy
+		prerequisite = { focus = TLY_joinLannister }
+		mutually_exclusive = { focus = TLY_civilian_based_economy }
+		x = 0
+		y = 1
+		relative_position_id = TLY_joinLannister
+		cost = 10	 
+
+		available = {
+			is_in_faction_with = HOL
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no		
+
+		completion_reward = {
+		add_ideas = TLY_military_economy
+		}
+	
+	}
+
+	focus = {
+		id = TLY_side_starks
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = {
+			focus = TLY_legitimacy
+		}
+		prerequisite = {
+			focus = TLY_lordBlackfish
+		}
+		x = 0
+		y = 2
+		relative_position_id = TLY_lordBlackfish
+		cost = 5
+
+		available = {
+			FIN = {
+				is_faction_leader = yes
+			}
+			country_exists = FIN
+			NOT = { is_in_faction_with = FIN }
+		}
+
+		bypass = {
+			is_in_faction_with = FIN
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = befriend
+					id = "FRA"			
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "FRA"			
+					value = 200
+				}	
+#				add_opinion_modifier = { target = FRA modifier = improve_relation } 
+			}
+		}
+	}
+
+	focus = {
+		id = TLY_civilian_based_economy
+		icon = GFX_focus_civilian_economy
+		prerequisite = { focus = TLY_side_starks }
+		mutually_exclusive = { focus = TLY_militarised_economy }
+		x = 0
+		y = 1
+		relative_position_id = TLY_side_starks
+		cost = 10	 
+
+		available = {
+			is_in_faction_with = FIN
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+
+		completion_reward = {
+			add_ideas = TLY_civilian_economy
+		}
+	
+	}
+
+	focus = {
+		id = TLY_trade_efficiency
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 15
+		y = 0
+		relative_position_id = TLY_lordofRiverrun
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 150
+			add_ideas = TLY_trade_efficiency
+		}
+	}
+	
+	focus = {
+		id = TLY_develop_steel_mines
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = TLY_trade_efficiency }
+		mutually_exclusive = { focus = TLY_synthetic_resources }
+		x = -1
+		y = 1
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		available = {
+		 276 = { is_controlled_by = FRA } 	
+		 }
+
+		completion_reward = {
+				add_resource = {
+				type = steel
+				amount = 12
+				state = 276
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_aluminium
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = TLY_develop_steel_mines }
+		x = -3
+		y = 2
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+	
+		available = {
+		 29 = { is_controlled_by = FRA } 	
+		 }
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		 
+		completion_reward = {
+				add_resource = {
+				type = aluminium
+				amount = 12
+				state = 29
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_wolfram
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = TLY_develop_steel_mines }
+		x = -1
+		y = 2
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		 166 = { is_controlled_by = FRA } 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = tungsten
+				amount = 14
+				state = 166
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_wolfram_2
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = TLY_search_for_wolfram }
+		x = -1
+		y = 3
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		 166 = { is_controlled_by = FRA } 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = tungsten
+				amount = 30
+				state = 166
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_aluminium_2
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = TLY_search_for_aluminium }
+		x = -3
+		y = 3
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		 29 = { is_controlled_by = FRA } 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = aluminium
+				amount = 25
+				state = 29
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = TLY_synthetic_resources }
+		x = 1
+		y = 2
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		 22 = { is_controlled_by = FRA } 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = rubber
+				amount = 8
+				state = 22
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_search_for_rubber_2
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = TLY_search_for_rubber }
+		x = 1
+		y = 3
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		 22 = { is_controlled_by = FRA } 	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = rubber
+				amount = 24
+				state = 22
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_develop_mine_towns
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TLY_search_for_aluminium_2 focus = TLY_search_for_rubber_2 }
+		prerequisite = { focus = TLY_synthetic_refineries focus = TLY_search_for_wolfram_2 }
+		x = 0
+		y = 4
+		relative_position_id = TLY_trade_efficiency
+		cost = 20
+		
+		available = {
+		 166 = { is_controlled_by = FRA } 	
+		 }
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			166 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 4
+                        add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes						
+						}
+                        }
+                        } 
+
+		
+				add_resource = {
+				type = chromium
+				amount = 6
+				state = 166
+			}
+				add_resource = {
+				type = steel
+				amount = 12
+				state = 166
+			}
+				add_resource = {
+				type = aluminium
+				amount = 12
+				state = 166
+			}
+		}
+
+	}
+
+	focus = {
+		id = TLY_increase_trade_opinion
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TLY_develop_mine_towns }
+		x = -2
+		y = 1
+		relative_position_id = TLY_develop_mine_towns
+		cost = 10
+	 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			swap_ideas = {
+				add_idea = TLY_trade_efficiency_2
+				remove_idea = TLY_trade_efficiency
+			}
+		}
+	}
+	
+	focus = {
+		id = TLY_free_trade
+		icon = GFX_TLY_free_trade
+		prerequisite = { focus = TLY_develop_mine_towns }
+		x = 2
+		y = 1
+		relative_position_id = TLY_develop_mine_towns
+		cost = 6
+ 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+	
+	focus = {
+		id = TLY_synthetic_resources
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TLY_trade_efficiency }
+		mutually_exclusive = { focus = TLY_develop_steel_mines }
+		x = 1
+		y = 1
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no		
+
+		completion_reward = {
+				add_tech_bonus = {
+				name = synthetic_bonus
+				bonus = 0.75
+				uses = 1
+				category = synth_resources
+			}
+		}
+	
+	}
+	
+	focus = {
+		id = TLY_synthetic_refineries
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TLY_oil_deposits }
+		x = 3
+		y = 3
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		276 = { is_controlled_by = FRA } 
+		29 = { is_controlled_by = FRA } 		
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+						276 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes						
+						}
+                        }
+                        }
+						29 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes						
+						}
+                        }
+                        }
+		}
+	
+	}
+	
+	focus = {
+		id = TLY_oil_deposits
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TLY_synthetic_resources }
+		x = 3
+		y = 2
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+		
+		available = {
+		29 = { is_controlled_by = FRA } 		
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+				add_resource = {
+				type = oil
+				amount = 12
+				state = 29
+			}
+		}
+	
+	}
+	
+	focus = {
+		id = TLY_industry_effort
+		icon = GFX_goal_generic_production
+		x = 7
+		y = 0
+		relative_position_id = TLY_trade_efficiency
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	
+	}
+
+	focus = {
+		id = TLY_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TLY_industry_effort }
+		x = -2
+		y = 1
+		relative_position_id = TLY_industry_effort
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = {
+		id = TLY_civilian_industry_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TLY_civilian_industry }
+		x = 0
+		y = 1
+		relative_position_id = TLY_civilian_industry
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_civilian_industry_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TLY_civilian_industry_2 }
+		x = 0
+		y = 1
+		relative_position_id = TLY_civilian_industry_2
+		cost = 10
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+	
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_civilian_industry_4
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TLY_civilian_industry_3 }
+		x = 0
+		y = 1
+		relative_position_id = TLY_civilian_industry_3
+		cost = 10
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	
+	focus = {
+		id = TLY_research_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = TLY_develop_mine_towns }
+		x = 0
+		y = 5
+		relative_position_id = TLY_trade_efficiency
+		cost = 10	 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+	}
+	
+	focus = {
+		id = TLY_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TLY_industry_effort }
+		x = 0
+		y = 1
+		relative_position_id = TLY_industry_effort
+		cost = 10
+
+
+		available_if_capitulated = yes
+		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_construction_technology
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TLY_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = TLY_infrastructure_effort
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}		 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+				add_tech_bonus = {
+				name = construction_bonus
+				bonus = 0.5
+				uses = 1
+				category = construction_tech
+			}
+		}
+	
+	}
+	
+	
+		focus = {
+		id = TLY_construction_speed_bonus
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TLY_construction_technology }
+		x = 0
+		y = 2
+		relative_position_id = TLY_infrastructure_effort
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}		 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+		add_ideas = TLY_construction_speed
+		}
+	
+	}
+	
+	
+	focus = {
+		id = TLY_electronic_mechanical_engineering
+		icon = GFX_goal_generic_electronic
+		prerequisite = { focus = TLY_construction_speed_bonus }
+		x = 0
+		y = 3
+		relative_position_id = TLY_infrastructure_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+				add_tech_bonus = {
+				name = electronical_bonus
+				bonus = 0.6
+				uses = 2
+				category = electronics
+			}
+		}
+	
+	}
+	
+	focus = {
+		id = TLY_science_effort
+		icon = GFX_focus_research2
+		prerequisite = { focus = TLY_electronic_mechanical_engineering }
+		x = 0
+		y = 4
+		relative_position_id = TLY_infrastructure_effort
+		cost = 10	 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+			add_ideas = TLY_science_effort
+		}
+	
+	}
+
+	
+	focus = { 
+		id = TLY_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TLY_industry_effort }
+		x = 2
+		y = 1
+		relative_position_id = TLY_industry_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	
+	focus = { 
+		id = TLY_military_industry_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TLY_military_industry }
+		x = 0
+		y = 1
+		relative_position_id = TLY_military_industry
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	
+		focus = { 
+		id = TLY_military_industry_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TLY_military_industry_2 }
+		x = 0
+		y = 2
+		relative_position_id = TLY_military_industry
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = TLY_military_industry_4
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TLY_military_industry_3 }
+		x = 0
+		y = 3
+		relative_position_id = TLY_military_industry
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_additional_research_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = TLY_civilian_industry_4 }
+		prerequisite = { focus = TLY_science_effort }
+		x = -2
+		y = 1
+		relative_position_id = TLY_science_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+		add_research_slot = 1
+		}
+	
+	}
+	
+	focus = { 
+		id = TLY_develop_riverrun
+		icon = GFX_focus_TLY_develop_riverrun
+		prerequisite = { focus = TLY_military_industry_4 }
+		prerequisite = { focus = TLY_science_effort }
+		x = 2
+		y = 1
+		relative_position_id = TLY_science_effort
+		cost = 10
+		
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+                        276 = { is_controlled_by = FRA }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+		276 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 4
+                        add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes						
+						}
+						add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes						
+						}
+                        }
+                        } 
+
+		}
+	}
+	
+	
+	focus = {
+		id = TLY_fortifications
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TLY_army_focus }
+#		mutually_exclusive = { focus = TLY_defensive_doctrine }
+		x = -5
+		y = 1
+		relative_position_id = TLY_army_focus
+		cost = 10
+ 
+
+		available_if_capitulated = yes
+		
+
+		completion_reward = {
+		add_ideas = TLY_fortifications
+		}
+	
+	}
+	
+	
+	focus = {
+		id = TLY_bunkers_on_lan_border
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TLY_fortifications }
+		x = -2
+		y = 1
+		relative_position_id = TLY_fortifications
+		cost = 10
+		 
+
+		available_if_capitulated = yes
+		
+		available = {
+		 276 = { is_controlled_by = FRA } 	
+		 99 = { is_controlled_by = FRA } 
+		 29 = { is_controlled_by = FRA } 
+		 22 = { is_controlled_by = FRA } 
+		 }
+
+		completion_reward = {
+				276 = {
+				add_building_construction = { type = bunker province = 884 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 9800 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3874 level = 2 instant_build = yes }
+			}
+				99 = {
+				add_building_construction = { type = bunker province = 3260 level = 2 instant_build = yes }
+			}
+				29 = {
+				add_building_construction = { type = bunker province = 6962 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 1192 level = 2 instant_build = yes }
+			}
+				22 = {
+				add_building_construction = { type = bunker province = 7196 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 12081 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 9778 level = 2 instant_build = yes }
+			}
+		}
+	
+	}
+	
+	
+	focus = {
+		id = TLY_fortifications_on_reach_border
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TLY_fortifications }
+		x = 0
+		y = 1
+		relative_position_id = TLY_fortifications
+		cost = 10
+		 
+
+		available_if_capitulated = yes
+		
+		available = {
+		 22 = { is_controlled_by = FRA } 
+		 }
+
+		completion_reward = {
+				22 = {
+				add_building_construction = { type = bunker province = 6800 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9881 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 950 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3953 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 879 level = 3 instant_build = yes }
+			}
+		}
+	
+	}
+	
+	
+	focus = {
+		id = TLY_forts_on_crown_lands_border
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TLY_fortifications }
+		x = 2
+		y = 1
+		relative_position_id = TLY_fortifications
+		cost = 10
+		 
+
+		available_if_capitulated = yes
+		
+		available = {
+		 175 = { is_controlled_by = FRA } 
+		 139 = { is_controlled_by = FRA } 
+		 22 = { is_controlled_by = FRA } 
+		 }
+
+		completion_reward = {
+				22 = {
+				add_building_construction = { type = bunker province = 3810 level = 3 instant_build = yes }
+			}
+				139 = {
+				add_building_construction = { type = bunker province = 11390 level = 3 instant_build = yes }
+			}
+				175 = {
+				add_building_construction = { type = bunker province = 11742 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6914 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6879 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3835 level = 3 instant_build = yes }
+			}
+		}
+	
+	}
+	
+
+	
+	focus = {
+		id = TLY_army_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 11
+		y = 0
+		relative_position_id = TLY_industry_effort
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+	
+	focus = {
+		id = TLY_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TLY_army_focus }
+		x = 0
+		y = 1
+		relative_position_id = TLY_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			
+		}
+	}
+
+	focus = {
+		id = TLY_infantry_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TLY_doctrine_effort }
+#		mutually_exclusive = { focus = TLY_infantry_equipment_quality_effort }
+		x = -1
+		y = 1
+		relative_position_id = TLY_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.65
+				uses = 2
+				category = infantry_weapons
+			}
+			army_experience = 5
+			
+		}
+	}
+
+	focus = {
+		id = TLY_support_equipment_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TLY_doctrine_effort }
+#		mutually_exclusive = { focus = TLY_support_equipment_quality_effort }
+		x = 1
+		y = 1
+		relative_position_id = TLY_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.55
+				uses = 2
+				category = support_tech
+			}
+			army_experience = 5
+			
+		}
+	}
+	
+	focus = {
+		id = TLY_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+#		prerequisite = { focus = TLY_doctrine_effort }
+		prerequisite = { focus = TLY_infantry_equipment_effort focus = TLY_support_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = TLY_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+
+	focus = {
+		id = TLY_artillery_effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TLY_doctrine_effort_2 }
+#		mutually_exclusive = { focus = TLY_artillery_quality_effort }
+		x = 0
+		y = 3
+		relative_position_id = TLY_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+			army_experience = 5
+			
+		}
+	}
+	
+	focus = {
+		id = TLY_doctrine_effort_3
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TLY_artillery_effort }
+		x = 0
+		y = 2
+		relative_position_id = TLY_doctrine_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			
+		}
+	}
+
+	focus = {
+		id = TLY_new_weapons
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = TLY_doctrine_effort_3 }
+		x = 0
+		y = 1
+		relative_position_id = TLY_doctrine_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.75
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = TLY_marksman_trainings
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = TLY_army_focus }
+		mutually_exclusive = { focus = TLY_defensive_doctrine }
+		x = 3
+		y = 1
+		relative_position_id = TLY_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TLY_trainings
+		}
+	}
+
+	focus = {
+		id = TLY_riverlands_knights_traditions
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TLY_marksman_trainings }
+		x = 0
+		y = 1
+		relative_position_id = TLY_marksman_trainings
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_ideas = TLY_knights
+		}
+	}
+
+	focus = {
+		id = TLY_artillery_quality_effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TLY_riverlands_knights_traditions }
+#		mutually_exclusive = { focus = TLY_artillery_effort }
+		x = 0
+		y = 1
+		relative_position_id = TLY_riverlands_knights_traditions
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = TLY_artillery_quality
+#			army_experience = 5
+			
+		}
+	}
+	
+	focus = {
+		id = TLY_defensive_doctrine
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TLY_army_focus }
+		mutually_exclusive = { focus = TLY_marksman_trainings }
+		x = 5
+		y = 1
+		relative_position_id = TLY_army_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = TLY_defensive_doctrine
+		}
+	}	
+
+	focus = {
+		id = TLY_support_equipment_quality_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TLY_defensive_doctrine }
+#		mutually_exclusive = { focus = TLY_support_equipment_effort }
+		x = 0
+		y = 1
+		relative_position_id = TLY_defensive_doctrine
+		cost = 20
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = TLY_support_equipment_quality
+#			army_experience = 5
+			
+		}
+	}
+
+	focus = {
+		id = TLY_infantry_equipment_quality_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TLY_support_equipment_quality_effort }
+#		mutually_exclusive = { focus = TLY_infantry_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = TLY_defensive_doctrine
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = TLY_infantry_equipment_quality_effort
+#			army_experience = 5
+			
+		}
+	}
+
+	focus = { 
+		id = TLY_develop_blue_fork
+		icon = GFX_focus_TLY_develop_blue_fork
+		prerequisite = { focus = TLY_artillery_quality_effort focus = TLY_infantry_equipment_quality_effort }
+		x = -1
+		y = 1
+		relative_position_id = TLY_infantry_equipment_quality_effort
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+				
+		available = {
+		 170 = { is_controlled_by = FRA } 	
+		 }
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+		170 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 4
+                        add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes						
+						}
+						add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes						
+						}
+                        }
+                        } 
+
+		}
+	}	
+	
+	focus = { 
+		id = TLY_navy_focus
+		icon = GFX_goal_generic_navy_cruiser
+		x = 9
+		y = 0
+		relative_position_id = TLY_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+	
+	focus = { 
+		id = TLY_naval_doctrines
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TLY_navy_focus }
+		x = 0
+		y = 1
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		
+	}
+	
+	focus = { 
+		id = TLY_naval_doctrines_2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TLY_naval_doctrines }
+		x = 0
+		y = 2
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		
+	}
+
+	focus = { 
+		id = TLY_naval_doctrines_3
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TLY_naval_doctrines_2 }
+		x = 0
+		y = 3
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.65
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		
+	}
+	
+	
+	focus = { 
+		id = TLY_dockyard_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TLY_navy_focus }
+		x = -2
+		y = 1
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = { 
+		id = TLY_dockyard_effort_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TLY_dockyard_effort }
+		x = -2
+		y = 2
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+	
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = { 
+		id = TLY_dockyard_effort_3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TLY_dockyard_effort_2 }
+		x = -2
+		y = 3
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = { 
+		id = TLY_destroyers_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = TLY_navy_focus }
+		x = 2
+		y = 1
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = destroyer_bonus
+				bonus = 0.65
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = { 
+		id = TLY_cruisers_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = TLY_destroyers_effort }
+		x = 2
+		y = 2
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		
+		completion_reward = {
+		navy_experience = 5
+				add_tech_bonus = {
+				name = l_cruiser_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+				add_tech_bonus = {
+				name = hc_bonus
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+				add_tech_bonus = {
+				name = bc_bonus
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+
+	focus = { 
+		id = TLY_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = TLY_cruisers_effort }
+		x = 2
+		y = 3
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+
+		
+		completion_reward = {
+		navy_experience = 25
+				add_tech_bonus = {
+				name = submarine_bonus
+				bonus = 0.65
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	
+	
+	focus = { 
+		id = TLY_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TLY_submarine_effort }
+		x = 2
+		y = 4
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		
+		completion_reward = {
+		navy_experience = 25
+				add_tech_bonus = {
+				name = bb_bonus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+
+		}
+	}	
+	
+	
+	focus = { 
+		id = TLY_develop_seagard
+		icon = GFX_TLY_develop_seagard
+		prerequisite = { focus = TLY_dockyard_effort_3 }
+		x = -2
+		y = 4
+		relative_position_id = TLY_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		available = {
+		 99 = { is_controlled_by = FRA } 	
+		 }
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}		
+		completion_reward = {
+		99 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 5
+                        add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes						
+						}
+						add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes						
+						}
+                        }
+                        } 
+
+		}
+	}
+
+#	focus = {
+#		id = TLY_political_effort
+#		icon = GFX_goal_generic_demand_territory
+#		x = 40
+#		y = 0
+#		cost = 10
+#
+#		available_if_capitulated = yes
+#
+#		completion_reward = {
+#			add_political_power = 120
+#		}
+#	}
+
+#	focus = {
+#		id = TLY_frey_treaty
+#		icon = GFX_goal_generic_forceful_treaty
+#		prerequisite = { focus = TLY_political_effort }
+#		available = {
+#		}
+#		x = 40
+#		y = 1
+#		cost = 10
+#
+#		available_if_capitulated = yes
+#
+#		completion_reward = {
+#			add_political_power = 50
+#			custom_effect_tooltip = Frey_happy_tt
+#		}
+#	}

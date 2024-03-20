@@ -1,0 +1,19 @@
+MRT_provoke_stormlands = {
+	allowed = {
+		original_tag = SPR
+	}
+	icon = revolt
+	visible = {
+		has_completed_focus = MRT_claim_marches
+	}
+}
+
+MRT_support_targaryen_restoration = {
+	allowed = {
+		original_tag = SPR
+	}
+	icon = revolt
+	visible = {
+#		has_completed_focus = MRT_claim_marches
+	}
+}

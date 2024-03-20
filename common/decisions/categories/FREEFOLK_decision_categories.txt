@@ -1,0 +1,10 @@
+DEN_go_south = {
+	allowed = {
+		original_tag = DEN
+	}
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	visible = {
+#		ROM = { has_completed_focus = IRN_nobody_is_safe }	
+	}
+}

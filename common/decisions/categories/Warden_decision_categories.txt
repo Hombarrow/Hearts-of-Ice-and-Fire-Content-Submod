@@ -1,0 +1,26 @@
+#################
+#### Warden of the North ####
+#################
+
+Warden_north = {
+	
+	allowed = {
+		OR = {
+		original_tag = GEO
+		original_tag = KAZ
+		original_tag = AZR
+		original_tag = ITA
+		}
+	}
+
+	visible = {
+		OR = {
+		GEO = { has_country_flag = warden_of_north }
+		KAZ = { has_country_flag = warden_of_north }
+		AZR = { has_country_flag = warden_of_north }
+		ITA = { has_country_flag = warden_of_north }
+		}
+	}
+}
+	
+

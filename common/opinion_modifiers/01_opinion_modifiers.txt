@@ -1,0 +1,73 @@
+opinion_modifiers = {
+
+BOL_Hforget = {
+		value = 100
+	}
+
+BOL_Hpeaceful = {
+		value = 20
+	}
+
+marriage_between_myrcella_and_trystane = {
+		value = 45
+	}
+
+marriage_tommen_margery = {
+		value = 45
+	}
+
+
+friend_of_crown = {
+		value = 50
+	}
+
+ceeded_hornwood = {
+		value = 100
+	}
+
+supported_stannis = {
+		value = 200
+	}
+
+not_supported_stannis = {
+		value = -200
+	}
+
+usurper_ally = {
+		value = -100
+	}
+
+usurper_1 = {
+		value = -200
+	}
+
+supported_side = {
+		value = 125
+	}
+
+	VAL_captureClanGuns = {
+		value = 50
+	}
+
+
+	VAL_islandFortress = {
+		value = -50
+	}
+
+white_walkers = {
+		value = -2000
+	}
+	royal_betrayal = {
+		value = -50
+	}
+
+	anti_wildling_pact_opinion = {
+		value = 50
+	}
+
+	didnt_help_nights_watch = {
+		value = -50
+	}
+
+
+}

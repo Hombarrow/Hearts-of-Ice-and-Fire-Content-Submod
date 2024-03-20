@@ -1,0 +1,121 @@
+characters={
+
+	NWC_jeor_mormont={
+		name="Jeor Mormont"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	NWC_halfhand={
+		name="Qhorin Halfhand"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_Halfhand.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Halfhand.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ trickster old_guard ranger }
+			skill=4
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	NWC_jeremy_ryker={
+		name="Jaremy Rykker"
+		portraits={
+			army={
+				large="gfx/leaders/leader_marshal_unknown.dds"
+				small=GFX_idea_jeremy_rykker
+			}
+			civilian={
+				large="gfx/leaders/leader_marshal_unknown.dds"
+				small=GFX_idea_jeremy_rykker
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NWC_jeremy_ryker
+			cost = 150
+			allowed  = {
+					original_tag  = CAN
+				}
+				available  = {
+#					NOT = { has_global_flag = killed_stark_red_wedding }
+				}
+				traits  = {
+					quartermaster_general
+				}
+		}
+	}
+
+	NWC_yoren={
+		name="Yoren"
+		portraits={
+			army={
+				large="gfx/leaders/leader_marshal_unknown.dds"
+				small=GFX_idea_yoren
+			}
+			civilian={
+				large="gfx/leaders/leader_marshal_unknown.dds"
+				small=GFX_idea_yoren
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NWC_yoren
+			ledger = army
+			cost = 150
+			allowed  = {
+					original_tag  = CAN
+				}
+				available  = {
+#					NOT = { has_global_flag = killed_stark_red_wedding }
+				}
+				traits  = {
+					army_chief_drill_2
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	
+}

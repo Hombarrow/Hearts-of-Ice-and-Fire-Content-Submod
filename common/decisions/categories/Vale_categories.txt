@@ -1,0 +1,27 @@
+#################
+#### The Vale ####
+#################
+
+VAL_knights_recruit = {
+	
+	allowed = {
+		original_tag = SWE
+	}
+
+	visible = {
+		SWE = { has_completed_focus = VAL_knightsoftheVale }
+	}
+}
+
+VAL_marines_recruit = {
+	
+	allowed = {
+		original_tag = SWE
+	}
+
+	visible = {
+		SWE = { has_completed_focus = VAL_marines }
+	}
+}
+	
+

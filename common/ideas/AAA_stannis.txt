@@ -1,0 +1,98 @@
+ideas = { 
+	country = {
+		SIS_claim_king = { 
+			picture = HUN_hungarian_monarchy
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+
+		SIS_multiple_kings = { 
+			picture = HUN_hungarian_monarchy_habsburg
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+				political_power_factor = -0.15
+			}
+		}
+
+		SIS_commonfolk_volunteers = {
+			picture = ast_volunteer_defence_corps
+
+			allowed = {
+				original_tag = HUN
+			}
+
+#			allowed_civil_war = {
+#				NOT = { has_government = communism }
+#			}
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+	}
+
+#	political_advisor = {
+
+#		melisandre = {
+
+#			picture = idea_melisandre
+			
+#			allowed = {
+#				original_tag = HUN
+#			}
+
+#			available = {
+#				NOT = { has_completed_focus = SIS_sandreason }
+#			}
+			
+#			traits = { worship_ruhlor }
+#		}
+
+#		SIS_cressin = {
+
+#			picture = generic_political_advisor_europe_1
+			
+#			allowed = {
+#				original_tag = HUN
+#			}
+
+#			available = {
+#				NOT = { has_completed_focus = SIS_lordoflight }
+#			}
+			
+#			traits = { democratic_reformer }
+#		}
+
+#	}
+
+	theorist = {		
+		ser_davos = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_trade_interdiction = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+	}
+
+}

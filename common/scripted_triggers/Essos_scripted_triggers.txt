@@ -1,0 +1,16 @@
+is_slaver_state = {
+	OR = {
+		AND = {
+			original_tag = PER
+			PER = { NOT = { has_government = communism } }
+		}
+		AND = {
+			original_tag = IRQ
+			IRQ = { NOT = { has_government = communism } }
+		}
+		AND = {
+			original_tag = EGY
+			EGY = { NOT = { has_government = communism } }
+		}
+	}
+}

@@ -1,0 +1,201 @@
+ideas = { 
+	country = {
+		STR_ironwood = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		STR_great_depression = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				stability_factor = -0.10
+			}
+		}
+
+		STR_roselyn_stark = {
+
+			picture = ROM_king_carol_ii_hedonist
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.04		
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		whitehill = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		forrester = { 
+			picture = forrester
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.1 instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STR_ironwood_in_shipbuilding = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+					carrier = {
+					armor_value = 0.10 
+					}
+					capital_ship = {
+						armor_value = 0.2 
+				}
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		STR_armor_prod = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes }
+				light_tank_equipment = {
+					build_cost_ic = -0.1 instant = yes }
+                
+			}
+		}
+	}
+}
+
+#For Skaagos
+ideas = { 
+	country = {
+		SKA_militia = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+		 
+			modifier = {
+				conscription = 0.05
+				training_time_army_factor = 0.15
+			}
+		}
+		SKA_profesionalarmy = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+		 
+			modifier = {
+				conscription = 0.025
+				army_morale_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		SKA_agrarian = { 
+			picture = generic_agrarian_society
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+		 
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		SKA_industrial = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+		 
+			modifier = {
+				industrial_capacity_factory = 0.15
+#				stability_factor = 0.25
+			}
+		}
+		SKA_foodforall = { 
+			picture = generic_goods_red_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+		 
+			modifier = {
+				stability_factor = 0.15
+				attrition = -0.10
+#				supply_consumption_factor = -0.05
+			}
+		}
+	}
+}

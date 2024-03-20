@@ -1,0 +1,106 @@
+characters={
+
+	TLY_edmure={
+		name = "Edmure Tully"
+		portraits={
+			army={
+				large="gfx/leaders/FRA/Portrait_Edmure_Tully.dds"
+#				small=GFX_idea_tyrion
+			}
+			civilian={
+				large="gfx/leaders/FRA/Portrait_Edmure_Tully.dds"
+#				small=GFX_idea_tyrion
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ inexperienced_imperialist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ panzer_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	TLY_tblackwood={
+		name="Tytos Blackwood"
+		portraits={
+			army={
+				large=GFX_TBlackwood
+				small=GFX_idea_tblackwood
+			}
+			civilian={
+				large=GFX_TBlackwood
+				small=GFX_idea_tblackwood
+			}
+		}
+		corps_commander={
+			traits={ old_guard ranger }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = TLY_tblackwood
+			cost = 150
+			allowed  = {
+					original_tag  = FRA
+				}
+#				available  = {
+#					has_idea = lordof_light
+#				}
+				traits  = {
+					army_regrouping_2
+				}
+		}
+	}
+
+	TLY_thoros={
+		name="Thoros of Myr"
+		portraits={
+			army={
+				large="gfx/leaders/FRA/Portrait_Thoros.dds"
+				small=GFX_idea_thoros
+			}
+			civilian={
+				large="gfx/leaders/FRA/Portrait_Thoros.dds"
+				small=GFX_idea_thoros
+			}
+		}
+		corps_commander={
+			traits={ ranger }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = TLY_thoros
+			cost = 150
+			allowed  = {
+					original_tag  = FRA
+				}
+				available  = {
+					has_idea = lordof_light
+				}
+				traits  = {
+					worship_ruhlor
+				}
+		}
+	}
+	
+}

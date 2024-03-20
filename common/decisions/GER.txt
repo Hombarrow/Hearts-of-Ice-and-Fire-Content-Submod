@@ -1,0 +1,335 @@
+political_actions = {
+	
+	attack_wildlings = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			original_tag = GER
+		}
+
+		visible = {
+			original_tag = GER
+			DEN = { exists = yes }
+			GER = { NOT =  { has_war_with = DEN } }
+			GER = { has_completed_focus = WTT_attackwildlings }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { is_neighbor_of = ROOT }
+		}
+
+#		target_trigger = { 
+#			DEN = { exists = yes }
+#			exists = yes
+#		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = DEN
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	attack_wall = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = GER
+			CAN = { is_neighbor_of = ROOT }
+		}
+
+		visible = {
+			original_tag = GER
+			CAN = { exists = yes }
+			GER = { NOT =  { has_war_with = CAN } }
+			GER = { has_completed_focus = WTT_attackthewall }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = CAN }
+		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = CAN
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	attack_stark = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = GER
+			FIN = { is_neighbor_of = ROOT }
+		}
+
+		visible = {
+			original_tag = GER
+			FIN = { exists = yes }
+			GER = { NOT =  { has_war_with = FIN } }
+			GER = { has_completed_focus = WTT_takenorth }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = FIN }
+		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = FIN
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	attack_karstark = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = GER
+			NOR = { is_neighbor_of = ROOT }
+		}
+
+		visible = {
+			original_tag = GER
+			NOR = { exists = yes }
+			GER = { NOT =  { has_war_with = NOR } }
+			GER = { has_completed_focus = WTT_takenorth }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = NOR }
+		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = NOR
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	attack_bolton = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = GER
+			ITA = { is_neighbor_of = ROOT }
+		}
+
+		visible = {
+			original_tag = GER
+			ITA = { exists = yes }
+			GER = { NOT =  { has_war_with = ITA } }
+			GER = { has_completed_focus = WTT_takenorth }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = ITA }
+		}
+
+		fire_only_once = yes
+		
+		cost = 5
+
+		days_remove = 1
+
+		complete_effect = {
+			declare_war_on = {
+				target = ITA
+				type = annex_everything 
+			}
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	get_craster_tech = {
+
+		icon = generic_research
+
+		available = {
+			original_tag = GER
+			ICE = { has_idea = craster_others_deal }
+		}
+
+		visible = {
+			ICE = { exists = yes }
+			original_tag = GER
+			GER = { NOT =  { has_war_with = ICE } }
+		}
+
+#		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 270
+		
+		cost = 25
+
+		complete_effect = {
+			GER = { country_event = { id = germany.21 } }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+			
+}
+
+WTT_dragons = {
+	
+	kill_viserion = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SOV = { has_idea = TAR_charge }
+			any_owned_state = { is_controlled_by = SOV }
+			GER = { has_war = yes }
+#			has_country_leader = { ruling_only = yes name = "Euron Greyjoy" }
+		}
+
+		visible = {
+			original_tag = GER
+			SOV = { has_completed_focus = TAR_motherofdragons }
+		}
+
+		fire_only_once = yes
+		
+		cost = 300
+
+		days_remove = 1
+
+		complete_effect = {
+			SOV = {
+				country_event = { hours = 1 id = targaryen.3 }
+				effect_tooltip = {
+					remove_ideas = vyserion_4
+#					show_ideas_tooltip = vyserion_4
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	revive_viserion = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_global_flag = viserion_killed
+		}
+
+		visible = {
+			original_tag = GER
+			has_global_flag = viserion_killed
+		}
+
+		fire_only_once = yes
+		
+		cost = 500
+
+		days_remove = 6
+
+		complete_effect = {
+			country_event = { days = 6 id = germany.22 }
+			clr_global_flag = viserion_killed
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	say_charge_wtt = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "The Night King" }
+			has_war = yes
+		}
+
+		visible = {
+			has_idea = vyserion_4
+		}
+
+#		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 75
+		
+		cost = 15
+
+		days_remove = 7
+
+		complete_effect = {
+			add_timed_idea = { idea = TAR_charge days = 7 }
+			add_stability = -0.10
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}

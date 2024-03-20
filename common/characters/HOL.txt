@@ -1,0 +1,447 @@
+characters={
+
+	LAN_tywin_lannister={
+		name="Tywin Lannister"
+		desc = "POLITICS_LORD_TYWIN_DESC"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tywin_2.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tywin_2.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ lion_casterlyrock }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ offensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=5
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	LAN_tyrion_lannister={
+		name="Tyrion Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_tyrion
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_tyrion
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ silent_workhorse }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LAN_tyrion_lannister
+			cost = 150
+			allowed  = {
+					always = yes
+#					original_tag  = HOL
+				}
+				available  = {
+					if  = {
+						limit  = {
+							has_dlc = "Man the Guns"
+						}
+						not  = {
+							has_autonomy_state  = autonomy_supervised_state
+						}
+					}
+				}
+				traits  = {
+					insulent_imp
+				}
+		}
+	}
+
+	LAN_jaime_lannister={
+		name="Jaime Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Jaime_Lannister.dds"
+				small=GFX_idea_jaime
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Jaime_Lannister.dds"
+				small=GFX_idea_jaime
+			}
+		}
+		corps_commander={
+			traits = { ranger media_personality }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 4
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LAN_jaime_lannister
+			cost = 150
+			allowed  = {
+					original_tag  = HOL
+				}
+#				available  = {
+#					if  = {
+#						limit  = {
+#							has_dlc = "Man the Guns"
+#						}
+#						not  = {
+#							has_autonomy_state  = autonomy_supervised_state
+#						}
+#					}
+#				}
+				traits  = {
+					army_chief_offensive_3
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	LAN_kevan_lannister={
+		name = "Kevan Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Kevan_Lannister.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Kevan_Lannister.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ politically_connected old_guard }
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	LAN_mountain={
+		name="Gregor Clegane"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Gregor_Clegane.dds"
+				small=GFX_idea_mountain
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Gregor_Clegane.dds"
+				small=GFX_idea_mountain
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter fortress_buster harsh_leader }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LAN_mountain
+			cost = 150
+			allowed  = {
+					original_tag  = HOL
+				}
+				available  = {
+#					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				traits  = {
+					the_mountain
+				}
+		}
+	}
+
+	LAN_amarbrand={
+		name="Addam Marbrand"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Adam_Marband.dds"
+				small=GFX_idea_amarbrand
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Adam_Marband.dds"
+				small=GFX_idea_amarbrand
+			}
+		}
+		corps_commander={
+			traits={ trickster infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = LAN_amarbrand
+			ledger = army
+			cost = 150
+			allowed  = {
+					original_tag  = HOL
+				}
+				available  = {
+#					not  = { has_autonomy_state  = autonomy_supervised_state }
+				}
+				traits  = {
+					army_armored_3
+				}
+		}
+	}
+
+	LAN_myrcella={
+		name="Myrcella Baratheon"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Myrcela2.dds"
+				small=GFX_idea_myrcella2
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Myrcela2.dds"
+				small=GFX_idea_myrcella2
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = LAN_myrcella
+			cost = 50
+			allowed  = {
+					always = yes
+#					original_tag  = HOL
+				}
+				available  = {
+					if  = {
+						limit  = {
+							has_dlc = "Man the Guns"
+						}
+#						not  = {
+#							has_autonomy_state  = autonomy_supervised_state
+#						}
+					}
+				}
+				traits  = {
+					endearing_princess
+				}
+		}
+	}
+
+	LAN_stafford_lannister={
+		name="Stafford Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=generic_army_europe_3
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=generic_army_europe_3
+			}
+		}
+#		corps_commander={
+#			traits={ hill_fighter }
+#			skill=2
+#			attack_skill=1
+#			defense_skill=3
+#			planning_skill=3
+#			logistics_skill=2
+#			legacy_id=-1
+#		}
+		advisor={
+			slot = high_command
+			idea_token = LAN_stafford_lannister
+			cost = 150
+			allowed  = {
+					original_tag  = HOL
+				}
+				available  = {
+					if  = {
+						limit  = {
+							has_government = fascism
+						}
+					}
+				}
+				traits  = {
+					army_chief_drill_2
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	LAN_alfred_saalwachter={
+		name="Sebaston Farman"
+		portraits={
+			army={
+				large=GFX_portrait_GER_alfred_saalwachter
+				small=GFX_portrait_GER_alfred_saalwachter_small
+			}
+			army={
+				small="GFX_idea_alfred_saalwachter"
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = LAN_alfred_saalwachter
+			ledger = navy
+			allowed = {
+				original_tag = HOL
+			}
+			available = {
+					has_completed_focus = LAN_navy_command
+			}
+			traits = {
+				submarine_specialist
+			}
+		}
+		
+#		navy_leader={
+#			traits={ old_guard_navy bold }
+#			skill=4
+#			attack_skill=4
+#			defense_skill=2
+#			maneuvering_skill=3
+#			coordination_skill=4
+#			legacy_id=28
+#		}
+	}
+
+	LAN_erich_bey={
+		name="Quenten Banefort"
+		portraits={
+			army={
+				small="GFX_idea_erich_bey"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LAN_erich_bey
+			ledger = navy
+			allowed = {
+				original_tag = HOL
+			}
+			available = {
+					has_completed_focus = LAN_navy_command
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	LAN_gunther_lutjens={
+		name="Terrence Kenning"
+		portraits={
+			army={
+				large=GFX_portrait_GER_gunther_lutjens
+				small=GFX_portrait_GER_gunther_lutjens_small
+			}
+			army={
+				small="GFX_idea_gunther_lutjens"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LAN_gunther_lutjens
+			ledger = navy
+			allowed = {
+				original_tag = HOL
+			}
+			available = {
+					has_completed_focus = LAN_navy_command
+			}
+			traits = {
+				navy_fleet_logistics_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+#		navy_leader={
+#			traits={ gentlemanly navy_career_officer superior_tactician }
+#			skill=3
+#			attack_skill=4
+#			defense_skill=1
+#			maneuvering_skill=1
+#			coordination_skill=4
+#			legacy_id=31
+#		}
+	}
+
+	LAN_viktor_schutze={
+		name="Garrison Prester"
+		portraits={
+			army={
+				small="GFX_idea_viktor_schutze"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LAN_viktor_schutze
+			ledger = navy
+			allowed = {
+				original_tag = HOL
+			}
+			available = {
+					has_completed_focus = LAN_navy_command
+			}
+			traits = {
+				navy_anti_submarine_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}

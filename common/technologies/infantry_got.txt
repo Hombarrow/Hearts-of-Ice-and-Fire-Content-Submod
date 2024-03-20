@@ -1,0 +1,216 @@
+technologies = {
+	
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+
+	train_unsulied = {
+	
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		enable_subunits = {
+			unsulied
+		}
+	}
+	
+	red_mountain_warriors = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		mountaineers = {
+			max_organisation = 7
+			soft_attack = 0.10
+		}
+	}
+	
+	desert_cavalry = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		cavalry = {
+			maximum_speed = 0.10
+			soft_attack = 0.10
+		}
+	}
+	
+	mountain_warfare = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+	category_front_line = {
+		hills = { movement = 0.1
+			attack = 0.1
+			defence = 0.1}
+		mountain = { movement = 0.1
+			attack = 0.1
+			defence = 0.1}
+		}
+	}
+	
+	SRL_defense = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+	category_front_line = {
+		plains = {	defence = 0.15 }
+		}
+	}
+	
+	plain_warfare = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+	category_front_line = {
+		plains = { movement = 0.15
+			attack = 0.15 }
+		desert = { movement = 0.15
+			attack = 0.15}
+		}
+	}
+	
+	SRL_agression = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+	category_front_line = {
+			attack = 0.15 
+		}
+	}
+	
+	dornish_marches = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		mountaineers = {
+			max_organisation = 10
+			defense = 0.10
+		}
+	}
+	
+	
+	ironborn_marines = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		marine = {
+		marsh = {
+			attack = 0.1
+		}
+		river = {
+			attack = 0.1
+		}
+		amphibious = {
+			attack = 0.1
+		}
+		attack = 0.10
+		defense = 0.10
+		}
+	}
+	
+	
+		
+	ironborn_land_doctrine = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		marine = {
+		marsh = {
+			attack = 0.05
+			movement = 0.20
+		}
+		river = {
+			attack = 0.05
+			movement = 0.20
+		}
+		amphibious = {
+			attack = 0.05
+			movement = 0.20
+		}
+		max_organisation = 20
+		}
+	}
+	
+	stannis_marines = {
+	
+	research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+	
+		marine = {
+		marsh = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.05
+		}
+		amphibious = {
+			attack = 0.05
+		}
+		max_organisation = 10
+		movement = 0.10
+		soft_attack = 0.05
+		}
+	}
+
+}

@@ -1,0 +1,557 @@
+ideas = { 
+	country = {
+
+		burned_city = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.3
+				conscription_factor = -0.5
+				local_resources_factor = -0.2
+			}
+		}
+
+		TAR_queencouncil = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				max_command_power = 20
+				command_power_gain_mult = 0.1
+				planning_speed = 0.1
+			}
+
+			picture = eng_chiefs_of_staff_committee
+			
+			removal_cost = -1			
+			
+		}
+
+		TAR_dracarys = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression	
+			modifier = {
+				army_attack_factor = 3.0
+				army_defence_factor = 3.0
+			}
+		}
+
+		TAR_morale = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression	
+			modifier = {
+				army_morale_factor = 0.5
+				supply_consumption_factor = -0.25
+			}
+		}
+
+		TAR_charge = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression	
+			modifier = {
+				land_reinforce_rate = 1.0
+				army_speed_factor = 1.0
+			}
+		}
+
+		TAR_depression = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			rule = {
+				can_not_declare_war = yes
+			}	
+			modifier = {
+				consumer_goods_factor = 0.15
+				conscription = -0.015
+				stability_factor = -0.25
+			}
+		}
+
+		TAR_sheepclothing = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus	
+			modifier = {
+				attrition = -0.10
+			}
+		}
+
+		TAR_sheepfarming = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus	
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		TAR_undying_vision = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus	
+			modifier = {
+				decryption_factor = 0.5
+			}
+		}
+
+		PER_payments = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		PER_payments_bad = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		QAR_payments = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		QAR_payment_once = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		TAR_payments = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		TAR_payments_2 = {
+			name = TAR_payments
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				422 = { is_fully_controlled_by = ISR } #Ghaen
+				702 = { is_fully_controlled_by = ISR } #Elyria
+				649 = { is_fully_controlled_by = ISR } #New Ghis
+				320 = { is_fully_controlled_by = ISR } #Port Yhos
+			}
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		TAR_reward = {
+#			name = GER_mefo_bills
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_mefo_bills
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TAR_shipbuildingbonus = {
+
+			allowed = { NOT = { has_war_with = ISR } }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		drogon = {
+			name = drogon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_drogon	
+			modifier = {
+				stability_factor = 0.01
+			}
+		}
+
+		vyserion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_vyserion	
+			modifier = {
+				stability_factor = 0.01
+			}
+		}
+
+		rheagul = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_rheagul	
+			modifier = {
+				stability_factor = 0.01
+			}
+		}
+
+		drogon_2 = {
+#			name = drogon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_drogon_2	
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+
+		vyserion_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_vyserion_2	
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+
+		rheagul_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_rheagul_2	
+			modifier = {
+				stability_factor = 0.02
+			}
+		}
+
+		drogon_3 = {
+#			name = drogon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_drogon_2	
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		vyserion_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_vyserion_2	
+			modifier = {
+				war_support_factor = 0.1
+			}
+		}
+
+		rheagul_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_rheagul_2	
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		drogon_4 = {
+#			name = drogon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_drogon_2	
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		vyserion_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_vyserion_2	
+			modifier = {
+				war_support_factor = 0.2
+			}
+		}
+
+		rheagul_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_rheagul_2	
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+
+	}
+}

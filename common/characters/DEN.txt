@@ -1,0 +1,88 @@
+characters={
+	FFA_mance_rayder={
+		name="Mance Rayder"
+		portraits={
+			army={
+				large="gfx/leaders/DEN/Portrait_Mance_Rayder.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/DEN/Portrait_Mance_Rayder.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	FFA_tormund={
+		name="Tormund Giantsbane"
+		portraits={
+			army={
+				large="gfx/leaders/DEN/Portrait_General_Tormund.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/DEN/Portrait_General_Tormund.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ winter_specialist hill_fighter }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	FFA_ygritte={
+		name="Ygritte Firekissed"
+		portraits={
+			army={
+				large="gfx/leaders/DEN/Portrait_General_Ygritte.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/DEN/Portrait_General_Ygritte.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=4
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+}

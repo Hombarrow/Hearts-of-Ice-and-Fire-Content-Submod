@@ -1,0 +1,9 @@
+SIS_declare_king = {
+	allowed = {
+		original_tag = HUN
+	}
+	icon = revolt
+	visible = {
+		has_completed_focus = SIS_raly_kingdom
+	}
+}

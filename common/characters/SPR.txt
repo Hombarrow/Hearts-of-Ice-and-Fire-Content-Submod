@@ -1,0 +1,166 @@
+characters={
+	DOR_doran={
+		name="Doran Martell"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Doran_Martell.dds"
+				small=GFX_idea_ser_jorah
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Doran_Martell.dds"
+				small=GFX_idea_ser_jorah
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	DOR_trystane={
+		name="Trystane Martell"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Trystane_Martell.dds"
+				small=GFX_idea_ser_jorah
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Trystane_Martell.dds"
+				small=GFX_idea_ser_jorah
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits = { politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+
+	DOR_elaria={
+		name="Ellaria Sand"
+		gender = female
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Elaria_Sand.dds"
+				small=GFX_idea_ser_jorah
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Elaria_Sand.dds"
+				small=GFX_idea_ser_jorah
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	DOR_lady_nym={
+		name="Nymeria Sand"
+		gender = female
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Nymeria_Sand.dds"
+				small=GFX_idea_nymeria
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Nymeria_Sand.dds"
+				small=GFX_idea_nymeria
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = DOR_lady_nym
+			ledger = army
+			cost = 150
+			allowed  = {
+					always = yes
+				}
+				available  = {
+#					has_completed_focus = MRT_sandsnakes
+				}
+				traits  = {
+					army_regrouping_2
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	DOR_tyene={
+		name="Tyene Sand"
+		gender = female
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Tyene_Sand.dds"
+				small=GFX_idea_tyene
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Tyene_Sand.dds"
+				small=GFX_idea_tyene
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = DOR_tyene
+			ledger = army
+			cost = 150
+			allowed  = {
+					always = yes
+				}
+				available  = {
+#					has_completed_focus = MRT_sandsnakes
+				}
+				traits  = {
+					army_artillery_2
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+
+	DOR_areohotah={
+		name = "Areo Hotah"
+		portraits={
+			army={
+				large="gfx/leaders/SPR/Portrait_Areo_hotah.dds"
+				small=GFX_idea_areohotah
+			}
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Areo_hotah.dds"
+				small=GFX_idea_areohotah
+			}
+		}
+		corps_commander={
+			traits = { infantry_officer trait_cautious }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+}

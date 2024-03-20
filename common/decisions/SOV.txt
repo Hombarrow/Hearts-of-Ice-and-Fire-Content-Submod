@@ -1,0 +1,861 @@
+operations = {
+
+	TAR_drogo_is_dying = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				271 = { is_owned_and_controlled_by = SOV }
+#				any_allied_country = { owns_and_controls_state = 33 }
+				LEB = { is_subject_of = SOV }
+			}
+#			has_war_with = ENG
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+#		highlight_states = {
+#			state = 33
+#		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+			hidden_trigger = {
+#				OR = {
+#					NOT = { GER_has_mefo_bills = yes }
+#					has_idea = GER_mefo_bills_ended
+#				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			33 = { is_controlled_by = FIN }
+#			ENG = {	country_event = britain.1 }  to win
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+#			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			add_political_power = 100
+			country_event = targaryen.18
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			SOV = {	country_event = soviet.60 }		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	TAR_dany_pregnant = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+			has_global_flag = drogo_dead
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+#		highlight_states = {
+#			state = 33
+#		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 270
+		is_good = yes 
+		fire_only_once = yes
+
+		cancel_trigger = {
+			SOV = { is_subject = yes }
+			hidden_trigger = { 
+#				OR = {
+#					SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+#					has_idea = GER_mefo_bills_ended
+#				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			33 = { is_controlled_by = SOV }
+#			ENG = {	country_event = britain.1 }  to win
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+#			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			add_political_power = -100
+#			country_event = targaryen.18
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			set_global_flag = danny_mommy
+#			SOV = {	country_event = soviet.60 }		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+}
+
+political_actions = {
+	
+	transfer_portyhos_2 = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+#			original_tag = SOV
+			has_global_flag = TAR_chose_guild
+			320 = { is_owned_and_controlled_by = SOV }
+			NOT = { has_war_with = ISR }
+		}
+
+		visible = {
+			original_tag = SOV
+			has_global_flag = TAR_chose_guild
+            		NOT = { has_war_with = ISR }
+		}
+
+		fire_only_once = yes
+		
+#		cost = 150
+
+		days_remove = 3
+
+		complete_effect = {
+			ISR = { country_event = { id = soviet.6 days = 4 } }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	TAR_invest_portyhos = {
+
+		icon = generic_industry
+
+		available = {
+#			original_tag = SOV
+			has_global_flag = TAR_investin_yhos
+			320 = { is_owned_and_controlled_by = ISR }
+			NOT = { has_war_with = ISR }
+		}
+
+		visible = {
+			original_tag = SOV
+			has_global_flag = TAR_investin_yhos
+			320 = { is_owned_and_controlled_by = ISR }
+            		NOT = { has_war_with = ISR }
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+
+		complete_effect = {
+			SOV = { add_ideas = TAR_shipbuildingbonus }
+			320 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+	}
+			
+}
+
+TAR_infiltrate_slaver_areas = {
+	
+	TAR_infiltrate_astapor = {
+
+		icon = border_war
+
+		available = {
+			has_war_with = PER
+#			has_global_flag = TAR_chose_guild
+		}
+
+		visible = {
+			original_tag = SOV
+			country_exists = PER
+			has_completed_focus = TAR_infiltrateslavers
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 3
+
+		complete_effect = {
+			PER = {	country_event = slaversbay.5 }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	TAR_infiltrate_yunkai = {
+
+		icon = border_war
+
+		available = {
+			has_war_with = IRQ
+#			has_global_flag = TAR_chose_guild
+		}
+
+		visible = {
+			original_tag = SOV
+			country_exists = IRQ
+			has_completed_focus = TAR_infiltrateslavers
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		days_remove = 3
+
+		complete_effect = {
+			IRQ = {	country_event = slaversbay.5 }
+		}
+
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+#	TAR_infiltrate_meereen = {
+#
+#		icon = border_war
+#
+#		available = {
+#			has_war_with = EGY
+#			has_global_flag = TAR_chose_guild
+#		}
+#
+#		visible = {
+#			original_tag = SOV
+#			country_exists = EGY
+#			has_completed_focus = TAR_infiltrateslavers
+#		}
+#
+#		fire_only_once = yes
+#		
+#		cost = 25
+#
+#		days_remove = 3
+#
+#		complete_effect = {
+#			EGY = {	country_event = slaversbay.5 }
+#		}
+#
+#		ai_will_do = {
+#			factor = 80
+#		}
+#	}
+
+#	TAR_rise_meereen = {
+#
+#		icon = generic_prepare_civil_war
+#
+#		available = {
+#			has_war_with = EGY
+#			EGY = { communism > 0.1 }
+#		}
+#
+#		visible = {
+#			original_tag = SOV
+#			has_completed_focus = TAR_infiltrateslavers
+#		}
+#
+#		fire_only_once = yes
+#		
+#		cost = 35
+#
+#		days_remove = 3
+#
+#		complete_effect = {
+#			EGY = {	country_event = slaversbay.8 }
+#		}
+#
+#		ai_will_do = {
+#			factor = 80
+#		}
+#	}
+
+	TAR_rise_yunkai = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war_with = IRQ
+			IRQ = { communism > 0.1 }
+		}
+
+		visible = {
+			original_tag = SOV
+			has_completed_focus = TAR_infiltrateslavers
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+
+		complete_effect = {
+			IRQ = {	country_event = slaversbay.8 }
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+	}
+
+	TAR_rise_astapor = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war_with = PER
+			PER = { communism > 0.1 }
+		}
+
+		visible = {
+			original_tag = SOV
+			has_completed_focus = TAR_infiltrateslavers
+		}
+
+		fire_only_once = yes
+		
+		cost = 50
+
+		days_remove = 3
+
+		complete_effect = {
+			PER = {	country_event = slaversbay.8 }
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+	}
+			
+}
+
+TAR_getunsulied = {
+	
+	TAR_grey_worm = {
+
+		icon = generic_army_support
+
+		available = {
+#			original_tag = SOV
+#			has_global_flag = TAR_chose_guild
+		}
+
+		visible = {
+			original_tag = SOV
+			has_completed_focus = TAR_plunderpeople
+		}
+
+		fire_only_once = yes
+		
+		cost = 35
+
+#		days_remove = 3
+
+		complete_effect = {
+			create_corps_commander = {
+				name = "Grey Worm"
+				picture = "Portrait_Grey_Worm.dds"
+				traits = { trickster }
+				skill = 4
+				id = 402
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 1
+				logistics_skill = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}
+
+TAR_paying_qarth = {
+	
+	transfer_portyhos = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			320 = { is_owned_and_controlled_by = SOV }
+		}
+
+		visible = {
+			has_global_flag = TAR_chose_spicers
+            		NOT = { has_war_with = ISR }
+		}
+
+		highlight_states = {
+ highlight_state_targets = {
+			state = 320
+		} 
+}
+
+		fire_only_once = yes
+		
+#		cost = 150
+
+		days_remove = 3
+
+		complete_effect = {
+			ISR = { transfer_state = 320 }
+			ISR = {	add_state_core = 320 }
+			SOV = {	remove_state_claim = 320 }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	transfer_ghaen_newghis = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			649 = { is_owned_and_controlled_by = SOV }
+			422 = { is_owned_and_controlled_by = SOV }
+		}
+
+		visible = {
+			has_global_flag = TAR_chose_spicers
+            		NOT = { has_war_with = ISR }
+		}
+
+		highlight_states = {
+ highlight_state_targets = {
+			state = 649
+		}
+}
+
+		fire_only_once = yes
+		
+#		cost = 150
+
+		days_remove = 3
+
+		complete_effect = {
+			ISR = { transfer_state = 649 }
+			ISR = {	add_state_core = 649 }
+			ISR = { transfer_state = 422 }
+			ISR = {	add_state_core = 422 }
+			SOV = {	remove_state_claim = 649 }
+			SOV = {	remove_state_claim = 422 }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	transfer_elyria = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			702 = { is_owned_and_controlled_by = SOV }
+		}
+
+		visible = {
+			has_global_flag = TAR_chose_spicers
+            		NOT = { has_war_with = ISR }
+		}
+
+		highlight_states = {
+ highlight_state_targets = {
+			state = 702
+		}
+}
+
+		fire_only_once = yes
+		
+#		cost = 150
+
+		days_remove = 3
+
+		complete_effect = {
+			ISR = { transfer_state = 702 }
+			ISR = {	add_state_core = 702 }
+			SOV = {	remove_state_claim = 702 }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}
+
+TAR_taming_dragons = {
+	
+	dragons_grow_up = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SOV = { has_completed_focus = TAR_motherofdragons }
+#			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+		}
+
+		visible = {
+			OR = {
+				has_idea = drogon_2
+				has_idea = rheagul_2
+				has_idea = vyserion_2
+			}
+		}
+
+		fire_only_once = yes
+		
+		cost = 500
+
+		days_remove = 3
+
+		complete_effect = {
+			activate_mission = TAR_dragons_growing
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	TAR_dragons_growing = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = TAR_growing_dragons_timer?480
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			AND = {
+				NOT = { has_idea = drogon_2 }
+				NOT = { has_idea = vyserion_2 }
+				NOT = { has_idea = rheagul_2 }
+			}
+		}
+
+#		highlight_states = {
+#			state = 35
+#		}
+
+		visible = {
+			
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+#			custom_effect_tooltip = MAN_hunt_down_northern_bandits_tt
+#			army_experience = 10
+#			clr_country_flag = MAN_northern_bandits
+			if = {
+				limit = {
+					SOV = { has_idea = drogon_2 }
+				}
+				swap_ideas = { remove_idea = drogon_2 add_idea = drogon_3 }
+			}
+			if = {
+				limit = {
+					SOV = { has_idea = rheagul_2 }
+				}
+				swap_ideas = { remove_idea = rheagul_2 add_idea = rheagul_3 }
+			}
+			if = {
+				limit = {
+					SOV = { has_idea = vyserion_2 }
+				}
+				swap_ideas = { remove_idea = vyserion_2 add_idea = vyserion_3 }
+			}
+		}
+	}
+
+	learn_dracarys = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+		}
+
+		visible = {
+			has_idea = drogon_3
+		}
+
+		fire_only_once = yes
+		
+		cost = 250
+
+		days_remove = 3
+
+		complete_effect = {
+			swap_ideas = { remove_idea = drogon_3 add_idea = drogon_4 }
+			if = {
+				limit = {
+					NOT = { has_global_flag = TAR_dragons_back }
+				}
+				hidden_effect = { country_event = { days = 1 id = news.34 }}
+			}
+			set_global_flag = TAR_dragons_back
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+
+	learn_morale = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+		}
+
+		visible = {
+			has_idea = rheagul_3
+		}
+
+		fire_only_once = yes
+		
+		cost = 250
+
+		days_remove = 3
+
+		complete_effect = {
+			swap_ideas = { remove_idea = rheagul_3 add_idea = rheagul_4 }
+			if = {
+				limit = {
+					NOT = { has_global_flag = TAR_dragons_back }
+				}
+				hidden_effect = { country_event = { days = 1 id = news.34 }}
+			}
+			set_global_flag = TAR_dragons_back
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+
+	learn_charge = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+		}
+
+		visible = {
+			has_idea = vyserion_3
+		}
+
+		fire_only_once = yes
+		
+		cost = 250
+
+		days_remove = 3
+
+		complete_effect = {
+			swap_ideas = { remove_idea = vyserion_3 add_idea = vyserion_4 }
+			if = {
+				limit = {
+					NOT = { has_global_flag = TAR_dragons_back }
+				}
+				hidden_effect = { country_event = { days = 1 id = news.34 }}
+			}
+			set_global_flag = TAR_dragons_back
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}
+
+TAR_dragons = {
+	
+	say_dracarys = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
+			has_war = yes
+		}
+
+		visible = {
+			has_idea = drogon_4
+		}
+
+#		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 75
+		
+		cost = 15
+
+		days_remove = 7
+
+		complete_effect = {
+			add_timed_idea = { idea = TAR_dracarys days = 7 }
+			add_stability = -0.10
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	say_charge = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
+			has_war = yes
+		}
+
+		visible = {
+			has_idea = vyserion_4
+		}
+
+#		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 75
+		
+		cost = 15
+
+		days_remove = 7
+
+		complete_effect = {
+			add_timed_idea = { idea = TAR_charge days = 7 }
+			add_stability = -0.10
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	say_morale = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
+			has_war = yes
+		}
+
+		visible = {
+			has_idea = rheagul_4
+		}
+
+#		fire_only_once = yes
+
+		days_remove = 1
+		days_re_enable = 75
+		
+		cost = 15
+
+		days_remove = 7
+
+		complete_effect = {
+			add_stability = -0.05
+			add_timed_idea = { idea = TAR_morale days = 7 }
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+			
+}
+
+### #  # ### ### #  ### ###   ##  ### ###  ##  #  #
+ #  ## # #    #  #   #  #  # #  #  #   #  #  # ## #
+ #  # ## ##   #  #   #  ###  ####  #   #  #  # # ##
+ #  #  # #    #  #   #  #  # #  #  #   #  #  # #  #
+### #  # #   ### ### #  #  # #  #  #  ###  ##  #  #
+
+#Category only allowed for is_potentially_communist_china
+#Category visible when PRC_infiltration focus is completed
+
+
+# 321 - Astapor
+# 701 - Yunkai
+# 429 - Old Ghis
+# 320 - Port Yhos
+# 656 - Meereen / not used
+# 195 - Mantarys / not used
+# 188 - Volantis / not used
+# 199 - Valysar / unused
+# 189 - Volon Therys / unused
+# 224 - Sar MEl / unused

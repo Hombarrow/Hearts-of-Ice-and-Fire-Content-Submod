@@ -1,0 +1,267 @@
+characters={
+
+	CWN_king_robbo={
+		name="Robert I Baratheon"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_King_Robert.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_King_Robert.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={ popular_figurehead }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ offensive_doctrine media_personality war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	CWN_joffrey={
+		name="Joffrey I Baratheon"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_King_Joffrey.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_King_Joffrey_2.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ inexperienced_imperialist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	CWN_cersei={
+		name="Cersei Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Queen_Cersei.dds"
+				small=GFX_idea_cersei
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Queen_Cersei.dds"
+				small=GFX_idea_cersei
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=fascism_ideology
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CWN_cersei
+			cost = 150
+			allowed  = {
+					always = yes
+				}
+				available  = {
+					if  = {
+						limit  = {
+							has_dlc = "Man the Guns"
+						}
+						not  = {
+							has_autonomy_state  = autonomy_supervised_state
+						}
+					}
+				}
+				traits  = {
+					cersei_political_manipulator
+				}
+		}
+	}
+
+	CWN_thehound={
+		name="Sandor Clegane"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Sandor_Clegane.dds"
+				small=GFX_idea_hound
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Sandor_Clegane.dds"
+				small=GFX_idea_hound
+			}
+		}
+		corps_commander={
+			traits = { trait_reckless infantry_leader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id=-1
+		}
+	}
+
+	CWN_ilynpayne={
+		name="Ilyn Payne"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_ilynpayne
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_ilynpayne
+			}
+		}
+		advisor={		
+			slot = high_command
+			idea_token = CWN_ilynpayne
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander={
+			traits={ trickster old_guard }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	CWN_meryntrant={
+		name="Meryn Trant"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Meryn_Trant.dds"
+				small=GFX_idea_ilynpayne
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Meryn_Trant.dds"
+				small=GFX_idea_ilynpayne
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine politically_connected }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	CWN_septimu={
+		name="Septim Unella"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_septimu
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_septimu
+			}
+		}
+		gender = female
+		advisor={		
+			slot = political_advisor
+			idea_token = CWN_septimu
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				communist_revolutionary
+			}
+			cost = 150
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	CWN_varys={
+		name="Varys"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_varys
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_varys
+			}
+		}
+		advisor={		
+			slot = political_advisor
+			idea_token = CWN_varys
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				silent_workhorse
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	CWN_pycelle={
+		name="Grandmeister Pycelle"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_pycelle
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Ilyn_Payne.dds"
+				small=GFX_idea_pycelle
+			}
+		}
+		advisor={		
+			slot = political_advisor
+			idea_token = CWN_pycelle
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				backroom_backstabber
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}

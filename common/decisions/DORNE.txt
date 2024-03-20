@@ -1,0 +1,45 @@
+MRT_provoke_stormlands = {
+	
+	MRT_provoke_marches = {
+
+		icon = generic_ignite_civil_war
+		available = {
+			not = {
+				has_war_with = BEL
+			}
+			is_subject = no
+			BEL = {
+				owns_state = 479
+				owns_state = 148
+			}
+			BEL = { is_in_faction = no }
+		}
+		visible = {
+			not = {
+				has_war_with = BEL
+			}
+			has_completed_focus = MRT_claim_marches
+			BEL = {
+				owns_state = 479
+				owns_state = 148
+			}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		fixed_random_seed = no
+		days_re_enable = 90
+		complete_effect = {
+			BEL = {
+				random_list = {
+					25 = { country_event = wtt_prc.21 }# sabotage - military
+					25 = { country_event = wtt_prc.22 }# sabotage - civilian
+					25 = { country_event = wtt_prc.23 }# sabotage - infrastructure
+					25 = { country_event = wtt_prc.24 }# patrol ambushed
+				}
+			}
+		}
+	}
+			
+}

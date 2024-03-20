@@ -1,0 +1,16 @@
+#################
+#### Tyrell ####
+#################
+
+TYR_quest_for_queen = {
+	
+	allowed = {
+		original_tag = IRE
+	}
+
+	visible = {
+		HOL = { has_completed_focus = LAN_royal_marriage_with_tyrell }
+		IRE = { is_in_faction_with = ENG }
+		ENG = { has_idea = ENG_king_edward }
+	}
+}

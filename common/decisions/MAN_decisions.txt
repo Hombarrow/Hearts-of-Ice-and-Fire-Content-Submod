@@ -1,0 +1,155 @@
+@MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER = 499
+@MAN_HUNT_BANDITS_EQUIPMENT_COST_EFFECT = -500
+
+MAN_banditry_category = {
+
+#  #  ##  ###  ### #  # ### ###  #  # 
+## # #  # #  #  #  #  # #   #  # ## # 
+# ## #  # ###   #  #### ##  ###  # ## 
+#  # #  # #  #  #  #  # #   #  # #  # 
+#  #  ##  #  #  #  #  # ### #  # #  # 
+
+	MAN_pacify_bandits_in_the_northern_countryside = {
+
+		icon = generic_oppression
+		
+		available = {
+#			has_completed_focus = MAN_pacify_the_countryside
+			has_country_flag = MAN_northern_bandits
+			divisions_in_state = {
+				state = 35	
+				size > 5
+			}
+		}
+
+		highlight_states = {
+			state = 35
+		}
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 35	
+					size > 4
+				}
+			}
+		}
+
+		visible = {
+			NOT = { has_active_mission = MAN_maintain_northern_control }
+			has_country_flag = MAN_northern_bandits
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			activate_mission = MAN_maintain_northern_control
+			custom_effect_tooltip = MAN_pacify_bandits_mission_explanation
+		}
+	}
+
+	MAN_hunt_down_northern_bandits = {
+
+		icon = generic_oppression
+
+		available = {
+#			has_completed_focus = MAN_pacify_the_countryside
+			has_equipment = { infantry_equipment > @MAN_HUNT_BANDITS_EQUIPMENT_COST_TRIGGER }
+			has_country_flag = MAN_northern_bandits
+		}
+
+		cost = 250
+
+		highlight_states = {
+			state = 35
+		}
+		visible = {
+			has_country_flag = MAN_northern_bandits
+		}
+		is_good = yes
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 35	
+					size < 5
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = MAN_hunt_down_northern_bandits_tt
+			add_manpower = -1000
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = @MAN_HUNT_BANDITS_EQUIPMENT_COST_EFFECT
+			}
+
+			army_experience = 10
+
+			remove_mission = MAN_maintain_northern_control
+			clr_country_flag = MAN_northern_bandits
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAN_eastern_bandits }
+					NOT = { has_country_flag = MAN_western_bandits }
+				}
+				remove_ideas = VAL_clansmen
+			}
+		}
+	}
+
+	MAN_maintain_northern_control = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = MAN_main_control_timer?180
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 35	
+				size < 5
+			}
+		}
+
+		highlight_states = {
+			state = 35
+		}
+
+		visible = {
+			
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = MAN_hunt_down_northern_bandits_tt
+			army_experience = 10
+			clr_country_flag = MAN_northern_bandits
+			if = {
+				limit = {
+					NOT = { has_country_flag = MAN_eastern_bandits }
+					NOT = { has_country_flag = MAN_western_bandits }
+				}
+				remove_ideas = VAL_clansmen
+			}
+		}
+	}
+}

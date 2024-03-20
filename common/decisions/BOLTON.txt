@@ -1,0 +1,647 @@
+BOL_hornwoodborder = {
+	
+	#first border incident
+	JAP_test_the_soviets = {
+		icon = border_war
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = BLT_borderskirmish
+			NOT = {
+				has_war_with = FIN
+				is_in_faction_with = FIN
+				has_non_aggression_pact_with = FIN
+				FIN = { is_puppet_of = ITA }
+			}
+			113 = {
+#				any_neighbor_state = {
+				is_controlled_by = FIN
+#				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_global_flag = JAP_kalkin_gol
+			}
+		}
+
+		highlight_states = {
+	 		highlight_state_targets = {
+				state = 113
+				state = 119
+			} 
+		}
+		
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_historical_focus_on = no
+				date < 1939.1.1
+				factor = 0
+			}
+			modifier = { # We won't do this if we are supporting the opposition
+				OR = {
+					FIN = { has_country_flag = SOV_CSW_transfer_vladivostok_flag }
+					FIN = { has_country_flag = SOV_CSW_transfer_sakhalin_flag }
+				}
+				factor = 0
+			}
+		}
+		cost = 150
+		days_remove = 30
+		war_with_on_remove = FIN
+		complete_effect = {
+			119 = {
+				save_event_target_as = JAP_SOV_attacker_state
+				set_state_flag = border_incident_active
+			}
+			113 = {
+				save_event_target_as = JAP_SOV_defender_state
+				set_state_flag = border_incident_active
+			}
+			FIN = {
+				country_event = { id = japan_border_conflict.1 days = 1 }
+				activate_targeted_decision = { target = ITA decision = JAP_border_conflict_warning_SOV }
+			}
+		}
+		remove_effect = {
+			activate_targeted_decision = { target = FIN decision = JAP_border_incident_forgotten }
+			activate_targeted_decision = { target = FIN decision = JAP_escalate_incident_to_border_conflict_SOV }
+		}
+	}
+
+	#Mission for defender warning that a conflict with FROM is coming
+	JAP_border_conflict_warning_SOV = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			custom_effect_tooltip = escalation_possible_tooltip_for_defender
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+				ITA = {
+					add_doctrine_cost_reduction = {
+						name = sov_jap_border_conflict_won
+						category = land_doctrine
+						cost_reduction = 0.5
+					}
+					add_tech_bonus = {
+						name = sov_jap_border_conflict_won
+						category = armor
+						bonus = 1.0
+					}
+				}
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = ITA decision = JAP_border_conflict_warning_SOV }
+				activate_targeted_decision = { target = ITA decision = JAP_border_conflict_escalation_warning_SOV }
+			}
+		}
+	}
+
+	#Mission for defender warning FROM can escalate to war at any point is coming
+	JAP_border_conflict_escalation_warning_SOV = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+		visible = { hidden_trigger = { NOT = { has_border_war_with = ITA } } }
+		cancel_if_not_visible = yes 
+
+		available = {
+			#var:ROOT.defender_state_vs_@FROM = {
+			#	has_ROOT_at_least_1_div_in_current_state_scope = yes
+			#}
+			hidden_trigger = { always = no }
+		}
+
+		war_with_target_on_timeout = yes
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+
+		timeout_effect = {
+			custom_effect_tooltip = from_cannot_escalate
+			custom_effect_tooltip = effects_if_border_conflict_is_lost
+			effect_tooltip = {
+				ITA = {
+					add_doctrine_cost_reduction = {
+						name = sov_jap_border_conflict_won
+						category = land_doctrine
+						cost_reduction = 0.5
+					}
+					add_tech_bonus = {
+						name = sov_jap_border_conflict_won
+						category = armor
+						bonus = 1.0
+					}
+				}
+			}
+		}		
+	}
+	#Mission for attacker to escalate or incident is forgotten
+	JAP_border_incident_forgotten = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			has_border_war_with = FIN # Japan shouldn't lose war support if they actually use the window of opportunity
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 119
+				state = 113
+			} 
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 30
+
+		fire_only_once = yes
+
+		is_good = no
+		
+		timeout_effect = {
+			remove_targeted_decision = { target = FIN decision = JAP_escalate_incident_to_border_conflict_SOV }
+			add_political_power = -100
+			add_war_support = -0.1 #Shameful Display
+			hidden_effect = {
+				FIN = { remove_targeted_decision = { target = ITA decision = JAP_border_conflict_escalation_warning_SOV } }
+				FIN = {
+					119 = {
+						clr_state_flag = border_incident_active
+					}
+					113 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+			}
+		}
+	}
+
+	#Decision to escalate incident on border with SOV to border conflict
+	JAP_escalate_incident_to_border_conflict_SOV = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			119 = {
+				OR = {
+					is_fully_controlled_by = ROOT
+					CONTROLLER = {
+						is_subject_of = ROOT
+					}
+					CONTROLLER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			divisions_in_border_state = {
+				state = 119
+				border_state = 113
+				size > 0
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 119
+				state = 113	
+			} 
+		}
+
+		ai_will_do = {
+			base = 10
+			modifier = { 
+				has_war = no
+				factor = 10
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			remove_targeted_decision = { target = FIN decision = JAP_border_incident_forgotten }
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 119
+					num_provinces = 4
+					on_win = japan_border_conflict.2
+					on_lose = japan_border_conflict.3
+					on_cancel = japan_border_conflict.4
+				}
+				
+				defender = {
+					state = 113
+					num_provinces = 4
+					on_win = japan_border_conflict.3
+					on_lose = japan_border_conflict.2
+					on_cancel = japan_border_conflict.4
+				}
+			}
+			FIN = {
+				activate_targeted_decision = { target = ITA decision = JAP_border_conflict_escalate_conflict }
+				activate_targeted_decision = { target = ITA decision = JAP_border_conflict_time_until_cancelled }
+			}
+			activate_targeted_decision = { target = FIN decision = JAP_border_conflict_escalate_conflict }
+			activate_targeted_decision = { target = FIN decision = JAP_border_conflict_time_until_cancelled }
+		}
+	}
+	#Mission for attacker to win border war against FROM in X days
+	JAP_border_conflict_time_until_cancelled = {
+
+		icon = border_war
+
+		allowed = { always = no } #Activated from effect
+
+		available = {
+			119 = { has_border_war = no }
+			113 = { has_border_war = no }
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 113
+				state = 119
+			} 
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		days_mission_timeout = 90
+		is_good = no
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+
+		}
+
+		timeout_effect = {
+			cancel_border_war = {
+				defender = 113
+				attacker = 119
+			}
+			hidden_effect = {
+				remove_targeted_decision = { target = FIN decision = JAP_border_conflict_escalate_conflict }
+				remove_targeted_decision = { target = ITA decision = JAP_border_conflict_escalate_conflict }
+			}
+		}
+	}
+
+	#Decision to escalate conflict further
+	JAP_border_conflict_escalate_conflict = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 119
+				state = 113
+			} 
+		}
+
+		cost = 200
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100 
+				is_historical_focus_on = no 
+			}
+			modifier = {
+				add = 50 
+#				AND = {
+					tag = ITA 
+#					has_completed_focus = JAP_support_the_kodoha_faction
+#				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes 
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { original_tag = FIN }
+				set_border_war_data = {
+					attacker = 119
+					defender = 113
+					defender_modifier = 0.15
+					combat_width = 100
+				}
+				ITA = {
+					set_country_flag = {
+						flag = WTT_border_conflict_escalate_to_war_cooldown
+						days = 60
+						value = 1
+					}
+					remove_targeted_decision = { target = FIN decision = JAP_border_conflict_escalate_conflict }
+				}
+				set_country_flag = {
+					flag = WTT_border_conflict_escalate_to_war_cooldown
+					days = 60
+					value = 1
+				}
+				custom_effect_tooltip = in_60_days
+				activate_targeted_decision = { target = ITA decision = JAP_border_conflict_escalate_to_war }
+			}
+			else = {
+				set_border_war_data = {
+					attacker = 119
+					defender = 113
+					attacker_modifier = 0.15
+					combat_width = 100
+				}
+				FIN = {
+					set_country_flag = {
+						flag = WTT_border_conflict_escalate_to_war_cooldown
+						days = 60
+						value = 1
+					}
+					remove_targeted_decision = { target = ITA decision = JAP_border_conflict_escalate_conflict }
+				}
+				set_country_flag = {
+					flag = WTT_border_conflict_escalate_to_war_cooldown
+					days = 60
+					value = 1
+				}
+				custom_effect_tooltip = in_60_days
+				activate_targeted_decision = { target = FIN decision = JAP_border_conflict_escalate_to_war }
+			}
+			
+		}
+	}
+
+	#Decision to escalate conflict further
+	JAP_border_conflict_escalate_to_war = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			NOT = { has_country_flag = WTT_border_conflict_escalate_to_war_cooldown }
+			has_border_war_with = FROM
+		}
+		cancel_trigger = {
+			NOT = { has_border_war = yes }
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = {
+				state = 113
+				state = 119
+			} 
+		}
+
+		cost = 150
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100 
+				is_historical_focus_on = no 
+			}
+			modifier = {
+				add = 50 
+#				AND = {
+					tag = ITA 
+#					has_completed_focus = JAP_support_the_kodoha_faction
+#				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes 
+			}
+		}
+
+		days_remove = 10
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		war_with_target_on_remove = yes
+
+		complete_effect = {
+			if = {
+				limit = { original_tag = FIN }
+				113 = { save_event_target_as = their_state }
+				119 = { save_event_target_as = our_state }
+				ITA = {
+					country_event = { id = japan_border_conflict.6 hours = 1 }
+					hidden_effect = {
+						remove_targeted_decision = { target = FIN decision = JAP_border_conflict_escalate_to_war }
+					}
+			 	}
+			}
+			else = {
+				119 = { save_event_target_as = our_state }
+				113 = { save_event_target_as = their_state }
+				FIN = {
+					country_event = { id = japan_border_conflict.5 hours = 1 }
+					hidden_effect = {
+						remove_targeted_decision = { target = ITA decision = JAP_border_conflict_escalate_to_war }
+					}
+			 	}
+			}
+			
+		}
+
+		remove_effect = {
+			cancel_border_war = {
+				dont_fire_events = yes
+				defender = 113
+				attacker = 119
+			}
+			declare_war_on = { target = FROM type = annex_everything }
+			if = {
+				limit = { original_tag = FIN }
+				119 = {
+					clr_state_flag = border_incident_active
+				}
+				113 = {
+					clr_state_flag = border_incident_active
+				}
+				
+			}
+			else = {
+				FROM = {
+					119 = {
+						clr_state_flag = border_incident_active
+					}
+					113 = {
+						clr_state_flag = border_incident_active
+					}
+				}
+			}
+		}
+	}
+
+	#Decision to back down from conflict
+	JAP_border_conflict_back_out_of_conflict = {
+
+		allowed = { always = no } #Activated from effect
+
+		visible = {
+			has_border_war_with = FROM
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 119
+				state = 113
+			} 
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				
+			}
+		}
+
+		fire_only_once = yes #Reactivation handled in effect
+
+		complete_effect = {
+			if = {
+				limit = { original_tag = FIN }
+				finalize_border_war = {
+					attacker_win = yes
+					attacker = 119
+					defender = 113
+				}
+			}
+			else = {
+				finalize_border_war = {
+					attacker = 119
+					defender = 113
+					defender_win = yes
+				}
+			}
+		}
+	}
+
+}
+
+BOL_lordoddreadfort = {
+
+	BLT_dew_it_ramsay = {
+
+		allowed = { always = no }
+
+		icon = generic_political_discourse
+
+		available = {
+			ITA = { has_completed_focus = BLT_killRoose }
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 122
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 170
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+				has_country_leader = {
+					character = BOL_ramsay
+					ruling_only = yes
+				}
+			hidden_trigger = {
+				has_country_leader = {
+					character = BOL_ramsay
+					ruling_only = yes
+				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+#			33 = { FIN = { controls_state = 179 } }
+#			ENG = {	country_event = britain.1 }
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = BLT_ramsay_tree_locked_tt
+#			add_political_power = 50
+#			country_event = finland.17
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			country_event = italy.25		
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+	}
+}

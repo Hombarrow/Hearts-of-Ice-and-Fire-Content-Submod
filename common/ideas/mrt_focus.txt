@@ -1,0 +1,212 @@
+ideas = { 
+	country = {
+		MRT_stony_dornishmens = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			training_time_factor = -0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_sandy_dornishmens = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			attrition = -0.05
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_salty_dornishmens = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_naval_base_factor  = 0.10
+			production_speed_dockyard_factor = 0.05
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		MRT_arms_factories_building = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_arms_factory_factor  = 0.15
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_defensive_modification = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    equipment_bonus = {
+				infantry_equipment = {
+					defense = 0.20 instant = yes }
+                
+			}
+		}
+	}
+}
+
+
+ideas = { 
+	country = {
+		MRT_offensive_modification = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    equipment_bonus = {
+				infantry_equipment = {
+							soft_attack = 0.10
+							hard_attack = 0.10 instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_ship_quantity = { 
+			picture = generic_navy_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    equipment_bonus = {
+				capital_ship = {
+							build_cost_ic = -0.10
+							 instant = yes }
+				screen_ship = {
+							build_cost_ic = -0.10
+							 instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_defence_in_depth = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    modifier = {
+				army_defence_factor = 0.05
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_construction_speed = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    modifier = {
+				production_speed_buildings_factor = 0.10
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_dockyard_production = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    modifier = {
+				industrial_capacity_dockyard = 0.05
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		MRT_dockyard_output = { 
+			picture = generic_production_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    modifier = {
+				industrial_capacity_dockyard = 0.10
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		myrcella = { 
+			picture = idea_myrcella
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			    modifier = {
+				political_power_factor = 0.1
+                
+			}
+		}
+	}
+}

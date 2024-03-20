@@ -1,0 +1,246 @@
+characters={
+
+	STR_eddard={
+		name="Eddard Stark"
+		desc = "POLITICS_NED_STARK_DESC"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_Stark_Nedfm.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine trait_cautious war_hero }
+			skill=5
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
+	STR_robb_stark={
+		name="Robb Stark"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Stark_Robb.dds"
+				small=GFX_idea_robbs
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Stark_Robb.dds"
+				small=GFX_idea_robbs
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={ young_wolf }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ offensive_doctrine }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=2
+		}
+	}
+
+	STR_council={
+		name="Stark Regency Council"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Stark_Council.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Stark_Council.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	STR_sansa={
+		name="Sansa Stark"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Stark_Sansa_2.dds"
+				small=GFX_idea_catelyn
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Stark_Sansa_2.dds"
+				small=GFX_idea_catelyn
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=nazism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+	}
+
+	STR_catelyn={
+		name="Catelyn Stark"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_catelyn
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_catelyn
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = STR_catelyn
+			cost = 150
+			allowed  = {
+					original_tag  = FIN
+				}
+				available  = {
+					NOT = { has_global_flag = killed_stark_red_wedding }
+				}
+				traits  = {
+					stark_matriarch
+				}
+		}
+	}
+
+	STR_rodrik={
+		name="Rodrik Cassel"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Ser_Rodrik.dds"
+				small=GFX_idea_ser_rodrik
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Ser_Rodrik.dds"
+				small=GFX_idea_ser_rodrik
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = STR_rodrik
+			ledger = army
+			allowed  = {
+					original_tag  = FIN
+				}
+				available  = {
+#					if  = {
+#						limit  = {
+#							has_dlc = "Man the Guns"
+#						}
+#						not  = {
+#							has_autonomy_state  = autonomy_supervised_state
+#						}
+#					}
+				}
+			traits = {
+				blitzkrieg_theorist
+			}
+		}
+	}	
+
+	STR_jory={
+		name="Jory Cassel"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Jory_Cassel.dds"
+				small=GFX_idea_jory
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Jory_Cassel.dds"
+				small=GFX_idea_jory
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	STR_greatjon={
+		name = "Greatjon Umber"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Greatjon_Umber.dds"
+				small=GFX_idea_greatjon
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Greatjon_Umber.dds"
+				small=GFX_idea_greatjon
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist fortress_buster }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=406
+		}
+	}
+
+	STR_ccerwyn={
+		name = "Cley Cerwyn"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Cley_Cerwyn.dds"
+				small=GFX_idea_ccerwin
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Cley_Cerwyn.dds"
+				small=GFX_idea_ccerwin
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

@@ -1,0 +1,3331 @@
+focus_tree = {
+	id = Volantis
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POR
+		}
+	}
+	default = no
+	focus = {
+		id = VOL_examineswamps
+#		text = VOL_examineswamps
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10.00
+		x = 4
+		y = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 233
+			has_full_control_of_state = 237
+			has_full_control_of_state = 660
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = { add_extra_state_shared_building_slots = 1 }
+			237 = { add_extra_state_shared_building_slots = 1 }
+			660 = { add_extra_state_shared_building_slots = 1 }
+		}
+
+	}
+	focus = {
+		id = VOL_votetriarchs
+#		text = VOL_votetriarchs
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		x = 23
+		y = 0
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = VOL_army_inspection
+#		text = VOL_army_inspection
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		x = 42
+		y = 0
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+
+	focus = {
+		id = VOL_lightfleet
+#		text = VOL_lightfleet
+		icon = GFX_focus_generic_destroyer
+		cost = 10.00
+		mutually_exclusive = {
+			focus = VOL_heavyfleet
+		}
+		x = 52
+		y = 0
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.65
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+
+	}
+
+	focus = {
+		id = VOL_heavyfleet
+#		text = VOL_heavyfleet
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 10.00
+		mutually_exclusive = {
+			focus = VOL_lightfleet
+		}
+		x = 4
+		y = 0
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.65
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+
+	}
+
+	focus = {
+		id = VOL_digforresources
+#		text = VOL_digforresources
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_examineswamps
+		}
+		mutually_exclusive = {
+			focus = VOL_flatswamplands
+		}
+		x = 2
+		y = 1
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_people_owned_mines
+			country_event = { id = volantis.1 }
+		}
+
+	}
+	focus = {
+		id = VOL_motorized
+#		text = VOL_motorized
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_army_inspection
+		}
+		bypass = { has_tech = motorised_infantry }
+		x = 4
+		y = 1
+		relative_position_id = VOL_army_inspection
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_statusquo
+#		text = VOL_statusquo
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_votetriarchs
+		}
+		mutually_exclusive = {
+			focus = VOL_changethesystem
+		}
+		x = -8
+		y = 1
+		relative_position_id = VOL_votetriarchs
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 250
+		}
+
+	}
+	focus = {
+		id = VOL_economy
+#		text = VOL_economy
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_statusquo
+		}
+		x = 5
+		y = 1
+		relative_position_id = VOL_statusquo
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.65
+				uses = 2
+				category = industry
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_heavycruiser
+#		text = VOL_heavycruiser
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_heavyfleet
+		}
+		x = 6
+		y = 1
+		relative_position_id = VOL_lightfleet
+
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = hr_bonus
+				bonus = 0.55
+				ahead_reduction = 1
+				uses = 2
+				technology = early_heavy_cruiser
+				technology = basic_heavy_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_battleship
+#		text = VOL_battleship
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_heavycruiser
+		}
+		x = 5
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_supremacy_of_the_battlefleet
+				bonus = 0.55
+				uses = 2
+				technology = basic_battleship
+				technology = improved_battleship
+				technology = advanced_battleship
+				category = shbb_tech	
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_changethesystem
+#		text = VOL_changethesystem
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_votetriarchs
+		}
+		mutually_exclusive = {
+			focus = VOL_statusquo
+		}
+		x = 7
+		y = 1
+		relative_position_id = VOL_votetriarchs
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = -150
+			add_popularity = { ideology = communism popularity = 0.2 }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_communist_revolutionary
+		}
+
+	}
+	focus = {
+		id = VOL_carriers
+#		text = VOL_carriers
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_heavycruiser
+		}
+		x = 7
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.65
+				ahead_reduction = 1
+				uses = 1
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_converttorubber
+#		text = VOL_converttorubber
+		icon = GFX_focus_generic_rubber
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_swampoil
+		}
+		x = 1
+		y = 3
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 237
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			237 = {
+				add_resource = {
+					type = rubber
+					amount = 6
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_aluminum
+#		text = VOL_aluminum
+		icon = GFX_focus_generic_aluminum
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_steel
+		}
+		x = 3
+		y = 3
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 233
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_flatswamplands
+#		text = VOL_flatswamplands
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_examineswamps
+		}
+		mutually_exclusive = {
+			focus = VOL_digforresources
+		}
+		x = -2
+		y = 1
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_local_self_management
+		}
+
+	}
+	focus = {
+		id = VOL_urbanplanning
+#		text = VOL_urbanplanning
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_flatswamplands
+		}
+		x = -2
+		y = 2
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 233
+			has_full_control_of_state = 237
+			has_full_control_of_state = 660
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = { add_extra_state_shared_building_slots = 1 }
+			237 = { add_extra_state_shared_building_slots = 1 }
+			660 = { add_extra_state_shared_building_slots = 1 }
+			233 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			660 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			237 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+
+	}
+	focus = {
+		id = VOL_swamproads
+#		text = VOL_swamproads
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_urbanplanning
+		}
+		x = -2
+		y = 3
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 233
+			has_full_control_of_state = 660
+			has_full_control_of_state = 237
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			660 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			237 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+	}
+	focus = {
+		id = VOL_swampcity
+#		text = VOL_swampcity
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_swamproads
+		}
+		mutually_exclusive = {
+			focus = VOL_swampmilitary
+		}
+		x = -3
+		y = 4
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 237
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			237 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_swampmilitary
+#		text = VOL_swampmilitary
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_swamproads
+		}
+		mutually_exclusive = {
+			focus = VOL_swampcity
+		}
+		x = -1
+		y = 4
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 233			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_swampoil
+#		text = VOL_swampoil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_digforresources
+		}
+		mutually_exclusive = {
+			focus = VOL_steel
+		}
+		x = 1
+		y = 2
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 233
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_steel
+#		text = VOL_steel
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_digforresources
+		}
+		mutually_exclusive = {
+			focus = VOL_swampoil
+		}
+		x = 3
+		y = 2
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 660
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			660 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_specialmetal
+#		text = VOL_specialmetal
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_aluminum
+			focus = VOL_converttorubber
+		}
+		x = 2
+		y = 4
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 233
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			233 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_swampscience
+#		text = VOL_swampscience
+		icon = GFX_focus_research2
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_swampmilitary
+			focus = VOL_swampcity
+			focus = VOL_specialmetal
+		}
+		x = 0
+		y = 5
+		relative_position_id = VOL_examineswamps
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = progress_cult_focus
+		}
+
+	}
+	focus = {
+		id = VOL_otherslavers
+#		text = VOL_otherslavers
+		icon = GFX_focus_cze_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_statusquo
+		}
+		available = {
+#			has_government = fascism
+		}
+		x = -13
+		y = 2
+		relative_position_id = VOL_votetriarchs
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = VOL_isolation
+#		text = VOL_isolation
+		icon = GFX_focus_generic_home_defense
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_otherslavers
+		}
+		mutually_exclusive = {
+			focus = VOL_uniteslaversbay
+		}
+		x = -1
+		y = 1
+		relative_position_id = VOL_otherslavers
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+		}
+
+	}
+	focus = {
+		id = VOL_uniteslaversbay
+#		text = VOL_uniteslaversbay
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_otherslavers
+		}
+		available = {
+			has_government = fascism
+		}
+		mutually_exclusive = {
+			focus = VOL_isolation
+		}
+		x = 1
+		y = 1
+		relative_position_id = VOL_otherslavers
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = EGY modifier = NZL_strengthen_ties } 
+			add_opinion_modifier = { target = IRQ modifier = NZL_strengthen_ties } 
+			add_opinion_modifier = { target = PER modifier = NZL_strengthen_ties } 
+			EGY = { add_opinion_modifier = { target = POR modifier = NZL_strengthen_ties } }
+			IRQ = { add_opinion_modifier = { target = POR modifier = NZL_strengthen_ties } }
+			PER = { add_opinion_modifier = { target = POR modifier = NZL_strengthen_ties } }
+		}
+
+	}
+	focus = {
+		id = VOL_allyslaversbay
+#		text = VOL_allyslaversbay
+		icon = GFX_focus_AST_squander_bug
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_uniteslaversbay
+		}
+		x = 1
+		y = 2
+		relative_position_id = VOL_otherslavers
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "Union of the Triachy"
+#			news_event = { id = news.330 }
+		}
+
+	}
+	focus = {
+		id = VOL_fortifydeathpass
+#		text = VOL_fortifydeathpass
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_isolation
+		}
+		x = -1
+		y = 2
+		relative_position_id = VOL_otherslavers
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 231
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		completion_reward = {
+			231 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+#					custom_effect_tooltip = SOV_far_east_fortification_forts_1
+#					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 6436
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 12309
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 4605
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11599
+							instant_build = yes
+						}
+#					}
+				}					
+			}
+			450 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+#					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 10123
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = 11954
+							instant_build = yes
+						}
+#					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = VOL_slavevictory
+#		text = VOL_slavevictory
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_stormpalace
+			focus = VOL_slavesmarch
+		}
+		x = 0
+		y = 2
+		relative_position_id = VOL_changethesystem
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			has_civil_war = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = home_of_revolution
+		}
+
+
+	}
+
+	focus = {
+		id = VOL_educateslaves
+#		text = VOL_educateslaves
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavevictory
+		}
+		x = 6
+		y = 1
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.35
+				uses = 4
+				category = industry
+				category = electronics
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_slaveuniversity
+#		text = VOL_slaveuniversity
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_educateslaves
+		}
+		x = 6
+		y = 2
+		relative_position_id = VOL_slavevictory
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = VOL_suemasters
+#		text = VOL_suemasters
+		icon = GFX_focus_rom_handle_king
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavevictory
+		}
+		mutually_exclusive = {
+			focus = VOL_workwithmasters
+		}
+		x = -5
+		y = 1
+		relative_position_id = VOL_slavevictory
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.05
+		}
+
+	}
+	focus = {
+		id = VOL_slavesmarch
+#		text = VOL_slavesmarch
+		icon = GFX_focus_yug_pan_slavic_congress
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_changethesystem
+		}
+		mutually_exclusive = {
+			focus = VOL_stormpalace
+		}
+		x = 1
+		y = 1
+		relative_position_id = VOL_changethesystem
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_peasant_councils
+		}
+
+	}
+	focus = {
+		id = VOL_workwithmasters
+#		text = VOL_workwithmasters
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavevictory
+		}
+		mutually_exclusive = {
+			focus = VOL_suemasters
+		}
+		x = -3
+		y = 1
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = -200
+			add_stability = 0.15
+		}
+
+	}
+	focus = {
+		id = VOL_stormpalace
+#		text = VOL_stormpalace
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_changethesystem
+		}
+		mutually_exclusive = {
+			focus = VOL_slavesmarch
+		}
+		x = -1
+		y = 1
+		relative_position_id = VOL_changethesystem
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_government = communism }
+			has_civil_war = no
+		}
+		
+		completion_reward = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+#			add_popularity = { ideology = communism popularity = 0.05 }
+
+				if = {
+					limit = { communism < 0.45 }
+					scale_var_civil_war_size_by_autonomy_and_var_ideology_val = yes
+					start_civil_war = {
+						ruling_party = communism
+						ideology = neutrality
+						size = civil_war_size
+						capital = 199
+					}
+#					start_scaled_communist_civil_war_cap439 = yes
+
+				}
+
+			hidden_effect = {  }
+
+		}
+
+	}
+	focus = {
+		id = VOL_slavework
+#		text = VOL_slavework
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavevictory
+		}
+		x = 3
+		y = 1
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_central_management
+		}
+
+
+	}
+
+	focus = {
+		id = VOL_handoverland
+#		text = VOL_handoverland
+		icon = GFX_focus_generic_concessions
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_suemasters
+		}
+		x = -5
+		y = 2
+		relative_position_id = VOL_slavevictory
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = NZL_wairarapa_sheep_farms
+		}
+
+	}
+	focus = {
+		id = VOL_jointmeetings
+#		text = VOL_jointmeetings
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavevictory
+		}
+		x = 0
+		y = 1
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_anti_communist_volunteers
+		}
+
+	}
+	focus = {
+		id = VOL_jointmilitary
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_workwithmasters
+		}
+		x = -3
+		y = 2
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ROM_iron_guard
+		}
+
+	}
+	focus = {
+		id = VOL_slavefactory
+#		text = VOL_slavefactory
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavework
+		}
+		x = 2
+		y = 2
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_slaveroad
+#		text = VOL_slaveroad
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavework
+		}
+		x = 4
+		y = 2
+		relative_position_id = VOL_slavevictory
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_slavedocks
+#		text = VOL_slavedocks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_slavefactory
+		}
+		prerequisite = {
+			focus = VOL_slaveroad
+		}
+		x = 3
+		y = 3
+		relative_position_id = VOL_slavevictory
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_profesionalarmy
+#		text = VOL_profesionalarmy
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_doctrine2
+		}
+		available = {
+			NOT = { has_government = communism }
+		}
+		mutually_exclusive = {
+			focus = VOL_numbers
+		}
+		x = 1
+		y = 3
+		relative_position_id = VOL_army_inspection
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_superior_will
+		}
+
+	}
+
+	focus = {
+		id = VOL_newdeals
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_statusquo
+		}
+		x = -8
+		y = 2
+		relative_position_id = VOL_votetriarchs
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = CHI_sino_american_cooperative_organization
+			bonus = 0.5
+			uses = 2
+			category = recon_tech
+			category = logistics_tech
+			category = engineers_tech
+#			category = maintenance_tech
+
+			}
+		}
+
+	}
+
+	focus = {
+		id = VOL_draftexcuse
+#		text = VOL_draftexcuse
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_newdeals
+		}
+		mutually_exclusive = {
+			focus = VOL_allserve
+		}
+		x = -1
+		y = 1
+		relative_position_id = VOL_newdeals
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+			add_ideas = VOL_draft_excuse
+		}
+
+	}
+	focus = {
+		id = VOL_allserve
+#		text = VOL_allserve
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_newdeals
+		}
+		mutually_exclusive = {
+			focus = VOL_draftexcuse
+		}
+		x = 1
+		y = 1
+		relative_position_id = VOL_newdeals
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.10
+			add_war_support = -0.15
+		}
+
+	}
+
+	focus = {
+		id = VOL_morewarfactory
+#		text = VOL_morewarfactory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_draftexcuse
+		}
+		x = -1
+		y = 2
+		relative_position_id = VOL_newdeals
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+
+	}
+	focus = {
+		id = VOL_barricades
+#		text = VOL_barricades
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_allserve
+		}
+		x = 1
+		y = 2
+		relative_position_id = VOL_newdeals
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+
+	}
+	focus = {
+		id = VOL_rockets
+#		text = VOL_rockets
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_morewarfactory
+		}
+		x = -1
+		y = 3
+		relative_position_id = VOL_newdeals
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 0.5
+				bonus = 0.35
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+	focus = {
+		id = VOL_specialunits
+#		text = VOL_specialunits
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_barricades
+		}
+		x = 1
+		y = 3
+		relative_position_id = VOL_newdeals
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = NZL_bob_semple_tank
+
+		}
+
+	}
+	focus = {
+		id = VOL_militaryfactory
+#		text = VOL_militaryfactory
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_economy
+		}
+		x = -1
+		y = 1
+		relative_position_id = VOL_economy
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_navyfactory
+#		text = VOL_navyfactory
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_economy
+		}
+		x = 1
+		y = 1
+		relative_position_id = VOL_economy
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_economycollege
+#		text = VOL_economycollege
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_militaryfactory
+		}
+		prerequisite = {
+			focus = VOL_navyfactory
+		}
+		x = 0
+		y = 2
+		relative_position_id = VOL_economy
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = VOL_ccgoods
+#		text = VOL_ccgoods
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_economycollege
+		}
+		mutually_exclusive = {
+			focus = VOL_maxprofit
+		}
+		x = -1
+		y = 3
+		relative_position_id = VOL_economy
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_foreign_capital
+		}
+
+	}
+	focus = {
+		id = VOL_maxprofit
+#		text = VOL_maxprofit
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_economycollege
+		}
+		mutually_exclusive = {
+			focus = VOL_ccgoods
+		}
+		x = 1
+		y = 3
+		relative_position_id = VOL_economy
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = YUG_idea_central_management
+		}
+
+	}
+	focus = {
+		id = VOL_numbers
+#		text = VOL_numbers
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_doctrine2
+		}
+		mutually_exclusive = {
+			focus = VOL_profesionalarmy
+		}
+		x = -1
+		y = 3
+		relative_position_id = VOL_army_inspection
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = spiritual_mobilization_idea
+		}
+
+	}
+	focus = {
+		id = VOL_doctrine1
+#		text = VOL_doctrine1
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_army_inspection
+		}
+		x = 0
+		y = 1
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_rifles1
+#		text = VOL_rifles1
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_army_inspection
+		}
+		x = -4
+		y = 1
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_arty1
+#		text = VOL_arty1
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_rifles1
+		}
+		x = -4
+		y = 2
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_tanks
+#		text = VOL_tanks
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_mechanized
+		}
+		x = 4
+		y = 3
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_arty2
+#		text = VOL_arty2
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_arty1
+		}
+		x = -4
+		y = 3
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_doctrine2
+#		text = VOL_doctrine2
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_doctrine1
+		}
+		x = 0
+		y = 2
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_mechanized
+#		text = VOL_mechanized
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_motorized
+		}
+		x = 4
+		y = 2
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_doctrine3
+#		text = VOL_doctrine3
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_numbers
+			focus = VOL_profesionalarmy
+		}
+		x = 0
+		y = 4
+		relative_position_id = VOL_army_inspection
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.35
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_specops
+#		text = VOL_specops
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_profesionalarmy
+		}
+		x = 3
+		y = 4
+		relative_position_id = VOL_army_inspection
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+
+		}
+
+	}
+	focus = {
+		id = VOL_propaganda
+#		text = VOL_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_numbers
+		}
+		x = -3
+		y = 4
+		relative_position_id = VOL_army_inspection
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = NZL_waitangi_tribunal
+		}
+
+	}
+	focus = {
+		id = VOL_navydoctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_lightfleet
+			focus = VOL_heavyfleet
+		}
+		x = 2
+		y = 1
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_cruisers
+#		text = VOL_cruisers
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_lightfleet
+		}
+		x = -2
+		y = 1
+		relative_position_id = VOL_lightfleet
+
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.55
+				ahead_reduction = 1
+				uses = 2
+				technology = early_light_cruiser
+				technology = basic_light_cruiser
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_docks1
+#		text = VOL_docks1
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_navydoctrine
+		}
+		x = 1
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_docs2
+#		text = VOL_docs2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_navydoctrine
+		}
+		x = 3
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_navydoctrine2
+#		text = VOL_navydoctrine2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_docks1
+		}
+		x = 1
+		y = 3
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_subs
+#		text = VOL_subs
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_cruisers
+		}
+		x = -3
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_destroyer
+#		text = VOL_destroyer
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_cruisers
+		}
+		x = -1
+		y = 2
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 2
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_marines
+#		text = VOL_marines
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_subs
+			focus = VOL_destroyer
+		}
+		x = -2
+		y = 3
+		relative_position_id = VOL_lightfleet
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_expand_the_snlf
+			add_tech_bonus = {
+				name = JAP_expand_the_snlf
+				bonus = 0.55
+				uses = 1
+				category = marine_tech	
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_navplanes
+#		text = VOL_navplanes
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_battleship
+			focus = VOL_carriers
+		}
+		x = 6
+		y = 3
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 0.65
+				ahead_reduction = 1
+				uses = 2
+				category = naval_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = VOL_zeroes
+#		text = VOL_zeroes
+		icon = GFX_focus_chi_flying_tigers
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_navplanes
+		}
+		x = 6
+		y = 4
+		relative_position_id = VOL_lightfleet
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = JAP_first_air_fleet
+		}
+
+	}
+	focus = {
+		id = VOL_navalacademy
+#		text = VOL_navalacademy
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_navydoctrine2
+			focus = VOL_navaldoc3
+		}
+		x = 2
+		y = 4
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = VOL_radar
+#		text = VOL_radar
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_marines
+		}
+		x = -2
+		y = 4
+		relative_position_id = VOL_lightfleet
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = the_long_lance
+		}
+
+	}
+	focus = {
+		id = VOL_navaldoc3
+#		text = VOL_navaldoc3
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = VOL_docs2
+		}
+		x = 3
+		y = 3
+		relative_position_id = VOL_lightfleet
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 15
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+
+	}
+}

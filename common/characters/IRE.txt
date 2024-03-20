@@ -1,0 +1,172 @@
+characters={
+	TYR_loras={
+		name="Loras Tyrell"
+		portraits={
+			army={
+				large="gfx/leaders/IRE/Portrait_Loras_Tyrell.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Loras_Tyrell.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
+		corps_commander={
+			traits={ infantry_officer trickster media_personality }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	TYR_garland={
+		name = "Garlan Tyrell"
+		portraits={
+			army={
+				large="gfx/leaders/IRE/Portrait_Garlan_Tyrell.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Garlan_Tyrell.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+
+		corps_commander={
+			traits={ career_officer hill_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	TYR_mace_t={
+		name="Mace Tyrell"
+		portraits={
+			army={
+				large="gfx/leaders/IRE/Portrait_Mace_Tyrell.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Tyrel_Mace.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	TYR_olenna={
+		name="Olenna Tyrell"
+		portraits={
+			army={
+				large="gfx/leaders/IRE/Portrait_Lady_Olenna.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Lady_Olenna.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	TYR_randyl_tarly={
+		name = "Randyll Tarly"
+		portraits={
+			army={
+				large="gfx/leaders/MNT/Portrait_Randyll_Tarly.dds"
+				small=GFX_idea_randyl_tarly
+			}
+			civilian={
+				large="gfx/leaders/MNT/Portrait_Randyll_Tarly.dds"
+				small=GFX_idea_randyl_tarly
+			}
+		}
+
+		field_marshal={
+			traits={ offensive_doctrine war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=2016
+		}
+
+		advisor={
+			slot = army_chief
+			idea_token = TYR_randyl_tarly
+			allowed = {
+#				original_tag = IRE
+				always = yes
+			}
+			available = {
+					always = yes
+			}
+			traits = {
+				army_chief_maneuver_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+	}
+
+	TYR_paxter={
+		name = "Paxter Redwyne"
+		portraits={
+			army={
+				large="gfx/leaders/IRE/Portrait_Paxter_Redwyne.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Paxter_Redwyne.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+
+		navy_leader={
+			traits={ navy_career_officer ironside superior_tactician }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=4
+		}
+
+	}
+}

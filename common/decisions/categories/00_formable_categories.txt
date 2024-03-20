@@ -1,0 +1,85 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
+form_gran_colombia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+
+	}
+}
+
+form_baltic_federation_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_baltic_federation
+
+	allowed = {
+
+	}
+}
+
+form_ottoman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_ottoman_empire
+
+	allowed = {
+
+	}
+}
+
+form_european_union_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_european_union
+
+	allowed = {
+
+	}
+}
+
+form_roman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_roman_empire
+
+	allowed = {
+
+	}
+}
+
+form_persian_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_persian_empire
+
+	allowed = {
+
+	}
+}
+
+form_rattanakosin_kingdom_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_rattanakosin_kingdom
+
+	allowed = {
+
+	}
+}

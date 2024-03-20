@@ -1,0 +1,27 @@
+characters={
+
+	BEL_brienne={
+		name = "Brienne of Tarth"
+		portraits={
+			army={
+				large="gfx/leaders/BEL/Portrait_Brienne_Tarth.dds"
+				small=GFX_idea_brienne
+			}
+			civilian={
+				large="gfx/leaders/BEL/Portrait_Brienne_Tarth.dds"
+				small=GFX_idea_brienne
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=27
+		}
+	}
+
+
+}

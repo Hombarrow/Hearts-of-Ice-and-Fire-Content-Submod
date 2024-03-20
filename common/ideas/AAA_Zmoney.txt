@@ -1,0 +1,113 @@
+ideas = {
+
+	# Economic Currency
+
+	currency = {
+
+		stable_currency = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+#				winter_attrition_factor = -0.25
+			}
+		}
+
+		in_debt = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		lending_money = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				min_export = 0.25
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		bad_investment = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = -0.1
+				training_time_factor = -0.1
+#				political_advisor_cost_factor = 0.25 
+			}
+		}
+
+		good_investment = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				max_command_power = 10
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_dockyard = -0.20
+				production_factory_start_efficiency_factor = 0.05 
+			}
+		}
+
+		basic_economy = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		bankrupt = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			modifier = {
+				political_power_factor = -0.50
+				consumer_goods_factor = 0.25
+				min_export = 0.5
+			}
+		}
+	
+	}
+
+}

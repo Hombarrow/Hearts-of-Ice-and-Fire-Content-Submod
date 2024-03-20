@@ -1,0 +1,236 @@
+SIS_declare_king = {
+	tell_dorne = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = SPR }
+		}
+
+		visible = {
+			SPR = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = SPR }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			SPR = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tell_reach = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = IRE }
+		}
+
+		visible = {
+			IRE = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = IRE }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			IRE = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tell_westerlands = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = HOL }
+		}
+
+		visible = {
+			HOL = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = HOL }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			HOL = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tell_riverlands = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = FRA }
+		}
+
+		visible = {
+			FRA = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = FRA }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			FRA = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tell_vale = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = SWE }
+		}
+
+		visible = {
+			SWE = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = SWE }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			SWE = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	tell_north = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = { is_in_faction_with = FIN }
+		}
+
+		visible = {
+			FIN = { exists = yes }
+		}
+
+		target_trigger = { 
+			exists = yes
+			FROM = { original_tag = FIN }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 15
+
+		days_remove = 3
+		
+		complete_effect = {
+
+			add_war_support = 0.05
+
+			FIN = { country_event = { id = hungary.15 days = 3 } }
+
+			hidden_effect = {
+#				news_event = { id = news.328 days = 3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+}

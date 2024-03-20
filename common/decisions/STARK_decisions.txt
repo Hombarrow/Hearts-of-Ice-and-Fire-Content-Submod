@@ -1,0 +1,296 @@
+operations = {
+
+	STR_save_ned_stark = {
+
+		allowed = { always = no }
+
+		icon = generic_oppression
+
+		available = {
+#			FIN = { controls_state = 33 }
+			OR = {
+				FIN = { controls_state = 33 }
+				any_allied_country = { controls_state = 33 }
+			}
+#			has_war_with = ENG
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 33
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 90
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { has_war_with = ENG }
+			hidden_trigger = {
+#				OR = {
+#					NOT = { GER_has_mefo_bills = yes }
+#					has_idea = GER_mefo_bills_ended
+#				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			33 = { is_controlled_by = FIN }
+#			ENG = {	country_event = britain.1 }
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+#			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			add_political_power = 100
+			country_event = finland.17
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			ENG = {	country_event = britain.1 }		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	STR_wedding_is_happening = {
+
+		allowed = { always = no }
+
+		icon = generic_political_discourse
+
+		available = {
+			FIN = { controls_state = 179 }
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 179
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_war_with = SER
+			hidden_trigger = {
+
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+#			33 = { FIN = { controls_state = 179 } }
+#			ENG = {	country_event = britain.1 }
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = STR_no_need_wedding_tt
+			add_political_power = 25
+#			country_event = finland.17
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			country_event = france.16		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+political_actions = {
+	
+	bring_back_theon = {
+
+		icon = generic_army_support
+
+		available = {
+			ROM = { has_completed_focus = IRN_kingsmoot }
+			ROM = { has_country_leader = { ruling_only = yes name = "Euron Greyjoy" } }
+		}
+
+		visible = {
+			original_tag = FIN
+			has_country_leader = { ruling_only = yes name = "Robb Stark" }
+		}
+
+		fire_only_once = yes
+		
+		cost = 75
+
+		days_remove = 4
+
+		complete_effect = {
+
+			create_corps_commander = {
+				name = "Theon Greyjoy"
+				picture = "Portrait_Theon_Greyjoy.dds"
+				traits = { naval_invader winter_specialist }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 3
+			}
+
+			hidden_effect = {
+				ROM = { country_event = { id = ironborn.23 } }
+			}
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	bring_roose_bolton = {
+
+		icon = generic_army_support
+
+		available = {
+			NOT = { country_exists = ITA }
+			122 = { is_owned_and_controlled_by = FIN }
+		}
+
+		visible = {
+			original_tag = FIN
+			FIN = { has_completed_focus = STR_integrate_bolton }
+			122 = { is_owned_and_controlled_by = FIN }
+		}
+
+		fire_only_once = yes
+		
+		cost = 45
+
+		days_remove = 4
+
+		complete_effect = {
+
+			custom_effect_tooltip = STR_rooseandramsay_tt
+#			FIN = {
+#			create_corps_commander = {
+#				name = "Lord Roose Bolton"
+#				picture = "Portrait_Roose_Bolton.dds"
+#				traits = { trickster }
+#				skill = 3
+#				id = 34
+#				attack_skill = 3
+#				defense_skill = 1
+#				planning_skill = 3
+#				logistics_skill = 2
+#			}
+#			}
+
+			hidden_effect = {
+#				ITA = { remove_unit_leader = 34 }  #Roose Bolton, general 
+				set_global_flag = roose_hired
+
+				ITA = {
+					BOL_ramsay = {
+						set_nationality = FIN
+					}
+				}
+				ITA = {
+					BOL_roose = {
+						set_nationality = FIN
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+	}
+			
+}
+
+STR_contingency_skaagos = {
+	
+	STR_dino4_2_actual = {
+
+		allowed = { always = no }
+
+		icon = generic_political_discourse
+
+		available = {
+			FIN = { controls_state = 100 }
+			has_global_flag = ready_stark_dino4
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		highlight_states = {
+			state = 100
+		}
+
+#		selectable_mission = yes
+		days_mission_timeout = 55
+		is_good = yes
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { FIN = { controls_state = 100 } }
+			FIN = { has_capitulated = yes }
+			NOT = {
+				FIN = {
+					any_owned_state {
+						is_coastal = yes
+					}
+				}
+			}
+			hidden_trigger = {
+
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			FIN = { controls_state = 100 }
+#			ENG = {	country_event = britain.1 }
+			hidden_effect = {
+#				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+#			custom_effect_tooltip = STR_no_need_wedding_tt
+			add_political_power = 100
+#			country_event = finland.17
+			hidden_effect = {
+#				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			set_global_flag = ready_stark_dino4
+			country_event = stark.23		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+			
+}

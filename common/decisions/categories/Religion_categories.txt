@@ -1,0 +1,44 @@
+#################
+#### Religion ####
+#################
+
+Religion_faith_7 = {
+	picture = generic_crisis
+#	picture = faith_of_7
+	icon = generic_crisis
+#	icon = faith_of_7		
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea = faith_of_7
+	}
+}
+
+Religion_lordoflight = {
+	picture = generic_crisis
+	icon = generic_crisis	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea_with_trait = worship_ruhlor
+	}
+}
+
+Religion_harpylady = {
+	picture = generic_crisis
+	icon = generic_crisis	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		has_idea = harpylady
+	}
+}
+
+	
+

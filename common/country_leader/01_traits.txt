@@ -1,0 +1,363 @@
+leader_traits = {
+
+	young_wolf = {
+		random = no
+		army_attack_factor = 0.05
+		justify_war_goal_time = -0.25	
+		political_power_factor = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mother_of_dragons = {
+		random = no
+		if = {
+			limit = {
+			SOV = { has_idea = drogon }
+			}
+			political_power_factor = 0.05
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = vyserion }
+			}
+			political_power_factor = 0.05
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = rheagul }
+			}
+			political_power_factor = 0.05
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = drogon_2 }
+			}
+			political_power_factor = 0.1
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = vyserion_2 }
+			}
+			political_power_factor = 0.1
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = rheagul_2 }
+			}
+			political_power_factor = 0.1
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = drogon_3 }
+			}
+			political_power_factor = 0.15
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = vyserion_3 }
+			}
+			political_power_factor = 0.15
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = rheagul_3 }
+			}
+			political_power_factor = 0.15
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = drogon_4 }
+			}
+			political_power_factor = 0.25
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = vyserion_4 }
+			}
+			political_power_factor = 0.25
+		}
+		if = {
+			limit = {
+			SOV = { has_idea = rheagul_4 }
+			}
+			political_power_factor = 0.25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	true_king_renly = {
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.1	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hardened_bastard = { #Ramsay
+		random = no
+		army_core_defence_factor = 0.05
+		dig_in_speed_factor = 0.05
+		max_dig_in = 5
+	}
+
+	red_kings_legacy = {
+		random = no
+		drift_defence_factor = 0.25
+		fascism_acceptance = 15
+		ai_focus_aggressive_factor = 0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	frey_legacy = {
+		random = no
+		equipment_bonus = {
+			train_equipment = {
+				build_cost_ic = -0.05
+				reliability = 0.15
+			}
+		}
+		production_speed_rail_way_factor = 0.05
+		production_speed_infrastructure_factor = 0.1
+		consumer_goods_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	greatest_captain = {
+		random = no
+		political_power_cost = 0.2
+		justify_war_goal_time = -0.25
+		industrial_capacity_dockyard = 0.15
+		navy_capital_ship_attack_factor = 0.1
+		navy_capital_ship_defence_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	first_quenn = {
+	random = no
+	political_power_cost = 0.25
+	production_speed_buildings_factor = 0.15
+	consumer_goods_factor = -0.10
+	ai_will_do = {
+		factor = 1
+		}
+	}
+	
+	legitimate_heir = {
+	random = no
+	political_power_cost = 0.3
+	drift_defence_factor = 0.25
+	stability_factor = 0.10 
+	army_morale_factor = 0.1 
+	ai_will_do = {
+		factor = 1
+		}
+	}
+	
+	semi_northman = {
+	random = no
+	political_power_cost = -0.2
+	army_morale_factor = 0.1
+	ai_will_do = {
+		factor = 1
+		}
+	}
+
+	stoneheart_fear = {
+		random = no
+		surrender_limit = 1.0
+		stability_factor = -0.10
+	}
+
+	defender_of_vale = {
+		random = no
+		stability_factor = -0.10 
+		stability_weekly = -0.001
+		political_power_cost = 0.5
+	}
+
+	friend_of_stark = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "FIN"			
+			value = 100
+		}
+		ai_strategy = {
+			type = alliance
+			id = "FIN"
+			value = 50
+		}
+	}
+
+	dislikes_lannister = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "HOL"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	vulnerable_king = {
+		random = no
+		stability_weekly = -0.001	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	blood_of_the_dragon = {
+		random = no
+		drift_defence_factor = 1.0	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mistery_other = {
+		random = no
+		drift_defence_factor = 1.0
+		encryption_factor = 0.5	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	breaker_of_chains = {
+		random = no
+#		army_morale_factor = 0.1
+		conscription = 0.005
+		non_core_manpower = 0.05
+		targeted_modifier = {
+			tag = EGY
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = PER
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = IRQ
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+		targeted_modifier = {
+			tag = ECU
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	worship_ruhlor = {
+		random = no
+		sprite = 13
+#		neutrality_drift = 0.1
+		war_support_weekly = 0.005
+		political_power_factor = 0.02
+		drift_defence_factor = 0.5
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	political_prisoner_real = {
+		random = no
+		political_power_factor = -0.25
+		drift_defence_factor = -0.50
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	just_a_chair = {
+		random = no
+		political_power_factor = -0.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_last_dragon = {
+		random = no
+		political_power_factor = 0.10
+		justify_war_goal_time = -0.25
+		non_core_manpower = 0.025
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	prince_was_promised = {
+		random = no
+		drift_defence_factor = 0.50
+		army_attack_factor = 0.05
+		decryption_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	the_mountain = {
+		random = no
+		sprite = 13
+
+		compliance_gain = 0.1
+		root_out_resistance_effectiveness_factor = 0.1
+		non_core_manpower = 0.05
+	}
+
+	stark_matriarch = { #Catelyn
+		random = no
+		democratic_drift = 0.01
+		stability_weekly = 0.001
+		mobilization_laws_cost_factor = -0.2
+	}
+
+	cersei_political_manipulator = { #Cersei
+		random = no
+		fascism_drift = 0.035
+		join_faction_tension = -0.25
+		fascism_acceptance = 50
+		improve_relations_maintain_cost_factor = -0.5
+	}
+
+	insulent_imp = { #Tyrion
+		random = no
+		democratic_drift = 0.01
+		stability_factor = 0.07
+		research_speed_factor = 0.05
+	}
+
+	lion_casterlyrock = { #Tywin
+		random = no
+		fascism_drift = 0.01
+		political_power_factor = 0.15
+		surrender_limit = 0.5
+	}
+
+	endearing_princess = { #Myrcella
+		random = no
+		stability_weekly = 0.001
+	}
+}	

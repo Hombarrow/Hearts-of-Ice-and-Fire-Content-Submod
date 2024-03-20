@@ -1,0 +1,79 @@
+is_seven_kingdom = {
+	OR = {
+		AND = {
+			country_exists = FIN
+			original_tag = FIN
+		}
+		AND = {
+			country_exists = HOL
+			original_tag = HOL
+		}
+		AND = {
+			country_exists = IRE
+			original_tag = IRE
+		}
+		AND = {
+			country_exists = FRA
+			original_tag = FRA
+		}
+		AND = {
+			country_exists = SWE
+			original_tag = SWE
+		}
+		AND = {
+			country_exists = SPR
+			original_tag = SPR
+		}
+		AND = {
+			country_exists = BEL
+			original_tag = BEL
+		}
+		AND = {
+			country_exists = SER
+			original_tag = SER
+		}
+		AND = {
+			country_exists = ITA
+			original_tag = ITA
+		}
+		AND = {
+			country_exists = NOR
+			original_tag = NOR
+		}
+		AND = {
+			country_exists = BUL
+			original_tag = BUL
+		}
+		AND = {
+			country_exists = KAZ
+			original_tag = KAZ
+		}
+		AND = {
+			country_exists = GEO
+			original_tag = GEO
+		}
+		AND = {
+			country_exists = SCO
+			original_tag = SCO
+		}
+	}
+}
+
+is_tag_northern_house = {
+	OR = {
+	    tag = BUL
+	    tag = FIN
+	    tag = ITA
+	    tag = GEO
+	    tag = NOR
+	    tag = EST
+	    tag = AZE
+	}
+}
+
+#controls_iron_throne = {
+#		AND = {
+#			country_exists = SCO
+#			original_tag = SCO
+#		}
+#}

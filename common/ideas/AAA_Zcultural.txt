@@ -1,0 +1,718 @@
+ideas = {
+
+	# Cultural
+
+	origin = {
+
+		mixed = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+#				winter_attrition_factor = -0.25
+			}
+		}
+
+		brindled_men = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.5
+				army_core_defence_factor = 0.5
+				conscription = 0.025
+				production_speed_buildings_factor = -0.25
+				political_power_factor = -0.20
+				research_speed_factor = -0.2
+				local_resources_factor = -0.10
+			}
+		}
+
+		tall_men = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = tall_men
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.015
+				mobilization_speed = 0.15
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = -0.15
+				MONTHLY_POPULATION = -0.2
+			}
+		}
+
+		rhoynar_ethn = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				supply_consumption_factor = -0.10
+				acclimatization_hot_climate_gain_factor = 0.25  
+				mobilization_speed = -0.10
+				research_speed_factor = -0.01
+			}
+		}
+
+		whitewalker_zombies = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = whitewalkericon
+
+			removal_cost = -1
+
+#			picture = generic_war_preparation
+
+			modifier = {
+				winter_attrition_factor = -1
+				mobilization_speed = 1
+				resistance_damage_to_garrison = -0.5
+			}
+		}
+
+		ghiscari = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = -0.1
+				training_time_factor = -0.1
+				research_speed_factor = -0.02
+			}
+		}
+
+		wildling = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				winter_attrition_factor = -0.35
+				industrial_capacity_dockyard = -0.40
+				acclimatization_cold_climate_gain_factor  = 0.4
+				join_faction_tension = 0.5
+#				resistance_tick_auto = -2
+			}
+		}
+
+		first_men = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				winter_attrition_factor = -0.25
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_dockyard = -0.20
+				mobilization_speed = -0.05
+				foreign_subversive_activites = -0.1
+			}
+		}
+
+		andal = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				research_speed_factor = 0.05
+				supply_consumption_factor = 0.15
+				resistance_damage_to_garrison = -0.05
+			}
+		}
+
+		dothraki_horde = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				justify_war_goal_time = -0.5
+				generate_wargoal_tension = -1
+				conscription = 0.025
+				research_speed_factor = -0.05
+				trade_laws_cost_factor = 1
+			}
+		}
+
+		yi_tish = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources_factor = 0.1
+				min_export = -0.15
+				production_speed_synthetic_refinery_factor = -0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		barbarian = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_war_preparation
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.45
+				justify_war_goal_time = -0.8
+				generate_wargoal_tension = -1
+				political_power_factor = -0.20
+				research_speed_factor = -0.25
+				local_resources_factor = -0.20
+			}
+		}
+	
+		islanders = {
+
+#			available = {
+#				always = no
+#			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = undisturbed_isolation
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+				industrial_capacity_factory = -0.05
+				political_power_factor = -0.1
+#				navy_chief_cost_factor = -0.25 
+			}
+		}
+
+		necromancers = {
+
+			available = {
+#				always = no
+			}
+
+			allowed = {
+				always = no
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.05
+				political_power_factor = -0.10
+				local_resources_factor = 0.10
+				MONTHLY_POPULATION = -0.5
+			}
+		}
+	
+	}
+
+	# Religion
+
+	religion = {
+		law = yes
+		use_list_view = yes
+
+		atheist = {
+
+			available = {
+				always = no
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+#				convoy_raiding_efficiency_factor  = 0.15
+			}
+		}
+
+		pacifist_society = {
+
+			available = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = disarmed_nation
+			
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_damage_to_garrison = -0.25
+				partisan_effect = 0.20
+			}
+		}
+
+		harpylady = {
+
+			available = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_damage_to_garrison = -0.25
+				partisan_effect = 0.20
+			}
+		}
+
+		lovegoddess = {
+
+			available = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed = {
+				always = no
+#				has_idea = atheist
+			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.20
+			}
+		}
+
+		lordof_light = {
+
+			available = {
+				always = no
+#				has_idea = atheist
+			}
+
+#			allowed = {
+#				always = no
+#				has_idea = atheist
+#			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = lordof_light
+			
+			modifier = {
+				army_attack_factor = 0.10
+				heat_attrition_factor = -0.35
+				winter_attrition_factor = 0.35
+				conscription = 0.005
+			}
+		}
+
+		drowned_god = {
+
+			available = {
+#				has_idea = atheist
+				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+			}
+
+#			allowed = {
+#				has_idea = atheist
+#				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+#			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				convoy_raiding_efficiency_factor  = 0.15
+				amphibious_invasion = 0.15
+				out_of_supply_factor  = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		fertility_godess = {
+
+			available = {
+				has_country_leader = { ruling_only = yes name = "Tyrion Lannister" }
+			}
+
+#			allowed = {
+#				has_country_leader = { ruling_only = yes name = "Tyrion Lannister" }
+#			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.20
+				supply_consumption_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+	
+		faith_of_7 = {
+
+			available = {
+				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+			}
+
+#			allowed = {
+#				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+#			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = faith_of_7
+			
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+
+		old_gods = {
+
+			available = {
+				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+			}
+
+#			allowed = {
+#				always = no
+#				AND = {
+#					NOT = { has_idea = faith_of_7 }
+#					NOT = { has_idea = drowned_god }
+#					NOT = { has_idea = old_gods }
+#				}
+#			}
+
+			allowed_civil_war = {
+#				yes
+			}
+
+			cost = 250
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			modifier = {
+				army_core_defence_factor  = 0.20
+				army_defence_factor = -0.10
+				line_change_production_efficiency_factor = 0.20
+				stability_factor = 0.10
+			}
+		}
+	
+	}
+
+	# Faith of the Seven Prayers
+
+	country = {
+	
+		father_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.20
+			}
+
+		}
+
+		mother_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = 0.20
+			}
+
+		}
+
+		warrior_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.20
+			}
+
+		}
+
+		smith_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.20
+			}
+
+		}
+
+		maiden_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+
+		}
+
+		crone_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.15
+			}
+
+		}
+
+		stranger_prayer = {
+		
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.2
+			}
+
+		}
+
+	}
+}

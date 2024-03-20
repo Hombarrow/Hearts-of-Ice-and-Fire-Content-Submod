@@ -1,0 +1,77 @@
+ideas = {
+
+	mobilization_laws = { 
+		law = yes
+		
+		slave_requirement = {
+			
+			
+			available = {
+				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+				OR = {
+					original_tag = EGY
+					original_tag = IRQ
+					original_tag = PER
+					original_tag = ECU					
+				}
+
+			}
+
+			ai_will_do = {
+   				factor = 1
+			}
+			
+			cost = 150
+			removal_cost = -1
+			level = 8
+
+			modifier = {
+				conscription = 0.04
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = -0.15
+				training_time_factor = -0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		walker_requirement = {
+			
+			allowed = {
+				always = no
+				original_tag = GER
+			}
+			
+			available = {
+				has_government = fascism
+				original_tag = GER					
+			}
+
+			picture = whitewalkericon
+
+			ai_will_do = {
+   				factor = 90
+			}
+			
+			cost = 10
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				training_time_factor = -0.2
+			}
+
+			allowed_to_remove = {
+				NOT = { has_government = fascism }
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+	}
+}

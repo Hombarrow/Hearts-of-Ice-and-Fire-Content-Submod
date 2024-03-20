@@ -1,0 +1,285 @@
+ideas = { 
+	country = {
+		TLY_trade_efficiency = { 
+			picture = generic_goods_red_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			trade_opinion_factor = 0.50
+			}
+		}
+
+		TLY_trade_efficiency_2 = { 
+			picture = generic_goods_red_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			trade_opinion_factor = 0.90
+			}
+		}
+
+		TLY_construction_speed = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_buildings_factor  = 0.15
+			}
+		}
+
+		TLY_science_effort = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			research_speed_factor = 0.05
+			}
+		}
+
+		TLY_civilian_economy = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = 0.10
+			production_speed_buildings_factor = 0.20
+			production_factory_efficiency_gain_factor = 0.15
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		TLY_military_economy = { 
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+			modifier = { 
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.10
+			industrial_capacity_dockyard = 0.10
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+		TLY_fortifications = { 
+			removal_cost = -1 
+			picture = FRA_fortification_focus	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			production_speed_bunker_factor = 0.25
+			production_speed_coastal_bunker_factor = 0.25
+			conscription = 0.002
+			}
+		}
+
+		TLY_defensive_doctrine = { 
+			removal_cost = -1 
+			allowed = { always = no} 
+
+
+			modifier = { 
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.10
+			army_defence_factor = 0.05
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+		TLY_knights = { 
+			removal_cost = -1 	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			cavalry_attack_factor  = 0.05
+			cavalry_defence_factor  = 0.10
+			}
+		}
+	}
+}
+
+ideas = {
+	country = {
+		TLY_trainings = { 
+			removal_cost = -1 	
+			allowed = { always = no} 
+
+
+			modifier = { 
+			training_time_army_factor = -0.15
+			}
+				equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					instant = yes }
+                
+			}
+		}
+
+		TLY_infantry_equipment_quality_effort = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.10
+					hard_attack = 0.05
+					instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		TLY_artillery_quality = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.10
+					instant = yes }
+                
+			}
+		}
+
+		TLY_support_equipment_quality = { 
+			picture = generic_infantry_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+
+		 
+			    equipment_bonus = {
+				support_equipment = {
+					reliability = 0.10
+					instant = yes }
+                
+			}
+		}
+	}
+}
+
+ideas = { 
+	country = {
+		TLY_frey_unhappy = { 
+			picture = generic_volunteer_expedition_bonus
+			removal_cost = -1 
+				
+			allowed = { always = no} 
+
+			modifier = { 
+				conscription = -0.025
+			}
+
+		}
+
+		TLY_payingFrey_1 = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+#				SWE = {
+#					has_capitulated = no
+#				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.30
+			}
+		}
+
+		TLY_payingFrey_2 = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+#				SWE = {
+#					has_capitulated = no
+#				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}
+
+		TLY_payingFrey_3 = {
+
+			picture = generic_goods_red_bonus
+			
+			available = {
+#				SWE = {
+#					has_capitulated = no
+#				}
+			}
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+	}
+}

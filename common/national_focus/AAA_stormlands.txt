@@ -1,0 +1,2186 @@
+focus_tree = {
+	id = belgium_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BEL
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1100 }
+	
+	focus = {
+		id = SRL_industrial_effort
+		icon = GFX_goal_generic_construct_civilian
+		x = 16
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+				add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = SRL_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SRL_industrial_effort }
+		x = 0
+		y = 1
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+	
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		
+	focus = {
+		id = SRL_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SRL_civilian_industry }
+		x = 0
+		y = 2
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SRL_civilian_industry_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SRL_infrastructure }
+		x = 0
+		y = 3
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+	
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SRL_increase_population
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SRL_civilian_industry_2 }
+		x = 0
+		y = 4
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+		add_ideas = SRL_increase_population
+		}
+	}
+	
+	focus = {
+		id = SRL_research_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = SRL_increase_population }
+		x = 0
+		y = 5
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		
+		add_research_slot = 1
+		}
+	}
+	
+	
+	focus = {
+		id = SRL_construction_tech
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SRL_industrial_effort }
+		x = -4
+		y = 1
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+				name = construction_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = SRL_civil_factories_construction
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SRL_construction_tech }
+		x = -2
+		y = 2
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = SRL_civ_construction
+		}
+	}
+	
+	focus = {
+		id = SRL_military_factories_construction
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SRL_construction_tech }
+		x = 0
+		y = 1
+		relative_position_id = SRL_construction_tech
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = SRL_mil_construction
+		}
+	}
+	
+	focus = {
+		id = SRL_construction_speed
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SRL_civil_factories_construction }
+		prerequisite = { focus = SRL_military_factories_construction }
+		x = 0
+		y = 2
+		relative_position_id = SRL_construction_tech
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = SRL_construction_speed
+		}
+	}
+	
+	focus = {
+		id = SRL_dockyard_construction
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SRL_construction_tech }
+		x = -2
+		y = 1
+		relative_position_id = SRL_construction_tech
+		cost = 10
+
+		 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = SRL_dockyard_construction
+		}
+	}
+	
+	focus = {
+		id = SRL_weeping_town_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+#		prerequisite = { focus = SRL_research_slot }
+		prerequisite = { focus = SRL_dockyard_construction }
+		x = 0
+		y = 1
+		relative_position_id = SRL_dockyard_construction
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			BEL = { owns_state = 149 }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			149 = {
+ 	                       if = {
+        	               limit = { is_controlled_by = ROOT }
+                	       add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes						
+                        	}
+                        }
+                        }  
+						
+						149 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 3
+                        add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes						
+                        }
+                        }
+                        }  
+                        }
+}
+
+
+	focus = {
+		id = SRL_research_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = SRL_construction_speed }
+		x = 0
+		y = 3
+		relative_position_id = SRL_construction_tech
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SRL_arms_factory_building
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SRL_industrial_effort }
+		x = 3
+		y = 1
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+		focus = {
+		id = SRL_arms_factory_building_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SRL_arms_factory_building }
+		x = -1
+		y = 1
+		relative_position_id = SRL_arms_factory_building
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SRL_arms_factory_building_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SRL_arms_factory_building }
+		x = 1
+		y = 1
+		relative_position_id = SRL_arms_factory_building
+		cost = 10
+
+		available_if_capitulated = yes
+			completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SRL_arms_factory_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SRL_arms_factory_building_2 }
+		prerequisite = { focus = SRL_arms_factory_building_3 }
+		x = 0
+		y = 2
+		relative_position_id = SRL_arms_factory_building
+		cost = 10
+
+		available_if_capitulated = yes
+		completion_reward = {
+		add_ideas = SRL_arms_production
+		}
+	}
+	
+	
+	focus = { 
+		id = SRL_army_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 0
+		relative_position_id = SRL_industrial_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.35
+				uses = 1
+				category = land_doctrine
+			}
+	}
+	}
+	
+	focus = { 
+		id = SRL_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SRL_army_focus }
+		x = 0
+		y = 1
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	}
+	}
+	
+	focus = { 
+		id = SRL_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SRL_doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = SRL_doctrine_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	}
+	}
+	
+	focus = { 
+		id = SRL_doctrine_effort_3
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SRL_doctrine_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = SRL_doctrine_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+	}
+	}
+	
+	focus = { 
+		id = SRL_doctrine_effort_4
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = SRL_doctrine_effort_3 }
+		x = 0
+		y = 3
+		relative_position_id = SRL_doctrine_effort
+		cost = 10	
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			BEL = { owns_state = 115 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+				
+		completion_reward = {
+			add_ideas = SRL_doctrine_effort_4
+			115 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SRL_dornish_marches_traditions
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SRL_defence_in_forests }
+		x = -2
+		y = 2
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 20
+			set_technology = { dornish_marches = 1 } 
+	}
+	}
+	
+	focus = { 
+		id = SRL_defence_in_forests
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SRL_army_focus }
+		mutually_exclusive = { focus = SRL_knight_traditions }
+		x = -2
+		y = 1
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_ideas = SRL_defence_in_forests
+	}
+	}
+	
+		focus = { 
+		id = SRL_engineers_effort
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SRL_dornish_marches_traditions focus = SRL_agressive_army }
+		x = -4
+		y = 3
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+				add_tech_bonus = {
+				name = engineers_bonus
+				bonus = 0.5
+				uses = 1
+				category = engineers_tech
+			}
+	}
+	}
+	
+	focus = { 
+		id = SRL_engineers_effort_2
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SRL_engineers_effort }
+		x = -4
+		y = 4
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_ideas = SRL_engineers_effort
+	}
+	}
+	
+	
+	focus = { 
+		id = SRL_forts_construction
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SRL_dornish_marches_traditions }
+		x = -2
+		y = 3
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 5
+			add_ideas = SRL_forts_construction
+	}
+	}
+	
+	focus = { 
+		id = SRL_defense_effort
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SRL_forts_construction }
+		x = -2
+		y = 4
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			set_technology = { SRL_defense = 1 }
+	}
+	}
+	
+	focus = { 
+		id = SRL_knight_traditions
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SRL_army_focus }
+		mutually_exclusive = { focus = SRL_defence_in_forests }
+		x = -6
+		y = 1
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			add_ideas = SRL_knight_traditions
+	}
+	}
+	
+	focus = { 
+		id = SRL_agressive_army
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SRL_knight_traditions }
+		x = -6
+		y = 2
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+			army_experience = 10
+			set_technology = { SRL_agression = 1 }
+	}
+	}
+	
+	focus = { 
+		id = SRL_army_recruitment
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SRL_agressive_army }
+		x = -6
+		y = 3
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+#			army_experience = 10
+			add_ideas = SRL_army_recruitment
+	}
+	}
+	
+	
+	focus = { 
+		id = SRL_army_training
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SRL_army_recruitment }
+		x = -6
+		y = 4
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+				
+		completion_reward = {
+#			army_experience = 10
+			add_ideas = SRL_army_training
+		}
+	}
+	
+	
+	
+	focus = {
+		id = SRL_develop_dornish_marches
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SRL_arms_factory_production }
+#		prerequisite = { focus = SRL_defense_effort focus = SRL_army_training }
+		x = 0
+		y = 1
+		relative_position_id = SRL_arms_factory_production
+		cost = 12
+
+		available = {
+			BEL = { owns_state = 148 }
+			BEL = { owns_state = 479 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			     148 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes						
+                        }
+                        }
+                        }  
+						
+						479 = {
+                        if = {
+                        limit = { is_controlled_by = ROOT }
+                        add_extra_state_shared_building_slots = 3
+                        add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes						
+                        }
+						add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes						
+                        }
+                        }
+                        }  
+                        }
+}
+
+
+		focus = { 
+		id = SRL_infantry_equipment_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SRL_army_focus }
+		x = 3
+		y = 1
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = inf_equipment_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+	}
+	}
+	
+		focus = { 
+		id = SRL_infantry_equipment_effort_2
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SRL_infantry_equipment_effort }
+		x = 3
+		y = 2
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = inf_equipment_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+	}
+	}
+	
+	
+		focus = { 
+		id = SRL_support_batallions_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SRL_infantry_equipment_effort_2 }
+		x = 2
+		y = 3
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = support_equip_bonus
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+	}
+	}
+	
+		focus = { 
+		id = SRL_artillety_effort
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SRL_infantry_equipment_effort_2 }
+		x = 4
+		y = 3
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 10
+				add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+	}
+	}
+	
+		focus = { 
+		id = SRL_new_weapons
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SRL_artillety_effort }
+		prerequisite = { focus = SRL_support_batallions_effort }
+		x = 3
+		y = 4
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+			
+		
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+	}
+	}
+	
+	
+	focus = { 
+		id = SRL_navy_focus
+		icon = GFX_goal_generic_navy_cruiser
+		x = 9
+		y = 0
+		relative_position_id = SRL_army_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	
+	focus = { 
+		id = SRL_naval_doctrines
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SRL_navy_focus }
+		x = -3
+		y = 1
+		relative_position_id = SRL_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		
+	}
+	
+	focus = { 
+		id = SRL_naval_doctrines_2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SRL_naval_doctrines }
+		x = 0
+		y = 1
+		relative_position_id = SRL_naval_doctrines
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			navy_experience = 15
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		
+	}
+
+	focus = { 
+		id = SRL_naval_doctrines_3
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = SRL_naval_doctrines_2 }
+		x = 0
+		y = 2
+		relative_position_id = SRL_naval_doctrines
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+				add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		
+	}
+	
+	
+	focus = { 
+		id = SRL_dockyard_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SRL_navy_focus }
+		x = 3
+		y = 1
+		relative_position_id = SRL_navy_focus
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { 
+		id = SRL_dockyard_effort_2
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SRL_dockyard_effort }
+		x = 0
+		y = 1
+		relative_position_id = SRL_dockyard_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = { 
+		id = SRL_dockyard_effort_3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SRL_dockyard_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = SRL_dockyard_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	
+	focus = { 
+		id = SRL_dockyard_production
+		icon = GFX_goal_continuous_naval_production
+		prerequisite = { focus = SRL_dockyard_effort_3 }
+		x = 0
+		y = 3
+		relative_position_id = SRL_dockyard_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+		add_ideas = SRL_dockyard_efficiency
+
+		}
+	}
+
+	focus = { 
+		id = SRL_new_ships
+		icon = GFX_goal_generic_navy_cruiser
+#		prerequisite = { focus = SRL_battleship_quality focus = SRL_light_cruisers_quality }
+		prerequisite = { focus = SRL_navy_focus }
+		x = 0
+		y = 1
+		relative_position_id = SRL_navy_focus
+		cost = 10
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+		navy_experience = 25
+				add_tech_bonus = {
+				name = ships_bonus
+				bonus = 0.5
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+	
+	
+	focus = { 
+		id = SRL_light_ships_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = SRL_new_ships }
+		mutually_exclusive = { focus = SRL_heavy_cruisers_effort }
+		x = -1
+		y = 1
+		relative_position_id = SRL_new_ships
+		cost = 10
+		
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		navy_experience = 25
+				add_tech_bonus = {
+				name = destroyer_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = { 
+		id = SRL_light_cruisers_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SRL_light_ships_effort }
+		x = 0
+		y = 1
+		relative_position_id = SRL_light_ships_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+		navy_experience = 5
+				add_tech_bonus = {
+				name = l_cruiser_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+	
+		focus = { 
+		id = SRL_destroyers_quality
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SRL_light_cruisers_effort }
+		x = 0
+		y = 2
+		relative_position_id = SRL_light_ships_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+#		navy_experience = 25
+#		add_ideas = SRL_destroyers_quality
+			add_ideas = liberty_ships_focus
+		}
+	}
+
+	focus = { 
+		id = SRL_light_cruisers_quality
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SRL_destroyers_quality }
+		x = 0
+		y = 3
+		relative_position_id = SRL_light_ships_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+#		navy_experience = 25
+		add_ideas = SRL_lc_quality
+		}
+	}
+	
+	focus = { 
+		id = SRL_heavy_cruisers_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SRL_new_ships }
+		mutually_exclusive = { focus = SRL_light_ships_effort }
+		x = 1
+		y = 1
+		relative_position_id = SRL_new_ships
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+		navy_experience = 25
+				add_tech_bonus = {
+				name = hc_bonus
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+			}
+				add_tech_bonus = {
+				name = bc_bonus
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+	
+	
+	focus = { 
+		id = SRL_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SRL_heavy_cruisers_effort }
+		x = 0
+		y = 1
+		relative_position_id = SRL_heavy_cruisers_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 4
+		}
+		
+		completion_reward = {
+		navy_experience = 5
+				add_tech_bonus = {
+				name = bb_bonus
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+
+		}
+	}
+	
+	focus = { 
+		id = SRL_heavy_cruisers_quality
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SRL_battleship_effort }
+		x = 0
+		y = 2
+		relative_position_id = SRL_heavy_cruisers_effort
+		cost = 10
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+#		navy_experience = 25
+		add_ideas = SRL_hc_quality
+
+		}
+	}
+	
+	
+	focus = { 
+		id = SRL_battleship_quality
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SRL_heavy_cruisers_quality }
+		x = 0
+		y = 3
+		relative_position_id = SRL_heavy_cruisers_effort
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.65
+				ahead_reduction = 1
+				uses = 1
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+#			add_ideas = SRL_bb_quality
+
+		}
+	}
+
+	focus = {
+		id = SRL_support_stannis
+		icon = GFX_goal_generic_position_armies
+#		prerequisite = { focus = LAN_poisoning_king }
+#		mutually_exclusive = { focus = SRL_neutral_renly}
+#		mutually_exclusive = { focus = SRL_king_renly}
+		x = 1
+		y = 0
+#		relative_position_id = SRL_navy_focus
+		cost = 1
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		available = {
+			always = no
+#			HUN = {
+#				has_idea = SIS_claim_king
+#			}
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		add_political_power = 50
+		add_opinion_modifier = { target = HUN modifier = supported_stannis }
+		HUN = {
+		add_opinion_modifier = { target = BEL modifier = supported_stannis }
+			}
+		}
+	}
+
+	focus = {
+		id = SRL_ally_stannis
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SRL_support_stannis focus = SRL_neutral_renly }
+		x = 1
+		y = 1
+		relative_position_id = SRL_support_stannis
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			country_exists = HUN
+			NOT = { has_war_with = HUN }
+			is_in_faction = no
+			OR = {
+				AND = {
+					HUN = { has_idea = SIS_claim_king }
+					NOT = { BEL = { has_idea = SRL_claim_king } }
+				}
+				AND = {
+					NOT = { HUN = { has_idea = SIS_claim_king } }
+					BEL = { has_idea = SRL_claim_king }
+				}
+			}
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			HUN = {	country_event = hungary.9 }
+		}
+	}
+
+	focus = {
+		id = SRL_anexed_stannis
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = SRL_support_stannis }
+		x = -1
+		y = 1
+		relative_position_id = SRL_support_stannis
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			country_exists = HUN
+			NOT = { has_war_with = HUN }
+			is_in_faction = no
+			HUN = { has_government = Root }
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		HUN = {
+				country_event = hungary.6
+			}
+		custom_effect_tooltip = annex_by_stannis_tt
+		}
+	}
+
+	focus = {
+		id = SRL_take_crown
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SRL_ally_stannis focus = SRL_ally_tyrells }
+		x = 2
+		y = 2
+		relative_position_id = SRL_support_stannis
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			country_exists = ENG
+			OR = {
+				ENG = { has_country_leader = { ruling_only = yes name = "Joffrey I Baratheon" } }
+				ENG = { has_country_leader = { ruling_only = yes name = "Eddard I Stark" } }
+				ENG = { has_country_leader = { ruling_only = yes name = "Tommen I Baratheon" } }
+				AND = {
+					ENG = { has_country_leader = { ruling_only = yes name = "Stannis I Baratheon" } }
+					NOT = { is_in_faction_with = HUN }
+				}
+			}
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		if = {
+			limit = { 33 = { is_owned_by = ENG } }
+				create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+
+		}
+		}
+		if = {
+			limit = { 33 = { is_owned_by = FIN } }
+				create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FIN
+
+		}
+		}
+		if = {
+			limit = { 33 = { is_owned_by = HOL } }
+				create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HOL
+
+		}
+		}
+
+		}
+	}
+
+	focus = {
+		id = SRL_king_renly
+		icon = GFX_focus_hun_elect_a_king
+#		mutually_exclusive = { focus = SRL_support_stannis}
+#		prerequisite = { focus = LAN_poisoning_king }
+		x = 3
+		y = 0
+		relative_position_id = SRL_support_stannis
+		cost = 1
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		available = {
+			always = no
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+			add_political_power = 100
+			#add_ideas = SRL_claim_king
+
+			set_rule = { can_create_factions = yes }
+			create_faction = "Rainbow Union"
+
+			add_opinion_modifier = { target = HUN modifier = not_supported_stannis }
+			HUN = {	add_opinion_modifier = { target = BEL modifier = not_supported_stannis }}
+		}
+	}
+
+	focus = {
+		id = SRL_ally_tyrells
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SRL_king_renly }
+		x = 0
+		y = 1
+		relative_position_id = SRL_king_renly
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+			
+		available = {
+			is_puppet = no
+			country_exists = IRE
+			IRE = { is_in_faction = no }
+		}
+		
+		bypass = {
+			IRE = { is_in_faction_with = BEL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+			
+		completion_reward = {
+			IRE = { country_event = { id = ireland.11 } }
+		}
+	}
+
+	focus = {
+		id = SRL_neutral_renly
+		icon = GFX_goal_generic_position_armies
+#		mutually_exclusive = { focus = SRL_support_stannis}
+#		prerequisite = { focus = LAN_poisoning_king }
+		x = 3
+		y = 0
+		relative_position_id = SRL_king_renly
+		cost = 1
+		
+		ai_will_do = {
+			factor = 8
+		}
+		
+		available = {
+			always = no
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		add_political_power = 75
+#		add_opinion_modifier = { target = HUN modifier = not_supported_stannis }
+		HUN = {
+		add_opinion_modifier = { target = BEL modifier = not_supported_stannis }
+			}
+		}
+	}
+
+	focus = {
+		id = SRL_join_lannister
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = SRL_neutral_renly }
+		x = -1
+		y = 1
+		relative_position_id = SRL_neutral_renly
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			country_exists = HOL
+			NOT = { has_war_with = HUN }
+			HOL = { is_faction_leader = yes }
+			HOL = { has_government = Root }
+			is_in_faction = no
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		HOL = {
+				country_event = generic.2
+			}
+		}
+	}
+
+	focus = {
+		id = SRL_join_stark
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = SRL_neutral_renly }
+		x = 1
+		y = 1
+		relative_position_id = SRL_neutral_renly
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			country_exists = FIN
+			NOT = { has_war_with = FIN }
+			FIN = { is_faction_leader = yes }
+			FIN = { has_government = Root }
+			is_in_faction = no
+		}
+		
+		available_if_capitulated = yes	
+
+		completion_reward = {
+		FIN = {
+				country_event = generic.2
+			}
+		}
+	}

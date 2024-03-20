@@ -1,0 +1,20 @@
+characters={
+	YNK_Razdal={
+		name = "Razdal mo Eraz"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRQ/Portrait_Razdal_Eraz.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
