@@ -1,0 +1,23 @@
+
+state={
+	id=575
+	name="STATE_575"
+
+	history={
+		owner = ANG
+		add_core_of = ANG
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+
+		}
+
+	}
+
+	provinces={
+		1502 1588 1732 1792 1847 4649 4703 4745 4809 4852 7526 7582 7697 7828 7832 7848 7894 10368 10541 10567 12485 12690 
+	}
+	manpower=1146494
+	buildings_max_level_factor=1.000
+	state_category=town
+}

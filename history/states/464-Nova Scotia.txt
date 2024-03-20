@@ -1,0 +1,26 @@
+
+state={
+	id=464
+	name="STATE_464"
+
+	history={
+		owner = DEN
+		victory_points = {
+			7361 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = DEN
+
+	}
+
+	provinces={
+		634 1338 1354 4287 4362 4430 4623 4736 7304 7361 7644 7879 10174 10244 11098 12134 12202 12289 12502 13076 
+	}
+	manpower=490912
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

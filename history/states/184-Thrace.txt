@@ -1,0 +1,29 @@
+
+state={
+	id=184
+	name="STATE_184"
+	manpower = 582500
+	
+	state_category = town
+	
+	resources={
+		steel=12
+	}
+
+	history={
+		owner = ROM
+		buildings = {
+			infrastructure = 2
+			dockyard = 2
+			11774 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = ROM
+	}
+
+	provinces={
+		6990 9791 9930 11774 11905 
+	}
+}

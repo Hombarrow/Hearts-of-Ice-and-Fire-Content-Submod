@@ -1,0 +1,302 @@
+﻿###########################
+# Baratheon Events
+###########################
+
+add_namespace = stormlands
+
+# Renly killed
+country_event = {
+	id = stormlands.1
+	title = stormlands.1.t
+	desc = stormlands.1.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+
+#	fire_only_once = yes
+
+#	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = stormlands.1.a
+		ai_chance = { factor = 90 }
+		kill_country_leader = yes
+		hidden_effect = {
+		BEL = {
+		country_event = { id = stormlands.2 days = 3 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# Join Stannis?
+country_event = {
+	id = stormlands.2
+	title = stormlands.2.t
+	desc = stormlands.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_party_name = { ideology = fascism long_name = "House Connington of Griffin's Roost" name = "House Connington" }
+			set_party_name = { ideology = democratic long_name = "House Swann of Stonehelm" name = "House Swann" }
+			set_party_name = { ideology = neutrality long_name = "House Caron of Nightsong" name = "House Caron" }
+		}
+	}
+	
+	option = {
+		name = stormlands.2.a
+		ai_chance = { factor = 80 }
+		HUN = {
+		country_event = { id = stormlands.3 hours = 1 } 
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			HUN = {
+				add_state_core = PREV
+			}
+		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+
+	option = {
+		name = stormlands.2.b
+		ai_chance = { factor = 20 }
+
+#		set_party_name = { ideology = fascism long_name = "House Connington of Griffin's Roost" name = "House Connington" }
+#		set_party_name = { ideology = democratic long_name = "House Swann of Stonehelm" name = "House Swann" }
+#		set_party_name = { ideology = neutrality long_name = "House Caron of Nightsong" name = "House Caron" }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+
+	option = {
+		name = stormlands.2.c
+		ai_chance = { factor = 0 }
+		HUN = { change_tag_from = BEL }
+		HUN = {
+		country_event = { id = stormlands.3 hours = 1 } 
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			HUN = {
+				add_state_core = PREV
+			}
+		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+}
+
+# Stormlands mit uns
+country_event = {
+	id = stormlands.3
+	title = stormlands.3.t
+	desc = stormlands.3.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+
+#	fire_only_once = yes
+
+#	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = stormlands.3.a
+		ai_chance = { factor = 90 }
+		HUN = { annex_country = { target = BEL transfer_troops = yes } }
+
+		hidden_effect = {
+
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			HUN = {
+				add_state_core = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			BEL = {
+				remove_state_core = PREV
+			}
+		}
+
+		news_event = { hours = 6 id = news.329 }
+#		BEL = {
+#		country_event = { id = stormlands.2 days = 1 } 
+#		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# Renly must choose
+country_event = {
+	id = stormlands.4
+	title = stormlands.4.t
+	desc = stormlands.4.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+
+#	fire_only_once = yes
+
+#	mean_time_to_happen = { days = 1 }
+
+# Proclaim as king	
+	option = {
+		name = stormlands.4.a
+		ai_chance = { factor = 33 }
+
+		add_country_leader_trait = true_king_renly
+		BEL = { complete_national_focus = SRL_king_renly }
+
+		hidden_effect = {
+#		news_event = { hours = 6 id = news.329 }
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+# Declare for Stannis	
+	option = {
+		name = stormlands.4.b
+		trigger = { HUN = { has_idea = SIS_claim_king } }
+		ai_chance = {
+			factor = 33
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		BEL = { complete_national_focus = SRL_support_stannis }
+
+		hidden_effect = {
+		if = {
+			limit = { HUN = { has_government = neutrality } }
+			set_politics = {
+			
+				ruling_party = neutrality			
+				elections_allowed = no
+		
+			}
+
+			add_popularity = {
+			ideology = neutrality
+			popularity = 1
+			}
+		}
+#		news_event = { hours = 6 id = news.329 }
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+# Stay neutral	
+	option = {
+		name = stormlands.4.c
+		ai_chance = {
+			factor = 33
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		BEL = { complete_national_focus = SRL_neutral_renly
+ }
+
+		hidden_effect = {
+#		news_event = { hours = 6 id = news.329 }
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# Stormlands join with Stannis
+country_event = {
+	id = stormlands.5
+	title = stormlands.5.t
+	desc = stormlands.5.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stormlands.5.a
+		ai_chance = { factor = 90 }
+		HUN = { change_tag_from = BEL }
+		HUN = { annex_country = { target = BEL transfer_troops = yes } }
+
+		hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			HUN = {
+				add_state_core = PREV
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = BEL
+			}
+			BEL = {
+				remove_state_core = PREV
+			}
+		}
+#		news_event = { hours = 6 id = news.329 }
+		}
+	}
+}
+
+# No annexation!
+country_event = {
+	id = stormlands.6
+	title = stormlands.6.t
+	desc = stormlands.6.d
+#	picture = GFX_report_event_molotov_signing_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stormlands.6.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+#		news_event = { hours = 6 id = news.329 }
+		}
+	}
+}
+
+# Blood magic spotted
+country_event = {
+	id = stormlands.7
+	title = stormlands.7.t
+	desc = stormlands.7.desc
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stormlands.7.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+#		news_event = { hours = 6 id = news.329 }
+		}
+	}
+}

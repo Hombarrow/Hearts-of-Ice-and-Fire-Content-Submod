@@ -1,0 +1,24 @@
+
+state={
+	id=107
+	name="STATE_107" # Serbia
+	manpower = 1264700
+	
+	state_category = town
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		victory_points = {
+			11586 5 
+		}
+		add_core_of = SWI
+	}
+
+	provinces={
+		614 797 3609 3614 3956 3984 6634 6643 9599 11583 11586 11787 
+	}
+}

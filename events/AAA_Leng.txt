@@ -1,0 +1,376 @@
+﻿###########################
+# Leng Events
+###########################
+
+add_namespace = leng
+
+# King is dead, long live the Queen
+country_event = {
+	id = leng.1
+	title = leng.1.t
+	desc = leng.1.d
+	picture = GFX_report_event_generic_funeral
+
+	trigger = {
+		tag = LAO
+		has_government = neutrality
+		date > 1937.1.1
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 746
+	}
+	
+	option = {
+		name = leng.1.a
+		ai_chance = { factor = 90 }
+
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Ahim II"
+			desc = "POLITICS_AHIM_II_DESC"
+			picture = "gfx/leaders/SHX/Portrait_Ahim.dds"
+
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+
+			}
+		}
+
+		hidden_effect = {
+			country_event = { days = 31 id = leng.2 }
+		}
+	}
+}
+
+# Love or Duty
+country_event = {
+	id = leng.2
+	title = leng.2.t
+	desc = leng.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.2.a
+		ai_chance = { factor = 90 }
+
+		add_political_power = 75
+		add_ideas = CHI_executive_yuan
+
+		hidden_effect = {
+			country_event = { days = 7 id = leng.3 }
+		}
+	}
+	option = {
+		name = leng.2.b
+		ai_chance = { factor = 10 }
+
+#		EGY = { country_event = { id = leng.4 } }
+
+		hidden_effect = {
+#			FIN = { country_event = { days = 1 id = leng.4 } }
+		}
+	}
+}
+
+# Lengii want independence
+country_event = {
+	id = leng.3
+	title = leng.3.t
+	desc = leng.3.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.3.a
+		ai_chance = { factor = 80 }
+
+		if = {
+			limit = { has_idea = LNG_unity_treaty }
+			remove_ideas = LNG_unity_treaty
+		}
+
+		hidden_effect = {
+			country_event = { hours = 5 id = leng.5 }
+		}
+	}
+
+	option = {
+		name = leng.3.b
+		ai_chance = { factor = 20 }
+
+		608 = {
+			if = {
+				limit = { is_owned_by = LAO }
+				CAM = { 
+					transfer_state = 608
+				}
+			}
+		}
+		430 = {
+			if = {
+				limit = { is_owned_by = LAO }
+				CAM = { 
+					transfer_state = 430
+				}
+			}
+		}
+
+		if = {
+			limit = { has_idea = LNG_unity_treaty }
+			remove_ideas = LNG_unity_treaty
+		}
+
+		hidden_effect = {
+			country_event = { days = 13 id = leng.4 }
+		}
+	}
+}
+
+# Assasination attempt if too much land given
+country_event = {
+	id = leng.4
+	title = leng.4.t
+	desc = leng.4.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.4.a
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# No independence, Lengii revolt - 608, 430
+country_event = {
+	id = leng.5
+	title = leng.5.t
+	desc = leng.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			608 = {
+				if = {
+					limit = { is_owned_by = LAO }
+					CAM = { 
+						transfer_state = 608
+					}
+				}
+			}
+			CAM = {
+				load_oob = Lengii_natives
+				add_manpower = 69876
+			}
+		CAM = {
+			create_wargoal = {
+				type = take_state_focus
+				target = LAO
+				generator = { 430 336 }
+			}
+		}
+		}
+	}
+	
+	option = {
+		name = leng.5.a
+		ai_chance = { factor = 90 }
+
+			#608 = {
+				#if = {
+					#limit = { is_controlled_by = LAO }
+					CAM = { 
+						transfer_state = 608
+					}
+				#}
+			#}
+			CAM = {
+				load_oob = Lengii_natives
+				add_manpower = 69876
+			}
+
+		CAM = {
+			declare_war_on = {
+				target = LAO
+				type = take_state_focus
+				generator = { 430 336 } 
+			}
+		}
+
+		hidden_effect = {
+			news_event = { id = news.1 hours = 6 }
+			if = {
+				limit = { 312 = { is_owned_by = CHI } }
+				CHI = { country_event = { days = 1 id = leng.6 } }
+			}
+		}
+	}
+
+}
+
+# Yi Ti - revolt in Leng, interfere?
+country_event = {
+	id = leng.6
+	title = leng.6.t
+	desc = leng.6.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.6.a
+		ai_chance = { factor = 40 }
+
+		set_rule = { can_send_volunteers = yes }
+
+		set_country_flag = promised_help_leng
+
+		add_opinion_modifier = { target = SHX modifier = supported_side } 
+
+		hidden_effect = {
+			LAO = { 
+			 	add_opinion_modifier = { target = CHI modifier = supported_side } 
+			}
+			VIN = { country_event = { days = 1 id = leng.7 } }
+		}
+	}
+
+	option = {
+		name = leng.6.b
+		ai_chance = { factor = 40 }
+
+		set_rule = { can_send_volunteers = yes }
+
+		set_country_flag = promised_help_lengii
+
+		add_opinion_modifier = { target = CAM modifier = supported_side } 
+
+		hidden_effect = {
+			CAM = { 
+			 	add_opinion_modifier = { target = CHI modifier = supported_side } 
+			}
+			VIN = { country_event = { days = 1 id = leng.7 } }
+		}
+	}
+
+	option = {
+		name = leng.6.c
+		ai_chance = {
+			factor = 20
+			modifier = {
+				limit = { 312 = { is_owned_by = CHI } }
+				factor = 0
+			}
+		}
+	}
+
+}
+
+# Yerrow - Yi Ti interfere, me too?
+country_event = {
+	id = leng.7
+	title = leng.7.t
+	desc = leng.7.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.7.a
+		ai_chance = { factor = 90 }
+
+		set_rule = { can_send_volunteers = yes }
+
+		if = {
+			limit = { CHI = { has_country_flag = promised_help_leng } }
+			set_country_flag = promised_help_lengii
+			add_opinion_modifier = { target = CAM modifier = supported_side }
+			hidden_effect = {
+				CAM = { 
+			 		add_opinion_modifier = { target = VIN modifier = supported_side } 
+				}
+			}
+		}
+
+		if = {
+			limit = { CHI = { has_country_flag = promised_help_lengii } }
+			set_country_flag = promised_help_leng
+			add_opinion_modifier = { target = LAO modifier = supported_side }
+			hidden_effect = {
+				LAO = { 
+			 		add_opinion_modifier = { target = VIN modifier = supported_side } 
+				}
+			}
+		}
+
+		hidden_effect = {
+#			VIN = { country_event = { days = 1 id = leng.7 } }
+		}
+	}
+
+	option = {
+		name = leng.7.b
+		ai_chance = { factor = 10 }
+
+		hidden_effect = {
+#			VIN = { country_event = { days = 1 id = leng.7 } }
+		}
+	}
+
+}
+
+# Yerrow / Yi Ti declare for us
+country_event = {
+	id = leng.8
+	title = leng.8.t
+	desc = leng.8.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.8.a
+		ai_chance = { factor = 90 }
+
+		add_political_power = 75
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Macao Taken
+country_event = {
+	id = leng.9
+	title = leng.9.t
+	desc = leng.9.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = leng.9.a
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}

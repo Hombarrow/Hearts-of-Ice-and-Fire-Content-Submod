@@ -1,0 +1,70 @@
+﻿##### Division Templates #####
+
+
+##### OOB #####
+units = {
+
+	## 1a Armata ##
+	division= {	
+		name = "Mob 1"
+		location = 9504
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 2"
+		location = 9504
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 3"
+		location = 6541
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 4"
+		location = 6541
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 5"
+		location = 11447
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 6"
+		location = 3517
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+
+	division= {	
+		name = "Mob 7"
+		location = 11321
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 8"
+		location = 3490
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 9"
+		location = 6473
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Mob 10"
+		location = 6473
+		division_template = "Slave mob"
+		start_experience_factor = 0.1
+	}
+				
+}

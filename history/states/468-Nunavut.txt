@@ -1,0 +1,37 @@
+
+state={
+	id=468
+	name="STATE_468"
+	resources={
+		aluminium=4.000
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 3
+			4422 = {
+				naval_base = 6
+				coastal_bunker = 1
+				bunker = 2
+
+			}
+
+		}
+		add_core_of = CAN
+		victory_points = {
+			4422 10 
+		}
+
+	}
+
+	provinces={
+		4305 4422 7433 7893 10551 12393 
+	}
+	manpower=1375020
+	buildings_max_level_factor=1.000
+	state_category=city
+}

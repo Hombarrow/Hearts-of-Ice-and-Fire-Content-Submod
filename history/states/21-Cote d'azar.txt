@@ -1,0 +1,41 @@
+
+state={
+	id=21
+	name="STATE_21"
+	resources={
+		aluminium=59.000
+	}
+
+	history={
+		owner = SWE
+		victory_points = {
+			11548 10 
+		}
+		victory_points = {
+			9898 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 8
+
+		}
+		add_core_of = SWE
+		1939.1.1 = {
+			buildings = {
+				dockyard = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		575 956 3946 3959 5112 6775 6960 9500 9717 9853 9898 10625 10947 11548 11699 11713 11875 11877 12334 
+	}
+	manpower=2060400
+	buildings_max_level_factor=1.000
+	state_category=city
+}

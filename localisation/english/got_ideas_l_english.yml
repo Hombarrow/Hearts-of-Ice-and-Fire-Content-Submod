@@ -1,0 +1,298 @@
+﻿l_english:
+ roose_bolton:0 "Roose Bolton"
+ 
+still_wip_tt:0 "Still has WIP content"
+
+STR_rooseandramsay_tt:0 "Roose and Ramsay Bolton will join our cause."
+ 
+the_last_dragon:0 "The Last Dragon"
+true_king_renly:0 "King of the People"
+young_wolf:0 "The Young Wolf"
+insulent_imp:0 "Impudent Imp"
+lion_casterlyrock:0 "Lion of Casterly Rock"
+LAN_Crownlandsvassal:0 "Crownlands Vassals"
+LAN_disjointed_government:0 "Rumors about Cersei's children"
+
+HOL_unification_of_andal_cores_tt:0 "Any Andal state you own becomes a core."
+
+the_mountain:0 "The Mountain"
+stark_matriarch:0 "Stark Matriarch"
+cersei_political_manipulator:0 "Political Manipulator"
+endearing_princess:0 "Endearing Princess"
+
+drogo_dead:0 "Khal Drogo is §Rdead§!"
+danny_mommy:0 "Daenerys is a §Gmom§!"
+ 
+TAR_taming_tt:0 "You can now spend PP to §Rtrain your Dragons§!"
+ 
+TAR_infantry_tooltip:0 "Unlocks a stronger Infantry Division template"
+TAR_slaverbayclaims_tooltip:0 "Adds a claim on major population centers including §YMeereen§!, §YYunkai§! and §YAstapor§!."
+
+usurper_ally:0 "Usurper Allies"
+usurper_1:0 "Usurpers"
+
+SWI_braavos_mercs:0 "Braavosi Mercenaries"
+
+red_kings_legacy:0 "Legacy of the Red Kings"
+hardened_bastard:0 "Hardened Bastard"
+frey_legacy:0 "Frey Ingenuity"
+BLT_autarky_idea:0 "Construction Experts from The Twins"
+BLT_expandmaesters:0 "Expanded Maester's Quarters"
+BLT_buhovo_uranium_mines:0 "Underground Uranium Mines"
+BLT_houndsofjustice:0 "The Bastard's Boys"
+BLT_fearthehunters:0 "Fear the Hunters"
+BLT_siberian_lessons:0 "Northern Survivalists"
+BLT_bearmaiden_fair:0 "Bear and Maidens Fair"
+
+BLT_neutral_tt:0 "Declaring neutrality will §Yprevent aggressive§! Stark focuses towards us. Military focuses will §Rnulify our neutrality§!."
+BLT_anheirisborn:0 "Lady Walda has given §Gbirth§!."
+BLT_heirisnotdead:0 "Child has §RNOT§! been made heir."
+BLT_ramsay_tree_locked_tt:0 "All of Ramsay's focuses will be §Rlocked§! if this decision isn't taken."
+
+NWC_focus_on_others:0 "Focused on the Others"
+NWC_focus_on_wildlings:0 "Focused on the Wildlings"
+
+BOL_Hforget:0 "Ended claim on Hornwood"
+BOL_Hpeaceful:0 "Agree to Disagree"
+
+myrcella_in_dorne:0 "Myrcella is in Dorne"
+
+VOL_draft_excuse:0 "Selective Draft Exemptions"
+
+mistery_other:0 "Mysterious Other"
+
+VAL_clansmen:0 "Tribesmen of the Vale"
+ 
+VAL_clansmen_desc:0 "Hill tribe bandits are constantly harrassing our citizens and without the political will power to deal with them they will continue to do so."
+ 
+craster_others_deal:0 "Deal with the Others"
+ 
+craster_others_deal_desc:0 "Craster believes that if he offers his newborn sons to the Others then they will leave him alone."
+ 
+TAR_undying_vision:0 "Visions from the House of the Undying"
+ 
+TAR_payments:0 "Payments to Qarth"
+TAR_payments_desc:0 "It's not easy convincing people to part with their territory. Until our obligations are met, we will have to empty a lot of coffers."
+
+
+TAR_queencouncil:0 "Queen's Council"
+
+TAR_shipbuildingbonus:0 "Professional Naval Engineers"
+
+SIS_commonfolk_volunteers:0 "Peasant Volunteers"
+
+Arryn_happy_tt:0 "The Vale would be grateful"
+
+help_margery_tt:0 "Helping the people of §YKing's Landing§! will give a higher chance at a succesful §RPurple Wedding§!."
+
+
+killed_stark_red_wedding:0 "Killed at the Red Wedding"
+
+
+TLY_payingFrey_1:0 "Outstanding debts to Walder Frey"
+TLY_payingFrey_2:0 "Huge debts to Walder Frey"
+TLY_payingFrey_3:0 "Debts to Walder Frey"
+
+TLY_civilian_economy:0 "Peaceful Developments"
+TLY_military_economy:0 "Improved Military Complex"
+
+thoros:0 "Thoros of Myr"
+
+LAN_stafford_lannister:0 "Stafford Lannister"
+
+stoneheart_fear:0 "A desire for vengeance"
+
+
+marriage_between_myrcella_and_trystane:0 "Engagement between Myrcella and Trystane"
+
+marriage_tommen_margery:0 "Engagement between Tommen and Margaery"
+
+didnt_help_nights_watch:0 "Refused to help the Night's Watch"
+
+margery_tommen_together:0 "Margaery and Tommen are married"
+
+margery_in_kingslanding:0 "Margaery is in King's Landing"
+
+WTT_wildlingbonus:0 "Sneak-attack the Wildlings"
+
+USA_war_powers_act:0 "Rule with Fear"
+ 
+promise_of_vengeance:0 "Promise of Vengeance"
+ 
+other_status:0 "Stance towards the Others"
+
+non_believers:0 "Non-believers"
+non_believers_desc:0 "They take one visit to the Wall and end up believing in Grumpkins and Snarks."
+
+indifferent_other:0 "Indifference"
+indifferent_other_desc:0 "Can they swim? No? No problem then."
+
+speculation_about_others:0 "Widespread superstitions"
+speculation_about_others_desc:0 "Winter is coming. And the dead come with it."
+
+walker_requirement:0 "White Walkers Recruitment"
+ 
+others_mobilisation:0 "Mobilized Wights"
+ 
+others_economy:0 "Other Economy"
+ 
+
+GER_grosraumwirtschaft:0 "Mountain Railways"
+ 
+GER_grosraumwirtschaft_desc:0 "We need to prepare the Vale mountains for grander construction. Our hard work will greatly improve our ability to construct infrastructure in the future."
+
+LAN_bad_navy:0 "Disenfranchised Navy"
+ 
+LAN_bad_navy_desc:0 "Despite our victory in the Greyjoy Rebellion, the burning of Lannisport led to many officers and sailors to leave the navy. The lack of experience is really hurting our naval forces."
+LAN_bad_navy_2:0 "Slightly Less Disenfranchised Navy"
+ 
+LAN_bad_navy_2_desc:0 "Despite our victory in the Greyjoy Rebellion, the burning of Lannisport led to many officers and sailors to leave the navy. The lack of experience is really hurting our naval forces, though recent government actions have helped improved it."
+LAN_sanctions:0 "Royal Sanctions"
+
+
+LAN_elitecorp:0 "Westerlands Elite Corp"
+
+LAN_mobilise:0 "Mobilized Westerlands"
+ 
+LAN_mobilise_full:0 "Fully Mobilized Westerlands"
+ 
+
+slavers_do_nothing:0 "Massive Pro-Slave Movement"
+
+slavers_minor_supress:0 "Supressed Pro-Slave Movement"
+ 
+slavers_full_commitment:0 "Open clashes with Pro-Slave Movement"
+ 
+
+political_prisoner_real:0 "Political Prisoner"
+defender_of_vale:0 "The Defender of the Vale"
+just_a_chair:0 "Literally a Chair"
+
+tall_men:0 "Tall Men"
+
+selmyis_here:0 "Declared for House Targaryen"
+
+barristan:0 "Barristan Selmy"
+
+timet:0 "Timett, son of Timett"
+
+a_waynwood:0 "Anya Waynwood"
+
+kinvara:0 "Kinvara"
+
+
+supported_stannis:0 "Supported Stannis"
+
+friend_of_crown:0 "Friend of the Crown"
+
+
+first_quenn:0 "First Queen of the Iron Islands"
+
+greatest_captain:0 "The Greatest Sea Captain"
+
+
+CWL_exploit_the_baita_mines:0 "Exploit Wildfire Caches"
+
+
+drogon:0 "Baby Drogon"
+ 
+rheagul:0 "Baby Rhaegal"
+
+vyserion:0 "Baby Viserion"
+
+drogon_2:0 "Child Drogon"
+ 
+rheagul_2:0 "Child Rhaegal"
+
+vyserion_2:0 "Child Viserion"
+
+drogon_3:0 "Young Drogon"
+ 
+rheagul_3:0 "Young Rhaegal"
+
+vyserion_3:0 "Young Viserion"
+
+drogon_4:0 "Adult Drogon"
+ 
+rheagul_4:0 "Adult Rhaegal"
+
+vyserion_4:0 "Adult Viserion"
+
+roose_bolton2:0 "Roose Bolton"
+ 
+melisandre:0 "Melisandre"
+
+randyl_tarly:0 "Randyll Tarly"
+
+randyl_tarly2:0 "Randyll Tarly"
+
+ramsay:0 "Ramsay Bolton"
+
+ramsay_bolton2:0 "Ramsay Bolton"
+nymeria:0 "Nymeria Sand"
+
+ser_rodrik:0 "Rodrik Cassel"
+
+jaime:0 "Jaime Lannister"
+varys:0 "Varys"
+catelyn:0 "Catelyn Stark"
+septimu:0 "Septim Unella"
+jojen:0 "Jojen Reed"
+ilynpayne:0 "Ilyn Payne"
+
+pycelle:0 "Grandmeister Pycelle"
+crows:0 "The Watchers of the Wall"
+crows_desc:0 "The Night's Watch is sworn to protect the Seven Kingdoms from any threat beyond the Wall. Anything else is beyond their affairs."
+
+irri:0 "Irri"
+LNG_unity_treaty:0 "Treaty of Leng Ma"
+margery:0 "Lady Margaery Tyrell"
+
+robert_party:0 "King Robert's Feasts"
+robert_party_desc:0 "One of the reasons King Robert Baratheon is so popular with the people are the numerous feasts he likes to host. Unfortunately, these feasts do come at the expense of a giant hole in the budget."
+robert_party_support:0 "Free Buffets for the Poor"
+robert_party_war:0 "General Staff Charity Ball"
+
+bank_invests_stannis:0 "The Iron Bank wants to invest in Stannis"
+
+annex_by_stannis_tt:0 "§GIf Stannis accepts, you will continue playing as [HUN.GetNameDef]§!"
+
+
+dothraki_plunder:0 "Province Plundered"
+ 
+
+IRN_pyke_treaty:0 "Treaty of Pyke"
+IRN_pyke_treaty_desc:0 "At the end of the Greyjoy Rebellion, the Ironborn were forced to sign a humiliating treaty which greatly limited the amount of ships they could build."
+
+ironborn_land_doctrine:0 "Superior Marine Training"
+desert_cavalry:0 "Improved Desert Horses"
+
+zombie_iceweapon:0 "Ice Weapons"
+zombie_recruit:0 "Army of the Dead"
+
+zombie_vision:0 "Animal Spies"
+
+
+anti_wildling_pact_opinion:0 "Supported the Night's Watch"
+ 
+royal_betrayal:0 "Royal Betrayal"
+ 
+
+TAR_dracarys:0 "Dracarys!"
+TAR_charge:0 "Arghugon!"
+
+TAR_morale:0 "Stay together!"
+
+
+viserion_killed:0 "Vyserion has been killed"
+
+WTT_dragons:0 "The Dragons"
+
+kill_viserion:0 "Kill Vyserion"
+
+revive_viserion:0 "Revive Vyserion"
+
+say_charge_wtt:0 "Blue Eyes White Dragon, attack with Blue Lightning!"
+
+
+TLY_knights:0 "Knights of Valor"

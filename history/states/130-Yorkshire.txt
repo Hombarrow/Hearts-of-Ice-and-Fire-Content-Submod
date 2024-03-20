@@ -1,0 +1,53 @@
+
+state={
+	id=130
+	name="STATE_130"
+	resources={
+		steel=46.000
+		aluminium=4.000
+	}
+
+	history={
+		owner = FIN
+		victory_points = {
+			11297 1 
+		}
+		victory_points = {
+			11332 20 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 6
+			11332 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = FIN
+		add_core_of = KAZ
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 4
+
+			}
+
+		}
+		1940.3.12 = {
+			owner = KAZ
+			controller = KAZ
+
+		}
+
+	}
+
+	provinces={
+		219 351 363 3136 3307 6160 6268 6399 7228 9250 9315 9332 10716 10720 11215 11270 11297 11317 11332 11382 
+	}
+	manpower=4762495
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=32
+	name="STATE_32"
+	resources={
+		steel=26.000
+		aluminium=38.000
+	}
+
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			3768 3 
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		780 3589 3768 3770 6545 6613 6639 6784 6786 9472 9590 9732 11593 11669 11794 
+	}
+	manpower=1007500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

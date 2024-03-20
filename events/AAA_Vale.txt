@@ -1,0 +1,554 @@
+﻿###########################
+# vale Events
+###########################
+
+add_namespace = vale
+
+# Jon Arryn dies, Sweet Robyn leads.
+country_event = {
+	id = vale.1
+	title = vale.1.t
+	desc = vale.1.d
+	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # Hail sweet Robyn
+		name = vale.1.a
+		ai_chance = {
+			base = 10
+		}
+		kill_country_leader = yes
+		set_politics = {
+			
+			ruling_party = neutrality
+#			elections_allowed = no
+						
+		}
+
+		hidden_effect = {
+			SWE = { complete_national_focus = VAL_jonarryndies
+ }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.75
+			}
+#			country_event = { id = vale.2 }
+		}
+
+	}
+}
+
+# Lysa caught Petyr/ I have only loved one woman. Only one:
+country_event = {
+	id = vale.2
+	title = vale.2.t
+	desc = vale.2.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # your sister!
+		name = vale.2.a
+		ai_chance = {
+			base = 20
+		}
+
+		kill_country_leader = yes
+		add_political_power = 50
+#		set_party_name = { ideology = fascism long_name = "House Arryn nee Baelish" name = "House Arryn nee Baelish" }
+		set_party_name = { ideology = fascism long_name = "House Baelish" name = "House Baelish" }
+
+		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+			country_event = { days = 3 id = vale.11 }
+		}
+
+	}
+
+	option = { # only you
+		name = vale.2.b
+		ai_chance = {
+			base = 0
+		}
+		add_stability = 0.02
+
+		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+		}
+
+	}
+}
+
+# Grafton protest Wildlings in government
+country_event = {
+	id = vale.3
+	title = vale.3.t
+	desc = vale.3.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = { # deal with it!
+		name = vale.3.a
+		ai_chance = {
+			base = 20
+		}
+
+		add_political_power = 50
+
+		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+			country_event = { days = 4 id = vale.4 }
+		}
+
+	}
+
+#	option = { # we will try to compromise
+#		name = vale.3.b
+#		ai_chance = {
+#			base = 20
+#		}
+#		add_stability = -0.15
+#		add_political_power = -100
+
+#		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+#		}
+
+#	}
+}
+
+# Grafton declare independence
+country_event = {
+	id = vale.4
+	title = vale.4.t
+	desc = vale.4.d
+	picture = GFX_report_event_swedish_soldier
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			MAC = { transfer_state = 6 }
+			MAC = {
+				inherit_technology = SWE
+				load_oob = Graft_1936
+				add_manpower = 10000
+			}
+
+		}		
+	}
+	
+	option = { # they should have learned from Robert Rebellion
+		name = vale.4.a
+		ai_chance = {
+			base = 40
+		}
+
+		add_political_power = 50
+		declare_war_on = {
+			target = MAC
+			type = annex_everything 
+		}
+
+		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+		}
+
+	}
+
+	option = { # leave them be
+		name = vale.4.b
+		ai_chance = {
+			base = 10
+		}
+		add_stability = 0.10
+		add_political_power = -200
+
+		hidden_effect = {
+#			news_event = { hours = 2 id = news.307 }
+		}
+
+	}
+}
+
+# Baelish arrested
+country_event = {
+	id = vale.5
+	title = vale.5.t
+	desc = vale.5.d
+#	picture = GFX_report_event_swedish_soldier
+	
+	is_triggered_only = yes
+	
+	option = { # keep him there
+		name = vale.5.a
+		ai_chance = {
+			base = 40
+		}
+
+#		add_political_power = 50
+
+		hidden_effect = {
+			country_event = { days = 1 id = vale.6 }
+		}
+
+	}
+}
+
+# Lysa releases Petyr
+country_event = {
+	id = vale.6
+	title = vale.6.t
+	desc = vale.6.d
+	picture = GFX_report_event_swedish_soldier
+	
+	is_triggered_only = yes
+	
+	option = { # we should prepare ourselves for battle
+		name = vale.6.a
+		ai_chance = {
+			base = 40
+		}
+
+		add_political_power = -150
+
+		hidden_effect = {
+#			country_event = { days = 1 id = vale.6 }
+		}
+
+	}
+}
+
+# Evidence found
+country_event = {
+	id = vale.7
+	title = vale.7.t
+	desc = vale.7.d
+#	picture = GFX_report_event_swedish_soldier
+	
+	is_triggered_only = yes
+	
+	option = { # lets see him talk his way out of this one
+		name = vale.7.a
+		ai_chance = {
+			base = 40
+		}
+
+#		add_political_power = -150
+
+		hidden_effect = {
+			country_event = { hours = 1 id = vale.8 }
+		}
+
+	}
+}
+
+# Lysa is dead, Petyr is taking charge
+country_event = {
+	id = vale.8
+	title = vale.8.t
+	desc = vale.8.d
+	picture = GFX_report_event_swedish_soldier
+	
+	is_triggered_only = yes
+	
+	option = { # we should prepare ourselves for battle
+		name = vale.8.a
+		ai_chance = {
+			base = 40
+		}
+
+		create_country_leader = {
+			name = "Petyr Baelish"
+			desc = "POLITICS_SVEN_OLOV_LINDHOLM_DESC"
+			picture = "gfx/leaders/SWE/Portrait_Petyr_Baelish.dds"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits = {
+				backroom_backstabber
+			}
+		}
+		set_party_name = { ideology = fascism long_name = "House Baelish" name = "House Baelish" }
+
+		activate_mission = VAL_timeout_for_royce
+
+		hidden_effect = {
+#			country_event = { days = 3 id = vale.11 }
+		}
+
+	}
+}
+
+# Lors of the Vale Strike Back
+country_event = {
+	id = vale.9
+	title = vale.9.t
+	desc = vale.9.d
+	picture = GFX_report_event_swedish_soldier
+
+	trigger = {
+		tag = SWE
+		SWE = { has_government = communism }
+		SWE = { has_idea = PRC_low_popular_support_4 }
+		NOT = {
+			has_civil_war = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+#	is_triggered_only = yes
+	
+	option = { # we should prepare ourselves for battle
+		name = vale.9.a
+		ai_chance = {
+			base = 40
+		}
+
+		hidden_effect = {
+			remove_ideas = PRC_low_popular_support_4
+		}
+
+	}
+}
+
+# Yohn Royce goes down the Moon Door
+country_event = {
+	id = vale.10
+	title = vale.10.t
+	desc = vale.10.d
+	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # When you play the game of thrones...
+		name = vale.10.a
+		ai_chance = {
+			base = 10
+		}
+		kill_country_leader = yes
+		remove_unit_leader = 99
+		add_political_power = -250
+		set_politics = {
+			
+			ruling_party = fascism
+#			elections_allowed = no
+						
+		}
+
+		hidden_effect = {
+			unlock_national_focus = VAL_removeOposition
+#			unlock_national_focus = VAL_declareforLannister
+			set_party_name = { ideology = democratic long_name = "House Waynwood of Ironoaks" name = "House Waynwood" }
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.75
+			}
+		}
+
+	}
+}
+
+# Royce suspects Littlefinger 
+country_event = {
+	id = vale.11
+	title = vale.11.t
+	desc = vale.11.d
+#	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # We will have to deal with him...
+		name = vale.11.a
+		ai_chance = {
+			base = 10
+		}
+#		kill_country_leader = yes
+
+		activate_mission = VAL_timeout_for_baelish
+
+		hidden_effect = {
+#			SWE = { complete_national_focus = VAL_jonarryndies }
+		}
+
+	}
+}
+
+# Littlefinger put in sky cell
+country_event = {
+	id = vale.12
+	title = vale.12.t
+	desc = vale.12.d
+#	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # We will have to deal with him...
+		name = vale.12.a
+		ai_chance = {
+			base = 10
+		}
+#		kill_country_leader = yes
+
+		add_political_power = -150
+		SWE = { add_country_leader_trait = political_prisoner_real }
+		set_politics = {
+			
+			ruling_party = democratic
+			elections_allowed = no
+						
+		}
+
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.75
+			}
+		}
+
+	}
+}
+
+# Royce and Littlefinger join forces... for now
+country_event = {
+	id = vale.13
+	title = vale.13.t
+	desc = vale.13.d
+#	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # We will have to deal with him...
+		name = vale.13.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_stability = 0.05
+		add_political_power = 20
+
+		hidden_effect = {
+#			SWE = { complete_national_focus = VAL_jonarryndies }
+		}
+
+	}
+}
+
+# What to do with captured guns?
+country_event = {
+	id = vale.14
+	title = vale.14.t
+	desc = vale.14.d
+#	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = { # keep them
+		name = vale.14.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 6000
+			producer = SWE
+		}
+
+		hidden_effect = {
+
+		}
+
+	}
+	option = { # donate to stark
+		name = vale.14.b
+		trigger = {
+			AND = {
+				FIN = { exists = yes }
+				NOT = { has_war_with = FIN }
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+
+		FIN = { country_event = { days = 1 id = vale.15 }}
+
+		hidden_effect = {
+
+		}
+
+	}
+	option = { # donate to lannister
+		name = vale.14.c
+		trigger = {
+			AND = {
+				HOL = { exists = yes }
+				NOT = { has_war_with = HOL }
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+
+		HOL = { country_event = { days = 1 id = vale.15 }}
+
+		hidden_effect = {
+
+		}
+
+	}
+	option = { # donate to nights watch
+		name = vale.14.e
+		trigger = {
+			AND = {
+				CAN = { exists = yes }
+				NOT = { has_war_with = CAN }
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+
+		CAN = { country_event = { days = 1 id = vale.15 }}
+
+		hidden_effect = {
+
+		}
+
+	}
+}
+
+# Vale gives us guns
+country_event = {
+	id = vale.15
+	title = vale.15.t
+	desc = vale.15.d
+	picture = GFX_report_event_chinese_army_training
+	
+	is_triggered_only = yes
+	
+	option = { # keep them
+		name = vale.15.a
+		ai_chance = {
+			base = 10
+		}
+
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 6000
+			producer = SWE
+		}
+
+		add_opinion_modifier = { target = SWE modifier = VAL_captureClanGuns }
+
+		hidden_effect = {
+
+		}
+
+	}
+}

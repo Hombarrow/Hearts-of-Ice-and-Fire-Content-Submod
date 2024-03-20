@@ -1,0 +1,26 @@
+
+state={
+	id=502
+	name="STATE_502"
+
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 2
+#			air_base = 2
+
+		}
+		add_core_of = SIA
+#		victory_points = {
+#			10447 3 
+#		}
+
+	}
+
+	provinces={
+		1542 1585 4589 4604 7581 7594 7638 8343 10447 
+	}
+	manpower=29596
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

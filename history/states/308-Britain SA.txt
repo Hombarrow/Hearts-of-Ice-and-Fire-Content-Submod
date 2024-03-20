@@ -1,0 +1,40 @@
+
+state={
+	id=308
+	name="STATE_308"
+	manpower=	225678
+	state_category = tiny_island
+
+	history={
+		owner = BEL
+		add_core_of = BEL
+		1940.3.14 = {
+			owner = HUN
+			controller = HUN
+			add_core_of = HUN
+		}
+		victory_points = {
+			9377 1 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			4450 = {
+				naval_base = 1
+			}
+			7123 = {
+				naval_base = 1
+			}
+			177 = {
+				naval_base = 1
+			}
+			9377 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		177 4450 7123 9377 13084 
+	}
+}

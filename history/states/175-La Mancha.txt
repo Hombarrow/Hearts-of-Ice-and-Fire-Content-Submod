@@ -1,0 +1,27 @@
+
+state={
+	id=175
+	name="STATE_175"
+
+	history={
+		owner = FRA
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 3
+
+		}
+		add_core_of = FRA
+		1940.3.14 = {
+			owner = SER
+			controller = SER
+		}
+
+	}
+
+	provinces={
+		858 3835 3858 6832 6879 6914 9757 11742 11863 
+	}
+	manpower=848903
+	buildings_max_level_factor=1.000
+	state_category=town
+}

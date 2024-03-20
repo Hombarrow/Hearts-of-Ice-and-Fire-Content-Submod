@@ -1,0 +1,13 @@
+﻿l_english:
+ ALLOW_PLANE_TECHS:0 "Allow Plane Techs"
+
+RULE_OPTION_YES_PLANES:0 "Allowed (Default)"
+ 
+RULE_ALLOW_PLANES_DESC:0 "All plane related technologies will be enabled by default."
+ 
+RULE_OPTION_NO_PLANES:0 "Disabled"
+ 
+RULE_NOT_ALLOW_PLANES_DESC:0 "All plane related research will be disabled. Countries that already have planes researched can still build them. Transport planes can still be built."
+
+whitewalkers_swim_tt:0 "[GER.GetNameDef] gain access to the §BNaval§! tech tree."
+ 

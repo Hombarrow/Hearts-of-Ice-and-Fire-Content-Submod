@@ -1,0 +1,32 @@
+
+state={
+	id=331
+	name="STATE_331"
+	manpower=3363174
+	resources={
+		aluminium=12.000
+	}
+	
+	state_category = city
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 3
+			air_base = 3
+			12505 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = DEN
+		victory_points = {
+			12505 15 
+		}
+	}
+
+	provinces={
+		373 7758 7788 12505 12680 12698 
+	}
+}

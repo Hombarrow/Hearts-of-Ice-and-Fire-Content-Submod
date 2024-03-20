@@ -1,0 +1,69 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Underground Insurgents"		
+
+#	division_names_group = ITA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+##### OOB #####
+units = {
+
+	## 1a Armata ##
+	division= {	
+		name = "4a Divisione di Fanteria 'Livorno'"
+		location = 6152
+		division_template = "Underground Insurgents"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3a Divisione di Fanteria 'Ravenna'"
+		location = 190
+		division_template = "Underground Insurgents"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6a Divisione di Fanteria 'Cuneo'"
+		location = 11152
+		division_template = "Underground Insurgents"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2a Divisione di Fanteria 'Sforzesca'"
+		location = 11058
+		division_template = "Underground Insurgents"		# "Semi-Mountain" (less trained & equipped than Alpina)
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "7a Divisione di Fanteria 'Lupi di Toscana'"
+		location = 9178
+		division_template = "Underground Insurgents"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "8a Divisione di Fanteria 'Po'"
+		location = 190
+		division_template = "Underground Insurgents"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "9a Divisione di Fanteria 'Pasubio'"
+		location = 9322
+		division_template = "Underground Insurgents"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+				
+}

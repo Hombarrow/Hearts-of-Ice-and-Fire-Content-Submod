@@ -1,0 +1,27 @@
+state={
+	id=71
+	name="STATE_71"
+	manpower = 807660
+	
+	state_category = rural
+	
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ALB
+		add_core_of = GRE
+		add_core_of = LAT
+
+		1939.3.14 = {
+#			owner = SLO
+#			controller = SLO
+#			add_core_of = SLO
+		}
+	}
+
+	provinces={
+		555 581 3550 3581 6586 6604 11554 
+	}
+}

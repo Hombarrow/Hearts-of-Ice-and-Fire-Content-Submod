@@ -1,0 +1,35 @@
+
+state={
+	id=7
+	name="STATE_7"
+	resources={
+		steel=7.000
+	}
+
+	history={
+		owner = SWE
+		add_core_of = SWE
+		victory_points = {
+			3211 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 2
+			air_base = 2
+			3211 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		68 943 1414 3211 3314 3536 3740 6915 6975 7721 8226 9431 9498 11008 11483 12169 12996 
+	}
+	manpower=3623000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

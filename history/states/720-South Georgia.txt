@@ -1,0 +1,27 @@
+
+state={
+	id=720
+	name="STATE_720"
+
+	history={
+		owner = MZB
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+
+		}
+		add_core_of = BOT
+		add_core_of = COG
+		add_core_of = ETH
+		add_core_of = MZB
+		add_core_of = ZIM
+
+	}
+
+	provinces={
+		1975 2001 2044 2056 2194 5186 7930 7950 7954 8116 10771 10788 10836 10995 12707 12794 12838 12851 
+	}
+	manpower=2913430
+	buildings_max_level_factor=1.000
+	state_category=town
+}

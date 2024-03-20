@@ -1,0 +1,319 @@
+﻿###########################
+# Braavos Events
+###########################
+
+add_namespace = switzerland
+
+# Repayed Loan
+country_event = {
+	id = switzerland.1
+	title = switzerland.1.t
+	desc = switzerland.1.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = switzerland.1.a
+		add_timed_idea = { idea = SWI_repayed_loan days = 356 }
+
+	}
+}
+
+# Enable volunteer
+country_event = {
+	id = switzerland.2
+	title = switzerland.2.t
+	desc = switzerland.2.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = SWI
+		date > 1936.1.19
+		has_start_date < 1936.01.02
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 15 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.2.a
+		SWI = { 
+			set_rule = { can_send_volunteers = yes }
+		}
+		hidden_effect = {
+
+		}
+
+	}
+}
+
+# Offer Loan
+country_event = {
+	id = switzerland.3
+	title = switzerland.3.t
+	desc = switzerland.3.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = SWI
+		HOL = { has_war_with = FIN }
+		SWI = { has_war = no }
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 15 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.3.a
+		ai_chance = { factor = 5 }
+		FIN = { country_event = { id = finland.15 } }
+		hidden_effect = {
+
+		}
+
+	}
+	option = {
+		name = switzerland.3.b
+		ai_chance = { factor = 55 }
+		HOL = { country_event = { id = netherlands.8 } }
+		hidden_effect = {
+
+		}
+
+	}
+	option = {
+		name = switzerland.3.c
+		hidden_effect = {
+
+		}
+
+	}
+}
+
+# Starks Accepted Loan
+country_event = {
+	id = switzerland.4
+	title = switzerland.4.t
+	desc = switzerland.4.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = switzerland.4.a
+		set_country_flag = pending_loan_stark
+#		add_timed_idea = { idea = SWI_pending_stark_loan days = 356 }
+	}
+}
+
+# Lannisters Accepted Loan
+country_event = {
+	id = switzerland.5
+	title = switzerland.5.t
+	desc = switzerland.5.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = switzerland.5.a
+		set_country_flag = pending_loan
+#		add_timed_idea = { idea = SWI_pending_lannister_loan days = 356 }
+	}
+}
+
+# Loan expired Stark
+country_event = {
+	id = switzerland.6
+	title = switzerland.6.t
+	desc = switzerland.6.d
+	
+	trigger = {
+#		OR = { 
+#		{ 
+		tag = FIN
+		FIN = { has_idea = SWI_war_loan }
+		NOT = { SWI = { has_idea = SWI_pending_stark_loan }}
+#		}
+#		{ 
+#		tag = HOL
+#		HOL = { has_idea = SWI_war_loan }
+#		NOT = { SWI = { has_idea = SWI_pending_lannister_loan }}
+#		}
+#		}
+		
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 5 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.6.a
+		trigger = { TAG = FIN }
+#		swap_ideas = {
+			add_timed_idea = { idea = SWI_paying_loan days = 356 }			
+			FIN = { remove_ideas = SWI_war_loan }
+			SWI = { country_event = { id = switzerland.1 days = 1 } }
+#		}
+	}
+#	option = {
+#		name = switzerland.6.b
+#		trigger = { TAG = HOL }
+#		swap_ideas = {
+#			add_timed_idea = { idea = SWI_paying_loan days = 356 }
+#			HOL = { remove_ideas = SWI_war_loan }
+#			SWI = { country_event = { id = switzerland.1 days = 1 } }
+#		}
+#	}
+}
+
+# Loan fail
+country_event = {
+	id = switzerland.7
+	title = switzerland.7.t
+	desc = switzerland.7.d
+	
+	trigger = {
+		tag = SWI
+		OR = { 
+		AND = { 
+		SWI = { has_idea = SWI_pending_stark_loan }
+		FIN = { has_capitulated = yes }
+		}
+		}
+		OR = { 
+		AND = {
+		SWI = { has_idea = SWI_pending_lannister_loan }
+		HOL = { has_capitulated = yes }
+		}
+		}
+		
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 5 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.7.a
+#		swap_ideas = {
+			add_timed_idea = { idea = SWI_failed_loan days = 356 }
+			remove_ideas = SWI_pending_stark_loan
+			remove_ideas = SWI_pending_lannister_loan
+#		}
+	}
+}
+
+# Loan expired Lannister
+country_event = {
+	id = switzerland.8
+	title = switzerland.8.t
+	desc = switzerland.8.d
+	
+	trigger = {
+		tag = HOL
+		HOL = { has_idea = SWI_war_loan }
+		NOT = { SWI = { has_idea = SWI_pending_lannister_loan }}		
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 5 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.8.b
+		add_timed_idea = { idea = SWI_paying_loan days = 356 }
+		HOL = { remove_ideas = SWI_war_loan }
+		SWI = { country_event = { id = switzerland.1 days = 1 } }
+	}
+}
+
+# Offer Loan to Stannis
+country_event = {
+	id = switzerland.9
+	title = switzerland.9.t
+	desc = switzerland.9.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = SWI
+		HUN = { num_of_factories > 20 }
+		SWI = { has_war = no }
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+
+		}		
+	}
+	
+	option = {
+		name = switzerland.9.a
+		ai_chance = { factor = 75 }
+		HUN = { country_event = { id = hungary.1 days = 1 } }
+		hidden_effect = {
+
+		}
+
+	}
+	option = {
+		name = switzerland.9.b
+		ai_chance = { factor = 15 }
+		hidden_effect = {
+
+		}
+
+	}
+}
+
+# No Loan
+country_event = {
+	id = switzerland.10
+	title = switzerland.10.t
+	desc = switzerland.10.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = switzerland.1.a
+		hidden_effect = {
+
+		}
+
+	}
+}

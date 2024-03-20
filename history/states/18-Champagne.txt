@@ -1,0 +1,27 @@
+
+state={
+	id=18
+	name="STATE_18"
+
+	history={
+		owner = IRE
+		victory_points = {
+			9505 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 8
+
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		551 3533 3546 3560 5291 6531 9490 9505 10457 11732 12497 13011 
+	}
+	manpower=2370800
+	buildings_max_level_factor=1.000
+	state_category=city
+}

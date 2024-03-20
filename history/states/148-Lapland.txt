@@ -1,0 +1,40 @@
+
+state={
+	id=148
+	name="STATE_148"
+	resources={
+		steel=8.000
+		chromium=2.000
+	}
+
+	history={
+		owner = BEL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		add_core_of = BEL
+		victory_points = {
+			3055 5 
+		}
+		victory_points = {
+			203 1 
+		}
+		1940.3.14 = {
+			owner = IRE
+			controller = IRE
+			add_core_of = IRE
+
+		}
+
+	}
+
+	provinces={
+		30 124 162 167 203 1641 3026 3055 3107 3156 3193 6076 6087 6128 6137 6142 6179 6713 9042 9064 9112 9189 9223 9654 11030 11063 11115 11167 11204 11637 
+	}
+	manpower=821737
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,49 @@
+
+state={
+	id=5
+	name="STATE_5"
+	resources={
+		steel=24.000
+		aluminium=14.000
+	}
+
+	history={
+		owner = IRE
+		controller = IRE
+		victory_points = {
+			9398 40 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 3
+			9398 = {
+				bunker = 1
+
+			}
+			anti_air_building = 2
+			6332 = {
+				naval_base = 5
+
+			}
+			air_base = 6
+
+		}
+		add_core_of = IRE
+		1939.1.1 = {
+			buildings = {
+				anti_air_building = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1527 3074 3351 3380 3384 6332 6375 6402 7420 9327 9346 9372 9398 11127 11245 11386 11426 11714 12312 
+	}
+	manpower=5378108
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

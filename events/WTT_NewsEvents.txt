@@ -1,0 +1,280 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = got_news
+
+# Formation of Stormlands
+news_event = {
+	id = got_news.55
+	title = got_news.55.t
+	desc = got_news.55.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.55.a
+		trigger = {
+			OR = {
+				original_tag = HUN
+				original_tag = BEL
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.55.b
+		trigger = {
+			NOT = { original_tag = HUN }
+			NOT = { original_tag = BEL }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Isles and Rivers
+news_event = {
+	id = got_news.60
+	title = got_news.60.t
+	desc = got_news.60.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.60.a
+		trigger = {
+			OR = {
+				original_tag = ROM
+				original_tag = FRA
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.60.b
+		trigger = {
+			NOT = { original_tag = ROM }
+			NOT = { original_tag = FRA }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Great Khalasar
+news_event = {
+	id = got_news.61
+	title = wtt_news.61.t
+	desc = wtt_news.61.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_news.61.a
+		trigger = {
+			OR = {
+				original_tag = RAJ
+				original_tag = OMA
+				original_tag = SYR
+				original_tag = AFG
+				original_tag = YEM
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.61.b
+		trigger = {
+			NOT = { original_tag = RAJ }
+			NOT = { original_tag = OMA }
+			NOT = { original_tag = SYR }
+			NOT = { original_tag = AFG }
+			NOT = { original_tag = YEM }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = wtt_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of United Westeros
+news_event = {
+	id = got_news.62
+	title = got_news.62.t
+	desc = got_news.62.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.62.a
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = FIN
+				original_tag = FRA
+				original_tag = ITA
+				original_tag = ENG
+				original_tag = SPR
+				original_tag = SWE
+				original_tag = IRE
+				original_tag = HUN
+				original_tag = NOR
+				original_tag = MNT
+				original_tag = BUL
+				original_tag = GEO
+				original_tag = AZR
+				original_tag = KAZ
+				original_tag = SER
+				original_tag = EST
+				original_tag = ARM
+				original_tag = AUS
+				original_tag = GUA
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.62.b
+		trigger = {
+			NOT = { original_tag = HOL }
+			NOT = { original_tag = BEL }
+			NOT = { original_tag = FIN }
+			NOT = { original_tag = FRA }
+			NOT = { original_tag = ITA }
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = SPR }
+			NOT = { original_tag = SWE }
+			NOT = { original_tag = IRE }
+			NOT = { original_tag = HUN }
+			NOT = { original_tag = NOR }
+			NOT = { original_tag = MNT }
+			NOT = { original_tag = BUL }
+			NOT = { original_tag = GEO }
+			NOT = { original_tag = AZR }
+			NOT = { original_tag = KAZ }
+			NOT = { original_tag = SER }
+			NOT = { original_tag = EST }
+			NOT = { original_tag = ARM }
+			NOT = { original_tag = AUS }
+			NOT = { original_tag = GUA }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Valyrian Empire
+news_event = {
+	id = got_news.64
+	title = got_news.64.t
+	desc = got_news.64.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.64.a
+		trigger = {
+			OR = {
+				original_tag = SOV
+				original_tag = LBA
+				original_tag = ECU
+				original_tag = POR
+				original_tag = LAT
+				original_tag = GRE
+				original_tag = ALB
+				original_tag = LUX
+				original_tag = POL
+				original_tag = TUR
+			}
+		}
+	}
+	option = {
+		name = got_news.64.b
+		trigger = {
+			NOT = { 
+			OR = {
+				original_tag = SOV
+				original_tag = LBA
+				original_tag = ECU
+				original_tag = POR
+				original_tag = LAT
+				original_tag = GRE
+				original_tag = ALB
+				original_tag = LUX
+				original_tag = POL
+				original_tag = TUR
+			}
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}
+
+# Formation of Ghiscari Empire
+news_event = {
+	id = got_news.65
+	title = got_news.65.t
+	desc = got_news.65.desc
+	picture = GFX_news_event_generic_parliament
+
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.65.a
+		trigger = {
+			OR = {
+				original_tag = PER
+				original_tag = IRQ
+				original_tag = EGY
+			}
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.65.b
+		trigger = {
+			NOT = { original_tag = PER }
+			NOT = { original_tag = IRQ }
+			NOT = { original_tag = EGY }
+			NOT = { has_war_with = FROM }
+		}
+	}
+	option = {
+		name = got_news.53.c
+		trigger = {
+			has_war_with = FROM
+		}
+	}
+}

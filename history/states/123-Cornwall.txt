@@ -1,0 +1,32 @@
+
+state={
+	id=123
+	name="STATE_123"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = FIN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+
+		}
+		add_core_of = FIN
+		1940.3.12 = {
+			owner = ITA
+			controller = ITA
+
+		}
+
+	}
+
+	provinces={
+		53 733 1972 3090 3180 3422 3463 3501 4874 4975 6176 6351 9127 9458 9484 9562 10216 10645 11049 11101 11406 12659 
+	}
+	manpower=880945
+	buildings_max_level_factor=1.000
+	state_category=town
+}

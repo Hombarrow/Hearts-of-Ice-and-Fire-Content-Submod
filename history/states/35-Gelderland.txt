@@ -1,0 +1,32 @@
+
+state={
+	id=35
+	name="STATE_35"
+	resources={
+		steel=16.000
+	}
+
+	history={
+		owner = SWE
+		add_core_of = SWE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6496 5 
+		}
+#		victory_points = {
+#			6766 5 
+#		}
+
+	}
+
+	provinces={
+		553 929 1771 3509 3534 3749 4274 4826 5172 6286 6496 6766 9309 9478 10305 10432 11456 11463 13115 
+	}
+	manpower=1449000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

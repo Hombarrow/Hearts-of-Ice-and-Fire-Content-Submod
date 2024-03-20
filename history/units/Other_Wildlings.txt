@@ -1,0 +1,44 @@
+﻿units = {
+	######## LAND UNITS ########
+	division = {
+		name = "1st Legion Unit"
+		location = 10247
+		division_template = "Wight Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "2nd Legion Unit"
+		location = 3732
+		division_template = "Wight Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "3rd Legion Unit"
+		location = 12134
+		division_template = "Wight Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "4th Legion Unit"
+		location = 10174
+		division_template = "Wight Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "5th Legion Unit"
+		location = 12202
+		division_template = "Wight Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}			
+
+}

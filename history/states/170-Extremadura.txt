@@ -1,0 +1,35 @@
+
+state={
+	id=170
+	name="STATE_170"
+	resources={
+		tungsten=6.000
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11825 3 
+		}
+		add_core_of = FRA
+		1940.3.14 = {
+			owner = SER
+			controller = SER
+			add_core_of = SER
+
+		}
+
+	}
+
+	provinces={
+		605 874 888 939 942 1090 1341 1764 3605 3778 3845 3930 6867 6948 9828 9852 10700 11756 11807 11812 11820 11825 
+	}
+	manpower=1782253
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=474
+	name="STATE_474"
+
+	history={
+		owner = PHI
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			air_base = 1
+#			4904 = {
+#				naval_base = 2
+
+#			}
+			10519 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = PHI
+
+	}
+
+	provinces={
+		810 1571 3815 3843 5427 6811 6863 7670 10519 
+	}
+	manpower=440289
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

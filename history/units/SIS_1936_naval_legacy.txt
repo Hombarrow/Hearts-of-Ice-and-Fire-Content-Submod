@@ -1,0 +1,16 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Dragonstone Fleet"			
+		naval_base = 13071 # Dragonstone
+		task_force = {				
+			name = "Dragonstone Fleet"				
+			location = 13071 # Dragonstone
+			ship = { name = "RNHC Fury" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = HUN creator = ENG } } }				ship = { name = "RNLC Lord Steffon" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = HUN creator = ENG } } }				
+			ship = { name = "RNLC Stag of the Sea" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = HUN creator = ENG } } }				
+		}										
+	}
+} 
+

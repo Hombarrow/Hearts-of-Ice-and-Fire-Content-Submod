@@ -1,0 +1,41 @@
+
+state={
+	id=20
+	name="STATE_20"
+	resources={
+		steel=18.000
+		aluminium=42.000
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			11889 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 4
+
+		}
+		add_core_of = IRE
+		add_core_of = MOL
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		266 281 348 395 910 1616 3885 4531 6769 6979 7831 9750 9879 9907 11265 11889 12305 
+	}
+	manpower=1973200
+	buildings_max_level_factor=1.000
+	state_category=city
+}

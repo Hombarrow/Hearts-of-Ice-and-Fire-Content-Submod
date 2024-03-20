@@ -1,0 +1,261 @@
+﻿add_namespace = wtt_prc
+
+#Provoke Japan - event for Japan to attack
+country_event = {
+	id = wtt_prc.20
+	title = wtt_prc.20.t
+	desc = wtt_prc.20.desc
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_prc.20.a #don't do anything
+		ai_chance = {
+			base = 20
+			modifier = {
+				has_government = democratic
+				factor = 2
+			}
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+		
+	}
+
+	option = {
+		name = wtt_prc.20.b #go to war
+		ai_chance = {
+			base = 80
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SPR
+		}
+	}
+
+	option = {
+		name = wtt_prc.20.c #retreat from the continent
+		ai_chance = {
+			base = 0
+			modifier = {
+				has_government = democratic
+				add = 5
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 479
+			}
+			SPR = { transfer_state = 479 }
+		}
+		if = {
+			limit = {
+				controls_state = 148
+			}
+			SPR = { transfer_state = 148 }
+		}
+	}
+}
+
+#Provoke Japan - event for Japan - factory sabotaged
+country_event = {
+	id = wtt_prc.21
+	title = wtt_prc.21.t
+	desc = wtt_prc.21.desc
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = { id = wtt_prc.30 days = 2 }
+			}
+		}
+	}
+	
+	option = {
+		name = wtt_prc.21.a #okay
+		country_event = { id = wtt_prc.20 days = 2 }
+		if = {
+			limit = {
+				any_owned_state = {
+#					NOT = { is_core_of = JAP }
+					arms_factory > 0
+				}
+			}
+			random_owned_state = {
+				prioritize = { 479 148 }
+				limit = {
+					arms_factory > 0
+#					NOT = {	is_core_of = JAP }
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.4
+				}
+			}
+		}
+	}
+}
+
+#Provoke Japan - event for Japan - civilian factory sabotaged
+country_event = {
+	id = wtt_prc.22
+	title = wtt_prc.22.t
+	desc = wtt_prc.21.desc
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = { id = wtt_prc.30 days = 2 }
+			}
+		}
+	}
+	
+	option = {
+		name = wtt_prc.21.a #okay
+		country_event = { id = wtt_prc.20 days = 2 }
+		if = {
+			limit = {
+				any_owned_state = {
+#					NOT = { is_core_of = JAP }
+					industrial_complex > 0
+				}
+			}
+			random_owned_state = {
+				prioritize = { 479 148 }
+				limit = {
+					industrial_complex > 0
+#					NOT = {
+#						is_core_of = JAP
+#					}
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.4
+				}
+			}
+		}
+	}
+}
+
+#Provoke Japan - event for Japan - bridge blown
+country_event = {
+	id = wtt_prc.23
+	title = wtt_prc.23.t
+	desc = wtt_prc.23.desc
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = { id = wtt_prc.31 days = 2 }
+			}
+		}
+	}
+	
+	option = {
+		name = wtt_prc.21.a #okay
+		country_event = { id = wtt_prc.20 days = 2 }
+		if = {
+			limit = {
+				OR = {
+					controls_state = 479
+					controls_state = 148
+				} 
+			}
+			random_owned_state = {
+				prioritize = { 479 148 }
+				damage_building = {
+					type = infrastructure
+					damage = 0.8
+				}
+			}
+		}
+	}
+}
+
+#Provoke Japan - event for Japan - patrol ambushed
+country_event = {
+	id = wtt_prc.24
+	title = wtt_prc.24.t
+	desc = wtt_prc.24.desc
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				country_event = { id = wtt_prc.32 days = 2 }
+			}
+		}
+	}
+	
+	option = {
+		name = wtt_prc.21.a #okay
+		country_event = { id = wtt_prc.20 days = 2 }
+		if = {
+			limit = {
+				OR = {
+					controls_state = 479
+					controls_state = 148
+				} 
+			}
+			add_manpower = -200
+		}
+	}
+}
+
+#Provoke Japan - event for PRC - factory sabotaged
+country_event = {
+	id = wtt_prc.30
+	title = wtt_prc.30.t
+	desc = wtt_prc.30.desc
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_prc.30.a #okay
+		
+	}
+}
+
+#Provoke Japan - event for PRC - bridge blown
+country_event = {
+	id = wtt_prc.31
+	title = wtt_prc.30.t
+	desc = wtt_prc.31.desc
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	
+	
+	option = {
+		name = wtt_prc.30.a #okay
+		
+	}
+}
+
+#Provoke Japan - event for PRC - patrol ambushed
+country_event = {
+	id = wtt_prc.32
+	title = wtt_prc.30.t
+	desc = wtt_prc.32.desc
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = wtt_prc.30.a #okay
+	}
+}

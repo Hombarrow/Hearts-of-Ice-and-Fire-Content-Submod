@@ -1,0 +1,26 @@
+
+state={
+	id=390
+	name="STATE_390"
+
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 2
+#			industrial_complex = 1
+
+		}
+		add_core_of = SIA
+#		victory_points = {
+#			1747 1 
+#		}
+
+	}
+
+	provinces={
+		4839 7745 7771 7862 8708 10595 12620 12667 
+	}
+	manpower=69284
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

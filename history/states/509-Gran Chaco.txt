@@ -1,0 +1,25 @@
+
+state={
+	id=509
+	name="STATE_509"
+	resources={
+		tungsten=7.000
+	}
+
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = IRQ
+	}
+
+	provinces={
+		3435 3461 3487 6486 6516 6620 9440 9455 11429 11579 
+	}
+	manpower=704241
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

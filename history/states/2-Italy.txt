@@ -1,0 +1,48 @@
+
+state={
+	id=2
+	name="STATE_2"
+
+	history={
+		owner = ROM
+		victory_points = {
+			11846 20 
+		}
+		victory_points = {
+			923 10 
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 4
+			arms_factory = 3
+			dockyard = 2
+			industrial_complex = 2
+			11846 = {
+				naval_base = 5
+
+			}
+			923 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = ROM
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		923 6790 9794 9904 11751 11846 11882 
+	}
+	manpower=4081971
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

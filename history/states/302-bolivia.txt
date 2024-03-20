@@ -1,0 +1,32 @@
+
+state={
+	id=302
+	name="STATE_302"
+	resources={
+		tungsten=6.000
+#		steel=2.000
+	}
+
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+#			industrial_complex = 5
+#			air_base = 2
+
+		}
+		add_core_of = KOR
+#		victory_points = {
+#			5230 5 
+#		}
+
+	}
+
+	provinces={
+		1315 1403 4293 4336 4408 7295 7441 10217 12125 12238 12256 
+	}
+	manpower=1044500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

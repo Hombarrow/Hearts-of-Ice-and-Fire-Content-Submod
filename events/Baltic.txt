@@ -1,0 +1,650 @@
+﻿###########################
+# Sellsword Events
+###########################
+
+add_namespace = baltic
+
+# Golden company hired
+country_event = {
+	id = baltic.1
+	title = baltic.1.t
+	desc = baltic.1.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = baltic.1.a
+		ai_chance = {
+			base = 10
+		}
+
+		FER = {
+			FER_strickland = {
+				set_nationality = Root
+			}
+		}
+
+#		create_corps_commander = {
+#			name = "Harry Strickland"
+#			picture = "Portrait_Harry_Strickland.dds"
+#			id = 8
+#			traits = { infantry_officer }
+#			skill = 4
+#			attack_skill = 4
+#			defense_skill = 4
+#			planning_skill = 2
+#			logistics_skill = 3
+#		}
+
+		hidden_effect = {
+			division_template = { name = "Golden Company Infantry" regiments = { infantry = { x = 0 y = 0 }	
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }	
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 } 
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 2 y = 3 }
+				}
+				support = {
+        				engineer = { x = 0 y = 0 }
+       					artillery = { x = 0 y = 1 }
+				}
+			}
+
+			division_template = { name = "Golden Company Cavalry" regiments = { cavalry = { x = 0 y = 0 }	
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 0 y = 3 }
+				cavalry = { x = 0 y = 4 }	
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+				cavalry = { x = 1 y = 3 }
+				cavalry = { x = 1 y = 4 } 
+				}
+				support = {
+        				recon = { x = 0 y = 0 }
+				}
+			}
+
+			if = {
+				limit = { has_tech = basic_heavy_tank }
+					division_template = { name = "Golden Company Tank Division" regiments = { heavy_armor = { x = 0 y = 0 }	
+					heavy_armor = { x = 0 y = 1 }
+					heavy_armor = { x = 0 y = 2 }
+					heavy_armor = { x = 0 y = 3 }	
+					light_armor = { x = 1 y = 0 }
+					light_armor = { x = 1 y = 1 }
+					light_armor = { x = 1 y = 2 }
+					light_armor = { x = 1 y = 3 }
+					motorized = { x = 2 y = 0 }
+					motorized = { x = 2 y = 1 }
+					}
+					support = {
+        					recon = { x = 0 y = 0 }
+					}
+				}
+			}
+
+			set_division_template_lock = {
+				division_template = "Golden Company Infantry"
+				is_locked = yes
+			}
+
+			set_division_template_lock = {
+				division_template = "Golden Company Cavalry"
+				is_locked = yes
+			}
+
+			if = {
+				limit = { has_tech = basic_heavy_tank }
+				set_division_template_lock = {
+					division_template = "Golden Company Tank Division"
+					is_locked = yes
+				}
+
+			}
+
+		random_owned_controlled_state = {
+			prioritize = { 118 }
+				create_unit = { 
+				division = "name = \"'Bittersteel' Division\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Blackfyre' Division\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Haegon' Division\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Maelys' Division\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division E\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division F\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division G\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division H\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division I\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division J\" division_template = \"Golden Company Infantry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+
+				}
+
+		random_owned_controlled_state = {
+			prioritize = { 118 }
+				create_unit = { 
+				division = "name = \"Division K\" division_template = \"Golden Company Cavalry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division L\" division_template = \"Golden Company Cavalry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division M\" division_template = \"Golden Company Cavalry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"Division N\" division_template = \"Golden Company Cavalry\" 				start_experience_factor = 1"
+				owner = Root
+					}
+
+				}
+
+			if = {
+				limit = { has_tech = basic_heavy_tank }
+		random_owned_controlled_state = {
+			prioritize = { 118 }
+				create_unit = { 
+				division = "name = \"Division O\" division_template = \"Golden Company Tank Division\" 				start_experience_factor = 1"
+				owner = Root
+					}
+
+				}
+			}
+			if = {
+				limit = { has_tech = basic_heavy_tank }
+
+		random_owned_controlled_state = {
+			prioritize = { 118 }
+				create_unit = { 
+				division = "name = \"Division P\" division_template = \"Golden Company Tank Division\" 				start_experience_factor = 1"
+				owner = Root
+					}
+
+				}
+			}
+
+
+			news_event = { id = news.9 hours = 1 }
+
+		}
+
+#		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+}
+
+# Golden Company leaves
+country_event = {
+	id = baltic.2
+	title = baltic.2.t
+	desc = baltic.2.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = baltic.2.a
+		ai_chance = { base = 10	}
+
+		Root = {
+			FER_strickland = {
+				set_nationality = FER
+			}
+		}
+
+#		remove_unit_leader = 8 #Harry Strickland
+		
+		delete_unit_template_and_units = {
+   			division_template = "Golden Company Infantry"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Golden Company Cavalry"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Golden Company Tank Division"
+		}
+
+		hidden_effect = {
+			add_manpower = -70000
+		}
+
+	}
+}
+
+# Second Sons hired
+country_event = {
+	id = baltic.3
+	title = baltic.3.t
+	desc = baltic.3.d
+	picture = GFX_report_event_nationalist_china_machinegun_firing
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = baltic.1.a
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = ssons_hired
+		create_corps_commander = {
+			name = "Mero"
+			picture = "Portrait_Mero.dds"
+			id = 597
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Prendahl na Ghezn"
+			picture = "Portrait_Prendahl.dds"
+			id = 598
+			traits = { }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Daario Naharis"
+			picture = "Portrait_Daario.dds"
+			id = 599
+			traits = { panzer_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		hidden_effect = {
+			division_template = {
+				name = "Second Sons Infantry Division"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }	
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+				support = {
+        				recon = { x = 0 y = 0 }
+				}
+			}
+
+			division_template = { name = "Second Sons Cavalry" 
+			regiments = { cavalry = { x = 0 y = 0 }	
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 0 y = 3 }	
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+				cavalry = { x = 2 y = 0 }
+				cavalry = { x = 2 y = 1 } 
+				}
+				support = {
+        				recon = { x = 0 y = 0 }
+				}
+			}
+
+			if = {
+				limit = { has_tech = basic_light_tank }
+				division_template = {
+					name = "Second Sons Light Armored Division"
+					regiments = {
+						light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 1 y = 0 }
+						light_armor = { x = 1 y = 1 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+					}
+				}
+			}
+
+			set_division_template_lock = {
+				division_template = "Second Sons Infantry Division"
+				is_locked = yes
+			}
+
+			set_division_template_lock = {
+				division_template = "Second Sons Cavalry"
+				is_locked = yes
+			}
+
+			if = {
+				limit = { has_tech = basic_light_tank }
+				set_division_template_lock = {
+					division_template = "Second Sons Light Armored Division"
+					is_locked = yes
+				}
+
+			}
+
+		random_owned_controlled_state = {
+			prioritize = { 118 }
+				create_unit = { 
+				division = "name = \"'Broken Sword' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.6"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Harwyn Hoare' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.6"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Aegon Rivers' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.6"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Prince Aerion' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.6"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Rodrik Stark' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.4"
+				owner = Root
+					}
+				create_unit = { 
+				division = "name = \"'Tattered Prince' Division\" division_template = \"Second Sons Infantry Division\" 				start_experience_factor = 0.4"
+				owner = Root
+					}
+
+				}
+
+			if = {
+				limit = { has_tech = basic_light_tank }
+					random_owned_controlled_state = {
+						prioritize = { 118 }
+						create_unit = { 
+							division = "name = \"'Hammer' Division\" division_template = \"Second Sons Light Armored Division\" 				start_experience_factor = 0.6"
+							owner = Root
+						}
+						create_unit = { 
+							division = "name = \"'Nail' Division\" division_template = \"Second Sons Light Armored Division\" 				start_experience_factor = 0.3"
+							owner = Root
+						}
+						create_unit = { 
+							division = "name = \"'Snatch' Division\" division_template = \"Second Sons Light Armored Division\" 				start_experience_factor = 0.3"
+							owner = Root
+						}
+						create_unit = { 
+							division = "name = \"'Uhlan' Division\" division_template = \"Second Sons Light Armored Division\" 				start_experience_factor = 0.3"
+							owner = Root
+						}
+
+				}
+			}else = {
+				random_owned_controlled_state = {
+				prioritize = { 118 }
+					create_unit = { 
+						division = "name = \"Division P1\" division_template = \"Second Sons Cavalry\" 				start_experience_factor = 0.6"
+						owner = Root
+					}
+					create_unit = { 
+						division = "name = \"Division P2\" division_template = \"Second Sons Cavalry\" 				start_experience_factor = 0.6"
+						owner = Root
+					}
+					create_unit = { 
+						division = "name = \"Division P3\" division_template = \"Second Sons Cavalry\" 				start_experience_factor = 0.6"
+						owner = Root
+					}
+					create_unit = { 
+						division = "name = \"Division P4\" division_template = \"Second Sons Cavalry\" 				start_experience_factor = 0.6"
+						owner = Root
+					}
+
+				}
+			}
+
+#			news_event = { id = news.9 hours = 1 }
+
+		}
+	}
+}
+
+# Germany Claims Memel (Lithuania)
+country_event = {
+	id = baltic.4
+	title = baltic.4.t
+	desc = baltic.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = baltic.4.a
+		ai_chance = { 
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						is_puppet_of = GER
+						is_in_faction_with = GER
+					}
+				}
+				GER = {
+					surrender_progress > 0.09
+				}
+			}
+			modifier = {
+				factor = 0
+				any_other_country = {
+					is_in_faction_with = ROOT
+					has_war_with = GER
+				}
+			}
+			modifier = {
+				factor = 0
+				any_other_country = {
+					NOT = {
+						tag = GER
+					}
+					LIT = {
+						is_puppet_of = PREV
+					}
+					NOT = {
+						is_in_faction_with = GER
+					}
+				}
+			}
+		}
+		GER = {
+			country_event = { days = 1 id = germany.22 }
+		}
+	}
+	option = { # Refuse
+		name = baltic.4.b		
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				NOT = {
+					GER = {
+						surrender_progress > 0.09
+					}
+				}
+				NOT = {
+					any_other_country = {
+						is_in_faction_with = ROOT
+						has_war_with = GER
+					}
+				}
+				NOT = {
+					any_other_country = {
+						NOT = {
+							tag = GER
+						}
+						LIT = {
+							is_puppet_of = PREV
+						}
+						NOT = {
+							is_in_faction_with = GER
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_faction_with = GER
+					LIT = {
+						is_puppet_of = GER
+					}
+				}
+			}
+		}
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+				type = take_state_focus
+				target = LIT
+				generator = { 188 }
+				}
+				country_event = { days = 1 id = germany.23 }
+			}
+		}
+		hidden_effect = {
+			GER = {
+				country_event = { days = 1 id = germany.23 }
+			}
+		}		
+	}
+}
+
+# Second Sons leave
+country_event = {
+	id = baltic.5
+	title = baltic.5.t
+	desc = baltic.5.d
+#	picture = GFX_report_event_worker_protests
+	picture = GFX_report_event_nationalist_china_machinegun_firing
+
+	is_triggered_only = yes
+	
+	option = { # Annexed by SOV
+		name = baltic.5.a
+		ai_chance = {
+			factor = 40
+		}
+		clr_country_flag = ssons_hired
+		clr_global_flag = secondsons_hired
+		remove_unit_leader = 597 #Mero
+		remove_unit_leader = 598 #Bobby Sixkiller
+		remove_unit_leader = 599 #Daario
+		
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Infantry Division"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Cavalry"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Light Armored Division"
+		}
+
+		hidden_effect = {
+			add_manpower = -35000
+		}
+	}
+}
+
+# Hidden event to be annexed. Needed because of problem with FROM and events in annexed countries (JH)
+country_event = {
+	id = baltic.6
+
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		news_event = { id = news.69 }
+		news_event = { id = news.71 hours = 1 }
+	}
+}
+
+#Second Sons desert
+country_event = {
+	id = baltic.7
+	title = baltic.7.t
+	desc = baltic.7.d
+	picture = GFX_report_event_polish_tanks_01
+
+	is_triggered_only = yes
+
+	option = { #Enter alliance
+		name = baltic.7.a
+		ai_chance = {
+			factor = 90
+		}
+		clr_country_flag = ssons_hired
+		clr_global_flag = secondsons_hired
+		add_political_power = -50
+		remove_unit_leader = 597 #Mero
+		remove_unit_leader = 598 #Bobby Sixkiller
+		remove_unit_leader = 599 #Daario
+		
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Infantry Division"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Cavalry"
+		}
+		delete_unit_template_and_units = {
+   			division_template = "Second Sons Light Armored Division"
+		}
+
+		hidden_effect = {
+			add_manpower = -30000
+		}
+	}
+
+}

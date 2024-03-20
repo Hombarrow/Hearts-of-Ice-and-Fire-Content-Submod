@@ -1,0 +1,23 @@
+
+state={
+	id=385
+	name="STATE_385"
+
+	history={
+		owner = HOL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = HOL
+
+	}
+
+	provinces={
+		505 3513 7865 10183 10989 11495 11733 12553 
+	}
+	manpower=453785
+	buildings_max_level_factor=1.000
+	state_category=town
+}

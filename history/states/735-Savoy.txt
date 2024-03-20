@@ -1,0 +1,26 @@
+
+state={
+	id=512
+	name="STATE_735"
+
+	history={
+		owner = ENG
+		add_core_of = ENG
+		victory_points = {
+			22 1 
+		}
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		22 109 118 2995 3016 3040 3100 3173 6015 6024 6079 6161 6200 9089 9093 9220 9653 11067 11077 11635 
+	}
+	manpower=2507500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

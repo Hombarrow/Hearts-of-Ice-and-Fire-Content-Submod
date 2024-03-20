@@ -1,0 +1,40 @@
+
+state={
+	id=117
+	name="STATE_117" # Campania
+	manpower = 2153361
+	
+	state_category = city
+	resources={
+		aluminium=12
+		steel = 8
+	}
+
+	history={
+		owner = ROM
+		victory_points = {
+			6939 10 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 2
+			air_base = 3
+			6939 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = ROM
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 3
+			}
+		}
+	}
+
+	provinces={
+		819 851 883 955 3773 3958 3968 6843 6939 6972 6980 9826 11803 
+	}
+}

@@ -1,0 +1,45 @@
+﻿division_template = {
+	name = "Bloodriders"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+
+units = {
+	##### Al-Quwat ul-Musalhatu as-Sultan 'Uman #####
+	division = {
+		name = "Alquwwat Almusallahat Alssultan"
+		location = 121
+		division_template = "Bloodriders"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+}
+
+### No air force until the 1950s ###
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "OMA"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}

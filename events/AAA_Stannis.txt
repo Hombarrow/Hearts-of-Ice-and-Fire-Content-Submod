@@ -1,0 +1,601 @@
+﻿###########################
+# Stannis Events
+###########################
+
+add_namespace = hungary
+
+# Iron Bank will give us loan
+country_event = {
+	id = hungary.1
+	title = hungary.1.t
+	desc = hungary.1.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.1.a
+		set_global_flag = bank_invests_stannis
+	}
+}
+
+#  Move capital to Storm's End?
+country_event = {
+	id = hungary.2
+	title = hungary.2.t
+	desc = hungary.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.2.a
+		set_capital = { state = 111 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.15 }
+		}
+	}
+
+	option = {
+		name = hungary.2.b
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.15 }
+		}
+	}
+}
+
+# Second Vienna Award - All of Transylvania
+country_event = {
+	id = hungary.3
+	title = hungary.3.t
+	desc = hungary.3.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.3.a
+		HUN = { 
+			transfer_state = 76
+			transfer_state = 83
+			transfer_state = 84
+		}
+		hidden_effect = {
+			country_event = { days = 1 id = news.16 }
+		}
+	}
+}
+
+# Second Vienna Award - Romania Rejects Verdict (Northern Transylvania)
+country_event = {
+	id = hungary.4
+	title = hungary.2.t
+	desc = hungary.4.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.4.a
+		add_state_claim = 76
+		hidden_effect = {
+			country_event = { days = 1 id = news.17 }
+		}
+	}
+}
+
+# Second Vienna Award - Romania Rejects Verdict (All of Transylvania)
+country_event = {
+	id = hungary.5
+	title = hungary.2.t
+	desc = hungary.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.4.a
+		add_state_claim = 76
+		add_state_claim = 83
+		add_state_claim = 84
+		hidden_effect = {
+			country_event = { days = 1 id = news.18 }
+		}
+	}
+}
+
+# Renly want to be annexed
+country_event = {
+	id = hungary.6
+	title = hungary.6.t
+	desc = hungary.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.6.a
+		ai_chance = { factor = 99 }
+create_field_marshal = {
+	name = "Renly Baratheon"
+	picture = "Portrait_Renly_Baratheon.dds"
+	id = 3069
+	traits = {  }
+	skill = 2
+}
+		BEL = {
+			country_event = { hours = 3 id = stormlands.5 }
+		}
+	}
+
+	option = {
+		name = hungary.6.b
+		ai_chance = { factor = 1 }
+		BEL = {
+			country_event = { hours = 3 id = stormlands.6 }
+		}
+	}
+}
+
+# Stannis invited to be king
+country_event = {
+	id = hungary.7
+	title = hungary.7.t
+	desc = hungary.7.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.7.a
+		ai_chance = { factor = 80 }
+		ENG = { change_tag_from = HUN}
+		ENG = {
+			country_event = { days = 3 id = britain.7 }
+		}
+		ENG = {
+			annex_country = { target = HUN transfer_troops = yes }
+			add_political_power = 75
+			add_named_threat = { threat = 10 name = hungary.7.t }
+			}
+#		custom_effect_tooltip = GAME_OVER_TT
+	}
+#	option = {
+#		name = hungary.7.b
+#		ai_chance = { factor = 0 }
+#		HUN = {
+#			annex_country = { target = ENG transfer_troops = yes }
+#			add_political_power = 75
+#			add_named_threat = { threat = 10 name = hungary.7.t }
+#			}
+#		}
+#		33 = {
+#			add_core_of = HUN
+#		}
+#		735 = {
+#			add_core_of = HUN
+#		}
+#		666 = {
+#			add_core_of = HUN
+#		}
+#		38 = {
+#			add_core_of = HUN
+#		}
+#	}
+	option = {
+		name = hungary.7.c
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Stannis declares his claim king
+country_event = {
+	id = hungary.8
+	title = hungary.8.t
+	desc = hungary.8.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.8.a
+		ai_chance = { factor = 80 }
+		HUN = {
+			add_political_power = 100
+			add_named_threat = { threat = 5 name = hungary.8.t }
+			add_ideas = SIS_claim_king
+			}
+		ENG = {
+			add_ideas = SIS_multiple_kings
+			}
+
+		hidden_effect = {
+			BEL = {
+				country_event = { hours = 1 id = stormlands.4 }
+			}
+		}
+	}
+	option = {
+		name = hungary.8.b
+		ai_chance = { factor = 0 }
+
+		hidden_effect = {
+			BEL = {
+				country_event = { hours = 1 id = stormlands.4 }
+			}
+		}
+
+	}
+}
+
+# Renly offers truce
+country_event = {
+	id = hungary.9
+	title = hungary.9.t
+	desc = hungary.9.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.9.a
+		ai_chance = { factor = 80 }
+		HUN = {
+			add_political_power = 50
+			create_faction = "United Baratheon Front"
+			add_to_faction = BEL
+			}
+		hidden_effect = {
+			if = {
+				limit = { has_government = neutrality}
+				BEL = {
+					set_politics = {
+			
+						ruling_party = neutrality
+						elections_allowed = no
+						
+					}
+
+				add_popularity = {
+					ideology = neutrality
+					popularity = 1
+					}
+				}
+			}
+			news_event = { hours = 12 id = news.55 }
+		}
+	}
+	option = {
+		name = hungary.9.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Longterm loan
+country_event = {
+	id = hungary.10
+	title = hungary.10.t
+	desc = hungary.10.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.10.a
+		ai_chance = { factor = 80 }
+		HUN = {
+			add_political_power = 50
+			add_timed_idea = { idea = STN_funds_from_braavos_for_city days = 730 } 
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = time_to_pay 
+			}
+
+	}
+	option = {
+		name = hungary.10.b
+		ai_chance = { factor = 20 }
+		HUN = {
+		country_event = { days = 1 id = switzerland.10 }
+		}
+	}
+}
+
+country_event = {
+	id = hungary.11
+	title = hungary.11.t
+	desc = hungary.11.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	fire_only_once = yes 
+	
+		trigger = {
+		tag = HUN
+
+			has_country_flag = time_to_pay
+			NOT = {
+			has_idea = STN_funds_from_braavos_for_city
+			}
+	}
+	
+		mean_time_to_happen = {
+		days = 40
+	}
+	
+	option = {
+		name = hungary.11.a
+		ai_chance = { factor = 80 }
+		HUN = {
+			add_timed_idea = { idea = STN_time_to_pay_debts days = 365 } 
+
+			}
+		SWI = {
+		add_timed_idea = { idea = STN_paying_by_their_debts days = 365 } 
+
+		}	
+			
+
+	}
+}
+
+country_event = {
+	id = hungary.12
+	title = hungary.12.t
+	desc = hungary.12.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.12.a
+		ai_chance = { factor = 90 }
+		HUN = {
+			add_timed_idea = { idea = STN_paying_for_factories days = 365 } 
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+
+	}
+	option = {
+		name = hungary.12.b
+		ai_chance = { factor = 10 }
+		HUN = {
+		country_event = { days = 1 id = switzerland.10 }
+		}
+	}
+}
+
+
+country_event = {
+	id = hungary.13
+	title = hungary.13.t
+	desc = hungary.13.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.13.a
+		ai_chance = { factor = 25 }
+		HUN = {
+			add_timed_idea = { idea = STN_paying_to_ironborns days = 90 }
+			add_ideas = STN_ironborns_helping_managing_our_shipbuilding	
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+
+	}
+	option = {
+		name = hungary.13.b
+		ai_chance = { factor = 25 }
+		HUN = {
+		country_event = { days = 1 id = hungary.14 }
+		}
+	}
+	
+		option = {
+		name = hungary.13.c
+		ai_chance = { factor = 25 }
+			HUN = {
+			add_timed_idea = { idea = STN_military_factories_producing_equipment_for_ironborns days = 90 }
+			add_ideas = STN_ironborns_helping_managing_our_shipbuilding	
+			}
+			
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3000 producer = HUN } 
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 250 producer = HUN } 
+	}
+	
+		option = {
+		name = hungary.13.e
+		ai_chance = { factor = 25 }
+		add_political_power = 150
+	}
+}
+
+country_event = {
+	id = hungary.14
+	title = hungary.14.t
+	desc = hungary.14.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.14.a
+		ai_chance = { factor = 90 }
+
+		HUN = {
+			add_timed_idea = { idea = STN_paying_to_ironborns days = 180 } 
+			add_ideas = STN_ironborns_helping_managing_our_shipbuilding
+		}
+			ROM = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	option = {
+		name = hungary.14.b
+		ai_chance = { factor = 10 }
+		add_political_power = 75
+	}
+}
+
+country_event = {
+	id = hungary.15
+	title = hungary.15.t
+	desc = hungary.15.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.15.a
+#		trigger = {
+#			NOT = {
+#				TAG = HOL
+#				TAG = IRE
+#			}
+#		}
+		ai_chance = { factor = 90 }
+#		HUN = { add_war_support = 0.05	}
+
+	}
+#	option = {
+#		name = hungary.15.b
+#		trigger = {
+#			NOT = {
+#				TAG = SHX
+#				TAG = XSM
+#			}
+#		}
+#		ai_chance = { factor = 10 }
+#		add_political_power = 75
+#	}
+#	option = {
+#		name = hungary.15.c
+#		trigger = {
+#			NOT = {
+#				TAG = SHX
+#				TAG = XSM
+#			}
+#		}
+#		ai_chance = { factor = 10 }
+#		add_political_power = 75
+#	}
+}
+
+# Destroyers for Bases
+country_event = {
+	id = hungary.16
+	title = hungary.16.t
+	desc = hungary.16.d
+	picture = GFX_report_event_usa_british_sailors_destroyers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hungary.16.a
+		custom_effect_tooltip = hungary.16.a.tt
+		hidden_effect = {
+			if = {
+				limit = { not = { has_dlc = "Man the Guns" } }
+				HUN = {	load_oob = "ENG_destroyers_for_bases" }
+			}
+			else = {
+				HUN = {	load_oob = "ENG_destroyers_for_bases_mtg" }
+			}
+			country_event = { id = hungary.1601 }
+		}
+	}
+
+}
+
+# Britain accepts offer
+country_event = {
+	id = hungary.1601
+	title = hungary.1601.t
+	desc = hungary.1601.desc
+	picture = GFX_report_event_usa_destroyers
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = hungary.1601.a
+	}
+}

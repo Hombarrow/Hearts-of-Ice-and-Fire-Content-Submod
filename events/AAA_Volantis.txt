@@ -1,0 +1,365 @@
+﻿###########################
+# volantis Events
+###########################
+
+add_namespace = volantis
+
+# Something in the mud...
+country_event = {
+	id = volantis.1
+	title = volantis.1.t
+	desc = volantis.1.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # what is it JR?
+		name = volantis.1.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			country_event = { id = volantis.2 }
+		}
+
+	}
+}
+
+# Dinosaur bones!
+country_event = {
+	id = volantis.2
+	title = volantis.2.t
+	desc = volantis.2.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.2.a
+		ai_chance = {
+			base = 10
+		}
+		add_political_power = 100
+
+		hidden_effect = {
+			news_event = { hours = 2 id = news.307 }
+		}
+
+	}
+}
+
+# Maesters want to examine bones.
+country_event = {
+	id = volantis.3
+	title = volantis.3.t
+	desc = volantis.3.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.3.a
+		ai_chance = {
+			base = 95
+		}
+		add_offsite_building = { type = industrial_complex level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		IRE = {
+			country_event = { days = 1 id = volantis.4 }
+		}
+
+	}
+	option = { # Refuse
+		name = volantis.3.b
+		ai_chance = {
+			base = 5
+		}
+
+		IRE = {
+			country_event = { days = 1 id = volantis.5 }
+		}
+	}
+}
+
+# Volantis accepts
+country_event = {
+	id = volantis.4
+	title = volantis.4.t
+	desc = volantis.4.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.4.a
+		ai_chance = {
+			base = 10
+		}
+		add_offsite_building = { type = industrial_complex level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+	}
+}
+
+# Volantis refuse
+country_event = {
+	id = volantis.5
+	title = volantis.5.t
+	desc = volantis.5.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Nothing we can do....
+		name = volantis.5.a
+		ai_chance = {
+			base = 10
+		}
+		POR = {
+			country_event = { days = 5 id = volantis.6 }
+		}
+
+	}
+	option = { # ...or is there?
+		name = volantis.5.b
+		ai_chance = {
+			base = 80
+		}
+		POR = {
+			set_country_flag = sneaky_bones
+			country_event = { days = 15 id = volantis.6 }
+		}
+	}
+}
+
+# Bones destroyed
+country_event = {
+	id = volantis.6
+	title = volantis.6.t
+	desc = volantis.6.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.6.a
+		ai_chance = {
+			base = 10
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = sneaky_bones }
+				POR = {
+					country_event = { days = 1 id = volantis.7 }
+				}
+			}
+		}
+
+	}
+}
+
+# We saved the bones!
+country_event = {
+	id = volantis.7
+	title = volantis.7.t
+	desc = volantis.7.d
+#	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.7.a
+		ai_chance = {
+			base = 10
+		}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+	}
+}
+
+# Puppet (Mantarys)
+country_event = {
+	id = volantis.8
+	title = volantis.8.t
+	desc = volantis.8.d
+	picture = GFX_report_event_soviet_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.8.a
+		ai_chance = {
+			base = 10
+		}
+
+		POR = {
+			country_event = { hours = 12 id = volantis.9 }
+		}
+
+		hidden_effect = {
+
+		}
+	}
+	option = { # Never!
+		name = volantis.8.b
+		ai_chance = {
+			base = 20
+		}
+
+		POR = {
+			country_event = { hours = 12 id = volantis.10 }
+		}
+
+		hidden_effect = {
+#			set_global_flag = mantarys_nopuppet
+		}
+	}
+}
+
+# Mantarys accepts
+country_event = {
+	id = volantis.9
+	title = volantis.9.t
+	desc = volantis.9.d
+	picture = GFX_report_event_bulgarian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = volantis.9.a
+		ai_chance = {
+			base = 10
+		}
+
+		puppet = ECU
+
+		hidden_effect = {
+
+		}
+	}
+}
+
+# Mantarys refuses
+country_event = {
+	id = volantis.10
+	title = volantis.10.t
+	desc = volantis.10.d
+	picture = GFX_report_event_bulgarian_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { # So be it
+		name = volantis.10.a
+		ai_chance = {
+			base = 50
+		}
+
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ECU
+		}
+
+		hidden_effect = {
+
+		}
+	}
+	option = { # Nevermind
+		name = volantis.10.b
+		ai_chance = {
+			base = 10
+		}
+
+		add_political_power = -100
+
+		hidden_effect = {
+
+		}
+	}
+}

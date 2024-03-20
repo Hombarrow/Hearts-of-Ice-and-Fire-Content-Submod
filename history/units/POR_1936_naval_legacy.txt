@@ -1,0 +1,28 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Main Volantean Fleet"			
+		naval_base = 3288 # Volantis
+		task_force = {				
+			name = "Master's Fleet"			 
+			location = 3288 # Volantis
+			ship = { name = "Vhalaso the Munificent" definition = battleship equipment = { battleship_1 = {amount = 1 owner = POR } } }
+			ship = { name = "NRP Tamega" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }
+			ship = { name = "NRP Dão" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }
+			ship = { name = "NRP Douro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }
+			ship = { name = "NRP Lima" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }	
+			ship = { name = "NRP Vouga" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }	
+			ship = { name = "NRP Tejo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = POR } } }					
+		}				
+		task_force = {				
+			name = "Coastguard Group"			
+			location = 3288 # Volantis
+			ship = { name = "NRP Delfim" definition = submarine equipment = { submarine_2 = { amount = 1 owner = POR create_if_missing = yes } } }		
+			ship = { name = "NRP Espadarte" definition = submarine equipment = { submarine_2 = { amount = 1 owner = POR create_if_missing = yes } } }	
+			ship = { name = "NRP Golfinho" definition = submarine equipment = { submarine_2 = { amount = 1 owner = POR create_if_missing = yes } } }
+		}				
+	}
+} 
+

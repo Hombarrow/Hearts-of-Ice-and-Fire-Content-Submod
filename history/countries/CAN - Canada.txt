@@ -1,0 +1,331 @@
+﻿capital = 466
+
+oob = "CAN_1936"
+
+set_research_slots = 3
+
+	add_ideas = mixed
+	add_ideas = atheist
+	add_ideas = NWC_focus_on_wildlings
+
+recruit_character = NWC_jeor_mormont
+recruit_character = NWC_halfhand
+recruit_character = NWC_jeremy_ryker
+recruit_character = NWC_yoren
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+
+	trench_warfare = 1
+	fleet_in_being = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		
+	}
+}
+
+	add_ideas = crows
+	add_ideas = CAN_great_depression_1
+
+give_guarantee = ICE
+give_military_access = ICE
+
+
+1939.1.1 = {
+	add_political_power = 1198
+	
+
+		complete_national_focus = NWC_fortification_studies
+		complete_national_focus = NWC_sudeten_1
+		complete_national_focus = NWC_sudeten_2
+		complete_national_focus = NWC_industrial_legacy
+		complete_national_focus = NWC_balanced_1
+		complete_national_focus = NWC_military_research_institute
+		complete_national_focus = NWC_inf_and_artillery_advancement
+		complete_national_focus = NWC_strategy_decisions
+		complete_national_focus = NWC_help_from_houses
+#	}
+
+	add_ideas = {
+		#laws
+		volunteer_only
+		low_economic_mobilisation
+		CZE_fortification_focus3
+	}
+
+	
+	oob = "CAN_1939"
+	set_technology = {
+		fighter1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		support_weapons2 = 1
+
+		#doctrines
+		#Air
+		force_rotation = 1
+		fighter_baiting = 1
+
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		subsidiary_carrier_role = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+#		oil_plant = 1
+#		improved_oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+}
+
+
+set_popularities = {
+	democratic = 10
+	fascism = 10
+	communism = 0
+	neutrality = 80
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.10.14"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Eddison Tollett"
+	desc = "POLITICS_MACKENZIE_KING_DESC"
+	picture = "gfx/leaders/CAN/Portrait_General_Edd.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jon Snow"
+	desc = "POLITICS_MACKENZIE_KING_DESC"
+	picture = "gfx/leaders/CAN/Portrait_Jon_snow.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alliser Thorne"
+	desc = "POLITICS_ADRIEN_ARCAND_DESC"
+	picture = "Portrait_Alliser_Thorne.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Tim-Bucktu"
+	desc = "POLITICS_TIM_BUCK_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+#create_country_leader = {
+#	name = "Qhorin Halfhand"
+#	desc = "POLITICS_HALFHAND_DESC"
+#	picture = "gfx/leaders/CAN/Portrait_Halfhand.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+#	traits = {
+#		#
+#	}
+#}
+
+#create_country_leader = {
+#	name = "Jeor Mormont"
+#	desc = "POLITICS_JS_WOODSWORTH_DESC"
+#	picture = "gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+#	traits = {
+#		#
+#	}
+#}
+
+set_convoys = 100
+#set_national_unity = 0.9
+
+1939.1.1 = {
+
+
+	set_popularities = {
+		democratic = 80
+		fascism = 20
+		communism = 0
+		neutrality = 0
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1935.10.14"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+}
+
+create_field_marshal = {
+	name = "Alliser Thorne"
+	picture = "Portrait_Alliser_Thorne.dds"
+	traits = { offensive_doctrine }
+	skill = 2
+}
+
+#create_field_marshal = {
+#	name = "Jeor Mormont"
+#	portrait_path = "gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
+#	traits = { defensive_doctrine }
+#	skill = 2
+#}
+
+create_corps_commander = {
+	name = "Jon Snow"
+	portrait_path = "gfx/leaders/CAN/Portrait_Jon_snow.dds"
+	traits = { winter_specialist ranger }
+
+	skill = 4
+	id = 30
+}
+
+#create_corps_commander = {
+#	name = "Qhorin Halfhand"
+#	portrait_path = "gfx/leaders/CAN/Portrait_Halfhand.dds"
+#	traits = { old_guard ranger }
+
+#	skill = 4
+#}
+
+create_corps_commander = {
+	name = "Eddison Tollett"
+	portrait_path = "gfx/leaders/CAN/Portrait_General_Edd.dds"
+	traits = { hill_fighter }
+
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Pypar"
+	portrait_path = "gfx/leaders/CAN/Portrait_General_Pypp.dds"
+	traits = {  }
+
+	skill = 1
+}
+
+create_navy_leader = {
+	name = "Cotter Pyke"
+	gfx = "GFX_CAN_james_prentice"
+	traits = { spotter }
+	skill = 2
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Yoren Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 1
+		destroyer_engine_upgrade = 1
+		ship_ASW_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+}
+
+1939.1.1 = {
+	create_equipment_variant = {
+		name = "Athabaskan Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+}

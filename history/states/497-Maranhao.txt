@@ -1,0 +1,31 @@
+
+state={
+	id=497
+	name="STATE_497"
+	resources={
+		rubber=12.000
+	}
+
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			air_base = 1
+			7122 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = KOR
+
+	}
+
+	provinces={
+		1014 1142 4019 4059 4147 4202 4541 7034 7122 7190 10033 12090 
+	}
+	manpower=2650100
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

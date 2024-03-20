@@ -1,0 +1,386 @@
+﻿capital = 126
+
+
+oob = "FIN_1936"
+
+
+set_research_slots = 3
+
+
+add_ideas = {
+
+	volunteer_only
+	
+	first_men
+
+
+
+}
+
+
+	add_ideas = old_gods
+	add_ideas = speculation_about_others
+
+
+recruit_character = STR_eddard
+recruit_character = STR_robb_stark
+
+recruit_character = STR_sansa
+recruit_character = STR_catelyn
+recruit_character = STR_rodrik
+recruit_character = STR_jory
+recruit_character = STR_greatjon
+recruit_character = STR_ccerwyn
+recruit_character = STR_council
+
+
+set_technology = {
+	
+infantry_weapons = 1
+	
+infantry_weapons1 = 1
+	
+gw_artillery = 1
+motorised_infantry = 1
+tech_support = 1		
+	tech_trucks = 1	
+tech_recon = 1
+	
+tech_engineers = 1
+
+tech_mountaineers = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "FIN_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+		}
+	else = {
+		set_air_oob = "FIN_1936_air_legacy"
+		set_technology = {
+			CAS1 = 1
+			early_fighter = 1
+		}
+	}
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+give_guarantee = FRA
+
+
+set_convoys = 45
+
+
+
+#add_ideas = {
+	
+#limited_conscription
+
+#}
+
+
+# DIPLOMACY
+#if = {
+#	limit = {
+#		has_dlc = "Together for Victory"
+#	}
+#	set_autonomy = {
+#		target = BUL
+#		autonomous_state = autonomy_dominion
+#		freedom_level = 0.4
+#	}
+#}
+
+set_popularities = {
+	democratic = 70
+	fascism = 15
+	communism = 5
+	neutrality = 10
+}
+
+
+
+
+set_politics = {
+
+	
+	ruling_party = democratic
+	
+last_election = "1933.7.1"
+	
+election_frequency = 36
+	
+elections_allowed = no
+
+}
+
+
+
+create_faction = "Northern Kingdoms Union"
+add_to_faction = FIN
+#add_to_faction = ITA
+add_to_faction = NOR
+add_to_faction = BUL
+
+#create_country_leader = {
+	
+#name = "Stark Regency Council"
+	
+#desc = "POLITICS_RISTO_HEIKKI_RYT_DESC"
+	
+#picture = "gfx/leaders/FIN/Portrait_Stark_Council.dds"
+	
+#expire = "1965.1.1"
+	
+#ideology = conservatism
+	
+#traits = {
+		#
+#	}
+
+#}
+
+
+#create_country_leader = {
+	
+#name = "Robb Stark"
+	
+#desc = "POLITICS_RISTO_HEIKKI_RYT_DESC"
+	
+#picture = "gfx/leaders/FIN/Portrait_Stark_Robb.dds"
+	
+#expire = "1965.1.1"
+	
+#ideology = conservatism
+	
+#traits = {
+#		young_wolf	}
+
+#}
+
+
+#create_country_leader = {
+	
+#	name = "Eddard Stark"
+	
+#	desc = "POLITICS_NED_STARK_DESC"
+
+#	picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+	
+#	expire = "1965.1.1"
+	
+#	ideology = liberalism
+	
+#	traits = {
+		#
+#	}
+
+#}
+
+
+
+create_country_leader = {
+	
+	name = "Bran Stark"
+	
+	desc = "POLITICS_AIMO_AALTONEN_DESC"
+	
+	picture = "gfx/leaders/FIN/Portrait_Stark_Bran.dds"
+	
+	expire = "1965.1.1"
+	
+	ideology = marxism
+	
+	traits = {
+		#
+	}
+
+}
+
+
+
+#create_country_leader = {
+	
+#	name = "Sansa Stark"
+	
+#	desc = "POLITICS_VILHO_ANNALA_DESC"
+	
+#	picture = "gfx/leaders/FIN/Portrait_Stark_Sansa_2.dds"
+	
+#	expire = "1965.1.1"
+	
+#	ideology = fascism_ideology
+	
+#	traits = {
+#		#
+#	}
+
+#}
+
+
+
+create_country_leader = {
+	
+	name = "Maester Luwin"
+	
+	desc = "POLITICS_KYÖSTI_KALLIO_DESC"
+	
+	picture = "gfx/leaders/FIN/Portrait_Maester_luwin.dds"
+	
+	expire = "1965.1.1"
+	
+	ideology = centrism
+	
+	traits = {
+		#
+	}
+
+}
+
+
+
+
+
+add_ideas = {
+	sisu
+}
+
+#create_field_marshal = {
+#	name = "Robb Stark 2"
+#	portrait_path = "gfx/leaders/FIN/Portrait_Stark_Robb.dds"
+
+#	traits = {  offensive_doctrine }
+#	id = 2
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 1
+#	logistics_skill = 2
+#}
+
+#create_corps_commander = {
+	
+#	name = "Greatjon Umber"
+	
+#	portrait_path = "gfx/leaders/FIN/Portrait_Greatjon_Umber.dds"
+	
+#	traits = { winter_specialist commando }
+	
+#	id = 406
+#	skill = 4
+#	attack_skill = 2
+#	defense_skill = 4
+#	planning_skill = 3
+#	logistics_skill = 3
+#}
+
+#create_corps_commander = {
+	
+#name = "Rodrik Cassel"
+	
+#portrait_path = "gfx/leaders/FIN/Portrait_Ser_Rodrik.dds"
+	
+#traits = { winter_specialist ranger }
+	
+#skill = 4
+#}
+
+
+
+#create_corps_commander = {
+	
+#	name = "Jory Cassel"
+	
+#	portrait_path = "gfx/leaders/FIN/Portrait_Jory_Cassel.dds"
+	
+#	traits = { winter_specialist }
+	
+#	skill = 3
+#	attack_skill = 2
+#	defense_skill = 3
+#	planning_skill = 1
+#	logistics_skill = 3
+#}
+
+
+
+create_corps_commander = {
+	
+name = "Smalljon Umber"
+	
+portrait_path = "gfx/leaders/FIN/Portrait_Smalljon_Umber.dds"
+	
+traits = {  }
+	
+skill = 2
+}
+
+
+
+#create_corps_commander = {
+	
+#name = "Cley Cerwyn"
+	
+#portrait_path = "gfx/leaders/FIN/Portrait_Cley_Cerwyn.dds"
+	
+#traits = {  }
+	
+#skill = 1
+#}
+
+
+
+create_navy_leader = {
+	name = "Wendel Manderly"
+	portrait_path = "gfx/leaders/FIN/Portrait_Admiral_Manderly.dds"
+
+	
+	traits = { spotter }
+	skill = 3
+}

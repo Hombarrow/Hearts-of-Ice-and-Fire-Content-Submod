@@ -1,0 +1,967 @@
+﻿add_namespace = britain 
+
+# Fate of Ned Stark
+country_event = {
+	id = britain.1
+	title = britain.1.t
+	desc = britain.1.d
+#	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.1.a	#off with the head
+		ai_chance = { factor = 90 }
+		add_political_power = 150
+		set_global_flag = ned_stark_dead
+		DDR = { kill_ideology_leader = democratic }
+		hidden_effect = {
+			news_event = { id = news.263 }
+			create_country_leader = {
+			name = "Vacant"
+			desc = "POLITICS_EDWARD_EDWARD_DESC"
+			picture = "gfx/leaders/ENG/Portrait_Small_Council.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				just_a_chair			
+				}
+			}
+		}
+#		FIN = {
+#			country_event = { days = 1 id = finland.1 }
+#		}
+	}
+	
+	option = {
+		name = britain.1.b	#to the wall 
+		ai_chance = { factor = 10 }
+		add_stability = 0.1
+		CAN = {
+			country_event = { days = 3 id = canada.1 }
+		}
+	}
+}
+
+# Stark helps
+country_event = {
+	id = britain.2
+	title = britain.2.t
+	desc = britain.2.d
+#	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.2.a
+#		add_tech_bonus = {
+#			name = tizard_mission_focus
+#			bonus = 0.5
+#			category = light_fighter
+#		}
+#		USA = {
+#			add_opinion_modifier = { target = ENG modifier = tizard_relations }
+#		}
+		FIN = {
+			add_to_faction = ENG
+		}
+	}
+}
+
+# Stark says no
+country_event = {
+	id = britain.3
+	title = britain.3.t
+	desc = britain.3.d
+#	picture = GFX_report_event_physics_lab_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.3.a
+#		add_opinion_modifier = { target = USA modifier = tizard_refused }
+	}
+}
+
+# Burma road china
+country_event = {
+	id = britain.4
+	title = britain.4.t
+	desc = britain.4.d
+	picture = GFX_report_event_burma_road
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.4.a
+	}
+}
+
+# Lannisters are causing trouble. Sanction them
+country_event = {
+	id = britain.5
+	title = britain.5.t
+	desc = britain.5.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.5.a
+
+		add_political_power = 50
+		HOL = { country_event = { id = netherlands.10 } }
+	}
+}
+
+#Time for India to be free
+country_event = {
+	id = britain.6
+	title = britain.6.t
+	desc = britain.6.d
+	picture = GFX_report_event_ghandi_women
+
+	trigger = {
+		tag = ENG
+		has_global_flag = indian_independence_promised
+		NOT = { has_idea = indian_independence_promised_idea }
+		RAJ = { is_puppet_of = ENG }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = britain.6.a
+		end_puppet = RAJ
+	}
+	option = {
+		name = britain.6.b
+#		RAJ = {
+#			add_national_unity = -0.30
+#		}
+	}
+}
+
+#Welcome Stannis
+country_event = {
+	id = britain.7
+	title = britain.7.t
+	desc = britain.7.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+
+	
+	option = {
+		name = britain.7.a
+		ai_chance = { factor = 60 }
+		ENG = {
+			create_country_leader = {
+			
+				name = "Stannis I Baratheon"
+			
+				desc = "POLITICS_MIKLOS_HORTHY_DESC"
+			
+				picture = "gfx/leaders/HUN/Portrait_Stannis_Baratheon.dds"
+			
+				expire = "1965.1.1"
+			
+				ideology = despotism
+		
+			}
+		}
+		hidden_effect = {
+			set_politics = {
+			
+				ruling_party = neutrality			
+				elections_allowed = no
+		
+			}
+
+			set_party_name = { ideology = neutrality long_name = "House of Stannis Baratheon" name = "House of Stannis Baratheon" }
+			add_popularity = {
+			ideology = neutrality
+			popularity = 0.75
+			}
+
+#			news_event = { id = news.291 }
+			if = {
+				limit = {
+					AND = {
+						HUN = { has_country_flag = embraced_lordoflight }
+						HUN = { has_completed_focus = SIS_lordoflight }
+					}
+				}
+				ENG = { country_event = { id = britain.17 days = 14 }}
+			}
+		}
+	}
+#	option = {
+#		name = britain.7.b
+#		ai_chance = { factor = 40 }
+#		ENG = {
+#			country_event = britain.8
+#			add_opinion_modifier = { target = ROOT modifier = embargo } 
+#		}
+#	}
+}
+
+country_event = {
+	id = britain.8
+	title = britain.8.t
+	desc = britain.8.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.8.a
+		ai_chance = { factor = 70 }
+		ENG = {
+			create_country_leader = {
+			
+				name = "Tommen I Baratheon"			
+				desc = "POLITICS_KING_TOMMEN_DESC"		
+				picture = "Portrait_Tommen_Baratheon.dds"
+			
+				expire = "1965.1.1"
+			
+				ideology = despotism
+		
+			}
+		}
+
+		activate_mission = TYR_margery_takes_over
+
+		hidden_effect = {
+			set_politics = {
+			
+				ruling_party = neutrality			
+				elections_allowed = no
+		
+			}
+
+			set_party_name = { ideology = neutrality long_name = "House Baratheon nee Tyrell" name = "House Baratheon nee Tyrell" }
+			add_popularity = {
+			ideology = neutrality
+			popularity = 0.65
+			}
+#			news_event = { id = news.291 }
+		}
+	}
+#	option = {
+#		name = britain.8.b
+#		ai_chance = { factor = 30 }
+#	}
+}
+
+# Barristan Selmy Resigns (like a boss)
+country_event = {
+	id = britain.9
+	title = britain.9.t
+	desc = britain.9.d
+	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+
+	immediate = { set_country_flag = selmyis_gone } 
+	
+	option = {
+		name = britain.9.a
+		ENG = {
+			TAR_barristan = {
+				set_nationality = BOS
+			}
+		}
+
+	}
+}
+
+
+# Joffrey Passes Away
+country_event = {
+	id = britain.10
+	title = britain.10.t
+	desc = britain.10.d
+#	picture = GFX_report_event_chamberlain
+
+	is_triggered_only = yes
+	
+	immediate = { set_global_flag = joffrey_died }
+
+	option = {
+		name = britain.10.a
+		kill_country_leader = yes
+		hidden_effect = {
+			if = {
+				limit = { has_idea = ENG_king_edward }
+				remove_ideas = ENG_king_edward
+			}
+			IRE = { country_event = { id = ireland.8 } }
+			news_event = { id = news.15 days = 1 }
+		}
+	}
+}
+
+# Margery discovered
+country_event = {
+	id = britain.11
+	title = britain.11.t
+	desc = britain.11.d
+#	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+#	trigger = {
+#		is_faction_leader = yes
+#	}
+	
+#	option = {
+#		name = britain.11.a
+#		ai_chance = { factor = 70 }
+#	}
+	
+	option = {
+		name = britain.11.b
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { has_idea = margery }
+			remove_ideas = margery
+		}
+		IRE = { country_event = { id = ireland.9 } }
+		hidden_effect = {
+#			IRE = { country_event = { id = ireland.9 } }
+		}
+	}
+}
+
+# React to British call
+country_event = {
+	id = britain.12
+	title = britain.12.t
+	desc = britain.12.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.12.a
+		every_other_country = {
+				limit = {
+					NOT = { has_war_with = ENG }
+					is_in_faction = no
+					has_government = democratic
+					is_puppet = no
+					OR = {
+						capital_scope = {
+								is_on_continent = europe
+						}
+						capital_scope = {
+								is_on_continent = asia
+						}
+						num_of_factories > 30
+					}
+				}
+				country_event = britain.12
+			}
+#new event
+		ENG = { add_to_faction = ROOT }
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+	}
+	
+	option = {
+		name = britain.12.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# Who takes over Crownlands?
+country_event = {
+	id = britain.13
+	title = britain.13.t
+	desc = britain.13.d
+	picture = GFX_report_event_degaulle_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.13.a
+		ai_chance = { 
+			factor = 30
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		ENG = { complete_national_focus = uk_stark_takeover }
+
+		hidden_effect = {
+#			news_event = { id = news.175 }
+		}
+	}
+	
+	option = {
+		name = britain.13.b
+		ai_chance = { 
+			factor = 70
+		}
+		ENG = { complete_national_focus = uk_service_focus  }
+
+		hidden_effect = {
+			ENG = { country_event = { id = britain.9 days = 7 random_days = 7 } }
+#			news_event = { id = news.176 }
+		}
+	}
+}
+
+# Germany demands Slovenia from Yugoslavia // Starks want mercy for Eddard
+country_event = {
+	id = britain.14
+	title = britain.14.t
+	desc = britain.14.d
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+	
+	option = { # Abandon Yugoalvia // King can be merciful
+		name = britain.14.a
+		ai_chance = { factor = 50 }
+		FIN = { country_event = { id = stark.12 days = 6 } }
+#		YUG = {
+#			add_opinion_modifier = { target = ENG modifier = offered_support }
+#		}		
+	}
+	
+	option = { # Dont tell us what to do!
+		name = britain.14.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_in_faction_with = FIN
+			}
+		}
+		add_political_power = 150
+		set_global_flag = ned_stark_dead
+		hidden_effect = {
+			news_event = { id = news.263 }
+		}
+		FIN = {
+			add_opinion_modifier = { target = ENG modifier = royal_betrayal }
+		}
+	}	
+}
+
+# France leaves the Allies // Stark wants mercy for Ned
+country_event = {
+	id = britain.15
+	title = britain.15.t
+	desc = britain.15.d
+	picture = GFX_report_event_french_british_officers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.15.a
+		FRA = {
+			add_opinion_modifier = { target = ENG modifier = abandoned_yugoslavia }
+		}
+	}
+}
+
+# HandoftheKing dies
+country_event = {
+	id = britain.16
+	title = britain.16.t
+	desc = britain.16.d
+	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = ENG
+		date > 1936.2.19
+		has_start_date < 1936.02.02
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 7 }
+
+	immediate = {
+		hidden_effect = {
+#			set_country_flag = ENG_king_died
+		SWE = {
+			country_event = { days = 1 id = vale.1 }
+#			country_event = { days = 1 id = sweden.1 }
+		}
+#		ENG = {
+#			country_event = { days = 10 id = britain.24 }
+#		}
+		}		
+	}
+	
+	option = {
+		name = britain.16.a
+
+#		hidden_effect = {
+			FIN = {
+				country_event = { id = finland.10 days = 3 } 
+			}
+#		}
+
+#		effect_tooltip = {
+#			remove_ideas = george_v		
+#			add_ideas = ENG_king_edward
+#		}
+	}
+}
+
+# King abdicates // Burn old Idols and embrace Lord of Light
+country_event = {
+	id = britain.17
+	title = britain.17.t
+	desc = britain.17.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = britain.17.a
+		ai_chance = {
+			factor = 90
+		}
+			if = {
+				limit = { has_idea = faith_of_7 }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = faith_of_7
+				}
+			}
+			if = {
+				limit = { has_idea = old_gods }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = old_gods
+				}
+			}
+			if = {
+				limit = { has_idea = drowned_god }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = drowned_god
+				}
+			}
+			if = {
+				limit = { has_idea = harpylady }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = harpylady
+				}
+			}
+			if = {
+				limit = { has_idea = atheist }
+				swap_ideas = {
+					add_idea = lordof_light
+					remove_idea = atheist
+				}
+			}
+			set_country_flag = embraced_lordoflight
+	}
+	option = {
+		name = britain.17.b
+		add_political_power = -250
+		add_stability = 0.15
+	}
+}
+
+# RIP King Robbo, Choose King Regent
+country_event = {
+	id = britain.18
+	title = britain.18.t
+	desc = britain.18.d
+	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	trigger = { has_start_date < 1936.02.02 }
+
+	#mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = britain.18.a
+		ai_chance = {
+			factor = 90
+		}
+		effect_tooltip = {	
+			set_country_flag = ENG_king_died
+		}
+
+#		remove_ideas = george_v
+		add_political_power = -200
+		add_timed_idea = { idea = ENG_king_edward days = 365 }
+#		add_ideas = ENG_king_edward
+		kill_country_leader = yes
+
+
+		STR_eddard = {
+			promote_character = yes
+#			promote_character = liberalism
+		}
+
+#		create_country_leader = {
+#			name = "Lord Eddard Stark"
+#			desc = "POLITICS_NED_STARK_DESC"
+#			picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+#			expire = "1965.1.1"
+#			ideology = liberalism
+#			traits = {
+#				inexperienced_imperialist				
+#			}
+#		}
+		hidden_effect = {
+			news_event = { id = news.289 }
+#			if = {
+#				limit = { has_idea = robert_party }
+#				remove_ideas = robert_party
+#			}
+
+			HUN = { country_event = { id = hungary.8 days = 7 random_days = 7 } }
+		}
+	}
+
+#	option = {
+#		name = britain.18.b	
+#		effect_tooltip = {
+#			remove_ideas = george_v		
+#			add_ideas = ENG_king_edward
+#		}
+#		if = {
+#			limit = { has_idea = robert_party }
+#			remove_ideas = robert_party
+#		}
+#		remove_ideas = george_v
+#		add_ideas = ENG_king_edward
+#		kill_country_leader = yes
+#		hidden_effect = {
+#		set_politics = {
+			
+#			ruling_party = fascism			
+#			elections_allowed = no
+		
+#		}
+
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.55
+#		}
+#			news_event = { id = news.289 }
+#			HUN = {
+#			country_event = { days = 7 id = hungary.8 }
+#			}
+#		create_country_leader = {
+#			name = "Lord Eddard Stark"
+#			desc = "POLITICS_NED_STARK_DESC"
+#			picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+#			expire = "1965.1.1"
+#			ideology = liberalism
+#			traits = {
+				
+#			}
+#		}
+#		}
+#		add_ideas = ENG_king_edward_fascism
+#		hidden_effect = {
+#			news_event = { id = news.289 }
+#		}
+#	}
+}
+
+#Ned Stak is King
+
+country_event = {
+	id = britain.19
+	title = britain.19.t
+	desc = britain.19.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = britain.19.a
+
+		set_country_leader_name = {
+			ideology = democratic
+			name = "Eddard I Stark"
+		}
+
+		hidden_effect = {
+			set_politics = {
+			
+				ruling_party = democratic			
+				elections_allowed = no
+		
+			}
+
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.25
+			}
+			set_party_name = { ideology = democratic long_name = "House of Stark of Winterfell" name = "House Stark" }
+			news_event = { id = news.296 hours = 6 }
+#			country_event = { id = britain.20 days = 500  random = 100 }
+		}
+	}
+}
+
+#Free India Government Leads Revolt
+country_event = {
+	id = britain.20
+	title = britain.20.t
+	desc = britain.20.d
+	picture = GFX_report_event_indian_soldiers
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+#			has_completed_focus = uk_free_india_focus
+		}
+		RAJ = {
+			is_puppet_of = ENG
+			fascism > 0.3
+			has_civil_war = no
+		}
+	}
+
+	option = {
+		name = britain.20.a
+		hidden_effect = {
+
+	}
+
+}}
+
+#New army blood
+country_event = {
+	id = britain.21
+	title = britain.21.t
+	desc = britain.21.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.21.a
+
+		
+
+
+create_field_marshal = {
+	
+
+				name = "Stannis Baratheon"
+	
+
+
+				picture = "Portrait_Stannis_Baratheon.dds"
+	
+
+				traits = { offensive_doctrine war_hero }
+	
+
+		skill = 4
+
+}
+
+
+		create_navy_leader = {
+	
+				name = "Davos Seaworth"
+	
+				picture = "Portrait_Ser_Davos.dds"
+	
+				traits = { blockade_runner }
+	
+		skill = 4
+}
+	}
+
+#	option = {
+#		name = britain.21.b
+
+#	}
+}
+
+# Stanley Baldwin Resigns // King Robbo dies naturally
+country_event = {
+    id = britain.22
+    title = britain.22.t
+    desc = britain.22.d
+    picture = GFX_report_event_europe_funeral
+ 
+    fire_only_once = yes
+ 
+    trigger = {
+        original_tag = ENG
+        ENG = { has_country_leader = { ruling_only = yes name = "Robert I Baratheon" } }
+        ENG = { has_war = no }
+        date > 1938.12.27
+        has_start_date < 1936.01.02
+        NOT = { has_country_flag = robbo_died_naturally }
+    }
+
+    mean_time_to_happen = {
+        days = 7
+    }
+
+    option = {
+        name = britain.22.a
+		ai_chance = {
+			factor = 90
+		}
+
+#		add_ideas = ENG_king_edward
+		add_timed_idea = { idea = ENG_king_edward days = 365 }
+		kill_country_leader = yes
+
+		STR_eddard = {
+			promote_character = yes
+#			promote_character = liberalism
+		}
+
+#		create_country_leader = {
+#			name = "Lord Eddard Stark"
+#			desc = "POLITICS_NED_STARK_DESC"
+#			picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+#			expire = "1965.1.1"
+#			ideology = liberalism
+#			traits = {
+#				inexperienced_imperialist				
+#			}
+#		}
+       		set_country_flag = robbo_died_naturally
+		hidden_effect = {
+			news_event = { id = news.289 }
+			HUN = {
+			country_event = { days = 3 id = hungary.8 }
+			}
+		}
+      }
+}
+
+#RAJ gets to choose sides in Indian civil war // Lannisters protect Joffrey?
+country_event = {
+	id = britain.23
+	title = britain.23.t
+	desc = britain.23.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	#do we even have a choice?
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = britain.23.a
+		start_civil_war = {
+				ideology = fascism
+				size = 0.5
+		}
+	}
+
+	#no way
+	option = {
+		name = britain.23.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Bad Rumours about Joffrey
+country_event = {
+	id = britain.24
+	title = britain.24.t
+	desc = britain.24.d
+	picture = GFX_report_event_indian_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.24.a
+		effect_tooltip = {	
+			add_ideas = FRA_disjointed_government
+		}
+		hidden_effect = {
+			add_ideas = FRA_disjointed_government
+			news_event = { id = news.291 }
+			HOL = { country_event = { days = 5 id = netherlands.18 } }
+		}
+	}
+}
+
+# King Eddard /// UNUSED - Tyrells moving to take over?
+country_event = {
+	id = britain.25
+	title = britain.25.t
+	desc = britain.25.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+
+	#mean_time_to_happen = { days = 14 }
+
+	option = {
+		name = britain.25.a
+		ai_chance = {
+			factor = 90
+		}
+		hidden_effect = {
+		create_country_leader = {
+			name = "Eddard I Stark"
+			desc = "POLITICS_NED_STARK_DESC"
+			picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+#				inexperienced_imperialist				
+			}
+		}
+			news_event = { id = news.289 }
+		}
+	}
+}
+
+#What to do with parties
+country_event = {
+	id = britain.26
+	title = britain.26.t
+	desc = britain.26.d
+	picture = GFX_report_event_ROM_mistress
+
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.26.a
+		swap_ideas = {
+			add_idea = robert_party_support
+			remove_idea = robert_party
+		}
+
+	}
+
+	option = {
+		name = britain.26.b
+		swap_ideas = {
+			add_idea = robert_party_war
+			remove_idea = robert_party
+		}
+
+	}
+}

@@ -1,0 +1,26 @@
+units = {
+	division= {
+		name = "Black Ears"
+		location = 309 
+		division_template = "Vale Clanmens"
+		start_experience_factor = 1
+	}
+}
+
+units = {
+	division= {
+		name = "Moon Brothers"
+		location = 309 
+		division_template = "Vale Clanmens"
+		start_experience_factor = 1
+	}
+}
+
+units = {
+	division= {
+		name = "Stone Crows"
+		location = 309
+		division_template = "Vale Clanmens"
+		start_experience_factor = 1
+	}
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=208
+	name="STATE_208" # Saath
+	manpower = 1841819
+	resources={
+		oil=42
+	}
+	
+	state_category = city
+
+	history={
+		owner = QAT
+		victory_points = {
+			11186 15 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 4
+			air_base = 2
+			11186 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = QAT
+	}
+
+	provinces={
+		104 126 181 3120 6139 6197 9097 9098 11032 11080 11139 11186 
+	}
+}

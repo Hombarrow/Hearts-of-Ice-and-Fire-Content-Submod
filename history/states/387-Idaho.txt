@@ -1,0 +1,29 @@
+
+state={
+	id=387
+	name="STATE_387"
+	manpower = 145031
+	
+	state_category = rural
+	
+	resources={
+		chromium=1 # was: 2
+		tungsten=8 # was: 34
+	}
+
+	history={
+		owner = ANG
+		buildings = {
+			infrastructure = 3
+			12124 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ANG
+	}
+
+	provinces={
+		3781 9695 12124
+	}
+	
+}

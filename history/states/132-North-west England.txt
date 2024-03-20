@@ -1,0 +1,44 @@
+
+state={
+	id=132
+	name="STATE_132"
+
+	history={
+		owner = FIN
+		victory_points = {
+			9364 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6384 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = FIN
+		add_core_of = KAZ
+		1939.1.1 = {
+			buildings = {
+				dockyard = 1
+				industrial_complex = 2
+
+			}
+
+		}
+		1940.3.12 = {
+			owner = KAZ
+			controller = KAZ
+
+		}
+
+	}
+
+	provinces={
+		3205 4813 6318 6335 6384 7377 7778 9148 9269 9285 9364 9379 9397 10133 10189 12567 
+	}
+	manpower=667100
+	buildings_max_level_factor=1.000
+	state_category=town
+}

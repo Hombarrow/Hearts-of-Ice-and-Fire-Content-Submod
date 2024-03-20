@@ -1,0 +1,16 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_shae"
+		texturefile = "gfx/leaders/HOL/Portrait_Shae.dds"
+	}
+
+	spriteType = {
+		name = "GFX_TBlackwood"
+		texturefile = "gfx/leaders/FRA/Portrait_TBlackwood.dds"
+	}
+	
+}
+	
+	
+	

@@ -1,0 +1,36 @@
+
+state={
+	id=51
+	name="STATE_51"
+
+	history={
+		owner = HOL
+		victory_points = {
+			587 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 4
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = HOL
+		1939.1.1 = {
+			buildings = {
+				air_base = 6
+				radar_station = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		529 587 3444 3512 3547 6469 6570 8179 9443 9482 9522 10933 10939 11431 
+	}
+	manpower=3144743
+	buildings_max_level_factor=1.000
+	state_category=city
+}

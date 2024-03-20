@@ -1,0 +1,845 @@
+﻿division_template = {
+	name = "Jalaväediviisi"				# Infantry Division	
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalerie Brigada" 				# Cavalry Brigade
+	# Note: regiments within the brigade were battalion-sized units
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Blindata Regimentul" 				# Armor Regiment
+	# Note: 2nd regiment created and merged with motorized inf to create Armor Division in 1940
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }           # added motorized not to make it a death trap
+		motorized = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	######## LAND OOB ########
+	# Gyorshadtest ('Rapid Corps', actual corps raised in 1940)
+	# VI Hadtest
+	division= {	
+		name = "11. Gyalogdandár"
+		location = 11659
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "12. Gyalogdandár"
+		location = 11659
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# VII Hadtest
+	division= {	
+		name = "13. Gyalogdandár"
+		location = 6751
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "14. Gyalogdandár"
+		location = 6751
+		division_template = "Gyalogdandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "1. Huszár Dandár"
+		location = 9660
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2. Huszár Dandár"
+		location = 9660
+		division_template = "Huszár Dandár"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## 6a Armata ##
+	# VII Corpo d'Armata #
+	division= {	
+		name = "20a Divisione di Fanteria 'Friuli'"
+		location = 628
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		name = "25a Divisione di Fanteria 'Bologna'"
+		location = 628
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	# Corp 7 Armata
+	division = {
+		name = "Divizia 1 Infanterie"
+		location = 690
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Divizia 4 Infanterie"
+		location = 690
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Divizia 19 Infanterie"
+		location = 690
+		division_template = "Divizia Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "5 Cavalerie Brigada"
+		location = 818
+		division_template = "Cavalerie Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1 Cavalerie Brigada"
+		location = 9617
+		division_template = "Cavalerie Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1 Blindata Regimentul"
+		location = 9617
+		division_template = "Blindata Regimentul"
+		start_experience_factor = 0.3
+		force_equipment_variants = { gw_tank_equipment = { owner = "ROM" creator = "FRA" amount = 72 } }
+
+	}
+	division = {
+		name = "8 Cavalerie Brigada"
+		location = 6682
+		division_template = "Cavalerie Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "6 Cavalerie Brigada"
+		location = 9716
+		division_template = "Cavalerie Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "10-a 'Kirdzali' Pekhotna Divizija"
+		location = 6923  # Plovdiv
+		division_template = "Pekhotna Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	##### Eesti Ülemjuhatus #####
+	division = {
+		name = "I Jalaväediviisi"
+		location = 6405
+		division_template = "Jalaväediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+	division = {
+		name = "II Jalaväediviisi"
+		location = 11267
+		division_template = "Jalaväediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+	division = {
+		name = "III Jalaväediviisi"
+		location = 6313
+		division_template = "Jalaväediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+	##### Commando Superiore Africa #####
+	# Subordinate to Theatre #
+	division= {	
+		name = "7a Divisione CC.NN. 'Cirene'"
+		location = 9904
+		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2a Divisione Coloniale 'Libia'"
+		location = 9904
+		division_template = "Divisione Coloniale"		# Colonial militia, lower training and equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_equipment_factor = 0.5
+
+	}
+
+	# III Corpo d'Armata dell'A.O.I. #
+	division= {	
+		name = "27a Divisione di Fanteria 'Sila'"
+		location = 8043
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1a Divisione CC.NN. '23 Marzo'"
+		location = 8043
+		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
+		start_experience_factor = 0.2
+
+	}
+
+	# Corpo d'Armata Eritreo #
+	division= {	
+		name = "1a Divisione Coloniale 'Eritrea'"
+		location = 12766
+		division_template = "Divisione Coloniale"		# Colonial militia, lower training and equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+	}
+	division= {	
+		name = "2a Divisione Coloniale 'Eritrea'"
+		location = 12766
+		division_template = "Divisione Coloniale"		# Colonial militia, lower training and equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+	}
+
+	# Corpo d'Armata Libico #
+	division= {	
+		name = "29a Divisione di Fanteria 'Peloritana'"
+		location = 11014
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "1a Divisione Coloniale 'Libia'"
+		location = 2063
+		division_template = "Divisione Coloniale"		# Colonial militia, lower training and equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+	}
+	division= {	
+		name = "1a Divisione Coloniale 'Somalia'"
+		location = 2020
+		division_template = "Divisione Coloniale"		# Colonial militia, lower training and equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+	}
+	division= {	
+		name = "6a Divisione CC.NN. 'Tevere'"
+		location = 2063
+		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
+		start_experience_factor = 0.2
+	}
+
+
+	##### OLD ONES BACKUP #####
+	# Xe Corps d'Armée (Région Militaire in 1936) -- Strassbourg
+	division= {	
+		name = "20ème Division d'Infanterie"
+		location = 9503
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Strassbourg Div. d'Inf. de Forteresse"
+		location = 9503
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"
+		location = 549
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Div. d'Inf. Nord-Africaine"
+		location = 549
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	# XXe Corps d'Armée (Région Militaire in 1936) -- Nancy
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 3629
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Sarreguimines Div. d'Inf. de Forteresse"
+		location = 3629
+		division_template = "Brigade Coloniale" 	# Garrison unit, reserve equipment
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	##### Eastern Mediterranean Theatre #####
+	### Army: Mandat du Levant ### -- Beirut
+	division= {	
+		name = "Mandat du Levant"
+		location = 792
+		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	# Troupes de Madagascar
+	division= {	
+		name = "Troupes de Madagascar"	
+		location = 5222
+		division_template = "Brigade Coloniale" 	# Miltia unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_equipment_factor = 0.15
+
+	}
+
+
+	##### Far Seas Theatre ##### -- Dakar
+	division= {	
+		name = "Troupes de Sénégalais"
+		location = 4948
+		division_template = "Brigade Coloniale" 	# Miltia unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Troupes de Afrique Equatoriale Française"	
+		location = 5139
+		division_template = "Brigade Coloniale" 	# Miltia unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_equipment_factor = 0.15
+
+	}
+
+
+	##### Indochina Theatre #####
+	### Army Group: Troupes d'Indochine ### -- Saigon
+	division= {	
+		name = "Division de Tonkin"
+		location = 4401
+		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Division de Cochinchine-Cambodge"
+		location = 4075
+		division_template = "Division d'Infanterie" 	# Colonial unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	
+		name = "Brigade d'Annam-Laos"	
+		location = 7376
+		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
+		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	### NORTH AFRICA ###								
+	navy = {				
+		name = "Force d'Attaque Légère"			
+		base = 7096 
+		location = 7096 # Bizerte, Tunisia	
+		# 1e Division des Contre-Torpilleurs
+		ship = { name = "Lion" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		ship = { name = "Vauban" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		ship = { name = "Bison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		# 3e Division des Contre-Torpilleurs
+		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Chacal Class" } } }
+		# 6e Division des Contre-Torpilleurs
+		ship = { name = "Aigle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = EST version_name = "Aigle & Vauquelin Class" } } }
+	}				
+	navy = {				
+		name = "2ème Escadron Sous-Marins" 			
+		base = 7096 
+		location = 7096 # Oran			
+		# 4e Division des Sous-Marins
+		ship = { name = "Le Centaure" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "Redoutable Class" } } }
+		ship = { name = "Argo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "Redoutable Class" } } }
+		ship = { name = "Pascal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "Redoutable Class" } } }
+		ship = { name = "Henri Poincaré" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "Redoutable Class" } } }
+		# 12e Division des Sous-Marins
+		ship = { name = "Orion" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Ondine" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Méduse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Amphitrite" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Oréade" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "La Psyché" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		# 14e Division des Sous-Marins
+		ship = { name = "Diane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Ariane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Eurydice" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Danaé" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+	}				
+	navy = {				
+		name = "6ème Escadron Sous-Marins"			
+		base = 7096 
+		location = 7096 # Bizerte, Tunisia	
+		# 9e Division des Sous-Marins
+		ship = { name = "Caïman" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Morse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Souffleur" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		# 10e Division des Sous-Marins
+		ship = { name = "Phoque" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Espadon" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		ship = { name = "Dauphin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST } } }				
+		# 17e Division des Sous-Marins
+		ship = { name = "Aréthuse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "Atalante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "La Vestale" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+		ship = { name = "La Sultane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = EST version_name = "630 Series" } } }
+	}	
+
+	##### No Naval OOB -- 2 SSs in 1937 #####
+	navy = {				
+		name = "Nederlands-Indië Onderzeeboot Smaldeel"			
+		base = 4608
+		location = 4608  # Soerbaja
+		ship = { name = "HrMs K-VII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		ship = { name = "HrMs K-VIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		ship = { name = "HrMs K-X" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		# I Onderzeeboot Divisie
+		ship = { name = "HrMs K-XVII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XVIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+		# II Onderzeeboot Divisie
+		ship = { name = "HrMs K-IX" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		ship = { name = "HrMs K-XI" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		ship = { name = "HrMs K-XII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		ship = { name = "HrMs K-XIII" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL } } }
+		# III Onderzeeboot Divisie
+		ship = { name = "HrMs K-XIV" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XV" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+		ship = { name = "HrMs K-XVI" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+	}
+	##### NAVAL UNITS #####
+	### 1st FLEET ###
+	navy = {					
+		name = "1a Squadra Navale"				
+		base = 925
+		location = 925 # Taranto		
+		ship = { name = "RM Zara" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
+		ship = { name = "RM Gorizia" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
+		ship = { name = "RM Fiume" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
+		# 9a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Nicoloso da Recco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Emanuele Pessagno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Luca Tarigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Antoniotto Usodimare" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+	}					
+	navy = {					
+		name = "4a Squadra Navale"				
+		base = 925
+		location = 925 # Taranto			
+		ship = { name = "RM Luigi Cadorna" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		ship = { name = "RM Armando Diaz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		ship = { name = "RM Alberico da Barbiano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		ship = { name = "RM Alberto da Giussano" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		# 6a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Bettino Ricasoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giovanni Nicotera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "5a Squadra Navale"				
+		base = 925
+		location = 925 # Taranto			
+		ship = { name = "RM Caio Duilio" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ITA } } }				
+		ship = { name = "RM Andrea Doria" definition = battleship equipment = { battleship_1 = { amount = 1 owner = ITA } } }				
+		# 7a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Dardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Freccia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Saetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Strale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		# 8a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Baleno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Folgore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Fulmine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Lampo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+	}				
+	### 2nd FLEET ###
+	navy = {					
+		name = "2a Squadra Navale"				
+		base = 6973
+		location = 6973 # La Spezia		
+		ship = { name = "RM Giovanni dalle Bande Nere" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		ship = { name = "RM Bartolomeo Colleoni" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Giussano Class" } } }
+		# 10a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Maestrale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+		ship = { name = "RM Grecale" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+		ship = { name = "RM Libeccio" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+		ship = { name = "RM Scirocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+	}										
+	navy = {					
+		name = "6a Squadra Navale"				
+		base = 6973
+		location = 6973 # La Spezia		
+		ship = { name = "RM Pola" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA version_name = "Zara Class" } } }
+		# 12a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Antonio Pigafetta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Alvise da Mosto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Giovanni da Verrazzano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Nicolò Zeno" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+	}					
+	navy = {					
+		name = "7a Squadra Navale"				
+		base = 6973
+		location = 6973 # La Spezia		
+		ship = { name = "RM Emanuele Filiberto Duca d'Aosta" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
+		ship = { name = "RM Muzio Attendolo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
+		ship = { name = "RM Raimondo Montecuccoli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA version_name = "Montecuccoli Class" } } }
+	}
+					
+	navy = {					
+		name = "Squadra di Taranto"				
+		base = 11837
+		location = 11837 # Taranto				
+		ship = { name = "RM San Giorgio" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = ITA } } }				
+		ship = { name = "RM Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA } } }				
+		ship = { name = "RM Bari" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = ITA } } }				
+		# 2a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Espero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Borea" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Zeffiro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Ostro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		# 6a Squadriglia Torpedindiere
+		ship = { name = "RM Rosolino Pilo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giuseppe Missori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Francesco Stocco" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giuseppe Sirtori" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 7a Squadriglia Torpedindiere
+		ship = { name = "RM Angelo Bassini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Enrico Cosenz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giacomo Medici" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Nicola Fabrizi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# Squadriglia Cacciatorpedindiere di Taranto
+		ship = { name = "RM Carlo Mirabello" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Augusto Riboty" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "Comando Navale Napoli"				
+		base = 819
+		location = 819 # Naples
+		# 3a Squadriglia Torpedindiere
+		ship = { name = "RM Generale Marcello Prestinari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Generale Antonio Cantore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giuseppe La Masa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giacinto Carini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 4a Squadriglia Torpedindiere
+		ship = { name = "RM Calatafimi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Castelfidardo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Curtatone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Monzambano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "Comando Navale Sardegna"				
+		base = 6891
+		location = 6891 # La Maddelena, Sardina
+		# 2a Squadriglia Torpedindiere
+		ship = { name = "RM Generale Achille Papa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Generale Carlo Montanari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Generale Antonino Cascino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Generale Antonio Chinotto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 9a Squadriglia Torpedindiere
+		ship = { name = "RM Antonio Mosto" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Ippolito Nievo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Fratelli Cairoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "Comando Navale Sicilia"				
+		base = 4159 
+		location = 4159 # Messina			
+		# 1a Squadriglia Torpedindiere
+		ship = { name = "RM Palestro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Confienza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM San Martino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Solferino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 5a Squadriglia Torpedindiere
+		ship = { name = "RM Giuseppe La Farina" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Simone Schiaffino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giuseppe Dezza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Giuseppe Cesare Abba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "Comando Navale Egeo"				
+		base = 10007 
+		location = 10007 # Rhodes		
+		# 4a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Francesco Crispi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Quintino Sella" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 8a Squadriglia Torpedindiere
+		ship = { name = "RM Astore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+		ship = { name = "RM Spica" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+	}
+	navy = {					
+		name = "1° Gruppo Sommergibili"				
+		base = 6973
+		location = 6973 # La Spezia		
+		# 11a Squadriglia Sommergibili
+		ship = { name = "RM Pietro Calvi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Giuseppe Finzi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Ettore Fieramosca" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		# 12a Squadriglia Sommergibili
+		ship = { name = "RM Glauco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Otaria" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		# 13a Squadriglia Sommergibili
+		ship = { name = "RM Rubino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Ondina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		# 14a Squadriglia Sommergibili
+		ship = { name = "RM H1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }
+		ship = { name = "RM H2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }
+		ship = { name = "RM H4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }
+		ship = { name = "RM H6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }
+		ship = { name = "RM H8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }
+	}					
+	navy = {					
+		name = "2° Gruppo Sommergibili"				
+		base = 819
+		location = 819 # Naples
+		# 21a Squadriglia Sommergibili
+		ship = { name = "RM Jalea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Jantina" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Ametista" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Zaffiro" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		# 22a Squadriglia Sommergibili
+		ship = { name = "RM Diamante" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Topazio" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Galatea" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Nereide" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+	}					
+	navy = {					
+		name = "3° Gruppo Sommergibili"				
+		base = 4159 
+		location = 4159 # Messina			
+		# 31a Squadriglia Sommergibili
+		ship = { name = "RM Vettor Pisani" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Giovanni Bausan" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Marcantonio Colonna" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Des Geneys" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		# 32a Squadriglia Sommergibili
+		ship = { name = "RM Fratelli Bandiera" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Luciano Manara" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Ciro Menotti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Santorre Santarosa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		# 33a Squadriglia Sommergibili
+		ship = { name = "RM Goffredo Mameli" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Pier Capponi" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Tito Speri" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Giovanni da Procida" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+	}					
+	navy = {					
+		name = "4° Gruppo Sommergibili"				
+		base = 11837
+		location = 11837 # Taranto			
+		# 41a Squadriglia Sommergibili
+		ship = { name = "RM Balilla" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Antonio Sciesa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Enrico Toti" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+		ship = { name = "RM Domenico Millelire" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA } } }			
+	}					
+	navy = {					
+		name = "6° Gruppo Sommergibili"				
+		base = 10007 
+		location = 10007 # Rhodes		
+		# 61a Squadriglia Sommergibili
+		ship = { name = "RM Sirena" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Argonauta" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Fisalia" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Smeraldo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Naiade" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+	}					
+	navy = {					
+		name = "7° Gruppo Sommergibili"				
+		base = 6891
+		location = 6891 # La Maddelena, Sardina
+		# 71a Squadriglia Sommergibili
+		ship = { name = "RM Medusa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Anfitrite" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+	}					
+
+	### AFRICA ###					
+	navy = {					
+		name = "Comando Navale Libico"				
+		base = 1130 
+		location = 1130 # Tobruk			
+		# 1a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Aquilone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Euro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Nembo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		ship = { name = "RM Turbine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+	}					
+	navy = {					
+		name = "Comando Navale Mar Rosso"				
+		base = 12766 
+		location = 12766 # Asmara, Eritrea		
+		# 3a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Francesco Nullo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }
+		ship = { name = "RM Nazario Sauro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Cesare Battisti" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Daniele Manin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 5a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Leone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Pantera" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Tigre" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		# 5a Squadriglia Torpedindiere de Mar Rosso
+		ship = { name = "RM Giovanni Acerbi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+		ship = { name = "RM Vincenzo Giordano Orsini" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ITA } } }	
+	}					
+	navy = {					
+		name = "5° Gruppo Sommergibili"				
+		base = 1130 
+		location = 1130 # Tobruk			
+		# 51a Squadriglia Sommergibili
+		ship = { name = "RM Delfino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Narvalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Squalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Tricheco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+	}					
+	navy = {					
+		name = "8° Gruppo Sommergibili"				
+		base = 12766 
+		location = 12766 # Asmara, Eritrea		
+		# 81a Squadriglia Sommergibili
+		ship = { name = "RM Luigi Settembrini" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Ruggiero Settimo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Bandiera Class" } } }
+		ship = { name = "RM Salpa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "RM Serpente " definition = submarine equipment = { submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } }
+		ship = { name = "HrMs Van Ghent" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }		
+		ship = { name = "HrMs Evertsen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }		
+		ship = { name = "HrMs Kortenaer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }		
+		ship = { name = "HrMs Piet Hein" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EST"
+		}
+		requested_factories = 1
+		progress = 0.88
+		efficiency = 100
+	}
+
+		### Under Contruction Notes ###
+		# BB: RM Conte di Cavour (BB_2: Caio Duilio Class) (Refit, Recomm. 1-Jun, 1937) 	
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.20
+			amount = 1
+		}
+		# BB: RM Giulio Cesare (BB_2: Caio Duilio Class) (Refit, Recomm. 3-Jun, 1937)
+		add_equipment_production = {
+			equipment = {
+				type = battleship_2
+				creator = "ITA" 
+			}
+			requested_factories = 1
+			progress = 0.20
+			amount = 1
+		}
+		# CL: RM Eugenio di Savoia (Montecuccoli variant) (Comm. 16-Jan, 1936)
+		add_equipment_production = {
+			equipment = {
+				type = light_cruiser_1
+				creator = "ITA"
+				version_name = "Montecuccoli Class"
+			}
+			requested_factories = 1
+			progress = 0.95
+			amount = 1
+		}
+		# DD: Maestrale variant (x2) ("Perseo" "Sirio")
+		add_equipment_production = {
+			equipment = {
+				type = destroyer_1
+				creator = "ITA"
+				version_name = "Maestrale Class"
+			}
+			requested_factories = 2
+			progress = 0.70
+			amount = 2
+		}
+		# SS: Sirena variant (x1) ("Enrico Tazzoli")
+		add_equipment_production = {
+			equipment = {
+				type = submarine_1
+				creator = "ITA"
+				version_name = "Sirena Class"
+			}
+			requested_factories = 1
+			progress = 0.50
+			amount = 1
+		}
+}

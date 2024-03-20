@@ -1,0 +1,66 @@
+﻿###########################
+# Arryn Events
+###########################
+
+add_namespace = sweden
+
+# Rip Jon Arryn
+country_event = {
+	id = sweden.1
+	title = sweden.1.t
+	desc = sweden.1.d
+	picture = GFX_report_event_german_parade_paris
+	
+	is_triggered_only = yes
+	
+	option = { # Lysa Arryn rules
+		name = sweden.1.a
+		ai_chance = { factor = 10 }
+		kill_country_leader = yes
+		hidden_effect = {
+		create_country_leader = {
+			name = "Yohn Royce"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			picture = "gfx/leaders/SWE/Portrait_Yohn_Royce.dds"
+	
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			
+			ruling_party = neutrality			
+			elections_allowed = no
+		
+		}
+
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.55
+		}
+		}
+
+	}
+
+	option = { # Royce rules
+		name = sweden.1.b
+		ai_chance = { factor = 90 }
+		kill_country_leader = yes
+		hidden_effect = {
+		create_country_leader = {
+			name = "Yohn Royce"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			picture = "gfx/leaders/SWE/Portrait_Yohn_Royce.dds"
+	
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				
+			}
+		}
+		}
+
+	}
+}

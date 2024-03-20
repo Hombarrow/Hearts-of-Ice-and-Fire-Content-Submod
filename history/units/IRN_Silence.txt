@@ -1,0 +1,17 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+
+	navy = {					
+		name = "Ironborn Fleet"				
+		base = 11846
+		location = 11846 # Pyke
+		ship = { name = "Great Kraken" definition = battleship equipment = { SH_battleship_1 = { amount = 1 owner = ROM } } }				
+		ship = { name = "RM Antonio da Noli" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ROM } } }
+		ship = { name = "RM Ugolino Vivaldi" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ROM } } }
+		ship = { name = "RM Lanzerotto Malocello" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ROM } } }
+		ship = { name = "RM Leone Pancaldo" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = ROM } } }
+	}
+				
+}
+

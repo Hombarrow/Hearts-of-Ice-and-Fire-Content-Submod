@@ -1,0 +1,44 @@
+
+state={
+	id=99
+	name="STATE_99"
+	resources={
+		aluminium=10.000
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			6364 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			air_base = 2
+			394 = {
+				naval_base = 3
+
+			}
+			6364 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = FRA
+		add_core_of = SLV
+		1940.3.12 = {
+			owner = HOL
+			controller = HOL
+
+		}
+
+	}
+
+	provinces={
+		316 332 394 399 897 3206 3260 3277 3325 3341 3374 3608 3899 6235 6364 7611 11251 11567 11571 
+	}
+	manpower=2672235
+	buildings_max_level_factor=1.000
+	state_category=town
+}

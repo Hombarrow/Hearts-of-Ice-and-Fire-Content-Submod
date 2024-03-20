@@ -1,0 +1,300 @@
+﻿capital = 2
+
+oob = "ROM_1936"
+
+set_research_slots = 3
+
+recruit_character = IRN_euron
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	marines = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	early_fighter = 1
+	basic_train = 1
+
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		cruiser_submarines = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+
+
+
+}
+
+#	add_ideas = neutrality_idea
+	add_ideas = IRN_pyke_treaty
+	add_ideas = islanders
+	add_ideas = drowned_god
+	add_ideas = indifferent_other
+
+set_convoys = 80
+1939.1.1 = {
+	
+	remove_ideas = neutrality_idea
+
+	add_political_power = 198
+			complete_national_focus = IRN_theons_return
+			complete_national_focus = IRN_demand_iron_price_from_lannisters
+			complete_national_focus = IRN_demand_iron_price_from_starks
+			complete_national_focus = IRN_proclaim_ironborn_empire
+			complete_national_focus = IRN_eurons_returns
+			complete_national_focus = IRN_demand_iron_price_from_starks
+			complete_national_focus = IRN_lessons_of_balon_rebellion
+			complete_national_focus = IRN_develop_land_doctrine
+			complete_national_focus = IRN_renounce_pyke_treaty
+
+	oob = "ROM_1939"
+	set_technology = {
+		gwtank = 1
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		basic_light_tank = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		tech_recon = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		basic_submarine = 1
+
+		#doctrines
+		#Air
+		force_rotation = 1
+		fighter_baiting = 1
+		
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+#		oil_plant = 1
+#		improved_oil_plant = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 18
+	communism = 2
+	neutrality = 60
+}
+
+
+1939.1.1 = {
+	set_politics = {		
+		ruling_party = neutrality
+		last_election = "1939.7.15"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		democratic = 20
+		fascism = 35
+		communism = 2
+		neutrality = 43
+	}
+
+
+}
+
+create_country_leader = {
+	name = "Victarion Greyjoy"
+	desc = "POLITICS_OCTAVIAN_GOGA_DESC"
+	picture = "Portrait_Romania_Octavian_Goga.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Balon Greyjoy"
+	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
+	picture = "gfx/leaders/ROM/Portrait_Balon_Greyjoy.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yara Greyjoy"
+	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
+	picture = "gfx/leaders/ROM/Portrait_Yara_Greyjoy.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Theon Greyjoy"
+	desc = "POLITICS_ARMAND_CALINESCU_DESC"
+	picture = "gfx/leaders/ROM/Portrait_Theon_Greyjoy.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+#create_country_leader = {
+#	name = "Euron Greyjoy"
+#	desc = "POLITICS_ION_ANTONESCU_DESC"
+#	picture = "gfx/leaders/ROM/Portrait_Euron_Greyjoy.dds"
+#	expire = "1965.1.1"
+#	ideology = fascism_ideology
+#	traits = {
+		#
+#	}
+#}
+
+create_field_marshal = {
+	name = "Balon Greyjoy"
+	picture = "Portrait_Balon_Greyjoy.dds"
+	traits = { offensive_doctrine old_guard }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Ralf Kenning"
+	picture = "Portrait_Ralf_Kenning.dds"
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Dagmer Cleftjaw"
+	picture = "Portrait_General_Cleftjaw.dds"
+	traits = { hill_fighter }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Harrag Sheepstealer"
+	picture = "Portrait_General_Sheepstealer.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Yara Greyjoy"
+	picture = "Portrait_Yara_Greyjoy2.dds"
+	traits = { spotter }
+	skill = 3
+}
+
+
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Regele Ferdinand Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 1
+		destroyer_engine_upgrade = 3
+		ship_ASW_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Navigatori Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 2
+		destroyer_engine_upgrade = 1
+		ship_ASW_upgrade = 1
+		ship_anti_air_upgrade = 2
+	}
+}

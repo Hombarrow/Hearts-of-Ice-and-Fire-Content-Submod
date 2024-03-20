@@ -1,0 +1,334 @@
+﻿l_english:
+ asshai.1.t:0 "Mysterious White Wizard reveals himself"
+ 
+asshai.1.d:0 "While our soldiers were searching through the mysterious land of Isengard they stumbled across a dark tower. When they approached it they were greeted by an elderly man, dressed in all white, and calling himself 'Saruman the White'. He went on to call himself a wizard and that he knows many technologies that could be of use to us. He even offered to join our cause."
+ 
+asshai.1.a:0 "Welcome Saruman."
+
+asshai.1.b:0 "We don't need him!"
+ 
+ireland.4.t:0 "Lady Margaery arrives in King's Landing"
+ 
+ireland.4.d:0 "The lady of Highgarden and wife of prince Tommen Baratheon has declared that she would like spend an extended time in the capital as a way to 'mingle with the common folk'. So far things seem to be progressing very well."
+ 
+ireland.4.a:0 "Now we just need to give her a little popularity boost."
+
+ireland.5.t:0 "Lady Margaery arrives in King's Landing"
+ 
+ireland.5.d:0 "The lady of Highgarden and wife of prince Tommen Baratheon has declared that she would like spend an extended time in the capital as a way to mingle with the common folk. Though the Queen Mother has been noticeably suspicious of her, most seem happy with her presence. This is especially true of Prince Joffrey who is already keen on teaching her how to use a crossbow."
+ 
+ireland.5.a:0 "She is most welcome."
+
+ireland.6.t:0 "Lady Margaery visits Children's Orphanage"
+ 
+ireland.6.d:0 "While the war rages on, many children are losing their parents to this conflict. For this the lady of Highgared decided to visit several orphanages and donated countless crates of toys and food for the children. Acording to a news report, she is the first member of the royal family to visit such an institution and that has made her immensely popular with the locals."
+ 
+ireland.6.a:0 "She is as kind as they come."
+
+ireland.7.t:0 "Lady Margaery donates Food to the Poor"
+ 
+ireland.7.d:0 "It began when the lady of Highgarden asked that the leftovers from the royal dinner be donated to the poorest citizens. She did this for several days in a row, but then something happened to her. While walking through the market she was greeted by several peasents who got down on their knees to thank her. Many more followed suit. Lady Margaery was so humbled by this that she has decided to open a 'Peasant Diner' where the poorest folk will be able to eat free of charge and not just leftovers."
+ 
+ireland.7.a:0 "She is a saint."
+
+ireland.8.t:0 "Mission Acomplished!"
+ 
+ireland.8.d:0 "It would appear that poor King Joffrey was poisoned at his feast. Sadly he did not have any heirs as he was not married. Fortunately for the Royal family, Prince... King Tommen is married and his wife will soon be crowned Queen."
+ 
+ireland.8.a:0 "Perfect."
+
+ireland.9.t:0 "[IRE.GetLeader] Imprissoned!"
+ 
+ireland.9.d:0 "Our plan to poison the King has failed and now Lady Margaery has been taken captive and awaiting trial. Fortunately, she denied that any other members of House Tyrell were involved. For now it appears to be working and, with a bit of luck, we might be able to set her free."
+ 
+ireland.9.a:0 "Was this a bad idea?"
+
+italy.18.t:0 "The Fate of Hornwood" 
+italy.18.desc:0 "Our goal has, finally, been achieved. Hornwood is ours. Should we force them to bend the knee? Or, perhaps, they can serve as a loyal ally?"
+italy.18.a:0 "Bend the knee!"
+italy.18.b:0 "[ARM.GetName] will be our loyal bannermen."
+
+italy.19.t:0 "The Fate of Widow's Point" 
+italy.19.desc:0 "Our recent conquest of Hornwood was doubly succesfull, with the capture of Widow's Watch. Having control of this area will greatly boost our naval potential. But it can also serve as a useful ally."
+italy.19.a:0 "Bend the knee!"
+italy.19.b:0 "[EST.GetName] will be our loyal bannermen."
+
+ italy.20.t:0 "Non-Aggression Pact with [ITA.GetNameDef]?"
+ italy.20.desc:0 "After years of tensions between our two nations, [ITA.GetLeader] has now opened negotiations for a Non-Aggression Pact. The advantages to us are clear, but what should concern us is the advantages it will give to the [From.GetAdjective]s. Can we trust them not to stab us in the back in the future?"
+ italy.20.a:0 "A temporary truce will do... for now."
+ italy.20.b:0 "Denying them any advantage takes precedence!"
+ italy.21.t:0 "[FIN.GetName] Accepts Non-Aggression Pact"
+ italy.21.desc:0 "[FIN.GetLeader] has formally accepted our offer of a Non-Aggression Pact."
+ italy.21.a:0 "They play right into our hands."
+ italy.22.t:0 "[FIN.GetLeader] Refuses Non-Aggression Pact"
+ italy.22.desc:0 "For whatever reason, [FIN.GetName] has rejected our offer of a Non-Aggression Pact."
+ italy.22.a:0 "We need eyes on the back of our heads."
+
+ italy.23.t:0 "Congratulations father..."
+ italy.23.desc:0 "Did Old Roose really think that Lord Ramsay wouldn't see through his intentions? Marries a Frey girl and immediately gets to work on an heir? Such foolishness deserves death. Now, let's make sure Lady Walda and her son find their way to the kennels..."
+ italy.23.a:0 "Ramsay did always prefer being a lonely child..."
+
+ italy.24.t:0 "Hoorah! A Royal Child is Born!"
+ italy.24.desc:0 "Great news! Lord Roose and Lady Walda have had their first child: a healthy boy! Many are already speculating on his name; and it is only a matter of time before he is officially named heir to the Dreadfort. Allthough, these news are a bit awkward for Lord Ramsay, who undoubtedly was hoping to inherit the Bolton lands for himself. For now, it seems like he will not inherit the Dreadfort after all..."
+ italy.24.a:0 "Will Ramsay allow this?"
+
+ italy.25.t:0 "A New Heir has been Declared!"
+ italy.25.desc:0 "After a surprisingly long deliberation, Lord Roose has officially named Lady Walda's son as his trueborn heir. His bannermen and house guard have already sworn allegiance to the infant Lord. Even Lord Ramsay seemed somewhat infatuated by his new baby brother.They delay was most likely due to the naming of the new Lord. After consulting with his trusty advisors, [ITA.GetLeader] has decided that, since this boy represents the next line of Bolton royalty, then he should pick up where the old line of the Red Kings ended..."
+ italy.25.a:0 "Welcome Lord Rogar Bolton!"
+
+netherlands.18.t:0 "Slanderous rumors spreading further!"
+ 
+netherlands.18.d:0 "We should've known better than to trust the common rabble to keep their mouth shut. Ever since Ned Stark started looking into the hair color of the Baratheon children, all sorts of rumors have been spreading. Not only do they question Joffrey, Tommen and Myrcella's parentage, but they even dare imply that both Lannister children, Jaime and Cersei, are having an affair./n/nThese rumors are really hurting our family's prestige, and since we cannot cut the tongue out of every wisecrack peasant, we need to find a more permanent solution."
+ 
+netherlands.18.a:0 "We need to put these ugly rumors to rest!"
+
+
+slaversbay.1.t:0 "Form Alliance against [SOV.GetName]?"
+ 
+slaversbay.1.d:0 "[SOV.GetLeader] has declared war on the slave cities and it is clear that she intends to not only put an end to the slave trade, but the cities' independence as well. We cannot allow a mere outsider to threaten our way of life. We must rally the other cities to our cause."
+ 
+slaversbay.1.a:0 "Agreed, [SOV.GetLeader] is a danger to us all."
+
+slaversbay.1.b:0 "No. This beggar queen is no threat."
+
+slaversbay.2.t:0 "[From.GetName] Offers Alliance"
+ 
+slaversbay.2.d:0 "In light of the recent aggression by [SOV.GetName], the leaders of [EGY.GetNameDef] have come forth with an alliance proposal. It is clear that [SOV.GetLeader] aims to conquer all of Slaver's Bay and should not be allowed to do so."
+ 
+slaversbay.2.a:0 "Yes. We need to stand together."
+
+slaversbay.2.b:0 "No. We can do this on our won."
+
+slaversbay.3.t:0 "[From.GetName] Agree!"
+ 
+slaversbay.3.d:0 ""
+ 
+slaversbay.3.a:0 "United we stand!"
+
+slaversbay.4.t:0 "[From.GetName] Refuse!"
+ 
+slaversbay.4.d:0 ""
+ 
+slaversbay.4.a:0 "They will change their minds. Eventually."
+
+
+stark.1.t:0 "[FIN.GetName] Demands the Three Sisters"
+ 
+stark.1.d:0 "Stating that the situation in the world requires a revisiting of former issues, [FIN.GetLeader] has come forward with an ultimatum that demands we cede to them the three Sister Islands otherwise it could lead to a war between our two nations."
+ 
+stark.1.a:0 "They can come get them if they want them!"
+
+stark.1.b:0 "Too much blood has been shed over those three islands."
+stark.2.t:0 "[From.GetName] Refuse"
+ 
+stark.2.d:0 "[SWE.GetName] has stated that there will be no handing over of anything and if the leaders of [FIN.GetNameDef] feel they stand a chance against the Knights of the Vale, then they are more than welcome to try."
+ 
+stark.2.a:0 "They will live to regret this!"
+
+stark.2.b:0 "Perhaps it is not too late to back down..."
+
+stark.3.t:0 "[From.GetName] Agree!"
+ 
+stark.3.d:0 ""
+ 
+stark.3.a:0 "Starks and Manderlys rejoice!"
+
+
+leng.1.t:0 "The King is Dead, Long Live the Queen!"
+ 
+leng.1.d:0 "Tragically, [SHX.GetLeader] passed away last night after a sudden bout with pneumonia. Worse off, the King died before he had the chance to have a son. With no other members of his family alive now, the only person who could take the crown is his only daughter - Princess Ahim of Famille."
+ 
+leng.1.a:0 "Welcome Our New Queen!"
+
+leng.1.b:0 "Bugger this!"
+
+leng.2.t:0 "Love or Duty?"
+ 
+leng.2.d:0 "While [SHX.GetLeader] has only been queen for a short time there have already been problems, most notably around her future husband and King. For centuries the Leng and Lengii have had an agreement that the royal family should have a member of both ethnicites to maintain representation. Queen Ahim was never meant to be queen though and as such she was engaged to a nobleman's family of Leng descent. Though the new circumstances should change that, his family have already made overtues to her majesty to keep the engagement going and even promise huge political dividents if she does."
+ 
+leng.2.a:0 "The engagement stays. The Lengii will have to accept that."
+
+leng.2.b:0 "We need to uphold tradition."
+
+leng.3.t:0 "Lengii demand Independence"
+ 
+leng.3.d:0 "Following Queen [SHX.GetLeader]'s decision to not marry a husband of Lengii descent, the natives of the island have risen up with demands of independence. They say that the old agreement is no longer valid and if their demands aren't met then there shall once again be boodshed on the island."
+ 
+leng.3.a:0 "No independence!"
+
+leng.3.b:0 "We must avoid further bloodshed."
+
+leng.4.t:0 "Assasination attempt on [SHX.GetLeader]'s life!"
+ 
+leng.4.d:0 "."
+ 
+leng.4.a:0 "Round up the conspirators!"
+
+
+leng.5.t:0 "Lengii rise up in Open Rebellion!"
+ 
+leng.5.d:0 "."
+ 
+leng.5.a:0 "One way or another, we will bring them back to the fold!"
+
+
+leng.6.t:0 "Intervene in Leng war?"
+ 
+leng.6.d:0 "."
+ 
+leng.6.a:0 "Support the Royalists."
+
+leng.6.b:0 "Support the Natives."
+
+leng.6.c:0 "We have bigger problems."
+
+
+leng.7.t:0 "Intervene in Leng?"
+ 
+leng.7.d:0 "."
+ 
+leng.7.a:0 "We can't allow [CHI.GetNameDef] to have a foothold there."
+
+leng.7.b:0 "This doesn't concern us."
+
+leng.8.t:0 "[From.GetName] declare for Us!"
+ 
+leng.8.d:0 "."
+ 
+leng.8.a:0 "True friends!"
+
+
+
+wardennorth.1.t:0 "Northern Exterior Secured"
+ 
+wardennorth.1.d:0 "All Northern lords from the exterior have now declared for [Root.GetLeader]."
+ 
+wardennorth.1.a:0 "Great."
+
+wardennorth.2.t:0 "Winterfell Secured"
+ 
+wardennorth.2.d:0 "The new capital is now under our firm control. No one can ever question that [Root.GetLeader] is the true Warden of the North."
+ 
+wardennorth.2.a:0 "Great."
+
+
+nightwatch.2.t:0 "Craster begins Negotiations"
+ 
+nightwatch.2.d:0 "[CAN.GetLeader] of the Night's Watch has come to us with a proposition that would see us become part of their land."
+ 
+nightwatch.2.a:0 "Why is one of his brothers drinking in my presence!?"
+
+nightwatch.2.b:0 "[CAN.GetLeader] is prettier than half my daughters. He's trustworthy."
+
+
+nightwatch.3.t:0 "Craster Accepts Annexation"
+ 
+nightwatch.3.d:0 "."
+ 
+nightwatch.3.a:0 "Excellent."
+
+
+nightwatch.4.t:0 "Karl Tanner calls Craster a bastard"
+ 
+nightwatch.4.d:0 "'You are a bastard. A daughter-f*cking, wildling bastard.'\n\nBefore Craster could even get close to this man, he was shot dead on the spot. With no other leader around, Karl Tanner has taken control of Craster's keep."
+ 
+nightwatch.4.a:0 "Detain all Night's Watch folk who are opposed to this."
+
+
+nightwatch.5.t:0 "Mutiny at Craster's Keep!"
+ 
+nightwatch.5.d:0 "Craster is dead! Several brothers of the Night's Watch were also murdered when a group of mutinies, led by Karl Tanner, took control of Craster's keep. [CAN.GetLeader] himself was greatly injured in the mutiny and doctors are worried he might not survive."
+ 
+nightwatch.5.a:0 "How can anyone take up arms against his brothers?"
+
+
+gotintro.1.t:0 "The Order of the Night's Watch"
+ 
+gotintro.1.d:0 "According to legend, the Night's Watch was founded 8,000 years ago with the goal of protecting the Seven Kingdoms from threats beyond their northern border, such as White Walkers, wildlings and giants. They were gathered around the Wall, a 700 foot tall and 300 mile long ice barrier which separates the lands of the north.\n\nThose days are long gone however. In recent decades the institution has fallen into disrepute and is largely ignored by the throne. It is severely undermanned and dwindling numbers have led to all but three of the Wall's nineteen castles being abandoned. The Wall, one of the natural wonders of the world has long since melted away and left only two large lakes in his place.\n\nYet, there is still hope. The Night's Watch is sworn to not get involved into the affairs of the Seven Kingdoms, ensuring it's neutrality in Robert's Rebellion and beyond. And with the Wildlings beyond the wall uniting under a new King, it just may be time for the proud Order to rise up once again."
+ 
+gotintro.1.a:0 "And now my watch begins."
+
+gotintro.1.b:0 "Hear my words and witness my vows."
+ 
+
+gotintro.2.t:0 "The Oath"
+ 
+gotintro.2.d:0 "Night gathers, and now my watch begins. It shall not end until my death.\n\nI shall take no wife, hold no lands, father no children. I shall wear no crowns and win no glory. I shall live and die at my post.\n\nI am the sword in the darkness. I am the watcher on the walls. I am the fire that burns against the cold, the light that brings the dawn, the horn that wakes the sleepers, the shield that guards the realms of men.\n\nI pledge my life and honor to the Night's Watch, for this night and all the nights to come."
+ 
+gotintro.2.a:0 "And now my watch truly begins."
+
+
+gotintro.3.t:0 "House Stark of Winterfell"
+ 
+gotintro.3.d:0 "House Stark is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Long before the Targaryen conquest the leaders of House Stark held the title of Kings in the North. That changed however when King Torren Stark bended the knee to Aegon the Conqueror and they would not regain that title until the end of Robert's Rebellion.\n\nThat war began when Princess Lyanna Stark was kidnapped by Crown Prince Rhaegar Targaryen in 1914. Then Lord Rickard Stark and his son Brandon both demanded her return, but were were executed by the Mad King King Aerys II Targaryen instead. Eddard Stark became the head of the family and with the support of House Baratheon, Tully and Arryn overthrew the Targaryen king. During the civil war Stark troops were instrumental in several engagements and it was Eddard Stark's forces that reached King's Landing just after the Lannisters had sacked it, ensuring the city was turned over to Robert's army when it arrived.\n\nDue to the North's vast size, gathering the full military strength of the Starks and their vassals is a difficult process, hence why some of their loyal bannermen like House Karstark and House Mormont have remained independent for all these years. House Bolton was also a Stark vassal once, but their failed invasion of Hornwood in the 1920s led to a bitter dispute between the two houses. House Stark does have a major ally in the Crownlands, specifically King Robert I Baratheon who, along with Ned Stark, kicked off Robert's Rebellion and though they have been somewhat enstranged from one another in recent years they remain friends to this very day.\n\nHouse Stark is one of the few noble Houses whose family motto is not a boast or threat. Instead, their motto is a warning, one that, no matter the circumstances, will always be relevant..."
+ 
+gotintro.3.a:0 "Winter is Comming."
+
+
+gotintro.4.t:0 "House Lannister of Casterly Rock"
+ 
+gotintro.4.d:0 "No one quite knows the true origins of House Lannister, though most agree that its lineage begins with the legendary figure Lann the Clever, who tricked the Casterlys into abandoning their ancestral seat in Casterly Rock and taking it for himself. After that his lands would eventually grow to become the Kingdom of the Rock. The Lannisters woulld continue to rule the Westerlands until Aegon's Conquest when King Loreon I Lannister submitted to the Targaryens after his defeat at the Field of Fire.\n\nFor centuries the Lannisters were loyal to House Targaryen, but their fortunes truly changed for the better once Tywin Lannister became Warden of the West. He brutally crushed the Reyne-Tarbeck rebellion and was later appointed Hand of the King to 'Mad King' Aeris II. A wedge soon came between them though and after a fierce argument with the King, Tywin returned to Casterly Rock in 1913. This couldn't have come at a worse time as Robert's Rebellion broke out the following year and the forces of the Westerlands stayed neutral for almost the entire war.\n\nIn 1917 the forces of House Lannister appeared before the gates of King's Landing, claiming to have joined the war on the side of the King. That was a lie and the capital was sacked by the forces of the Westerlands. The royal family was brutally murdered by Sir Gregor Clegane and the Mad King was killed by his own Kingsguard, Tywin's son - Jaime Lannister. Since then House Lannister has been a loyal ally of the crown; new King Robert Baratheon even marrying Tywin's daughter Cersei.\n\nNot everyone was happy with the actions of House Lannister though, most notably the Starks of Winterfell, but there was nothing they could do about it. The Westerlands is the richest region in all of Westeros, with great mountains and hills serving as a natural defensive line and arguably the largest army on the continent. Truly, there is no one who can stand in the way of House Lannister.\n\nTheir words are..."
+ 
+gotintro.4.a:0 "Hear me Roar."
+
+
+gotintro.5.t:0 "House Mormont of Bear Island"
+ 
+gotintro.5.d:0 "Legend says that\n\nTheir words are..."
+ 
+gotintro.5.a:0 "Here we Stand."
+
+
+gotintro.6.t:0 "The Principality of Dorne"
+ 
+gotintro.6.d:0 "Dorne was a sovereign kingdom before the invasion of Aegon the Conqueror, and weathered his attack to remain one afterwards, the only one of the Seven Kingdoms to retain its independence. It joined the Seven Kingdoms through peaceful marriage alliance nearly two centuries later. As a result of joining through marriage and not conquest, Dorne was allowed to keep many of its local customs and laws, such as equal inheritance laws for male and female heirs.\n\nWhen Robert's Rebellion broke out in 1914 the Dornish princess Elia Martell was married to the heir of the Iron Throne - Rhaegar Targaryen. Rheagar had dissapeared shortly before the rebellion with a Northern noblewoman and this was considered the start of the war. Even though Prince Doran Martell was furious about the way his sister had been treated he still agreed to aid to the Targaryens, convinced that Elia, as the wife to the crown prince, would one day become queen, and that her son Aegon would also be king.\n\nPrince Rhaegar was kiled at the Battle of the Trident (1918), as was Doran's uncle, Lewyn Martell who commanded the Dornish armies in the field. Mad King Aerys Targaryen was convinced that Lewyn had betrayed Rhaegar on the Trident and thus refused to send Elia and her children to Dragonstone alongside his own wife and new heir. Not long after, during the Sack of King's Landing, Elia and her children were brutally murdered by Lannister soldiers. Even after the war ended, Doran's younger brother Oberyn attempted to raise a rebellion for Viserys Targaryen in 1920, but that situation was sorted out after sucessful negotiations with the new Hand of the King Jon Arryn.\n\nSince then the Dornish have lived in relative isolation from the rest of the Seven Kingdoms, but they have not forgotten what happened during that rebellion and it may only be a matter of time before the proud Dornish once more rise up to fight. After all, their words say it all..."
+ 
+gotintro.6.a:0 "Unbowed. Unbent. Unbroken."
+
+
+gotintro.7.t:0 "House Tyrell of Highgarden"
+ 
+gotintro.7.d:0 "For centuries the Reach was under the control of noble House Gardener, however that bloodline was completely destroyed during Aegon Targaryen's conquest of Westeros. House Tyrell, who at the time were stewards of House Gardener, surrendered the capital of Highgarden to the Targaryen conqueror and as a reward were given complete control of the lands known as the Reach.\n\nHouse Tyrell remained loyal to House Targaryen over the following centuries and fought by their side during Robert's Rebellion. Though they managed to inflict the only loss Robert suffered during the war, at the Battle of Ashford (1916), the Targaryens were defeated and the Tyrells had to swear fealthy to the new King Robert I Baratheon.\n\nToday House Tyrell is a stable and honestly loving family, with none of the internal rivalries that are to be found in House Lannister or House Baratheon. That, combined with their large army and vast farmlands, has molded House Tyrell into a sleeping giant, capable of turning the tide in favor of whichever side they join in the wars to come.\n\nTheir words are..."
+ 
+gotintro.7.a:0 "Growing Strong."
+
+
+gotintro.8.t:0 "House Tully of Riverrun"
+ 
+gotintro.8.d:0 "\n\n."
+ 
+gotintro.8.a:0 "Family. Duty. Honor."
+
+
+gotintro.9.t:0 "House of Stannis Baratheon"
+ 
+gotintro.9.d:0 "\n\n."
+ 
+gotintro.9.a:0 "The Night is Dark and Full of Terror."
+
+
+gotintro.10.t:0 "House Targaryen"
+ 
+gotintro.10.d:0 "The Targaryens are blood of the dragon, descended from the nobility of Old Valyria, a once mighty empire in Essos. For one hundred years they remained on the island fortress of Dragonstone, until the rise of Aegon the Conqueror who, instead of reclaiming his ancestral land, chose to sail west for the Seven Kingdoms. While his host was relatively small, in comparison to the armies of Westeros, Aegon and his sister wives had a secret weapon: the last of the dragons. Eventually, all of the Seven Kingdoms bowed down to him; the weapons of his enemies were melted down by his dragon, Balerion the Black Dread, to forge the Iron Throne.\n\nFor 300 years the Targaryen dynasty stood strong in the face of rebellion, civil war and plague. But the dragons eventually died off and then came Robert's Rebellion (1914). The line of dragon kings was broken in 1918 when Aeris II, also known as the Mad King, was betrayed and murdered by a member of his own kingsguard: Ser Jaime Lannister. The capital of King's Landing was brutally sacked by the forces of Ser Jaime's father - Tywin Lannister.\n\nAeris's son and heir, Prince Rheagar Targaryen, perished on the field of battle at the hands of Robert Baratheon. The usurper, with the support of his other allies the Starks, Tullies and Arryn, claimed the Iron Throne for himself and became King Robert I. Rhaegar's wife and children were butchered by the Lannister forces and the only Targaryen children that managed to escape were prince Viserys Targaryen and his sister Daenerys. The two were evacuated by loyalists to the Free Cities of Essos where they have lived in exile ever since.\n\nNow, those children are all grown up and they are dreaming of a day when they will cross the Narrow Sea and take back what is rightfully theirs. Viserys has already struck a deal with a viscious dothraki Khal, so that day may come sooner than expected...\n\nTheir words?"
+ 
+gotintro.10.a:0 "Fire and Blood."
+
+
+gotintro.11.t:0 "The Others Beyond the Wall"
+ 
+gotintro.11.d:0 "Technically this is supposed to be the history of the Others, but for now it's mostly a way to setup some boundries for them."
+ 
+gotintro.11.a:0 "Winter will soon be upon the world..."
+
+
+gotintro.12.t:0 "The Free Folk Beyond the Wall"
+ 
+gotintro.12.d:0 "Commonly reffered to as 'Wildlings', the Free Folk descend from the First Men. The Wall, which separates them from the rest of Westeros, in many ways defines them. The free folk view the people south of the Wall as 'kneelers', subjects to lords and kings. Likewise, the free folk are viewed by southerners as lawless and primitive killers, rapists, and thieves.\n\nFolk folk society is made of many tribes and clans, each with their own peculiarities and customs. Some recognize chieftains, while others exist in a perpetual state of conflict, warring against each other and themselves. The free folk place importance in a man keeping his word. Some clans are led by clan mothers or magnars.\n\nOnly recently has the charismatic Mance Rayder been able to unite the warring tribes under a single banner."
+ 
+gotintro.12.a:0 "We are the True North!"
+
+gotintro.13.t:0 "The Dosh Khaleen"
+ 
+gotintro.13.d:0 "The dosh khaleen are a ruling group within the Dothraki social hierarchy, specifically the crones who preside over the holy city of Vaes Dothrak. The dosh khaleen are composed of the widows of slain khals, and serve as seers foretelling the future and interpreting omens for the Dothraki. In this capacity they essentially also serve as the leaders of the Dothraki religion. Even powerful khals and fierce male Dothraki warriors fear disobeying the will of the dosh khaleen.\n\nThe dosh khaleen have great honor and status amongst the Dothraki. At their bidding, no blood may be spilled or blade bared within the confines of Vaes Dothrak."
+ 
+gotintro.13.a:0 "Blood of my blood."

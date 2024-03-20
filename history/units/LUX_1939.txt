@@ -1,0 +1,111 @@
+﻿division_template = {
+	name = "Pentos Defense Force"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Cavalry Division"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = { 
+
+	# 1st Army #
+	division= {	
+		name = "26a Divisione di Fanteria 'Assietta'"
+		location = 3943
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "30a Divisione di Fanteria 'Sabauda'"
+		location = 3943
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "5a Divisione Alpina 'Pusteria'"
+		location = 3943
+		division_template = "Pentos Defense Force"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4a Divisione CC.NN. '3 Gennaio'"
+		location = 3943
+		division_template = "Pentos Defense Force"		# CCNN militia, lower training and equipment
+		start_experience_factor = 0.2
+
+	}
+
+	# 2nd Army #
+	division= {	
+		name = "1a Divisione Celere 'Eugenio di Savoia'"
+		location = 4109
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2a Divisione Celere 'Emanuele Filiberto'"
+		location = 4109
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3a Divisione Celere 'Principe Amedeo'"
+		location = 4109
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.3
+	}
+
+	# 3rd Army #
+	division= {	
+		name = "19a Divisione di Fanteria 'Gavinana'"
+		location = 11581
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "24a Divisione di Fanteria 'Gran Sasso'"
+		location = 11581
+		division_template = "Pentos Defense Force"	
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "3a Divisione CC.NN. '21 Aprile'"
+		location = 11581
+		division_template = "Pentos Defense Force"		# CCNN militia, lower training and equipment
+		start_experience_factor = 0.2
+
+	}
+
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LUX"
+		}
+		requested_factories = 5
+		progress = 0.44
+		efficiency = 100
+	}
+}

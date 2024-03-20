@@ -1,0 +1,49 @@
+
+state={
+	id=144
+	name="STATE_144"
+	resources={
+		steel=12.000
+		tungsten=20.000
+	}
+
+	history={
+		owner = FIN
+		buildings = {
+			infrastructure = 1
+			dockyard = 4
+			air_base = 5
+			3048 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			3048 3 
+		}
+		add_core_of = FIN
+		add_core_of = UDM
+		1939.1.1 = {
+			buildings = {
+				dockyard = 1
+				industrial_complex = 2
+
+			}
+
+		}
+		1940.3.12 = {
+			owner = HOL
+			controller = HOL
+
+		}
+
+	}
+
+	provinces={
+		38 44 91 192 3021 3034 3048 3088 3126 3132 3145 4209 4780 4824 6071 6114 6118 6187 6214 7846 9126 9157 11078 11157 
+	}
+	manpower=2128860
+	buildings_max_level_factor=1.000
+	state_category=city
+}

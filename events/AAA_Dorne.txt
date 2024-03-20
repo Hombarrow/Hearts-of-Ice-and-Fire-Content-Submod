@@ -1,0 +1,540 @@
+﻿###########################
+# Dornish Events
+###########################
+
+add_namespace = dorne
+
+# Sand SNakes stage coup
+country_event = {
+	id = dorne.1
+	title = spain.1.t
+	desc = spain.1.d
+	picture = GFX_report_event_yugoslavian_king_peter
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SPR
+		SPR = {
+			OR = {
+				is_in_faction_with = HOL
+				gives_military_access_to = HOL
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = { remove_ideas = anti_german_military }
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = spain.1.a
+		ai_chance = { factor = 40 }
+		add_political_power = -50
+		SPR = {
+			country_event = { id = dorne.2 days = 7 }
+		}
+	}
+
+	option = {
+		name = spain.1.b
+		ai_chance = { factor = 10 }
+		add_stability = -0.2
+	}
+
+	option = {
+		name = spain.1.c # Reveal the Master plan
+		ai_chance = { factor = 50 }
+
+		hidden_effect = {
+			country_event = { id = dorne.15 days = 3 }
+#			news_event = { hours = 6 id = news.63 } 
+		}
+	}
+}
+
+# Snake Coup
+country_event = {
+	id = dorne.2
+	title = spain.2.t
+	desc = spain.2.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { remove_ideas = anti_german_military }
+	}
+
+	option = {
+		name = spain.2.a
+		ai_chance = { factor = 10 }
+		retire_country_leader = yes
+		diplomatic_relation = {
+			country = HOL
+			relation = non_aggression_pact
+			active = no
+		}
+		if = {
+			limit = { is_in_faction_with = HOL }
+			HOL = { remove_from_faction = SPR } 
+			HOL = {
+				add_opinion_modifier = { target = SPR modifier = faction_traitor }
+			}
+		}
+		if = {
+			limit = { gives_military_access_to = HOL }
+			HOL = {
+				diplomatic_relation = {
+					country = SPR
+					relation = military_access
+					active = no
+				}
+			}
+		}
+#		news_event = { hours = 6 id = news.150 }
+	}
+
+	option = {
+		name = spain.2.b
+		ai_chance = { factor = 40 }
+		start_civil_war = {
+			ideology = communism
+			size = 0.5
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = news.63 } 
+		}
+	}
+}
+
+# Dorne wants Myrcella
+country_event = {
+	id = dorne.3
+	title = spain.3.t
+	desc = spain.3.d
+	picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+	trigger = { has_start_date < 1936.02.02 }
+
+	option = {
+		name = spain.3.a
+		ai_chance = { factor = 50 }
+		add_political_power = 10
+		SPR = {
+			country_event = { id = dorne.5 days = 3 }
+		}
+	}
+
+	option = {
+		name = spain.3.b
+		ai_chance = { factor = 15 }
+		add_political_power = 50
+		hidden_effect = {
+			HOL = {
+				country_event = { id = dorne.4 days = 3 }
+			}
+		}
+	}
+}
+
+# Myrcella going anyway
+country_event = {
+	id = dorne.4
+	title = spain.4.t
+	desc = spain.4.d
+#	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+
+	option = {
+		name = spain.4.a
+		add_political_power = -150
+		add_popularity = { ideology = democratic popularity = 0.10 }
+		SPR = {
+			country_event = { id = dorne.5 days = 3 }
+		}
+	}
+}
+
+# Welcome Myrcella
+country_event = {
+	id = dorne.5
+	title = spain.5.t
+	desc = spain.5.d
+	picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = spain.5.a
+		set_country_flag = myrcella_in_dorne
+		HOL = {
+			LAN_myrcella = {
+				set_nationality = SPR
+			}
+		}
+		add_timed_idea = { idea = myrcella days = 120 }
+#		add_ideas = myrcella
+	}
+
+}
+
+# Lannisters want ENGAGEMENT
+country_event = {
+	id = dorne.6
+	title = dorne.6.t
+	desc = dorne.6.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.6.a # Okay
+		ai_chance = { factor = 60 }
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+
+	option = {
+		name = dorne.6.b # Demand justice first
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		HOL = {	country_event = { id = dorne.7 days = 1 }}
+	}
+
+	option = {
+		name = dorne.6.c # REFUSE
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		HOL = {	country_event = { id = dorne.13 days = 1 }}
+	}
+
+}
+
+# Dornish want justice
+country_event = {
+	id = dorne.7
+	title = dorne.7.t
+	desc = dorne.7.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.7.a # Give them the Mountain
+		ai_chance = { factor = 5 }
+		remove_unit_leader = 2027
+		SPR = {	country_event = { id = dorne.12 days = 1 }}
+	}
+
+	option = {
+		name = dorne.7.b # Blame Amory Lorch
+		ai_chance = { factor = 65 }
+		remove_unit_leader = 2029
+		SPR = {	country_event = { id = dorne.8 days = 1 }}
+	}
+
+	option = {
+		name = dorne.7.c # Reject
+		ai_chance = { factor = 25 }
+		SPR = {	country_event = { id = dorne.10 hours = 1 }}
+	}
+
+}
+
+# Lannisters blame Lorch
+country_event = {
+	id = dorne.8
+	title = dorne.8.t
+	desc = dorne.8.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.8.a # Play along...
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+
+	option = {
+		name = dorne.8.b # Ask for the mountain as well
+		HOL = {	country_event = { id = dorne.9 days = 1 }}
+	}
+
+	option = {
+		name = dorne.8.c # End negotiations
+		HOL = {	country_event = { id = dorne.13 hours = 1 }}
+	}
+
+}
+
+# Dornish Still want mountain
+country_event = {
+	id = dorne.9
+	title = dorne.9.t
+	desc = dorne.9.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.9.a # Give mountain
+		remove_unit_leader = 2027
+		SPR = {	country_event = { id = dorne.12 days = 1 }}
+	}
+
+	option = {
+		name = dorne.9.b # they want too much
+		SPR = {	country_event = { id = dorne.10 hours = 1 }}
+	}
+
+}
+
+# Lannisters mock you for missed oportunity / Tell them to bugger off
+country_event = {
+	id = dorne.10
+	title = dorne.10.t
+	desc = dorne.10.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.10.a # Good
+		add_political_power = -50
+	}
+
+}
+
+# Dornish agree to Engagement
+country_event = {
+	id = dorne.11
+	title = dorne.11.t
+	desc = dorne.11.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.11.a # Good
+		add_opinion_modifier = { target = SPR modifier = marriage_between_myrcella_and_trystane } 
+		diplomatic_relation = {
+			country = SPR
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+
+}
+
+# Mountain comes in chains
+country_event = {
+	id = dorne.12
+	title = dorne.12.t
+	desc = dorne.12.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.12.a # Cut off his head and use as ornament
+		ai_chance = { factor = 25 }
+		add_political_power = 100
+		add_war_support = 0.25
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+
+	option = {
+		name = dorne.12.b # Bury him in 100 scorpions
+		ai_chance = { factor = 25 }
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.15
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+
+	option = {
+		name = dorne.12.c # Lock him up in a cell... a zoo cell
+		ai_chance = { factor = 25 }
+		add_political_power = 100
+		add_stability = 0.15
+		add_war_support = 0.10
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+
+	option = {
+		name = dorne.12.e # Donate him to science
+		ai_chance = { factor = 25 }
+		add_political_power = 100
+		add_stability = 0.25
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+		HOL = {	country_event = { id = dorne.11 days = 1 }}
+	}
+}
+
+# Dornish refuse all
+country_event = {
+	id = dorne.13
+	title = dorne.13.t
+	desc = dorne.13.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.13.a # they will live to regret this
+		ai_chance = { factor = 80 }
+		add_political_power = -50
+	}
+}
+
+# The choice
+country_event = {
+	id = dorne.14
+	title = dorne.14.t
+	desc = dorne.14.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.14.a # Forgive the Lannisters
+		add_political_power = 150
+		if = {
+			limit = { has_country_flag = promise_of_vengeance }
+			start_civil_war = {
+				ideology = communism
+				size = 0.5
+			}
+		}
+	}
+	option = {
+		name = dorne.14.b # Declare for Dany
+		if = {
+			limit = { is_in_faction_with = HOL }
+			HOL = { remove_from_faction = SPR } 
+			HOL = {
+				add_opinion_modifier = { target = SPR modifier = faction_traitor }
+			}
+		}
+		if = {
+			limit = { gives_military_access_to = HOL }
+			HOL = {
+				diplomatic_relation = {
+					country = SPR
+					relation = military_access
+					active = no
+				}
+			}
+		}
+		hidden_effect = { unlock_national_focus = MRT_assassinate_doran }
+	}
+#	option = {
+#		name = dorne.14.c # Put Myrcella on the Iron Throne
+#		set_country_flag = myrcella_in_dorne
+#		add_ideas = myrcella
+#	}
+}
+
+# Elaria accepts terms
+country_event = {
+	id = dorne.15
+	title = dorne.15.t
+	desc = dorne.15.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.15.a # Keep this in mind
+		set_country_flag = promise_of_vengeance
+
+	}
+}
+
+# (Lanister) Dorne offers engagement
+country_event = {
+	id = dorne.16
+	title = dorne.16.t
+	desc = dorne.16.desc
+	picture = GFX_report_event_yugoslavian_king_peter
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.16.a # Keep this in mind
+		add_opinion_modifier = { target = SPR modifier = marriage_between_myrcella_and_trystane } 
+		diplomatic_relation = {
+			country = SPR
+			relation = non_aggression_pact
+			active = yes
+		}
+		SPR = {	country_event = { id = dorne.17 days = 1 }}
+
+	}
+
+	option = {
+		name = dorne.16.b # Keep this in mind
+		SPR = {	country_event = { id = dorne.18 days = 1 }}
+
+	}
+}
+
+# Lanister accept
+country_event = {
+	id = dorne.17
+	title = dorne.17.t
+	desc = dorne.17.desc
+	picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.17.a # Good
+		add_opinion_modifier = { target = HOL modifier = marriage_between_myrcella_and_trystane } 
+
+	}
+}
+
+# Lanister reject
+country_event = {
+	id = dorne.18
+	title = dorne.18.t
+	desc = dorne.18.desc
+	picture = GFX_report_event_yugoslavian_king_peter
+	
+	is_triggered_only = yes
+
+	option = {
+		name = dorne.18.a # Dammit
+		add_political_power = -50
+#		set_country_flag = promise_of_vengeance
+
+	}
+
+	option = {
+		name = dorne.18.b # Change course then!
+		unlock_national_focus = MRT_lannisters_never
+	}
+
+}

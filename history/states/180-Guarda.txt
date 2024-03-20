@@ -1,0 +1,31 @@
+
+state={
+	id=180
+	name="STATE_180"
+
+	history={
+		owner = SPR
+		victory_points = {
+			6924 20
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 3
+			6924 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = SPR
+		add_core_of = GUA
+
+	}
+
+	provinces={
+		799 877 3892 3894 6924 6941 9770 9774 
+	}
+	manpower=1904600
+	buildings_max_level_factor=1.000
+	state_category=town
+}

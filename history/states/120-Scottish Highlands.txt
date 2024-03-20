@@ -1,0 +1,43 @@
+
+state={
+	id=120
+	name="STATE_120"
+	resources={
+		chromium=2.000
+		tungsten=8.000
+		aluminium=14.000
+	}
+
+	history={
+		owner = FIN
+		victory_points = {
+			11064 1 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			anti_air_building = 2
+			industrial_complex = 1
+			air_base = 3
+			11064 = {
+				naval_base = 8
+
+			}
+
+		}
+		add_core_of = FIN
+		1940.3.14 = {
+			owner = ROM
+			controller = ROM
+
+		}
+
+	}
+
+	provinces={
+		27 99 100 108 131 144 179 1295 3000 3007 3094 3155 3159 3178 3217 4659 6046 6072 6080 6104 6184 6202 6205 6412 6787 9075 9090 9103 9138 9204 9251 9362 10579 11037 11064 11184 11203 
+	}
+	manpower=265873
+	buildings_max_level_factor=1.000
+	state_category=town
+}

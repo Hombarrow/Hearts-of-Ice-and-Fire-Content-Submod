@@ -1,0 +1,98 @@
+﻿###########################
+# Frey Events
+###########################
+
+add_namespace = frey
+
+# Would you like pie?
+country_event = {
+	id = frey.1
+	title = frey.1.t
+	desc = frey.1.d
+#	picture = GFX_report_event_albanian_partisans
+	
+#	is_triggered_only = yes
+
+	trigger = {
+		tag = SER
+		SER = { has_war = no }
+		NOT = {
+			has_civil_war = yes
+		}
+		date > 1943.12.24
+		has_global_flag = red_wedding
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = frey.1.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+		SER = {
+		country_event = { id = frey.2 hours = 1 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# Its Arya!
+country_event = {
+	id = frey.2
+	title = frey.2.t
+	desc = frey.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = frey.2.a
+		ai_chance = { factor = 90 }
+		kill_country_leader = yes
+		hidden_effect = {
+			create_country_leader = {
+				name = "Stevron Frey"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Lothar Frey"
+				picture = "gfx/leaders/DEN/Portrait_Denmark_Thorvald_Stauning.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Walder Rivers"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+
+				expire = "1965.1.1"
+				ideology = leninism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Olyvar Frey"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					#
+				}
+			}
+			country_event = { days = 1 id = news.244 }
+		}
+	}
+}

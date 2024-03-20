@@ -1,0 +1,109 @@
+﻿division_template = {
+	name = "Infantry Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+### OOB ###
+units = {
+	#Guangdong/Guangxi units - 21 divisions
+	division = {
+		name = "62 Infantry Division"
+		location = 10062
+		start_experience_factor = 0.2
+		division_template = "Infantry Division"
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "63 Infantry Division"
+		location = 10062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "64 Infantry Division"
+		location = 10062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "65 Infantry Division"
+		location = 10062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "66 Infantry Division"
+		location = 10062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "67 Infantry Division"
+		location = 10062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Guangzhou Jingbei"
+		location = 10062
+		division_template = "Infantry Division"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.5
+
+	}
+#}
+
+	fleet = {
+		name = "Qartheen Fleet"		
+		naval_base = 10062 # Qarth
+		task_force = {				
+			name = "Council Fleet"				
+			location = 10062 # Qarth	
+			ship = { name = "RM Delfino" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Narvalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Squalo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Tricheco" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }			
+		}								
+		task_force = {				
+			name = "Spicers Fleet"			
+			location = 7959 # Gate
+			ship = { name = "RM Luigi Settembrini" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Ruggiero Settimo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Salpa" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			ship = { name = "RM Serpente " definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+			
+		}								
+	}
+					
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ISR"
+		}
+		requested_factories = 2
+		progress = 0.79
+		efficiency = 100
+	}	
+}

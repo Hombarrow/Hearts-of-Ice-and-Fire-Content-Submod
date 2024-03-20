@@ -1,0 +1,127 @@
+add_namespace = norway
+
+country_event = {
+	id = norway.1
+	title = norway.1.t
+	desc = norway.1.d
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	trigger = {
+		tag = NOR
+		has_war_with = HOL
+		has_civil_war = no
+		is_in_faction_with = FIN
+		FIN = { has_war_with = HOL }
+		HOL = { surrender_progress > 0.15 }
+	}
+
+	mean_time_to_happen = { days = 2 }
+
+	fire_only_once = yes
+	
+	option = {
+		name = norway.1.a
+		ai_chance = { factor = 90 }
+			add_resource = {
+				type = oil
+				amount = 5
+				state = 338
+			}
+		hidden_effect = {
+			FIN = {
+				country_event = { id = finland.11 days = 14 } 
+			}
+		}
+
+	}
+
+	option = {
+		name = norway.1.b
+		ai_chance = { factor = 5 }
+		}
+		
+}
+
+country_event = {
+	id = norway.2
+	title = norway.2.t
+	desc = norway.2.d
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+
+	immediate = {
+#		add_popularity = {
+#			ideology = fascism
+#			popularity = 0.55
+#		}
+	}
+	
+	option = {
+		name = norway.2.a
+		ai_chance = { factor = 75 }
+#		kill_country_leader = yes
+		start_civil_war = {
+#			ideology = fascism
+#			ruling_party = fascism
+#			ideology = democratic
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.7
+		}
+
+#		change_tag_from = NOR
+#		set_politics = {
+			
+#			ruling_party = fascism			
+#			elections_allowed = no
+		
+#		}
+
+#		FIN = { remove_from_faction = NOR }
+#		every_enemy_country = { white_peace = NOR }
+#		all_enemy_country = { white_peace = NOR }
+#		white_peace = HOL
+#		if = {
+#			limit = {
+#				ENG = { has_war_with = NOR }
+#				}
+#		white_peace = ENG
+#		}
+		hidden_effect = {
+		FIN = { add_opinion_modifier = { target = NOR modifier = faction_traitor } }
+#		HOL = {
+#		country_event = { id = netherlands.3 days = 1 } 
+#		}
+		}
+
+		}
+#	option = {
+#		name = norway.2.b
+#		ai_chance = { factor = 30 }
+#		kill_country_leader = yes
+#		set_politics = {
+			
+#			ruling_party = fascism			
+#			elections_allowed = no
+		
+#		}
+
+#		FIN = { remove_from_faction = NOR }
+#		every_enemy_country = { white_peace = NOR }
+#		hidden_effect = {
+#		FIN = { add_opinion_modifier = { target = NOR modifier = faction_traitor } } 
+#		HOL = {
+#		country_event = { id = netherlands.4 days = 1 } 
+#		}
+#		}
+
+#		}
+	option = {
+		name = norway.2.c
+		ai_chance = { factor = 5 }
+#		kill_country_leader = yes
+		add_stability = -0.25
+		}
+		
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=395
+	name="STATE_395"
+
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		720 778 4590 6644 7626 9682 10393 10461 11573 12365 
+	}
+	manpower=630651
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

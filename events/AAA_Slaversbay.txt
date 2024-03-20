@@ -1,0 +1,331 @@
+﻿###########################
+# Slaver's Bay Events
+###########################
+
+add_namespace = slaversbay
+
+# We are in danger, make faction?
+country_event = {
+	id = slaversbay.1
+	title = slaversbay.1.t
+	desc = slaversbay.1.d
+	picture = GFX_report_event_albanian_partisans
+
+	trigger = {
+		tag = EGY
+		is_in_faction = no
+		SOV = { has_offensive_war = yes }
+		OR = { 
+		SOV = { has_war_with = PER }
+		SOV = { has_war_with = IRQ }
+		SOV = { has_war_with = EGY }
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+#	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.1.a
+		ai_chance = { factor = 90 }
+
+		create_faction = "United Slaver's Front"
+		set_rule = { can_create_factions = yes }
+
+		IRQ = {
+			country_event = { days = 1 id = slaversbay.2 }
+		}
+		PER = {
+			country_event = { days = 1 id = slaversbay.2 }
+		}
+
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = slaversbay.1.b
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Invited to join faction
+country_event = {
+	id = slaversbay.2
+	title = slaversbay.2.t
+	desc = slaversbay.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.2.a
+		ai_chance = { factor = 90 }
+
+		EGY = { country_event = { id = slaversbay.3 } }
+
+		hidden_effect = {
+#			FIN = { country_event = { days = 1 id = slaversbay.4 } }
+		}
+	}
+	option = {
+		name = slaversbay.2.b
+		ai_chance = { factor = 10 }
+
+		EGY = { country_event = { id = slaversbay.4 } }
+
+		hidden_effect = {
+#			FIN = { country_event = { days = 1 id = slaversbay.4 } }
+		}
+	}
+}
+
+# Accept
+country_event = {
+	id = slaversbay.3
+	title = slaversbay.3.t
+	desc = slaversbay.3.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.3.a
+		ai_chance = { factor = 90 }
+
+		add_to_faction = FROM
+
+		hidden_effect = {
+#			country_event = { days = 1 id = slaversbay.4 }
+		}
+	}
+}
+
+# Refuse
+country_event = {
+	id = slaversbay.4
+	title = slaversbay.4.t
+	desc = slaversbay.4.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.4.a
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Targaryen slave propaganda!
+country_event = {
+	id = slaversbay.5
+	title = slaversbay.5.t
+	desc = slaversbay.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.5.a # Full commitment!
+		ai_chance = { factor = 33 }
+
+		add_ideas = slavers_full_commitment
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = slaversbay.5.b # Supress movement!
+		ai_chance = { factor = 33 }
+
+		add_ideas = slavers_minor_supress
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = slaversbay.5.c # Do nothing.
+		ai_chance = { factor = 33 }
+
+		add_ideas = slavers_do_nothing
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Slaves revolt!
+country_event = {
+	id = slaversbay.6
+	title = slaversbay.6.t
+	desc = slaversbay.6.d
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+#		NOT = { has_global_flag = scw_over }
+		tag = IRQ
+#		has_defensive_war = no
+		IRQ = { NOT = { has_government = communism } }
+		NOT = { has_government = communism }
+		IRQ = { communism > 0.45 }
+		date > 1936.2.16 # Trigger at some point after 1936 elections
+	}
+
+	mean_time_to_happen = {
+		days = 5	# Historical outbreak time after elections
+	}
+	
+	option = {
+		name = slaversbay.6.a # Kill the slaves!
+		ai_chance = { factor = 90 }
+
+		start_civil_war = {
+#			ruling_party = communism
+			ideology = communism
+			size = 0.5
+			capital = 223
+		}
+
+		set_global_flag = yunkish_rebels
+
+		hidden_effect = {
+			if = {
+				limit = { has_idea = slavers_do_nothing }
+				remove_ideas = slavers_do_nothing
+			}
+			if = {
+				limit = { has_idea = slavers_minor_supress }
+				remove_ideas = slavers_minor_supress
+			}
+			if = {
+				limit = { has_idea = slavers_full_commitment }
+				remove_ideas = slavers_full_commitment
+			}
+		}
+	}
+
+#	option = {
+#		name = slaversbay.6.b # Kill the masters!
+#		ai_chance = { factor = 0 }
+#
+#		start_civil_war = {
+#			ruling_party = communism
+#			ideology = communism
+#			size = 0.5
+#			capital = 701
+#		}
+#		change_tag_from = IRQ
+#
+#		hidden_effect = {
+#			if = {
+#				limit = { has_idea = slavers_do_nothing }
+#				remove_ideas = slavers_do_nothing
+#			}
+#			if = {
+#				limit = { has_idea = slavers_minor_supress }
+#				remove_ideas = slavers_minor_supress
+#			}
+#			if = {
+#				limit = { has_idea = slavers_full_commitment }
+#				remove_ideas = slavers_full_commitment
+#			}
+#		}
+#	}
+
+}
+
+# Revolution success! Join Dany?
+country_event = {
+	id = slaversbay.7
+	title = slaversbay.7.t
+	desc = slaversbay.7.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.7.a # Be annexed
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = slaversbay.7.b # Become puppet
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Slave riots all of the country!
+country_event = {
+	id = slaversbay.8
+	title = slaversbay.8.t
+	desc = slaversbay.8.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = slaversbay.8.a # Be annexed
+		ai_chance = { factor = 90 }
+
+		add_stability = -0.15
+
+		if = {
+			limit = { has_idea = slavers_do_nothing }
+			remove_ideas = slavers_do_nothing
+		}
+		if = {
+			limit = { has_idea = slavers_minor_supress }
+			remove_ideas = slavers_minor_supress
+		}
+		if = {
+			limit = { has_idea = slavers_full_commitment }
+			remove_ideas = slavers_full_commitment
+		}
+
+		hidden_effect = {
+			if = {
+				limit = { original_TAG = EGY }
+				SOV = { country_event = { hours = 1 id = targaryen.13 }}
+			}
+			if = {
+				limit = { original_TAG = IRQ }
+				SOV = { country_event = { hours = 1 id = targaryen.14 }}
+			}
+			if = {
+				limit = { original_TAG = PER }
+				SOV = { country_event = { hours = 1 id = targaryen.15 }}
+			}
+
+		}
+	}
+
+}

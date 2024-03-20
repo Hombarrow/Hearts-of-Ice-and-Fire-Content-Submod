@@ -1,0 +1,45 @@
+
+state={
+	id=133
+	name="STATE_133"
+	resources={
+		steel=26.000
+	}
+
+	history={
+		owner = FIN
+		victory_points = {
+			133 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			anti_air_building = 2
+			air_base = 1
+
+		}
+		add_core_of = FIN
+		add_core_of = AZR
+		1939.1.1 = {
+			buildings = {
+				dockyard = 1
+				industrial_complex = 2
+
+			}
+
+		}
+		1940.3.12 = {
+			owner = AZR
+			controller = AZR
+
+		}
+
+	}
+
+	provinces={
+		10 133 774 1821 3005 3183 3273 6320 6350 9054 9068 9182 9218 9229 9237 9314 9350 9392 11028 11135 11163 11218 11299 11378 
+	}
+	manpower=1225772
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,540 @@
+﻿###########################
+# House Lannister Events
+###########################
+
+add_namespace = netherlands
+
+# Tully Accept Demands
+country_event = {
+	id = netherlands.1
+	title = netherlands.1.t
+	desc = netherlands.1.d
+	picture = GFX_report_event_japanese_soldiers_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.1.a
+#		hidden_effect = {
+#			news_event = { days = 5 id = news.5 }
+#		}
+		HOL = {
+			if = {
+				limit = {
+					99 = {
+						is_owned_by = FRA
+						OR = {
+							is_controlled_by = FRA
+							is_controlled_by = HOL
+						}
+					}
+				}
+				transfer_state = 99
+			}
+#			add_named_threat = { threat = 3 name = france.1.t }
+		}
+	}
+}
+
+# Tully Reject Demands
+country_event = {
+	id = netherlands.2
+	title = netherlands.2.t
+	desc = netherlands.2.d
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.2.a
+		declare_war_on = {
+			target = FRA
+			type = annex_everything
+#			generator = { 99 } # Ironman
+		}
+#		hidden_effect = {
+#			country_event = { days = 5 id = news.6 }
+#		}
+	}
+	option = {
+		name = netherlands.2.b
+		add_political_power = -100
+		hidden_effect = {
+#			country_event = { days = 5 id = news.6 }
+		}
+	}
+}
+
+# Karstarks offer peace
+country_event = {
+	id = netherlands.3
+	title = netherlands.3.t
+	desc = netherlands.3.d
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.3.a
+#		FIN = { remove_from_faction = NOR }
+#		all_allied_country = { white_peace = NOR }
+		HOL = { white_peace = NOR }
+	}
+}
+
+# Karstark mit uns
+country_event = {
+	id = netherlands.4
+	title = netherlands.4.t
+	desc = netherlands.4.d
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.4.a
+#		if = {
+#			limit = {
+#				ENG = { has_war_with = NOR }
+#				}
+#		}
+		HOL = { white_peace = NOR }
+#		all_allied_country { white_peace = NOR }
+		add_to_faction = NOR
+
+	}
+}
+
+# Tyrell mit uns
+country_event = {
+	id = netherlands.5
+	title = netherlands.5.t
+	desc = netherlands.5.d
+	picture = GFX_report_event_japanese_soldiers_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.5.a
+
+		if = {
+			limit = { is_in_faction = no }
+			create_faction = "Lannister-Tyrell Alliance"
+		}
+
+		add_to_faction = IRE
+
+	}
+}
+
+# Joffrey arrives
+country_event = {
+	id = netherlands.6
+	title = netherlands.6.t
+	desc = netherlands.6.d
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.6.a
+		add_ideas = ENG_king_edward
+
+		hidden_effect = {
+			news_event = { id = news.297 hours = 3 }
+		}
+
+	}
+}
+
+# North Remembers
+country_event = {
+	id = netherlands.7
+	title = netherlands.7.t
+	desc = netherlands.7.d
+	picture = GFX_report_event_german_parade_paris
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HOL
+		has_war = no
+		NOT = {
+			has_civil_war = yes
+			has_idea = YUG_idea_macedonian_opposition
+		}
+		OR = {
+			126 = { is_controlled_by = HOL }
+			114 = { is_controlled_by = HOL }
+			338 = { is_controlled_by = HOL }
+			135 = { is_controlled_by = HOL }
+			130 = { is_controlled_by = HOL }
+			133 = { is_controlled_by = HOL }
+			138 = { is_controlled_by = HOL }
+			128 = { is_controlled_by = HOL }
+			144 = { is_controlled_by = HOL }
+			141 = { is_controlled_by = HOL }
+			358 = { is_controlled_by = HOL }
+			121 = { is_controlled_by = HOL }
+			140 = { is_controlled_by = HOL }
+			113 = { is_controlled_by = HOL }
+			FIN = { is_subject_of = HOL }
+			GEO = { is_subject_of = HOL }
+			NOR = { is_subject_of = HOL }
+			KAZ = { is_subject_of = HOL }
+#			EST = { is_subject_of = HOL }
+#			AZR = { is_subject_of = HOL }
+		}
+		has_start_date < 1936.02.02
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = { # Dammit
+		name = netherlands.7.a
+		ai_chance = { factor = 5 }
+
+		set_global_flag = warof5kings_lan
+		add_timed_idea = { idea = YUG_idea_macedonian_opposition days = 730 }
+
+	}
+
+	option = { # Warden of the North
+		name = netherlands.7.b
+		ai_chance = { factor = 60 }
+
+		set_global_flag = warof5kings_lan
+		country_event = { id = germany.51 days = 5 }
+
+		hidden_effect = {
+			news_event = { id = news.236 }
+		} 
+
+	}
+}
+
+#Iron Bank offers loan
+country_event = {
+	id = netherlands.8
+	title = netherlands.8.t
+	desc = netherlands.8.d
+#	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.8.a
+		ai_chance = { factor = 40 }
+#		add_timed_idea = { idea = SWI_war_loan days = 356 }
+		SWI = { add_timed_idea = { idea = SWI_pending_lannister_loan days = 356 } }
+		SWI = { country_event = { id = switzerland.4 days = 1 } }
+		add_ideas = SWI_war_loan
+	}
+	option = {
+		name = netherlands.8.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Jackass and Honeycomb
+country_event = {
+	id = netherlands.9
+	title = netherlands.9.t
+	desc = netherlands.9.d
+#	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Robbo sanction us
+country_event = {
+	id = netherlands.10
+	title = netherlands.10.t
+	desc = netherlands.10.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.10.a
+		ai_chance = { factor = 100 }
+
+		add_political_power = -100
+
+		add_timed_idea = { idea = LAN_sanctions days = 1095 }
+	}
+}
+
+#Joffrey plans to execute Margery, what to do?
+country_event = {
+	id = netherlands.11
+	title = netherlands.11.t
+	desc = netherlands.11.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.11.a #Support the King
+		ai_chance = { factor = 100 }
+
+		add_political_power = -100
+
+		add_timed_idea = { idea = LAN_sanctions days = 1095 }
+	}
+
+	option = {
+		name = netherlands.11.b #Lobby for prison instead.
+		ai_chance = { factor = 100 }
+
+		add_political_power = -100
+
+		add_timed_idea = { idea = LAN_sanctions days = 1095 }
+	}
+
+	option = {
+		name = netherlands.11.c #Lobby to release her
+		ai_chance = { factor = 100 }
+
+		add_political_power = -100
+
+		add_timed_idea = { idea = LAN_sanctions days = 1095 }
+	}
+}
+
+# (Tyrell) Lannisters offer to wed Tommen to Margaery
+country_event = {
+	id = netherlands.12
+	title = netherlands.12.t
+	desc = netherlands.12.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.12.a #of course
+		ai_chance = { factor = 95 }
+
+#		add_popularity = { ideology = fascism popularity = 0.15 }
+		add_ideas = fascist_influence 
+		add_opinion_modifier = { target = HOL modifier = marriage_tommen_margery }
+
+		HOL = { country_event = { id = netherlands.13 hours = 1 } }
+	}
+
+	option = {
+		name = netherlands.12.b #no
+		ai_chance = { factor = 5 }
+
+		HOL = { country_event = { id = netherlands.14 hours = 1 } }
+
+	}
+
+}
+
+# (Lannisters) yes wed Tommen to Margaery eventuslly
+country_event = {
+	id = netherlands.13
+	title = netherlands.13.t
+	desc = netherlands.13.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.13.a #Support the King
+		ai_chance = { factor = 100 }
+
+		diplomatic_relation = {
+			country = IRE
+			relation = non_aggression_pact
+			active = yes
+		}
+
+		add_opinion_modifier = { target = IRE modifier = marriage_tommen_margery } 
+
+	}
+
+}
+
+# (Lannisters) no Tommen and Margaery
+country_event = {
+	id = netherlands.14
+	title = netherlands.14.t
+	desc = netherlands.14.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.14.a #House Reyne was once the second richest
+		ai_chance = { factor = 100 }
+
+		add_political_power = -25
+	}
+
+}
+
+# Tyrells declare for us
+country_event = {
+	id = netherlands.15
+	title = netherlands.15.t
+	desc = netherlands.15.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.15.a #tyrel mit uns
+		ai_chance = { factor = 90 }
+
+		add_to_faction = IRE
+
+		IRE = { country_event = { id = ireland.13 hours = 1 } }
+	}
+
+	option = {
+		name = netherlands.15.b #tyrel noy mit uns
+		ai_chance = { factor = 5 }
+
+	}
+
+}
+
+# King's landing captured, put Joffrey back on throne?
+country_event = {
+	id = netherlands.16
+	title = netherlands.16.t
+	desc = netherlands.16.desc
+	picture = GFX_report_event_hitler_parade
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HOL
+		HOL = {	exists = yes }
+		HOL = {	is_puppet = no }
+		HOL = {	has_idea = ENG_king_edward }
+		HOL = { has_completed_focus = LAN_return_joffrey }
+		OR = { 
+			any_allied_country = { controls_state = 33 }
+			HOL = { controls_state = 33 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+#	is_triggered_only = yes
+
+	option = {
+		name = netherlands.16.a #The one true King
+		ai_chance = { factor = 90 }
+
+		add_political_power = 350
+
+			if = {
+				limit = {
+					country_exists = ENG
+				}
+				hidden_effect = {
+					ENG = {
+						set_state_controller = 33
+#						set_state_controller = 666
+					}
+				}
+				ENG = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = ENG
+						has_government = fascism
+					}
+					transfer_state = 33
+#					transfer_state = 666
+					HOL = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+					}
+				}
+			}
+			else = {
+				ENG = {
+					transfer_state = 33
+					transfer_state = 666
+				}
+				set_autonomy = { target = ENG autonomy_state = autonomy_puppet }
+			}
+	}
+
+	option = {
+		name = netherlands.16.b #He is better under control
+		ai_chance = { factor = 5 }
+		add_stability = 0.05
+
+	}
+
+}
+
+# Boltons are revolting
+country_event = {
+	id = netherlands.17
+	title = netherlands.17.t
+	desc = netherlands.17.desc
+	picture = GFX_report_event_finnish_soldiers_snow
+	
+	is_triggered_only = yes
+
+	option = {
+		name = netherlands.17.a #revolting
+		ai_chance = { factor = 90 }
+
+		hidden_effect = {
+			ITA = { transfer_state = 122 }
+			ITA = {
+				load_oob = ITA_Bolton_rebels
+				add_manpower = 10000
+			}
+		}
+
+		HOL = { add_to_faction = ITA }
+		ITA = {
+			declare_war_on = {
+				target = FIN
+				type = annex_everything 
+			}
+		}
+
+	}
+
+
+}
+
+#Bad Rumours about Joffrey
+country_event = {
+	id = netherlands.18
+	title = netherlands.18.t
+	desc = netherlands.18.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = netherlands.18.a
+		effect_tooltip = {	
+			add_ideas = LAN_disjointed_government
+		}
+		hidden_effect = {
+			add_ideas = LAN_disjointed_government
+		}
+	}
+}

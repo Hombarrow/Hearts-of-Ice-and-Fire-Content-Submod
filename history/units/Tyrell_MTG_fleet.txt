@@ -1,0 +1,33 @@
+﻿units = {
+
+	### NAVAL FORCES ###
+	fleet = {
+		name = "Tyrell Fleet"		
+		naval_base = 6332 # Highgarden
+		task_force = {				
+			name = "Shield Fleet"			
+			location = 13003  # Shield	
+			ship = { name = "RRB Honor" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE version_name = "Lord Paramount Class" } } }
+			ship = { name = "Pluton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Tornade" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "Le Bordelais" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "L'Alcyon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "Trombe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }			
+		}								
+		task_force = {				
+			name = "Redwyne Fleet"			
+			location = 9584 # Arbor	
+			ship = { name = "RRB Arbor Queen" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE version_name = "Lord Paramount Class" } } }				
+			ship = { name = "RRD Highgarden" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }		
+			ship = { name = "RRD Old Town" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "RRD Horn Hill" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "RRD Ashford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "RRD Honeyholt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }	
+			ship = { name = "RRD Old Oak" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Tramontane" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Typhon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = IRE } } }
+			
+		}								
+	}
+
+}

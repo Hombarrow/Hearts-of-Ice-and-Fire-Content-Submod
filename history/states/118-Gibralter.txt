@@ -1,0 +1,25 @@
+state=
+{
+	id=118
+	name="STATE_118"
+	manpower=3021372
+	
+	state_category = large_city
+	history={
+		owner = SWI
+		victory_points = { 4135 40 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 2
+			4135 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+		}
+		add_core_of = SWI
+	}
+	provinces={
+		4135
+	}
+}

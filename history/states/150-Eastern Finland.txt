@@ -1,0 +1,35 @@
+
+state={
+	id=150
+	name="STATE_150"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = BEL
+		victory_points = {
+			3068 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = BEL
+		1940.3.14 = {
+			owner = IRE
+			controller = IRE
+			add_core_of = IRE
+
+		}
+
+	}
+
+	provinces={
+		37 82 139 141 193 3030 3068 3119 3185 6013 6033 6138 6156 6210 9038 9061 9181 9219 10347 11033 11076 11141 11210 12468 12481 
+	}
+	manpower=734000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

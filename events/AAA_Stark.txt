@@ -1,0 +1,872 @@
+﻿###########################
+# Stark Events
+###########################
+
+add_namespace = stark
+
+# Gib Three Sisters
+country_event = {
+	id = stark.1
+	title = stark.1.t
+	desc = stark.1.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.1.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		FIN = {
+		country_event = { id = stark.2 hours = 1 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+	option = {
+		name = stark.1.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		FIN = {
+		country_event = { id = stark.3 hours = 1 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# No Three Sisters!
+country_event = {
+	id = stark.2
+	title = stark.2.t
+	desc = stark.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.2.a
+		ai_chance = { factor = 50 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = SWE
+		}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+	option = {
+		name = stark.2.b
+		ai_chance = { factor = 50 }
+		FIN = {
+			remove_state_claim = 177
+		}
+		add_political_power = -75
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+}
+
+# Yes Three Sisters
+country_event = {
+	id = stark.3
+	title = stark.3.t
+	desc = stark.3.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.2.a
+		ai_chance = { factor = 50 }
+		FIN = {
+			add_state_core = 177
+			transfer_state = 177
+		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.244 }
+		}
+	}
+}
+
+# Frey puppet
+country_event = {
+	id = stark.4
+	title = stark.4.t
+	desc = stark.4.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.4.a
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		FIN = {
+#		country_event = { id = stark.2 hours = 1 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+	option = {
+		name = stark.4.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		FIN = {
+#		country_event = { id = stark.3 hours = 1 } 
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+}
+
+# Starks apologize
+country_event = {
+	id = stark.5
+	title = stark.5.t
+	desc = stark.5.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.5.a
+		ai_chance = { factor = 50 }
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = stark.5.b
+		ai_chance = { factor = 50 }
+		trigger = { TAG = HOL }
+	}
+}
+
+# Mercy for Ned?
+country_event = {
+	id = stark.6
+	title = stark.6.t
+	desc = stark.6.d
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.6.a
+		ai_chance = { factor = 50 }
+#		SOV = {
+#			TAR_ser_jorah = {
+#				set_nationality = FIN
+#			}
+#		}
+		ENG = {
+			country_event = { days = 1 id = stark.7 }
+		}
+	}
+	option = {
+		name = stark.6.b
+		ai_chance = { factor = 50 }
+		HOL = {
+			country_event = { days = 1 id = stark.8 }
+		}
+	}
+}
+
+# Starks want mercy (Crownlands)
+country_event = {
+	id = stark.7
+	title = stark.7.t
+	desc = stark.7.d
+#	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.7.a
+		ai_chance = { factor = 50 }
+		FIN = {
+			country_event = { days = 1 id = stark.5 }
+		}
+	}
+	option = {
+		name = stark.7.b
+		ai_chance = { factor = 50 }
+		FIN = {
+			country_event = { days = 1 id = stark.5 }
+		}
+	}
+}
+
+# Starks want mercy (Lannister)
+country_event = {
+	id = stark.8
+	title = stark.8.t
+	desc = stark.8.d
+#	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.8.a
+		ai_chance = { factor = 50 }
+		FIN = {
+			country_event = { days = 1 id = stark.9 }
+		}
+	}
+	option = {
+		name = stark.8.b
+		ai_chance = { factor = 50 }
+		FIN = {
+			country_event = { days = 1 id = stark.10 }
+		}
+	}
+}
+
+# Lannister yes
+country_event = {
+	id = stark.9
+	title = stark.9.t
+	desc = stark.9.d
+#	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.9.a
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Lannister / Crownlands reject
+country_event = {
+	id = stark.10
+	title = stark.10.t
+	desc = stark.10.d
+#	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.10.a
+		ai_chance = { factor = 50 }
+	}
+}
+
+# North lords demand explanation
+country_event = {
+	id = stark.11
+	title = stark.11.t
+	desc = stark.11.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.11.a
+		ai_chance = { factor = 33 }
+		add_stability = 0.15
+		add_war_support = -0.15
+		add_timed_idea = { idea = democratic_influence days = 365 }
+	}
+	option = {
+		name = stark.11.b
+		ai_chance = { factor = 33 }
+		add_war_support = 0.15
+		add_timed_idea = { idea = fascist_influence days = 365 }
+	}
+	option = {
+		name = stark.11.c
+		ai_chance = { factor = 33 }
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_timed_idea = { idea = communist_influence days = 365 }
+	}
+}
+
+# Ned is back. Yay. Unused@
+country_event = {
+	id = stark.12
+	title = stark.12.t
+	desc = stark.12.d
+#	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.12.a
+		ai_chance = { factor = 50 }
+		FIN = {
+			create_field_marshal = {
+				name = "Eddard Stark"
+				portrait_path = "gfx/leaders/CAN/Portrait_Stark_Nedfm.dds"
+				traits = { offensive_doctrine defensive_doctrine }
+				skill = 5
+			}
+		}
+	}
+}
+
+# Need for a king, or queen.
+country_event = {
+	id = stark.13
+	title = stark.13.t
+	desc = stark.13.desc
+	picture = GFX_report_event_vienna_award_hungary
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		FIN = {	exists = yes }
+		FIN = {	is_puppet = no }
+		has_global_flag = red_wedding
+		FIN = { has_country_leader = { ruling_only = yes name = "Stark Regency Council" } }
+		FIN = { NOT = { 
+			has_civil_war = yes
+			has_idea = STR_great_depression
+		} }
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+#	is_triggered_only = yes
+	
+	option = {
+		name = stark.13.a #legitimize Jon Snow
+		trigger = { NOT = { has_war_with = CAN } }
+		ai_chance = { factor = 60 }
+
+		CAN = { country_event = { id = stark.15 days = 1 } } 
+	}
+	option = {
+		name = stark.13.b #bring back Arya
+		ai_chance = { factor = 29 }
+
+		hidden_effect = {
+			country_event = { id = stark.14 days = 7 } 
+		}
+
+	}
+	option = {
+		name = stark.13.c #wait for Rickon to grow up
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+# Arya is here
+country_event = {
+	id = stark.14
+	title = stark.14.t
+	desc = stark.14.desc
+	picture = GFX_report_event_vienna_award_hungary
+	
+	is_triggered_only = yes
+
+	immediate = { set_global_flag = arya_returns }
+	
+	option = {
+		name = stark.14.a #lady of Winterfell
+		ai_chance = { factor = 60 }
+
+		create_country_leader = {
+			name = "Arya Stark"
+			desc = "POLITICS_BARRISTAN_SELMY_DESC"
+	
+			picture = "Portrait_Arya_Stark.dds"
+			ideology = liberalism
+			traits = {
+				#
+			}
+		}
+	}
+}
+
+# Jon snow excused
+country_event = {
+	id = stark.15
+	title = stark.15.t
+	desc = stark.15.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.15.a #bye Lord Snow
+		ai_chance = { factor = 60 }
+
+		add_manpower = 1000
+
+		FIN = { country_event = { id = stark.16 } } 
+
+		if = {
+			limit = { has_government = democratic }
+      			retire_country_leader = yes
+			remove_unit_leader = 30
+
+		}else = {
+			remove_unit_leader = 30
+			create_country_leader = {
+				name = "Eddison Tollett"
+				desc = "POLITICS_MACKENZIE_KING_DESC"
+				picture = "gfx/leaders/CAN/Portrait_General_Edd.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+
+		}
+
+	}
+
+	option = {
+		name = stark.15.b #I didn't ask for this
+		ai_chance = { factor = 5 }
+
+		FIN = { country_event = { id = stark.17 } } 
+
+	}
+}
+
+# Jon Stark
+country_event = {
+	id = stark.16
+	title = stark.16.t
+	desc = stark.16.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.16.a #Jon Stark
+		ai_chance = { factor = 60 }
+
+		create_country_leader = {
+			name = "Jon Stark"
+			desc = "POLITICS_BARRISTAN_SELMY_DESC"
+	
+			picture = "Portrait_Jon_snow.dds"
+			ideology = liberalism
+			traits = {
+				#
+			}
+		}
+
+		create_field_marshal = {
+			name = "Jon Stark"
+			picture = "Portrait_Jon_snow.dds"
+			traits = {  defensive_doctrine }
+#			id = 30
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+
+		add_manpower = -1000
+	}
+}
+
+# They dont give us Jon
+country_event = {
+	id = stark.17
+	title = stark.17.t
+	desc = stark.17.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.13.b #bring back Arya
+		ai_chance = { factor = 29 }
+
+		hidden_effect = {
+			country_event = { id = stark.14 days = 7 } 
+		}
+
+	}
+	option = {
+		name = stark.13.c #wait for Rickon to grow up
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+# Hornwood Compromise
+country_event = {
+	id = stark.18
+	title = stark.18.t
+	desc = stark.18.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.18.a #make Hornwood their puppet
+		ai_chance = { factor = 60 }
+
+		ITA = { country_event = { id = italy.3 } } 
+
+		hidden_effect = {
+#			ITA = { country_event = { id = stark.14 } } 
+		}
+
+	}
+	option = {
+		name = stark.18.b #offer the lands
+		ai_chance = { 
+			factor = 20
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		ITA = { country_event = { id = italy.10 } } 
+
+	}
+}
+
+# Ned Stark is King again
+country_event = {
+	id = stark.19
+	title = stark.19.t
+	desc = stark.19.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FIN
+		FIN = { has_country_leader = { ruling_only = yes name = "Stark Regency Council" } }
+		has_global_flag = ned_saved
+		NOT = {
+			has_civil_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {
+		name = stark.19.a #Ned
+		ai_chance = { factor = 60 }
+
+		STR_eddard = {
+			promote_character = yes
+#			promote_character = liberalism
+		}
+
+#		create_country_leader = {
+	
+#			name = "Eddard Stark"
+#			desc = "POLITICS_NED_STARK_DESC"
+#			picture = "gfx/leaders/FIN/Portrait_Stark_Ned.dds"
+#			expire = "1965.1.1"
+#			ideology = liberalism
+#			traits = {
+		#
+#	}
+
+#		}
+
+
+
+		hidden_effect = {
+#			ITA = { country_event = { id = stark.14 } } 
+		}
+
+	}
+}
+
+# Roose Bolton defects
+country_event = {
+	id = stark.20
+	title = stark.20.t
+	desc = stark.20.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.20.a #Traitor!
+		ai_chance = { factor = 60 }
+
+		remove_unit_leader = 34  #Roose Bolton, general 
+
+		hidden_effect = {
+			ITA = {
+				create_field_marshal = {
+					name = "Roose Bolton"
+					picture = "Portrait_Roose_Bolton.dds"
+					traits = { offensive_doctrine old_guard }
+					skill = 4
+					id = 34
+					attack_skill = 4
+					defense_skill = 2
+					planning_skill = 4
+					logistics_skill = 3
+				}
+			}
+		}
+
+	}
+}
+
+# Invest in Bolton
+country_event = {
+	id = stark.21
+	title = stark.21.t
+	desc = stark.21.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.21.a #Civilian!
+		ai_chance = { factor = 45 }
+
+		add_offsite_building = { type = industrial_complex level = 1 }
+
+		ITA = {	country_event = { days = 1 id = italy.16 }}
+
+		hidden_effect = {
+			ITA = { set_country_flag = STARK_industrial_investments }
+		}
+
+	}
+
+	option = {
+		name = stark.21.b #Armory!
+		ai_chance = { factor = 40 }
+
+#		add_offsite_building = { type = arms_factory level = 1 }
+		add_offsite_building = { type = dockyard level = 1 }
+
+		ITA = {	country_event = { days = 1 id = italy.16 }}
+
+		hidden_effect = {
+			ITA = { set_country_flag = STARK_military_investments }
+		}
+
+	}
+
+#	option = {
+#		name = stark.21.c #Nukes!
+#		ai_chance = { factor = 15 }
+
+#		hidden_effect = {
+#			ITA = { set_country_flag = STARK_nuke_investments }
+#		}
+
+#	}
+
+#	option = {
+#		name = stark.21.d #No!
+#		ai_chance = { factor = 5 }
+
+#		hidden_effect = {
+#			ITA = { set_country_flag = STARK_industrial_investments }
+#		}
+
+#	}
+}
+
+# The Battle is Lost2
+country_event = {
+	id = stark.22
+	title = stark.22.t
+	desc = stark.22.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = FIN
+		FIN = { has_war = yes }
+		100 = { is_controlled_by = FIN }
+		FIN = {
+			any_owned_state {
+				is_coastal = yes
+			}
+		}
+#		NOT = { FIN = { has_country_leader = { ruling_only = no name = "Jon Stark" } } }
+		OR = {
+		NOT = { 126 = { is_controlled_by = FIN } }
+		surrender_progress > 0.7
+		}
+		FIN = { any_enemy_country = { is_major = yes }	}
+		FIN = { NOT = {
+			has_civil_war = yes
+		}
+		}
+	}
+
+#	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+#	immediate = {
+#		set_global_flag = ready_stark_dino4
+#	}
+	
+	option = { # Evacuate royal family
+		name = stark.22.a
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+#		custom_effect_tooltip = france.10.a_tt
+#		set_global_flag = ready_stark_dino4
+		activate_mission = STR_dino4_2_actual
+
+		hidden_effect = {
+			
+		}
+	}
+
+	option = { # no
+		name = stark.22.b
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+# Evac completed
+country_event = {
+	id = stark.23
+	title = stark.23.t
+	desc = stark.23.desc
+	picture = GFX_report_event_german_parade_paris
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = stark.23.a #Evacuated
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+
+#		trigger = { is_ai = no }
+		set_global_flag = evacuated_stark
+#		custom_effect_tooltip = france.10.a_tt
+		AUS = { transfer_state = 100 }
+		100 = {	add_core_of = AUS}
+		100 = { set_demilitarized_zone = no }
+#		change_tag_from = AUS
+		hidden_effect = {
+		AUS = {
+			inherit_technology = FIN
+			create_country_leader = {
+				name = "Hodor"
+				desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+				picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Lady Sansa Stark"
+				desc = "POLITICS_SANSA_STARK_DESC"
+				picture = "gfx/leaders/FIN/Portrait_Stark_Sansa.dds"
+
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Bran Stark"
+				desc = "POLITICS_ALFRED_KLAHR_DESC"
+				picture = "gfx/leaders/FIN/Portrait_Stark_Bran.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+			}			
+		}
+
+	}
+
+	option = {
+		name = stark.23.b #Plays as
+		ai_chance = { factor = 0 }
+
+		trigger = { is_ai = no }
+
+		set_global_flag = evacuated_stark
+#		custom_effect_tooltip = france.10.a_tt
+		AUS = { transfer_state = 100 }
+		100 = {	add_core_of = AUS}
+		100 = { set_demilitarized_zone = no }
+		AUS = { change_tag_from = FIN }
+		hidden_effect = {
+		AUS = {
+			inherit_technology = FIN
+			create_country_leader = {
+				name = "Hodor"
+				desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+				picture = "Portrait_Austria_Kurt_Schuschnigg.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Lady Sansa Stark"
+				desc = "POLITICS_SANSA_STARK_DESC"
+				picture = "gfx/leaders/FIN/Portrait_Stark_Sansa.dds"
+
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Bran Stark"
+				desc = "POLITICS_ALFRED_KLAHR_DESC"
+				picture = "gfx/leaders/FIN/Portrait_Stark_Bran.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+			}			
+		}
+
+	}
+}

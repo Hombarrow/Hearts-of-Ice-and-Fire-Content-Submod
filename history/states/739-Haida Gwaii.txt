@@ -1,0 +1,28 @@
+state={
+	id=470
+	name="STATE_739"
+
+	history={
+		owner = PAR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			dockyard = 1
+
+			1869 = {
+				naval_base = 2
+
+			}
+
+
+		}
+		add_core_of = PAR
+	}
+
+	provinces={
+		1869
+	}
+	manpower=312684
+	buildings_max_level_factor=1	
+	state_category=town
+}

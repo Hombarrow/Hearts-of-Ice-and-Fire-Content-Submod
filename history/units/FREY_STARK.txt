@@ -1,0 +1,98 @@
+﻿division_template = {
+	name = "Frey Division"	# Infantry Division
+
+	is_locked = yes
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Cavalry Brigade" 			# Cavalry Brigade
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	###### Twins ######
+	division = {
+		name = "'King Robb Stark' Division"
+		location = 11798
+		division_template = "Frey Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "'Queen Roslin Stark' Division"
+		location = 11798
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "'Lord Walder Frey' Division"
+		location = 11798
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "'Lady Catelyn Stark' Division"
+		location = 11798
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+	### 6. Armija ###
+	division = {
+		name = "'Lord Hoster Tully' Division"
+		location = 915
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "'Lord Edmure Tully' Division"
+		location = 915
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1. Konjička Divizija"
+		location = 915
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "'Princess Arya Stark' Division"
+		location = 915
+		division_template = "Frey Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}			
+
+}

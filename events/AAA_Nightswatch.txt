@@ -1,0 +1,226 @@
+﻿###########################
+# Nights Watch Events
+###########################
+
+add_namespace = nightwatch
+
+# First contact
+country_event = {
+	id = nightwatch.1
+	title = nightwatch.1.t
+	desc = nightwatch.1.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nightwatch.1.a
+		ai_chance = { factor = 90 }
+
+		add_manpower = -3
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Craster sits on the negotiation table
+country_event = {
+	id = nightwatch.2
+	title = nightwatch.2.t
+	desc = nightwatch.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nightwatch.2.a
+		trigger = { CAN = { NOT = { has_government = democratic } } }
+		ai_chance = { factor = 90 }
+
+		if = {
+			limit = { has_idea = craster_others_deal }
+			remove_ideas = craster_others_deal
+		}
+
+		hidden_effect = {
+			ICE = { country_event = { id = nightwatch.4 } }
+		}
+	}
+
+	option = {
+		name = nightwatch.2.b
+		trigger = { CAN = { has_government = democratic } }
+		ai_chance = { factor = 90 }
+
+		if = {
+			limit = { has_idea = craster_others_deal }
+			remove_ideas = craster_others_deal
+		}
+
+		CAN = { country_event = { hours = 3 id = nightwatch.3 } }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Craster Accepts
+country_event = {
+	id = nightwatch.3
+	title = nightwatch.3.t
+	desc = nightwatch.3.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nightwatch.3.a
+		ai_chance = { factor = 90 }
+
+		CAN = {
+			annex_country = { target = ICE transfer_troops = yes }
+#			add_named_threat = { threat = 10 name = hungary.7.t }
+			}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Wildling basterd
+country_event = {
+	id = nightwatch.4
+	title = nightwatch.4.t
+	desc = nightwatch.4.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nightwatch.4.a
+		ai_chance = { factor = 90 }
+
+		kill_country_leader = yes
+			set_party_name = { ideology = communism long_name = "Night's Watch Deserters" name = "Night's Watch Deserters" }
+
+			create_country_leader = {
+				name = "Karl Tanner"
+				picture = "Portrait_Karl_Tanner.dds"
+
+				expire = "1965.1.1"
+				ideology = leninism
+				traits = {
+					#
+				}
+			}
+
+		hidden_effect = {
+			set_politics = {
+
+				ruling_party = communism			
+				elections_allowed = no
+		
+			}
+
+			set_party_name = { ideology = fascism long_name = "Night's Watch Anarchists" name = "Night's Watch Anarchists" }
+			set_party_name = { ideology = neutrality long_name = "Gingers Party" name = "Gingers Party" }
+
+			add_popularity = {
+			ideology = communism
+			popularity = 0.99
+			}
+		if = {
+			limit = { gives_military_access_to = CAN }
+			CAN = {
+				diplomatic_relation = {
+					country = ICE
+					relation = military_access
+					active = no
+				}
+			}
+		}
+			create_country_leader = {
+				name = "Gilly"
+				picture = "Portrait_Gilly_Keep.dds"
+				expire = "1965.1.1"
+				ideology = socialism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Rast"
+				picture = "gfx/leaders/DEN/Portrait_Denmark_Thorvald_Stauning.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					#
+				}
+			}
+			create_country_leader = {
+				name = "Billie"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					#
+				}
+			}
+			division_template = { name = "Night's Watch Deserters" regiments = { infantry = { x = 0 y = 0 }	
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }	
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 } 	
+				} 
+				support = {
+					engineer = { x = 0 y = 0 }   
+				}
+			}
+		random_owned_controlled_state = {
+			prioritize = { 311 }
+				create_unit = { 
+				division = "name = \"Gin Alley Brothers\" division_template = \"Night's Watch Deserters\" 				start_experience_factor = 1"
+				owner = ICE
+					}
+
+				}
+			CAN = { country_event = { days = 3 id = nightwatch.5 } }
+		}
+	}
+
+}
+
+# Nights watch mutiny
+country_event = {
+	id = nightwatch.5
+	title = nightwatch.5.t
+	desc = nightwatch.5.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = nightwatch.5.a
+		ai_chance = { factor = 90 }
+
+		add_manpower = -137
+                if = { limit = { has_government = neutrality }
+			CAN = { kill_country_leader = yes }
+		}
+		add_political_power = -75
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}

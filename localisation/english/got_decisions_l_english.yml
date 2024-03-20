@@ -1,0 +1,377 @@
+﻿l_english:
+ LAN_tribesmenvale:0 "Tribesmen of the Vale"
+ 
+recruit_tribesmen:0 "Recruit the Hill Tribes."
+ 
+recruit_shaga:0 "Employ Shagga as General."
+ 
+recruit_timet:0 "Employ Timett as General."
+
+BOL_hornwoodborder:0 "Hornwood Border War"
+BOL_hornwoodborder_desc:0 "While House Stark may be too strong for us to handle on our own, a limited engagement involving our border troops could allow us to seize control of the territory."
+
+BOL_lordoddreadfort:0 "Heir to the Dreadfort"
+BOL_lordoddreadfort_desc:0 "Despite House Bolton, literally, having just four members, the position of heir to the Dreadfort is surpisingly competitive. Lady Walda has given birth to a son; Ramsay, even he is legitimized, is still technically a bastard. If Ramsay wants to become Lord, he will have to take some... drastic actions."
+ 
+BLT_dew_it_ramsay:0 "Trueborn is beeing named heir..."
+BLT_dew_it_ramsay_desc:0 "Lord Bolton is preparing to name Lady Walda's son as his trueborn heir. Once that happens, Ramsay will never be able to seize power."
+
+STR_contingency_skaagos:0 "Moving to Skaagos"
+STR_contingency_skaagos_desc:0 "Desperate times call for desperate measures. The enemy threat is real and we have to save the royal family by moving them to the isolated island of Skaagos."
+
+STR_dino4_2_actual:0 "Evacuating Royal Family..."
+STR_dino4_2_actual_desc:0 "As long as we control Skaagos and any coastal state, we will be fine."
+
+TAR_dany_pregnant:0 "Daenerys is pregnant..."
+TAR_dany_pregnant_desc:0 "We must make sure the baby is safe."
+
+attack_wildlings:0 "Attack the Wildlings."
+ 
+attack_wall:0 "Attack the Wall."
+ 
+attack_stark:0 "Attack the Starks."
+ 
+attack_karstark:0 "Attack the Karstarks."
+ 
+attack_bolton:0 "Attack the Boltons."
+ 
+TAR_drogo_is_dying:0 "The Khal is dying."
+
+evac_hardhome:0 "Evacuate Hardhome."
+ 
+evac_supplyroute:0 "Establish a supply route to Hardhome."
+ 
+evac_thenn:0 "Evacuate Thenn."
+ 
+evac_mines_thenn:0 "Move the Thenn mines."
+ 
+evac_industry:0 "Move heavy industry south of the Wall."
+ 
+evac_civilians:0 "Evacuate isolated communities."
+ 
+wildlings_in_gift:0 "Is south of the Wall."
+ 
+VOL_join_daenerys:0 "Declare for House Targaryen"
+ 
+VOL_join_daenerys_desc:0 "The Mother of Dragons has proven to be the Mhysa every free slave needs. It would be in our best interest to join her cause."
+
+ally_dany_vol:0 "Become part of House Targaryen"
+ 
+ally_dany_vol_desc:0 "§RYou will continue playing as House Targaryen§!."
+
+VOL_golden_company:0 "§YThe Golden Company§!"
+ 
+VOL_golden_company_desc:0 "The Golden Company is considered the finest and most powerful company of the Free Cities. Despite the notorious unreliability of sellswords, the Golden Company is reputed to have never broken a contract. Their war cry, §YBeneath the gold, the bitter steel§!, pays homage to their founder and their motto is §YOur word is good as gold§!."
+ 
+
+DEN_go_south:0 "The Long Way South"
+ 
+DEN_go_south_desc:0 "The White Walkers are on our trail and we have no hope of holding them off. The only way we can survive is to go South of the Wall."
+ 
+DEN_south_or_die:0 "Pass the Wall or Die!"
+ 
+
+hire_golden_company:0 "Hire the Golden Company."
+ 
+goldencompany_hired:0 "Golden Company is on a contract."
+ 
+gc_10inf_tt:0 "Hire 10 Elite Infantry Divisions.\n"
+ 
+gc_4cav_tt:0 "Hire 4 Elite Cavalry Divisions.\n"
+ 
+gc_2harm_tt:0 "Hire 2 Elite Tank Divisions.\n"
+ 
+
+VOL_second_sons:0 "The Second Sons"
+ 
+VOL_second_sons_desc:0 "The Second Sons are amongst the oldest of the free companies. They do not enjoy the shining reputation of the Golden Company, but they have won some famous victories. However, under the command of Mero, the Second Sons have turned nearly as bad as the Brave Companions. Mero's reputation has fallen to the point where few in the Free Cities are willing to hire him."
+ 
+hire_second_sons:0 "Hire the Second Sons."
+ 
+bribe_second_sons:0 "Bribe the Second Sons."
+ 
+secondsons_hired:0 "Second Sons are on a contract."
+ 
+ssons_hired:0 "Working with the Second Sons."
+ 
+ssons_6inf_tt:0 "Hire 6 Infantry Divisions.\n"
+ 
+ssons_4cav_tt:0 "Hire 4 Cavalry Divisions.\n"
+ 
+ssons_4larm_tt:0 "Hire 4 Light Armor Divisions.\n"
+
+LAN_northrebels:0 "Rebels in the North"
+ 
+launch_bolton_uprising:0 "Start the Bolton Uprising!"
+ 
+pardon_roose_bolton:0 "Pardon Roose Bolton."
+ 
+bring_roose_bolton:0 "Grant Pardons to House Bolton."
+bring_roose_bolton_desc:0 "Despite their previous hostilities towards the North, Roose Bolton and his bastard son Ramsay, still have skills that can benefit us. They would probably prefer working for us than being beheaded anyway."
+ 
+roose_hired:0 "Roose Bolton is fighting for the Starks"
+ 
+
+TAR_infiltrate_slaver_areas:0 "Infiltrate Slaver Territory"
+ 
+TAR_infiltrate_slaver_areas_desc:0 "We cannot defeat the Slavers head-on but by infiltrating their lands and getting in touch with their oppressed slaves, we can organize a revolt behind the enemy lines. The more people we organize, the larger the revolt will be."
+
+TAR_infiltrate_astapor:0 "Infiltrate Astapor..."
+ 
+TAR_infiltrate_yunkai:0 "Infiltrate Yunkai..."
+ 
+TAR_rise_yunkai:0 "Slave Revolt in Yunkai."
+ 
+TAR_rise_astapor:0 "Slave Revolt in Astapor."
+ 
+
+get_craster_tech:0 "Accept Craster's sacrifice."
+ 
+
+SIS_declare_king:0 "Claim to the Throne."
+
+SIS_declare_king_desc:0 "If Lord Stannis doesn't press his claim, his claim will be forgotten. He will not be a page in someone else's history book! We will send copies of his declaration to every corner of the realm, from Dorne to the Wall."
+ 
+
+STR_wedding_is_happening:0 "The Wedding is Happening"
+ 
+STR_no_need_wedding_tt:0 "Robb won't need to marry a Frey girl."
+ 
+
+tell_dorne:0 "Send letters to Dorne."
+ 
+tell_reach:0 "Send letters to the Reach."
+ 
+tell_westerlands:0 "Send letters to the Westerlands."
+ 
+tell_riverlands:0 "Send letters to the Riverlands."
+ 
+tell_vale:0 "Send letters to the Vale."
+ 
+tell_north:0 "Send letters to the North."
+ 
+
+bring_back_theon:0 "Bring back Theon Greyjoy."
+
+bring_back_theon_desc:0 "Robb and Theon have been the best of friends, ever since the Ironborn prince arrived in Winterfell. He left in early 1936, hoping to persuade his father to ally with us, however, that was probably never going to happen. It's time to call him back where he belongs."
+ 
+
+Warden_north:0 "The Warden of the North."
+ 
+control_north:0 "Assume control of the Northern exterior."
+ 
+warden_of_north:0 "Is Warden of the North."
+ 
+control_winterfell:0 "Assume control of Winterfell and its surroundings."
+ 
+CWN_stannis_troops:0 "Assign new Commanders"
+ 
+
+TYR_margery_takes_over:0 "Margaery Tyrell takes over..."
+ 
+
+TYR_margery_takes_over_desc:0 "The Lady of Highgarden is using her influence over King Tommen to gain more support for her own house. If we do not do something about it, the Crownlands might soon find themselves under direct control of the Reach. Some people might even think that it is a good thing..."
+ 
+
+VAL_knights_recruit:0 "Summon the Knights of the Vale"
+ 
+grafton_bannermen:0 "Call the Grafton Bannermen."
+ 
+lynderly_bannermen:0 "Call the Lynderly Bannermen."
+ 
+royce_bannermen:0 "Call the Royce Bannermen."
+ 
+corbray_bannermen:0 "Call the Corbray Bannermen."
+ 
+waynwood_bannermen:0 "Call the Waynwood Bannermen."
+ 
+VAL_marines_recruit:0 "The Elite Marines"
+ 
+
+pebble_bannermen:0 "Call the Pebble Bannermen."
+ 
+paps_bannermen:0 "Call the Paps Bannermen."
+ 
+sisterton_bannermen:0 "Call the Sisterton Bannermen."
+ 
+VAL_timeout_for_royce:0 "Yohn Royce in danger..."
+ 
+VAL_timeout_for_baelish:0 "Littlefinger in danger..."
+ 
+
+
+spawn_wildlingzombies:0 "Revive the Wildling dead."
+ 
+spawn_wildlingzombies_desc:0 "The Wildlings are destined to become our servants. Some will do that earlier than others."
+
+VOL_slaver_leader:0 "Leader of the Slaver States"
+ 
+ally_mantarys:0 "Invite Mantarys"
+ 
+puppet_mantarys:0 "Mantarys buffer state"
+ 
+conquer_mantarys:0 "Conquer Mantarys"
+  
+
+recruit_lyanna:0 "Give command to Lyanna Mormont."
+ 
+recruit_lyanna_desc:0 "'I don't plan on knitting by the fire while men fight for me. I may be small. And may be a girl. But I am every bit a Northener as all of you!'"
+
+
+DOT_plunder_people:0 "Plunder the Borders"
+ 
+
+STR_save_ned_stark:0 "Save Ned Stark"
+
+STR_save_ned_stark_desc:0 "After a failed coup, Lord Eddard Stark has been left to rot in a dungeon at King's Landing. He is currently awaiting judgement from [ENG.GetLeader] and he is unlikely to show Lord Stark any mercy. We need to rescue him before it is too late."
+
+
+MRT_provoke_stormlands:0 "Provoke the Stormlands"
+ 
+MRT_provoke_stormlands_desc:0 "The Stormlands seem to be having trouble finding allies. This has left them vulnerable and if we just stage a little provocation, they may get the blame for any future conflict between us."
+ 
+MRT_provoke_marches:0 "Stage Provocation"
+  
+
+TAR_grey_worm:0 "Recruit Unsullied Commander"
+ 
+TAR_grey_worm_desc:0 "We will allow the unsullied to talk amongst themselves and  pick out the one they believe is the strongest and most capable leader."
+ 
+TAR_getunsulied:0 "The Unsullied"
+ 
+
+IRN_sneak_attacks:0 "Terror from the Deep."
+ 
+
+sneakattack_stark:0 "Sneak attack the Starks."
+ 
+sneakattack_lannister:0 "Sneak attack the Lannisters."
+ 
+IRN_execute_war_plan_lion:0 "Execute War Plan Lion."
+ 
+IRN_execute_war_plan_wolf:0 "Execute War Plan Wolf."
+ 
+IRN_execute_war_plan_fist:0 "Execute War Plan Fist."
+ 
+IRN_execute_war_plan_bear:0 "Execute War Plan Bear."
+ 
+IRN_execute_war_plan_rose:0 "Execute War Plan Rose."
+ 
+IRN_execute_war_plan_archer:0 "Execute War Plan Archer."
+ 
+IRN_execute_war_plan_fish:0 "Execute War Plan Fish."
+ 
+IRN_execute_war_plan_grandpa:0 "Execute War Plan Grandpa."
+
+LAN_purchase_equipment:0 "Purchase Military Equipment"
+LAN_purchase_equipment_desc:0 "We should not underestimate any threat to the existence of [HOL.GetName]. If the Iron Bank is willing to offer us a war loan, then they will surely be willing to sell us some of the extra military equipment we need."
+ LAN_purchase_artillery:0 "Purchase [SWI.GetAdjective] Artillery"
+ LAN_purchasing_infantry_equipment_flag:0 " Is already purchasing infantry equipment elsewhere"
+ LAN_purchasing_artillery_flag:0 " Is already purchasing artillery elsewhere"
+ LAN_purchasing_military_vehicles_flag:0 " Is already purchasing vehicles elsewhere"
+ LAN_purchasing_armor_flag:0 " Is already purchasing armor elsewhere"
+ LAN_purchasing_aircraft_flag:0 "Is already purchasing aircraft elsewhere"
+ LAN_purchase_artillery_tt:0 "\nWe will choose between purchasing [?LAN_quantity_purchased_artillery] pieces of §YArtillery§![GetAvailableArtilleryToPurchase], based on [FROM.GetAdjective] research.\n"
+ LAN_purchase_artillery_anti_air_available:0 " or §YAnti-Air§!"
+ LAN_purchase_artillery_anti_tank_available:0 " or §YAnti-Tank§!"
+ LAN_purchase_artillery_everything_available:0 ", §YAnti-Air§! or §YAnti-Tank§!"
+ LAN_purchase_artillery_only_artillery_available:0 ""
+ LAN_purchase_vehicles_tt:0 "\nWe will choose between purchasing [?LAN_quantity_purchased_motorized] §YMotorized§![GetAvailableVehiclesToPurchase] vehicles, based on [FROM.GetAdjective] research.\n"
+ LAN_purchase_vehicles_mechanized_available:0 " or [?LAN_quantity_purchased_mechanized] §YMechanized§!"
+ LAN_purchase_vehicles_armored_car_available:0 " or [?LAN_quantity_purchased_armored_car] §YArmored§!"
+ LAN_purchase_vehicles_everything_available:0 ", [?LAN_quantity_purchased_mechanized] §YMechanized§! or [?LAN_quantity_purchased_armored_car] §YArmored§!"
+ LAN_purchase_vehicles_only_motorized_available:0 ""
+ LAN_purchase_armor_tt:0 "\nWe will choose between purchasing [?LAN_quantity_purchased_light_armor] §YLight Tanks§![GetAvailableArmorToPurchase], based on [FROM.GetAdjective] research.\n"
+ LAN_purchase_armor_medium_available:0 " or [?LAN_quantity_purchased_medium_armor] §YMedium Tanks§!"
+ LAN_purchase_armor_heavy_available:0 " or [?LAN_quantity_purchased_heavy_armor] §YHeavy Tanks§!"
+ LAN_purchase_armor_everything_available:0 ", [?LAN_quantity_purchased_medium_armor] §YMedium Tanks§! or [?LAN_quantity_purchased_heavy_armor] §YHeavy Tanks§!"
+ LAN_purchase_armor_only_light_available:0 ""
+ LAN_purchase_aircraft_tt:0 "\nWe will choose between purchasing [?LAN_quantity_purchased_fighter] §YFighters§![GetAvailableAircraftToPurchase], based on [FROM.GetAdjective] research.\n"
+ LAN_purchase_aircraft_naval_bomber_available:0 " or [?LAN_quantity_purchased_naval_bomber] §YNaval Bombers§!"
+ LAN_purchase_aircraft_tactical_bomber_available:0 " or [?LAN_quantity_purchased_tactical_bomber] §YTactical Bombers§!"
+ LAN_purchase_aircraft_everything_available:0 ", [?LAN_quantity_purchased_naval_bomber] §YNaval Bombers§! or [?LAN_quantity_purchased_tactical_bomber] §YTactical Bombers§!"
+ LAN_purchase_aircraft_only_fighter_available:0 ""
+ LAN_purchase_infantry_equipment:0 "Purchase [SWI.GetAdjective] Infantry Equipment"
+ LAN_purchase_armor:0 "Purchase [SWI.GetAdjective] Armor"
+ LAN_purchase_military_vehicles:0 "Purchase [SWI.GetAdjective] Military Vehicles"
+ LAN_purchase_aircraft:0 "Purchase [SWI.GetAdjective] Aircraft"
+ LAN_purchase_ships:0 "Purchase [SWI.GetAdjective] Ships"
+ LAN_producing_bulgarian_ships_flag:0 " Currently producing Westerlands' ships"
+ LAN_ships_purchase_rejected_flag:0 " Has rejected Lannister proposal to purchase ships in the last 180 days"
+ LAN_purchase_ships_submarines_tt:0 "We will receive §Y3 Submarines§!."
+ LAN_purchase_ships_destroyers_tt:0 "We will receive §Y3 Destroyers§!."
+ LAN_purchase_ships_light_cruiser_tt:0 "We will receive a §YLight Cruiser§!."
+ LAN_purchase_ships_undetermined_tt:0 "If our proposal is accepted, we will choose between purchasing §Y3 Submarines§!, §Y2 Destroyers§! or a §YLight Cruiser§!."
+
+ ##Eng films for above
+ the_blackfyre:0 "The Blackfyre Rebellion"
+ the_dance_of_dragons:0 "The Dance of the Dragons"
+ queens_messengers:0 "Queen's Messengers"
+ in_which_we_serve:0 "In Which We Serve"
+ the_hedge:0 "The Hedge Knight"
+ fires_were_started:0 "Fires Were Started"
+ ##DORNE
+ men_of_ships:0 "10 000 Ships"
+ soldiers_without_uniform:0 "Soldiers Without Uniform"
+ mid_east:0 "Mid East"
+ ##Can
+ atlantic_patrol:0 "Atlantic Patrol"
+ front_of_steel:0 "Front of Steel"
+ home_front:0 "Home Front"
+ wings_of_youth:0 "Wings of Youth"
+ all_out_for_war:0 "All Out for War"
+ banshees_over_wall:0 "Watchers on the Wall"
+ ##RAJ_agrarian_society$§
+ the_planes_of_hindustan:0 "The Planes of Hindustan"
+ road_to_victory:0 "Road to Victory"
+ hes_in_the_navy:0 "He's in the Navy"
+ in_self_defence:0 "In Self Defence"
+ ##USA
+ women_in_defense:0 "Women in Defense"
+ winning_your_wings:0 "Winning Your Wings"
+ the_world_at_war:0 "The World at War"
+ mission_accomplished:0 "Mission Accomplished"
+ the_fleet_that_came_to_stay:0 "The Fleet That Came to Stay"
+ fury_in_the_pacific:0 "Fury in the Pacific"
+ its_your_war_too:0 "It's Your War Too"
+ ##Holland/Belgium
+ belguique_toujours:0 "Belgique Toujours"
+ high_stakes_in_the_east:0 "High Stakes in the East"
+ glorious_colours:0 "Glorious Colours"
+ litte_castamere:0 "The Rains of Castamere"
+ ##Sov
+ for_the_front:0 "For the Front"
+ the_peoples_avengers:0 "The People's Avengers"
+ day_of_war:0 "Day of War"
+ film_hotd:0 "House of the Dragon"
+ sons_of_the_aegon:0 "Aegon's Conquest"
+ moscow_strikes_doom:0 "Doom of Valyria"
+ ##Ger
+ fluchtlinge:0 "Fluchtlinge"
+ film_bismarck:0 "Bismarck"
+ wunschkonzert:0 "Wunschkonzert"
+ anschlag_auf_baku:0 "Anschlag Auf Baku"
+ die_entlassung:0 "Die Entlassung"
+ besatzung_dora:0 "Besatzung Dora"
+ opfergang:0 "Opfergang"
+ panorama:0 "Panorama"
+ kolberg:0 "Kolberg"
+ ##House Stark
+ monkey_wolf:0 "Wolf King"
+ genghis_brann:0 "Brann the Builder"
+ vow_in_the_night:0 "The Long Night"
+ song_of_the_white_orchid:0 "Song of the White Orchid"
+ five_scouts:0 "Five Scouts"
+ fire_on_that_flag:0 "Fire on That Flag!"
+ ##Ita (hard to find it seems)
+ condottieri:0 "Condottieri"
+ scipio_africano:0 "Scipio Africano"
+ the_man_with_the_cross:0 "The Man With the Cross"
+ ##Generic
+ our_war:0 "Our War"
+ the_war_for_our_existence:0 "The War for our Existence"
+ war_in_the_skies:0 "War in the Skies"
+ flags_raised:0 "Flags Raised"
+ the_day_of_sacrifice:0 "The Day of Sacrifice"
+ blood_and_toil:0 "Blood and Toil"    
+ 

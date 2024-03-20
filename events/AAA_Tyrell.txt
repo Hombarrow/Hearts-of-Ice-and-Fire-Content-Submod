@@ -1,0 +1,443 @@
+﻿###########################
+# Tyrell Events
+###########################
+
+add_namespace = ireland
+
+# Going to War
+country_event = {
+	id = ireland.1
+	title = ireland.1.t
+	desc = ireland.1.d
+	picture = GFX_report_event_german_parade_paris
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		has_idea = FRA_victors_of_wwi
+		has_war = yes
+		NOT = {
+			has_civil_war = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = { # Growing strong
+		name = ireland.1.a
+		remove_ideas = FRA_victors_of_wwi
+
+	}
+}
+
+# Lannisters invite us
+country_event = {
+	id = ireland.2
+	title = ireland.2.t
+	desc = ireland.2.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.2.a
+		ai_chance = { factor = 90 }
+		set_politics = {
+			
+			ruling_party = fascism			
+			elections_allowed = no
+		
+		}
+
+
+		if = {
+			limit = { HOL = { is_in_faction = yes } }
+			HOL = { add_to_faction = IRE }
+
+		}
+
+		if = {
+			limit = { HOL = { is_in_faction = no } }
+		HOL = {
+		country_event = { id = netherlands.5 days = 1 } 
+		}
+		}
+		hidden_effect = {
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.55
+		}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = ireland.2.b
+		ai_chance = { 
+		factor = 5 
+			modifier = {
+				factor = 50
+				is_in_faction_with = BEL
+			}
+		}
+		HOL = {
+		add_opinion_modifier = { target = IRE modifier = betrayed_guarantee }  
+		}
+	}
+}
+
+# North Remembers
+country_event = {
+	id = ireland.3
+	title = ireland.3.t
+	desc = ireland.3.d
+	picture = GFX_report_event_german_parade_paris
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		has_war = no
+		NOT = {
+			has_civil_war = yes
+			has_idea = YUG_idea_macedonian_opposition
+		}
+		OR = {
+			126 = { is_controlled_by = IRE }
+			114 = { is_controlled_by = IRE }
+			338 = { is_controlled_by = IRE }
+			135 = { is_controlled_by = IRE }
+			130 = { is_controlled_by = IRE }
+			133 = { is_controlled_by = IRE }
+			138 = { is_controlled_by = IRE }
+			128 = { is_controlled_by = IRE }
+			144 = { is_controlled_by = IRE }
+			141 = { is_controlled_by = IRE }
+			358 = { is_controlled_by = IRE }
+			121 = { is_controlled_by = IRE }
+			140 = { is_controlled_by = IRE }
+			113 = { is_controlled_by = IRE }
+			FIN = { is_subject_of = IRE }
+			GEO = { is_subject_of = IRE }
+			NOR = { is_subject_of = IRE }
+			KAZ = { is_subject_of = IRE }
+			EST = { is_subject_of = IRE }
+			AZR = { is_subject_of = IRE }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = { # Growing strong
+		name = ireland.3.a
+		add_timed_idea = { idea = YUG_idea_macedonian_opposition days = 730 }
+
+	}
+}
+
+# Hurry wedding with Tommen / Confirmation of Joffrey
+country_event = {
+	id = ireland.4
+	title = ireland.4.t
+	desc = ireland.4.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.4.a
+		ai_chance = { factor = 90 }
+		set_global_flag = margery_in_kingslanding
+#		HOL = {
+#		country_event = { id = netherlands.5 days = 1 } 
+#		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Befriend Joffrey
+country_event = {
+	id = ireland.5
+	title = ireland.5.t
+	desc = ireland.5.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.5.a
+		ai_chance = { factor = 90 }
+
+		ENG = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+#		add_ideas = margery
+
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = margery
+
+		hidden_effect = {
+			IRE = { country_event = { days = 1 id = ireland.4 } }
+		}
+	}
+
+}
+
+# Speak to orphans
+country_event = {
+	id = ireland.6
+	title = ireland.6.t
+	desc = ireland.6.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.6.a
+		ai_chance = { factor = 90 }
+
+		ENG = {
+			add_war_support = 0.05 
+		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+			if = {
+				limit = { has_global_flag = margery_popular }
+				set_global_flag = margery_very_popular
+			}
+			set_global_flag = margery_popular
+		}
+	}
+
+}
+
+# Food for the poor
+country_event = {
+	id = ireland.7
+	title = ireland.7.t
+	desc = ireland.7.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.7.a
+		ai_chance = { factor = 90 }
+
+		ENG = {
+		add_stability = 0.05 
+		}
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = margery_popular }
+				set_global_flag = margery_very_popular
+			}
+			set_global_flag = margery_popular
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Poison Joffrey - good
+country_event = {
+	id = ireland.8
+	title = ireland.8.t
+	desc = ireland.8.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.8.a
+		ai_chance = { factor = 90 }
+		add_political_power = 350
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+			ENG = { country_event = { id = britain.8 days = 3 } }
+		}
+	}
+
+}
+
+# Poison Joffrey - Fail
+country_event = {
+	id = ireland.9
+	title = ireland.9.t
+	desc = ireland.9.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.9.a
+		ai_chance = { factor = 90 }
+
+		IRE = { add_country_leader_trait = political_prisoner_real }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# The Crownlands are ours
+country_event = {
+	id = ireland.10
+	title = ireland.10.t
+	desc = ireland.10.desc
+	picture = GFX_report_event_royal_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.10.a
+		ai_chance = { factor = 90 }
+
+		set_politics = {
+			
+			ruling_party = neutrality
+#			elections_allowed = no
+						
+		}
+
+		puppet = ENG
+
+		hidden_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.75
+			}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}
+
+# Renly invite us
+country_event = {
+	id = ireland.11
+	title = ireland.11.t
+	desc = ireland.11.desc
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.11.a
+		ai_chance = { factor = 90 }
+		set_politics = {
+			
+			ruling_party = democratic			
+			elections_allowed = no
+		
+		}
+
+
+		BEL = { add_to_faction = IRE }
+
+		hidden_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.55
+			}
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = ireland.11.b
+		ai_chance = { 
+			factor = 5 
+#			modifier = {
+#				factor = 50
+#				is_in_faction_with = HOL
+#			}
+		}
+
+	}
+}
+
+# Renly is dead. join Lannisters?
+country_event = {
+	id = ireland.12
+	title = ireland.12.t
+	desc = ireland.12.desc
+	picture = GFX_report_event_german_parade_paris
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = IRE
+		IRE = { is_in_faction_with = BEL }
+		HOL = { has_completed_focus = LAN_royal_marriage_with_tyrell }
+		NOT = { BEL = { has_country_leader = { ruling_only = yes name = "Renly Baratheon" } } }
+		NOT = {	has_civil_war = yes }
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = { # yes
+		name = ireland.12.a
+		ai_chance = { factor = 90 }
+
+		HOL = { country_event = { id = netherlands.15 days = 1 } }
+
+	}
+
+	option = { # no
+		name = ireland.12.b
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+	}
+}
+
+# Lannisters accept us
+country_event = {
+	id = ireland.13
+	title = ireland.13.t
+	desc = ireland.13.desc
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ireland.13.a
+		ai_chance = { factor = 90 }
+		set_politics = {
+			
+			ruling_party = fascism			
+			elections_allowed = no
+		
+		}
+
+
+		hidden_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.55
+		}
+#			country_event = { days = 1 id = news.23 }
+	}
+
+}

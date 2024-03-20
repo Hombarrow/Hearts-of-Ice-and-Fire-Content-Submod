@@ -1,0 +1,36 @@
+
+state={
+	id=476
+	name="STATE_724"
+	resources={
+		rubber=37.000
+	}
+
+	history={
+		owner = VIN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+			12122 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			12122 20 
+		}
+		add_core_of = VIN
+
+	}
+
+	provinces={
+		1279 4297 4371 4388 4392 7236 10156 12122 12131 12220 12286 
+	}
+	manpower=3041700
+	buildings_max_level_factor=1.000
+	state_category=city
+}

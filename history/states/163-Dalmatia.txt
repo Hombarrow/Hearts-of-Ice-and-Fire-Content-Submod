@@ -1,0 +1,25 @@
+state=
+{
+	id=163
+	name="STATE_163"
+	manpower = 3218000
+	
+	state_category = city
+	
+	history={
+		owner = LUX
+		add_core_of = LUX
+		victory_points = {
+			3943 25 
+		}
+		buildings = {
+			infrastructure = 4
+			3943 = {
+				naval_base = 6
+			}
+		}
+	} 
+	provinces={	
+		3943 
+	}
+}

@@ -1,0 +1,31 @@
+﻿l_english:
+ europe:0 "Westeros"
+ 
+europe_adj:0 "Westerosi"
+ 
+asia:0 "East Essos"
+ 
+asia_adj:0 "East Essosi"
+ 
+africa:0 "Sothoryos"
+ 
+africa_adj:0 "Sothori"
+ 
+north_america:0 "Free City"
+ 
+north_america_adj:0 "Free Cities'"
+ 
+south_america:0 "Dothraki Sea"
+ 
+south_america_adj:0 "Dothraki"
+ 
+australia:0 "Ulthos"
+ 
+australia_adj:0 "Ulthosian"
+ 
+middle_east:0 "Ghis"
+ 
+middle_east_adj:0 "Ghiscari"
+ 
+neighbor:0 "Neighbor"
+ subject:0 "Subject"

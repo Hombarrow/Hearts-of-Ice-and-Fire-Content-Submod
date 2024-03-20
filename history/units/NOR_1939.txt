@@ -1,0 +1,167 @@
+﻿start_equipment_factor = 0.2
+division_template = {
+	name = "Infanteriet Divisjon"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Binær Divisjon"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Dragonregiment" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	##### Kongelige Norwegan Overkommando #####
+	division = {
+		name = "1. Divisjon"
+		location = 6103
+		division_template = "Infanteriet Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1. Dragonregiment"
+		location = 11367
+		division_template = "Dragonregiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "2. Divisjon"
+		location = 6103
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2. Dragonregiment"
+		location = 11367
+		division_template = "Dragonregiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "3. Divisjon"
+		location = 6103
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "4. Divisjon"
+		location = 6103
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "5. Divisjon"
+		location = 6237
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3. Dragonregiment"
+		location = 11367
+		division_template = "Dragonregiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "6. Divisjon"
+		location = 6237
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Finnmark Brigaden"
+		location = 6237
+		division_template = "Binær Divisjon"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	##### NAVAL UNITS #####					
+	navy = {					
+		name = "Karstark Main Fleet"				
+		base = 11367
+		location =  11367 # Bergen
+		ship = { name = "HNoMS Draug" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NOR } } }
+		ship = { name = "HNoMS Troll" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NOR } } }
+		ship = { name = "HNoMS Garm" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NOR } } }
+	}					
+
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "NOR"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "NOR" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 100
+	}
+}

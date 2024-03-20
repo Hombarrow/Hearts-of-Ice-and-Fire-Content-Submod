@@ -1,0 +1,118 @@
+﻿division_template = {
+	name = "District Militia"	# For largest Military District Forces (3 brigade forces)
+	# Note: all forces at reserve levels in 1936
+
+	division_names_group = CAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Militia"  
+	# Note: all forces at reserve levels in 1936
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Armored-Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	##### Royal Canadian Army #####
+	## 1st Miltary District ##
+	division= {	
+		name = "1st District Militia"
+		location = 4720 # London ONT
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 2nd Miltary District ##
+	division= {	
+		name = "2nd District Militia"
+		location = 4422 # Toronto
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 3rd Miltary District ##
+	division= {	
+		name = "3rd District Militia"
+		location = 7810 # Kingston ONT
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 4th Miltary District ##
+	division= {	
+		name = "4th District Militia"
+		location = 12503 # Montreal
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 5th Miltary District ##
+	division= {	
+		name = "5th District Militia"
+		location = 12223 # Quebec City
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	fleet = {
+		name = "Night's Watch Fleet"			
+		naval_base = 4422 # EastwatchbytheSea
+		task_force = {				
+			name = "Eastwatch Squadron"			 
+			location = 4422 # EastwatchbytheSea
+			ship = { name = "RM Blackbird" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }	
+			ship = { name = "RM Storm Crow" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }	
+			ship = { name = "RM Talon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }				
+		}								
+	}
+
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CAN"
+		}
+		requested_factories = 3
+		progress = 0.49
+		efficiency = 80
+	}
+}

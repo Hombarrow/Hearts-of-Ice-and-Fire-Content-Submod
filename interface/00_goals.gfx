@@ -1,0 +1,296 @@
+spriteTypes = {	
+	
+	SpriteType = {
+	name = "GFX_TLY_free_trade"
+	texturefile = "gfx/interface/goals/TLY_free_trade.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_forrester"
+	texturefile = "gfx/interface/goals/goal_forrester.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_whitehill"
+	texturefile = "gfx/interface/goals/goal_whitehill.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_goal_kingsmoot"
+	texturefile = "gfx/interface/goals/goal_kingsmoot.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_generic_electronic"
+	texturefile = "gfx/interface/goals/goal_generic_electronic.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_civilian_economy"
+	texturefile = "gfx/interface/goals/goal_civilian_economy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_military_economy"
+	texturefile = "gfx/interface/goals/goal_military_economy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_TLY_develop_blue_fork"
+	texturefile = "gfx/interface/goals/TLY_develop_blue_fork.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_TLY_develop_riverrun"
+	texturefile = "gfx/interface/goals/TLY_develop_riverrun.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_TLY_develop_seagard"
+	texturefile = "gfx/interface/goals/TLY_develop_seagard.dds"			
+	}
+	SpriteType = {
+	name = "GFX_IRN_salt_throne"
+	texturefile = "gfx/interface/goals/IRN_salt_throne.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_go_after_reach"
+	texturefile = "gfx/interface/goals/IRN_go_after_reach.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_go_after_dorne"
+	texturefile = "gfx/interface/goals/IRN_go_after_dorne.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_go_after_stormlands"
+	texturefile = "gfx/interface/goals/IRN_go_after_stormlands.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_declare_euron_warden_of_the_south"
+	texturefile = "gfx/interface/goals/IRN_warden_of_the_south.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_aegon_in_stormlands"
+	texturefile = "gfx/interface/goals/IRN_stormlands_for_aegon.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_foothold_ib_the_vale"
+	texturefile = "gfx/interface/goals/IRN_foothold_in_the_vale.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_destroy_stannis_baratheon"
+	texturefile = "gfx/interface/goals/IRN_foothold_on_dragonstone.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_military_factory_1"
+	texturefile = "gfx/interface/goals/IRN_militaryfactory1.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_military_factory_2"
+	texturefile = "gfx/interface/goals/IRN_militaryfactory2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_civilian_factory_1"
+	texturefile = "gfx/interface/goals/IRN_civilfactory1.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_civilian_factory_2"
+	texturefile = "gfx/interface/goals/IRN_civilfactory2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_dockyards_1"
+	texturefile = "gfx/interface/goals/IRN_dockyards1.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_generic_dockyards_2"
+	texturefile = "gfx/interface/goals/IRN_dockyards2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_farwynd"
+	texturefile = "gfx/interface/goals/IRN_farwynd.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_botley"
+	texturefile = "gfx/interface/goals/IRN_botley.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_harlaw"
+	texturefile = "gfx/interface/goals/IRN_harlaw.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_goodbrother"
+	texturefile = "gfx/interface/goals/IRN_goodbrother.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_tawney"
+	texturefile = "gfx/interface/goals/IRN_tawhney.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_drumm"
+	texturefile = "gfx/interface/goals/IRN_drumm.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_orkwood"
+	texturefile = "gfx/interface/goals/IRN_orkwood.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_saltcliffe"
+	texturefile = "gfx/interface/goals/IRN_saltcliffe.dds"			
+	}
+		
+	SpriteType = {
+	name = "GFX_IRN_volmark"
+	texturefile = "gfx/interface/goals/IRN_volmark.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_kenning"
+	texturefile = "gfx/interface/goals/IRN_kenning.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_research"
+	texturefile = "gfx/interface/goals/IRN_research.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_land_doctrines"
+	texturefile = "gfx/interface/goals/IRN_land_doctrine.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_land_doctrines_2"
+	texturefile = "gfx/interface/goals/IRN_land_doctrine2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_infantry_equipment"
+	texturefile = "gfx/interface/goals/IRN_infantry_equipment.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_artillery"
+	texturefile = "gfx/interface/goals/IRN_artillery_effort.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_traditions"
+	texturefile = "gfx/interface/goals/IRN_warrior_traditions.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_conscription"
+	texturefile = "gfx/interface/goals/IRN_conscription.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_aeron"
+	texturefile = "gfx/interface/goals/IRN_drowned_god.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_baelor"
+	texturefile = "gfx/interface/goals/IRN_reform_religion.dds"			
+	}
+		
+	SpriteType = {
+	name = "GFX_IRN_support_equipment"
+	texturefile = "gfx/interface/goals/IRN_support_equipment.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_marines"
+	texturefile = "gfx/interface/goals/IRN_marines.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_naval_doctrine"
+	texturefile = "gfx/interface/goals/IRN_naval_doctrines.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_naval_doctrine_2"
+	texturefile = "gfx/interface/goals/IRN_naval_doctrines_2.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_naval_artillery"
+	texturefile = "gfx/interface/goals/IRN_naval_artillery.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_torpedoes"
+	texturefile = "gfx/interface/goals/IRN_naval_torpedoes.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_heavy_cruiser"
+	texturefile = "gfx/interface/goals/IRN_heavy_cruiser.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_naval_traditions"
+	texturefile = "gfx/interface/goals/IRN_naval_traditions.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_resources"
+	texturefile = "gfx/interface/goals/IRN_resources.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_blacktyde"
+	texturefile = "gfx/interface/goals/IRN_blacktyde.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_trade_wars"
+	texturefile = "gfx/interface/goals/IRN_trade_war.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_battleship"
+	texturefile = "gfx/interface/goals/IRN_battleship.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_IRN_submarine"
+	texturefile = "gfx/interface/goals/IRN_submarine.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_STN_city_claw"
+	texturefile = "gfx/interface/goals/STN_city_on_claw_isle.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_STN_city_driftmark"
+	texturefile = "gfx/interface/goals/STN_city_on_driftmark.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_ironborn_bearisle"
+	texturefile = "gfx/interface/goals/focus_ironborn_bearisle.dds"			
+	}
+}

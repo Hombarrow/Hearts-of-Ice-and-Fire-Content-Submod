@@ -1,0 +1,265 @@
+﻿add_namespace = gotintro 
+
+# Nights watch
+country_event = {
+	id = gotintro.1
+	title = gotintro.1.t
+	desc = gotintro.1.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = CAN
+		CAN = { has_war = no }
+#		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.1.a
+		CAN = { 
+			set_rule = { can_send_volunteers = no }
+			set_rule = { can_join_factions = no }
+		}
+
+	}
+	option = {
+		name = gotintro.1.b
+		ai_chance = { factor = 0 }
+		add_political_power = 5
+		CAN = { 
+			set_rule = { can_send_volunteers = no }
+			set_rule = { can_join_factions = no }
+		}
+		country_event = { id = gotintro.2 } 
+
+	}
+}
+
+# The Oath
+country_event = {
+	id = gotintro.2
+	title = gotintro.2.t
+	desc = gotintro.2.d
+#	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes	
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.2.a
+
+	}
+}
+
+# Stark
+country_event = {
+	id = gotintro.3
+	title = gotintro.3.t
+	desc = gotintro.3.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = FIN
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.3.a
+
+	}
+}
+
+# Lannister
+country_event = {
+	id = gotintro.4
+	title = gotintro.4.t
+	desc = gotintro.4.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = HOL
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.4.a
+
+	}
+}
+
+# Dorne
+country_event = {
+	id = gotintro.6
+	title = gotintro.6.t
+	desc = gotintro.6.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = SPR
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.6.a
+	}
+}
+
+# Tyrell
+country_event = {
+	id = gotintro.7
+	title = gotintro.7.t
+	desc = gotintro.7.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = IRE
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+
+#	immediate = {
+#		hidden_effect = {
+#		}		
+#	}
+	
+	option = {
+		name = gotintro.7.a
+#		hidden_effect = {
+
+#		}
+
+	}
+}
+
+# Targaryen
+country_event = {
+	id = gotintro.10
+	title = gotintro.10.t
+	desc = gotintro.10.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = SOV
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.10.a
+		SOV = { 
+			set_rule = { can_join_factions = no }
+		}
+	}
+}
+
+# Others
+country_event = {
+	id = gotintro.11
+	title = gotintro.11.t
+	desc = gotintro.11.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = GER
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.11.a
+		GER = { 
+			set_rule = { can_send_volunteers = no }
+			set_rule = { can_puppet = no }
+			set_rule = { can_force_government = no }
+			set_rule = { can_join_factions = no }
+		}
+	}
+}
+
+# Freefolk
+country_event = {
+	id = gotintro.12
+	title = gotintro.12.t
+	desc = gotintro.12.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = DEN
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.12.a
+		DEN = { 
+#			set_rule = { can_send_volunteers = no }
+#			set_rule = { can_puppet = no }
+#			set_rule = { can_force_government = no }
+			set_rule = { can_join_factions = no }
+		}
+	}
+}
+
+# Dothraki
+country_event = {
+	id = gotintro.13
+	title = gotintro.13.t
+	desc = gotintro.13.d
+#	picture = GFX_report_event_europe_funeral
+	
+	trigger = {
+		tag = RAJ
+		date > 1936.01.1
+	}	
+
+	fire_only_once = yes
+
+#	mean_time_to_happen = { days =1 }
+	
+	option = {
+		name = gotintro.13.a
+		RAJ = { 
+#			set_rule = { can_send_volunteers = no }
+#			set_rule = { can_puppet = no }
+#			set_rule = { can_force_government = no }
+			set_rule = { can_join_factions = no }
+		}
+		AFG = { 
+			set_rule = { can_join_factions = no }
+		}
+		SYR = { 
+			set_rule = { can_join_factions = no }
+		}
+		OMA = { 
+			set_rule = { can_join_factions = no }
+		}
+	}
+}

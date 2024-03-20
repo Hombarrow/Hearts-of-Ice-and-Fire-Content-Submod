@@ -1,0 +1,24 @@
+
+state={
+	id=499
+	name="STATE_499"
+
+	history={
+		owner = VIN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+
+		}
+		add_core_of = VIN
+
+	}
+
+	provinces={
+		3742 5057 7511 7727 8055 8081 8127 10724 12327 12776 
+	}
+	manpower=723390
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

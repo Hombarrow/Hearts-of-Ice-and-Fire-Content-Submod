@@ -1,0 +1,28 @@
+
+state={
+	id=426
+	name="STATE_426"
+	resources={
+		steel=44.000
+		chromium=36.000
+		aluminium=2.000
+	}
+
+	history={
+		owner = KOR
+		add_core_of = KOR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+
+		}
+
+	}
+
+	provinces={
+		1059 1101 1538 1579 4104 4513 9946 10060 10088 10116 10428 11924 11978 12063 12462 
+	}
+	manpower=14520100
+	buildings_max_level_factor=1.000
+	state_category=city
+}

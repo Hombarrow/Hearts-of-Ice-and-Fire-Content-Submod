@@ -1,0 +1,565 @@
+﻿###########################
+# Free Folk Events
+###########################
+
+add_namespace = freefolk
+
+
+# Attacj the crow.
+country_event = {
+	id = freefolk.1
+	title = freefolk.1.t
+	desc = freefolk.1.d
+	picture = GFX_report_event_canada_patriation
+	
+	trigger = {
+		tag = DEN
+#		date = 1941.10.5
+#		has_start_date < 1941.10.04
+		DEN = { has_country_flag = others_in_cannibalbay }
+		DEN = { has_country_flag = others_in_frozenshore }
+		CAN = { exists = yes }
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 17 }
+	
+	option = {
+		name = freefolk.1.a # war
+		
+		ai_chance = {
+			base = 90
+		}
+#		CAN = { country_event = { id = freefolk.2 hours = 6 } }
+		create_wargoal = { type = annex_everything target = CAN }
+		activate_mission = DEN_south_or_die
+		
+	}
+
+	option = {
+		name = freefolk.1.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_ideas = deterrence	
+	}
+
+	option = {
+		name = freefolk.1.c # war
+		
+		ai_chance = {
+			base = 5
+		}
+		create_wargoal = { type = annex_everything target = GER }
+		
+	}
+
+}
+
+# Wildling ultimatum
+country_event = {
+	id = freefolk.2
+	title = freefolk.2.t
+	desc = freefolk.2.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.2.a # war
+		
+		ai_chance = {
+			base = 75
+#			modifier = {
+#				factor = 0
+#				CAN = { has_government = democratic }
+#			}
+		}
+
+		DEN = { country_event = { id = freefolk.3 hours = 1 } }
+		
+	}
+
+	option = {
+		name = freefolk.2.b
+#		trigger = { CAN = { has_government = democratic } }
+		trigger = { 142 = { is_owned_by = CAN } }
+		ai_chance = {
+			factor = 25
+#			modifier = {
+#				factor = 0
+#				is_historical_focus_on = yes
+#			}
+		}
+
+		DEN = { country_event = { id = freefolk.4 days = 1 } }	
+	}
+
+}
+
+# war with crows
+country_event = {
+	id = freefolk.3
+	title = freefolk.3.t
+	desc = freefolk.3.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.3.a # war
+		
+		ai_chance = {
+			base = 75
+		}
+
+		create_wargoal = { type = annex_everything target = CAN }
+		
+	}
+
+}
+
+
+# crows agree
+country_event = {
+	id = freefolk.4
+	title = freefolk.4.t
+	desc = freefolk.4.desc
+	picture = GFX_report_event_canada_patriation
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.4.a # war
+		
+		ai_chance = {
+			base = 75
+		}
+
+		white_peace = CAN
+
+		if = {
+			limit = { 142 = { is_owned_by = CAN } }
+			transfer_state = 142
+			DEN = { add_state_core = 142 }
+			#DEN = { transfer_state = 142 }
+			set_global_flag = wildlings_can_pass
+			set_country_flag = wildlings_in_gift
+		}
+
+
+		if = {
+			limit = { NOT = { 142 = { is_owned_by = CAN } } }
+			set_global_flag = wildlings_can_pass
+			random_country = {
+				limit = { controls_state = 142 }
+				#PREV = { country_event = { id = freefolk.5 days = 3 } }
+				country_event = { id = freefolk.5 days = 3 }
+			}
+		}
+		
+	}
+
+}
+
+# wildlings in Queens gift
+country_event = {
+	id = freefolk.5
+	title = freefolk.5.t
+	desc = freefolk.5.desc
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.5.a # war
+		
+		ai_chance = {
+			base = 75
+		}
+#			news_event = { hours = 6 id = news.33 }
+		add_named_threat = { threat = 5 name = freefolk.5.t  }
+		DEN = { add_state_core = 142 }
+		DEN = { transfer_state = 142 }
+		DEN = { set_country_flag = wildlings_in_gift }
+
+
+		hidden_effect = {
+			news_event = { hours = 6 id = news.33 }
+		}
+		
+	}
+
+}
+
+# white walkers cross Ice River
+country_event = {
+	id = freefolk.6
+	title = freefolk.6.t
+	desc = freefolk.6.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.6.a
+
+		GER = {
+			transfer_state = 379
+		}
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Wildlings fail to pass the wall
+country_event = {
+	id = freefolk.7
+	title = freefolk.7.t
+	desc = freefolk.7.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.7.a
+
+		add_political_power = -300
+		add_stability = -0.15
+		add_war_support = -0.15
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# ******************************************************************EVACUATIOn
+# Hardhome evacuated and new capital set
+country_event = {
+	id = freefolk.8
+	title = freefolk.8.t
+	desc = freefolk.8.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		set_capital = { state = 142 }
+		add_political_power = 300
+		add_stability = 0.05
+		331 = { add_manpower = -300000 }
+		142 = { add_manpower = 300000 }
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Established supply route
+country_event = {
+	id = freefolk.9
+	title = freefolk.9.t
+	desc = freefolk.9.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		331 = { add_manpower = -100000 }
+		142 = { add_manpower = 100000 }
+		142 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				province = 10402
+				instant_build = yes
+			}
+		}
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Evacuate Thenn Civilians
+country_event = {
+	id = freefolk.10
+	title = freefolk.10.t
+	desc = freefolk.10.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		add_political_power = 100
+		357 = { add_manpower = -250000 }
+		142 = { add_manpower = 250000 }
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Evacuate Thenn Resources
+country_event = {
+	id = freefolk.11
+	title = freefolk.11.t
+	desc = freefolk.11.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		add_resource = {
+			type = steel
+			amount = -21
+			state = 357
+		}
+		add_resource = {
+			type = steel
+			amount = 21
+			state = 142
+		}
+		357 = { add_manpower = -100000 }
+		142 = { add_manpower = 100000 }
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Evacuate Freefolk Industry
+country_event = {
+	id = freefolk.12
+	title = freefolk.12.t
+	desc = freefolk.12.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		if = {
+			limit = {
+				controls_state = 331
+			}
+			if = {
+				limit = {
+					331 = { #Hardhome
+						is_owned_and_controlled_by = DEN
+						arms_factory > 1
+					} 
+				}
+				331 = { #Hardhome
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					331 = { #Hardhome
+						is_owned_and_controlled_by = DEN
+						industrial_complex > 1
+					} 
+				}
+				331 = { #Hardhome
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				controls_state = 357
+			}
+			if = {
+				limit = {
+					357 = { #Thenn
+						is_owned_and_controlled_by = DEN
+						arms_factory > 1
+					} 
+				}
+				357 = { #Thenn
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					357 = { #Thenn
+						is_owned_and_controlled_by = DEN
+						industrial_complex > 1
+					} 
+				}
+				357 = { #Thenn
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				controls_state = 464
+			}
+			if = {
+				limit = {
+					464 = { #Haunted Forest
+						is_owned_and_controlled_by = DEN
+						arms_factory > 0
+					} 
+				}
+				464 = { #Haunted Forest
+					remove_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					464 = { #Haunted Forest
+						is_owned_and_controlled_by = DEN
+						industrial_complex > 0
+					} 
+				}
+				464 = { #Haunted Forest
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				142 = { #Qyeens's gift
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		331 = { add_manpower = -50000 }
+		142 = { add_manpower = 50000 }
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}
+
+# Evacuate civilians from lesser areas
+country_event = {
+	id = freefolk.13
+	title = freefolk.13.t
+	desc = freefolk.13.desc
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+	
+	option = {
+		name = freefolk.8.a
+
+		if = {
+			limit = { 464 = { is_controlled_by = DEN } }
+			464 = { add_manpower = -150000 }
+			142 = { add_manpower = 150000 }
+		}
+		if = {
+			limit = { 125 = { is_controlled_by = DEN } }
+			125 = { add_manpower = -50000 }
+			142 = { add_manpower = 50000 }
+		}
+		if = {
+			limit = { 379 = { is_controlled_by = DEN } }
+			379 = { add_manpower = -100000 }
+			142 = { add_manpower = 100000 }
+		}
+
+
+		hidden_effect = {
+#			news_event = { hours = 6 id = news.33 }
+		}
+
+	}
+}

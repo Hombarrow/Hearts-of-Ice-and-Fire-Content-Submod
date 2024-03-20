@@ -1,0 +1,26 @@
+units = {
+	division= {
+		name = "Golden Company"
+		location = 13015 
+		division_template = "Golden Company"
+		start_experience_factor = 1
+	}
+}
+
+units = {
+	division= {
+		name = "Golden Company"
+		location = 13015 
+		division_template = "Golden Company"
+		start_experience_factor = 1
+	}
+}
+
+units = {
+	division= {
+		name = "Golden Company"
+		location = 13015
+		division_template = "Golden Company"
+		start_experience_factor = 1
+	}
+}

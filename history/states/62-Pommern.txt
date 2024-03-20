@@ -1,0 +1,45 @@
+
+state={
+	id=62
+	name="STATE_62"
+
+	history={
+		owner = HOL
+		victory_points = {
+			349 20 
+		}
+		victory_points = {
+			11305 1 
+		}
+		victory_points = {
+			9388 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 3
+			air_base = 3
+			349 = {
+				naval_base = 8
+
+			}
+
+		}
+		add_core_of = HOL
+		1939.1.1 = {
+			buildings = {
+				air_base = 8
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		321 349 2132 3340 5107 8227 9388 11305 11331 
+	}
+	manpower=3506221
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

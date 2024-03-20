@@ -1,0 +1,53 @@
+﻿###########################
+# Warden of the North Events
+###########################
+
+add_namespace = wardennorth
+
+# Asume control of the North
+country_event = {
+	id = wardennorth.1
+	title = wardennorth.1.t
+	desc = wardennorth.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wardennorth.1.a
+			127 = { add_core_of = ROOT }
+			123 = { add_core_of = ROOT }
+			358 = { add_core_of = ROOT }
+			397 = { add_core_of = ROOT }
+			141 = { add_core_of = ROOT }
+			120 = { add_core_of = ROOT }
+			110 = { add_core_of = ROOT }
+			143 = { add_core_of = ROOT }
+			144 = { add_core_of = ROOT }
+		hidden_effect = {
+#			news_event = { days = 1 id = news.21 }
+		}
+	}
+}
+
+# Move capital to Winterfell
+country_event = {
+	id = wardennorth.2
+	title = wardennorth.2.t
+	desc = wardennorth.2.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = wardennorth.2.a
+		set_capital = { state = 126 }
+			126 = { add_core_of = ROOT }
+			392 = { add_core_of = ROOT }
+			694 = { add_core_of = ROOT }
+			376 = { add_core_of = ROOT }
+		hidden_effect = {
+#			news_event = { days = 1 id = news.21 }
+		}
+	}
+}

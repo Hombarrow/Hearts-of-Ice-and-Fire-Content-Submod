@@ -1,0 +1,155 @@
+﻿division_template = {
+	name = "Infantry Division"			# For 1st, 2nd Canadian Infantry Divisions
+										# Frontline divisions, most experienced, best-equipped
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "District Militia"			# For largest Military District Forces (2 brigade forces)
+										# Note: all forces at reserve levels in 1939, low experience and WWI-era equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Militia"  
+	# Note: all forces at reserve levels in 1936
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Armored-Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	##### Royal Canadian Army #####
+	### Canadian Active Service Force (CO: Crerar) ###
+	division= {	
+		name = "1st Infantry Division"			# CO: McNaughton
+		location = 4720  # Halifax
+		division_template = "Infantry Division"			
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2nd Infantry Division"			# CO: Odium
+		location = 4720 # Toronto
+		division_template = "Infantry Division"			# Still forming and under-strength with reserve equipment
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	
+	## 1st Miltary District ##
+	division= {	
+		name = "1st District Militia"
+		location = 4720 # London ONT
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 2nd Miltary District ##
+	division= {	
+		name = "2nd District Militia"
+		location = 4422 # Toronto
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 3rd Miltary District ##
+	division= {	
+		name = "3rd District Militia"
+		location = 7810 # Kingston ONT
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 4th Miltary District ##
+	division= {	
+		name = "4th District Militia"
+		location = 12503 # Montreal
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	## 5th Miltary District ##
+	division= {	
+		name = "5th District Militia"
+		location = 122 # Queenscrown
+		division_template = "District Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	##### Naval OOB #####
+	navy = {					
+		name = "Eastwatch Naval Force"				
+		base = 4422 
+		location = 4422 # EastwatchbytheSea			
+		# 5a Squadriglia Cacciatorpedindiere
+		ship = { name = "RM Blackbird" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }	
+		ship = { name = "RM Storm Crow" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }	
+		ship = { name = "RM Talon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAN version_name = "Yoren Class"  } } }	
+	}
+
+
+}
+
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CAN"
+		}
+		requested_factories = 1
+		progress = 0.39
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "CAN"
+		}
+		requested_factories = 1
+		progress = 0.45
+		efficiency = 100
+	}
+}

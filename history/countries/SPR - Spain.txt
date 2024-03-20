@@ -1,0 +1,472 @@
+﻿capital = 168
+
+
+oob = "SPR_1936"
+
+
+set_research_slots = 3
+
+recruit_character = DOR_doran
+recruit_character = DOR_trystane
+recruit_character = DOR_elaria
+recruit_character = DOR_lady_nym
+recruit_character = DOR_tyene
+recruit_character = DOR_areohotah
+
+
+set_technology = {
+	
+	infantry_weapons = 1
+	
+	infantry_weapons1 = 1
+	
+	tech_recon = 1
+	
+	tech_support = 1		
+	
+	tech_engineers = 1
+	
+	tech_mountaineers = 1
+	tech_trucks = 1	
+	gw_artillery = 1
+	
+	early_fighter = 1
+	
+	early_bomber = 1
+	basic_train = 1	
+	naval_bomber1 = 1
+	
+}
+
+
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_medium_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+
+add_ideas = {
+	ENG_the_war_to_end_all_wars
+	anti_german_military
+	non_believers
+}
+
+
+	add_ideas = rhoynar_ethn
+	add_ideas = atheist
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.2.16"
+
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 0
+	communism = 25
+	neutrality = 55
+}
+
+
+set_convoys = 150
+
+
+1939.1.1 = {
+
+	
+	add_political_power = 198
+	
+	
+	#generic focuses
+	
+	complete_national_focus = MRT_consolidate_nation	
+	complete_national_focus = MRT_dornish_politics	
+	complete_national_focus = MRT_grand_plan	
+	complete_national_focus = MRT_engagement_for_myrcella	
+	complete_national_focus = MRT_invite_myrcella	
+	complete_national_focus = MRT_army_focus	
+	complete_national_focus = MRT_doctrine_effort	
+	complete_national_focus = construction_effort
+	
+	complete_national_focus = production_effort
+	
+	
+	oob = "SPA_1939"
+	
+	load_oob = "unlock_tanks"
+	
+
+	set_technology = {
+		
+		fighter1 = 1
+		
+		CAS1 = 1
+		
+tactical_bomber1 = 1
+		
+interwar_artillery = 1
+		
+interwar_antiair = 1
+		
+interwar_antitank = 1
+		
+motorised_infantry = 1
+		
+infantry_weapons2 = 1
+		
+support_weapons = 1
+		
+support_weapons2 = 1
+
+		
+#doctrines
+		
+air_superiority = 1
+		
+grand_battle_plan = 1
+		
+trench_warfare = 1
+		
+fleet_in_being = 1
+		
+battlefleet_concentration = 1
+		
+submarine_operations = 1
+
+		
+#electronics
+		
+electronic_mechanical_engineering = 1
+		
+radio = 1
+		
+radio_detection = 1
+		
+mechanical_computing = 1
+		
+computing_machine = 1
+
+		
+#industry
+		
+basic_machine_tools = 1
+		
+improved_machine_tools = 1
+		
+advanced_machine_tools = 1
+		
+synth_oil_experiments = 1
+			
+construction1 = 1
+		
+construction2 = 1
+		
+construction3 = 1
+		
+dispersed_industry = 1
+		
+dispersed_industry2 = 1
+		
+	dispersed_industry3 = 1
+	
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.2.16"
+
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 15
+	communism = 25
+	neutrality = 55
+}
+	
+#set_global_flag = scw_over
+	
+#add_timed_idea = { idea = SPA_recovering_from_civil_war days = 1095 }
+
+add_ideas = {
+	ENG_the_war_to_end_all_wars
+	myrcella
+}
+
+
+}
+
+create_country_leader = {
+
+	name = "Oberyn Martell"
+
+	desc = "POLITICS_MANUEL_AZANA_DESC"
+
+	picture = "Portrait_Oberyn_Martell.dds"
+
+	expire = "1965.1.1"
+
+	ideology = conservatism
+	
+traits = {
+		#
+	}
+
+}
+
+
+
+#create_country_leader = {
+	
+#	name = "Ellaria Sand"
+	
+#	desc = "POLITICS_JOSE_DIAZ_DESC"
+	
+#	picture = "Portrait_Elaria_Sand.dds"
+	
+#	expire = "1965.1.1"
+	
+#	ideology = stalinism
+	
+#	traits = {
+		#
+#	}
+
+#}
+
+
+
+create_country_leader = {
+	
+	name = "Arianne Martell"
+	
+	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+	
+	picture = "Portrait_Arianne_Martell.dds"
+	
+	expire = "1965.1.1"
+	
+	ideology = fascism_ideology
+	
+	traits = {
+		dislikes_lannister
+
+	}
+
+}
+
+
+
+#create_country_leader = {
+#	name = "Trystane Martell"
+#	desc = "POLITICS_TRYSTANE_DESC"
+#	picture = "Portrait_Trystane_Martell.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+
+#	traits = {
+#		#
+#	}
+#}
+
+#create_country_leader = {
+	
+#	name = "Doran Martell"
+	
+#	desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
+	
+#	picture = "gfx/leaders/SPR/Portrait_Doran_Martell.dds"
+	
+#	expire = "1965.1.1"
+	
+#	ideology = centrism
+	
+#	traits = {
+#		#
+
+#	}
+
+#}
+
+
+
+create_field_marshal = {
+	
+	name = "Oberyn Martell"
+	
+	picture = "Portrait_Oberyn_Martell.dds"
+	
+	traits = { defensive_doctrine }
+	
+	skill = 2
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+#create_corps_commander = {
+#	name = "Areo Hotah"
+#	picture = "Portrait_Areo_hotah.dds"
+#	traits = { ranger }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 1
+#	planning_skill = 4
+#	logistics_skill = 2
+#}
+
+
+
+create_corps_commander = {
+	name = "Dagos Manwoody"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Quentyn Qorgyle"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { desert_fox }
+	skill = 4
+}
+
+create_corps_commander = {
+	name = "Anders Yronwood"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = { hill_fighter }
+	skill = 3
+}
+
+
+#create_corps_commander = {
+#	name = "Trystane Martell"
+#	picture = "Portrait_Trystane_Martell.dds"
+#	traits = {  }
+#	skill = 1
+#}
+
+
+create_navy_leader = {
+	name = "Quentyn Martell"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	skill = 2
+}
+
+
+
+### Ship Variants ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "C Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Príncipe Alfonso Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_gun_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "C Class"				
+		type = ship_hull_submarine_2
+		name_group = SPR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Príncipe Alfonso Class"
+		type = ship_hull_cruiser_2
+		name_group = SPR_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+	}
+}

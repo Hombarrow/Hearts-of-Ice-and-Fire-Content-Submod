@@ -1,0 +1,139 @@
+﻿division_template = {
+	name = "Unsulied Division"			# Infantry Brigade
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"			# Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Sons of the Harpy"
+
+#	division_names_group = GER_Inf_01
+
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        	infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+
+	priority = 2
+	
+}
+
+
+units = {
+	######## LAND OOB ########
+	##### Royal Army #####
+	division = {
+		name = "Meereen Scout Brigade"
+		location = 10840
+		division_template = "Cavalry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "1st Unsulied Division"
+		location = 8085
+		division_template = "Unsulied Division"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "2nd Unsulied Division"
+		location = 8085
+		division_template = "Unsulied Division"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "3rd Unsulied Division"
+		location = 8085
+		division_template = "Unsulied Division"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4th Unsulied Division"
+		location = 8085
+		division_template = "Unsulied Division"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "5th Unsulied Division"
+		location = 8085
+		division_template = "Unsulied Division"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+
+
+	######## No Naval OOB ########
+}
+
+#air_wings = {
+	### Royal Air Force ###
+#	291 = {
+#		# 1st Air Group -- Hawker Furys
+#		fighter_equipment_0 =  {
+#			owner = "EGY" 
+#			amount = 72
+#		}
+#		# 2nd, 3rd Air Groups -- Hawker Hinds, Audaxes
+#		CAS_equipment_1 =  {
+#			owner = "EGY" 
+#			amount = 48
+#		}
+#	}
+#}
+
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 2
+		progress = 0.31
+		efficiency = 100
+	}
+}

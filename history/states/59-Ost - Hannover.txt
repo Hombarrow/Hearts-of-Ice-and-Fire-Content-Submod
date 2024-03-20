@@ -1,0 +1,34 @@
+
+state={
+	id=59
+	name="STATE_59"
+
+	history={
+		owner = HOL
+		victory_points = {
+			6377 5 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = HOL
+		1939.1.1 = {
+			buildings = {
+				air_base = 1
+				arms_factory = 2
+				industrial_complex = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		526 1524 3271 3395 5168 6263 6298 6377 6513 9238 9264 9375 11402 11468 11493 
+	}
+	manpower=724417
+	buildings_max_level_factor=1.000
+	state_category=town
+}

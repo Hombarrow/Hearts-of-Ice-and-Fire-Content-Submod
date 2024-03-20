@@ -1,0 +1,38 @@
+
+state={
+	id=37
+	name="STATE_37"
+
+	history={
+		owner = FRA
+		victory_points = {
+			3305 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 4
+			air_base = 2
+			3305 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = FRA
+		1940.3.14 = {
+			owner = SER
+			controller = SER
+			add_core_of = SER
+
+		}
+
+	}
+
+	provinces={
+		809 3305 3846 3886 6287 6393 6954 9891 11821 11851 
+	}
+	manpower=1534114
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

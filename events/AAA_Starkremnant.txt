@@ -1,0 +1,126 @@
+﻿###########################
+# Stark Remnant Events
+###########################
+
+add_namespace = starkremnant
+
+# Greyjoy invite us
+country_event = {
+	id = starkremnant.1
+	title = starkremnant.1.t
+	desc = starkremnant.1.d
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = starkremnant.1.a
+		ai_chance = { factor = 90 }
+
+		if = {
+			limit = { is_in_faction = yes }
+			add_to_faction = ROM
+
+		}
+
+		if = {
+			limit = { is_in_faction = no }
+		ROM = {
+		country_event = { id = ironborn.4 days = 1 } 
+		}
+		}
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+	option = {
+		name = starkremnant.1.b
+		ai_chance = { factor = 10 }
+#		HOL = {
+#		add_opinion_modifier = { target = IRE modifier = betrayed_guarantee }  
+#		}
+	}
+}
+
+# Rejoin Stark
+country_event = {
+	id = starkremnant.2
+	title = starkremnant.2.t
+	desc = starkremnant.2.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = starkremnant.2.a
+		ai_chance = { factor = 90 }
+
+		every_state = {
+			limit = {
+				is_core_of = AUS
+			}
+			FIN = {
+				add_state_core = PREV
+			}
+		}
+		FIN = { change_tag_from = AUS }
+		FIN = { annex_country = { target = AUS transfer_troops = yes } }
+
+		hidden_effect = {
+			FIN = { country_event = { days = 1 id = starkremnant.4 } }
+		}
+	}
+}
+
+# Stark Puppet
+country_event = {
+	id = starkremnant.3
+	title = starkremnant.3.t
+	desc = starkremnant.3.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = starkremnant.3.a
+		ai_chance = { factor = 90 }
+
+#		if = {
+#			limit = {
+#				FROM = { is_puppet = no }
+#			}
+			FIN = { puppet = FROM }
+#		}
+		hidden_effect = {
+#			country_event = { days = 1 id = starkremnant.4 }
+		}
+	}
+
+	option = {
+		name = starkremnant.3.b
+		ai_chance = { factor = 0 }
+		FIN = { puppet = FROM }
+		FIN = { change_tag_from = AUS }
+	}
+}
+
+# Stark happy
+country_event = {
+	id = starkremnant.4
+	title = starkremnant.4.t
+	desc = starkremnant.4.d
+#	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = starkremnant.4.a
+		ai_chance = { factor = 90 }
+		add_political_power = 75
+		hidden_effect = {
+#			country_event = { days = 1 id = news.23 }
+		}
+	}
+
+}

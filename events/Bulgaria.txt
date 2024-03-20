@@ -1,0 +1,168 @@
+﻿###########################
+# Mormont Events
+###########################
+
+add_namespace = bulgaria
+
+# (Khaleesi) - Jorah offers alliance
+country_event = {
+	id = bulgaria.1
+	title = bulgaria.1.t
+	desc = bulgaria.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.1.a
+		ai_chance = { factor = 95 }
+		BUL = { country_event = bulgaria.2 }
+		hidden_effect = {
+#			news_event = { days = 1 id = news.21 }
+		}
+	}
+
+	option = {
+		name = bulgaria.1.b
+		ai_chance = { factor = 5 }
+		BUL = { country_event = bulgaria.5 }
+		hidden_effect = {
+#			news_event = { days = 1 id = news.21 }
+		}
+	}
+}
+
+# Danny accepts
+country_event = {
+	id = bulgaria.2
+	title = bulgaria.2.t
+	desc = bulgaria.2.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.2.a
+		SOV = {
+			if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					add_to_faction = BUL
+					add_named_threat = { threat = 5 name = bulgaria.2.t }
+			}
+			if = {
+					limit = {
+						is_faction_leader = no
+					}
+#					remove_from_faction = BUL
+					create_faction = "Targaryen Restoration League"
+					add_to_faction = BUL
+					add_named_threat = { threat = 5 name = bulgaria.2.t }
+			}
+			if = {
+					limit = {
+						is_in_faction  = no
+					}
+					create_faction = "Targaryen Restoration League"
+					add_to_faction = BUL
+					add_named_threat = { threat = 5 name = bulgaria.2.t }
+			}
+		}
+
+		hidden_effect = {
+#			news_event = { days = 1 id = news.21 }
+		}
+	}
+}
+
+# Bulgaria (First Ljubljana Award) from german focus
+country_event = {
+	id = bulgaria.3
+	title = bulgaria.3.t
+	desc = bulgaria.3.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.3.a
+		if = {
+			limit = {
+				OR = {
+					106 = { is_owned_by = YUG }
+					106 = { is_owned_by = GER }
+				}
+			}
+			transfer_state = 106
+		}
+	}
+}
+
+# So should we join Dany?
+country_event = {
+	id = bulgaria.4
+	title = bulgaria.4.t
+	desc = bulgaria.4.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	trigger = {
+		tag = BUL
+#		NOT = { has_country_flag = bulgaria.4_fired }
+		BUL = {
+			NOT = { is_in_faction_with = SOV }
+		}
+		BUL = { has_war = no }
+		BUL = { has_country_leader = { ruling_only = yes name = "Jorah Mormont" } }
+		SOV = { has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" } }
+	}
+
+	mean_time_to_happen = { days = 5 } 
+
+	fire_only_once = yes
+	
+#	immediate = { set_country_flag = bulgaria.4_fired	}
+
+	#join Dany
+	option = {
+		ai_chance = { factor = 10 }
+		name = bulgaria.4.a
+		SOV = { country_event = bulgaria.1 }
+	}	
+	#dont join Dany
+	option = {
+		ai_chance = { factor = 0 }
+		name = bulgaria.4.b
+	}
+}
+
+# No deal, Jorah
+country_event = {
+	id = bulgaria.5
+	title = bulgaria.5.t
+	desc = bulgaria.5.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.5.a
+	}
+}
+
+# Red Wedding outcome
+country_event = {
+	id = bulgaria.6
+	title = bulgaria.6.t
+	desc = bulgaria.6.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bulgaria.6.a
+		kill_country_leader = yes
+		remove_unit_leader = 31
+		add_timed_idea = { idea = STR_great_depression days = 178 }
+	}
+}

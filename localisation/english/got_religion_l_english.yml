@@ -1,0 +1,115 @@
+﻿l_english:
+ religion:0 "Religion"
+ 
+got_culture:0 "Cultural Traits"
+
+
+origin:0 "Origin"
+
+brindled_men:0 "Brindled Men"
+
+first_men:0 "First Men"
+
+andal:0 "Andal"
+
+islanders:0 "Islanders"
+
+mixed:0 "Mixed Races"
+
+ghiscari:0 "Ghiscari"
+
+first_men:0 "First Men"
+
+yi_tish:0 "Yi-Tish"
+
+barbarian:0 "Uncivilized Barbarians"
+
+necromancers:0 "Necromancers"
+
+wildling:0 "Wildlings"
+
+whitewalker_zombies:0 "White Walkers"
+
+rhoynar_ethn:0 "Rhoynar"
+
+
+arms_tradition:0 "Expertise"
+
+
+Religion_faith_7:0 "Prayers to the New Gods"
+Religion_faith_7_desc:0 "The Faith of the Seven is the dominant religion in the Andal parts of Westeros. The gods of the Faith are sometimes known as the new gods to differentiate them from the old gods of the First Men."
+
+faith_of_7:0 "Faith of the Seven"
+
+drowned_god:0 "The Drowned God"
+
+atheist:0 "Atheist"
+
+harpylady:0 "Cult of the Harpy"
+
+lordof_light:0 "The Lord of Light"
+
+old_gods:0 "The Old Gods"
+
+fertility_godess:0 "Fertility Goddess"
+
+fertility_godess_desc:0 "In the Summer Isles, they worship a Fertility Goddess with 16 tits."
+
+lovegoddess:0 "Love Goddess of Lys"
+
+
+prince_was_promised:0 "Prince that was Promised"
+
+
+Religion_harpylady:0 "Cult of the Harpy"
+summon_harpyson:0 "Summon the Sons of the Harpy"
+
+
+Religion_lordoflight:0 "The Lord of Light"
+
+burn_oldidols:0 "Burn the Heretic Idols"
+
+proclaim_prince:0 "Crown the Prince that was Promised"
+
+
+pray_father:0 "Pray to the Father"
+
+pray_mother:0 "Pray to the Mother"
+ 
+pray_warrior:0 "Pray to the Warrior"
+ 
+pray_smith:0 "Pray to the Smith"
+pray_maiden:0 "Pray to the Maiden"
+
+pray_crone:0 "Pray to the Crone"
+
+pray_stranger:0 "Pray to the Stranger"
+
+
+pray_father_desc:0 "The Father Above is depicted as a bearded man with a stern and strong face. Judgement is said to belong to the Father and he also protects 'his children'. He is often prayed to for justice, and the phrase 'may the Father judge [him/her/them/you] justly' is often said among followers of the Seven. Additionally, one might pray to the Father asking him to defend someone in battle, the strength to seek justice or the wisdom to recognize it."
+
+pray_mother_desc:0 "The Mother Above is a loving and protective aspect of the Seven. She is often asked for mercy and to keep loved ones safe. Offerings can be made to the Mother when a woman becomes pregnant, to praise her for giving the gift of life."
+ 
+pray_warrior_desc:0 "The Warrior is always depicted with his sword and he protects followers of the Seven from their foes. The Warrior is often prayed to for courage. Most men make offerings to the Warrior before battle, while others might say a prayer. Additionally, people might beseech the Warrior for a favorable condition during battle, to watch over soldiers, give them strength, keep them safe both in battle and outside of battle, and help warriors to victory. He might also be asked to bring peace to the souls of the slain and give comfort to those who are left behind. A septon might ask the Warrior to lend his strength to the arm of the man whose cause is just during a trial by combat."
+ 
+pray_smith_desc:0 "The Smith, depicted with his hammer, is the mender of broken things who puts the world of men to right. Septons teach to pray to the Smith for strength, and sailors might make offerings to the Smith prior to launching a ship, as to keep their ships safe. Others might pray to the Warrior for protection. Followers of the Seven can show their devotion to the Smith by wearing a small iron hammer about their neck."
+pray_maiden_desc:0 "The Maid, is a beautiful, innocent looking young woman. People might pray to the Maiden to keep young women safe."
+
+pray_crone_desc:0 "The Crone is an old, wizened and wise woman, whose statues often show her with a raised lamp in one hand. People pray to the Crone for wisdom and guidance."
+
+pray_stranger_desc:0 "The Stranger is neither male nor female, yet both at the same time. He is the outcast, the wanderer from far places, less and more than human, unknown and unknowable. His face is the face of death. He leads the newly deceased to the other world. Those who feel like outcasts might light a candle for the Stranger."
+
+
+father_prayer:0 "Father's Prayer"
+
+mother_prayer:0 "Mother's Prayer"
+
+warrior_prayer:0 "Warrior's Prayer"
+
+smith_prayer:0 "Smith's Prayer"
+
+maiden_prayer:0 "Maiden's Prayer"
+
+crone_prayer:0 "Crone's Prayer"
+
+stranger_prayer:0 "Stranger's Prayer"

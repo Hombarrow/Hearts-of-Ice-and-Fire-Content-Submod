@@ -1,0 +1,30 @@
+
+state={
+	id=178
+	name="STATE_178"
+	manpower = 2561347
+	
+	state_category = large_city
+
+	history={
+		owner = HUN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 4
+			13071 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			13071 20 
+		}
+		add_core_of = HUN
+		add_core_of = ENG
+		add_core_of = SOV
+	}
+
+	provinces={
+		13071 
+	}
+}

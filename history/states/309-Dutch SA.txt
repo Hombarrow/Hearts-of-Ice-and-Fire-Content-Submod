@@ -1,0 +1,30 @@
+
+state={
+	id=309
+	name="STATE_309"
+	resources={
+		aluminium=5.000
+	}
+
+	history={
+		owner = PHI
+		add_core_of = PHI
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			12342 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		4551 7569 9623 9798 10215 10463 10521 12342 12443 12500 
+	}
+	manpower=152000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

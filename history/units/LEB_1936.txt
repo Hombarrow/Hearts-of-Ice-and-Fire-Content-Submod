@@ -1,0 +1,51 @@
+﻿division_template = {
+	name = "Volunteer Militias"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	#Royal Army
+	division = {
+		name = "Lhazosh Militia"
+		location = 7980
+		division_template = "Volunteer Militias"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Kosrak Militia"
+		location = 1984
+		division_template = "Volunteer Militias"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Hesh Militia"
+		location = 5029
+		division_template = "Volunteer Militias"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}	
+
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "LEB"
+		}
+		requested_factories = 2
+		progress = 0.28
+		efficiency = 100
+	}
+}

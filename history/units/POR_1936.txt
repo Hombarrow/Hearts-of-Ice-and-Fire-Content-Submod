@@ -1,0 +1,262 @@
+﻿division_template = {
+	name = "Regular Infantry Division"		# Infantry Division
+	# Note: each regiment could also mobilize a 3rd battalion if called up
+
+	division_names_group = POR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # Full howitzer regiment
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Força de Caçadores"		# Elite light infantry, always fully mobilized w best equipment
+
+	division_names_group = POR_CAC_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 2
+}
+division_template = {
+	name = "Cavalry Brigade" 		# Cavalry Brigade
+	# Note: Cavalry regiments included about 5 squadrons/companies
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	###### Exército Portugues #####
+	# Governo Militar Portugues #
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3288
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2a Cavalry Brigade"
+		location = 3288
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3288
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# Volantis Division HQ #
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3288
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Cavalaria do Porto"
+		location = 3288
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3288
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 3288
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	# 2a Distrito Militar #
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3364
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2a Força de Caçadores"
+		location = 315
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	# 3a Distrito Militar #
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 315
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3a Força de Caçadores"
+		location = 315
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	# 4a Distrito Militar #
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9731
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2a Cavalry Brigade"
+		location = 9731
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "4a Força de Caçadores"
+		location = 9731
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	### Selhorys Forces ###
+
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 9477
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division= {	
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 9477
+		division_template = "Regular Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	### Colonial Forces ###
+
+	division = {
+		name = "1a Caçadores de Angola"
+		location = 9731
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2a Caçadores de Angola"
+		location = 9731
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "1a Caçadores de Moçambique"
+		location = 10007
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2a Caçadores de Moçambique"
+		location = 10007
+		division_template = "Força de Caçadores"
+		start_experience_factor = 0.3
+	}
+
+	##### NAVAL UNITS #####			
+
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "POR"
+		}
+		requested_factories = 3
+		progress = 0.47
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "POR"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

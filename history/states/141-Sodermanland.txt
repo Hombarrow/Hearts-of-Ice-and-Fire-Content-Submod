@@ -1,0 +1,40 @@
+
+state={
+	id=141
+	name="STATE_141"
+	resources={
+		steel=40.000
+		aluminium=4.000
+	}
+
+	history={
+		owner = FIN
+		victory_points = {
+			11188 2 
+		}
+		victory_points = {
+			11695 5 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 3
+			air_base = 4
+
+		}
+		add_core_of = FIN
+		1940.3.12 = {
+			owner = ITA
+			controller = ITA
+
+		}
+
+	}
+
+	provinces={
+		35 749 1307 1880 3106 3763 3775 6610 7330 7681 9109 9185 11053 11179 11188 11695 13166 
+	}
+	manpower=3488181
+	buildings_max_level_factor=1.000
+	state_category=city
+}

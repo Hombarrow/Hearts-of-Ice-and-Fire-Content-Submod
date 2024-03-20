@@ -1,0 +1,45 @@
+﻿division_template = {
+	name = "Second Sons Armored Division"
+
+	division_names_group = SOV_ARM_03
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	division = {
+		name = "1st Armored Division"
+		location = 10737
+		division_template = "Second Sons Armored Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "2nd Armored Division"
+		location = 10737
+		division_template = "Second Sons Armored Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}
+	division = {
+		name = "3rd Armored Division"
+		location = 10737
+		division_template = "Second Sons Armored Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}			
+
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=161
+	name="STATE_161"
+	manpower = 1402401
+	
+	state_category = city
+	
+	resources={
+		aluminium=6
+	}
+
+	history={
+		owner = ROM
+		victory_points = {
+			11861 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			air_base = 2
+			11861 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ROM
+	}
+
+	provinces={
+		782 3976 6606 6793 6985 9752 9924 11861 
+	}
+}

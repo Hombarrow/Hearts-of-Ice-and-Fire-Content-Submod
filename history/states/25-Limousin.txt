@@ -1,0 +1,25 @@
+
+state={
+	id=25
+	name="STATE_25"
+
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			620 5 
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		620 625 755 1604 3137 3598 3771 6737 9450 9734 9751 10339 11718 12368 12697 
+	}
+	manpower=1343700
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

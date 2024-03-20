@@ -1,0 +1,2526 @@
+﻿l_english:
+ GER_fascism:0 "Others"
+ 
+GER_fascism_DEF:0 "The Others"
+ 
+GER_democratic:0 "Children of the Forest"
+ 
+GER_democratic_DEF:0 "The Children of the Forest"
+ 
+GER_neutrality:0 "Other"
+ 
+GER_neutrality_DEF:0 "The Others"
+ 
+GER_communism:0 "Others"
+ 
+GER_communism_DEF:0 "The Others"
+ 
+GER_fascism_ADJ:0 "Other"
+ 
+GER_democratic_ADJ:0 "Other"
+ 
+GER_neutrality_ADJ:0 "Other"
+ 
+GER_communism_ADJ:0 "Other"
+ 
+ENG_fascism:0 "The Crownlands"
+ 
+ENG_fascism_DEF:0 "The Crownlands"
+ 
+ENG_democratic:0 "The Crownlands"
+ 
+ENG_democratic_DEF:0 "The Crownlands"
+ 
+ENG_neutrality:0 "The Crownlands"
+ 
+ENG_neutrality_DEF:0 "The Crownlands"
+ 
+ENG_communism:0 "The Crownlands"
+ 
+ENG_communism_DEF:0 "The Crownlands"
+ 
+ENG_fascism_ADJ:0 "Crownlander"
+ 
+ENG_democratic_ADJ:0 "Crownlander"
+ 
+ENG_neutrality_ADJ:0 "Crownlander"
+ 
+ENG_communism_ADJ:0 "Crownlander"
+ 
+SOV_fascism:0 "House Targaryen"
+ 
+SOV_fascism_DEF:0 "House Targaryen"
+ 
+SOV_democratic:0 "House Targaryen"
+ 
+SOV_democratic_DEF:0 "House Targaryen"
+ 
+SOV_neutrality:0 "House Targaryen"
+ 
+SOV_neutrality_DEF:0 "House Targaryen"
+ 
+SOV_communism:0 "House Targaryen"
+ 
+SOV_communism_DEF:0 "House Targaryen"
+ 
+SOV_fascism_ADJ:0 "Targaryen"
+ 
+SOV_democratic_ADJ:0 "Targaryen"
+ 
+SOV_neutrality_ADJ:0 "Targaryen"
+ 
+SOV_communism_ADJ:0 "Targaryen"
+ 
+
+SWE_fascism:0 "Vale of Arryn"
+ 
+SWE_fascism_DEF:0 "The Vale of Arryn"
+ 
+SWE_democratic:0 "Vale of Arryn"
+ 
+SWE_democratic_DEF:0 "The Vale of Arryn"
+ 
+SWE_neutrality:0 "Vale of Arryn"
+ 
+SWE_neutrality_DEF:0 "The Vale of Arryn"
+ 
+SWE_communism:0 "Vale of the Tribesmen"
+ 
+SWE_communism_DEF:0 "The Vale of Tribesmen"
+ 
+SWE_fascism_ADJ:0 "Arryn"
+ 
+SWE_democratic_ADJ:0 "Arryn"
+ 
+SWE_neutrality_ADJ:0 "Arryn"
+ 
+SWE_communism_ADJ:0 "Arryn"
+ 
+FRA_fascism:1 "House Tully"
+ 
+FRA_fascism_DEF:1 "House Tully"
+ 
+FRA_democratic:0 "House Tully"
+ 
+FRA_democratic_DEF:0 "House Tully"
+ 
+FRA_neutrality:0 "House Tully"
+ 
+FRA_neutrality_DEF:0 "House Tully"
+ 
+FRA_communism:0 "House Tully"
+ 
+FRA_communism_DEF:0 "House Tully"
+ 
+FRA_fascism_ADJ:1 "Tully"
+ 
+FRA_democratic_ADJ:0 "Tully"
+ 
+FRA_neutrality_ADJ:0 "Tully"
+ 
+FRA_communism_ADJ:0 "Tully"
+ 
+LUX_fascism:0 "Free City of Pentos"
+ 
+LUX_fascism_DEF:0 "The Free City of Pentos"
+ 
+LUX_democratic:0 "Free City of Pentos"
+ 
+LUX_democratic_DEF:0 "The Free City of Pentos"
+ 
+LUX_neutrality:0 "Free City of Pentos"
+ 
+LUX_neutrality_DEF:0 "The Free City of Pentos"
+ 
+LUX_communism:0 "Free City of Pentos"
+ 
+LUX_communism_DEF:0 "The Free City of Pentos"
+ 
+LUX_fascism_ADJ:0 "Pentoshi"
+ 
+LUX_democratic_ADJ:0 "Pentoshi"
+ 
+LUX_neutrality_ADJ:0 "Pentoshi"
+ 
+LUX_communism_ADJ:0 "Pentoshi"
+ 
+BEL_fascism:0 "House Baratheon"
+ 
+BEL_fascism_DEF:0 "House Baratheon"
+ 
+BEL_democratic:0 "House Baratheon"
+ 
+BEL_democratic_DEF:0 "House Baratheon"
+ 
+BEL_neutrality:0 "House Baratheon"
+ 
+BEL_neutrality_DEF:0 "House Baratheon"
+ 
+BEL_communism:0 "House Baratheon"
+ 
+BEL_communism_DEF:0 "House Baratheon"
+ 
+BEL_fascism_ADJ:0 "Baratheon"
+ 
+BEL_democratic_ADJ:0 "Baratheon"
+ 
+BEL_neutrality_ADJ:0 "Baratheon"
+ 
+BEL_communism_ADJ:0 "Baratheon"
+ 
+HOL_fascism:0 "House Lannister"
+ 
+HOL_fascism_DEF:0 "House Lannister"
+ 
+HOL_democratic:0 "House Lannister"
+ 
+HOL_democratic_DEF:0 "House Lannister"
+ 
+HOL_neutrality:0 "House Lannister"
+ 
+HOL_neutrality_DEF:0 "House Lannister"
+ 
+HOL_communism:0 "House Lannister"
+ 
+HOL_communism_DEF:0 "House Lannister"
+ 
+HOL_fascism_ADJ:0 "Lannister"
+ 
+HOL_democratic_ADJ:0 "Lannister"
+ 
+HOL_neutrality_ADJ:0 "Lannister"
+ 
+HOL_communism_ADJ:0 "Lannister"
+ 
+CZE_fascism:0 "Sarnor Kingdom"
+ 
+CZE_fascism_DEF:0 "The Kingdom of Sarnor"
+
+CZE_democratic:0 "Sarnor"
+ 
+CZE_democratic_DEF:0 "Sarnor"
+ 
+CZE_neutrality:0 "Sarnor"
+ 
+CZE_neutrality_DEF:0 "Sarnor"
+ 
+CZE_communism:0 "Sarnori Union"
+ 
+CZE_communism_DEF:0 "The Sarnori Union"
+ 
+CZE_fascism_ADJ:0 "Sarnori"
+ 
+CZE_democratic_ADJ:0 "Sarnori"
+ 
+CZE_neutrality_ADJ:0 "Sarnori"
+ 
+CZE_communism_ADJ:0 "Sarnori"
+ 
+POL_fascism:0 "Free City of Norvos"
+ 
+POL_fascism_DEF:0 "The Free City of Norvos"
+ 
+POL_democratic:0 "Free City of Norvos"
+ 
+POL_democratic_DEF:0 "The Free City of Norvos"
+ 
+POL_communism:0 "Free City of Norvos"
+ 
+POL_communism_DEF:0 "The Free City of Norvos"
+ 
+POL_neutrality:0 "Free City of Norvos"
+ 
+POL_neutrality_DEF:0 "The Free City of Norvos"
+ 
+POL_fascism_ADJ:0 "Norvoshi"
+ 
+POL_democratic_ADJ:0 "Norvoshi"
+ 
+POL_communism_ADJ:0 "Norvoshi"
+ 
+POL_neutrality_ADJ:0 "Norvoshi"
+ 
+AUS_fascism:0 "Stark Remnant"
+ 
+AUS_fascism_DEF:0 "The Stark Remnant"
+ 
+AUS_neutrality:0 "Stark Remnant"
+ 
+AUS_neutrality_DEF:0 "The Stark Remnant"
+ 
+AUS_democratic:0 "Stark Remnant"
+ 
+AUS_democratic_DEF:0 "The Stark Remnant"
+ 
+AUS_communism:0 "Stark Remnant"
+ 
+AUS_communism_DEF:0 "The Stark Remnant"
+ 
+AUS_fascism_ADJ:0 "Stark"
+ 
+AUS_neutrality_ADJ:0 "Stark"
+ 
+AUS_democratic_ADJ:0 "Stark"
+ 
+AUS_communism_ADJ:0 "Stark"
+ 
+LIT_fascism:0 "Free City of Lorath"
+ 
+LIT_fascism_DEF:0 "The Free City of Lorath"
+ 
+LIT_neutrality:0 "Free City of Lorath"
+ 
+LIT_neutrality_DEF:0 "The Free City of Lorath"
+ 
+LIT_democratic:0 "Free City of Lorath"
+ 
+LIT_democratic_DEF:0 "The Free City of Lorath"
+ 
+LIT_communism:0 "Free City of Lorath"
+ 
+LIT_communism_DEF:0 "The Free City of Lorath"
+ 
+LIT_fascism_ADJ:0 "Lorathi"
+ 
+LIT_neutrality_ADJ:0 "Lorathi"
+ 
+LIT_democratic_ADJ:0 "Lorathi"
+ 
+LIT_communism_ADJ:0 "Lorathi"
+ 
+EST_fascism:0 "House Flint of Widows Watch"
+ 
+EST_fascism_DEF:0 "House Flint of Widows Watch"
+ 
+EST_neutrality:0 "House Flint of Widows Watch"
+ 
+EST_neutrality_DEF:0 "House Flint of Widows Watch"
+ 
+EST_democratic:0 "House Flint of Widows Watch"
+ 
+EST_democratic_DEF:0 "House Flint of Widows Watch"
+ 
+EST_communism:0 "House Flint of Widows Watch"
+ 
+EST_communism_DEF:0 "House Flint of Widows Watch"
+ 
+EST_fascism_ADJ:0 "Flint"
+ 
+EST_democratic_ADJ:0 "Flint"
+ 
+EST_neutrality_ADJ:0 "Flint"
+ 
+EST_communism_ADJ:0 "Flint"
+ 
+LAT_fascism:0 "Free City of Lys"
+ 
+LAT_fascism_DEF:0 "The Free City of Lys"
+ 
+LAT_democratic:0 "Free City of Lys"
+ 
+LAT_democratic_DEF:0 "The Free City of Lys"
+ 
+LAT_neutrality:0 "Free City of Lys"
+ 
+LAT_neutrality_DEF:0 "The Free City of Lys"
+ 
+LAT_communism:0 "Free City of Lys"
+ 
+LAT_communism_DEF:0 "The Free City of Lys"
+ 
+LAT_fascism_ADJ:0 "Lysene"
+ 
+LAT_democratic_ADJ:0 "Lysene"
+ 
+LAT_neutrality_ADJ:0 "Lysene"
+ 
+LAT_communism_ADJ:0 "Lysene"
+ 
+SPR_fascism:0 "Principality of Dorne"
+ 
+SPR_fascism_DEF:0 "The Principality of Dorne"
+ 
+SPR_democratic:0 "Principality of Dorne"
+ 
+SPR_democratic_DEF:0 "The Principality of Dorne"
+ 
+SPR_neutrality:0 "Principality of Dorne"
+ 
+SPR_neutrality_DEF:0 "The Principality of Dorne"
+ 
+SPR_communism:0 "The Commune of Dorne"
+ 
+SPR_communism_DEF:0 "The Dornish Commune"
+ 
+SPR_fascism_ADJ:0 "Dornish"
+ 
+SPR_democratic_ADJ:0 "Dornish"
+ 
+SPR_neutrality_ADJ:0 "Dornish"
+ 
+SPR_communism_ADJ:0 "Dornish"
+ 
+ITA_fascism:0 "House Bolton"
+ 
+ITA_fascism_DEF:0 "House Bolton"
+ 
+ITA_democratic:0 "House Bolton"
+ 
+ITA_democratic_DEF:0 "House Bolton"
+ 
+ITA_neutrality:0 "House Bolton"
+ 
+ITA_neutrality_DEF:0 "House Bolton"
+ 
+ITA_communism:0 "House Bolton"
+ 
+ITA_communism_DEF:0 "House Bolton"
+ 
+ITA_fascism_ADJ:0 "Bolton"
+ 
+ITA_democratic_ADJ:0 "Bolton"
+ 
+ITA_neutrality_ADJ:0 "Bolton"
+ 
+ITA_communism_ADJ:0 "Bolton"
+ 
+ROM_fascism:0 "House Greyjoy"
+ 
+ROM_fascism_DEF:0 "House Greyjoy"
+ 
+ROM_democratic:0 "House Greyjoy"
+ 
+ROM_democratic_DEF:0 "House Greyjoy"
+ 
+ROM_neutrality:0 "House Greyjoy"
+ 
+ROM_neutrality_DEF:0 "House Greyjoy"
+ 
+ROM_communism:0 "House Greyjoy"
+ 
+ROM_communism_DEF:0 "House Greyjoy"
+ 
+ROM_fascism_ADJ:0 "Greyjoy"
+ 
+ROM_democratic_ADJ:0 "Greyjoy"
+ 
+ROM_neutrality_ADJ:0 "Greyjoy"
+ 
+ROM_communism_ADJ:0 "Greyjoy"
+ 
+SWI_fascism:0 "Free City of Braavos"
+ 
+SWI_fascism_DEF:0 "The Free City of Braavos"
+ 
+SWI_democratic:0 "Free City of Braavos"
+ 
+SWI_democratic_DEF:0 "The Free City of Braavos"
+ 
+SWI_neutrality:0 "Free City of Braavos"
+ 
+SWI_neutrality_DEF:0 "The Free City of Braavos"
+ 
+SWI_communism:0 "Free City of Braavos"
+ 
+SWI_communism_DEF:0 "The Free City of Braavos"
+ 
+SWI_fascism_ADJ:0 "Braavosi"
+ 
+SWI_democratic_ADJ:0 "Braavosi"
+ 
+SWI_neutrality_ADJ:0 "Braavosi"
+ 
+SWI_communism_ADJ:0 "Braavosi"
+ 
+TUR_fascism:0 "Free City of Qohor"
+ 
+TUR_fascism_DEF:0 "The Free City of Qohor"
+ 
+TUR_democratic:0 "Free City of Qohor"
+ 
+TUR_democratic_DEF:0 "The Free City of Qohor"
+ 
+TUR_neutrality:0 "Free City of Qohor"
+ 
+TUR_neutrality_DEF:0 "The Free City of Qohor"
+ 
+TUR_communism:0 "Free City of Qohor"
+ 
+TUR_communism_DEF:0 "The Free City of Qohor"
+ 
+TUR_fascism_ADJ:0 "Qohori"
+ 
+TUR_democratic_ADJ:0 "Qohori"
+ 
+TUR_neutrality_ADJ:0 "Qohori"
+ 
+TUR_communism_ADJ:0 "Qohori"
+ 
+GRE_fascism:0 "Free City of Tyrosh"
+ 
+GRE_fascism_DEF:0 "The Free City of Tyrosh"
+ 
+GRE_democratic:0 "Free City of Tyrosh"
+ 
+GRE_democratic_DEF:0 "The Free City of Tyrosh"
+ 
+GRE_neutrality:0 "Free City of Tyrosh"
+ 
+GRE_neutrality_DEF:0 "The Free City of Tyrosh"
+ 
+GRE_communism:0 "Free City of Tyrosh"
+ 
+GRE_communism_DEF:0 "The Free City of Tyrosh"
+ 
+GRE_fascism_ADJ:0 "Tyroshi"
+ 
+GRE_democratic_ADJ:0 "Tyroshi"
+ 
+GRE_neutrality_ADJ:0 "Tyroshi"
+ 
+GRE_communism_ADJ:0 "Tyroshi"
+ 
+ALB_fascism:0 "Free City of Myr"
+ 
+ALB_fascism_DEF:0 "The Free City of Myr"
+ 
+ALB_democratic:0 "Free City of Myr"
+ 
+ALB_democratic_DEF:0 "The Free City of Myr"
+ 
+ALB_neutrality:0 "Free City of Myr"
+ 
+ALB_neutrality_DEF:0 "The Free City of Myr"
+ 
+ALB_communism:0 "Free City of Myr"
+ 
+ALB_communism_DEF:0 "The Free City of Myr"
+ 
+ALB_fascism_ADJ:0 "Myrish"
+ 
+ALB_democratic_ADJ:0 "Myrish"
+ 
+ALB_neutrality_ADJ:0 "Myrish"
+ 
+ALB_communism_ADJ:0 "Myrish"
+ 
+NOR_fascism:0 "House Karstark"
+ 
+NOR_fascism_DEF:0 "House Karstark"
+ 
+NOR_democratic:0 "House Karstark"
+ 
+NOR_democratic_DEF:0 "House Karstark"
+ 
+NOR_neutrality:0 "House Karstark"
+ 
+NOR_neutrality_DEF:0 "House Karstark"
+ 
+NOR_communism:0 "House Karstark"
+ 
+NOR_communism_DEF:0 "House Karstark"
+ 
+NOR_fascism_ADJ:0 "Karstark"
+ 
+NOR_democratic_ADJ:0 "Karstark"
+ 
+NOR_neutrality_ADJ:0 "Karstark"
+ 
+NOR_communism_ADJ:0 "Karstark"
+ 
+DEN_fascism:0 "Wildling Empire"
+ 
+DEN_fascism_DEF:0 "Wildling Empire"
+ 
+DEN_democratic:0 "Free Folk"
+ 
+DEN_democratic_DEF:0 "Free Folk"
+ 
+DEN_neutrality:0 "Free Folk"
+ 
+DEN_neutrality_DEF:0 "Free Folk"
+ 
+DEN_communism:0 "Free Folk"
+ 
+DEN_communism_DEF:0 "Free Folk"
+ 
+DEN_fascism_ADJ:0 "Wildling"
+ 
+DEN_democratic_ADJ:0 "Wildling"
+ 
+DEN_neutrality_ADJ:0 "Wildling"
+ 
+DEN_communism_ADJ:0 "Wildling"
+ 
+BUL_fascism:0 "House Mormont"
+ 
+BUL_fascism_DEF:0 "House Mormont"
+ 
+BUL_democratic:0 "House Mormont"
+ 
+BUL_democratic_DEF:0 "House Mormont"
+ 
+BUL_neutrality:0 "House Mormont"
+ 
+BUL_neutrality_DEF:0 "House Mormont"
+ 
+BUL_communism:0 "House Mormont"
+ 
+BUL_communism_DEF:0 "House Mormont"
+ 
+BUL_fascism_ADJ:0 "Mormont"
+ 
+BUL_democratic_ADJ:0 "Mormont"
+ 
+BUL_neutrality_ADJ:0 "Mormont"
+ 
+BUL_communism_ADJ:0 "Mormont"
+ 
+POR_fascism:0 "Slave City of Volantis"
+ 
+POR_fascism_DEF:0 "The Slave City of Volantis"
+ 
+POR_democratic:0 "Free City of Volantis"
+ 
+POR_democratic_DEF:0 "The Free City of Volantis"
+ 
+POR_neutrality:0 "Free City of Volantis"
+ 
+POR_neutrality_DEF:0 "The Free City of Volantis"
+ 
+POR_communism:0 "People's Republic of Volantis"
+ 
+POR_communism_DEF:0 "The People's Republic of Volantis"
+ 
+POR_fascism_ADJ:0 "Volantene"
+ 
+POR_democratic_ADJ:0 "Volantene"
+ 
+POR_neutrality_ADJ:0 "Volantene"
+ 
+POR_communism_ADJ:0 "Volantene"
+ 
+FIN_fascism:0 "House Stark"
+ 
+FIN_fascism_DEF:0 "House Stark"
+ 
+FIN_democratic:1 "House Stark"
+ 
+FIN_democratic_DEF:1 "House Stark"
+ 
+FIN_neutrality:1 "House Stark"
+ 
+FIN_neutrality_DEF:1 "House Stark"
+ 
+FIN_communism:0 "House Stark"
+ 
+FIN_communism_DEF:0 "House Stark"
+ 
+FIN_fascism_ADJ:0 "Stark"
+ 
+FIN_democratic_ADJ:0 "Stark"
+ 
+FIN_neutrality_ADJ:0 "Stark"
+ 
+FIN_communism_ADJ:0 "Stark"
+ 
+IRE_fascism:0 "House Tyrell"
+ 
+IRE_fascism_DEF:0 "House Tyrell"
+ 
+IRE_democratic:0 "House Tyrell"
+ 
+IRE_democratic_DEF:0 "House Tyrell"
+ 
+IRE_neutrality:0 "House Tyrell"
+ 
+IRE_neutrality_DEF:0 "House Tyrell"
+ 
+IRE_communism:0 "Kingdom of the Reach"
+ 
+IRE_communism_DEF:0 "The Kingdom of the Reach"
+ 
+IRE_fascism_ADJ:0 "Tyrell"
+ 
+IRE_democratic_ADJ:0 "Tyrell"
+ 
+IRE_neutrality_ADJ:0 "Tyrell"
+ 
+IRE_communism_ADJ:0 "Tyrell"
+ 
+HUN_fascism:0 "House of Stannis Baratheon"
+ 
+HUN_fascism_DEF:0 "The House of Stannis Baratheon"
+ 
+HUN_democratic:0 "House of Stannis Baratheon"
+ 
+HUN_democratic_DEF:0 "The House of Stannis Baratheon"
+ 
+HUN_neutrality:0 "House of Stannis Baratheon"
+ 
+HUN_neutrality_DEF:0 "The House of Stannis Baratheon"
+ 
+HUN_communism:0 "House of Stannis Baratheon"
+ 
+HUN_communism_DEF:0 "The House of Stannis Baratheon"
+ 
+HUN_fascism_ADJ:0 "Baratheon"
+ 
+HUN_democratic_ADJ:0 "Baratheon"
+ 
+HUN_neutrality_ADJ:0 "Baratheon"
+ 
+HUN_communism_ADJ:0 "Baratheon"
+ 
+AFG_fascism:0 "Moro Khalasar"
+ 
+AFG_fascism_DEF:0 "The Moro Khalasar"
+ 
+AFG_democratic:0 "Moro Khalasar"
+ 
+AFG_democratic_DEF:0 "The Moro Khalasar"
+ 
+AFG_neutrality:0 "Moro Khalasar"
+ 
+AFG_neutrality_DEF:0 "The Moro Khalasar"
+ 
+AFG_communism:0 "Moro Khalasar"
+ 
+AFG_communism_DEF:0 "The Moro Khalasar"
+ 
+AFG_fascism_ADJ:0 "Dothraki"
+ 
+AFG_democratic_ADJ:0 "Dothraki"
+ 
+AFG_neutrality_ADJ:0 "Dothraki"
+ 
+AFG_communism_ADJ:0 "Dothraki"
+ 
+ARG_fascism:0 "Argentine League"
+ ARG_fascism_DEF:0 "The Argentine League"
+ ARG_democratic:0 "Argentine Republic"
+ ARG_democratic_DEF:0 "The Argentine Republic"
+ ARG_neutrality:0 "Argentina"
+ ARG_neutrality_DEF:0 "Argentina"
+ ARG_communism:0 "Argentina Populares"
+ ARG_communism_DEF:0 "Argentina Populares"
+ ARG_fascism_ADJ:0 "Argentinean"
+ ARG_democratic_ADJ:0 "Argentinean"
+ ARG_neutrality_ADJ:0 "Argentinean"
+ ARG_communism_ADJ:0 "Argentinean"
+ BOL_fascism:0 "Falangist Bolivia"
+ BOL_fascism_DEF:0 "Falangist Bolivia"
+ BOL_democratic:0 "Plurinational Bolivia"
+ BOL_democratic_DEF:0 "Plurinational Bolivia"
+ BOL_neutrality:0 "Bolivia"
+ BOL_neutrality_DEF:0 "Bolivia"
+ BOL_communism:0 "Bolivia Izquerdista"
+ BOL_communism_DEF:0 "Bolivia Izquerdista"
+ BOL_fascism_ADJ:0 "Bolivian"
+ BOL_democratic_ADJ:0 "Bolivian"
+ BOL_neutrality_ADJ:0 "Bolivian"
+ BOL_communism_ADJ:0 "Bolivian"
+ 
+CAN_fascism:0 "Night's Watch"
+ 
+CAN_fascism_DEF:0 "The Night's Watch"
+ 
+CAN_democratic:0 "Night's Watch"
+ 
+CAN_democratic_DEF:0 "The Night's Watch"
+ 
+CAN_neutrality:0 "Night's Watch"
+ 
+CAN_neutrality_DEF:0 "The Night's Watch"
+ 
+CAN_communism:0 "Night's Watch"
+ 
+CAN_communism_DEF:0 "The Night's Watch"
+ 
+CAN_fascism_ADJ:0 "Crow"
+ 
+CAN_democratic_ADJ:0 "Crow"
+ 
+CAN_neutrality_ADJ:0 "Crow"
+ 
+CAN_communism_ADJ:0 "Crow"
+ 
+CHI_fascism:0 "Golden Empire of Yi Ti"
+ 
+CHI_fascism_DEF:0 "The Golden Empire of Yi Ti"
+ 
+CHI_democratic:0 "Yi Ti"
+ 
+CHI_democratic_DEF:0 "The Yi Ti Republic"
+ 
+CHI_neutrality:0 "Golden Empire of Yi Ti"
+ 
+CHI_neutrality_DEF:0 "The Golden Empire of Yi Ti"
+ 
+CHI_communism:0 "Yi Ti"
+ 
+CHI_communism_DEF:0 "The Yi Ti People's Republic"
+ 
+CHI_fascism_ADJ:0 "Yi Tish"
+ 
+CHI_democratic_ADJ:0 "Yi Tish"
+ 
+CHI_neutrality_ADJ:0 "Yi Tish"
+ 
+CHI_communism_ADJ:0 "Yi Tish"
+ 
+CHL_fascism:0 "Vanguard Chile"
+ CHL_fascism_DEF:0 "Vanguard Chile"
+ CHL_democratic:0 "Chile"
+ CHL_democratic_DEF:0 "Chile"
+ CHL_neutrality:0 "Atacama-Patagonian Free State"
+ CHL_neutrality_DEF:0 "Atacama-Patagonian Free State"
+ CHL_communism:0 "Chilean Socialist Republic"
+ CHL_communism_DEF:0 "The Chilean Socialist Republic"
+ CHL_fascism_ADJ:0 "Chilean"
+ CHL_democratic_ADJ:0 "Chilean"
+ CHL_neutrality_ADJ:0 "Chilean"
+ CHL_communism_ADJ:0 "Chilean"
+ COL_fascism:0 "Nueva Gran Colombia"
+ COL_fascism_DEF:0 "Nueva Gran Colombia"
+ COL_democratic:0 "Colombia"
+ COL_democratic_DEF:0 "Colombia"
+ COL_neutrality:0 "Nueva Constitución"
+ COL_neutrality_DEF:0 "Nueva Constitución"
+ COL_communism:0 "Colombian Socialist Republic"
+ COL_communism_DEF:0 "The Colombian Socialist Republic"
+ COL_fascism_ADJ:0 "Colombian"
+ COL_democratic_ADJ:0 "Colombian"
+ COL_neutrality_ADJ:0 "Colombian"
+ COL_communism_ADJ:0 "Colombian"
+ COS_fascism:0 "Costa Potente"
+ COS_fascism_DEF:0 "Costa Potente"
+ COS_democratic:0 "Costa Rica"
+ COS_democratic_DEF:0 "Costa Rica"
+ COS_neutrality:0 "Reino de la Costa"
+ COS_neutrality_DEF:0 "Reino de la Costa"
+ COS_communism:0 "Costa del Pueblo"
+ COS_communism_DEF:0 "Costa del Pueblo"
+ COS_fascism_ADJ:0 "Costa Rican"
+ COS_democratic_ADJ:0 "Costa Rican"
+ COS_neutrality_ADJ:0 "Costa Rican"
+ COS_communism_ADJ:0 "Costa Rican"
+ 
+ECU_fascism:0 "Mantarys Slaver State"
+ 
+ECU_fascism_DEF:0 "The Mantarys Slaver State"
+ 
+ECU_democratic:0 "Mantari Republic"
+ 
+ECU_democratic_DEF:0 "The Mantari Republic"
+ 
+ECU_neutrality:0 "Mantarys"
+ 
+ECU_neutrality_DEF:0 "Mantarys"
+ 
+ECU_communism:0 "Mantari Socialist Republic"
+ 
+ECU_communism_DEF:0 "The Mantari Socialist Republic"
+ 
+ECU_fascism_ADJ:0 "Mantari"
+ 
+ECU_democratic_ADJ:0 "Mantari"
+ 
+ECU_neutrality_ADJ:0 "Mantari"
+ 
+ECU_communism_ADJ:0 "Mantari"
+ 
+ELS_fascism:0 "El Salvador"
+ ELS_fascism_DEF:0 "El Salvador"
+ ELS_democratic:0 "Republic of El Salvador"
+ ELS_democratic_DEF:0 "The Republic of El Salvador"
+ ELS_neutrality:0 "Teocracia de El Salvador"
+ ELS_neutrality_DEF:0 "Teocracia de El Salvador"
+ ELS_communism:0 "Central American Socialist Republic"
+ ELS_communism_DEF:0 "The Central American Socialist Republic"
+ ELS_fascism_ADJ:0 "Salvadoran"
+ ELS_democratic_ADJ:0 "Salvadoran"
+ ELS_neutrality_ADJ:0 "Salvadoran"
+ ELS_communism_ADJ:0 "Salvadoran"
+ 
+GUA_fascism:0 "House Dayne"
+ 
+GUA_fascism_DEF:0 "House Dayne"
+ 
+GUA_democratic:0 "House Dayne"
+ 
+GUA_democratic_DEF:0 "House Dayne"
+ 
+GUA_neutrality:0 "House Dayne"
+ 
+GUA_neutrality_DEF:0 "House Dayne"
+ 
+GUA_communism:0 "House Dayne"
+ 
+GUA_communism_DEF:0 "House Dayne"
+ 
+GUA_fascism_ADJ:0 "Dayne"
+ 
+GUA_democratic_ADJ:0 "Dayne"
+ 
+GUA_neutrality_ADJ:0 "Dayne"
+ 
+GUA_communism_ADJ:0 "Dayne"
+ 
+HON_fascism:0 "Corporatist Honduras"
+ HON_fascism_DEF:0 "Corporatist Honduras"
+ HON_democratic:0 "Honduras"
+ HON_democratic_DEF:0 "Honduras"
+ HON_neutrality:0 "Atlas Honduras"
+ HON_neutrality_DEF:0 "Atlas Honduras"
+ HON_communism:0 "Honduran Commonwealth"
+ HON_communism_DEF:0 "The Honduran Commonwealth"
+ HON_fascism_ADJ:0 "Honduran"
+ HON_democratic_ADJ:0 "Honduran"
+ HON_neutrality_ADJ:0 "Honduran"
+ HON_communism_ADJ:0 "Honduran"
+ 
+IRQ_fascism:0 "Slave City of Yunkai"
+ 
+IRQ_fascism_DEF:0 "The Slave City of Yunkai"
+ 
+IRQ_democratic:0 "Free City of Yunkai"
+ 
+IRQ_democratic_DEF:0 "The Free City of Yunkai"
+ 
+IRQ_neutrality:0 "Slave City of Yunkai"
+ 
+IRQ_neutrality_DEF:0 "The Slave City of Yunkai"
+ 
+IRQ_communism:0 "Free City of Yunkai"
+ 
+IRQ_communism_DEF:0 "The Free City of Yunkai"
+ 
+IRQ_fascism_ADJ:0 "Yunkish"
+ 
+IRQ_democratic_ADJ:0 "Yunkish"
+ 
+IRQ_neutrality_ADJ:0 "Yunkish"
+ 
+IRQ_communism_ADJ:0 "Yunkish"
+ 
+MEX_fascism:0 "Synarchist Mexico"
+ MEX_fascism_DEF:0 "Synarchist Mexico"
+ MEX_democratic:0 "Mexican Opposition"
+ MEX_democratic_DEF:0 "The Mexican Opposition"
+ MEX_neutrality:0 "Mexico"
+ MEX_neutrality_DEF:0 "Mexico"
+ MEX_communism:0 "Mexican Socialist Republic"
+ MEX_communism_DEF:0 "The Mexican Socialist Republic"
+ MEX_fascism_ADJ:0 "Mexican"
+ MEX_democratic_ADJ:0 "Mexican"
+ MEX_neutrality_ADJ:0 "Mexican"
+ MEX_communism_ADJ:0 "Mexican"
+ 
+MON_fascism:0 "Jogos Nhai Empire"
+ 
+MON_fascism_DEF:0 "The Empire of Jogos Nhai"
+ 
+MON_democratic:0 "Jogos Nhai"
+ 
+MON_democratic_DEF:0 "The Jogos Nhai"
+ 
+MON_neutrality:0 "Jogos Nhai"
+ 
+MON_neutrality_DEF:0 "The Jogos Nhai"
+ 
+MON_communism:0 "Jogos Nhai"
+ 
+MON_communism_DEF:0 "The Jogos Nhai"
+ 
+MON_fascism_ADJ:0 "Jogos"
+ 
+MON_democratic_ADJ:0 "Jogos"
+ 
+MON_neutrality_ADJ:0 "Jogos"
+ 
+MON_communism_ADJ:0 "Jogos"
+ 
+NEP_fascism:0 "Kayakayanaya Empire"
+ 
+NEP_fascism_DEF:0 "The Empire of Kayakayanaya"
+ 
+NEP_democratic:0 "Federal Republic of Kayakayanaya"
+ 
+NEP_democratic_DEF:0 "The Federal Republic of Kayakayanaya"
+ 
+NEP_neutrality:0 "Kayakayanaya"
+ 
+NEP_neutrality_DEF:0 "Kayakayanaya"
+ 
+NEP_communism:0 "City State of Kayakayanaya"
+ 
+NEP_communism_DEF:0 "The City State of Kayakayanaya"
+ 
+NEP_fascism_ADJ:0 "Kayakai"
+ 
+NEP_democratic_ADJ:0 "Kayakai"
+ 
+NEP_neutrality_ADJ:0 "Kayakai"
+ 
+NEP_communism_ADJ:0 "Kayakai"
+ 
+NIC_fascism:0 "Liberal Nationalist Nicaragua"
+ NIC_fascism_DEF:0 "Liberal Nationalist Nicaragua"
+ NIC_democratic:0 "Republic of Nicaragua"
+ NIC_democratic_DEF:0 "The Republic of Nicaragua"
+ NIC_neutrality:0 "Nicaragua"
+ NIC_neutrality_DEF:0 "Nicaragua"
+ NIC_communism:0 "International Nicaragua"
+ NIC_communism_DEF:0 "International Nicaragua"
+ NIC_fascism_ADJ:0 "Nicaraguan"
+ NIC_democratic_ADJ:0 "Nicaraguan"
+ NIC_neutrality_ADJ:0 "Nicaraguan"
+ NIC_communism_ADJ:0 "Nicaraguan"
+ PAN_fascism:0 "Patriotic Communal Panama"
+ PAN_fascism_DEF:0 "Patriotic Communal Panama"
+ PAN_democratic:0 "Panama"
+ PAN_democratic_DEF:0 "Panama"
+ PAN_neutrality:0 "Costas Hermanas"
+ PAN_neutrality_DEF:0 "Costas Hermanas"
+ PAN_communism:0 "Free Panama Commune"
+ PAN_communism_DEF:0 "Free Panama Commune"
+ PAN_fascism_ADJ:0 "Panamanian"
+ PAN_democratic_ADJ:0 "Panamanian"
+ PAN_neutrality_ADJ:0 "Panamanian"
+ PAN_communism_ADJ:0 "Panamanian"
+ 
+PAR_fascism:0 "Green Empire"
+ 
+PAR_fascism_DEF:0 "The Green Empire"
+ 
+PAR_democratic:0 "Republic of the Thousand Isles"
+ 
+PAR_democratic_DEF:0 "The Republic of the Thousand Isles"
+ 
+PAR_neutrality:0 "Thousand Isles"
+ 
+PAR_neutrality_DEF:0 "The Thousand Isles"
+ 
+PAR_communism:0 "Union of the Thousand Isles"
+ 
+PAR_communism_DEF:0 "The Union of the Thousand Isles"
+ 
+PAR_fascism_ADJ:0 "Islander"
+ 
+PAR_democratic_ADJ:0 "Islander"
+ 
+PAR_neutrality_ADJ:0 "Islander"
+ 
+PAR_communism_ADJ:0 "Islander"
+ 
+PER_fascism:0 "Slave City of Astapor"
+ 
+PER_fascism_DEF:0 "The Slave City of Astapor"
+ 
+PER_democratic:0 "Free City of Astapor"
+ 
+PER_democratic_DEF:0 "The Free City of Astapor"
+ 
+PER_neutrality:0 "Slave City of Astapor"
+ 
+PER_neutrality_DEF:0 "The Slave City of Astapor"
+ 
+PER_communism:0 "Free City of Astapor"
+ 
+PER_communism_DEF:0 "The Free City of Astapor"
+ 
+PER_fascism_ADJ:0 "Astapori"
+ 
+PER_democratic_ADJ:0 "Astapori"
+ 
+PER_neutrality_ADJ:0 "Astapori"
+ 
+PER_communism_ADJ:0 "Astapori"
+ 
+PHI_fascism:0 "Kingdom of N'Ghai"
+ 
+PHI_fascism_DEF:0 "The Kingdom of N'Ghai"
+ 
+PHI_democratic:0 "N'Ghai"
+ 
+PHI_democratic_DEF:0 "The N'Ghai"
+ 
+PHI_neutrality:0 "Independent N'Ghai"
+ 
+PHI_neutrality_DEF:0 "The Independent N'Ghai"
+ 
+PHI_communism:0 "Community of the N'Ghai"
+ 
+PHI_communism_DEF:0 "The Community of the N'Ghai"
+ 
+PHI_fascism_ADJ:0 "N'Ghai"
+ 
+PHI_democratic_ADJ:0 "N'Ghai"
+ 
+PHI_neutrality_ADJ:0 "N'Ghai"
+ 
+PHI_communism_ADJ:0 "N'Ghai"
+ 
+PRU_fascism:0 "Peru"
+ PRU_fascism_DEF:0 "Peru"
+ PRU_democratic:0 "Republic of Peru"
+ PRU_democratic_DEF:0 "The Republic of Peru"
+ PRU_neutrality:0 "Peruvian Independent State"
+ PRU_neutrality_DEF:0 "The Peruvian Independent State"
+ PRU_communism:0 "Revolutionary Peru"
+ PRU_communism_DEF:0 "Revolutionary Peru"
+ PRU_fascism_ADJ:0 "Peruvian"
+ PRU_democratic_ADJ:0 "Peruvian"
+ PRU_neutrality_ADJ:0 "Peruvian"
+ PRU_communism_ADJ:0 "Peruvian"
+ 
+SAF_fascism:0 "Sothori Empire"
+ 
+SAF_fascism_DEF:0 "The Sothori Empire"
+ 
+SAF_democratic:0 "Sothori Republic"
+ 
+SAF_democratic_DEF:0 "Sothori Reoublic"
+ 
+SAF_neutrality:0 "Sothori Natives"
+ 
+SAF_neutrality_DEF:0 "Sothori Natives"
+ 
+SAF_communism:0 "Sothori Commune"
+ 
+SAF_communism_DEF:0 "The Sothori Commune"
+ 
+SAF_fascism_ADJ:0 "Sothori"
+ 
+SAF_democratic_ADJ:0 "Sothori"
+ 
+SAF_neutrality_ADJ:0 "Sothori"
+ 
+SAF_communism_ADJ:0 "Sothori"
+ 
+SAU_fascism:0 "Nomadic Empire"
+ 
+SAU_fascism_DEF:0 "The Nomadic Empire"
+ 
+SAU_democratic:0 "Nomad Republic"
+ 
+SAU_democratic_DEF:0 "The Nomad Republic"
+ 
+SAU_neutrality:0 "Northern Nomads"
+ 
+SAU_neutrality_DEF:0 "The Northern Nomads"
+ 
+SAU_communism:0 "Republic of the Northern Nomads"
+ 
+SAU_communism_DEF:0 "The Republic of the Northern Nomads"
+ 
+SAU_fascism_ADJ:0 "Nomad"
+ 
+SAU_democratic_ADJ:0 "Nomad"
+ 
+SAU_neutrality_ADJ:0 "Nomad"
+ 
+SAU_communism_ADJ:0 "Nomad"
+ 
+SIA_fascism:0 "Winged Empire of Rah"
+ 
+SIA_fascism_DEF:0 "The Winged Empire of Rah"
+ 
+SIA_democratic:0 "Winged Republic"
+ 
+SIA_democratic_DEF:0 "The Winged Republic"
+ 
+SIA_neutrality:0 "Rah"
+ 
+SIA_neutrality_DEF:0 "Rah"
+ 
+SIA_communism:0 "Winged People's Republic"
+ 
+SIA_communism_DEF:0 "The Winged People's Republic"
+ 
+SIA_fascism_ADJ:0 "Winged"
+ 
+SIA_democratic_ADJ:0 "Winged"
+ 
+SIA_neutrality_ADJ:0 "Winged"
+ 
+SIA_communism_ADJ:0 "Winged"
+ 
+SIK_fascism:0 "Dictatorial Sinkiang"
+ SIK_fascism_DEF:0 "Dictatorial Sinkiang"
+ SIK_democratic:0 "Sinkiang Independent Republic"
+ SIK_democratic_DEF:0 "The Sinkiang Independent Republic"
+ SIK_neutrality:0 "State of Sinkiang"
+ SIK_neutrality_DEF:0 "State of Sinkiang"
+ SIK_communism:0 "Sinkiang"
+ SIK_communism_DEF:0 "Sinkiang"
+ SIK_fascism_ADJ:0 "Sinkiang"
+ SIK_democratic_ADJ:0 "Sinkiang"
+ SIK_neutrality_ADJ:0 "Sinkiang"
+ SIK_communism_ADJ:0 "Sinkiang"
+ TAN_fascism:0 "Tuvan Nationalist Republic"
+ TAN_fascism_DEF:0 "The Tuvan Nationalist Republic"
+ TAN_democratic:0 "Tuva Independent Republic"
+ TAN_democratic_DEF:0 "The Tuva Independent Republic"
+ TAN_neutrality:0 "Tannu Uriankhai"
+ TAN_neutrality_DEF:0 "Tannu Uriankhai"
+ TAN_communism:0 "Tannu Tuva"
+ TAN_communism_DEF:0 "Tannu Tuva"
+ TAN_fascism_ADJ:0 "Tuvan"
+ TAN_democratic_ADJ:0 "Tuvan"
+ TAN_neutrality_ADJ:0 "Tuvan"
+ TAN_communism_ADJ:0 "Tuvan"
+ 
+TIB_fascism:0 "Samyrian Empire"
+ 
+TIB_fascism_DEF:0 "The Samyrian Empire"
+ 
+TIB_democratic:0 "Samyriana Republic"
+ 
+TIB_democratic_DEF:0 "The Samyriana Republic"
+ 
+TIB_neutrality:0 "Samyriana"
+ 
+TIB_neutrality_DEF:0 "Samyriana"
+ 
+TIB_communism:0 "Monastic Samyriana"
+ 
+TIB_communism_DEF:0 "The Monastic Samyriana"
+ 
+TIB_fascism_ADJ:0 "Samyrian"
+ 
+TIB_democratic_ADJ:0 "Samyrian"
+ 
+TIB_neutrality_ADJ:0 "Samyrian"
+ 
+TIB_communism_ADJ:0 "Samyrian"
+ 
+VEN_fascism:0 "Venezuela"
+ VEN_fascism_DEF:0 "Venezuela"
+ VEN_democratic:0 "Federal Republic of Venezuela"
+ VEN_democratic_DEF:0 "The Federal Republic of Venezuela"
+ VEN_neutrality:0 "Bolivarian Venezuela"
+ VEN_neutrality_DEF:0 "Bolivarian Venezuela"
+ VEN_communism:0 "Leftist International Venezuela"
+ VEN_communism_DEF:0 "Leftist International Venezuela"
+ VEN_fascism_ADJ:0 "Venezuelan"
+ VEN_democratic_ADJ:0 "Venezuelan"
+ VEN_neutrality_ADJ:0 "Venezuelan"
+ VEN_communism_ADJ:0 "Venezuelan"
+ YUN_fascism:0 "Yunnan Free Empire"
+ YUN_fascism_DEF:0 "The Yunnan Free Empire"
+ YUN_democratic:0 "Yunnan Independent Republic"
+ YUN_democratic_DEF:0 "The Yunnan Independent Republic"
+ YUN_neutrality:0 "Yunnan"
+ YUN_neutrality_DEF:0 "Yunnan"
+ YUN_communism:0 "Soviet State of Yunnan"
+ YUN_communism_DEF:0 "The Soviet State of Yunnan"
+ YUN_fascism_ADJ:0 "Yunnanese"
+ YUN_democratic_ADJ:0 "Yunnanese"
+ YUN_neutrality_ADJ:0 "Yunnanese"
+ YUN_communism_ADJ:0 "Yunnanese"
+ 
+AST_fascism:0 "Ulthos"
+ 
+AST_fascism_DEF:0 "Ulthos"
+ 
+AST_democratic:0 "Ulthos"
+ 
+AST_democratic_DEF:0 "Ulthos"
+ 
+AST_neutrality:0 "Ulthos"
+ 
+AST_neutrality_DEF:0 "Ulthos"
+ 
+AST_communism:0 "Ulthos"
+ 
+AST_communism_DEF:0 "Ulthos"
+ 
+AST_fascism_ADJ:0 "Ulthosian"
+ 
+AST_democratic_ADJ:0 "Ulthosian"
+ 
+AST_neutrality_ADJ:0 "Ulthosian"
+ 
+AST_communism_ADJ:0 "Ulthosian"
+ 
+URG_fascism:0 "New Constitutional Uruguay"
+ URG_fascism_DEF:0 "New Constitutional Uruguay"
+ URG_democratic:0 "Uruguay"
+ URG_democratic_DEF:0 "Uruguay"
+ URG_neutrality:0 "Colegiado Uruguay"
+ URG_neutrality_DEF:0 "Colegiado Uruguay"
+ URG_communism:0 "Socialist Republic of Uruguay"
+ URG_communism_DEF:0 "The Socialist Republic of Uruguay"
+ URG_fascism_ADJ:0 "Uruguayan"
+ URG_democratic_ADJ:0 "Uruguayan"
+ URG_neutrality_ADJ:0 "Uruguayan"
+ URG_communism_ADJ:0 "Uruguayan"
+ CUB_fascism:0 "Empire of the Basilisk"
+ 
+CUB_fascism_DEF:0 "The Empire of the Basilisk"
+ 
+CUB_democratic:0 "Basilisk Republic"
+ 
+CUB_democratic_DEF:0 "The Basilisk Republic"
+ 
+CUB_neutrality:0 "Basilisk Privateers"
+ 
+CUB_neutrality_DEF:0 "The Basilisk Privateers"
+ 
+CUB_communism:0 "Union of the Basilisk Islands"
+ 
+CUB_communism_DEF:0 "The Union of the Basilisk Islands"
+ 
+CUB_fascism_ADJ:0 "Basilisk"
+ 
+CUB_democratic_ADJ:0 "Basilisk"
+ 
+CUB_neutrality_ADJ:0 "Basilisk"
+ 
+CUB_communism_ADJ:0 "Basilisk"
+ 
+DOM_fascism:0 "Dominican Republic"
+ DOM_fascism_DEF:0 "The Dominican Republic"
+ DOM_democratic:0 "Representative Dominican Republic"
+ DOM_democratic_DEF:0 "The Representative Dominican Republic"
+ DOM_neutrality:0 "Santo Domingo"
+ DOM_neutrality_DEF:0 "Santo Domingo"
+ DOM_communism:0 "Dominican People's Republic"
+ DOM_communism_DEF:0 "The Dominican People's Republic"
+ DOM_fascism_ADJ:0 "Dominican"
+ DOM_democratic_ADJ:0 "Dominican"
+ DOM_neutrality_ADJ:0 "Dominican"
+ DOM_communism_ADJ:0 "Dominican"
+ HAI_fascism:0 "Third Empire of Haiti"
+ HAI_fascism_DEF:0 "The Third Empire of Haiti"
+ HAI_democratic:0 "Haiti"
+ HAI_democratic_DEF:0 "Haiti"
+ HAI_neutrality:0 "Kingdom of Haiti"
+ HAI_neutrality_DEF:0 "The Kingdom of Haiti"
+ HAI_communism:0 "Haiti Socialist Republic"
+ HAI_communism_DEF:0 "The Haiti Socialist Republic"
+ HAI_fascism_ADJ:0 "Haitian"
+ HAI_democratic_ADJ:0 "Haitian"
+ HAI_neutrality_ADJ:0 "Haitian"
+ HAI_communism_ADJ:0 "Haitian"
+ OMA_fascism:0 "Jhaqo Khalasar"
+ 
+OMA_fascism_DEF:0 "The Jhaqo Khalasar"
+ 
+OMA_democratic:0 "Jhaqo Khalasar"
+ 
+OMA_democratic_DEF:0 "The Jhaqo Khalasar"
+ 
+OMA_neutrality:0 "Jhaqo Khalasar"
+ 
+OMA_neutrality_DEF:0 "The Jhaqo Khalasar"
+ 
+OMA_communism:0 "Jhaqo Khalasar"
+ 
+OMA_communism_DEF:0 "The Jhaqo Khalasar"
+ 
+OMA_fascism_ADJ:0 "Dothraki"
+ 
+OMA_democratic_ADJ:0 "Dothraki"
+ 
+OMA_neutrality_ADJ:0 "Dothraki"
+ 
+OMA_communism_ADJ:0 "Dothraki"
+ 
+YEM_fascism:0 "Qotho Khalasar"
+ 
+YEM_fascism_DEF:0 "The Qotho Khalasar"
+ 
+YEM_democratic:0 "Qotho Khalasar"
+ 
+YEM_democratic_DEF:0 "The Qotho Khalasar"
+ 
+YEM_neutrality:0 "Qotho Khalasar"
+ 
+YEM_neutrality_DEF:0 "The Qotho Khalasar"
+ 
+YEM_communism:0 "Qotho Khalasar"
+ 
+YEM_communism_DEF:0 "The Qotho Khalasar"
+ 
+YEM_fascism_ADJ:0 "Dothraki"
+ 
+YEM_democratic_ADJ:0 "Dothraki"
+ 
+YEM_neutrality_ADJ:0 "Dothraki"
+ 
+YEM_communism_ADJ:0 "Dothraki"
+ 
+ETH_fascism:0 "Lizard Tribe"
+ 
+ETH_fascism_DEF:0 "The Lizard Tribe"
+ 
+ETH_democratic:0 "Lizard Tribe"
+ 
+ETH_democratic_DEF:0 "The Lizard Tribe"
+ 
+ETH_neutrality:0 "Lizard Tribe"
+ 
+ETH_neutrality_DEF:0 "The Lizard Tribe"
+ 
+ETH_communism:0 "Lizard Tribe"
+ 
+ETH_communism_DEF:0 "The Lizard Tribe"
+ 
+ETH_fascism_ADJ:0 "Tribemen"
+ 
+ETH_democratic_ADJ:0 "Tribemen"
+ 
+ETH_neutrality_ADJ:0 "Tribemen"
+ 
+ETH_communism_ADJ:0 "Tribemen"
+ 
+SLO_fascism:0 "Omber Empire"
+ 
+SLO_fascism_DEF:0 "The Omber Empire"
+ 
+SLO_democratic:0 "Omber"
+ 
+SLO_democratic_DEF:0 "Omber"
+ 
+SLO_neutrality:0 "Kingdom of Omber"
+ 
+SLO_neutrality_DEF:0 "The Kingdom of Omber"
+ 
+SLO_communism:0 "Omber Republic"
+ 
+SLO_communism_DEF:0 "The Omber Republic"
+ 
+SLO_fascism_ADJ:0 "Omber"
+ 
+SLO_democratic_ADJ:0 "Omber"
+ 
+SLO_neutrality_ADJ:0 "Omber"
+ 
+SLO_communism_ADJ:0 "Omber"
+ 
+BHU_fascism:0 "Serpent Empire"
+ 
+BHU_fascism_DEF:0 "The Serpent Empire"
+ 
+BHU_democratic:0 "Bayasabhad Republic"
+ 
+BHU_democratic_DEF:0 "The Bayasabhad Republic"
+ 
+BHU_neutrality:0 "Bayasabhad"
+ 
+BHU_neutrality_DEF:0 "Bayasabhad"
+ 
+BHU_communism:0 "Union of Red Serpents"
+ 
+BHU_communism_DEF:0 "The Union of Red Serpents"
+ 
+BHU_fascism_ADJ:0 "Bayashi"
+ 
+BHU_democratic_ADJ:0 "Bayashi"
+ 
+BHU_neutrality_ADJ:0 "Bayashi"
+ 
+BHU_communism_ADJ:0 "Bayashi"
+ 
+LIB_fascism:0 "Free State of Naath"
+ 
+LIB_fascism_DEF:0 "The Free State of Naath"
+ 
+LIB_democratic:0 "Naath"
+ 
+LIB_democratic_DEF:0 "Naath"
+ 
+LIB_neutrality:0 "Naath"
+ 
+LIB_neutrality_DEF:0 "Naath"
+ 
+LIB_communism:0 "Naath"
+ 
+LIB_communism_DEF:0 "Naath"
+ 
+LIB_fascism_ADJ:0 "Naathi"
+ 
+LIB_democratic_ADJ:0 "Naathi"
+ 
+LIB_neutrality_ADJ:0 "Naathi"
+ 
+LIB_communism_ADJ:0 "Naathi"
+ 
+RAJ_fascism:0 "Dosh Khaleen"
+ 
+RAJ_fascism_DEF:0 "The Dosh Khaleen"
+ 
+RAJ_democratic:0 "Dosh Khaleen"
+ 
+RAJ_democratic_DEF:0 "The Dosh Khaleen"
+ 
+RAJ_neutrality:0 "Dosh Khaleen"
+ 
+RAJ_neutrality_DEF:0 "The Dosh Khaleen"
+ 
+RAJ_communism:0 "Dosh Khaleen"
+ 
+RAJ_communism_DEF:0 "The Dosh Khaleen"
+ 
+RAJ_fascism_ADJ:0 "Dothraki"
+ 
+RAJ_democratic_ADJ:0 "Dothraki"
+ 
+RAJ_neutrality_ADJ:0 "Dothraki"
+ 
+RAJ_communism_ADJ:0 "Dothraki"
+ 
+CRO_fascism:0 "Thenns"
+ 
+CRO_fascism_DEF:0 "The Thenns"
+ 
+CRO_democratic:0 "Thenns"
+ 
+CRO_democratic_DEF:0 "The Thenns"
+ 
+CRO_neutrality:0 "Thenns"
+ 
+CRO_neutrality_DEF:0 "The Thenns"
+ 
+CRO_communism:0 "Thenns"
+ 
+CRO_communism_DEF:0 "The Thenns"
+ 
+CRO_fascism_ADJ:0 "Thenn"
+ 
+CRO_democratic_ADJ:0 "Thenn"
+ 
+CRO_neutrality_ADJ:0 "Thenn"
+ 
+CRO_communism_ADJ:0 "Thenn"
+ 
+GXC_fascism:0 "Third Guangxi Clique"
+ GXC_fascism_DEF:0 "The Third Guangxi Clique"
+ GXC_democratic:0 "Guangxi Independent Republic"
+ GXC_democratic_DEF:0 "The Guangxi Independent Republic"
+ GXC_neutrality:0 "Guangxi Clique"
+ GXC_neutrality_DEF:0 "The Guangxi Clique"
+ GXC_communism:0 "Socialist Republic of the Zhu Jiang"
+ GXC_communism_DEF:0 "The Socialist Republic of the Zhu Jiang"
+ GXC_fascism_ADJ:0 "Guangxi"
+ GXC_neutrality_ADJ:0 "Guangxi"
+ GXC_democratic_ADJ:0 "Guangxi"
+ GXC_communism_ADJ:0 "Guangxi"
+ 
+SHX_fascism:0 "Empire of Leng"
+ 
+SHX_fascism_DEF:0 "The Empire of Leng"
+ 
+SHX_democratic:0 "Leng Republic"
+ 
+SHX_democratic_DEF:0 "The Leng Republic"
+ 
+SHX_neutrality:0 "Kingdom of Leng"
+ 
+SHX_neutrality_DEF:0 "The Kingdom of Leng"
+ 
+SHX_communism:0 "State of Leng"
+ 
+SHX_communism_DEF:0 "The State of Leng"
+ 
+SHX_fascism_ADJ:0 "Leng"
+ 
+SHX_democratic_ADJ:0 "Leng"
+ 
+SHX_neutrality_ADJ:0 "Leng"
+ 
+SHX_communism_ADJ:0 "Leng"
+ 
+XSM_fascism:0 "Kingdom of Lengii"
+ 
+XSM_fascism_DEF:0 "The Kingdom of Lengii"
+ 
+XSM_democratic:0 "Lengii Republic"
+ 
+XSM_democratic_DEF:0 "The Lengii Republic"
+ 
+XSM_neutrality:0 "Lengii Natives"
+ 
+XSM_neutrality_DEF:0 "The Lengii Natives"
+ 
+XSM_communism:0 "Lengii State"
+ 
+XSM_communism_DEF:0 "The Lengii State"
+ 
+XSM_fascism_ADJ:0 "Lengii"
+ 
+XSM_democratic_ADJ:0 "Lengii"
+ 
+XSM_neutrality_ADJ:0 "Lengii"
+ 
+XSM_communism_ADJ:0 "Lengii"
+ 
+MEN_fascism:0 "Realm of Jhogwin"
+ 
+MEN_fascism_DEF:0 "The Realm of Jhogwin"
+ 
+MEN_democratic:0 "Realm of Jhogwin"
+ 
+MEN_democratic_DEF:0 "The Realm of Jhogwin"
+ 
+MEN_neutrality:0 "Realm of Jhogwin"
+ 
+MEN_neutrality_DEF:0 "The Realm of Jhogwin"
+ 
+MEN_communism:0 "Realm of Jhogwin"
+ 
+MEN_communism_DEF:0 "The Realm of Jhogwin"
+ 
+MEN_fascism_ADJ:0 "Jhogwin"
+ 
+MEN_democratic_ADJ:0 "Jhogwin"
+ 
+MEN_neutrality_ADJ:0 "Jhogwin"
+ 
+MEN_communism_ADJ:0 "Jhogwin"
+ 
+KOR_fascism:0 "Golden Empire of Yi Ti"
+ 
+KOR_fascism_DEF:0 "The Golden Empire of Yi Ti"
+ 
+KOR_democratic:0 "Yi Ti"
+ 
+KOR_democratic_DEF:0 "The Yi Ti Republic"
+ 
+KOR_neutrality:0 "Golden Empire of Yi Ti"
+ 
+KOR_neutrality_DEF:0 "The Golden Empire of Yi Ti"
+ 
+KOR_communism:0 "Yi Ti"
+ 
+KOR_communism_DEF:0 "The Yi Ti People's Republic"
+ 
+KOR_fascism_ADJ:0 "Yi Tish"
+ 
+KOR_democratic_ADJ:0 "Yi Tish"
+ 
+KOR_neutrality_ADJ:0 "Yi Tish"
+ 
+KOR_communism_ADJ:0 "Yi Tish"
+ 
+SER_fascism:0 "House Frey"
+ 
+SER_fascism_DEF:0 "House Frey"
+ 
+SER_democratic:0 "House Frey"
+ 
+SER_democratic_DEF:0 "House Frey"
+ 
+SER_communism:0 "House Frey"
+ 
+SER_communism_DEF:0 "House Frey"
+ 
+SER_neutrality:0 "House Frey"
+ 
+SER_neutrality_DEF:0 "House Frey"
+ 
+SER_fascism_ADJ:0 "Frey"
+ 
+SER_democratic_ADJ:0 "Frey"
+ 
+SER_communism_ADJ:0 "Frey"
+ 
+SER_neutrality_ADJ:0 "Frey"
+ 
+ICE_fascism:0 "Craster's Keep"
+ 
+ICE_fascism_DEF:0 "Craster's Keep"
+ 
+ICE_democratic:0 "Craster's Keep"
+ 
+ICE_democratic_DEF:0 "Craster's Keep"
+ 
+ICE_communism:0 "Craster's Keep"
+ 
+ICE_communism_DEF:0 "Craster's Keep"
+ 
+ICE_neutrality:0 "Craster's Keep"
+ 
+ICE_neutrality_DEF:0 "Craster's Keep"
+ 
+ICE_fascism_ADJ:0 "Craster"
+ 
+ICE_democratic_ADJ:0 "Craster"
+ 
+ICE_communism_ADJ:0 "Craster"
+ 
+ICE_neutrality_ADJ:0 "Craster"
+ 
+SYR_democratic:0 "Rhalko Khalasar"
+ 
+SYR_democratic_DEF:0 "The Rhalko Khalasar"
+ 
+SYR_neutrality:0 "Rhalko Khalasar"
+ 
+SYR_neutrality_DEF:0 "The Rhalko Khalasar"
+ 
+SYR_fascism:0 "Rhalko Khalasar"
+ 
+SYR_fascism_DEF:0 "The Rhalko Khalasar"
+ 
+SYR_communism:0 "Rhalko Khalasar"
+ 
+SYR_communism_DEF:0 "The Rhalko Khalasar"
+ 
+SYR_fascism_ADJ:0 "Dothraki"
+ 
+SYR_communism_ADJ:0 "Dothraki"
+ 
+SYR_neutrality_ADJ:0 "Dothraki"
+ 
+SYR_democratic_ADJ:0 "Dothraki"
+ 
+LEB_democratic:0 "Lhazareen Republic"
+ 
+LEB_democratic_DEF:0 "The Lhazareen Republic"
+ 
+LEB_neutrality:0 "Lhazar"
+ 
+LEB_neutrality_DEF:0 "Lhazar"
+ 
+LEB_fascism:0 "Lhazareen Empire"
+ 
+LEB_fascism_DEF:0 "The Lhazareen Empire"
+ 
+LEB_communism:0 "Lhazareen Socialist Republic"
+ 
+LEB_communism_DEF:0 "The Lhazareen Socialist Republic"
+ 
+LEB_fascism_ADJ:0 "Lhazareen"
+ 
+LEB_communism_ADJ:0 "Lhazareen"
+ 
+LEB_neutrality_ADJ:0 "Lhazareen"
+ 
+LEB_democratic_ADJ:0 "Lhazareen"
+ 
+JOR_democratic:0 "Jordan"
+ JOR_democratic_DEF:0 "Jordan"
+ JOR_neutrality:0 "Kingdom of Jordan"
+ JOR_neutrality_DEF:0 "The Kingdom of Jordan"
+ JOR_fascism:0 "Empire of Jordan"
+ JOR_fascism_DEF:0 "The Empire of Jordan"
+ JOR_communism:0 "Red Jordan"
+ JOR_communism_DEF:0 "Red Jordan"
+ JOR_fascism_ADJ:0 "Jordanian"
+ JOR_communism_ADJ:0 "Jordanian"
+ JOR_neutrality_ADJ:0 "Jordanian"
+ JOR_democratic_ADJ:0 "Jordanian"
+ 
+EGY_democratic:0 "Free City of Meereen"
+ 
+EGY_democratic_DEF:0 "The Free City of Meereen"
+ 
+EGY_neutrality:0 "Slave City of Meereen"
+ 
+EGY_neutrality_DEF:0 "The Slave City of Meereen"
+ 
+EGY_fascism:0 "Slave City of Meereen"
+ 
+EGY_fascism_DEF:0 "The Slave City of Meereen"
+ 
+EGY_communism:0 "Free City of Meereen"
+ 
+EGY_communism_DEF:0 "The Free City of Meereen"
+ 
+EGY_fascism_ADJ:0 "Meereenese"
+ 
+EGY_communism_ADJ:0 "Meereenese"
+ 
+EGY_neutrality_ADJ:0 "Meereenese"
+ 
+EGY_democratic_ADJ:0 "Meereenese"
+ 
+LBA_neutrality:0 "Old Valyria"
+ 
+LBA_neutrality_DEF:0 "Old Valyria"
+ 
+LBA_democratic:0 "Old Valyria"
+ 
+LBA_democratic_DEF:0 "Old Valyria"
+ 
+LBA_fascism:0 "Revived Valyrian Empire"
+ 
+LBA_fascism_DEF:0 "The Revived Valyrian Empire"
+ 
+LBA_communism:0 "Old Valyria"
+ 
+LBA_communism_DEF:0 "Old Valyria"
+ 
+LBA_communism_ADJ:0 "Valyrian"
+ 
+LBA_fascism_ADJ:0 "Valyrian"
+ 
+LBA_democratic_ADJ:0 "Valyrian"
+ 
+LBA_neutrality_ADJ:0 "Valyrian"
+ 
+WGR_democratic:0 "West Germany"
+ WGR_democratic_DEF:0 "West Germany"
+ WGR_fascism:0 "Fourth Reich"
+ WGR_fascism_DEF:0 "The Fourth Reich"
+ WGR_neutrality:0 "Bayern-Hannover"
+ WGR_neutrality_DEF:0 "Bayern-Hannover"
+ WGR_communism:0 "Socialist Republic of Germany"
+ WGR_communism_DEF:0 "The Socialist Republic of Germany"
+ WGR_communism_ADJ:0 "West German"
+ WGR_fascism_ADJ:0 "West German"
+ WGR_neutrality_ADJ:0 "West German"
+ WGR_democratic_ADJ:0 "West German"
+
+ DDR_communism:0 "Dungeons"
+ DDR_communism_DEF:0 "Dungeons"
+ DDR_neutrality:0 "Dungeons"
+ DDR_neutrality_DEF:0 "Dungeons"
+ DDR_democratic:0 "Dungeons"
+ DDR_democratic_DEF:0 "Dungeons"
+ DDR_fascism:0 "Dungeons"
+ DDR_fascism_DEF:0 "Dungeons"
+ DDR_communism_ADJ:0 "Dungeons"
+ DDR_fascism_ADJ:0 "Dungeons"
+ DDR_neutrality_ADJ:0 "Dungeons"
+ DDR_democratic_ADJ:0 "Dungeons"
+
+ PAL_fascism:0 "Jund Palestine"
+ PAL_fascism_DEF:0 "Jund Palestine"
+ PAL_democratic:0 "Palestine"
+ PAL_democratic_DEF:0 "Palestine"
+ PAL_communism:0 "People's Socialist Palestine"
+ PAL_communism_DEF:0 "The People's Socialist Palestine"
+ PAL_neutrality:0 "Free Mandate of Palestine"
+ PAL_neutrality_DEF:0 "The Free Mandate of Palestine"
+ PAL_communism_ADJ:0 "Palestinian"
+ PAL_fascism_ADJ:0 "Palestinian"
+ PAL_neutrality_ADJ:0 "Palestinian"
+ PAL_democratic_ADJ:0 "Palestinian"
+ 
+ISR_communism:0 "Free City of Qarth"
+ 
+ISR_communism_DEF:0 "The Free City of Qarth"
+ 
+ISR_democratic:0 "Free City of Qarth"
+ 
+ISR_democratic_DEF:0 "The Free City of Qarth"
+ 
+ISR_fascism:0 "Free City of Qarth"
+ 
+ISR_fascism_DEF:0 "The Free City of Qarth"
+ 
+ISR_neutrality:0 "Free City of Qarth"
+ 
+ISR_neutrality_DEF:0 "The Free City of Qarth"
+ 
+ISR_communism_ADJ:0 "Qartheen"
+ 
+ISR_democratic_ADJ:0 "Qartheen"
+ 
+ISR_fascism_ADJ:0 "Qartheen"
+ 
+ISR_neutrality_ADJ:0 "Qartheen"
+ 
+VIN_fascism:0 "Yellow Empire"
+ 
+VIN_fascism_DEF:0 "The Yellow Empire"
+ 
+VIN_democratic:0 "Republic of Jinqui"
+ 
+VIN_democratic_DEF:0 "The Republic of Jinqui"
+ 
+VIN_neutrality:0 "Republic of Jinqui"
+ 
+VIN_neutrality_DEF:0 "The Republic of Jinqui"
+ 
+VIN_communism:0 "Democratic Republic of Jinqui"
+ 
+VIN_communism_DEF:0 "The Democratic Republic of Jinqui"
+ 
+VIN_fascism_ADJ:0 "Jinqui"
+ 
+VIN_democratic_ADJ:0 "Jinqui"
+ 
+VIN_neutrality_ADJ:0 "Jinqui"
+ 
+VIN_communism_ADJ:0 "Jinqui"
+ 
+ INS_fascism:0 "Indonesian Order"
+ INS_fascism_DEF:0 "The Indonesian Order"
+ INS_democratic:0 "Republic of Indonesia"
+ INS_democratic_DEF:0 "The Republic of Indonesia"
+ INS_neutrality:0 "Indonesia"
+ INS_neutrality_DEF:0 "Indonesia"
+ INS_communism:0 "Soviet Islands of Indonesia"
+ INS_communism_DEF:0 "The Soviet Islands of Indonesia"
+ INS_fascism_ADJ:0 "Indonesian"
+ INS_democratic_ADJ:0 "Indonesian"
+ INS_neutrality_ADJ:0 "Indonesian"
+ INS_communism_ADJ:0 "Indonesian"
+ MAL_fascism:0 "Malaysia"
+ MAL_fascism_DEF:0 "Malaysia"
+ MAL_democratic:0 "Republic of Malaysia"
+ MAL_democratic_DEF:0 "The Republic of Malaysia"
+ MAL_neutrality:0 "Republic of Malaysia"
+ MAL_neutrality_DEF:0 "The Republic of Malaysia"
+ MAL_communism:0 "Malay People's Republic"
+ MAL_communism_DEF:0 "The Malay People's Republic"
+ MAL_fascism_ADJ:0 "Malaysian"
+ MAL_democratic_ADJ:0 "Malaysian"
+ MAL_neutrality_ADJ:0 "Malaysian"
+ MAL_communism_ADJ:0 "Malaysian"
+LAO_fascism:0 "Empire of Leng"
+ 
+LAO_fascism_DEF:0 "The Empire of Leng"
+ 
+LAO_democratic:0 "Leng Republic"
+ 
+LAO_democratic_DEF:0 "The Leng Republic"
+ 
+LAO_neutrality:0 "Kingdom of Leng"
+ 
+LAO_neutrality_DEF:0 "The Kingdom of Leng"
+ 
+LAO_communism:0 "State of Leng"
+ 
+LAO_communism_DEF:0 "The State of Leng"
+ 
+LAO_fascism_ADJ:0 "Leng"
+ 
+LAO_democratic_ADJ:0 "Leng"
+ 
+LAO_neutrality_ADJ:0 "Leng"
+ 
+LAO_communism_ADJ:0 "Leng"
+ 
+CAM_fascism:0 "Kingdom of Lengii"
+ 
+CAM_fascism_DEF:0 "The Kingdom of Lengii"
+ 
+CAM_democratic:0 "Lengii Republic"
+ 
+CAM_democratic_DEF:0 "The Lengii Republic"
+ 
+CAM_neutrality:0 "Lengii Natives"
+ 
+CAM_neutrality_DEF:0 "The Lengii Natives"
+ 
+CAM_communism:0 "Lengii State"
+ 
+CAM_communism_DEF:0 "The Lengii State"
+ 
+CAM_fascism_ADJ:0 "Lengii"
+ 
+CAM_democratic_ADJ:0 "Lengii"
+ 
+CAM_neutrality_ADJ:0 "Lengii"
+ 
+CAM_communism_ADJ:0 "Lengii"
+ 
+MNT_fascism:0 "House Tarly"
+ 
+MNT_fascism_DEF:0 "House Tarly"
+ 
+MNT_democratic:0 "House Tarly"
+ 
+MNT_democratic_DEF:0 "House Tarly"
+ 
+MNT_neutrality:0 "House Tarly"
+ 
+MNT_neutrality_DEF:0 "House Tarly"
+ 
+MNT_communism:0 "House Tarly"
+ 
+MNT_communism_DEF:0 "House Tarly"
+ 
+MNT_fascism_ADJ:0 "Tarly"
+ 
+MNT_democratic_ADJ:0 "Tarly"
+ 
+MNT_neutrality_ADJ:0 "Tarly"
+ 
+MNT_communism_ADJ:0 "Tarly"
+ 
+UKR_fascism:0 "Sapphire Kingdom"
+ 
+UKR_fascism_DEF:0 "The Sapphire Kingdom"
+ 
+UKR_democratic:0 "House Tarth"
+ 
+UKR_democratic_DEF:0 "House Tarth"
+ 
+UKR_neutrality:0 "Tarth"
+ 
+UKR_neutrality_DEF:0 "Tarth"
+ 
+UKR_communism:1 "Tarth Republic"
+ 
+UKR_communism_DEF:1 "The Republic of Tarth"
+ 
+UKR_fascism_ADJ:0 "Tarth"
+ 
+UKR_democratic_ADJ:0 "Tarth"
+ 
+UKR_neutrality_ADJ:0 "Tarth"
+ 
+UKR_communism_ADJ:0 "Tarth"
+ 
+GEO_fascism:0 "House Glover"
+ 
+GEO_fascism_DEF:0 "House Glover"
+ 
+GEO_democratic:0 "House Glover"
+ 
+GEO_democratic_DEF:0 "House Glover"
+ 
+GEO_neutrality:0 "House Glover"
+ 
+GEO_neutrality_DEF:0 "House Glover"
+ 
+GEO_communism:1 "House Glover"
+ 
+GEO_communism_DEF:1 "House Glover"
+ 
+GEO_fascism_ADJ:0 "Glover"
+ 
+GEO_democratic_ADJ:0 "Glover"
+ 
+GEO_neutrality_ADJ:0 "Glover"
+ 
+GEO_communism_ADJ:0 "Glover"
+ 
+KAZ_fascism:0 "House Manderly"
+ 
+KAZ_fascism_DEF:0 "House Manderly"
+ 
+KAZ_democratic:0 "House Manderly"
+ 
+KAZ_democratic_DEF:0 "House Manderly"
+ 
+KAZ_neutrality:0 "House Manderly"
+ 
+KAZ_neutrality_DEF:0 "House Manderly"
+ 
+KAZ_communism:1 "House Manderly"
+ 
+KAZ_communism_DEF:1 "House Manderly"
+ 
+KAZ_fascism_ADJ:0 "Manderly"
+ 
+KAZ_democratic_ADJ:0 "Manderly"
+ 
+KAZ_neutrality_ADJ:0 "Manderly"
+ 
+KAZ_communism_ADJ:0 "Manderly"
+ 
+AZR_fascism:0 "House Reed"
+ 
+AZR_fascism_DEF:0 "House Reed"
+ 
+AZR_democratic:0 "House Reed"
+ 
+AZR_democratic_DEF:0 "House Reed"
+ 
+AZR_neutrality:0 "House Reed"
+ 
+AZR_neutrality_DEF:0 "House Reed"
+ 
+AZR_communism:1 "House Reed"
+ 
+AZR_communism_DEF:1 "House Reed"
+ 
+AZR_fascism_ADJ:0 "Reed"
+ 
+AZR_democratic_ADJ:0 "Reed"
+ 
+AZR_neutrality_ADJ:0 "Reed"
+ 
+AZR_communism_ADJ:0 "Reed"
+ 
+ARM_fascism:0 "House Hornwood"
+ 
+ARM_fascism_DEF:0 "House Hornwood"
+ 
+ARM_democratic:0 "House Hornwood"
+ 
+ARM_democratic_DEF:0 "House Hornwood"
+ 
+ARM_neutrality:0 "House Hornwood"
+ 
+ARM_neutrality_DEF:0 "House Hornwood"
+ 
+ARM_communism:1 "House Hornwood"
+ 
+ARM_communism_DEF:1 "House Hornwood"
+ 
+ARM_fascism_ADJ:0 "Hornwood"
+ 
+ARM_democratic_ADJ:0 "Hornwood"
+ 
+ARM_neutrality_ADJ:0 "Hornwood"
+ 
+ARM_communism_ADJ:0 "Hornwood"
+ 
+BLR_fascism:0 "Ibbenese Empire"
+ 
+BLR_fascism_DEF:0 "The Ibbenese Empire"
+ 
+BLR_democratic:0 "Republic of Ibben"
+ 
+BLR_democratic_DEF:0 "The Republic of Ibben"
+ 
+BLR_neutrality:0 "Kingdom of Ibben"
+ 
+BLR_neutrality_DEF:0 "The Kingdom of Ibben"
+ 
+BLR_communism:1 "Ibbenese Republic"
+ 
+BLR_communism_DEF:0 "The Ibbenese Republic"
+ 
+BLR_fascism_ADJ:0 "Ibbenese"
+ 
+BLR_democratic_ADJ:0 "Ibbenese"
+ 
+BLR_neutrality_ADJ:0 "Ibbenese"
+ 
+BLR_communism_ADJ:0 "Ibbenese"
+ 
+ANG_fascism:1 "Summer Empire"
+ 
+ANG_fascism_DEF:1 "The Summer Empire"
+ 
+ANG_democratic:0 "Summer Federation"
+ 
+ANG_democratic_DEF:0 "The Summer Federation"
+ 
+ANG_neutrality:0 "United Islands"
+ 
+ANG_neutrality_DEF:0 "The United Islands"
+ 
+ANG_communism:1 "Summer Republic"
+ 
+ANG_communism_DEF:0 "The Summer Republic"
+ 
+ANG_fascism_ADJ:0 "Islander"
+ 
+ANG_democratic_ADJ:0 "Islander"
+ 
+ANG_neutrality_ADJ:0 "Islander"
+ 
+ANG_communism_ADJ:0 "Islander"
+ 
+MZB_fascism:1 "Gorilla Tribe"
+ 
+MZB_fascism_DEF:1 "The Gorilla Tribe"
+ 
+MZB_democratic:0 "Gorilla Tribe"
+ 
+MZB_democratic_DEF:0 "The Gorilla Tribe"
+ 
+MZB_neutrality:0 "Gorilla Tribe"
+ 
+MZB_neutrality_DEF:0 "The Gorilla Tribe"
+ 
+MZB_communism:1 "Gorilla Tribe"
+ 
+MZB_communism_DEF:0 "The Gorilla Tribe"
+ 
+MZB_fascism_ADJ:0 "Tribemen"
+ 
+MZB_democratic_ADJ:0 "Tribemen"
+ 
+MZB_neutrality_ADJ:0 "Tribemen"
+ 
+MZB_communism_ADJ:0 "Tribemen"
+ 
+ZIM_fascism:0 "Bat Tribe"
+ 
+ZIM_fascism_DEF:0 "The Bat Tribe"
+ 
+ZIM_democratic:0 "Bat Tribe"
+ 
+ZIM_democratic_DEF:0 "The Bat Tribe"
+ 
+ZIM_neutrality:0 "Bat Tribe"
+ 
+ZIM_neutrality_DEF:0 "The Bat Tribe"
+ 
+ZIM_communism:1 "Bat Tribe"
+ 
+ZIM_communism_DEF:0 "The Bat Tribe"
+ 
+ZIM_fascism_ADJ:0 "Tribemen"
+ 
+ZIM_democratic_ADJ:0 "Tribemen"
+ 
+ZIM_neutrality_ADJ:0 "Tribemen"
+ 
+ZIM_communism_ADJ:0 "Tribemen"
+ 
+COG_fascism:1 "Lemur Tribe"
+ 
+COG_fascism_DEF:2 "The Lemur Tribe"
+ 
+COG_democratic:0 "Lemur Tribe"
+ 
+COG_democratic_DEF:0 "The Lemur Tribe"
+ 
+COG_neutrality:0 "Lemur Tribe"
+ 
+COG_neutrality_DEF:0 "The Lemur Tribe"
+ 
+COG_communism:1 "Lemur Tribe"
+ 
+COG_communism_DEF:0 "The Lemur Tribe"
+ 
+COG_fascism_ADJ:0 "Tribemen"
+ 
+COG_democratic_ADJ:0 "Tribemen"
+ 
+COG_neutrality_ADJ:0 "Tribemen"
+ 
+COG_communism_ADJ:0 "Tribemen"
+ 
+KEN_fascism:1 "Great Moraqi Empire"
+ 
+KEN_fascism_DEF:1 "The Great Moraqi Empire"
+ 
+KEN_democratic:0 "Moraqi Republic"
+ 
+KEN_democratic_DEF:0 "The Republic of Moraq"
+ 
+KEN_neutrality:0 "Moraqi State"
+ 
+KEN_neutrality_DEF:0 "The Moraqi State"
+ 
+KEN_communism:1 "People's Republic of Moraq"
+ 
+KEN_communism_DEF:0 "The People's Republic of Moraq"
+ 
+KEN_fascism_ADJ:0 "Moraqi"
+ 
+KEN_democratic_ADJ:0 "Moraqi"
+ 
+KEN_neutrality_ADJ:0 "Moraqi"
+ 
+KEN_communism_ADJ:0 "Moraqi"
+ 
+PAK_fascism:1 "Asshai"
+ 
+PAK_fascism_DEF:1 "Asshai"
+ 
+PAK_democratic:0 "Asshai"
+ 
+PAK_democratic_DEF:0 "Asshai"
+ 
+PAK_neutrality:0 "Asshai"
+ 
+PAK_neutrality_DEF:0 "Asshai"
+ 
+PAK_communism:1 "Asshai"
+ 
+PAK_communism_DEF:0 "Asshai"
+ 
+PAK_fascism_ADJ:0 "Asshai'i"
+ 
+PAK_democratic_ADJ:0 "Asshai'i"
+ 
+PAK_neutrality_ADJ:0 "Asshai'i"
+ 
+PAK_communism_ADJ:0 "Asshai'i"
+ 
+BOT_fascism:1 "Wyvern Tribe"
+ 
+BOT_fascism_DEF:1 "The Wyvern Tribe"
+ 
+BOT_democratic:0 "Wyvern Tribe"
+ 
+BOT_democratic_DEF:0 "The Wyvern Tribe"
+ 
+BOT_neutrality:0 "Wyvern Tribe"
+ 
+BOT_neutrality_DEF:0 "The Wyvern Tribe"
+ 
+BOT_communism:1 "Wyvern Tribe"
+ 
+BOT_communism_DEF:0 "The Wyvern Tribe"
+ 
+BOT_fascism_ADJ:0 "Tribemen"
+ 
+BOT_democratic_ADJ:0 "Tribemen"
+ 
+BOT_neutrality_ADJ:0 "Tribemen"
+ 
+BOT_communism_ADJ:0 "Tribemen"
+ 
+MAN_fascism:0 "Mossovan Empire"
+ 
+MAN_fascism_DEF:0 "The Mossovan Empire"
+ 
+MAN_democratic:0 "Mossovy Republic"
+ 
+MAN_democratic_DEF:0 "The Mossovy Republic"
+ 
+MAN_neutrality:0 "Kingdom of Mossovy"
+ 
+MAN_neutrality_DEF:0 "The Kingdom of Mossovy"
+ 
+MAN_communism:2 "Free Mossovy"
+ 
+MAN_communism_DEF:1 "The Free Mossovy"
+ 
+MAN_fascism_ADJ:0 "Mossovan"
+ 
+MAN_democratic_ADJ:0 "Mossovan"
+ 
+MAN_neutrality_ADJ:0 "Mossovan"
+ 
+MAN_communism_ADJ:0 "Mossovan"
+
+ 
+MAC_fascism:1 "House Grafton"
+ 
+MAC_fascism_DEF:1 "House Grafton"
+ 
+MAC_democratic:1 "House Grafton"
+ 
+MAC_democratic_DEF:1 "House Grafton"
+ 
+MAC_neutrality:0 "House Grafton"
+ 
+MAC_neutrality_DEF:0 "House Grafton"
+ 
+MAC_communism:1 "House Grafton"
+ 
+MAC_communism_DEF:1 "House Grafton"
+ 
+MAC_fascism_ADJ:0 "Grafton"
+ 
+MAC_democratic_ADJ:0 "Grafton"
+ 
+MAC_neutrality_ADJ:0 "Grafton"
+ 
+MAC_communism_ADJ:0 "Grafton"
+
+SCO_fascism:1 "House Westerling"
+ 
+SCO_fascism_DEF:1 "House Westerling"
+ 
+SCO_democratic:0 "House Westerling"
+ 
+SCO_democratic_DEF:0 "House Westerling"
+ 
+SCO_neutrality:1 "House Westerling"
+ 
+SCO_neutrality_DEF:1 "House Westerling"
+ 
+SCO_communism:1 "House Westerling"
+ 
+SCO_communism_DEF:1 "House Westerling"
+ 
+SCO_fascism_ADJ:1 "Westerling"
+ 
+SCO_democratic_ADJ:0 "Westerling"
+ 
+SCO_neutrality_ADJ:0 "Westerling"
+ 
+SCO_communism_ADJ:1 "Westerling"
+ 
+MOL_fascism:1 "House Florent"
+ 
+MOL_fascism_DEF:1 "House Florent"
+ 
+MOL_democratic:0 "House Florent"
+ 
+MOL_democratic_DEF:0 "House Florent"
+ 
+MOL_neutrality:1 "House Florent"
+ 
+MOL_neutrality_DEF:1 "House Florent"
+ 
+MOL_communism:1 "House Florent"
+ 
+MOL_communism_DEF:1 "House Florent"
+ 
+MOL_fascism_ADJ:1 "Florent"
+ 
+MOL_democratic_ADJ:0 "Florent"
+ 
+MOL_neutrality_ADJ:1 "Florent"
+ 
+MOL_communism_ADJ:1 "Florent"
+
+SLV_fascism:1 "House Mallister"
+ 
+SLV_fascism_DEF:1 "House Mallister"
+ 
+SLV_democratic:1 "House Mallister"
+ 
+SLV_democratic_DEF:1 "House Mallister"
+ 
+SLV_neutrality:0 "House Mallister"
+ 
+SLV_neutrality_DEF:0 "House Mallister"
+ 
+SLV_communism:1 "House Mallister"
+ 
+SLV_communism_DEF:1 "House Mallister"
+ 
+SLV_fascism_ADJ:0 "Mallister"
+ 
+SLV_democratic_ADJ:0 "Mallister"
+ 
+SLV_neutrality_ADJ:0 "Mallister"
+ 
+SLV_communism_ADJ:0 "Mallister"
+ 
+SLV:0 "House Mallister"
+ 
+SLV_DEF:0 "House Mallister"
+ 
+SLV_ADJ:0 "Mallister"
+ 
+BRI_fascism:0 "House Redwyne"
+ 
+BRI_fascism_DEF:0 "House Redwyne"
+ 
+BRI_democratic:0 "House Redwyne"
+ 
+BRI_democratic_DEF:0 "House Redwyne"
+ 
+BRI_communism:0 "House Redwyne"
+ 
+BRI_communism_DEF:0 "House Redwyne"
+ 
+BRI:0 "House Redwyne"
+ 
+BRI_DEF:0 "House Redwyne"
+ 
+BRI_ADJ:0 "Redwyne"
+ 
+GLC_fascism:1 "House Swann"
+ 
+GLC_fascism_DEF:1 "House Swann"
+ 
+GLC_democratic:1 "House Swann"
+ 
+GLC_democratic_DEF:1 "House Swann"
+ 
+GLC_neutrality:0 "House Swann"
+ 
+GLC_neutrality_DEF:0 "House Swann"
+ 
+GLC_communism:1 "House Swann"
+ 
+GLC_communism_DEF:1 "House Swann"
+ 
+GLC_fascism_ADJ:1 "House Swann"
+ 
+GLC_democratic_ADJ:1 "Swann"
+ 
+GLC_neutrality_ADJ:0 "Swann"
+ 
+GLC_communism_ADJ:1 "Swann"
+ 
+GLC:0 "House Swann"
+ 
+GLC_DEF:0 "House Swann"
+ 
+GLC_ADJ:0 "Swann"
+
+ BOS_fascism:1 "House Selmy"
+ BOS_fascism_DEF:1 "House Selmy"
+ BOS_democratic:1 "House Selmy"
+ BOS_democratic_DEF:1 "House Selmy"
+ BOS_neutrality:0 "House Selmy"
+ BOS_neutrality_DEF:0 "House Selmy"
+ BOS_communism:1 "House Selmy"
+ BOS_communism_DEF:1 "House Selmy"
+ BOS_fascism_ADJ:0 "Selmy"
+ BOS_democratic_ADJ:0 "Selmy"
+ BOS_neutrality_ADJ:0 "Selmy"
+ BOS_communism_ADJ:0 "Selmy"
+ BOS:0 "House Selmy"
+ BOS_DEF:0 "House Selmy"
+ BOS_ADJ:0 "Selmy"
+
+ FER_fascism:0 "Sellswords"
+ FER_fascism_DEF:0 "Sellswords"
+ FER_democratic:0 "Sellswords"
+ FER_democratic_DEF:0 "Sellswords"
+ FER_communism:0 "Sellswords"
+ FER_communism_DEF:0 "Sellswords"
+ FER_neutrality:0 "Sellswords"
+ FER_neutrality_DEF:0 "Sellswords"
+ FER_fascism_ADJ:0 "Sellswords"
+ FER_democratic_ADJ:0 "Sellswords"
+ FER_communism_ADJ:0 "Sellswords"
+ FER_neutrality_ADJ:0 "Sellswords"
+
+QAT_fascism:0 "Sarnor Kingdom"
+ 
+QAT_fascism_DEF:0 "The Kingdom of Sarnor"
+
+QAT_democratic:0 "Sarnor"
+ 
+QAT_democratic_DEF:0 "Sarnor"
+ 
+QAT_neutrality:0 "Sarnor"
+ 
+QAT_neutrality_DEF:0 "Sarnor"
+ 
+QAT_communism:0 "Sarnori Union"
+ 
+QAT_communism_DEF:0 "The Sarnori Union"
+ 
+QAT_fascism_ADJ:0 "Sarnori"
+ 
+QAT_democratic_ADJ:0 "Sarnori"
+ 
+QAT_neutrality_ADJ:0 "Sarnori"
+ 
+QAT_communism_ADJ:0 "Sarnori"
+
+ UDM_fascism:0 "House Flint of Flint's Finger"
+ UDM_fascism_DEF:0 "House Flint of Flint's Finger"
+ UDM_democratic:0 "House Flint of Flint's Finger"
+ UDM_democratic_DEF:0 "House Flint of Flint's Finger"
+ UDM_communism:0 "House Flint of Flint's Finger"
+ UDM_communism_DEF:0 "House Flint of Flint's Finger"
+ UDM_neutrality:0 "House Flint of Flint's Finger"
+ UDM_neutrality_DEF:0 "House Flint of Flint's Finger"
+ UDM_fascism_ADJ:0 "Flint"
+ UDM_democratic_ADJ:0 "Flint"
+ UDM_communism_ADJ:0 "Flint"
+ UDM_neutrality_ADJ:0 "Flint"
+ UDM_SOV_communism_subject:0 "House Flint of Flint's Finger"
+ UDM_SOV_communism_subject_DEF:0 "House Flint of Flint's Finger"
+ UDM_SOV_communism_subject_ADJ:0 "Flint"
+ 
+FACTION_NAME_DEMOCRATIC_1:0 "The $CONTINENT_ADJ$ Association"
+ FACTION_NAME_DEMOCRATIC_2:0 "The $CONTINENT_ADJ$ Entente"
+ FACTION_NAME_DEMOCRATIC_3:0 "The $LEADER_COUNTRY_ADJ$ Concordat"
+ FACTION_NAME_DEMOCRATIC_4:0 "The $LEADER_COUNTRY_ADJ$ Union"
+ FACTION_NAME_DEMOCRATIC_5:0 "$CONTINENT_ADJ$ Coalition"
+ FACTION_NAME_DEMOCRATIC_6:0 "$CONTINENT_ADJ$ Federation"
+ FACTION_NAME_COMMUNIST_1:0 "The $LEADER_COUNTRY_ADJ$ Compact"
+ FACTION_NAME_COMMUNIST_2:0 "$CONTINENT_ADJ$ Syndicate"
+ FACTION_NAME_COMMUNIST_3:0 "The $CONTINENT_ADJ$ Combine"
+ FACTION_NAME_COMMUNIST_4:0 "The $CONTINENT_ADJ$ Pact"
+ FACTION_NAME_COMMUNIST_5:0 "The $LEADER_COUNTRY_ADJ$ Bloc"
+ FACTION_NAME_FASCIST_1:0 "Brotherhood of $CONTINENT$"
+ FACTION_NAME_FASCIST_2:0 "$CONTINENT_ADJ$ Group"
+ FACTION_NAME_FASCIST_3:0 "The $CONTINENT_ADJ$ League"
+ FACTION_NAME_FASCIST_4:0 "The $CONTINENT$ Confederacy"
+ FACTION_NAME_FASCIST_5:0 "$CONTINENT_ADJ$ Confederation"
+ FACTION_NAME_NONALIGNED_1:0 "$CONTINENT_ADJ$ Defense League"
+ FACTION_NAME_NONALIGNED_2:0 "The $LEADER_COUNTRY$ Congress"
+ FACTION_NAME_NONALIGNED_3:0 "The $CONTINENT$ Alliance"
+ FACTION_NAME_NONALIGNED_4:0 "Confederate $CONTINENT_ADJ$ Nations"
+ FACTION_NAME_NONALIGNED_5:0 "The $LEADER_COUNTRY$ Coalition"
+ 
