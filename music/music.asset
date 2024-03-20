@@ -1,9 +1,9 @@
 
 # MAIN THEME
 music = {
-	name = "maintheme"
-	file = "16-threekingdoms.ogg"
-	volume = 1.65
+	name = "thenightking-iceandfire"
+	file = "thenightking-iceandfire.ogg"
+	volume = 1.5
 }
 
 # General Peace:
@@ -165,16 +165,16 @@ music = {
 
 music = {
 	name = "castamere-iceandfire"
-	file = "La_Liberté.ogg"
+	file = "castamere-iceandfire.ogg"
 	volume = 0.8
 }
 music = {
 	name = "thenightking-iceandfire"
-	file = "L'Autoritario.ogg"
+	file = "thenightking-iceandfire.ogg"
 	volume = 0.8
 }
 music = {
 	name = "lightoftheseven-iceandfire"
-	file = "Under_Veils_Of_Secrets.ogg"
+	file = "lightoftheseven-iceandfire.ogg"
 	volume = 0.8
 }

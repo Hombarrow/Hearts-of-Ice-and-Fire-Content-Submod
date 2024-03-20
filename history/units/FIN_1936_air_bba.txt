@@ -1,8 +1,0 @@
-﻿
-
-air_wings = {
-	126 = { 														# Winterfell
-		medium_plane_airframe_1 = { owner = "FIN" amount = 28 creator = "FIN" version_name = "Winter Blenheim" }				# 1, 4 Bomber Groups -- Fokker C.Xs, Blenheim Is
-		small_plane_airframe_1 = { owner = "FIN" amount = 45 creator = "FIN" version_name = "Fokker D.XXI" }			# 2 Fighter Group -- Fokker D.XXIs, Bristol Bulldogs
-	}
-}
