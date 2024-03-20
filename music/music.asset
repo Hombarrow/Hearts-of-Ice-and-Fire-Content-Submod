@@ -3,7 +3,7 @@
 music = {
 	name = "thenightking-iceandfire"
 	file = "thenightking-iceandfire.ogg"
-	volume = 1.5
+	volume = 2.1
 }
 
 # General Peace:
@@ -166,15 +166,15 @@ music = {
 music = {
 	name = "castamere-iceandfire"
 	file = "castamere-iceandfire.ogg"
-	volume = 0.8
+	volume = 1.2
 }
 music = {
 	name = "thenightking-iceandfire"
 	file = "thenightking-iceandfire.ogg"
-	volume = 0.8
+	volume = 1.2
 }
 music = {
 	name = "lightoftheseven-iceandfire"
 	file = "lightoftheseven-iceandfire.ogg"
-	volume = 0.8
+	volume = 1.2
 }
