@@ -206,7 +206,13 @@ country_event = {
 		
 	option = {
 		name = targaryen.7.a		#calm down child
-		ai_chance = { factor = 1 }
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
 
 		if = {
 			limit = { has_idea = drogon }
@@ -937,7 +943,7 @@ country_event = {
 
 }
 
-# Dragons dead
+# Drogons dead
 country_event = {
 	id = targaryen.23
 	title = targaryen.23.t

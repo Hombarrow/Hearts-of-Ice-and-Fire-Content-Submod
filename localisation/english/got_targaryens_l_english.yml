@@ -1,0 +1,878 @@
+﻿l_english:
+ got_news.53.c:0 "It will not last long!"
+
+got_news.55.t:0 "Rebirth of [From.GetNameDef]"
+ 
+got_news.55.desc:0 "Having recently retaken all of the lands that used to belong to the old Kingdom of the Stormlands, the [From.GetOldAdjective] government has now begun taking moves towards integration of the newly-conquered territories in the Crownlands. As a result, in an attempt to rally the people behind the state, there has been an increase in pan-nationalist propaganda with clear support from the government.\n\n[From.GetOldAdjective] officials have repeatedly stated their belief that all of the lands north of the Kingswood are [From.GetOldAdjective] by right and proclaimed the "revival of the Storm Kings", renaming the country to '[From.GetNameDef]'."
+ 
+got_news.55.a:0 "A long time coming!"
+ 
+got_news.55.b:0 "Have the Baratheons bitten off more than they can chew?"
+
+
+got_news.60.t:0 "The land of Isles and Rivers Unified"
+ 
+got_news.60.desc:0 "With all lands between the Iron Islands and the Blackwater Rush under their control, the [From.GetOldAdjective] government has now begun increasing moves towards integration of the newly-conquered territories. As a result, in an attempt to rally the people behind the state, there has been an increase in pan-nationalist propaganda with clear support from the government.\n\nA [From.GetOldAdjective] official was quoted as saying that this new state will serve as a true hegemon in Westeros. Thus they shall be known as '[From.GetNameDef]'."
+ 
+got_news.60.a:0 "A true testiment to our power."
+ 
+got_news.60.b:0 "Will it survive longer that the old one?"
+ 
+
+
+
+wtt_news.61.t:0 "Birth of the [From.GetNameDef]"
+ 
+
+wtt_news.61.desc:0 "Having defeated all rival Khals in the region, [From.GetLeader] and the rest of his [From.GetOldAdjective] followers have now begun integrating these new territories. With no other Khal left to oppose them, they have officially declared themselves to be [From.GetNameDef], a union of all Dothraki lands across the Dothraki sea and beyond."
+ 
+
+wtt_news.61.a:0 "Our enemies will be trampled beneath our horse's hooves!"
+ 
+
+wtt_news.61.b:0 "I think we're in trouble..."
+ 
+
+
+
+got_news.62.t:0 "Westeros United!"
+ 
+
+got_news.62.desc:0 "What many considered impossible has actually happened. The major houses of Westeros lay conquered before [From.GetOldNameDef], and for the first time the recent dreams of a united Westeros seem attainable. A variety of 'experts', presumably on the government payroll, have already begun repeatedly citing the current political situation as the only way to "prevent future conflict betweem all these houses".\n\nThe government has also started pushing reforms on the national and the local level and as a part of those it was announced today that the country shall henceforth be known as '[From.GetNameDef]', a true union of the Andals and the Rhoynar and the First Men."
+ 
+
+got_news.62.a:0 "Is this an end to all Westerosi wars?"
+ 
+
+got_news.62.b:0 "Let's see if they can pull it off without killing each other."
+ 
+
+
+
+got_news.64.t:0 "Rise of [From.GetNameDef]"
+ 
+
+got_news.64.desc:0 "The [From.GetOldAdjective] military advance seems utterly unstoppable, and the idea that many sneered at in recent years - the restoration of the Valyrian Empire - is now within their grasp.\n\nIn addition to beginning integration of what they have already begun referring to as "reconquered Valyrian Territories", their government has now officially announced they shall hencheforth be known as '[From.GetNameDef]'."
+ 
+got_news.64.a:0 "A Historic Day!"
+ 
+got_news.64.b:0 "Hopefully with less dragons this time."
+
+
+got_news.65.t:0 "Rise of [From.GetNameDef]"
+ 
+
+got_news.65.desc:0 "As the [From.GetOldAdjective] advance continues, the historical parallels have not gone unnoticed by those versed in Ghiscari history. Nationalist pride is rising throughout [From.GetOldAdjective] society.\n\nAs government control is expanded over the new territorial acquisitions, and as the government rides this wave of high public approval, it has now been confirmed by officials that the nation will be officially renamed to '[From.GetNameDef]'."
+ 
+
+got_news.65.a:0 "Our strength continues to grow!"
+ 
+
+got_news.65.b:0 "Will it bring peace and stability to the region?"
+
+
+dorne.6.t:0 "[HOL.GetName] offer Royal Engagement"
+ 
+
+dorne.6.d:0 "An envoy from [HOL.GetLeader] has arrived to the capital, offering something very interesting. They offer an engagement between their Princess Myrcella and our Prince Trystane in return for a non-aggression pact. Strangely (or not) their offer only provided some basic reasoning and there was no word of whether they regret the murder of Elia Martell and her children.\n\nHow should we respond?"
+ 
+
+dorne.6.a:0 "Maybe the next generation will bring our houses together..."
+
+dorne.6.b:0 "Demand justice for Elia and her children first."
+
+dorne.6.c:0 "Never a union with the Lannisters!"
+
+
+dorne.7.t:0 "The Dornish demand justice first"
+ 
+
+dorne.7.d:0 "Even as we offer them a Princess, [SPR.GetLeader] continues to blabber on about Elia Martell being raped and murdered. [HOL.GetLeader] says that it's a shame that we need their allegiance, otherwise he would happily help them join Elia and her children.\n\nIn order to agree to a deal, [SPR.GetLeader] request that we arrest Ser Gregor Clegane and hand him over to face trial in Dorne. Naturally, handing over one of our most capable and loyal commanders would not be a good move, however, there might be another option: Ser Amory Lorch was also among the people who murdered Elia and her children and it will be very easy to put all the blame on him."
+ 
+
+dorne.7.a:0 "Ser Gregor will have to pay for his crimes."
+
+dorne.7.b:0 "Put all the blame on Ser Amory."
+
+dorne.7.c:0 "They should pray to the Gods for justice!"
+
+
+dorne.8.t:0 "The Lannister blame Amory Lorch"
+ 
+
+dorne.8.d:0 "It would appear that [HOL.GetLeader] does not wish to admit to the crimes of his trusty General Gregor 'The Mountain' Clegane. Instead, he has arrested and sent over Ser Amory Lorch, the man that was said to have stabbed Elia's daughter over a dozen times with his sword. While his mutiliated body will certainly make good food for the homeless dogs outside the palace, we should not forget that the main culprit is The Mountain. Although... we could play along and make the Lannisters think that we are no longer interested in vengeance..."
+ 
+
+dorne.8.a:0 "Let's play along..."
+
+dorne.8.b:0 "Demand The Mountain be arrested as well!"
+
+dorne.8.c:0 "End the negotiations!"
+
+
+dorne.9.t:0 "[SPR.GetLeader] insist Ser Gregor be arrested!"
+ 
+
+dorne.9.d:0 "The Dornish are turning out to be quite stubborn. Not only did they mutiliate poor Ser Amory and fed him to the homeless animals outside the place, but they still demand that we send them Ser Gregor Clegane otherwise there will be no engagement..."
+ 
+
+dorne.9.a:0 "He is not a Lannister, he is expendable..."
+
+dorne.9.b:0 "Nobody blackmails a Lannister!"
+
+
+dorne.10.t:0 "[HOL.GetLeader] cancels offer!"
+ 
+
+dorne.10.d:0 "The leader of [HOL.GetName] lashed out at our envoy, stating that it should be an honor for any house to be considered worthy of marriage to their Princess Myrcella. The negotiations are over..."
+ 
+
+dorne.10.a:0 "We will have to find vengeance some other way."
+
+
+dorne.11.t:0 "[SPR.GetLeader] agrees to engagement"
+ 
+
+dorne.11.d:0 "It is a day of celebration. The leaders of House Martell and [HOL.GetName] have agreed to join their houses. Prince Trystane of Dorne will marry Princess Myrcella Baratheon. With the added non-aggression pact, that is one less enemy we have to worry about."
+ 
+
+dorne.11.a:0 "A great day."
+
+
+dorne.12.t:0 "The Mountain arrives in chains!"
+ 
+
+dorne.12.d:0 "[HOL.GetLeader] has admitted that it was Ser Gregor Clegane that was responsible for the rape and murder of Elia Martell and has sent him to us to stand trial. Clearly the Lannisters feel that it is important that relations between us normalize and, as was our promise, we will also agree to a royal engagement between Prince Trystane and Princess Myrcella. The bigger question on everyone's minds, however, is what to do with the Mountain? Fortunately, our advisors have several ideas for that. We can:\n\n- Cut his head off and leave it as an ornament on [SPR.GetLeader]'s desk.\n\n- Paralyze him and bury him with 100 Red Scorpions. Not only will it be a callback to the old days but biologists claim that such a major source of food will help with the conservation efforts of the endangered Dornish Red Scorpion.\n\n- Arrest him and throw him in a cell. A zoo cell that is, where all beasts belong. He will spend the rest of his days having visitors laugh and throw food at him.\n\n- Or we can simply kill him in a, mostly, painless way and donate his body to the Anatomical Research Institute of Sunspear."
+ 
+
+dorne.12.a:0 "Cut his head off and use it as an ornament."
+
+dorne.12.b:0 "Bury him in 100 Red Scorpions."
+
+dorne.12.c:0 "Lock him up in a Zoo cell."
+
+dorne.12.e:0 "Kill him and donate the body to sciene."
+
+
+dorne.13.t:0 "The Dornish cease all negotiations!"
+ 
+
+dorne.13.d:0 "[SPR.GetLeader] has decided to end all talks. Our houses will not be joined."
+ 
+
+dorne.13.a:0 "We will have to deal with them another way."
+
+
+dorne.14.t:0 "The choice..."
+ 
+
+dorne.14.d:0 "It is time for [SPR.GetLeader] to decide where his loyalties will lie. Will he remain loyal to [HOL.GetName]? Or is it time we look to the East? Or perhpas there is even a third option?"
+ 
+
+dorne.14.a:0 "The Lannisters have truly changed their ways. Forgive them."
+
+dorne.14.b:0 "We will look to [SOV.GetName]."
+
+dorne.14.c:0 "We need to put Myrcella on the Iron Throne."
+
+
+dorne.15.t:0 "[Root.GetCommunistParty] accept"
+ 
+
+dorne.15.desc:0 "[SPR.GetLeader] met with Ellaria Sand and her supporters to explain his actions. He revealed to them that the Alliance with [HOL.GetName] is only temporary and that [SPR.GetNameDef] will betray them, as Doran put it, 'when the time is right'. This seemed to please everyone and Ellaria promised that she will calm down her supporters. However, if [SPR.GetLeader] ever renegs on his promise, he will be the first to suffer."
+ 
+
+dorne.15.a:0 "No pressure."
+
+
+dorne.16.t:0 "[SPR.GetLeader] offers royal engagement"
+ 
+
+dorne.16.desc:0 "The leader of [SPR.GetNameDef] recently met with our ambassador, asking that the houses of Lannister and Martell become one. [SPR.GetLeader] offers to wed his son, Prince Trystane to Princess Myrcella as a way to finally bring peace to our nations. If we accept, the deal will also include a pact of non-aggression, which will be a huge help in securing our southern flanks."
+ 
+
+dorne.16.a:0 "A brilliant idea."
+
+dorne.16.b:0 "We want nothing to do with Dorne!"
+
+
+dorne.17.t:0 "[HOL.GetLeader] accepts!"
+ 
+
+dorne.17.desc:0 "."
+ 
+
+dorne.17.a:0 "Step one: complete."
+
+
+dorne.18.t:0 "[HOL.GetLeader] refuses!"
+ 
+
+dorne.18.desc:0 "As if to pour salt into the wound, the delegation of [HOL.GetName] was said to have laughed the idea outright. [SPR.GetLeader] is still hopeful that they can change their minds but the vast majority of the Parliament is insistent that we need to reasses our situation. We might even need to overhaul our strategy."
+ 
+
+dorne.18.a:0 "They could change their minds?"
+
+dorne.18.b:0 "Change in plans then..."
+
+
+freefolk.4.t:0 "The Wall is breached!"
+ 
+
+freefolk.4.desc:0 "The Crows have failed to stop us at Castle Black. Our way south is clear and [DEN.GetLeader] has already began organizing the evacuation of what remains. There is no time to celebrate though. [GER.GetNameDef] are on our tail and we need to move swiftly, otherwise our victory will be for nothing."
+ 
+
+freefolk.4.a:0 "The fight has only just begun..."
+
+
+freefolk.5.t:0 "Wildlings in our territory!"
+ 
+
+freefolk.5.desc:0 "Our scouts have reported that the wildlings that broke through Castle Black have settled within the Queen's Gift. Many locals are fleeing in a panic and our soldiers are rushing to help them."
+ 
+
+freefolk.5.a:0 "A disaster..."
+
+
+freefolk.6.t:0 "[GER.GetNameDef] have crossed the Ice River!"
+ 
+
+freefolk.6.desc:0 "Our border posts were unable to hold them off and the White Walkers are said to be walking across the frozen ice river. This is especially bad, as the ice river was one of our most defencable positions."
+ 
+
+freefolk.6.a:0 "Time is running out..."
+
+
+freefolk.7.t:0 "Morale is devastated!"
+ 
+
+freefolk.7.desc:0 "Our inability to pass through the Wall has caused a devastating blow to our soldier's morale. Even among the officers, we see concerns that we will soon be trapped between the Crows to the South and the Others to the North."
+ 
+
+freefolk.7.a:0 "We should not give up."
+
+
+freefolk.8.t:0 "Capital set in Queenscrown"
+ 
+
+freefolk.8.desc:0 "Along with out main leaders, we also managed to evacuate a decent chunk of civilians from Hardhome. This should stabilize our rule South of the Wall."
+ 
+
+freefolk.8.a:0 "Fewer victims for [GER.GetLeader]."
+
+
+freefolk.9.t:0 "Supply route with Hardhome established"
+ 
+
+freefolk.9.desc:0 "With our new port we should be able to easily evacuate our troops from Hardhome."
+ 
+
+
+
+freefolk.10.t:0 "Thenn civilians evacuated"
+ 
+
+freefolk.10.desc:0 "It is hard to organize such a large and densely populated region but we still had a relative success."
+ 
+
+
+freefolk.11.t:0 "Thenn mines evacuated"
+ 
+
+freefolk.11.desc:0 "The vast majority of steel mines in Thenn are now South of the Wall. This will help us greatly in the future."
+ 
+
+
+freefolk.12.t:0 "Industry moved South of the Wall"
+ 
+
+freefolk.12.desc:0 "We did our best and moved as much factories as we could from Hardhome to Thenn. Hopefully, it is enough."
+ 
+
+
+freefolk.13.t:0 "Far off citizens evacuated"
+ 
+
+freefolk.13.desc:0 "We have managed to evacuate a decent chunk of people from the isolated rural areas beyond the Wall."
+ 
+
+
+ireland.10.t:0 "[ENG.GetNameDef] is under our control!"
+ 
+
+ireland.10.desc:0 "After more than a year of political maneuverings and swaying of the young King, Lady Margaery has finally managed to bring [ENG.GetNameDef] under our full control. It won't be long before she is the one true Queen of Westeros."
+ 
+
+ireland.10.a:0 "Perfect!"
+
+
+ireland.11.t:0 "[BEL.GetName] offers Alliance"
+ 
+
+ireland.11.desc:0 "Having recently claimed the Iron Throne, [BEL.GetLeader] has come to us, asking for an alliance."
+ 
+
+ireland.11.a:0 "We stand together."
+
+ireland.11.b:0 "No way!"
+
+
+ireland.12.t:0 "Renly is dead"
+ 
+
+ireland.12.desc:0 "Now that King Renly is gone, we really have no chance of claiming the throne. However, there is still a chance to salvage that dream by forsaking our alliance with [BEL.GetName] and join with the Lannisters instead."
+ 
+
+ireland.12.a:0 "Send a message to [HOL.GetLeader]."
+
+ireland.12.b:0 "We will stick with our choice."
+
+
+ireland.13.t:0 "The Lannisters accept!"
+ 
+
+ireland.13.desc:0 "."
+ 
+
+ireland.13.a:0 "We stand together."
+
+ireland.13.t:0 "The Lannisters accept!"
+ 
+
+ireland.13.desc:0 "."
+ 
+
+ireland.13.a:0 "We stand together."
+
+slaversbay.5.t:0 "Enemy propaganda targeting slaves!"
+ 
+
+slaversbay.5.desc:0 "It looks like [SOV.GetLeader] is trying to rally our slaves to her cause. While most of our General Staff don't see this as a threat, unless we do something about it, there is a genuine threat of rebellion. The safest way to deal with the propaganda is to take out the Westerosi whore outright, but failing to do that, we need to slow the spread of her propaganda."
+ 
+
+slaversbay.5.a:0 "Commit all available resources."
+slaversbay.5.b:0 "Supress the propaganda."
+slaversbay.5.c:0 "We will take her out soon enough."
+
+slaversbay.6.t:0 "Civil war!"
+ 
+
+slaversbay.6.d:0 "Inspired by [SOV.GetLeader]'s propaganda, slaves all over [Root.GetNameDef] are rising up and preparing to take control of the country themselves!"
+ 
+
+slaversbay.6.a:0 "Kill the Slaves!"
+slaversbay.6.b:0 "Kill the Masters!"
+
+slaversbay.8.t:0 "Slaves are rising up!"
+ 
+
+slaversbay.8.desc:0 "[SOV.GetLeader]'s plan has succeded and the slaves have revolted in numerous parts of the country!"
+ 
+
+slaversbay.8.a:0 "Kill the slaves! Kill them all!"
+
+targaryen.3.t:0 "Vyserion has been killed!"
+ 
+
+targaryen.3.desc:0 "During a battle with the Others, Vyserion was shot down by, what witnesses describe as, a magical ice spear. Our battle capabilities will be greatly damaged by this."
+ 
+
+targaryen.3.a:0 "A tragedy!"
+
+
+targaryen.4.t:0 "[SOV.GetLeader] wants to trade"
+ 
+
+targaryen.4.desc:0 "Some blonde woman from [SOV.GetNameDef] has come to us, asking for our land. Apparently, she is interested in 'liberating' the Slave cities but is willing to 'show mercy' on us if we hand over a stretch of land that will connect her to [IRQ.GetNameDef]. On the interesting side, she does have a baby dragon. Having something like that in our possesion would be very prestigious."
+ 
+
+targaryen.4.a:0 "We can sacrifice some land for a dragon."
+
+targaryen.4.b:0 "Let's sell her a small stretch."
+
+targaryen.4.c:0 "Tell the Westerosi whore to piss off!"
+
+
+targaryen.5.t:0 "[PER.GetLeader] wants dragon"
+ 
+
+targaryen.5.desc:0 "The slave master from Astapor is willing to give us a decent stretch of land along the coast, possibly including the strategic city of Port Yhos. The problem is that, in return, he wants one of [SOV.GetLeader]'s dragons. Specifically, the big one - Drogon."
+ 
+
+targaryen.5.a:0 "Deal."
+
+targaryen.5.b:0 "Who does he think he is!?"
+
+
+targaryen.6.t:0 "[SOV.GetLeader] agrees"
+ 
+
+targaryen.6.desc:0 "The Westerosi whore was foolish enough to give us her dragon. The problem is that this cursed creature won't stand still and won't let us put it in its cage."
+ 
+
+targaryen.6.a:0 "Tell the bitch to calm it down!"
+
+
+targaryen.7.t:0 "Problems with the dragon"
+ 
+
+targaryen.7.desc:0 "The masters are trying to put Drogon in a cage, but he is too wild. It seems like [PER.GetLeader] is learning the hard way that a dragon is no slave. Can [SOV.GetLeader] tell him something to calm him down?"
+ 
+
+targaryen.7.a:0 "Calm down, sweet child..."
+
+targaryen.7.b:0 "§RDracarys!§!"
+
+
+targaryen.8.t:0 "Astapor is on fire"
+ 
+
+targaryen.8.desc:0 "The Westerosi bitch lied to us! Her dragon has set fire to our capital!"
+ 
+
+targaryen.8.a:0 "Kill her! Kill all of them!"
+
+
+targaryen.9.t:0 "[PER.GetLeader] offers to sell land"
+ 
+
+targaryen.9.desc:0 "The slave master from Astapor says that he is willing to sell us a small stretch of land along the coast, connecting us to the lands of Yunkai. The lands themselves are not much to speak of, but we will avoid a war and will gain land for a low cost."
+ 
+
+targaryen.9.a:0 "Not too bad of a deal."
+
+targaryen.9.b:0 "We will take his land with Fire and Blood!"
+
+targaryen.10.t:0 "[SOV.GetLeader] agrees to buy land"
+ 
+
+targaryen.10.desc:0 "No joke. The Westerosi bitch is willing to pay us for those wastelands in the far east."
+ 
+
+targaryen.10.a:0 "What a fool."
+
+
+targaryen.11.t:0 "[PER.GetLeader] refuses to deal with us"
+ 
+
+targaryen.11.desc:0 "The slave master from Astapor says that he has no intention of dealing with a 'Westerosi whore'."
+ 
+
+targaryen.11.a:0 "He will soon feel the fire of old Valyria!"
+
+targaryen.11.b:0 "Fine, we don't need his land."
+
+
+targaryen.12.t:0 "Dragon is calm now"
+ 
+
+targaryen.12.desc:0 "We have placed him in a cage and can display him at the local zoo as soon as the exhibit is ready."
+ 
+
+targaryen.12.a:0 "We were worried for a moment."
+
+
+targaryen.13.t:0 "Slaves rise up in [From.GetName]"
+ 
+
+targaryen.13.desc:0 "Our rallying campaign was succesful and the slaves of [From.GetName] have taken up arms against their former Masters. They are ready to fight and die for their new Queen [SOV.GetLeader]."
+ 
+
+targaryen.13.a:0 "Let's kill the Masters."
+
+
+targaryen.16.t:0 "Slaves have taken power in [IRQ.GetName]"
+ 
+
+targaryen.16.desc:0 "They are ready to open their gates for us and greet [SOV.GetLeader] with calls of 'Mhysa!'."
+ 
+
+targaryen.16.a:0 "The people of Yunkai are now free."
+
+targaryen.18.t:0 "Mirri Maz Duur has cure!"
+targaryen.18.desc:0 "One of the godswives we captured during our conquest of the Lhazareen claims to know how to cure [SOV.GetLeader]. Mirri Maz Duur says that she studied blood magic and Asshai and can use it to heal Drogo."
+targaryen.18.a:0 "We will reward her for this."
+
+targaryen.19.t:0 "Drogo is alive... sort of..."
+targaryen.19.desc:0 "Despite the blood magic, [SOV.GetLeader] doesn't seem to be recovering any of his strenght. He is in a vegetative state and cannot even move his hands, let alone ride a horse. His bloodriders are loosing patience and can soon abandon him if he doesn't show any improvement.\nWhen confronted about this, Mirri Maz Duur replied that he will get better 'When the sun rises in the west, sets in the east, when the seas go dry and the mountains blow in the wind like leaves'. Needless to say, Drogo's wife is furious with her. She has sworn to execute her, however, what shall be the fate of [SOV.GetLeader]?"
+targaryen.19.a:0 "He deserves better than this..."
+
+targaryen.20.t:0 "Daenerys mercy kills [SOV.GetLeader]"
+targaryen.20.desc:0 "Unable to watch her sun and stars be humiliated like this, Daenerys Targaryen has chosen to smutter the mighty Khal with a pillow. With Drogo gone, many of his bloodriders have deserted and only a few loyal ones remain. Those parts of the Khalasaar that remain will soon be easy targets for the rival Khals."
+targaryen.20.a:0 "Let's give Drogo the funeral he deserves and then worry about that."
+
+
+stark.5.t:0 "House Stark Apologizes"
+ 
+
+stark.5.desc:0 "On behalf of [FIN.GetLeader], Lord of Winterfell and Warden of the North, we would like to offer our sincerest apologies for the actions of Eddard Stark. His views do not reflect those of the united North and we fully condone his traitorous acts. Rest assured, we are fully loyal to King [ENG.GetLeader]. Long may he reign!"
+ 
+
+stark.5.a:0 "They know their place."
+
+
+stark.5.b:0 "A surprisingly smart move on their part."
+
+
+
+
+stark.11.t:0 "Northern Generals demand explanation from [FIN.GetLeader]"
+ 
+
+stark.11.desc:0 "A group of several high-ranking officers, headed by Greatjon Umber, have stood up to [FIN.GetLeader], demanding an explanation as to how we could send an apology for the actions of Eddard Stark. Many of them have served under the former Lord of Winterfell for years and they expect a very good reason as to why [FIN.GetLeader] has allowed this humiliating act to take place.\n\nSome are even threatening that should this knee bending continue, House Stark might have some new enemies to worry about. Some much closer to the heartland."
+ 
+stark.11.a:0 "We owe it to the people to ensure peace. Ned would want that."
+
+
+stark.11.b:0 "We apologized this time, but it doesn't mean we will continue to do so."
+
+
+stark.11.c:0 "We need to concentrate on the threats beyond the Wall."
+
+
+
+stark.13.t:0 "House Stark needs a leader"
+ 
+
+stark.13.desc:0 "As we recover from the Red Wedding, the [FIN.GetLeader] has done a decent job of maintaining stability. However, they can only do so much. The North needs a ruler and that ruler needs to be a Stark. Unfortunately, due to lady Sansa's political beliefs and Lord Bran's... visions, we need to look elsewhere. As of now, we have three options:\n\n- Jon Snow may be a bastard but he is still Ned Stark's son. Considering that he has already shown some fighting prowess at the Wall, he may be the best candidate. We will need to compensate [CAN.GetNameDef] for his pardon though.\n\n- Arya Stark, who is a trueborn daughter of Ned Stark but she left for Braavos in 1936 to train the art of warfare. We have no doubt that she would accept the role, however, if we pull her from her training, her dream of becoming an army commander will be ruined.\n\n- Rickon Stark. He is a trueborn son of Ned Stark but the problem with him is that he is only 6 years old. Sure, we can wait for him to come of age and with proper education he will become a true Lord but it will take no less than a decade for that to happen."
+ 
+
+stark.13.a:0 "Legitimize Jon Snow."
+
+
+stark.13.b:0 "Bring back Arya."
+
+
+stark.13.c:0 "Wait for Rickon to grow up."
+
+
+stark.14.t:0 "Arya Stark - Lady of Winterfell"
+ 
+
+stark.14.desc:0 "They say she had to be dragged, kicking and screaming, out of the House of Black and White but the new Lady of Winterfell has arrived to rule the North."
+ 
+
+stark.14.a:0 "She will do an amazing job."
+
+
+stark.15.t:0 "[FIN.GetName] pardons Jon Snow"
+ 
+
+stark.15.desc:0 "According to the decree, he is allowed to return to Winterfell and rumors suggest that he may be in line to be the next King in the North. The Starks have even offered us a thousand men as compensation for this."
+ 
+
+stark.15.a:0 "Goodbye, Lord Snow."
+
+stark.15.b:0 "He needs to focus on the Wall."
+
+
+stark.16.t:0 "Jon Stark - King in the North"
+ 
+
+stark.16.desc:0 "The now legitimized son of Ned Stark has returned to Winterfell and has also express his willingness to take command of the army."
+ 
+
+stark.16.a:0 "King in the North!"
+
+
+stark.17.t:0 "[CAN.GetNameDef] refuse to give Jon!"
+ 
+
+stark.17.desc:0 "Unfortunately, when someone swears an oath, they cannot break that oath. Not even a thousand extra men were enough to change their minds.\n\nThis leaves us with the option of either bringing back Lady Arya or waiting for Lord Rickon to come of age."
+ 
+
+stark.18.t:0 "The Hornwood Compromise"
+ 
+
+stark.18.desc:0 "We need to ensure peace in the North and we cannot do that until we deal with the Boltons. If we offer them the land of Hornwood, this might convince [ITA.GetName] to bring his men back under our banner. We can't just sacrifice Hornwood for nothing, however. Fortunately, our advisors have come up with two solutions:\n\n- We can grant them overlord status over the land, while the Hornwoods maintain their independence.\n\n- Offer them the Hornwood lands, ONLY if they agree to adopt a more democratic stance."
+ 
+stark.18.a:0 "Offer them a Hornwood puppet state."
+
+stark.18.b:0 "Offer them the Hornwood state."
+
+
+stark.19.t:0 "Ned Stark reclaims power"
+ 
+
+stark.19.desc:0 "Following recent events, the once Lord of Winterfell now finds himself having to reassume the reignts of [FIN.GetName].\n\nHail Lord Eddard Stark - the King in the North."
+ 
+stark.19.a:0 "The King in the North!"
+
+
+stark.20.t:0 "Roose Bolton defects!"
+ 
+
+stark.20.desc:0 "We don't know exactly when it happened, however, one of the guards managed to find a note that greatly implies Lord Bolton recieved a hefty payday from [HOL.GetLeader]."
+ 
+stark.20.a:0 "We never should have trusted him!"
+
+stark.21.t:0 "[ITA.GetName] seeks investments"
+ 
+stark.21.desc:0 "With relations between our Houses normalizing, [ITA.GetLeader] has presented our industrial tycoons with several promising investment opportunities. Of course, our capabilities are limited and we need the approval of [FIN.GetLeader] for creating joint-ventures."
+ 
+stark.21.a:0 "We should work for the benefit of the people."
+stark.21.b:0 "Let's improve our joint naval capabilities."
+stark.21.c:0 "Nuclear Reactors are the future."
+stark.21.d:0 "We don't have time for this!"
+
+stark.22.t:0 "Evacuate the Royal Family to Skaagos?"
+stark.22.desc:0 "Due to recent events, we must accept the all too real possibility that [FIN.GetName] might not win this war. To ensure the survival of the Stark household, a proposition has been put forward to [FIN.GetLeader] to evacuate lower-ranking members of the Stark family to the island of Skaagos. With its geographic isolation, it would provide a safe haven for the heirs of Winterfell until we can, hopefully, turn this war around."
+stark.22.a:0 "Begin the evacuation immediately!"
+stark.22.b:0 "No deal. We will fight to the end."
+
+stark.23.t:0 "Evacuation Complete"
+stark.23.desc:0 "The royal family is safe and sound. Now, let's focus on winning the war!"
+stark.23.a:0 "Well done, everyone!"
+stark.23.b:0 "Well done, everyone! (Continue playing as §GStark Remnant§!)"
+
+vale.1.t:0 "Jon Arryn dies"
+ 
+
+vale.1.d:0 "After a sudden and fierce fever, we are sad to report that Hand of the King Jon Arryn has passed away. The former Lord of the Eyrie was one of the great heroes of Robert's Rebellion and many are saddened by this event.\n\nWith Lord Arryn's demise, the title of Hand of the King will now pass on to another one of King Robert's allies and personal friend of Jon Arryn - Lord Eddard Stark of Winterfell. Though he is equally respected by the people there are many, most notably the members of House Lannister, that do not approve of that decision. How this will affect the Crownlands remains to be seen.\n\nWhat we need to worry about is his heir. The Lord's son - Sweet Robyn Arryn. Not only is he not of age but he also has some... problems. Due to this, it will be best if we assign a regent to serve in his place as soon as possible."
+ 
+
+
+vale.1.a:0 "Hail the new Warden of the East"
+
+
+
+
+
+
+vale.2.t:0 "Sansa kissed Petyr!"
+ 
+
+
+vale.2.d:0 "- She kissed him! The little whore kissed Petyr! -\n\nThose were lady Lysa's words when she grabbed Sansa Stark by the hair and threatened to toss her out the Moon Door. Luckily, Lord Petyr Baelish arrived just in time to spare us a diplomatic accident. He was even able to calm Lady Lysa down with the words...\n\n- I have only ever loved one woman... only one..."
+ 
+
+
+vale.2.a:0 "Your sister..."
+
+vale.2.b:0 "You, my dear!"
+
+
+
+
+
+
+vale.3.t:0 "House Grafton objects to Wildlings in the Government"
+ 
+
+vale.3.d:0 "Representatives from Gull Town have arrived at the capital in order to object to our recent decision to allow 'Wildlings' into prominent positions.\n\nThis almost led to a physical confrontation with one of the Hill Tribe leaders, present at the meeting. Though we were able to calm the two down, it seems like House Grafton will not be persuaded so easily."
+ 
+
+vale.3.a:0 "They will have to deal with it."
+
+
+
+
+vale.4.t:0 "House Grafton declare Independence!"
+ 
+
+vale.4.d:0 "Citing recent events, as well as 'years of neglect' House Grafton has officially announced is cecession from [SWE.GetNameDef]. They ask that we immediately recognize their independence or be threatened by war."
+ 
+
+vale.4.a:0 "Have they learned nothing from Robert's Rebellion?"
+
+
+vale.4.b:0 "Good riddance."
+
+
+
+
+vale.5.t:0 "Littlefinger arrested!"
+ 
+
+vale.5.d:0 "Though he is now safely behind bars, he was still able to cause a ruckuss during the arrest and it won't be long before Lady Lysa finds out about this."
+ 
+
+vale.5.a:0 "What is the worst she could do?"
+
+
+
+
+vale.6.t:0 "Littlefinger released!"
+ 
+
+vale.6.d:0 "By the personal orders of Lady Lysa Arryn, the guards were forced to release Lord Baelish from his cell. Not only that but she has announced that she plans to marry him, effectively making him the new Lord of the Eyrie.\n\nA lot of people seem to believe that he will not be happy with those who ordered the arrest."
+ 
+
+vale.6.a:0 "We need to get rid of him!"
+
+
+
+
+vale.7.t:0 "Evidence found!"
+ 
+
+vale.7.d:0 "Thanks to our good friends - and some assist from a few faceless assasins - we were able to find enough evidence to incriminate Petyr Baelish for the death of Jon Arryn!"
+ 
+
+vale.7.a:0 "We should confront lady Lysa immediately!"
+
+
+
+
+vale.8.t:0 "Lady Lysa is dead!"
+ 
+vale.8.d:0 "According to the only witness that was there - Sansa Stark - Lady Lysa felt very jealous of her niece and, despite Lord Baelish's attempts to calm her down, she decided to commit suicide by jumping out the Moon Door.\n\nThat is way too convenient and Littlefinger has already started persuading the young Robyn Arryn to his side. It seems like unless we act fast, we may find ourselves joining Lady Lysa, down the Moon Door."
+ 
+vale.8.a:0 "Time is short..."
+
+
+
+
+vale.9.t:0 "The Lords of the Vale are defiant!"
+ 
+
+vale.9.d:0 "It seems as though there are still those who deny our claim to the Vale. So be it. We will crush them once and for all."
+ 
+
+vale.9.a:0 "Charge!"
+
+
+
+vale.10.t:0 "Yohn Royce is thrown down the Moon Door"
+ 
+vale.10.d:0 "Our Lord, Sweet Robyn Arryn seemed especially happy and clapped with delight while watching 'the big fat man fly'."
+ 
+
+vale.10.a:0 "When you play the game of thrones..."
+
+
+
+
+
+vale.11.t:0 "The Lords of the Vale suspect something"
+ 
+
+vale.11.d:0 "It would appear the a certain segment of the Vale Lords is misstrusting of our version of events. Most vocal of them is Yohn Royce, who has never hid his distain for Lord Baelish. We should probably do something about him before the old man actually convinces enough people to side against us."
+ 
+
+vale.11.a:0 "Shouldn't be too difficult..."
+
+
+
+
+
+vale.12.t:0 "Littlefinger put in a Sky Cell"
+ 
+
+vale.12.d:0 "Yohn Royce watched with great delight as Lord Baelish was being taken to his new Sky Cell home. He even made sure to caution him not to roll around too much. Sweet Lord Robyn Arryn was a bit worried about the whereabouts of his Uncle Petyr, but he quickly got over it once Lord Royce gave him a new toy eagle to play with."
+ 
+
+vale.12.a:0 "We shouldn't have trusted him..."
+
+
+
+
+
+vale.13.t:0 "Yohn Royce and Petyr Baelish join forces... for now"
+ 
+vale.13.d:0 "The Lord of Runestone has agreed to work with Lord Baelish for the better of the realm. After all, these are troubled times and we all need to stand together. Lady Sansa Stark was also very helpful in finalizing this deal, as her convincing testimony helped convince the Vale Lords of Lord Baelish's innocence."
+ 
+vale.13.a:0 "We had nothing to worry about... Right?"
+
+
+
+
+
+vale.14.t:0 "So many caches!"
+ 
+
+vale.14.d:0 "While raiding the Hill Tribes' stockpiles, we discovered enough rifles to arm a whole division. True, most are slightly outdated but we can still use them. Alternatively, we can donate them to one of our allies."
+ 
+vale.14.a:0 "Keep them to ourselves."
+
+
+vale.14.b:0 "Donate them to [FIN.GetName]."
+
+vale.14.c:0 "Donate them to [HOL.GetName]."
+
+vale.14.e:0 "Donate them to [CAN.GetNameDef]."
+
+
+
+
+
+vale.15.t:0 "Arms donation from [SWE.GetName]"
+ 
+vale.15.d:0 "Having recently dealt with the Hill Tribes that were harassing their population, the Vale has uncovered huge caches of weapons that they don't really know what to do with. Thus, they have decided to donate them to our cause."
+ 
+vale.15.a:0 "Send our thanks to [SWE.GetLeader]."
+
+
+
+
+
+volantis.1.t:0 "There's something strange in the mud..."
+ 
+
+volantis.1.d:0 "During an excavation in one of the new mines, one of our workers claims to have struck something 'very weird and scary'. At first he was laughed at, but then some of the other workers nearby started to also find some of those weird and scary things. We have since dispatched a team of engineers and archeologists to examine it."
+ 
+volantis.1.a:0 "What could it be?"
+
+
+volantis.2.t:0 "Dinosaur bones!"
+ 
+
+volantis.2.d:0 "The weird and scary thing turned out to be a perfectly preserved dinosaur skeleton. Dinosaurs were ancient creatures that roamed the planet long ago, even predating the children of the forest. Not much is known about them, however the Maesters of Old Town have long expressed an interest in these fascinating creatures. This sample in particular is a brand new species that has some similarities to the dragons of Old Valyria. They scientists have decided to call it..."
+ 
+
+volantis.2.a:0 "Tyranosaurus Rex!"
+
+
+
+
+volantis.8.t:0 "Volantis offers us protection"
+ 
+
+volantis.8.d:0 "Envoys from [POR.GetNameDef] have arrived in our capital, claiming that they offer us 'more security'. In reality, they are asking for us to lose our sovereignity and become a mere puppet of theirs. We have already detained those envoys and can send their heads back to their Masters.\n\nOur generals recommend we behead the one that keeps saying that our defiance is 'madness'."
+ 
+
+volantis.8.a:0 "Having some security would be nice."
+volantis.8.b:0 "Madness? THIS! IS! MANTARYS!"
+
+
+
+
+volantis.9.t:0 "[ECU.GetName] accepts!"
+ 
+
+volantis.9.d:0 "."
+ 
+
+volantis.9.a:0 "Perfect!"
+
+
+
+
+volantis.10.t:0 "[ECU.GetNameDef] is defiant!"
+ 
+
+volantis.10.d:0 "Not only have they refused our demands but they even had the nerve to execute one of our envoys, returning only his head. They must be made to pay for this!"
+ 
+
+volantis.10.a:0 "Let's go get them!"
+
+
+volantis.10.b:0 "Maybe it's not worth it..."
+
+
+
+
+targaryen_warlocks_deal_tt:0 "In exchange for §R2 Dragons§! the Warlocks of Qarth will allow Daenerys to occupy §YVaes Orvik§! forever and will also grant her unrestricted access to the §YHouse of the Undying§!."
+
+
+targaryen_guild_deal_tt:0 "In exchange for §R1 Dragon§! and a one-time §Rpayment§! the Council of Thirteen will allow Daenerys to occupy §YVaes Orvik§! forever. They will also rerward her if she is able to occupy and transfer over the strategic §YPort Yhos§!."
+
+
+targaryen_spicers_deal_tt:0 "The Spicers Guild will allow Daenerys to permanently occupy the port of §YVaes Orvik§! in exchange for a large compesatory payment. These payments will continue until you have captured and handed over the strategic ports of §RGhaen§!, §RElyria§!, §RNew Ghis§! and §RPort Yhos§!."
+
+
+
+TAR_debt_repayed:0 "Our debt to Qarth has been repayed."
+
+
+Other_wildlings_TT:0 "Five legions of Wights will rise up behind enemy lines."

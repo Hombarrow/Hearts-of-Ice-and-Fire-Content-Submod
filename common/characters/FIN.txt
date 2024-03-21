@@ -5,7 +5,7 @@ characters={
 		desc = "POLITICS_NED_STARK_DESC"
 		portraits={
 			army={
-				large="gfx/leaders/CAN/Portrait_Stark_Nedfm.dds"
+				large="gfx/leaders/CAN/Portrait_Stark_Ned.dds"
 				small=GFX_generic_political_advisor_europe_2
 			}
 			civilian={
