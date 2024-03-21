@@ -1,0 +1,2556 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 999
+		
+		modifier = {
+			add = 999
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1400 }
+
+	focus = {
+		id = TAR_dothraki_wedding
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = -3
+			hidden_effect = {
+#				SOV = { set_rule = { can_puppet = no } }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_jorah_gift
+		icon = GFX_focus_research
+		prerequisite = { focus = TAR_dothraki_wedding }
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1	
+		}
+	}
+
+	focus = {
+		id = TAR_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TAR_jorah_gift }
+		prerequisite = { focus = TAR_drogo_gift }
+		x = 2
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				267 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			267 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_industry_bonus
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TAR_jorah_gift }
+		x = 0
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.65
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	focus = {
+		id = TAR_electro_bonus
+		icon = GFX_goal_generic_electronic
+		prerequisite = { focus = TAR_industry_bonus }
+		x = 0
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.65
+				uses = 1
+				category = electronics
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 90
+		}
+	}
+
+	focus = {
+		id = TAR_drogo_gift
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TAR_dothraki_wedding }
+		x = 4
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.7
+				uses = 1
+				category = land_doctrine
+#				category = naval_doctrine
+#				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_standing_army
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = TAR_drogo_gift }
+		prerequisite = { focus = TAR_ilerio_gift }
+		x = 6
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = TAR_infantry_tooltip
+			army_experience = 15
+
+			hidden_effect = {
+				load_oob = "TAR_standing"
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_dothraki_skirmish
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TAR_drogo_gift }
+		x = 4
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.65
+				uses = 1
+				category = land_doctrine
+#				category = naval_doctrine
+#				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_dothraki_skirmish2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TAR_dothraki_skirmish }
+		x = 4
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+#				category = naval_doctrine
+#				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_ilerio_gift
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TAR_dothraki_wedding }
+		x = 8
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.65
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_arty
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TAR_ilerio_gift }
+		x = 8
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.65
+				uses = 1
+				category = artillery
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_arty_2
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TAR_arty }
+		x = 8
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_stallion_world
+		icon = GFX_focus_CZE_german_puppet
+#		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TAR_arty_2 focus = TAR_electro_bonus }
+		prerequisite = { focus = TAR_dothraki_skirmish2 focus = TAR_arty_2 }
+		prerequisite = { focus = TAR_electro_bonus focus = TAR_dothraki_skirmish2 }
+		x = 4
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+			SOV = { country_event = soviet.40 }
+			hidden_effect = {
+				add_named_threat = { threat = 5 name = TAR_stallion_world  }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_crownforking
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = TAR_stallion_world }
+		mutually_exclusive = { focus = TAR_armythatwaspromised}
+		x = 4
+		y = 5
+		cost = 10
+
+		available = {
+			SOV = { has_country_leader = { ruling_only = yes name = "Viserys Targaryen" } }
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			NOT = { has_country_leader = { ruling_only = yes name = "Viserys Targaryen" } }
+		}
+
+		completion_reward = {
+			kill_country_leader = yes
+			add_ideas = dothraki_bloodriders
+			add_political_power = -50
+			hidden_effect = {
+				SOV = { country_event = soviet.24 }
+				news_event = { id = news.322 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_takelhazar
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_crownforking }
+		x = 1
+		y = 6
+		cost = 10
+
+		bypass = {
+			SOV = { has_war_with = LEB }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = LEB
+			}
+#			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TAR_plunderrifles
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TAR_takelhazar }
+		mutually_exclusive = { focus = TAR_plunderequipment}
+		x = 0
+		y = 7
+		cost = 4
+
+		available_if_capitulated = yes
+
+		available = {
+		OR = {
+		AND = { NOT = { country_exists = LEB }
+		any_owned_state = { is_core_of = LEB }
+		}
+		LEB = { is_subject_of = SOV }
+			} 	
+		}
+
+		completion_reward = {
+			add_ideas = TAR_sheepclothing
+		}
+	}
+
+	focus = {
+		id = TAR_plunderequipment
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TAR_takelhazar }
+		mutually_exclusive = { focus = TAR_plunderrifles}
+		x = 2
+		y = 7
+		cost = 4
+
+		available_if_capitulated = yes
+
+		available = {
+		OR = {
+		NOT = { country_exists = LEB }
+		any_owned_state = { is_core_of = LEB }
+		LEB = { is_subject_of = SOV }
+			} 	
+		}
+
+		completion_reward = {
+			add_ideas = TAR_sheepfarming
+		}
+	}
+
+	focus = {
+		id = TAR_scavenging_tactics
+		icon = GFX_focus_ETH_scavenging_tactics
+		prerequisite = { focus = TAR_crownforking }
+		prerequisite = { focus = TAR_takelhazar }
+
+		x = 0
+		y = 3
+		relative_position_id = TAR_crownforking
+		cost = 5
+		available = {
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_war = yes 
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+#			add_ideas = ETH_scavenging_tactics_idea
+#			custom_effect_tooltip = ETH_scavenger_random_generals_tt
+			every_army_leader = {			
+				limit = {
+					NOT = {
+						has_trait = scavenger
+					}
+				}
+				add_trait = {trait = scavenger}
+			}
+			hidden_effect = {
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
+					}
+					add_trait = {trait = scavenger}
+				}
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
+					}
+					add_trait = {trait = scavenger}
+				}
+				random_army_leader = {			
+					limit = {
+						NOT = {
+							has_trait = scavenger
+						}
+					}
+					add_trait = {trait = scavenger}
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = TAR_plunderpeople
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = TAR_prepare_for_slaversbay }
+		x = 14
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+#		OR = {
+#		NOT = { country_exists = LEB }
+#		any_owned_state = { is_core_of = LEB }
+#		LEB = { is_subject_of = SOV }
+#			} 	
+		}
+
+		completion_reward = {
+			add_manpower = 100000
+
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				set_technology = { penal_infantry = 1 popup = no }
+			}
+
+#			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TAR_armythatwaspromised
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = TAR_stallion_world }
+		mutually_exclusive = { focus = TAR_crownforking}
+		x = 8
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			has_country_leader = { ruling_only = yes name = "Viserys Targaryen" } 
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 250
+			add_ideas = dothraki_bloodriders
+			hidden_effect = {
+				SOV = {
+					load_oob = Drogo_Khals
+					add_manpower = 39876
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_puppet_khals
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = TAR_armythatwaspromised }
+		x = -1
+		y = 1
+		relative_position_id = TAR_armythatwaspromised
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = AFG }
+				AFG = {	country_event = { id = soviet.19 }}
+
+			}
+			if = {
+				limit = { country_exists = SYR }
+				SYR = {	country_event = { id = soviet.19 }}
+
+			}
+			if = {
+				limit = { country_exists = OMA }
+				OMA = {	country_event = { id = soviet.19 }}
+
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_puppet_doshkhaleen
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = TAR_armythatwaspromised }
+		x = 1
+		y = 1
+		relative_position_id = TAR_armythatwaspromised
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			RAJ = {
+				country_event = { id = soviet.19 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_lastdragon
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = TAR_puppet_doshkhaleen }
+		prerequisite = { focus = TAR_puppet_khals }
+		x = 0
+		y = 2
+		relative_position_id = TAR_armythatwaspromised
+		cost = 10
+
+		available = {
+		NOT = { has_idea = TAR_depression }
+		has_country_leader = { ruling_only = yes name = "Viserys Targaryen" }
+			OR = {
+				219 = { is_owned_and_controlled_by = SOV }
+				RAJ = { is_subject_of = SOV }
+			}	
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_country_leader_trait = the_last_dragon
+			if = {
+				limit = { SOV = { has_government = fascism } }
+				create_field_marshal = {	
+				name = "Viserys Targaryen"	
+				id = 404		
+				picture = "Portrait_Vyserys_Targ.dds"	
+				traits = {   }	
+				skill = 1	
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_claim_ibben
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_lastdragon }
+		x = 0
+		y = 3
+		relative_position_id = TAR_armythatwaspromised
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+#			always = no
+		}
+
+		completion_reward = {
+			SOV = {
+				add_state_claim = 592
+				add_state_claim = 637
+				add_state_claim = 593
+				add_state_claim = 399
+				add_state_claim = 614
+			}
+			add_named_threat = { threat = 5 name = TAR_claim_ibben  }
+		}
+	}
+
+	#######################################
+	######### ACCESS TO THE SEA ###########	
+	#######################################
+
+	focus = {
+		id = TAR_access_to_the_sea
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 23
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			any_owned_state {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = TAR_sudden_shipyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TAR_access_to_the_sea }
+		x = 23
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+			any_state = {
+				is_controlled_by = ROOT
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_battleship_catchup_1
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TAR_sudden_shipyard }
+		x = 23
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_destroyer_catchup_1
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = TAR_sudden_shipyard }
+		x = 21
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_cruiser__catchup_1
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = TAR_sudden_shipyard }
+		x = 25
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_YoungBloodrider
+		icon = GFX_focus_generic_japanese_imperial_glory
+		prerequisite = { focus = TAR_dothraki_wedding }
+		cost = 10.00
+		x = 5
+		y = 0
+		relative_position_id = TAR_rip_drogo
+		search_filters = {FOCUS_FILTER_STABILITY}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		available = {
+		NOT = { has_global_flag = drogo_dead }	
+		has_global_flag = danny_mommy
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.15
+			add_political_power = 50
+
+			hidden_effect = {
+#				news_event = { id = news.331 hours = 24 random_hours = 4 }
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = TAR_moveSouth
+		icon = GFX_focus_ETH_expand_the_levy
+		cost = 10.00
+		prerequisite = { focus = TAR_YoungBloodrider }
+		mutually_exclusive = { focus = TAR_cross_redwaste}
+		x = 0
+		y = 1
+		relative_position_id = TAR_YoungBloodrider
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		 available = { 	
+			is_neighbor_of = ISR
+			NOT = {
+				is_in_faction_with = ISR
+			}
+			NOT = {
+				has_non_aggression_pact_with = ISR
+			}
+		}
+
+		completion_reward = {
+			add_state_claim = 402
+			add_state_claim = 443
+
+			create_wargoal = {
+				type = annex_everything
+				target = ISR
+			}
+		}
+
+	}
+	focus = {
+		id = TAR_RoadOfWar
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = TAR_moveSouth }
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = TAR_moveSouth
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		ai_will_do = {
+			base = 5
+#			modifier = {
+#				factor = 0.5
+#				has_completed_focus = ETH_callout_to_the_world
+#			}
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = TAR_QarthVassal
+		icon = GFX_focus_ETH_adopt_the_lira
+		prerequisite = { focus = TAR_RoadOfWar }
+		prerequisite = { focus = TAR_newmilitaryfactory }
+		mutually_exclusive = { focus = TAR_BurnQarth}
+		cost = 10.00
+		x = -1
+		y = 2
+		relative_position_id = TAR_moveSouth
+
+		available = {
+			OR = {
+			has_full_control_of_state = 326 #Qarth
+			ISR = { is_subject_of = SOV }
+			}	
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_stability = 0.15
+			add_political_power = 150
+			add_offsite_building = { type = industrial_complex level = 3 }
+#			add_ideas = BLT_expandmaesters
+#			every_army_leader = {
+#				add_unit_leader_trait = ETH_hero_of_ethiopia
+#			}
+		}
+
+	}
+	focus = {
+		id = TAR_BurnQarth
+		icon = GFX_focus_ETH_amedeos_feast_of_maskal
+		prerequisite = { focus = TAR_RoadOfWar }
+		mutually_exclusive = { focus = TAR_QarthVassal}
+		cost = 8
+		x = 1
+		y = 2
+		relative_position_id = TAR_moveSouth
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		available = {
+			OR = {
+			has_full_control_of_state = 326 #Qarth
+			ISR = { is_subject_of = SOV }
+			}	
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_war_support = 0.20
+			army_experience = 50
+
+			add_tech_bonus = {
+				name = TAR_university_bonus
+				bonus = 0.25
+				uses = 2
+				category = industry
+				category = electronics
+			}
+
+			add_victory_points = {
+				province = 10062
+				value = -10
+			}
+
+#			add_ideas = BLT_expandmaesters
+		}
+
+	}
+
+	focus = {
+		id = TAR_rip_drogo
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = TAR_dothraki_wedding }
+		x = 14
+		y = 1
+		cost = 2
+
+		available_if_capitulated = yes
+
+		available = {
+		has_global_flag = drogo_dead 	
+		}
+
+		completion_reward = {
+		remove_ideas = TAR_depression
+			hidden_effect = {
+				SOV = { country_event = soviet.7 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_cross_redwaste
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = TAR_rip_drogo }
+		mutually_exclusive = { focus = TAR_moveSouth}
+		x = 0
+		y = 1
+		relative_position_id = TAR_rip_drogo
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		bypass = {
+			has_full_control_of_state = 402 #RED WASTE 1
+			has_full_control_of_state = 443 #Vaes Toloro
+		}
+
+		available = {
+			is_puppet = no
+#			always = no
+		}
+
+		completion_reward = {
+			SOV = { transfer_state = 402 }
+			ISR = { country_event = soviet.14 }
+			hidden_effect = {
+#				news_event = { id = news.236 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_newcivilianfactory
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TAR_cross_redwaste }
+		x = 0
+		y = 2
+		relative_position_id = TAR_rip_drogo
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_newmilitaryfactory
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TAR_cross_redwaste focus = TAR_moveSouth }
+		x = 3
+		y = 2
+		relative_position_id = TAR_rip_drogo
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_tradewithwarlocks
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = TAR_newmilitaryfactory }
+		mutually_exclusive = { focus = TAR_tradewithspicers}
+		mutually_exclusive = { focus = TAR_tradewithguild}
+		x = 2
+		y = 1
+		relative_position_id = TAR_newcivilianfactory
+		cost = 20
+
+		available_if_capitulated = yes
+
+		available = {
+#			always = no
+			NOT = { has_war_with = ISR }
+			has_idea = rheagul
+			has_idea = vyserion
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		custom_effect_tooltip = targaryen_warlocks_deal_tt
+			hidden_effect = {
+				ISR = {	country_event = { id = soviet.4 }}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_tradewithguild
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TAR_newmilitaryfactory focus = TAR_newcivilianfactory }
+		mutually_exclusive = { focus = TAR_tradewithspicers}
+		mutually_exclusive = { focus = TAR_tradewithwarlocks}
+		x = 0
+		y = 1
+		relative_position_id = TAR_newcivilianfactory
+		cost = 20
+
+		available_if_capitulated = yes
+
+		available = {
+#			always = no
+			NOT = { has_war_with = ISR }
+			has_idea = rheagul
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		custom_effect_tooltip = targaryen_guild_deal_tt
+			hidden_effect = {
+				ISR = {	country_event = { id = soviet.8 }}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_tradewithspicers
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TAR_newcivilianfactory }
+		mutually_exclusive = { focus = TAR_tradewithguild}
+		mutually_exclusive = { focus = TAR_tradewithwarlocks}
+		x = -2
+		y = 1
+		relative_position_id = TAR_newcivilianfactory
+		cost = 20
+
+		available_if_capitulated = yes
+
+		available = {
+#			always = no
+			NOT = { has_war_with = ISR }
+#			has_idea = TAR_depression
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		custom_effect_tooltip = targaryen_spicers_deal_tt
+			hidden_effect = {
+				ISR = {	country_event = { id = soviet.10 }}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_setup_logistics
+		prerequisite = { focus = TAR_tradewithguild focus = TAR_tradewithspicers focus = TAR_tradewithwarlocks }
+		icon = GFX_goal_generic_construct_infrastructure
+		relative_position_id = TAR_tradewithguild
+		x = -1
+		y = 1
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = SOV
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			if = {
+				limit = {
+					controls_state = 402
+					controls_state = 267
+				}
+				build_railway = { 
+					path = { 4300 4374 4227 7337 12248 10781 10737 }
+				}
+			}
+			if = {
+				limit = { 
+					has_full_control_of_state = 402 
+					has_full_control_of_state = 443
+				}
+				build_railway = {
+					level = 2
+					path = { 4300 7084 1971 4110 10108 4003 3456 }
+				}
+			}				
+		}
+	}
+
+	focus = {
+		id = TAR_prepare_for_slaversbay
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = TAR_tradewithguild focus = TAR_tradewithspicers focus = TAR_tradewithwarlocks focus = TAR_QarthVassal focus = TAR_BurnQarth }
+		relative_position_id = TAR_tradewithguild
+		x = 2
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			set_capital = {
+				state = 402
+				remember_old_capital = yes
+			}
+			add_victory_points = {
+				province = 4300
+				value = 4
+			}
+			add_ideas = TAR_queencouncil
+
+			custom_effect_tooltip = TAR_slaverbayclaims_tooltip
+
+			hidden_effect = {
+				SOV = {
+					add_state_claim = 656
+					add_state_claim = 701
+					add_state_claim = 321
+					add_state_claim = 702
+					add_state_claim = 649
+					add_state_claim = 422
+					add_state_claim = 320
+				}
+			}
+
+			add_named_threat = { threat = 5 name = TAR_prepare_for_slaversbay  }
+		}
+	}
+
+	focus = {
+		id = TAR_motherofdragons
+		icon = GFX_focus_ger_revive_kaiserreich
+		prerequisite = { focus = TAR_prepare_for_slaversbay }
+		x = 20
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+#			always = no
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = drogon }
+				swap_ideas = {
+					add_idea = drogon_2
+					remove_idea = drogon
+				}
+			}
+			if = {
+				limit = { has_idea = rheagul }
+				swap_ideas = {
+					add_idea = rheagul_2
+					remove_idea = rheagul
+				}
+			}
+			if = {
+				limit = { has_idea = vyserion }
+				swap_ideas = {
+					add_idea = vyserion_2
+					remove_idea = vyserion
+				}
+			}
+#			swap_ideas = {
+#				add_idea = drogon_2
+#				remove_idea = drogon
+#			}
+#			swap_ideas = {
+#				add_idea = vyserion_2
+#				remove_idea = vyserion
+#			}
+#			swap_ideas = {
+#				add_idea = rheagul_2
+#				remove_idea = rheagul
+#			}
+		custom_effect_tooltip = TAR_taming_tt
+		}
+	}
+
+	focus = {
+		id = TAR_unulied
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		prerequisite = { focus = TAR_prepare_for_slaversbay }
+		x = 12
+		y = 6
+		cost = 5
+
+		available = {
+#			always = no
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			army_experience = 35
+
+			add_corps_commander_role = {
+				Character = TAR_GreyWorm
+				traits = { infantry_officer bearer_of_artillery }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 5
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id=-1
+			}
+
+			add_corps_commander_role = {
+				Character = TAR_WhiteRat
+				traits = { infantry_officer }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
+				legacy_id=-1
+			}
+
+#			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
+			hidden_effect = {
+#				set_technology = { penal_infantry = 1 popup = no }
+
+#				division_template = {
+#					name = "Slave Battalions"
+#					division_names_group = SOV_PEN_01
+#					is_locked = yes
+
+#					regiments = {
+#						penal_battalion = { x = 0 y = 0 }
+#						penal_battalion = { x = 0 y = 1 }
+#						penal_battalion = { x = 0 y = 2 }
+#						penal_battalion = { x = 1 y = 0 }
+#						penal_battalion = { x = 1 y = 1 }
+#						penal_battalion = { x = 1 y = 2 }
+#						penal_battalion = { x = 2 y = 0 }
+#						penal_battalion = { x = 2 y = 1 }
+#						penal_battalion = { x = 2 y = 2 }
+#					}
+#					support = {
+#						artillery = { x = 0 y = 0 }
+#					}
+#				}
+
+#				SOV_spawn_penal_divisions_effect = yes
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_secondsuns
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = TAR_prepare_for_slaversbay }
+		x = 18
+		y = 6
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		available = {
+			OR = {
+				has_tech = basic_light_tank
+				has_tech = basic_light_tank_chassis
+			}
+#			OR = {
+#				SOV = { has_war_with = PER }
+#				SOV = { has_war_with = EGY }
+#				SOV = { has_war_with = IRQ }
+#			}
+		}
+
+		completion_reward = {
+		if = {
+			limit = { SOV = { num_of_factories > 50 } }
+			random_list = {
+				75 = {
+					country_event = { id = soviet.20 }
+				}
+				25 = {
+					country_event = { id = soviet.21 }
+				}
+			}
+		}
+
+		if = {
+			limit = { SOV = { num_of_factories < 50 } }
+			random_list = {
+				25 = {
+					country_event = { id = soviet.20 }
+				}
+				75 = {
+					country_event = { id = soviet.21 }
+				}
+			}
+		}
+
+		}
+	}
+
+#	focus = {
+#		id = TAR_greyworm
+#		icon = GFX_goal_generic_demand_territory
+#		prerequisite = { focus = TAR_unulied }
+#		x = 10
+#		y = 7
+#		cost = 2
+
+#		available_if_capitulated = yes
+
+#		completion_reward = {
+#			create_corps_commander = {
+#				name = "Grey Worm"
+#				picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
+#				traits = { trickster }
+#				skill = 4
+#				id = 402
+#			}
+#			add_political_power = 150
+#		}
+#	}
+
+	focus = {
+		id = TAR_infiltrateslavers
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = TAR_prepare_for_slaversbay }
+		x = 16
+		y = 6
+		cost = 10
+
+		available = {
+		NOT = { has_idea = TAR_depression }
+		has_government = communism
+#		has_global_flag = drogo_dead 	
+		}
+
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			unlock_decision_category_tooltip = TAR_infiltrate_slaver_areas
+			hidden_effect = {
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+				division_template = {
+					name = "Slave mob"
+#					division_names_group = SWE_MAR_01
+
+					is_locked = yes
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 0 y = 3 }
+						penal_battalion = { x = 0 y = 4 }
+				        	penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 1 y = 3 }
+						penal_battalion = { x = 1 y = 4 }
+ 	        				penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+						penal_battalion = { x = 2 y = 3 }
+						penal_battalion = { x = 2 y = 4 }
+ 	        				penal_battalion = { x = 3 y = 0 }
+						penal_battalion = { x = 3 y = 1 }
+						penal_battalion = { x = 3 y = 2 }
+						penal_battalion = { x = 3 y = 3 }
+						penal_battalion = { x = 3 y = 4 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+				division_template = {
+					name = "Slave mob"
+#					division_names_group = SWE_MAR_01
+
+					is_locked = yes
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+				        	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+ 	        				infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						infantry = { x = 2 y = 3 }
+						infantry = { x = 2 y = 4 }
+ 	        				infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 3 y = 3 }
+						infantry = { x = 3 y = 4 }
+					}
+				}
+}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_breakerofchains
+		icon = GFX_goal_support_communism
+#		prerequisite = { focus = TAR_plunderpeople focus = TAR_unulied }
+		prerequisite = { focus = TAR_plunderpeople focus = TAR_infiltrateslavers focus = TAR_secondsuns }
+		x = 16
+		y = 7
+		cost = 10
+
+		available = {
+		NOT = { has_idea = TAR_depression }
+		has_government = communism
+#		has_global_flag = drogo_dead 	
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			add_country_leader_trait = breaker_of_chains
+			add_field_marshal_role = {
+				Character = TAR_daenerys
+				traits = { media_personality }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+				legacy_id=405
+			}
+#			if = {
+#				limit = { SOV = { has_government = communism } }
+#				create_field_marshal = {	
+#				name = "Daenerys Targaryen"	
+#				id = 405		
+#				picture = "Portrait_Dany_Targ.dds"	
+#				traits = {   }	
+#				skill = 1
+#				female = yes	
+#				}
+#			}
+		}
+	}
+
+
+	focus = {
+		id = TAR_redpriests
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
+		x = -5
+		y = 2
+		relative_position_id = TAR_breakerofchains
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = TAR_kinvara
+		}
+	}
+
+	focus = {
+		id = TAR_astapordeal
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = { focus = TAR_breakerofchains }
+		mutually_exclusive = { focus = TAR_takeastapor }
+		x = -4
+		y = 1
+		relative_position_id = TAR_breakerofchains
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_neighbor_of = PER
+			OR = {
+				has_idea = drogon
+				has_idea = drogon_2
+				has_idea = drogon_3
+				has_idea = drogon_4
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PER = { country_event = targaryen.4 }
+		}
+
+	}
+
+	focus = {
+		id = TAR_takeastapor
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
+		mutually_exclusive = { focus = TAR_astapordeal }
+		x = -2
+		y = 1
+		relative_position_id = TAR_breakerofchains
+		cost = 5
+
+		available = {
+#			country_exists = PER
+			is_neighbor_of = PER
+#			any_neighbor_state = { is_core_of = PER}
+		}
+
+		bypass = {
+			NOT = { country_exists = PER }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PER
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_takeyunkai
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
+		x = 2
+		y = 1
+		relative_position_id = TAR_breakerofchains
+		cost = 5
+
+		available = {
+			is_neighbor_of = IRQ
+#			any_neighbor_state = { is_core_of = IRQ}
+		}
+
+		bypass = {
+			NOT = { country_exists = IRQ }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_takemeereen
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
+		x = 0
+		y = 1
+		relative_position_id = TAR_breakerofchains
+		cost = 5
+
+		available = {
+			country_exists = EGY
+#			SOV = { any_neighbor_state = { is_core_of = EGY} }
+		}
+
+		bypass = {
+			NOT = { country_exists = EGY }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EGY
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_overlord
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_takeastapor focus = TAR_takeyunkai focus = TAR_takemeereen }
+		x = 0
+		y = 2
+		relative_position_id = TAR_breakerofchains
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			SOV = { has_war = no }
+			656 = { is_controlled_by = SOV }
+			701 = { is_controlled_by = SOV }
+			321 = { is_controlled_by = SOV }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			SOV = {
+				country_event = { id = soviet.25 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_education
+		icon = GFX_focus_research
+		prerequisite = { focus = TAR_overlord }
+		x = 0
+		y = 1
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = TAR_continueliberating
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		prerequisite = { focus = TAR_overlord }
+		cost = 10
+		x = 3
+		y = 1
+		relative_position_id = TAR_overlord
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.15
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_takeMantarys
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TAR_continueliberating }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = TAR_continueliberating
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			country_exists = ECU
+			NOT = { is_in_faction_with = ECU }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ECU
+			}
+		}
+	}
+
+	focus = {
+		id = TAR_takeValyria
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TAR_takeMantarys }
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = TAR_takeMantarys
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			country_exists = LBA
+			NOT = { is_in_faction_with = LBA }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = LBA
+			}
+		}
+	}
+
+}

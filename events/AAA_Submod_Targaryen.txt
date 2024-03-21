@@ -1,0 +1,968 @@
+﻿###########################
+# Targaryen Events
+###########################
+
+add_namespace = targaryen
+
+# Dotraki accept
+country_event = {
+	id = targaryen.1
+	title = soviet.32.t
+	desc = soviet.32.d
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+		
+	option = {
+		name = soviet.32.a
+		if = {
+			limit = { is_in_faction = yes }
+			add_to_faction = From
+
+		}
+
+		if = {
+			limit = { is_in_faction = no }
+			create_faction = "Targaryen Alliance"
+			add_to_faction = From
+
+		}
+	}
+}
+
+# Dothraki Refuse
+country_event = {
+	id = targaryen.2
+	title = soviet.33.t
+	desc = soviet.33.d
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+		
+	option = {
+		name = soviet.33.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = From
+		}
+	}
+	option = {
+		name = soviet.33.b
+		ai_chance = { factor = 0 }
+		#
+	}
+}
+
+# Viserion Down!
+country_event = {
+	id = targaryen.3
+	title = targaryen.3.t
+	desc = targaryen.3.desc
+#	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.3.a
+		remove_ideas = vyserion_4
+		set_global_flag = viserion_killed
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+}
+
+# Dany wants to negotiate
+country_event = {
+	id = targaryen.4
+	title = targaryen.4.t
+	desc = targaryen.4.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.4.a		#demand a dragon
+		ai_chance = { factor = 60 }
+
+		SOV = { country_event = { hours = 1 id = targaryen.5 }}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+	option = {
+		name = targaryen.4.b		#sell land
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		SOV = { country_event = { hours = 1 id = targaryen.9 }}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+	option = {
+		name = targaryen.4.c		#tell Westerosi whore to f off
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+
+		SOV = { country_event = { hours = 1 id = targaryen.11 }}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+}
+
+# Astapor wants dragon
+country_event = {
+	id = targaryen.5
+	title = targaryen.5.t
+	desc = targaryen.5.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.5.a		#give drogon
+		ai_chance = { 
+			factor = 60
+		}
+
+		if = {
+			limit = { 258 = { is_owned_by = PER } }
+			SOV = { transfer_state = 258 }
+		}
+		if = {
+			limit = { 428 = { is_owned_by = PER } }
+			SOV = { transfer_state = 428 }
+		}
+
+		PER = { country_event = { hours = 1 id = targaryen.6 }}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+	option = {
+		name = targaryen.5.b		#to war
+		ai_chance = { factor = 0 }
+
+		declare_war_on = {
+			target = PER
+			type = annex_everything 
+		}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# Drogon disobedient, why cant westerosi who calm it down?
+country_event = {
+	id = targaryen.6
+	title = targaryen.6.t
+	desc = targaryen.6.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.6.a		#hold drogon
+
+		SOV = { country_event = { hours = 1 id = targaryen.7 }}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# What to tell drogon?
+country_event = {
+	id = targaryen.7
+	title = targaryen.7.t
+	desc = targaryen.7.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.7.a		#calm down child
+		ai_chance = { factor = 1 }
+
+		if = {
+			limit = { has_idea = drogon }
+			PER = { add_ideas = drogon }
+			remove_ideas = drogon
+		}
+		if = {
+			limit = { has_idea = drogon_2 }
+			PER = { add_ideas = drogon_2 }
+			remove_ideas = drogon_2
+		}
+		if = {
+			limit = { has_idea = drogon_3 }
+			PER = { add_ideas = drogon_3 }
+			remove_ideas = drogon_3
+		}
+		if = {
+			limit = { has_idea = drogon_4 }
+			PER = { add_ideas = drogon_4 }
+			remove_ideas = drogon_4
+		}
+
+		if = {
+			limit = { 229 = { is_owned_by = PER } }
+			SOV = { transfer_state = 229 }
+		}
+		if = {
+			limit = { 320 = { is_owned_by = PER } }
+			SOV = { transfer_state = 320 }
+		}
+
+		hidden_effect = {
+			PER = { country_event = { hours = 1 id = targaryen.12 }}
+		}
+	}
+
+	option = {
+		name = targaryen.7.b		#Dracarys
+		ai_chance = { factor = 90 }
+
+		declare_war_on = {
+			target = PER
+			type = annex_everything 
+		}
+
+		hidden_effect = {
+			PER = { country_event = { hours = 1 id = targaryen.8 }}
+		}
+	}
+
+}
+
+# Astapor is on fire!
+country_event = {
+	id = targaryen.8
+	title = targaryen.8.t
+	desc = targaryen.8.desc
+	picture = GFX_report_event_dead_soldiers
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.8.a		#Kill her! Kill her!
+
+		add_political_power = -150
+		add_timed_idea = { idea = burned_city days = 90 }
+		random_owned_controlled_state = {
+			prioritize = { 321 } #Astapor
+			
+			limit = {
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+		}
+		random_owned_controlled_state = {	
+			limit = {
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.8
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 321 } #Astapor
+			
+			limit = {
+				arms_factory > 0
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.8
+			}
+		}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# Offer to sell land
+country_event = {
+	id = targaryen.9
+	title = targaryen.9.t
+	desc = targaryen.9.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.9.a		#good
+		ai_chance = { factor = 50 }
+
+		if = {
+			limit = { 258 = { is_owned_by = PER } }
+			SOV = { transfer_state = 258 }
+		}
+		if = {
+			limit = { 428 = { is_owned_by = PER } }
+			SOV = { transfer_state = 428 }
+		}
+
+		add_timed_idea = { idea = PER_payments_bad days = 365 }
+
+		hidden_effect = {
+			PER = { country_event = { hours = 1 id = targaryen.10 }}
+		}
+	}
+
+	option = {
+		name = targaryen.9.b		#I will take what is mine
+		ai_chance = { factor = 0 }
+
+		declare_war_on = {
+			target = PER
+			type = annex_everything 
+		}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# Dany accepts to buy land
+country_event = {
+	id = targaryen.10
+	title = targaryen.10.t
+	desc = targaryen.10.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.10.a		#good
+
+		add_timed_idea = { idea = PER_payments days = 365 }
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# Astapor wont deal
+country_event = {
+	id = targaryen.11
+	title = targaryen.11.t
+	desc = targaryen.11.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.11.a		#to war then
+		ai_chance = { factor = 40 }
+
+		declare_war_on = {
+			target = PER
+			type = annex_everything 
+		}
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+	option = {
+		name = targaryen.11.b		#we need peace
+		ai_chance = { factor = 0 }
+
+		add_political_power = -150
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# dragon is calm
+country_event = {
+	id = targaryen.12
+	title = targaryen.12.t
+	desc = targaryen.12.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.12.a		#for a moment i thought something bad would happen
+		ai_chance = { factor = 40 }
+
+		add_political_power = 150
+
+		hidden_effect = {
+#			country_event = { days = 1 id = news.19 }
+		}
+	}
+
+}
+
+# Slaves rising up in Meereen
+country_event = {
+	id = targaryen.13
+	title = targaryen.13.t
+	desc = targaryen.13.desc
+	picture = GFX_report_event_hitler_croatia_handshake
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.13.a		#for a moment i thought something bad would happen
+		ai_chance = { factor = 40 }
+
+		add_political_power = 50
+
+			any_state = {
+				limit = { is_owned_and_controlled_by = From }
+				prioritize = { 332 }
+				create_unit = { 
+				division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+				owner = SOV
+				}
+
+			}
+
+#		hidden_effect = {
+
+			From = {
+				random_owned_controlled_state = {
+					prioritize = { 332 }
+					create_unit = { 
+					division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+					owner = SOV
+					}
+
+				}
+				random_owned_controlled_state = {
+					prioritize = { 332 }
+					create_unit = { 
+					division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+					owner = SOV
+					}
+
+				}
+			}
+			From = {
+				random_owned_controlled_state = {
+					prioritize = { 332 }
+					create_unit = { 
+					division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+					owner = SOV
+					}
+
+				}
+				random_owned_controlled_state = {
+					prioritize = { 332 }
+					create_unit = { 
+					division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+					owner = SOV
+					}
+
+				}
+			}
+			if = {
+					limit = { From = { communism > 0.1 } }
+					From = {
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+				}
+			}
+
+			if = {
+					limit = { From = { communism > 0.2 } }
+					From = {
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+				}
+			}
+
+			if = {
+					limit = { From = { communism > 0.3 } }
+					From = {
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+				}
+			}
+
+			if = {
+					limit = { From = { communism > 0.4 } }
+					From = {
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+						random_owned_controlled_state = {
+						prioritize = { 332 }
+						create_unit = { 
+						division = "name = \"Mob 1\" division_template = \"Slave mob\" 				start_experience_factor = 0.2"
+						owner = SOV
+						}
+	
+					}
+				}
+			}
+
+#		}
+		hidden_effect = {
+			From = { add_popularity = { ideology = communism popularity = -1 } } 
+		}
+	}
+
+}
+
+# Slaves rising up in Yunkai
+country_event = {
+	id = targaryen.14
+	title = targaryen.13.t
+	desc = targaryen.13.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.13.a		#for a moment i thought something bad would happen
+		ai_chance = { factor = 40 }
+
+		add_political_power = 50
+
+		hidden_effect = {
+
+			load_oob = "Revolt_Yunkai"
+
+
+			if = {
+					limit = { From = { communism > 0.2 } }
+					load_oob = "Revolt_Yunkai_medium"
+			}
+
+			if = {
+					limit = { From = { communism > 0.35 } }
+					load_oob = "Revolt_Yunkai_full"
+			}
+
+			From = { add_popularity = { ideology = communism popularity = -1 } } 
+		}
+	}
+
+}
+
+# Slaves rising up in Astapor
+country_event = {
+	id = targaryen.15
+	title = targaryen.13.t
+	desc = targaryen.13.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.13.a		#for a moment i thought something bad would happen
+		ai_chance = { factor = 40 }
+
+		add_political_power = 50
+
+		hidden_effect = {
+
+			load_oob = "Revolt_Astapor"
+
+			if = {
+					limit = { From = { communism > 0.2 } }
+					load_oob = "Revolt_Astapor_medium"
+			}
+
+			if = {
+					limit = { From = { communism > 0.35 } }
+					load_oob = "Revolt_Astapor_full"
+			}
+
+			From = { add_popularity = { ideology = communism popularity = -1 } } 
+		}
+	}
+
+}
+
+# Yunkai ready for annex?
+country_event = {
+	id = targaryen.16
+	title = targaryen.16.t
+	desc = targaryen.16.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = yunkish_rebels
+		tag = SOV
+#		has_defensive_war = no
+		IRQ = { has_government = communism }
+		SOV = { has_government = communism }
+		IRQ = { has_civil_war = no }
+#		date > 1936.2.16 # Trigger at some point after 1936 elections
+	}
+
+	mean_time_to_happen = {
+		days = 30	# Historical outbreak time after elections
+	}
+		
+	option = {
+		name = targaryen.16.a		#for a moment i thought something bad would happen
+		ai_chance = { factor = 40 }
+
+		add_political_power = 150
+
+		annex_country = { target = IRQ transfer_troops = yes }
+
+		hidden_effect = {
+
+		}
+	}
+
+}
+
+# Lhazareen pillaged
+country_event = {
+	id = targaryen.17
+	title = targaryen.17.t
+	desc = targaryen.17.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = yes
+	
+	trigger = {
+#		has_global_flag = yunkish_rebels
+		tag = SOV
+
+		SOV = { has_country_leader = { ruling_only = yes name = "Khal Drogo" } }
+		USA = { has_war_with = LEB }
+		LEB = { has_capitulated = yes }
+		SOV = { has_completed_focus = TAR_takelhazar }
+		SOV = { has_civil_war = no }
+#		date > 1936.2.16 # Trigger at some point after 1936 elections
+	}
+
+	mean_time_to_happen = {
+		hours = 1	# Historical outbreak time after elections
+	}
+		
+	option = {
+		name = targaryen.17.a		#We'll be in Westeros in no time
+		ai_chance = { factor = 40 }
+
+		add_political_power = 250
+
+		hidden_effect = {
+
+		}
+	}
+
+}
+
+# Miri Marz Dur has cure!
+country_event = {
+	id = targaryen.18
+	title = targaryen.18.t
+	desc = targaryen.18.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.18.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		add_political_power = 50
+
+		hidden_effect = {
+			country_event = { days = 15 id = targaryen.19 }
+		}
+	}
+
+}
+
+# Drogo not getting better. He fell off his horse
+country_event = {
+	id = targaryen.19
+	title = targaryen.19.t
+	desc = targaryen.19.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.19.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		add_political_power = -50
+
+#		hidden_effect = {
+			country_event = { id = targaryen.20 }
+#		}
+	}
+
+}
+
+# Drogo RIP
+country_event = {
+	id = targaryen.20
+	title = targaryen.20.t
+	desc = targaryen.20.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.20.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		add_political_power = -50
+
+		kill_country_leader = yes
+		remove_unit_leader = 401 #drogo, field marshal
+		add_ideas = TAR_depression
+		if = {
+			limit = { has_idea = dothraki_bloodriders }
+			remove_ideas = dothraki_bloodriders
+		}
+		set_global_flag = drogo_dead
+		hidden_effect = {
+			SOV = {	country_event = { id = soviet.18 days = 5 } }
+		}
+	}
+
+}
+
+# Where are my dragons!?
+country_event = {
+	id = targaryen.21
+	title = targaryen.21.t
+	desc = targaryen.21.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.21.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		if = {
+			limit = { has_idea = drogon }
+			SOV = { add_ideas = drogon }
+			remove_ideas = drogon
+		}
+
+		add_political_power = -50
+
+		kill_country_leader = yes
+		remove_unit_leader = 401 #drogo, field marshal
+		add_ideas = TAR_depression
+		if = {
+			limit = { has_idea = dothraki_bloodriders }
+			remove_ideas = dothraki_bloodriders
+		}
+		set_global_flag = drogo_dead
+		hidden_effect = {
+			SOV = {	country_event = { id = soviet.18 days = 5 } }
+		}
+	}
+
+}
+
+# Qarth captured
+country_event = {
+	id = targaryen.22
+	title = targaryen.22.t
+	desc = targaryen.22.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.22.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		add_political_power = -50
+
+		kill_country_leader = yes
+		remove_unit_leader = 401 #drogo, field marshal
+		add_ideas = TAR_depression
+		if = {
+			limit = { has_idea = dothraki_bloodriders }
+			remove_ideas = dothraki_bloodriders
+		}
+		set_global_flag = drogo_dead
+		hidden_effect = {
+			SOV = {	country_event = { id = soviet.18 days = 5 } }
+		}
+	}
+
+}
+
+# Dragons dead
+country_event = {
+	id = targaryen.23
+	title = targaryen.23.t
+	desc = targaryen.23.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.23.a		#But only life can pay for life.
+		ai_chance = { factor = 40 }
+
+		add_political_power = -50
+
+		kill_country_leader = yes
+		remove_unit_leader = 401 #drogo, field marshal
+		add_ideas = TAR_depression
+		if = {
+			limit = { has_idea = dothraki_bloodriders }
+			remove_ideas = dothraki_bloodriders
+		}
+		set_global_flag = drogo_dead
+		hidden_effect = {
+			SOV = {	country_event = { id = soviet.18 days = 5 } }
+		}
+	}
+
+}
