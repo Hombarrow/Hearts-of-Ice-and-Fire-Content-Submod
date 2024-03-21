@@ -15,7 +15,7 @@ characters={
 		country_leader={
 			ideology=stalinism
 			traits={ blood_of_the_dragon }
-			expire="1965.1.1.1"
+			expire="1985.1.1.1"
 			id=-1
 		}
 	}

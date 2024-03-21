@@ -1,9 +1,9 @@
 
 # MAIN THEME
 music = {
-	name = "thenightking-iceandfire"
+	name = "maintheme"
 	file = "thenightking-iceandfire.ogg"
-	volume = 2.1
+	volume = 1.35
 }
 
 # General Peace:
