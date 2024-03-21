@@ -2801,6 +2801,56 @@ if = {
 		}
 	}
 	focus = {
+		id = TAR_set_loose_the_dothraki
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_an_unpopular_foreign_army
+		}
+		x = 5
+		y = 16
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = TAR_marching_into_the_lannisters
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_an_unpopular_foreign_army
+		}
+		x = 7
+		y = 16
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
 		id = TAR_a_westorosi_army
 		icon = GFX_focus_research
 		prerequisite = {
@@ -2829,6 +2879,83 @@ if = {
 		}
 	}
 	focus = {
+		id = TAR_unsullied_plan
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_a_westorosi_army
+		}
+		x = 1
+		y = 17
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = TAR_garrison_our_allies
+		icon = GFX_focus_research
+		mutually_exclusive = { focus = TAR_take_the_rock }
+		prerequisite = {
+			focus = TAR_unsullied_plan
+		}
+		x = 2
+		y = 18
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = TAR_take_the_rock
+		mutually_exclusive = { focus = TAR_garrison_our_allies }
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_unsullied_plan
+		}
+		x = 0
+		y = 18
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
 		id = TAR_turn_to_olenna
 		icon = GFX_focus_research
 		prerequisite = {
@@ -2837,6 +2964,31 @@ if = {
 		}
 		x = 0
 		y = 16
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = TAR_ellaria_and_the_sandsnakes
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_turn_to_olenna
+		}
+		x = -1
+		y = 19
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -3146,7 +3298,7 @@ if = {
 		prerequisite = {
 			focus = TAR_continue_the_game
 		}
-		x = 3
+		x = 4
 		y = 18
 		relative_position_id = TAR_overlord
 		cost = 10
@@ -3199,7 +3351,7 @@ if = {
 			focus = TAR_wear_them_out
 		}
 		prerequisite = {
-			focus = TAR_turn_to_olenna
+			focus = TAR_ellaria_and_the_sandsnakes
 		}
 		x = 0
 		y = 20
