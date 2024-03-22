@@ -10,6 +10,8 @@ set_technology = {
 	tech_engineers = 1
 }
 
+recruit_character = ANG_gods_of_love
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

@@ -2,6 +2,8 @@
 
 oob = "ECU_1936"
 
+recruit_character = ECU_city_of_monsters
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

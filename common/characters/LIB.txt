@@ -1,0 +1,14 @@
+characters={
+	LIB_butterfly_peoples={
+		name = "Butterfly Peoples"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIB/Portrait_Butterfly_Peoples.dds"
+			}
+		}
+		country_leader={
+			ideology=conservativism
+			id=-1
+		}
+	}
+}

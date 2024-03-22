@@ -1,0 +1,14 @@
+characters={
+	TUR_eranels_and_motts={
+		name = "The Eranels and Motts Families"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/TUR_eranels_and_motts.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

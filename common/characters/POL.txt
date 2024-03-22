@@ -1,0 +1,17 @@
+characters={
+	POL_the_bearded_priests={
+		name = "The Bearded Priests"
+		portraits={
+			army={
+				large="gfx/leaders/POL/Portrait_the_bearded_priests.dds"
+			}
+			civilian={
+				large="gfx/leaders/POL/Portrait_the_bearded_priests.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}

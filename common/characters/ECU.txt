@@ -1,0 +1,15 @@
+characters={
+	ECU_city_of_monsters={
+		name="City of Monsters"
+		portraits={
+			civilian={
+				large="gfx/leaders/ECU/Portrait_city_of_monsters.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			id=-1
+		}
+
+	}
+}

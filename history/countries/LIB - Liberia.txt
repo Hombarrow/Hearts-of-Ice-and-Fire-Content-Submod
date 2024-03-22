@@ -12,6 +12,8 @@ set_technology = {
 
 set_convoys = 10
 
+recruit_character = LIB_butterfly_peoples
+
 1939.1.1 = {
 
 	add_political_power = 1198

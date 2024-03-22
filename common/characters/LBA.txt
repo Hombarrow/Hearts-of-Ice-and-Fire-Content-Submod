@@ -1,0 +1,13 @@
+characters={
+	LBA_stonemen={
+		name = "Stonemen"
+		portraits={
+			civilian={
+				large="gfx/leaders/LBA/Portrait_stonemen.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}

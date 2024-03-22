@@ -1,0 +1,14 @@
+characters={
+	ANG_gods_of_love={
+		name = "Summer Gods of Love"
+		portraits={
+			civilian={
+				large="gfx/leaders/ANG/Portrait_summer_gods.dds"
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
