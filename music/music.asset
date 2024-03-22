@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "thenightking-iceandfire.ogg"
+	file = "lightoftheseven-iceandfire.ogg"
 	volume = 1.35
 }
 
@@ -176,5 +176,10 @@ music = {
 music = {
 	name = "lightoftheseven-iceandfire"
 	file = "lightoftheseven-iceandfire.ogg"
+	volume = 1.2
+}
+music = {
+	name = "windsofwinter-iceandfire"
+	file = "windsofwinter-iceandfire.ogg"
 	volume = 1.2
 }

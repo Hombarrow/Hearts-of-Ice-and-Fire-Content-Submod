@@ -322,3 +322,17 @@ music = {
 		}		
 	}	
 }
+
+
+music = {
+	song = "windsofwinter-iceandfire"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+			has_government = neutrality
+		}		
+	}	
+}

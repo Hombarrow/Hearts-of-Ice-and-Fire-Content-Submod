@@ -1,0 +1,443 @@
+﻿capital = 5
+
+
+oob = "IRE_1936"
+
+
+set_research_slots = 3
+
+recruit_character = TYR_mace_t
+recruit_character = TYR_loras
+recruit_character = TYR_olenna
+recruit_character = TYR_garland
+recruit_character = TYR_randyl_tarly
+recruit_character = TYR_paxter
+
+set_technology = 
+{
+	
+infantry_weapons = 1
+	
+infantry_weapons1 = 1
+
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	basic_train = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+
+
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "Lord Paramount Class"
+		type = ship_hull_heavy_1
+#		name_group = USA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_2
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+	set_naval_oob = "Tyrell_MTG_fleet"
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = {
+		name = "Lord Paramount Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+	set_naval_oob = "Tyrell_fleet"
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+
+set_convoys = 10
+
+
+
+1939.1.1 = {
+
+	
+remove_ideas = FRA_victors_of_wwi
+add_political_power = 798
+	
+	
+#generic focuses
+	
+complete_national_focus = IRE_assembly
+	
+complete_national_focus = IRE_westerlands	
+complete_national_focus = IRE_navy_effort	
+complete_national_focus = IRE_naval_doctrine_effort	
+complete_national_focus = IRE_dockyard_effort
+	
+complete_national_focus = IRE_infrastructure	
+complete_national_focus = IRE_construction_effort	
+complete_national_focus = IRE_army_effort
+	
+complete_national_focus = IRE_doctrine_effort	
+	
+oob = "IRE_1939"
+	
+set_technology = {
+		
+gw_artillery = 1
+		
+interwar_antiair = 1
+		
+infantry_weapons2 = 1
+
+		
+#doctrines
+		
+air_superiority = 1
+		
+grand_battle_plan = 1
+		
+trench_warfare = 1
+		
+fleet_in_being = 1
+		
+battlefleet_concentration = 1
+		
+convoy_sailing = 1
+
+		
+#electronics
+		
+electronic_mechanical_engineering = 1
+		
+radio = 1
+		
+radio_detection = 1
+		
+mechanical_computing = 1
+		
+computing_machine = 1
+
+		
+#industry
+		
+basic_machine_tools = 1
+		
+improved_machine_tools = 1
+		
+advanced_machine_tools = 1
+		
+synth_oil_experiments = 1
+		
+#oil_plant = 1
+		
+#improved_oil_plant = 1
+		
+construction1 = 1
+		
+construction2 = 1
+		
+dispersed_industry = 1
+		
+dispersed_industry2 = 1
+	}
+
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 10
+	neutrality = 60
+}
+
+set_politics = {
+
+
+	ruling_party = neutrality	
+last_election = "1933.1.24"
+	
+election_frequency = 48
+	
+elections_allowed = no
+
+}
+
+
+1939.1.1 = {
+
+set_popularities = {
+	democratic = 20
+	fascism = 70
+	communism = 10
+	neutrality = 0
+}	
+set_politics = {
+
+			
+ruling_party = fascism		
+last_election = "1938.6.17"
+		
+election_frequency = 48
+		
+elections_allowed = no	
+}
+
+}
+
+
+add_ideas = {
+	FRA_victors_of_wwi
+	faith_of_7
+	andal
+	non_believers
+}
+
+#create_country_leader = {
+	
+#	name = "Mace Tyrell"
+	
+#	desc = "POLITICS_ÉAMON_DE_VALERA_DESC"
+	
+#	picture = "Portrait_Tyrel_Mace.dds"
+	
+#	expire = "1965.1.1"
+	
+#	ideology = centrism
+
+#	traits = {
+#		#
+#	}
+
+#}
+
+
+
+create_country_leader = {
+	
+	name = "Margery Tyrell"
+	
+	desc = "POLITICS_EOIN_ODUFFY_DESC"
+	
+	picture = "gfx/leaders/IRE/Portrait_Tyrel_Margery.dds"
+	
+	expire = "1965.1.1"
+	
+	ideology = fascism_ideology
+	
+	traits = {
+		#
+	}
+
+}
+
+
+
+#create_country_leader = {
+	
+#	name = "Olenna Tyrell"
+#	desc = "POLITICS_JAMES_LARKIN_DESC"
+#	picture = "gfx/leaders/IRE/Portrait_Lady_Olenna.dds"
+#	expire = "1965.1.1"
+#	ideology = marxism
+#	traits = {
+		#
+#	}
+
+#}
+
+
+
+#create_country_leader = {
+	
+#	name = "Loras Tyrell"
+#	desc = "POLITICS_JAMES_LARKIN_DESC"
+
+#	portrait_path = "gfx/leaders/IRE/Portrait_Loras_Tyrell.dds"	
+#	picture = "Portrait_Loras_Tyrell.dds"	
+#	expire = "1965.1.1"
+	
+#	ideology = conservatism
+		
+#	traits = {
+		#
+#	}
+
+#}
+
+
+#create_field_marshal = {
+#	name = "Mace Tyrell"
+#	portrait_path = "gfx/leaders/IRE/Portrait_Mace_Tyrell.dds"
+#	id = 2010
+#	traits = { old_guard }
+#	skill = 1
+#}
+
+create_corps_commander = {
+	name = "Willas Tyrell"
+	portrait_path = "gfx/leaders/IRE/Portrait_Willas_Tyrell.dds"
+	id = 2011
+	skill = 1
+}
+
+#create_corps_commander = {
+#	name = "Garlan Tyrell"
+#	portrait_path = "gfx/leaders/IRE/Portrait_Garlan_Tyrell.dds"
+#	id = 2012
+#	traits = { hill_fighter }
+#	skill = 3
+#	attack_skill = 1
+#	defense_skill = 2
+#	planning_skill = 3
+#	logistics_skill = 2
+#}
+
+#create_corps_commander = {
+#	name = "Loras Tyrell"
+#	portrait_path = "gfx/leaders/IRE/Portrait_Loras_Tyrell.dds"
+#	id = 2013
+#	traits = { hill_fighter trickster }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 4
+#	planning_skill = 3
+#	logistics_skill = 1
+#}
+
+create_corps_commander = {
+	name = "Jon Fossoway"
+	portrait_path = "gfx/leaders/IRE/Portrait_Jon_Fossoway.dds"
+	id = 2014
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Leyton Hightower"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	
+#	portrait_path = "gfx/leaders/IRE/Portrait_Leyton_Hightower.dds"
+	id = 2015
+	skill = 2
+}
+
+#create_field_marshal = {
+#	name = "Randyll Tarly"
+#	portrait_path = "gfx/leaders/MNT/Portrait_Randyll_Tarly.dds"
+#	id = 2016
+#	traits = { offensive_doctrine }
+#	skill = 4
+#	attack_skill = 4
+#	defense_skill = 3
+#	planning_skill = 2
+#	logistics_skill = 3
+#}
+
+create_corps_commander = {
+	name = "Alester Florent"
+	portrait_path = "gfx/leaders/IRE/Portrait_Alester_Florent.dds"
+	id = 2017
+	traits = { trait_engineer }
+	skill = 3
+}
+
+create_corps_commander = {
+	name = "Mathis Rowan"
+	portrait_path = "gfx/leaders/IRE/Portrait_Mathis_Rowan.dds"
+	id = 2018
+	skill = 2
+}
+
+create_navy_leader = {
+	name = "Leyton Hightower"
+	picture = "Portrait_Leyton_Hightower.dds"
+	traits = { superior_tactician }
+	skill = 2
+}
+
+#create_navy_leader = {
+#	name = "Paxter Redwyne"
+#		picture = "Portrait_Paxter_Redwyne.dds"
+#	traits = { ironside superior_tactician }
+#	skill = 4
+#	attack_skill = 3
+#	defense_skill = 3
+#	maneuvering_skill = 2
+#	coordination_skill = 5
+#}

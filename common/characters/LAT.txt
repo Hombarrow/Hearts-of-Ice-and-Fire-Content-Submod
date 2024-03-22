@@ -1,0 +1,18 @@
+characters={
+	LAT_conclave_of_lys={
+		name = "Conclave of Lys"
+		portraits={
+			army={
+				large="gfx/leaders/LAT/portrait_LAT_conclave_lys.dds"
+			}
+			civilian={
+				large="gfx/leaders/LAT/portrait_LAT_conclave_lys.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

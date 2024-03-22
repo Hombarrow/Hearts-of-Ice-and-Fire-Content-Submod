@@ -1,15 +1,15 @@
 characters={
 
 	VAL_jonarryn={
-		name=SWE_per_albin_hansson
+		name="Jon Arryn"
 		portraits={
 			civilian={
-				large=GFX_portrait_SWE_per_albin_hansson
+				large="gfx/leaders/SWE/Portrait_Jon_Arryn.dds"
 			}
 		}
 		country_leader={
 			ideology=socialism
-			expire="1965.1.1.1"
+			expire="1955.1.1.1"
 			id=-1
 		}
 	}

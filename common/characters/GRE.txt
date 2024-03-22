@@ -1,0 +1,18 @@
+characters={
+	GRE_darrius_varantys={
+		name = "Darrius Varantys"
+		portraits={
+			army={
+				large="gfx/leaders/GRE/Portrait_Darrius Varantys.dds"
+			}
+			civilian={
+				large="gfx/leaders/GRE/Portrait_Darrius Varantys.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=despotism
+			id=-1
+		}
+	}
+}

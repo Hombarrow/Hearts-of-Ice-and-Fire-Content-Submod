@@ -972,3 +972,20 @@ country_event = {
 	}
 
 }
+
+# TEST
+country_event = {
+	id = targaryen.999
+	title = targaryen.999.t
+	desc = targaryen.999.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.999.a		#TEST
+		ai_chance = { factor = 40 }
+		promote_character = ALB_conclave_of_myr
+	}
+
+}

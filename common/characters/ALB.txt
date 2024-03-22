@@ -1,0 +1,17 @@
+characters={
+	ALB_conclave_of_myr={
+		name=ALB_conclave_of_myr
+		portraits={
+			army={
+				large="gfx/leaders/ALB/portrait_ALB_conclave_myr.dds"
+			}
+			civilian={
+				large="gfx/leaders/ALB/portrait_ALB_conclave_myr.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}
