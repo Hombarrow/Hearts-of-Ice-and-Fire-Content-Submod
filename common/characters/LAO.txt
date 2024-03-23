@@ -1,0 +1,14 @@
+characters={
+	LAO_yitish_leng ={
+		name = "Yitish Leng"
+		portraits={
+			civilian={
+				large="gfx/leaders/LAO/Portrait_Lengii_native.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			id=-1
+		}
+	}
+}

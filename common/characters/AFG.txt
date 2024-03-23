@@ -1,0 +1,18 @@
+characters={
+	AFG_khal_moro={
+		name = "Khal Moro"
+		portraits={
+			army={
+				large="gfx/leaders/AFG/Portrait_khal_moro.dds"
+			}
+			civilian={
+				large="gfx/leaders/AFG/Portrait_khal_moro.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=fascism_ideology
+			id=-1
+		}
+	}
+}

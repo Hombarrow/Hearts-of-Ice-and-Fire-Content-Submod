@@ -1,0 +1,14 @@
+characters={
+	SAU_northern_monks ={
+		name = "Northern Monks"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_northern_monks.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,14 @@
+characters={
+	VIN_sorcerer_lord ={
+		name = "The Sorceror Lord"
+		portraits={
+			civilian={
+				large="gfx/leaders/VIN/Portrait_sorcerer_lord.dds"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,17 @@
+characters={
+	LEB_mirri_maz_duur={
+		name = "Mirri Maz Duur"
+		portraits={
+			civilian={
+				large="gfx/leaders/LEB/Portrait_mirri_maz_durr.dds"
+			}
+		}
+		gender = female
+		country_leader={
+			ideology=populism
+			traits={ blood_witch }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

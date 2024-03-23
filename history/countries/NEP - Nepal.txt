@@ -8,6 +8,8 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
+recruit_character = NEP_great_fathers
+
 	add_ideas = mixed
 	add_ideas = atheist
 

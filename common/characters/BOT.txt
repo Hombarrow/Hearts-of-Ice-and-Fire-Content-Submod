@@ -1,0 +1,17 @@
+characters={
+	BOT_brindled_men={
+		name = "The Brindled Men"
+		portraits={
+			army={
+				large="gfx/leaders/BOT/Portrait_brindled_men.dds"
+			}
+			civilian={
+				large="gfx/leaders/BOT/Portrait_brindled_men.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

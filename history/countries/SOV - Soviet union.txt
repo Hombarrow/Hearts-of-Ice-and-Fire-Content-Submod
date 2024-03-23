@@ -46,6 +46,8 @@ gw_artillery = 1
 
 }
 
+puppet = OMA #Jhaqo is a Bloodrider
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 #		set_air_oob = "POL_1936_air_bba"

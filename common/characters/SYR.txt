@@ -1,0 +1,14 @@
+characters={
+	SYR_khal_rhalko ={
+		name = "Khal Rhalko"
+		portraits={
+			civilian={
+				large="gfx/leaders/SYR/Portrait_khal_rhalko.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			id=-1
+		}
+	}
+}

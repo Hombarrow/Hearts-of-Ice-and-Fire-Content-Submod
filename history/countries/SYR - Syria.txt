@@ -12,6 +12,8 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
+recruit_character = SYR_khal_rhalko
+
 if = {
 	limit = {
 		has_dlc = "Battle for the Bosporus"
@@ -82,44 +84,4 @@ set_popularities = {
 	fascism = 100
 	communism = 0
 	neutrality = 0
-}
-
-create_country_leader = {
-	name = "Khal Rhalko"
-	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_3.dds"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Rhalko"
-	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_3.dds"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Rhalko"
-	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_3.dds"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Rhalko"
-	desc = ""
-	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_3.dds"
-	ideology = leninism
-	traits = {
-		#
-	}
 }

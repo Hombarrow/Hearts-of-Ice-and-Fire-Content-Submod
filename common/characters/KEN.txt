@@ -1,0 +1,14 @@
+characters={
+	KEN_traders_and_merchants={
+		name = "Traders and Merchants"
+		portraits={
+			civilian={
+				large="gfx/leaders/KEN/Portrait_traders_and_merchants.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

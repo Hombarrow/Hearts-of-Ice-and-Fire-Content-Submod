@@ -1,0 +1,14 @@
+characters={
+	SAF_corsairs_and_pirates ={
+		name = "Pirates and Corsairs"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/Portrait_pirates.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

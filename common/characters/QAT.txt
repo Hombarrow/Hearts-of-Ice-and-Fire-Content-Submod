@@ -1,0 +1,14 @@
+characters={
+	QAT_sarnori_chieftan={
+		name = "Remaining Chieftans"
+		portraits={
+			civilian={
+				large="gfx/leaders/QAT/Portrait_sarnori_chieftan.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

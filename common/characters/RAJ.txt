@@ -1,0 +1,14 @@
+characters={
+	RAJ_khals_of_vaes_dothrak ={
+		name = "Khals of the Vaes Dothrak"
+		portraits={
+			civilian={
+				large="gfx/leaders/RAJ/Portrait_khals_of_vaes_dothrak.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

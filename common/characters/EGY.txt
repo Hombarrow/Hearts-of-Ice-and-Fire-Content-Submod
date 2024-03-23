@@ -1,0 +1,14 @@
+characters={
+	EGY_great_masters_of_meereen={
+		name = "Great Masters of Meereen"
+		portraits={
+			civilian={
+				large="gfx/leaders/EGY/Portrait_great_masters.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

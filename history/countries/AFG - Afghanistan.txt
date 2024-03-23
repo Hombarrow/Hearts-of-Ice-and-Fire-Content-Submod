@@ -11,6 +11,8 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
+recruit_character = AFG_khal_moro
+
 if = {
 	limit = {
 		has_dlc = "Battle for the Bosporus"
@@ -87,52 +89,6 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-
-# Mohammad Hashim Khan (Prime Minister) other potential candidate
-create_country_leader = {
-	name = "Khal Moro"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Moro"
-	desc = "POLITICS_NIMO_DE_ANQUIN_DESC"
-	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Moro"
-	desc = "POLITICS_MARCELO_ALVEAR_DESC"
-	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Khal Moro"
-	desc = "POLITICS_FANNY_JABCOVSKY_DESC"
-	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
 
 create_corps_commander = {
 	name = "Khal Moro"

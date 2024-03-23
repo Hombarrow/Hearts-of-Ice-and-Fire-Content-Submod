@@ -7,6 +7,8 @@ set_research_slots = 2
 	add_ideas = tall_men
 	add_ideas = atheist
 
+recruit_character = SLO_remaining_princes
+
 set_technology = {
 	gw_artillery = 1
 	interwar_artillery = 1
@@ -74,26 +76,4 @@ set_popularities = {
 	fascism = 0
 	communism = 0
 	neutrality = 0
-}
-
-create_country_leader = {
-	name = "Ken Zlatny"
-#	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jozef Tiso"
-	desc = "POLITICS_JOZEF_TISO_DESC"
-	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
 }

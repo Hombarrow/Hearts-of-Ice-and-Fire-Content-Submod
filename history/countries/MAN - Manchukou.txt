@@ -8,6 +8,8 @@ set_technology = {
 	
 }
 
+recruit_character = MAN_shapechangers
+
 	add_ideas = mixed
 	add_ideas = atheist
 
@@ -56,50 +58,16 @@ set_convoys = 5
 
 set_popularities = {
 	democratic = 0
-	fascism = 80
+	fascism = 0
 	communism = 0
-	neutrality = 20
+	neutrality = 100
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
-}
-
-create_country_leader = {
-	name = "Aisin Gioro Puyi"
-	
-	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
-	expire = "1960.1.1"
-	ideology = rexism
-	traits = {
-		warrior_code
-	}
-}
-
-create_corps_commander = {
-	name = "Zhang Haipeng"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
-	traits = {  }
-	skill = 2
-	
-}
-
-create_corps_commander = {
-	name = "Zhang Jinghui"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
-	traits = {  }
-	skill = 2
-	
-}
-
-create_corps_commander = {
-	name = "Aisin Gioro Xiqia"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
-	traits = { }
-	skill = 3
 }
 
 1939.1.1 = {

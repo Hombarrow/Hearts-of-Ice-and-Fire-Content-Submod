@@ -360,4 +360,9 @@ leader_traits = {
 		random = no
 		stability_weekly = 0.001
 	}
+	
+	blood_witch = { #Mirri Mazz Durr
+		random = no
+		political_power_factor = 0.3
+	}
 }	

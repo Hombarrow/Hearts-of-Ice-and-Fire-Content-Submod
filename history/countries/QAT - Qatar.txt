@@ -1,5 +1,7 @@
 ﻿capital = 208
 
+recruit_character = QAT_sarnori_chieftan
+
 oob = "CZE_1936"
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -102,26 +104,15 @@ set_convoys = 5
 }
 
 set_popularities = {
-	democratic = 60
+	democratic = 20
 	fascism = 0
 	communism = 20
-	neutrality = 20
+	neutrality = 60
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1935.5.19"
 	election_frequency = 60
 	elections_allowed = no
 }
-
-#create_country_leader = {
-#	
-#	name = "Jonas Lote"
-#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
-#	expire = "1965.1.1"
-#	ideology = centrism
-#	traits = {
-#		#
-#	}
-#}

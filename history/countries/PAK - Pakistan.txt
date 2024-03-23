@@ -19,6 +19,8 @@ set_technology = {
 	
 }
 
+recruit_character = PAK_witches_and_warlocks
+
 set_convoys = 20
 
 1939.1.1 = {#placeholder same tech as ENG
@@ -101,40 +103,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-
-create_country_leader = {
-	name = "Qazi Essa"
-	
-	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
-	expire = "1960.1.1"
-	ideology = centrism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ali Jinnah"
-	
-	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
-	expire = "1960.1.1"
-	ideology = liberalism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Haji Danesh"
-	
-	picture = "gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
-	expire = "1960.1.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
 create_corps_commander = {
 	name = "Zia-ul-Haq"
 	portrait_path = "gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic.dds"
@@ -147,13 +115,6 @@ create_corps_commander = {
 	name = "Iftikhar Janjua"
 	portrait_path = "gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic_2.dds"
 	traits = {  }
-	skill = 3
-	
-}
-create_corps_commander = {
-	name = "Akbar Khan"
-	portrait_path = "gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic.dds"
-	traits = { trickster }
 	skill = 3
 	
 }

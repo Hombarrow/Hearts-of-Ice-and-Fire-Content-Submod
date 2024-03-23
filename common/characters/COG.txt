@@ -1,0 +1,17 @@
+characters={
+	COG_brindled_men={
+		name = "The Brindled Men"
+		portraits={
+			army={
+				large="gfx/leaders/COG/Portrait_brindled_men.dds"
+			}
+			civilian={
+				large="gfx/leaders/COG/Portrait_brindled_men.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

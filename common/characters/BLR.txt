@@ -1,0 +1,14 @@
+characters={
+	BLR_shadow_council ={
+		name = "Shadow Council"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/Portrait_shadow_council.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

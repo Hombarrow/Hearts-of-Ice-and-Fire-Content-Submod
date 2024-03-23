@@ -1,0 +1,19 @@
+characters={
+	CUB_Saathos_Saan={
+		name = "Saathos Saan"
+		portraits={
+			army={
+				large="gfx/leaders/CUB/Portrait_Saathos_Saan.dds"
+			}
+			civilian={
+				large="gfx/leaders/CUB/Portrait_Saathos_Saan.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=despotism
+			expire="1975.1.1.1"
+			id=-1
+		}
+	}
+}

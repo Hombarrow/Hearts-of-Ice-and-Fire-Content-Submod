@@ -11,6 +11,8 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
+recruit_character = BHU_great_fathers
+
 1939.1.1 = {
 
 	add_political_power = 1198

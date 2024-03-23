@@ -1,0 +1,14 @@
+characters={
+	PAK_witches_and_warlocks ={
+		name = "Witches and Warlocks"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAK/Portrait_witch_and_warlocks.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

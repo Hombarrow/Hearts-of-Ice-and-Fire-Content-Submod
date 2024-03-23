@@ -1,0 +1,14 @@
+characters={
+	LIT_lorathi_council={
+		name = "Council of Lorathi Magisters"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIT/portrait_LIT_council_of_magisters.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

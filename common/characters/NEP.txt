@@ -1,0 +1,14 @@
+characters={
+	NEP_great_fathers ={
+		name = "Great Fathers"
+		portraits={
+			civilian={
+				large="gfx/leaders/NEP/Portrait_great_fathers.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

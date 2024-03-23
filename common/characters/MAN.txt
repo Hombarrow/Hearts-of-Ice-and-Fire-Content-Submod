@@ -1,0 +1,14 @@
+characters={
+	MAN_shapechangers ={
+		name = "Shapechangers and Wights"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAN/Portrait_shapechangers.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

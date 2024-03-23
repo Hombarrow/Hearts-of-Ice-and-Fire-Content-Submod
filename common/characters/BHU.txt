@@ -1,0 +1,14 @@
+characters={
+	BHU_great_fathers ={
+		name = "Great Fathers"
+		portraits={
+			civilian={
+				large="gfx/leaders/BHU/Portrait_great_fathers.dds"
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,14 @@
+characters={
+	MON_bands_of_jogos_nhai ={
+		name = "Bands of Jogos Nhai"
+		portraits={
+			civilian={
+				large="gfx/leaders/MON/Portrait_bands_of_jogos_nhai.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

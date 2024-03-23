@@ -8,6 +8,7 @@ add_ideas = {
 	LNG_unity_treaty
 }
 
+recruit_character = LAO_yitish_leng
 
 # Starting tech
 set_technology = {
@@ -84,48 +85,4 @@ set_popularities = {
 	fascism = 0
 	communism = 0
 	neutrality = 100
-}
-
-create_country_leader = {
-	name = "Yan Xishan"
-	desc = "POLITICS_YAN XISHAN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Souphanouvong"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Sisavang Vong"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = despotism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Kou Voragong" 
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
 }

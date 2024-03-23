@@ -1,0 +1,14 @@
+characters={
+	AST_unknown_jungle ={
+		name = "Unknown Jungles"
+		portraits={
+			civilian={
+				large="gfx/leaders/AST/Portrait_unknown_jungle.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

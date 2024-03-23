@@ -2,6 +2,8 @@
 
 oob = "LEB_1936"
 
+recruit_character = LEB_mirri_maz_duur
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -76,44 +78,4 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
-}
-
-create_country_leader = {
-	name = "Hashim al-Atassi"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Pierre Gemayel"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Europe_Generic_fascism1.dds"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mirri Maz Duur"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Rami Sarraff"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"
-	ideology = leninism
-	traits = {
-		#
-	}
 }

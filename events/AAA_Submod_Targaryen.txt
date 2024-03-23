@@ -985,7 +985,7 @@ country_event = {
 	option = {
 		name = targaryen.999.a		#TEST
 		ai_chance = { factor = 40 }
-		promote_character = ALB_conclave_of_myr
+		promote_character = SAF_corsairs_and_pirates
 	}
 
 }

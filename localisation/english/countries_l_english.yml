@@ -1123,29 +1123,29 @@ SAU_neutrality_ADJ:0 "Nomad"
  
 SAU_communism_ADJ:0 "Nomad"
  
-SIA_fascism:0 "Winged Empire of Rah"
+SIA_fascism:0 "Grey Waste Others"
  
-SIA_fascism_DEF:0 "The Winged Empire of Rah"
+SIA_fascism_DEF:0 "Grey Waste Others"
  
-SIA_democratic:0 "Winged Republic"
+SIA_democratic:0 "Grey Waste Others"
  
-SIA_democratic_DEF:0 "The Winged Republic"
+SIA_democratic_DEF:0 "Grey Waste Others"
  
-SIA_neutrality:0 "Rah"
+SIA_neutrality:0 "Grey Waste Others"
  
-SIA_neutrality_DEF:0 "Rah"
+SIA_neutrality_DEF:0 "Grey Waste Others"
  
-SIA_communism:0 "Winged People's Republic"
+SIA_communism:0 "Grey Waste Others"
  
-SIA_communism_DEF:0 "The Winged People's Republic"
+SIA_communism_DEF:0 "Grey Waste Others"
  
-SIA_fascism_ADJ:0 "Winged"
+SIA_fascism_ADJ:0 "Wight"
  
-SIA_democratic_ADJ:0 "Winged"
+SIA_democratic_ADJ:0 "Wight"
  
-SIA_neutrality_ADJ:0 "Winged"
+SIA_neutrality_ADJ:0 "Wight"
  
-SIA_communism_ADJ:0 "Winged"
+SIA_communism_ADJ:0 "Wight"
  
 SIK_fascism:0 "Dictatorial Sinkiang"
  SIK_fascism_DEF:0 "Dictatorial Sinkiang"

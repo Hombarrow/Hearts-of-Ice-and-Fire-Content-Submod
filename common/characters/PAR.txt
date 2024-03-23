@@ -1,0 +1,14 @@
+characters={
+	PAR_thousand_islanders ={
+		name = "Natives of the Thousand Islands"
+		portraits={
+			civilian={
+				large="gfx/leaders/PAR/Portrait_thousand_islands_nomads.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			id=-1
+		}
+	}
+}

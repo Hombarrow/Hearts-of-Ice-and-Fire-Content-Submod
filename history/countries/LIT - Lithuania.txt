@@ -3,6 +3,7 @@
 
 oob = "LIT_1936"
 
+recruit_character = LIT_lorathi_council
 
 set_research_slots = 2
 
@@ -147,65 +148,6 @@ dispersed_industry = 1
 
 		dispersed_industry2 = 1
 
-	}
-
-}
-
-
-
-create_country_leader = {
-
-	name = "Antanas Smetona"
-
-	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-
-	picture = "GFX_Portrait_lithuania_antanas_smetona"
-
-	expire = "1965.1.1"
-
-	ideology = oligarchism
-
-	traits = {
-		#
-	}
-
-}
-
-
-create_country_leader = {
-
-	name = "Antanas Snieckus"
-
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-
-	expire = "1965.1.1"
-
-	ideology = stalinism
-
-	traits = {
-		#
-	}
-
-}
-
-
-
-create_country_leader = {
-
-	name = "Augustinas Voldemaras"
-
-	desc = ""
-
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-
-	expire = "1965.1.1"
-
-	ideology = fascism_ideology
-
-	traits = {
-		#
 	}
 
 }

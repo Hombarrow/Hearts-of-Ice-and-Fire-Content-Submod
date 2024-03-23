@@ -11,6 +11,8 @@ set_technology = {
 	add_ideas = mixed
 	add_ideas = atheist
 
+recruit_character = TIB_great_fathers
+
 1939.1.1 = {
 
 	add_political_power = 1198

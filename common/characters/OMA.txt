@@ -1,0 +1,26 @@
+characters={
+	OMA_khal_jhaqo ={
+		name = "Khal Jhaqo"
+		portraits={
+			civilian={
+				large="gfx/leaders/OMA/Portrait_khal_jhaqo.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			id=-1
+		}
+	}
+	OMA_bloodrider_jhaqo ={
+		name = "Bloodrider Jhaqo"
+		portraits={
+			civilian={
+				large="gfx/leaders/OMA/Portrait_khal_jhaqo.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			id=-1
+		}
+	}
+}

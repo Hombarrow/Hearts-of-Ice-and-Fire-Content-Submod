@@ -2194,7 +2194,7 @@ if = {
 		id = TAR_crush_the_coward_khals
 		icon = GFX_focus_research
 		prerequisite = {
-			focus = TAR_cornered_in_the_fighting_pit
+			focus = TAR_harpys_in_the_alleys
 		}
 		x = 5
 		y = 7

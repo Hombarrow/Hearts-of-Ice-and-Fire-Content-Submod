@@ -1,0 +1,14 @@
+characters={
+	SLO_remaining_princes ={
+		name = "Remaining Princes"
+		portraits={
+			civilian={
+				large="gfx/leaders/SLO/Portrait_remaining_princes.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			id=-1
+		}
+	}
+}
