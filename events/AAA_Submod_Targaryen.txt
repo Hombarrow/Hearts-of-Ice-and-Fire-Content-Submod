@@ -966,11 +966,37 @@ country_event = {
 			remove_ideas = dothraki_bloodriders
 		}
 		set_global_flag = drogo_dead
+		end_puppet = OMA
 		hidden_effect = {
+			OMA = {
+				kill_country_leader = yes
+				promote_character = OMA_khal_jhaqo
+			}
 			SOV = {	country_event = { id = soviet.18 days = 5 } }
 		}
 	}
+}
 
+
+# Sons of the Harpy
+country_event = {
+	id = targaryen.24
+	title = targaryen.24.t
+	desc = targaryen.24.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.24.a
+		ai_chance = { factor = 40 }
+
+		-add_stability = 0.05
+
+		add_ideas = TAR_sons_of_the_harpy
+		complete_national_focus = TAR_children_of_the_harpy
+		set_global_flag = TAR_flag_sons_of_the_harpy
+	}
 }
 
 # TEST

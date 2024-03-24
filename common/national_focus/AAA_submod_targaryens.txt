@@ -1845,6 +1845,22 @@ if = {
 			}
 		}
 	}
+	focus = {
+		id = TAR_gather_the_unsullied
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TAR_astapordeal }
+		x = -3
+		y = 2
+		relative_position_id = TAR_breakerofchains
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
 
 	focus = {
 		id = TAR_takeyunkai
@@ -1982,6 +1998,12 @@ if = {
 			SOV = {
 				country_event = { id = soviet.25 }
 			}
+			hidden_effect = {
+				country_event = {
+					id = targaryen.24
+					days = 30
+				}
+			}
 		}
 	}
 
@@ -1992,7 +2014,7 @@ if = {
 		x = 0
 		y = 1
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2018,6 +2040,10 @@ if = {
 		relative_position_id = TAR_overlord
 		cost = 10
 
+		available = {
+			has_global_flag = TAR_flag_sons_of_the_harpy
+		}
+		
 		ai_will_do = {
 			factor = 20
 		}
@@ -2029,7 +2055,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-
+			add_political_power = 25
 		}
 	}
 	focus = {
@@ -2052,7 +2078,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -2113,10 +2139,9 @@ if = {
 		id = TAR_barristan_the_goddamn_bold
 		icon = GFX_focus_research
 		prerequisite = {
-			focus = TAR_harpys_in_the_alleys
 			focus = TAR_jorah_the_traitor
 		}
-		x = 6
+		x = 4
 		y = 4
 		relative_position_id = TAR_overlord
 		cost = 10
@@ -2168,7 +2193,7 @@ if = {
 			focus = TAR_jorah_returns_with_tyrion
 		}
 		prerequisite = {
-			focus = TAR_barristan_the_goddamn_bold
+			focus = TAR_bash_them_in_the_head
 			focus = TAR_cracking_down
 		}
 		x = 2
@@ -2195,9 +2220,10 @@ if = {
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_harpys_in_the_alleys
+			focus = TAR_cracking_down
 		}
 		x = 5
-		y = 7
+		y = 5
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2224,8 +2250,8 @@ if = {
 		prerequisite = {
 			focus = TAR_crush_the_coward_khals
 		}
-		x = 3
-		y = 8
+		x = 4
+		y = 7
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2250,7 +2276,7 @@ if = {
 			focus = TAR_dany_returns
 		}
 		x = 4
-		y = 9
+		y = 8
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2272,10 +2298,35 @@ if = {
 		id = TAR_varys_shows_up
 		icon = GFX_focus_research
 		prerequisite = {
-			focus = TAR_the_urge_for_home
+			focus = TAR_cornered_in_the_fighting_pit
 		}
-		x = 0
-		y = 10
+		x = 2
+		y = 7
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = TAR_tyrions_solution
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_varys_shows_up
+		}
+		x = 2
+		y = 8
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2300,7 +2351,7 @@ if = {
 			focus = TAR_dany_returns
 		}
 		prerequisite = {
-			focus = TAR_barristan_the_goddamn_bold
+			focus = TAR_harpys_in_the_alleys
 		}
 		x = 6
 		y = 8
@@ -2329,7 +2380,7 @@ if = {
 		x = 1
 		y = 2
 		relative_position_id = TAR_overlord
-		cost = 15
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2342,7 +2393,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = -0.05
+			add_political_power = 50
 		}
 	}
 	focus = {
@@ -2365,7 +2417,9 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = -50
+			add_stability = 0.05
+			#Lower Idea Severity
 		}
 	}
 	
@@ -2376,7 +2430,7 @@ if = {
 		x = -1
 		y = 3
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2389,7 +2443,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = 100
 		}
 	}
 	
@@ -2418,7 +2472,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.05
+			#Allow Decisions
 		}
 	}
 	
@@ -2444,7 +2499,9 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = -25
+			add_stability = -0.05
+			#Lower Harpy
 		}
 	}
 	focus = {
