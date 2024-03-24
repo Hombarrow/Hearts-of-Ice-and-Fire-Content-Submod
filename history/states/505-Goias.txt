@@ -1,0 +1,22 @@
+
+state={
+	id=505
+	name="STATE_505"
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		84 166 174 3079 3164 3175 6017 6091 9110 9113 9131 9199 9202 11086 11095 11177 
+	}
+	manpower=562200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

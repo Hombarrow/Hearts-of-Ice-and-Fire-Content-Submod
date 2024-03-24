@@ -1,0 +1,31 @@
+
+state={
+	id=337
+	name="STATE_337"
+
+	history={
+		owner = IRE
+		buildings = {
+			infrastructure = 1
+			13003 = {
+				naval_base = 4
+
+			}
+			3311 = {
+				naval_base = 2
+
+			}
+
+
+		}
+		add_core_of = IRE
+
+	}
+
+	provinces={
+		3311 6062 6196 13003 
+	}
+	manpower=25900
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

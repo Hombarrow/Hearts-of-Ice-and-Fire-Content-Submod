@@ -4,12 +4,14 @@ state={
 	name="STATE_488"
 
 	history={
-		owner = KOR
 		buildings = {
 			infrastructure = 2
 
 		}
+		owner = KOR
+		add_core_of = OYT
 		add_core_of = KOR
+		add_core_of = VIN
 	}
 
 	provinces={

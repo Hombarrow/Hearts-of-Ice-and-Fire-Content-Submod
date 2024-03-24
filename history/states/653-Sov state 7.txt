@@ -1,0 +1,31 @@
+
+state={
+	id=653
+	name="STATE_653"
+
+	history={
+		owner = SWE
+		victory_points = {
+			8190 3 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+#			air_base = 1
+
+		}
+		add_core_of = SWE
+		1939.1.1 = {
+
+		}
+
+	}
+
+	provinces={
+		1704 1841 8190 10648 
+	}
+	manpower=216165
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

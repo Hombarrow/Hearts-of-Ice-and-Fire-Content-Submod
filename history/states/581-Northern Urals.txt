@@ -1,0 +1,25 @@
+
+state={
+	id=581
+	name="STATE_581"
+	resources={
+		aluminium=3.000
+	}
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		239 2265 2391 2416 2440 2464 2490 2514 2537 2561 2614 2638 5661 
+	}
+	manpower=48831
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+}

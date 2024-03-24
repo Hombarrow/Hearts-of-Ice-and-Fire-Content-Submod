@@ -1,0 +1,27 @@
+
+state={
+	id=344
+	name="STATE_344"
+	manpower = 727198
+	
+	state_category = town
+
+	history={
+		owner = POR
+		victory_points = {
+			11746 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			11746 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = POR
+	}
+
+	provinces={
+		806 886 3889 3921 6813 6956 9893 11746 11810 
+	}
+}

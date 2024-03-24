@@ -1,0 +1,27 @@
+
+state={
+	id=568
+	name="STATE_568"
+
+	history={
+		owner = KOR
+		set_compliance = 90
+		add_core_of = SIA
+		buildings = {
+			infrastructure = 3
+
+		}
+#		victory_points = {
+#			4724 1 
+#		}
+
+	}
+
+	provinces={
+		1777 1850 3006 3411 4690 4818 5296 5392 7815 10712 
+	}
+	manpower=326427
+	buildings_max_level_factor=1.000
+	state_category=rural
+	impassable = yes
+}

@@ -40,6 +40,14 @@ usurper_ally = {
 usurper_1 = {
 		value = -200
 	}
+	
+hammer_of_the_jogos_nhai_opinion_modifier = {
+		value = 25
+	}
+	
+yi_ti_emperor_claimant = {
+		value = -75
+	}
 
 supported_side = {
 		value = 125

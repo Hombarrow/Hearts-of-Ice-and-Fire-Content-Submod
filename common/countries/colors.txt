@@ -185,10 +185,12 @@ IRQ = {
 	color = rgb { 178 114 99 }
 	color_ui = rgb { 231 148 129 }
 }
+
 JAP = {
-	color = hsv { 0.05 0.3 1 }
-	color_ui = hsv { 0.05 0.25 1.2 }
+	color = rgb { 0 0 110 } #color = hsv { 0.02 0.42 }
+	color_ui = rgb { 10 10 120 } #color_ui = hsv { 0.02 1 0.42 }
 }
+
 LIB = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
@@ -710,4 +712,8 @@ WUR = {
 SHL = {
 	color = rgb { 51 51 255 }
 	color_ui = rgb { 51 51 255 }
+}
+OYT = {
+	color = rgb { 204 102 0 }
+	color_ui = rgb { 214 112 10 }
 }

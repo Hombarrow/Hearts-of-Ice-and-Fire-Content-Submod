@@ -1,0 +1,32 @@
+state={
+	id=511
+	name="STATE_736"
+	
+	state_category = large_town
+
+	history={
+		owner = HUN
+		add_core_of = HUN
+		add_core_of = ENG
+		victory_points = {
+			6626 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			air_base = 2
+			11735 = {
+				naval_base = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		599 3679 6626 11595 11640 11735 
+	}
+	manpower=1263159
+	buildings_max_level_factor=1.000
+}

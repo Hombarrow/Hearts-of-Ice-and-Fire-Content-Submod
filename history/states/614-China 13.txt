@@ -1,0 +1,26 @@
+
+state={
+	id=614
+	name="STATE_614"
+
+	history={
+		owner = BLR
+		add_core_of = BLR
+		buildings = {
+			infrastructure = 2
+
+		}
+		1938.10.25 = {
+#			controller = JAP
+
+		}
+
+	}
+
+	provinces={
+		1169 1188 4032 4058 4093 4190 4208 4728 7000 7092 7109 7878 10003 10022 10053 10119 11944 11980 11996 12062 
+	}
+	manpower=443490
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

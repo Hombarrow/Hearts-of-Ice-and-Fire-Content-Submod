@@ -1,0 +1,33 @@
+
+state={
+	id=580
+	name="STATE_580" # Tobolsk
+	manpower = 188126
+	resources={
+		aluminium=5
+	}
+	
+	state_category = town
+
+	history={
+		owner = BLR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 1
+			7867 = {
+				naval_base = 2
+
+			}
+
+		}
+		victory_points = {
+			7867 1 
+		}
+		add_core_of = BLR
+	}
+
+	provinces={
+		1812 4746 4846 7768 7867 7895 10592 12700 
+	}
+}

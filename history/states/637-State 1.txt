@@ -1,0 +1,26 @@
+
+state={
+	id=637
+	name="STATE_637"
+
+	history={
+		owner = BLR
+		buildings = {
+			infrastructure = 2
+			6109 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = BLR
+
+	}
+
+	provinces={
+		18 26 89 127 138 140 3031 3086 3092 6034 6109 11071 11137 11178 
+	}
+	manpower=488310
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

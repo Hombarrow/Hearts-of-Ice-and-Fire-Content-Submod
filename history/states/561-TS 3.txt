@@ -1,0 +1,25 @@
+
+state={
+	id=561
+	name="STATE_561"
+
+	history={
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+
+		}
+		owner = KOR
+		add_core_of = OYT
+		add_core_of = KOR
+		add_core_of = VIN
+
+	}
+
+	provinces={
+		1991 2010 4731 5011 5094 8029 10755 10802 12784 12801 
+	}
+	manpower=754281
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

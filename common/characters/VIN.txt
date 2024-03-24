@@ -8,6 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=rexism
+			traits={ god_emperor_claimant sorcerer_lord }
 			id=-1
 		}
 	}

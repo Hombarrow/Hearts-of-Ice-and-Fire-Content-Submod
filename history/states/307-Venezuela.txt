@@ -1,0 +1,40 @@
+
+state={
+	id=307
+	name="STATE_307"
+	resources={
+		oil=4.000
+	}
+
+	history={
+		owner = ANG
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+#			air_base = 2
+#			8113 = {
+#				naval_base = 3
+#			}
+			12189 = {
+				naval_base = 2
+			}
+
+		}
+		add_core_of = ANG
+		victory_points = {
+			12189 5 
+		}
+		victory_points = {
+			725 1 
+		}
+
+	}
+
+	provinces={
+		1267 1325 1343 1397 4404 9589 9733 12136 12189 
+	}
+	manpower=1335010
+	buildings_max_level_factor=1.000
+	state_category=town
+}

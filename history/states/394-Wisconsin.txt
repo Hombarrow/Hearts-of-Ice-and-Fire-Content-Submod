@@ -1,0 +1,31 @@
+
+state={
+	id=394
+	name="STATE_394"
+	manpower = 939004
+	state_category = town
+	
+	resources={
+		steel=4
+	}
+
+	history={
+		owner = ANG
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			9657 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ANG
+#		victory_points = {
+#			12357 1 
+#		}
+
+	}
+
+	provinces={
+		1560 7829 9657 
+	}
+}

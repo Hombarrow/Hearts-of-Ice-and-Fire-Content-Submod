@@ -1,0 +1,31 @@
+state={
+	id=656
+	name="STATE_656"
+	manpower = 2080000
+	
+	state_category = large_city
+
+	resources={
+		steel=16
+	}
+	
+	history={
+		owner = EGY
+		add_core_of = EGY
+		victory_points = {
+			8085 40 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex =4
+			arms_factory = 2
+			8085 = {
+				naval_base = 4
+			}
+		}
+
+	}
+	provinces={
+		8085
+	}
+}

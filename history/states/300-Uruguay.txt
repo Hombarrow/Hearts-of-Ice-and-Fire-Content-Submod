@@ -1,0 +1,44 @@
+
+state={
+	id=300
+	name="STATE_300"
+	resources={
+		oil=2.000
+		steel=2.000
+	}
+
+	history={
+		owner = BEL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+#			dockyard = 1
+#			air_base = 1
+#			10362 = {
+#				naval_base = 6
+#				bunker = 1
+#				coastal_bunker = 1
+#			}
+
+		}
+		add_core_of = BEL
+		1940.3.14 = {
+			owner = IRE
+			controller = IRE
+			add_core_of = IRE
+
+		}
+		victory_points = {
+			1654 1 
+		}
+
+	}
+
+	provinces={
+		63 132 1613 1654 3125 4457 6078 6198 9104 9156 10362 10502 11024 11199 12496 
+	}
+	manpower=1111100
+	buildings_max_level_factor=1.000
+	state_category=town
+}

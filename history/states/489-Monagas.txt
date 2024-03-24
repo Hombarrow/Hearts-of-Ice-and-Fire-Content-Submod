@@ -1,0 +1,33 @@
+
+state={
+	id=489
+	name="STATE_489"
+	resources={
+		oil=7.000
+	}
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			8034 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = EGY
+		victory_points = {
+			8034 1 
+		}
+
+	}
+
+	provinces={
+		1969 4952 8034 10831 12731 
+	}
+	manpower=476373
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -11,8 +11,10 @@ state={
 	}
 
 	history={
-		owner = KOR
+		owner = OYT
+		add_core_of = OYT
 		add_core_of = KOR
+		add_core_of = VIN
 		buildings = {
 			infrastructure = 4
 		}

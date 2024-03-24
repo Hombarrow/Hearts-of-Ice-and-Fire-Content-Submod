@@ -1123,29 +1123,29 @@ SAU_neutrality_ADJ:0 "Nomad"
  
 SAU_communism_ADJ:0 "Nomad"
  
-SIA_fascism:0 "Grey Waste Others"
+JAP_fascism:0 "Demons"
  
-SIA_fascism_DEF:0 "Grey Waste Others"
+JAP_fascism_DEF:0 "Demons"
  
-SIA_democratic:0 "Grey Waste Others"
+JAP_democratic:0 "Demons"
  
-SIA_democratic_DEF:0 "Grey Waste Others"
+JAP_democratic_DEF:0 "Demons"
  
-SIA_neutrality:0 "Grey Waste Others"
+JAP_neutrality:0 "Demons"
  
-SIA_neutrality_DEF:0 "Grey Waste Others"
+JAP_neutrality_DEF:0 "Demons"
  
-SIA_communism:0 "Grey Waste Others"
+JAP_communism:0 "Demons"
  
-SIA_communism_DEF:0 "Grey Waste Others"
+JAP_communism_DEF:0 "Demons"
  
-SIA_fascism_ADJ:0 "Wight"
+JAP_fascism_ADJ:0 "Demonic"
  
-SIA_democratic_ADJ:0 "Wight"
+JAP_democratic_ADJ:0 "Demonic"
  
-SIA_neutrality_ADJ:0 "Wight"
+JAP_neutrality_ADJ:0 "Demonic"
  
-SIA_communism_ADJ:0 "Wight"
+JAP_communism_ADJ:0 "Demonic"
  
 SIK_fascism:0 "Dictatorial Sinkiang"
  SIK_fascism_DEF:0 "Dictatorial Sinkiang"
@@ -1897,6 +1897,30 @@ LAO_democratic_ADJ:0 "Leng"
 LAO_neutrality_ADJ:0 "Leng"
  
 LAO_communism_ADJ:0 "Leng"
+
+OYT_fascism:0 "Orange Empire"
+ 
+OYT_fascism_DEF:0 "The Orange Empire"
+ 
+OYT_democratic:0 "Republic of the Traders"
+ 
+OYT_democratic_DEF:0 "The Republic of the Traders"
+ 
+OYT_neutrality:0 "Republic of the Traders"
+ 
+OYT_neutrality_DEF:0 "The Republic of the Traders"
+ 
+OYT_communism:0 "Democratic Republic of the Traders"
+ 
+OYT_communism_DEF:0 "The Democratic Republic of the Traders"
+ 
+OYT_fascism_ADJ:0 "The Traders"
+ 
+OYT_democratic_ADJ:0 "The Traders"
+ 
+OYT_neutrality_ADJ:0 "The Traders"
+ 
+OYT_communism_ADJ:0 "The Traders"
  
 CAM_fascism:0 "Kingdom of Lengii"
  
@@ -2258,21 +2282,21 @@ BOT_neutrality_ADJ:0 "Tribemen"
  
 BOT_communism_ADJ:0 "Tribemen"
  
-MAN_fascism:0 "Mossovan Empire"
+MAN_fascism:0 "Mossovy"
  
-MAN_fascism_DEF:0 "The Mossovan Empire"
+MAN_fascism_DEF:0 "The Mossovy"
  
-MAN_democratic:0 "Mossovy Republic"
+MAN_democratic:0 "Mossovy"
  
-MAN_democratic_DEF:0 "The Mossovy Republic"
+MAN_democratic_DEF:0 "The Mossovy"
  
-MAN_neutrality:0 "Kingdom of Mossovy"
+MAN_neutrality:0 "Mossovy"
  
-MAN_neutrality_DEF:0 "The Kingdom of Mossovy"
+MAN_neutrality_DEF:0 "Mossovy"
  
-MAN_communism:2 "Free Mossovy"
+MAN_communism:2 "Mossovy"
  
-MAN_communism_DEF:1 "The Free Mossovy"
+MAN_communism_DEF:1 "ossovy"
  
 MAN_fascism_ADJ:0 "Mossovan"
  

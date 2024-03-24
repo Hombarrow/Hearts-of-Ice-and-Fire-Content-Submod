@@ -1,0 +1,20 @@
+characters={
+	OYT_pol_qo={
+		name = "Pol Qo"
+		portraits={
+			army={
+				large="gfx/leaders/OYT/Portrait_pol_qo.dds"
+			}
+			civilian={
+				large="gfx/leaders/OYT/Portrait_pol_qo.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=fascism_ideology
+			traits={ hammer_of_the_jogos_nhai god_emperor_claimant }
+			expire="1985.1.1.1"
+			id=-1
+		}
+	}
+}

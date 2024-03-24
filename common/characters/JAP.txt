@@ -1,0 +1,30 @@
+characters={
+	JAP_southern_night_king={
+		name = "The Bloodstone Emperor"
+		#desc = "POLITICS_NIGHT_KING_DESC"
+		portraits={
+			army={
+				large="gfx/leaders/JAP/Portrait_bloodstone_emperor.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/JAP/Portrait_bloodstone_emperor.dds"
+				small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={ mistery_other }
+			id=-1
+		}
+		field_marshal={
+			traits={ defensive_doctrine offensive_doctrine }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+}

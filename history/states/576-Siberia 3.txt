@@ -1,0 +1,21 @@
+
+state={
+	id=576
+	name="STATE_576"
+
+	history={
+		owner = MAN
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1679 1780 1837 2609 4842 7252 7750 7863 10576 10705 12595 12655 12666 
+	}
+	manpower=117195
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

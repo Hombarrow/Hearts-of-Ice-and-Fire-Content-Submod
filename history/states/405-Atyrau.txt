@@ -1,0 +1,34 @@
+
+state={
+	id=405
+	name="STATE_405"
+
+	history={
+		owner = ISR
+		victory_points = {
+			1632 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 1
+
+		}
+		add_core_of = ISR
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		756 1384 1573 1632 7639 9605 10205 10671 12239 12581 12722 
+	}
+	manpower=675820
+	buildings_max_level_factor=1.000
+	state_category=town
+}

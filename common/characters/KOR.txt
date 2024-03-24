@@ -1,0 +1,20 @@
+characters={
+	KOR_bu_gai={
+		name = "Bu Gai"
+		portraits={
+			army={
+				large="gfx/leaders/KOR/Portrait_bu_gai.dds"
+			}
+			civilian={
+				large="gfx/leaders/KOR/Portrait_bu_gai.dds"
+			}
+		}
+		gender = male
+		country_leader={
+			ideology=despotism
+			traits={ god_emperor }
+			expire="1985.1.1.1"
+			id=-1
+		}
+	}
+}

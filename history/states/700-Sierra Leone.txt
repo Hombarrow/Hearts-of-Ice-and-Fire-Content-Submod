@@ -1,0 +1,27 @@
+state={
+	id=700
+	name="STATE_700"
+	manpower = 68500
+	
+	state_category = pastoral
+	
+	history=
+	{
+		owner = KEN
+		add_core_of = KEN
+		victory_points = {
+			2038 1 
+		}
+		buildings = {
+			infrastructure = 3
+			2038 = {
+				naval_base = 1
+			}
+		}
+
+	}
+	
+	provinces={
+		2038 2094 
+	}
+}

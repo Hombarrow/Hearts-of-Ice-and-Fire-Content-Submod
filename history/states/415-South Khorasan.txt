@@ -1,0 +1,26 @@
+
+state={
+	id=415
+	name="STATE_415" # Herat
+	manpower = 16328
+	
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = ISR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ISR
+		1940.3.14 = {
+			owner = SOV
+			controller = SOV
+
+		}
+	}
+
+	provinces={
+		1948 1995 2017 2062 2078 2101 4893 4949 5020 5064 8053 8090 10789 12788 12871 
+	}
+}
