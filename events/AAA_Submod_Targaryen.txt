@@ -991,11 +991,265 @@ country_event = {
 		name = targaryen.24.a
 		ai_chance = { factor = 40 }
 
-		-add_stability = 0.05
+		add_stability = -0.05
 
-		add_ideas = TAR_sons_of_the_harpy
+		add_ideas = TAR_sons_of_the_harpy1
 		complete_national_focus = TAR_children_of_the_harpy
 		set_global_flag = TAR_flag_sons_of_the_harpy
+	}
+}
+
+# Sons of the Harpy Backfire
+country_event = {
+	id = targaryen.25
+	title = targaryen.25.t
+	desc = targaryen.25.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.25.a
+		ai_chance = { factor = 40 }
+
+		add_stability = -0.25
+
+		add_ideas = TAR_sons_of_the_harpy4
+	}
+}
+
+# Jorah is a Spy
+country_event = {
+	id = targaryen.26
+	title = targaryen.26.t
+	desc = targaryen.26.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.26.a
+		ai_chance = { factor = 40 }
+		-add_stability = 0.05
+		retire_character = TAR_ser_jorah
+		set_global_flag = TAR_flag_jorah_dead
+		set_global_flag = TAR_flag_jorahs_secret
+	}
+	option = {
+		name = targaryen.26.b
+		ai_chance = { factor = 40 }
+		retire_character = TAR_ser_jorah
+		set_global_flag = TAR_flag_jorahs_secret
+		hidden_effect = {
+			country_event = {
+				id = targaryen.27
+				days = 75
+			}
+		}
+	}
+}
+
+# Jorah Returns with Tyrion
+country_event = {
+	id = targaryen.27
+	title = targaryen.27.t
+	desc = targaryen.27.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.27.a
+		ai_chance = { factor = 40 }
+		-add_stability = 0.05
+		set_global_flag = TAR_flag_jorah_dead
+		#recruit_character = TAR_tyrion through the focus
+		hidden_effect = {
+			country_event = {
+				id = targaryen.29
+				days = 170
+			}
+		}
+	}
+	option = {
+		name = targaryen.27.b
+		ai_chance = { factor = 40 }
+		hidden_effect = {
+			country_event = {
+				id = targaryen.28
+				days = 80
+			}
+		}
+		complete_national_focus = TAR_jorah_returns_with_tyrion
+		set_global_flag = TAR_flag_jorah_returned_with_tyrion
+		#recruit_character = TAR_tyrion through the focus
+	}
+}
+
+# Jorah Comes back Again in the fighting pit
+country_event = {
+	id = targaryen.28
+	title = targaryen.28.t
+	desc = targaryen.28.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.28.a
+		ai_chance = { factor = 40 }
+		recruit_character = TAR_ser_jorah
+		complete_national_focus = TAR_cornered_in_the_fighting_pit
+		hidden_effect = {
+			country_event = {
+				id = targaryen.29
+				days = 1
+			}
+		}
+		set_global_flag = TAR_flag_dany_stuck_in_the_fighting_pit
+	}
+}
+
+# Dany Flys Away
+country_event = {
+	id = targaryen.29
+	title = targaryen.29.t
+	desc = targaryen.29.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.29.a
+		ai_chance = { factor = 40 }
+		hidden_effect = {
+			country_event = {
+				id = targaryen.30
+				days = 85
+			}
+		}
+	}
+}
+
+# Dany Comes Back
+country_event = {
+	id = targaryen.30
+	title = targaryen.30.t
+	desc = targaryen.30.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.30.a
+		ai_chance = { factor = 40 }
+		complete_national_focus = TAR_dany_returns
+		set_global_flag = TAR_flag_dany_returns
+	}
+}
+
+# Burn the Khals
+country_event = {
+	id = targaryen.31
+	title = targaryen.31.t
+	desc = targaryen.31.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.31.a
+		ai_chance = { factor = 40 }
+		AFG = {
+			retire_character = AFG_khal_moro
+		}
+		SYR = {
+			retire_character = SYR_khal_rhalko
+		}
+		OMA = {
+			retire_character = OMA_khal_jhaqo
+		}
+		every_state = {
+			limit = {
+				is_core_of = AFG
+			}
+			SOV = {
+				add_state_core = PREV
+			}
+		}
+		country_event = {
+			id = targaryen.32
+			days = 2
+		}
+	}
+}
+
+# Dany Speech
+country_event = {
+	id = targaryen.32
+	title = targaryen.32.t
+	desc = targaryen.32.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.32.a
+		ai_chance = { factor = 40 }
+		annex_country = {
+			target = AFG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SYR
+			transfer_troops = no
+		}
+		annex_country = {
+			target = OMA
+			transfer_troops = yes
+		}
+		puppet = RAJ
+	}
+}
+
+
+# Dothraki Decision
+country_event = {
+	id = targaryen.33
+	title = targaryen.33.t
+	desc = targaryen.33.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.33.a
+		complete_national_focus = TAR_leave_the_dothraki
+		custom_effect_tooltip = TAR_tooltip_long_term_benefits.tt
+	}
+	option = {
+		name = targaryen.33.b
+		complete_national_focus = TAR_bring_all_the_blood_riders
+	}
+}
+
+# Wight Walker Warning
+country_event = {
+	id = targaryen.34
+	title = targaryen.34.t
+	desc = targaryen.34.desc
+	picture = GFX_report_event_soviet_tanks
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.34.a
+		complete_national_focus = TAR_ignore_them
+		custom_effect_tooltip = TAR_tooltip_long_term_consequences.tt
+	}
+	option = {
+		name = targaryen.34.b
+		complete_national_focus = TAR_take_the_dragons_beyond_the_wall
 	}
 }
 
@@ -1011,7 +1265,8 @@ country_event = {
 	option = {
 		name = targaryen.999.a		#TEST
 		ai_chance = { factor = 40 }
-		promote_character = SAF_corsairs_and_pirates
+		create_faction = "Targaryen Dynastysssss"
+		#SOV = { add_to_faction = IRE }
 	}
 
 }

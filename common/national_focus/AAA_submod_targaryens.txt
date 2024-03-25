@@ -737,7 +737,7 @@ focus_tree = {
 		x = 23
 		y = 0
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 30
@@ -747,7 +747,7 @@ focus_tree = {
 			any_owned_state {
 				is_coastal = yes
 			}
-			has_completed_focus = TAR_the_urge_for_home
+			has_completed_focus = TAR_our_naval_plan
 		}
 
 		bypass = {
@@ -774,7 +774,7 @@ focus_tree = {
 		x = 23
 		y = 1
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 70
@@ -842,7 +842,7 @@ focus_tree = {
 		x = 23
 		y = 2
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -880,7 +880,7 @@ focus_tree = {
 		x = 21
 		y = 2
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -918,7 +918,7 @@ focus_tree = {
 		x = 25
 		y = 2
 
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 10
@@ -2079,6 +2079,13 @@ if = {
 
 		completion_reward = {
 			add_stability = 0.1
+			remove_ideas = TAR_sons_of_the_harpy1
+			hidden_effect = {
+				country_event = {
+					id = targaryen.25
+					days = 15
+				}
+			}
 		}
 	}
 	focus = {
@@ -2089,7 +2096,7 @@ if = {
 			focus = TAR_cracking_down
 		}
 		available = {
-			has_global_flag = TAR_flag_jorahs_past_revealed
+			has_global_flag = TAR_flag_jorahs_secret
 		}
 		x = 3
 		y = 3
@@ -2107,7 +2114,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -2115,11 +2122,12 @@ if = {
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
+			focus = TAR_cracking_down
 		}
 		x = 5
 		y = 3
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2132,7 +2140,39 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = 0.1
+			hidden_effect = {
+				country_event = {
+					id = targaryen.26
+					days = 65
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAR_execute_slavers
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_bash_them_in_the_head
+		}
+		x = 5
+		y = 5
+		relative_position_id = TAR_overlord
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 120
 		}
 	}
 	focus = {
@@ -2157,7 +2197,14 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			IF = {
+				limit = {
+				}
+			}
+			IF = {
+				limit = {
+				}
+			}
 		}
 	}
 	focus = {
@@ -2170,7 +2217,13 @@ if = {
 		y = 5
 		relative_position_id = TAR_overlord
 		cost = 10
-
+		available = {
+			NOT = {
+				has_global_flag = TAR_flag_jorah_dead
+			}
+			has_global_flag = TAR_flag_jorah_returned_with_tyrion
+		}
+		
 		ai_will_do = {
 			factor = 20
 		}
@@ -2182,7 +2235,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_political_power = 50
+			#Add Tyrion Lannister
 		}
 	}
 	
@@ -2195,6 +2249,9 @@ if = {
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
 			focus = TAR_cracking_down
+		}
+		available = {
+			has_global_flag = TAR_flag_dany_stuck_in_the_fighting_pit
 		}
 		x = 2
 		y = 6
@@ -2212,18 +2269,18 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = -0.1
 		}
 	}
 	focus = {
-		id = TAR_crush_the_coward_khals
+		id = TAR_burn_the_coward_khals
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_harpys_in_the_alleys
 			focus = TAR_cracking_down
 		}
 		x = 5
-		y = 5
+		y = 6
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2235,10 +2292,10 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-		
+			country_event = {
+				id = targaryen.32
+			}
 		}
 	}
 	focus = {
@@ -2248,7 +2305,10 @@ if = {
 			focus = TAR_cornered_in_the_fighting_pit
 		}
 		prerequisite = {
-			focus = TAR_crush_the_coward_khals
+			focus = TAR_burn_the_coward_khals
+		}
+		available = {
+			has_global_flag = TAR_flag_dany_returns
 		}
 		x = 4
 		y = 7
@@ -2266,7 +2326,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = 0.15
 		}
 	}
 	focus = {
@@ -2278,7 +2338,7 @@ if = {
 		x = 4
 		y = 8
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2303,7 +2363,7 @@ if = {
 		x = 2
 		y = 7
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2316,7 +2376,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			#Varys Recruit
 		}
 	}
 	focus = {
@@ -2341,7 +2401,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
+			add_stability = 0.05
+			custom_effect_tooltip = TAR_tooltip_ensure_no_more_harpy.tt
 		}
 	}
 	focus = {
@@ -2351,7 +2412,7 @@ if = {
 			focus = TAR_dany_returns
 		}
 		prerequisite = {
-			focus = TAR_harpys_in_the_alleys
+			focus = TAR_execute_slavers
 		}
 		x = 6
 		y = 8
@@ -2395,6 +2456,7 @@ if = {
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = 50
+			TAR_scripted_effects_lower_harpy = yes
 		}
 	}
 	focus = {
@@ -2419,7 +2481,7 @@ if = {
 		completion_reward = {
 			add_political_power = -50
 			add_stability = 0.05
-			#Lower Idea Severity
+			TAR_scripted_effects_lower_harpy = yes
 		}
 	}
 	
@@ -2501,7 +2563,7 @@ if = {
 		completion_reward = {
 			add_political_power = -25
 			add_stability = -0.05
-			#Lower Harpy
+			TAR_scripted_effects_lower_harpy = yes
 		}
 	}
 	focus = {
@@ -2523,10 +2585,10 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-		
+			add_stability = 0.05
+			#Decisions
+			TAR_scripted_effects_lower_harpy = yes
 		}
 	}
 	focus = {
@@ -2554,7 +2616,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			TAR_scripted_effects_lower_harpy = yes
 		}
 	}
 	focus = {
@@ -2584,7 +2646,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = 75
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -2613,7 +2676,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.15
 		}
 	}
 	focus = {
@@ -2625,7 +2688,7 @@ if = {
 		x = 2
 		y = 11
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -2638,7 +2701,9 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			country_event = {
+				id = targaryen.33
+			}
 		}
 	}
 	focus = {
@@ -2664,7 +2729,9 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.05
+			remove_ideas = dothraki_bloodriders
+			custom_effect_tooltip = TAR_tooltip_long_term_benefits.tt
 		}
 	}
 	focus = {
@@ -2690,7 +2757,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -2715,7 +2782,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			navy_experience = 35
 		}
 	}
 	focus = {
@@ -2740,13 +2807,46 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 150
+				producer = SOV
+			}
+		}
+	}
+	focus = {
+		id = TAR_contact_yara_and_theon
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_construct_what_we_can
+		}
+		x = 6
+		y = 13
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 900
+				producer = ROM
+			}
 		}
 	}
 	focus = {
 		id = TAR_a_strategic_military
 		icon = GFX_focus_research
-		mutually_exclusive = { focus = TAR_the_greyjoy_offer }
+		mutually_exclusive = { focus = TAR_a_large_army }
 		prerequisite = {
 			focus = TAR_leave_the_dothraki
 		}
@@ -2769,11 +2869,12 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.1
+			add_war_support = 0.05
 		}
 	}
 	focus = {
-		id = TAR_the_greyjoy_offer
+		id = TAR_a_large_army
 		mutually_exclusive = { focus = TAR_a_strategic_military }
 		icon = GFX_focus_research
 		prerequisite = {
@@ -2798,7 +2899,8 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.05
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -2808,7 +2910,7 @@ if = {
 			focus = TAR_a_strategic_military
 		}
 		prerequisite = {
-			focus = TAR_the_greyjoy_offer
+			focus = TAR_a_large_army
 		}
 		x = 3
 		y = 14
@@ -2826,7 +2928,26 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			SOV = {
+				set_state_owner = 178
+			}
+			load_oob = "TAR_westeros"
+			IF = {
+				limit = {
+					has_completed_focus = TAR_a_large_army
+				}
+				complete_national_focus = TAR_an_unpopular_foreign_army
+			}
+			IF = {
+				limit = {
+					has_completed_focus = TAR_a_strategic_military
+				}
+				complete_national_focus = TAR_a_westorosi_army
+			}
+			hidden_effect = {
+				leave_faction = yes
+			}
+			create_faction = "Targaryen Kingdom"
 		}
 	}
 	focus = {
@@ -2836,7 +2957,7 @@ if = {
 			focus = TAR_set_sail_for_dragonstone
 		}
 		prerequisite = {
-			focus = TAR_the_greyjoy_offer
+			focus = TAR_a_large_army
 		}
 		x = 4
 		y = 15
@@ -2854,7 +2975,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = 50
 		}
 	}
 	focus = {
@@ -2932,7 +3053,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -3022,7 +3143,7 @@ if = {
 		x = 0
 		y = 16
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -3035,7 +3156,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			SOV = { add_to_faction = IRE }
 		}
 	}
 	focus = {
@@ -3047,7 +3168,7 @@ if = {
 		x = -1
 		y = 19
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -3060,7 +3181,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			SOV = { add_to_faction = SPR }
 		}
 	}
 	focus = {
@@ -3072,20 +3193,22 @@ if = {
 		x = -2
 		y = 16
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
 		}
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
 		
+		completion_reward = {
+			puppet = {
+				target = SPR
+				end_wars = yes
+			}
+			complete_national_focus = TAR_ellaria_and_the_sandsnakes
 		}
 	}
 	focus = {
@@ -3097,7 +3220,7 @@ if = {
 		x = -2
 		y = 17
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -3110,7 +3233,11 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			puppet = {
+				target = IRE
+				end_wars = yes
+			}
+			complete_national_focus = TAR_turn_to_olenna
 		}
 	}
 	focus = {
@@ -3136,7 +3263,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			SOV = { add_to_faction = FIN }
 		}
 	}
 	focus = {
@@ -3161,7 +3288,9 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			country_event = {
+				id = targaryen.34
+			}
 		}
 	}
 	focus = {
@@ -3187,7 +3316,7 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			custom_effect_tooltip = TAR_tooltip_long_term_consequences.tt
 		}
 	}
 	focus = {
@@ -3244,6 +3373,7 @@ if = {
 	focus = {
 		id = TAR_cersei_promises_a_lannister_army
 		icon = GFX_focus_research
+		mutually_exclusive = { focus = TAR_jon_snow_fs_everything_up }
 		prerequisite = {
 			focus = TAR_meeting_at_the_dragonpit
 		}
@@ -3269,6 +3399,7 @@ if = {
 	focus = {
 		id = TAR_jon_snow_fs_everything_up
 		icon = GFX_focus_research
+		mutually_exclusive = { focus = TAR_cersei_promises_a_lannister_army }
 		prerequisite = {
 			focus = TAR_meeting_at_the_dragonpit
 		}
@@ -3292,7 +3423,7 @@ if = {
 		}
 	}
 	focus = {
-		id = TAR_the_long_night
+		id = TAR_hold_up_in_winterfell
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_cersei_promises_a_lannister_army
@@ -3300,6 +3431,31 @@ if = {
 		}
 		x = 7
 		y = 21
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = TAR_the_long_night
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_hold_up_in_winterfell
+		}
+		x = 7
+		y = 22
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -3489,7 +3645,7 @@ if = {
 		x = 2
 		y = 10
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -3502,7 +3658,34 @@ if = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-		
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = TAR_dump_daario
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_play_the_game_of_thrones
+		}
+		x = 6
+		y = 11
+		relative_position_id = TAR_overlord
+		cost = 3
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.1
+			retire_character = TAR_daario_naharis
 		}
 	}
 	focus = {

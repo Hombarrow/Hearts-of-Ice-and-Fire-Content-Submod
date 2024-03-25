@@ -253,7 +253,7 @@ country_event = {
 		hidden_effect = {
 			set_politics = {
 			
-				ruling_party = communism			
+				ruling_party = neutrality			
 				elections_allowed = no
 		
 			}
@@ -724,17 +724,7 @@ country_event = {
 			planning_skill = 1
 			logistics_skill = 2
 		}
-		create_corps_commander = {
-			name = "Daario Naharis"
-			picture = "Portrait_Daario.dds"
-			id = 599
-			traits = { panzer_leader }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-		}
+		recruit_character = TAR_daario_naharis
 		hidden_effect = {
 			division_template = {
 				name = "Second Sons Infantry Division"
@@ -854,17 +844,7 @@ country_event = {
 	option = {
 		name = soviet.22.a
 		set_global_flag = second_sons_not_4_hire
-		create_corps_commander = {
-			name = "Daario Naharis"
-			picture = "Portrait_Daario.dds"
-			id = 599
-			traits = { panzer_leader }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-		}
+		recruit_character = TAR_daario_naharis
 		hidden_effect = {
 
 			division_template = {

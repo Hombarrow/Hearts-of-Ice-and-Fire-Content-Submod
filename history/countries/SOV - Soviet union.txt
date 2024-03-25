@@ -10,6 +10,8 @@ add_ideas = limited_exports
 add_ideas = mixed
 add_ideas = atheist
 
+create_faction = "Targaryen Kingdom"
+
 recruit_character = TAR_daenerys
 recruit_character = TAR_ser_jorah
 recruit_character = TAR_kinvara

@@ -1,7 +1,11 @@
 ﻿l_english:
- targaryen_tooltip_sell_drogon.tt:0 "The More Worthwhile Choice >:D"
+ targaryen_tooltip_sell_drogon.tt:0 "§GThe More Worthwhile Choice >:D§W"
  TAR_children_of_the_harpy:0 "The Sons of the Harpy"
  TAR_bash_them_in_the_head:0 "Flood in the Unsullied"
  TAR_jorah_the_traitor:0 "Jorah the Traitor"
  TAR_harpys_in_the_alleys:0 "Re-Open the Fighting Pits"
  TAR_cracking_down:0 "Cracking Down and Buying Time"
+ TAR_tooltip_ensure_no_more_harpy.tt:0 "§GThis will Ensure that the Sons of the Harpy never return§W"
+ TAR_tooltip_long_term_benefits.tt:0 "§GThis decision has Long Term Benefits§W"
+ TAR_tooltip_long_term_consequences.tt:0 "§RThis decision has Long Term Consequences...§W"
+ targaryen.34.t:0 "I'm sorry, Whats coming down from the Far North?"

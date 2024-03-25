@@ -1,0 +1,128 @@
+ideas = { 
+	country = {
+
+		TAR_sons_of_the_harpy1 = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.25
+				conscription = -0.005
+				stability_weekly = -0.002
+			}
+		}
+		
+		TAR_sons_of_the_harpy2 = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.20
+				conscription = -0.004
+				stability_weekly = -0.002
+			}
+		}
+		
+		TAR_sons_of_the_harpy3 = {
+			picture = chi_war_of_resistance2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.15
+				conscription = -0.0025
+				stability_weekly = -0.001
+			}
+		}
+		
+		TAR_sons_of_the_harpy4 = {
+			picture = chi_war_of_resistance2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.1
+				conscription = -0.001
+				stability_weekly = -0.001
+			}
+		}
+		
+		TAR_sons_of_the_harpy4 = {
+			picture = chi_war_of_resistance1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				stability_weekly = -0.001
+			}
+		}
+		
+		TAR_sons_of_the_harpy5 = {
+			picture = SPR_the_popular_front
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+	}
+}

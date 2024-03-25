@@ -13,7 +13,7 @@ characters={
 		}
 		gender = female
 		country_leader={
-			ideology=stalinism
+			ideology=centrism
 			traits={ blood_of_the_dragon }
 			expire="1985.1.1.1"
 			id=-1
@@ -56,6 +56,27 @@ characters={
 				ai_will_do = {
 					factor = 1.000
 				}
+		}
+	}
+	
+	TAR_daario_naharis={
+#		name="Daario Naharis"
+		portraits={
+			army={
+				large="gfx/leaders/SOV/Portrait_Daario.dds"
+			}
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Daario.dds"
+			}
+		}
+		corps_commander={
+			traits = { panzer_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=-1
 		}
 	}
 
