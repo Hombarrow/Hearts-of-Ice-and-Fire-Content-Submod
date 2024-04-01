@@ -1029,15 +1029,15 @@ country_event = {
 		
 	option = {
 		name = targaryen.26.a
-		ai_chance = { factor = 40 }
-		-add_stability = 0.05
+		ai_chance = { factor = 0 }
+		add_stability = -0.1
 		retire_character = TAR_ser_jorah
 		set_global_flag = TAR_flag_jorah_dead
 		set_global_flag = TAR_flag_jorahs_secret
 	}
 	option = {
 		name = targaryen.26.b
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 100 }
 		retire_character = TAR_ser_jorah
 		set_global_flag = TAR_flag_jorahs_secret
 		hidden_effect = {
@@ -1060,8 +1060,8 @@ country_event = {
 		
 	option = {
 		name = targaryen.27.a
-		ai_chance = { factor = 40 }
-		-add_stability = 0.05
+		ai_chance = { factor = 0 }
+		add_stability = -0.1
 		set_global_flag = TAR_flag_jorah_dead
 		#recruit_character = TAR_tyrion through the focus
 		hidden_effect = {
@@ -1073,13 +1073,8 @@ country_event = {
 	}
 	option = {
 		name = targaryen.27.b
-		ai_chance = { factor = 40 }
-		hidden_effect = {
-			country_event = {
-				id = targaryen.28
-				days = 80
-			}
-		}
+		ai_chance = { factor = 100 }
+		set_global_flag = TAR_flag_turn_away_jorah
 		complete_national_focus = TAR_jorah_returns_with_tyrion
 		set_global_flag = TAR_flag_jorah_returned_with_tyrion
 		#recruit_character = TAR_tyrion through the focus
@@ -1093,7 +1088,16 @@ country_event = {
 	desc = targaryen.28.desc
 	picture = GFX_report_event_soviet_tanks
 	
-	is_triggered_only = yes
+	trigger = {
+		AND = {
+			has_completed_focus = TAR_harpys_in_the_alleys
+			OR = {
+				has_global_flag = TAR_flag_jorah_dead
+				has_global_flag = TAR_flag_turn_away_jorah
+			}
+		}
+	}
+	mean_time_to_happen = { days = 80 }
 		
 	option = {
 		name = targaryen.28.a
@@ -1229,7 +1233,7 @@ country_event = {
 	}
 	option = {
 		name = targaryen.33.b
-		complete_national_focus = TAR_bring_all_the_blood_riders
+		complete_national_focus = TAR_bring_all_the_bloodriders
 	}
 }
 
@@ -1253,6 +1257,822 @@ country_event = {
 	}
 }
 
+# Annual Harpy Warning
+country_event = {
+	id = targaryen.35
+	title = targaryen.35.t
+	desc = targaryen.35.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	trigger = {	
+		SOV = {
+			has_global_flag = TAR_flag_sons_of_the_harpy
+		}
+	}
+	
+	mean_time_to_happen = { days = 90 }
+		
+	option = {
+		name = targaryen.35.a
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+
+# Jorah Grayscale
+country_event = {
+	id = targaryen.36
+	title = targaryen.36.t
+	desc = targaryen.36.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.36.a
+		add_stability = -0.05
+		add_political_power = 50
+		retire_character = TAR_ser_jorah
+		country_event = {
+			id = targaryen.48
+			days = 365
+		}
+	}
+}
+
+# Barristan Dies 
+country_event = {
+	id = targaryen.38
+	title = targaryen.38.t
+	desc = targaryen.38.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.38.a
+		add_stability = -0.05
+		retire_character = TAR_barristan
+	}
+}
+
+# Barristan Handles That
+country_event = {
+	id = targaryen.37
+	title = targaryen.37.t
+	desc = targaryen.37.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.37.a
+		add_stability = 0.05
+	}
+}
+
+# Overlord of Slavers Bay Partial
+country_event = {
+	id = soviet.63
+	title = soviet.63.t
+	desc = soviet.63.d
+	picture = GFX_report_event_soviet_purge_trial
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 98
+		}
+		name = soviet.63.a
+		set_capital = { state = 656 }
+		hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = EGY
+				is_owned_and_controlled_by = SOV
+			}
+			SOV = {
+				add_state_core = PREV
+			}
+		}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 2
+		}
+		name = soviet.63.b
+		set_capital = { state = 321 }
+		hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = PER
+				is_owned_and_controlled_by = SOV
+			}
+			SOV = {
+				add_state_core = PREV
+			}
+		}
+		}
+	}
+}
+# Yunkai Accepts
+country_event = {
+	id = targaryen.39
+	title = targaryen.39.t
+	desc = targaryen.39.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.39.a
+		add_political_power = 100
+		#States
+		239 = {
+			transfer_state_to = SOV
+		}
+		652 = {
+			transfer_state_to = SOV
+		}
+		401 = {
+			transfer_state_to = SOV
+		}
+		257 = {
+			transfer_state_to = SOV
+		}
+		223 = {
+			transfer_state_to = SOV
+		}
+		222 = {
+			transfer_state_to = SOV
+		}
+		236 = {
+			transfer_state_to = SOV
+		}
+		217 = {
+			transfer_state_to = SOV
+		}
+		509 = {
+			transfer_state_to = SOV
+		}
+		221 = {
+			transfer_state_to = SOV
+		}
+		add_stability = 0.05
+		set_truce = {
+			target = IRA
+			days = 800
+		}
+	}
+}
+
+# Yunkai Refuses
+country_event = {
+	id = targaryen.40
+	title = targaryen.40.t
+	desc = targaryen.40.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.40.a
+		create_wargoal = {
+			type = annex_everything
+			target = IRQ
+		}
+	}
+}
+
+# High Garden
+country_event = {
+	id = targaryen.41
+	title = targaryen.41.t
+	desc = targaryen.41.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.41.a
+		retire_character = TAR_olenna_tyrell
+	}
+}
+
+# Westeros is Bickering Amongst Itself
+country_event = {
+	id = targaryen.42
+	title = targaryen.42.t
+	desc = targaryen.42.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.42.a
+		GER = {
+			set_rule = {
+				desc = GER_dormant_beyond_the_wall
+				can_not_declare_war = no
+			}
+		}
+		add_research_slot = 2
+		set_technology = {
+			main_battle_tank = 1
+			advanced_infantry_weapons2 = 1
+			advanced_infantry_weapons = 1
+			artillery4 = 1
+			antiair4 = 1
+			antiair5 = 1
+			tech_support = 1
+			tech_engineers4 = 1
+			tech_logistics_company4 = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = targaryen.43
+				days = 90
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = 3000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_3
+			amount = 300
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_3
+			amount = 150
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 300
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 750
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment_1
+			amount = 250
+			producer = GER
+		}
+		division_template = {
+			name = "Wight Hoards"
+			is_locked = yes
+			division_cap = 80
+			priority = 2
+			template_counter = 35
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				artillery_brigade = { x = 3 y = 0 }
+				artillery_brigade = { x = 3 y = 1 }
+				artillery_brigade = { x = 3 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				logistics_company = { x = 0 y = 2 }
+				anti_air = { x = 0 y = 3 }
+			}
+		}
+		division_template = {
+			name = "Undead Giants"
+			is_locked = yes
+			division_cap = 25
+			priority = 2
+			template_counter = 13
+			regiments = {
+				modern_armor = { x = 0 y = 0 }
+				modern_armor = { x = 0 y = 1 }
+				modern_armor = { x = 0 y = 2 }
+				modern_armor = { x = 0 y = 3 }
+				modern_armor = { x = 1 y = 0 }
+				modern_armor = { x = 1 y = 1 }
+				modern_armor = { x = 1 y = 2 }
+				modern_armor = { x = 1 y = 3 }
+				motorized = { x = 2 y = 0 }
+				motorized = { x = 2 y = 1 }
+				motorized = { x = 2 y = 2 }
+				motorized = { x = 2 y = 3 }
+				motorized = { x = 3 y = 1 }
+				motorized = { x = 3 y = 2 }
+				motorized = { x = 3 y = 3 }
+				motorized = { x = 3 y = 0 }
+				motorized = { x = 4 y = 0 }
+				motorized = { x = 4 y = 1 }
+				motorized = { x = 4 y = 2 }
+				motorized = { x = 4 y = 3 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				logistics_company = { x = 0 y = 2 }
+				anti_air = { x = 0 y = 3 }
+			}
+		}
+	}
+}
+
+# Westeros is Bickering Amongst Itself 2
+country_event = {
+	id = targaryen.43
+	title = targaryen.43.t
+	desc = targaryen.43.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.43.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = 3000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_3
+			amount = 300
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_3
+			amount = 150
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 300
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 750
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment_1
+			amount = 250
+			producer = GER
+		}
+		hidden_effect = {
+			country_event = {
+				id = targaryen.44
+				days = 60
+			}
+		}
+		101 = {
+			create_unit = {
+				division = "name = \"1. Wight Hoards\" division_template = \"Wight Hoards\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 15
+				allow_spawning_on_enemy_provs = yes
+				id = 666
+			}
+			create_unit = {
+				division = "name = \"1. Undead Giants\" division_template = \"Undead Giants\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 3
+				allow_spawning_on_enemy_provs = yes
+				id = 667
+			}
+		}
+	}
+}
+
+# Westeros is Bickering Amongst Itself 3
+country_event = {
+	id = targaryen.44
+	title = targaryen.44.t
+	desc = targaryen.44.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.44.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = 4000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_3
+			amount = 400
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_3
+			amount = 200
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 400
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 1500
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment_1
+			amount = 750
+			producer = GER
+		}
+		101 = {
+			create_unit = {
+				division = "name = \"1. Wight Hoards\" division_template = \"Wight Hoards\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 25
+				allow_spawning_on_enemy_provs = yes
+				id = 668
+			}
+			create_unit = {
+				division = "name = \"1. Undead Giants\" division_template = \"Undead Giants\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 7
+				allow_spawning_on_enemy_provs = yes
+				id = 669
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = targaryen.45
+				days = 30
+			}
+		}
+	}
+}
+
+# Westeros is Bickering Amongst Itself 4
+country_event = {
+	id = targaryen.45
+	title = targaryen.45.t
+	desc = targaryen.45.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+
+	option = {
+		name = targaryen.45.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = 12000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_3
+			amount = 1000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 2000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment_1
+			amount = 5000
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = modern_tank_equipment_1
+			amount = 2000
+			producer = GER
+		}
+		101 = {
+			create_unit = {
+				division = "name = \"1. Wight Hoards\" division_template = \"Wight Hoards\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 35
+				allow_spawning_on_enemy_provs = yes
+				id = 670
+			}
+			create_unit = {
+				division = "name = \"1. Undead Giants\" division_template = \"Undead Giants\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+				owner = GER
+				count = 10
+				allow_spawning_on_enemy_provs = yes
+				id = 671
+			}
+		}
+	}
+}
+
+# Yunkai Discussion YUN
+country_event = {
+	id = targaryen.46
+	title = targaryen.46.t
+	desc = targaryen.46.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.46.a
+		add_stability = -0.05
+		ai_chance = { 
+			factor = 25 
+			modifier = {
+				TAR = {
+					OR = {
+						has_completed_focus = TAR_takeastapor
+						owns_state = 321
+					}
+				}
+				factor = 75
+			}
+		}
+		TAR = {
+			country_event = {
+				id = targaryen.39
+			}
+		}
+	}
+	option = {
+		name = targaryen.46.b
+		add_political_power = -200
+		add_stability = 0.05
+		ai_chance = { 
+			factor = 75
+			modifier = {
+				TAR = {
+					NOT = {
+						OR = {
+							has_completed_focus = TAR_takeastapor
+							owns_state = 321
+						}
+					}
+				}
+				factor = 0
+			}
+		}
+		TAR = {
+			country_event = {
+				id = targaryen.40
+			}
+		}
+	}
+}
+
+
+# Greyworm missing Idea
+country_event = {
+	id = targaryen.47
+	title = targaryen.47.t
+	desc = targaryen.47.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.47.a
+		add_stability = -0.05
+		ai_chance = { 
+			factor = 25 
+		}
+		add_ideas = TAR_idea_missing_leadership
+	}
+}
+
+# Jorah Returns
+country_event = {
+	id = targaryen.48
+	title = targaryen.48.t
+	desc = targaryen.48.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.48.a
+		add_stability = 0.05
+		ai_chance = { 
+			factor = 25 
+		}
+		recruit_character = TAR_ser_jorah
+	}
+}
+
+#A Parley with Cersei
+country_event = {
+	id = targaryen.49
+	title = targaryen.49.t
+	desc = targaryen.49.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.49.a
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+		complete_national_focus = TAR_jon_snow_fs_everything_up
+		add_stability = -0.05
+		custom_effect_tooltip = we_will_be_alone.tt
+	}
+	option = {
+		name = targaryen.49.b
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+		complete_national_focus = TAR_cersei_promises_a_lannister_army
+	}
+}
+
+#Jon Snow kills the Night King
+country_event = {
+	id = targaryen.50
+	title = targaryen.50.t
+	desc = targaryen.50.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.50.a
+		ai_chance = { 
+			factor = 100
+		}
+		add_stability = 0.15
+		news_event = {
+			id = got_news.666
+			days = 2
+		}
+	}
+}
+
+#Eurons Fleet
+country_event = {
+	id = targaryen.51
+	title = targaryen.51.t
+	desc = targaryen.51.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.51.a
+		ai_chance = { 
+			factor = 5
+		}
+		complete_national_focus = TAR_burn_it_down
+	}
+	option = {
+		name = targaryen.51.b
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+		complete_national_focus = TAR_wear_them_out
+	}
+}
+
+
+#Eurons shoots down Rheagul
+country_event = {
+	id = targaryen.52
+	title = targaryen.52.t
+	desc = targaryen.52.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.52.a
+		ai_chance = { 
+			factor = 5
+		}
+		remove_ideas = rheagul_4
+		country_event = {
+			id = got_news.667
+		}
+	}
+}
+
+
+news_event = {
+	id = got_news.666
+	title = got_news.666.t
+	desc = got_news.666.desc
+	picture = GFX_news_event_generic_parliament
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.666.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = GER  
+					original_tag = SOV
+				}
+			}
+		}
+	}
+	option = {
+		name = got_news.666.b
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = got_news.666.c
+		trigger = {
+			original_tag = SOV
+		}
+	}
+}
+
+
+news_event = {
+	id = got_news.667
+	title = got_news.667.t
+	desc = got_news.667.desc
+	picture = GFX_news_event_generic_parliament
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = got_news.667.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = HOL
+					original_tag = ENG
+					original_tag = SOV
+				}
+			}
+		}
+	}
+	option = {
+		name = got_news.667.b
+		trigger = {
+			OR = {
+				original_tag = HOL
+				original_tag = ENG
+			}
+		}
+	}
+	option = {
+		name = got_news.667.c
+		trigger = {
+			original_tag = SOV
+		}
+	}
+}
+
 # TEST
 country_event = {
 	id = targaryen.999
@@ -1261,11 +2081,11 @@ country_event = {
 	picture = GFX_report_event_soviet_tanks
 	
 	is_triggered_only = yes
-		
+	
 	option = {
 		name = targaryen.999.a		#TEST
 		ai_chance = { factor = 40 }
-		create_faction = "Targaryen Dynastysssss"
+		retire_character = WTT_night_king
 		#SOV = { add_to_faction = IRE }
 	}
 

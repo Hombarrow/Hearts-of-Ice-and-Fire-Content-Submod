@@ -228,7 +228,7 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				silent_workhorse
+				the_spider
 			}
 			cost = 150
 			ai_will_do = {

@@ -29,7 +29,22 @@ characters={
 			legacy_id=-1
 		}
 	}
-
+	WTT_no_more_leader={
+		name = "Death"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_defeat.dds"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_defeat.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	WTT_daryl={
 		name = "Darius"
 		portraits={

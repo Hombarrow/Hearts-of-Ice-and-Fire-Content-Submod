@@ -348,6 +348,35 @@ leader_traits = {
 		stability_factor = 0.07
 		research_speed_factor = 0.05
 	}
+	
+	hand_of_the_queen = { #Tyrion Dany
+		random = no
+		neutrality_drift = 0.01
+		stability_factor = 0.07
+		research_speed_factor = 0.05
+	}
+	
+	the_spider_eunuch = { #Varys
+		random = no
+		stability_factor = -0.05
+		political_power_factor = 0.1
+		agency_upgrade_time = -0.25
+		navy_intel_factor = 0.15
+		army_intel_factor = 0.15
+		operation_outcome = 0.1
+	}
+	
+	mysterious_lady = {
+		stability_weekly = 0.001
+		political_power_factor = 0.1
+	}
+	
+	littlefinger = { #Baelish
+		random = no
+		stability_factor = -0.1
+		research_speed_factor = 0.1
+		consumer_goods_factor = -0.1
+	}
 
 	lion_casterlyrock = { #Tywin
 		random = no

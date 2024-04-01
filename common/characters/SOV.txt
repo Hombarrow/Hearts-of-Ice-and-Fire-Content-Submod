@@ -19,6 +19,129 @@ characters={
 			id=-1
 		}
 	}
+	TAR_olenna_tyrell={
+		name = "Olenna Tyrell"
+		portraits={
+			army={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_olenna
+			}
+			civilian={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_olenna
+			}
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = TAR_olenna
+			cost = 150
+			allowed  = {
+				has_completed_focus = TAR_turn_to_olenna
+			}
+			available  = {
+				has_completed_focus = TAR_turn_to_olenna
+			}
+			traits = {
+				mysterious_lady
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TAR_varys_the_spider={
+		name = "Varys"
+		portraits={
+			army={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_varys
+			}
+			civilian={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_varys
+			}
+		}
+		gender = male
+		advisor={
+			slot = political_advisor
+			idea_token = TAR_varys
+			cost = 150
+			allowed  = {
+				has_completed_focus = TAR_varys_shows_up
+			}
+			available  = {
+				has_completed_focus = TAR_varys_shows_up
+			}
+			traits = {
+				the_spider_eunuch
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	TAR_petyr_baelish={
+		name = "Petyr Baelish"
+		portraits={
+			army={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_littlefinger
+			}
+			civilian={
+				#large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_littlefinger
+			}
+		}
+		gender = male
+		advisor={
+			slot = political_advisor
+			cost = 150
+			allowed  = {
+				has_completed_focus = TAR_the_north_remembers
+			}
+			available  = {
+				has_completed_focus = TAR_the_north_remembers
+			}
+			traits = {
+				littlefinger 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	TAR_tyrion_the_hand={
+		name = "Tyrion Lannister"
+		portraits={
+			army={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_tyrion_the_hand
+			}
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Tyrion_Lannister.dds"
+				small=GFX_idea_tyrion_the_hand
+			}
+		}
+		gender = male
+		advisor={
+			slot = political_advisor
+			cost = 150
+			allowed  = {
+				has_completed_focus = TAR_jorah_returns_with_tyrion
+			}
+			available  = {
+				has_completed_focus = TAR_jorah_returns_with_tyrion
+			}
+			traits = {
+				hand_of_the_queen 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 
 	TAR_ser_jorah={
 #		name="Jorah The Explorer"
@@ -60,7 +183,7 @@ characters={
 	}
 	
 	TAR_daario_naharis={
-#		name="Daario Naharis"
+		name="Daario Naharis"
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Daario.dds"

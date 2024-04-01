@@ -22,7 +22,59 @@ ideas = {
 			}
 
 		}
+		WTT_idea_wights_barage = {
+			allowed = {
+				always = yes
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+
+			modifier = {
+				attrition = 0.95
+				fuel_cost = 2500
+				supply_factor = -0.25
+			}
+		}
+		WTT_night_king_dead = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+
+			modifier = {
+				surrender_limit = -1
+			}
+		}
+		WTT_idea_wights_on_the_march = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_oppression
+
+			modifier = {
+				army_speed_factor = 0.15
+			}
+		}
 		WTT_wildlingbonus = {
 			allowed = {
 				always = no

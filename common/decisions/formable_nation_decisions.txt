@@ -369,6 +369,7 @@ form_european_union_category = {
 
 		allowed = {
 			OR = {
+				original_tag = SOV
 				original_tag = HOL
 				original_tag = BEL
 				original_tag = FIN
@@ -394,6 +395,17 @@ form_european_union_category = {
 		}
 
 		available = {
+			IF = {
+				limit = {
+					AND = {
+						original_tag = SOV
+						NOT = {
+							has_completed_focus = TAR_the_iron_throne
+						}
+					}
+				}
+				always = no
+			}
 			is_subject = no
 
 				controls_state = 33
@@ -572,6 +584,7 @@ form_european_union_category = {
 
 		visible = {
 			OR = {
+				original_tag = SOV
 				original_tag = HOL
 				original_tag = BEL
 				original_tag = FIN

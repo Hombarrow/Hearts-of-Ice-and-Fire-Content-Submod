@@ -1,0 +1,13 @@
+GOT_long_night_category = {
+	allowed = {
+		TAR = {
+			has_completed_focus = TAR_hold_up_in_winterfell
+		}
+	}
+	icon = revolt
+	visible = {
+		TAR = {
+			has_completed_focus = TAR_hold_up_in_winterfell
+		}
+	}
+}

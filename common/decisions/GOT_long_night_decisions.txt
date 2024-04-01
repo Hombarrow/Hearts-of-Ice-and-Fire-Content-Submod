@@ -1,0 +1,30 @@
+GOT_long_night_category = {
+	fight_the_wights = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GOT_long_night_fight.tt
+			add_timed_idea = {
+				idea = WTT_idea_wights_barage
+				days = 85
+			}
+		}
+
+		ai_will_do = {
+			factor = 6000
+		}
+	}
+}

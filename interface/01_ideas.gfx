@@ -182,6 +182,20 @@ spriteTypes = {
 		name = "GFX_idea_irri"
 		texturefile = "gfx/interface/ideas/idea_irri.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_littlefinger"
+		texturefile = "gfx/interface/ideas/idea_littlefinger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_tyrion_the_hand"
+		texturefile = "gfx/interface/ideas/idea_tyrion_old.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_olenna"
+		texturefile = "gfx/interface/ideas/idea_olenna.dds"
+	}
 
 	spriteType = {
 		name = "GFX_idea_septimu"

@@ -9,9 +9,16 @@ set_research_slots = 2
 add_ideas = limited_exports
 add_ideas = mixed
 add_ideas = atheist
+add_ideas = non_believers
+
+remove_ideas = USA_monroe_doctrine_idea
 
 create_faction = "Targaryen Kingdom"
 
+recruit_character = TAR_varys_the_spider
+recruit_character = TAR_petyr_baelish
+recruit_character = TAR_olenna_tyrell
+recruit_character = TAR_tyrion_the_hand
 recruit_character = TAR_daenerys
 recruit_character = TAR_ser_jorah
 recruit_character = TAR_kinvara

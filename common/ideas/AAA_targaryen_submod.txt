@@ -1,15 +1,173 @@
 ideas = { 
 	country = {
+		TAR_idea_dothraki_screamers = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
 
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_strength_factor = 0.1
+				cavalry_attack_factor = 0.25
+				cavalry_defence_factor = 0.25
+				army_morale_factor = 0.25
+				army_org = 5
+				army_speed_factor = 0.1
+			}
+		}
+		TAR_idea_zeal_against_lannisters = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HOL
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.5
+			}
+		}
+		TAR_idea_iron_fleet_in_the_blackwater_battle = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.1
+				army_attack_factor = -0.35
+				army_defence_factor = -0.15
+				breakthrough_factor = -0.25
+			}
+		}
+		TAR_idea_iron_fleet_in_the_blackwater = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = -0.15
+				army_attack_factor = -0.5
+				army_defence_factor = -0.2
+				breakthrough_factor = -0.5
+			}
+		}
+		TAR_idea_casterly_rock = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HOL
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+		}
+		TAR_idea_missing_leadership = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = -0.1
+				army_strength_factor = -0.1
+				army_org = -10
+			}
+		}
+		TAR_idea_the_gangs_all_here = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		TAR_idea_defend_high_garden = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HOL
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ENG
+				defense_bonus_against = 0.1
+			}
+		}
 		TAR_sons_of_the_harpy1 = {
 			picture = chi_war_of_resistance3
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
-				
+				always = yes
 			}
 
 			removal_cost = -1
@@ -26,7 +184,7 @@ ideas = {
 			picture = chi_war_of_resistance3
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -47,7 +205,7 @@ ideas = {
 			picture = chi_war_of_resistance2
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -68,7 +226,7 @@ ideas = {
 			picture = chi_war_of_resistance2
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -89,7 +247,7 @@ ideas = {
 			picture = chi_war_of_resistance1
 			
 			allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -109,7 +267,27 @@ ideas = {
 			picture = SPR_the_popular_front
 			
 			allowed = {
-				always = no
+				always = yes
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+				stability_weekly = -0.001
+			}
+		}
+		
+		TAR_sons_of_the_harpy6 = {
+			picture = SPR_the_popular_front
+			
+			allowed = {
+				always = yes
 			}
 
 			allowed_civil_war = {

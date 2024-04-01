@@ -748,6 +748,9 @@ TAR_dragons = {
 		available = {
 			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
 			has_war = yes
+			NOT = {
+				has_idea = TAR_idea_iron_fleet_in_the_blackwater
+			}
 		}
 
 		visible = {
@@ -780,6 +783,9 @@ TAR_dragons = {
 		available = {
 			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
 			has_war = yes
+			NOT = {
+				has_idea = TAR_idea_iron_fleet_in_the_blackwater
+			}
 		}
 
 		visible = {
@@ -812,6 +818,9 @@ TAR_dragons = {
 		available = {
 			has_country_leader = { ruling_only = yes name = "Daenerys Targaryen" }
 			has_war = yes
+			NOT = {
+				has_idea = TAR_idea_iron_fleet_in_the_blackwater
+			}
 		}
 
 		visible = {

@@ -1,9 +1,18 @@
 TAR_scripted_effects_lower_harpy = {
 	IF = {
 		limit = {
+			has_idea = TAR_sons_of_the_harpy6
+		}
+		remove_ideas = TAR_sons_of_the_harpy6
+	}
+	IF = {
+		limit = {
 			has_idea = TAR_sons_of_the_harpy5
 		}
-		remove_ideas = TAR_sons_of_the_harpy5
+		swap_ideas = {
+			add_idea = TAR_sons_of_the_harpy6
+			remove_idea = TAR_sons_of_the_harpy5
+		}
 	}
 	IF = {
 		limit = {

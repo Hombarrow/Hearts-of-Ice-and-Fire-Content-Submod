@@ -259,13 +259,13 @@ country_event = {
 			}
 
 			add_popularity = {
-				ideology = communism
-				popularity = 1.00
+				ideology = neutrality
+				popularity = 0.8
 			}
 #			SOV = { add_country_leader_trait = mother_of_dragons }
 #			add_trait = {
 #   				character = TAR_daenerys
-#     				ideology = communism
+#     				ideology = neutrality
 #   				trait = mother_of_dragons
 #			}
 			news_event = { hours = 6 id = news.308 }			
@@ -1014,7 +1014,7 @@ country_event = {
 
 	option = {
 		ai_chance = {
-			factor = 60
+			factor = 96
 		}
 		name = soviet.25.a
 		set_capital = { state = 656 }
@@ -1032,7 +1032,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			factor = 30
+			factor = 2
 		}
 		name = soviet.25.b
 		set_capital = { state = 321 }
@@ -1050,7 +1050,7 @@ country_event = {
 	}
 	option = {
 		ai_chance = {
-			factor = 10
+			factor = 2
 		}
 		name = soviet.25.c
 		set_capital = { state = 701 }

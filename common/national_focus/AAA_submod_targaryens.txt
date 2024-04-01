@@ -1,5 +1,5 @@
 ### search_filters = {FOCUS_FILTER_POLITICAL}
-### search_filters = {FOCUS_FILTER_RESEARCH}
+### 
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
 ### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
@@ -69,7 +69,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		complete_tooltip = {
 
@@ -1321,13 +1321,11 @@ focus_tree = {
 		id = TAR_setup_logistics
 		prerequisite = {
 			focus = TAR_tradewithspicers
-		}
-		prerequisite = {
 			focus = TAR_notrade
 		}
 		icon = GFX_goal_generic_construct_infrastructure
-		relative_position_id = TAR_tradewithguild
-		x = -1
+		relative_position_id = TAR_tradewithspicers
+		x = 1
 		y = 1
 		cost = 10
 
@@ -1370,12 +1368,10 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy2
 		prerequisite = { 
 			focus = TAR_tradewithspicers
-		}
-		prerequisite = {
 			focus = TAR_notrade
 		}
-		relative_position_id = TAR_tradewithguild
-		x = 2
+		relative_position_id = TAR_tradewithspicers
+		x = 4
 		y = 1
 		cost = 10
 
@@ -1565,10 +1561,10 @@ focus_tree = {
 		if = {
 			limit = { SOV = { num_of_factories > 50 } }
 			random_list = {
-				90 = {
+				20 = {
 					country_event = { id = soviet.20 }
 				}
-				10 = {
+				80 = {
 					country_event = { id = soviet.21 }
 				}
 			}
@@ -1577,10 +1573,10 @@ focus_tree = {
 		if = {
 			limit = { SOV = { num_of_factories < 50 } }
 			random_list = {
-				25 = {
+				10 = {
 					country_event = { id = soviet.20 }
 				}
-				75 = {
+				90 = {
 					country_event = { id = soviet.21 }
 				}
 			}
@@ -1814,7 +1810,7 @@ if = {
 
 	focus = {
 		id = TAR_takeastapor
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_SOV_my_brothers_keeper
 		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
 		mutually_exclusive = { focus = TAR_astapordeal }
 		x = -2
@@ -1847,24 +1843,67 @@ if = {
 	}
 	focus = {
 		id = TAR_gather_the_unsullied
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
 		prerequisite = { focus = TAR_astapordeal }
 		x = -3
 		y = 2
 		relative_position_id = TAR_breakerofchains
 		cost = 5
+		
+		available = {
+			owns_state = 321
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
+			division_template = {
+				name = "Unsullied"
+				is_locked = yes
+				division_cap = 20 
+				priority = 2
+				template_counter = 4
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					anti_air = { x = 0 y = 3 }
+				}
+			}
+			custom_effect_tooltip = veteran_unsullied_spawn_eight.tt
+			hidden_effect = {
+				321 = {
+					create_unit = {
+						division = "name = \"1. Veteran Unsullied\" division_template = \"Unsullied\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+						owner = SOV
+						count = 12
+						allow_spawning_on_enemy_provs = yes
+						id = 369
+					}
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = TAR_takeyunkai
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_SOV_the_true_tsars
 		mutually_exclusive = { focus = TAR_no_need_for_yunkai }
 		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
 		x = 2
@@ -1896,7 +1935,7 @@ if = {
 	}
 	focus = {
 		id = TAR_no_need_for_yunkai
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		mutually_exclusive = { focus = TAR_takeyunkai }
 		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
 		x = 4
@@ -1920,16 +1959,15 @@ if = {
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = IRQ
+			country_event = {
+				id = targaryen.38
 			}
 		}
 	}
 
 	focus = {
 		id = TAR_takemeereen
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_SOV_panslavic_nationalism
 		prerequisite = { focus = TAR_breakerofchains focus = TAR_lastdragon }
 		x = 0
 		y = 1
@@ -1962,11 +2000,11 @@ if = {
 	focus = {
 		id = TAR_overlord
 		icon = GFX_goal_generic_more_territorial_claims
+		mutually_exclusive = { focus = TAR_overlord_partial }
 		prerequisite = { 
 			focus = TAR_takemeereen
 		}
 		prerequisite = { 
-			focus = TAR_no_need_for_yunkai
 			focus = TAR_takeyunkai 
 		}
 		prerequisite = { 
@@ -2006,11 +2044,61 @@ if = {
 			}
 		}
 	}
+	focus = {
+		id = TAR_overlord_partial
+		icon = GFX_goal_generic_neutrality_focus
+		mutually_exclusive = { focus = TAR_overlord }
+		prerequisite = { 
+			focus = TAR_takemeereen
+		}
+		prerequisite = { 
+			focus = TAR_no_need_for_yunkai
+		}
+		prerequisite = { 
+			focus = TAR_astapordeal
+			focus = TAR_takeastapor
+		}
+		x = 2
+		y = 2
+		relative_position_id = TAR_breakerofchains
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			SOV = { has_war = no }
+			656 = { is_controlled_by = SOV }
+			701 = { is_controlled_by = SOV }
+			321 = { is_controlled_by = SOV }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			SOV = {
+				country_event = { id = soviet.63 }
+			}
+			hidden_effect = {
+				country_event = {
+					id = targaryen.24
+					days = 30
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = TAR_education
 		icon = GFX_focus_research
-		prerequisite = { focus = TAR_overlord }
+		prerequisite = { 
+			focus = TAR_overlord
+			focus = TAR_overlord_partial
+		}
 		x = 0
 		y = 1
 		relative_position_id = TAR_overlord
@@ -2024,7 +2112,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_research_slot = 1
@@ -2034,7 +2122,10 @@ if = {
 	focus = {
 		id = TAR_children_of_the_harpy
 		icon = GFX_focus_research
-		prerequisite = { focus = TAR_overlord }
+		prerequisite = { 
+			focus = TAR_overlord 
+			focus = TAR_overlord_partial
+		}
 		x = 3
 		y = 1
 		relative_position_id = TAR_overlord
@@ -2052,7 +2143,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 25
@@ -2075,7 +2166,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -2111,10 +2202,16 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
+			hidden_effect = {
+				country_event = {
+					id = targaryen.47
+					days = 30
+				}
+			}
 		}
 	}
 	focus = {
@@ -2136,9 +2233,7 @@ if = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
+		
 		completion_reward = {
 			add_stability = 0.1
 			hidden_effect = {
@@ -2168,15 +2263,13 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
 			add_stability = -0.05
 			add_political_power = 120
 		}
 	}
 	focus = {
-		id = TAR_barristan_the_goddamn_bold
+		id = TAR_barristan_the_bold #Add flag for missing Grey Worm
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_jorah_the_traitor
@@ -2184,7 +2277,11 @@ if = {
 		x = 4
 		y = 4
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
+		
+		available = {
+			has_global_flag = TAR_flag_greyworm_missing
+		}
 
 		ai_will_do = {
 			factor = 20
@@ -2193,16 +2290,27 @@ if = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
+		allow_branch = {
+			has_global_flag = TAR_flag_greyworm_missing
+		}
 		completion_reward = {
+			remove_ideas = TAR_idea_missing_leadership
 			IF = {
 				limit = {
+					has_completed_focus = TAR_bash_them_in_the_head
+				}
+				country_event = {
+					id = targaryen.37
+					days = 3
 				}
 			}
 			IF = {
 				limit = {
+					has_completed_focus = TAR_cracking_down
+				}
+				country_event = {
+					id = targaryen.38
+					days = 3
 				}
 			}
 		}
@@ -2232,7 +2340,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 50
@@ -2266,7 +2374,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = -0.1
@@ -2323,7 +2431,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.15
@@ -2348,10 +2456,12 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-			
+			country_event = {
+				id = targaryen.36
+			}
 		}
 	}
 	focus = {
@@ -2373,10 +2483,11 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			#Varys Recruit
+			recruit_character = TAR_varys_the_spider
 		}
 	}
 	focus = {
@@ -2398,10 +2509,36 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = TAR_sons_of_the_harpy1
+						
+						has_idea = TAR_sons_of_the_harpy2
+						
+						has_idea = TAR_sons_of_the_harpy3
+						
+						has_idea = TAR_sons_of_the_harpy4
+						
+						has_idea = TAR_sons_of_the_harpy5
+						
+						has_idea = TAR_sons_of_the_harpy6
+					}
+				}
+				remove_ideas = {
+					TAR_sons_of_the_harpy6
+					TAR_sons_of_the_harpy5
+					TAR_sons_of_the_harpy4
+					TAR_sons_of_the_harpy3
+					TAR_sons_of_the_harpy2
+					TAR_sons_of_the_harpy1
+				}
+			}
+			clr_global_flag = TAR_flag_sons_of_the_harpy
 			custom_effect_tooltip = TAR_tooltip_ensure_no_more_harpy.tt
 		}
 	}
@@ -2427,10 +2564,11 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-			
+			add_war_support = 0.05
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -2451,7 +2589,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = -0.05
@@ -2466,7 +2604,7 @@ if = {
 		x = 1
 		y = 3
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2476,7 +2614,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = -50
@@ -2502,7 +2640,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 100
@@ -2521,7 +2659,7 @@ if = {
 		x = -2
 		y = 4
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2531,7 +2669,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -2548,7 +2686,7 @@ if = {
 		x = 1
 		y = 4
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2558,7 +2696,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = -25
@@ -2575,7 +2713,7 @@ if = {
 		x = -1
 		y = 5
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2603,7 +2741,7 @@ if = {
 		x = 0
 		y = 6
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2613,10 +2751,11 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			TAR_scripted_effects_lower_harpy = yes
+			add_stability = 0.05
 		}
 	}
 	focus = {
@@ -2633,8 +2772,8 @@ if = {
 		x = 1
 		y = 9
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 8
+		
 		ai_will_do = {
 			factor = 20
 		}
@@ -2643,7 +2782,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 75
@@ -2663,7 +2802,7 @@ if = {
 		x = -2
 		y = 9
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 20
@@ -2673,7 +2812,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.15
@@ -2698,7 +2837,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			country_event = {
@@ -2716,7 +2855,7 @@ if = {
 		x = 1
 		y = 12
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2726,7 +2865,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -2744,7 +2883,7 @@ if = {
 		x = 3
 		y = 12
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2754,7 +2893,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -2769,7 +2908,7 @@ if = {
 		x = 4
 		y = 11
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -2779,7 +2918,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			navy_experience = 35
@@ -2794,7 +2933,7 @@ if = {
 		x = 5
 		y = 12
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2804,12 +2943,12 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy
-				amount = 150
+				amount = 35
 				producer = SOV
 			}
 		}
@@ -2823,8 +2962,8 @@ if = {
 		x = 6
 		y = 13
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 5
+		
 		ai_will_do = {
 			factor = 20
 		}
@@ -2833,12 +2972,12 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy
-				amount = 900
+				amount = 300
 				producer = ROM
 			}
 		}
@@ -2856,7 +2995,7 @@ if = {
 		x = 2
 		y = 13
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2866,7 +3005,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -2886,7 +3025,7 @@ if = {
 		x = 4
 		y = 13
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 20
@@ -2896,7 +3035,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -2908,8 +3047,6 @@ if = {
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_a_strategic_military
-		}
-		prerequisite = {
 			focus = TAR_a_large_army
 		}
 		x = 3
@@ -2920,14 +3057,32 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
+		
+		available = {
+			AND = {
+				has_war_with = HOL
+				has_war_with = ENG
+			}
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
+			hidden_effect = {
+				add_ideas = TAR_idea_iron_fleet_in_the_blackwater
+			}
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
 			SOV = {
 				set_state_owner = 178
 			}
@@ -2961,6 +3116,9 @@ if = {
 		}
 		x = 4
 		y = 15
+		available = {
+			has_war = yes
+		}
 		relative_position_id = TAR_overlord
 		cost = 10
 
@@ -2972,10 +3130,11 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 50
+			add_stability = -0.05
 		}
 	}
 	focus = {
@@ -2987,8 +3146,10 @@ if = {
 		x = 5
 		y = 16
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 5
+		available = {
+			has_war = yes
+		}
 		ai_will_do = {
 			factor = 20
 		}
@@ -2997,10 +3158,13 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = dothraki_bloodriders
+				add_idea = TAR_idea_dothraki_screamers
+			}
 		}
 	}
 	focus = {
@@ -3012,8 +3176,10 @@ if = {
 		x = 7
 		y = 16
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 8
+		available = {
+			has_war = yes
+		}
 		ai_will_do = {
 			factor = 20
 		}
@@ -3022,10 +3188,10 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			add_ideas = TAR_idea_zeal_against_lannisters
 		}
 	}
 	focus = {
@@ -3036,6 +3202,9 @@ if = {
 		}
 		prerequisite = {
 			focus = TAR_a_strategic_military
+		}
+		available = {
+			has_war = yes
 		}
 		x = 1
 		y = 15
@@ -3050,7 +3219,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_stability = 0.05
@@ -3061,24 +3230,38 @@ if = {
 		icon = GFX_focus_research
 		prerequisite = {
 			focus = TAR_a_westorosi_army
+			focus = TAR_an_unpopular_foreign_army
 		}
 		x = 1
 		y = 17
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
+		}
+		
+		available = {
+			owns_state = 178
+			has_war = yes
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			178 = {
+				create_unit = {
+					division = "name = \"1. Veteran Unsullied\" division_template = \"Unsullied\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+					owner = SOV
+					count = 2
+					allow_spawning_on_enemy_provs = yes
+					id = 369
+				}			
+			}
 		}
 	}
 	focus = {
@@ -3091,8 +3274,13 @@ if = {
 		x = 2
 		y = 18
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 5
+		
+		available = {
+			is_in_faction_with = IRE
+			has_war = yes
+		}
+		
 		ai_will_do = {
 			factor = 20
 		}
@@ -3101,10 +3289,27 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 15000
+				producer = SOV
+			}
+			5 = {
+				create_unit = {
+					division = "name = \"1. Veteran Unsullied\" division_template = \"Unsullied\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+					owner = SOV
+					count = 6
+					allow_spawning_on_enemy_provs = yes
+					id = 369
+				}			
+			}
+			add_timed_idea = {
+				idea = TAR_idea_defend_high_garden
+				days = 180
+			}
 		}
 	}
 	focus = {
@@ -3122,15 +3327,40 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
-
+		available = {
+			has_war = yes
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -35000
+			}
+			SOV = {
+				set_state_owner = 62
+			}
+			62 = {
+				create_unit = {
+					division = "name = \"1. Veteran Unsullied\" division_template = \"Unsullied\" start_manpower_factor = 1.0 start_equipment_factor = 1.0 start_experience_factor = 1.0" 
+					owner = SOV
+					count = 4
+					allow_spawning_on_enemy_provs = yes
+					id = 369
+				}			
+			}
+			add_timed_idea = {
+				idea = TAR_idea_casterly_rock
+				days = 20
+			}
+			hidden_effect = {
+				id = targaryen.41
+				days = 60
+			}
 		}
 	}
 	focus = {
@@ -3148,15 +3378,18 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
-
+		available = {
+			has_war = yes
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			SOV = { add_to_faction = IRE }
+			recruit_character = TAR_olenna_tyrell
 		}
 	}
 	focus = {
@@ -3173,12 +3406,14 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
-
+		available = {
+			has_war = yes
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			SOV = { add_to_faction = SPR }
@@ -3190,11 +3425,16 @@ if = {
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 		}
-		x = -2
-		y = 16
+		prerequisite = {
+			focus = TAR_ellaria_and_the_sandsnakes
+		}
+		x = -3
+		y = 20
 		relative_position_id = TAR_overlord
 		cost = 8
-
+		available = {
+			has_war = yes
+		}
 		ai_will_do = {
 			factor = 20
 		}
@@ -3208,14 +3448,19 @@ if = {
 				target = SPR
 				end_wars = yes
 			}
-			complete_national_focus = TAR_ellaria_and_the_sandsnakes
 		}
 	}
 	focus = {
 		id = TAR_nuetralize_the_reach
 		icon = GFX_focus_research
 		prerequisite = {
-			focus = TAR_convince_dorne
+			focus = TAR_a_westorosi_army
+		}
+		prerequisite = {
+			focus = TAR_turn_to_olenna
+		}
+		available = {
+			has_war = yes
 		}
 		x = -2
 		y = 17
@@ -3230,14 +3475,13 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			puppet = {
 				target = IRE
 				end_wars = yes
 			}
-			complete_national_focus = TAR_turn_to_olenna
 		}
 	}
 	focus = {
@@ -3247,23 +3491,28 @@ if = {
 			focus = TAR_a_westorosi_army
 			focus = TAR_an_unpopular_foreign_army
 		}
+		available = {
+			has_war = yes
+		}
 		x = 2
 		y = 16
 		relative_position_id = TAR_overlord
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			SOV = { add_to_faction = FIN }
+			recruit_character = TAR_petyr_baelish
+			complete_national_focus = TAR_warnings_of_the_walkers
 		}
 	}
 	focus = {
@@ -3272,24 +3521,28 @@ if = {
 		prerequisite = {
 			focus = TAR_the_north_remembers
 		}
+		available = {
+			has_war = yes
+		}
 		x = 7
 		y = 17
 		relative_position_id = TAR_overlord
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			country_event = {
 				id = targaryen.34
+				days = 5
 			}
 		}
 	}
@@ -3306,17 +3559,25 @@ if = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			custom_effect_tooltip = TAR_tooltip_long_term_consequences.tt
+			hidden_effect = {
+				GER = {
+					country_event = {
+						id = targaryen.42
+						days = 25
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3332,17 +3593,26 @@ if = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = non_believers
+				add_idea = has_dragonglass
+			}
+			hidden_effect = {
+				country_event = {
+					id = targaryen.3
+					days = 15
+				}
+			}
 		}
 	}
 	focus = {
@@ -3354,20 +3624,23 @@ if = {
 		x = 7
 		y = 19
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 3
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			remove_idea = TAR_idea_iron_fleet_in_the_blackwater
+			country_event = {
+				id = targaryen.49
+			}
 		}
 	}
 	focus = {
@@ -3383,17 +3656,22 @@ if = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_ideas = TAR_idea_the_gangs_all_here
+			GER = {
+				add_ideas = WTT_idea_wights_on_the_march
+			}
 		}
 	}
 	focus = {
@@ -3409,17 +3687,19 @@ if = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-		
+			GER = {
+				add_ideas = WTT_idea_wights_on_the_march
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
 		}
 	}
 	focus = {
@@ -3432,20 +3712,45 @@ if = {
 		x = 7
 		y = 21
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			white_peace = HOL
+			white_peace = ENG
+			white_peace = ROM
+			white_peace = BEL
+			white_peace = FRA
+			play_song = "thenightking-iceandfire"
+			CAN = {
+				create_faction = "Westeros vs the Long Night"
+				add_to_faction = FIN 
+				add_to_faction = BUL
+				add_to_faction = ITA
+				add_to_faction = NOR
+				add_to_faction = DEN
+				add_to_faction = ENG
+				add_to_faction = HOL
+				add_to_faction = IRE
+				add_to_faction = BEL
+				add_to_faction = SPR
+				add_to_faction = HUN
+			}
+			GER = {
+				declare_war_on = {
+					target = CAN
+					type = annex_everything
+				}
+			}
 		}
 	}
 	focus = {
@@ -3457,20 +3762,34 @@ if = {
 		x = 7
 		y = 22
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 30
 
 		ai_will_do = {
-			factor = 20
+			factor = 99999
+		}
+		
+		available = {
+			has_war_with = GER
+			has_idea = WTT_idea_wights_barage
 		}
 
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			TAR = {
+				country_event = {
+					id = targaryen.50
+				}
+			}
+			GER = {
+				add_ideas = WTT_night_king_dead
+
+				retire_character = WTT_night_king
+			}
 		}
 	}
 	focus = {
@@ -3499,10 +3818,18 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			IF = {
+				limit = {
+					has_completed_focus = TAR_the_long_night
+				}
+				add_ideas = TAR_idea_iron_fleet_in_the_blackwater
+			}
+			declare_war_on = HOL
+			declare_war_on = ENG
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -3519,15 +3846,22 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
+		
+		available = {
+			has_war = yes
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
-		
+			add_political_power = 50
+			country_event = {
+				id = targaryen.51
+			}
 		}
 	}
 	focus = {
@@ -3545,69 +3879,26 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
 		
-		}
-	}
-	focus = {
-		id = TAR_siege_on_kings_landing
-		icon = GFX_focus_research
-		prerequisite = {
-			focus = TAR_burn_it_down
-			focus = TAR_wear_them_out
-		}
-		prerequisite = {
-			focus = TAR_ellaria_and_the_sandsnakes
-		}
-		x = 0
-		y = 20
-		relative_position_id = TAR_overlord
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
+		available = {
+			has_war = yes
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
 		completion_reward = {
-		
-		}
-	}
-	focus = {
-		id = TAR_the_iron_throne
-		icon = GFX_focus_research
-		prerequisite = {
-			focus = TAR_siege_on_kings_landing
-		}
-		x = 1
-		y = 21
-		relative_position_id = TAR_overlord
-		cost = 10
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-		
+			add_stability = -0.05
+			add_war_support = 0.05
+			hidden_effect = {
+				country_event = {
+					id = targaryen.52
+					days = 15
+				}
+			}
+			remove_idea = TAR_idea_iron_fleet_in_the_blackwater
+			custom_effect_tooltip = TAR_this_may_backfire.tt
 		}
 	}
 	focus = {
@@ -3625,15 +3916,86 @@ if = {
 		ai_will_do = {
 			factor = 20
 		}
+		
+		available = {
+			has_war = yes
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = TAR_idea_iron_fleet_in_the_blackwater_battle
+				days = 225
+			}
+			remove_idea = TAR_idea_iron_fleet_in_the_blackwater
+		}
+	}
+		focus = {
+		id = TAR_siege_on_kings_landing
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_burn_it_down
+			focus = TAR_wear_them_out
+		}
+		prerequisite = {
+			focus = TAR_ellaria_and_the_sandsnakes
+		}
 		
+		available = {
+			has_war = yes
+		}
+		x = 1
+		y = 21
+		relative_position_id = TAR_overlord
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_war_support = 0.05
+			transfer_state = 33
+		}
+	}
+	focus = {
+		id = TAR_the_iron_throne
+		icon = GFX_focus_research
+		prerequisite = {
+			focus = TAR_siege_on_kings_landing
+		}
+		x = 1
+		y = 22
+		relative_position_id = TAR_overlord
+		cost = 10
+		available = {
+			owns_state = 33
+		}
+		ai_will_do = {
+			factor = 20
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		completion_reward = {
+			add_state_core = 33
+			custom_effect_tooltip = TAR_unite_westeros.tt
 		}
 	}
 	focus = {
@@ -3655,7 +4017,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 150
@@ -3680,7 +4042,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 			add_political_power = 100
@@ -3707,7 +4069,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 		
@@ -3732,7 +4094,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 		
@@ -3757,7 +4119,7 @@ if = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		search_filters = {FOCUS_FILTER_RESEARCH}
+		
 
 		completion_reward = {
 		
