@@ -26,7 +26,7 @@ add_ideas = {
 	non_believers
 }
 
-
+	add_ideas = GOT_idea_the_iron_throne_is_mine_by_right
 	add_ideas = faith_of_7
 	add_ideas = SIS_melisandre
 

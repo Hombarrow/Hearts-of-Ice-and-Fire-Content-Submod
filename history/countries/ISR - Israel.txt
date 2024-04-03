@@ -8,6 +8,7 @@ add_ideas = {
 
 	add_ideas = mixed
 	add_ideas = atheist
+	add_ideas = GOT_idea_isolated_and_nuetral
 
 recruit_character = QAR_thirteen
 recruit_character = QAR_Xaro

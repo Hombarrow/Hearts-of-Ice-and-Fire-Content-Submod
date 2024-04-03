@@ -5,6 +5,7 @@ oob = "EGY_1936"
 
 	add_ideas = ghiscari
 	add_ideas = harpylady
+	add_ideas = GOT_idea_isolated_and_nuetral
 
 recruit_character = EGY_great_masters_of_meereen
 

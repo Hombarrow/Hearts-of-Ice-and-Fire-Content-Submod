@@ -10,6 +10,7 @@ set_rule = {
 }
 
 add_ideas = actual_others
+add_ideas = GOT_idea_others_beyond_the_wall
 
 # Starting tech
 set_technology = {

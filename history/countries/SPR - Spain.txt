@@ -80,7 +80,7 @@ add_ideas = {
 	non_believers
 }
 
-
+	add_ideas = GOT_idea_isolated_and_nuetral
 	add_ideas = rhoynar_ethn
 	add_ideas = atheist
 

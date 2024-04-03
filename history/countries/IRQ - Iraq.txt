@@ -60,6 +60,7 @@ if = {
 	add_ideas = slave_requirement
 	add_ideas = ghiscari
 	add_ideas = harpylady
+	add_ideas = GOT_idea_isolated_and_nuetral
 
 set_convoys = 50
 

@@ -957,7 +957,9 @@ country_event = {
 		ai_chance = { factor = 40 }
 
 		add_political_power = -50
-
+		TAR = {
+			release = OMA
+		}
 		kill_country_leader = yes
 		remove_unit_leader = 401 #drogo, field marshal
 		add_ideas = TAR_depression

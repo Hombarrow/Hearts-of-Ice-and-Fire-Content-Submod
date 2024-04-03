@@ -4,15 +4,21 @@ GOT_long_night_category = {
 		icon = generic_form_nation
 
 		allowed = {
-			always = yes
+			SOV = {
+				has_completed_focus = TAR_hold_up_in_winterfell
+			}
 		}
 
 		available = {
-			always = yes
+			SOV = {
+				has_completed_focus = TAR_hold_up_in_winterfell
+			}
 		}
 
 		visible = {
-			always = yes
+			SOV = {
+				has_completed_focus = TAR_hold_up_in_winterfell
+			}
 		}
 
 		complete_effect = {

@@ -1,5 +1,59 @@
 ideas = { 
 	country = {
+		GOT_idea_others_beyond_the_wall = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension_against = 1
+				justify_war_goal_time = 10
+			}
+		}
+		GOT_idea_the_iron_throne_is_mine_by_right = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_get_ally_desire_factor = -1
+				join_faction_tension = 1
+			}
+		}
+		GOT_idea_isolated_and_nuetral = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_get_ally_desire_factor = -1
+				join_faction_tension = 1
+			}
+		}
 		TAR_idea_dothraki_screamers = {
 			picture = chi_war_of_resistance3
 			

@@ -1,5 +1,6 @@
 ﻿l_english:
  #Tooltips and Focuses
+ TAR_tooltip_discussion_with_yunkai.tt:0 "§YWe will discuss with Yunkai to gain some territory§W"
  targaryen_tooltip_sell_drogon.tt:0 "§GThe More Worthwhile Choice >:D§W"
  TAR_children_of_the_harpy:0 "The Sons of the Harpy"
  TAR_bash_them_in_the_head:0 "Flood in the Unsullied"
@@ -178,3 +179,8 @@
  
  #Long Night
  GOT_long_night_fight.tt:0 "§RAzor Ahai will need this to complete the focus that Kills the Night King§W"
+ 
+ #Universal Ideas
+ GOT_idea_isolated_and_nuetral:0 "Isolated and Nuetral"
+ GOT_idea_the_iron_throne_is_mine_by_right:0 "The Iron Throne is Mine, by Right!"
+ GOT_idea_others_beyond_the_wall:0 "Others Beyond the Wall"
