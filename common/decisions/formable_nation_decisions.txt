@@ -404,7 +404,7 @@ form_european_union_category = {
 						}
 					}
 				}
-				always = no
+				has_completed_focus = TAR_the_iron_throne
 			}
 			is_subject = no
 

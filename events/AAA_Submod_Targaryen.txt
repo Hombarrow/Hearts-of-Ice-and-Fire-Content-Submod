@@ -943,7 +943,7 @@ country_event = {
 
 }
 
-# Drogons dead
+# Drogos dead
 country_event = {
 	id = targaryen.23
 	title = targaryen.23.t
@@ -1993,9 +1993,33 @@ country_event = {
 			factor = 5
 		}
 		remove_ideas = rheagul_4
+		hidden_effect = {
+			remove_ideas = rheagul_3
+			remove_ideas = rheagul_2
+			remove_ideas = rheagul_1
+		}
 		country_event = {
 			id = got_news.667
 		}
+	}
+}
+
+#White Rat Killed
+country_event = {
+	id = targaryen.53
+	title = targaryen.53.t
+	desc = targaryen.53.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.53.a
+		ai_chance = { 
+			factor = 5
+		}
+		retire_character = TAR_WhiteRat
 	}
 }
 

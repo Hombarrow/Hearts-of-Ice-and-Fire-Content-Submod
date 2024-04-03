@@ -1,0 +1,35 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_focus_TAR_unsullied_plan"
+		texturefile = "gfx/interface/goals/focus_TAR_unsullied_plan.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_foothold_on_dragonstone"
+		texturefile = "gfx/interface/goals/focus_TAR_foothold_on_dragonstone.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_starks"
+		texturefile = "gfx/interface/goals/focus_TAR_starks.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_greyjoy_fleet"
+		texturefile = "gfx/interface/goals/focus_TAR_greyjoy_fleet.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_harpy_war"
+		texturefile = "gfx/interface/goals/focus_TAR_harpy_war.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_white_walkers"
+		texturefile = "gfx/interface/goals/focus_TAR_white_walkers.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_eurons_fleet"
+		texturefile = "gfx/interface/goals/focus_TAR_eurons_fleet.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_TAR_iron_throne"
+		texturefile = "gfx/interface/goals/focus_TAR_iron_throne.dds"			
+	}
+}

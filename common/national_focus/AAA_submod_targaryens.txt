@@ -2121,7 +2121,7 @@ if = {
 	
 	focus = {
 		id = TAR_children_of_the_harpy
-		icon = GFX_focus_research
+		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		prerequisite = { 
 			focus = TAR_overlord 
 			focus = TAR_overlord_partial
@@ -2151,7 +2151,7 @@ if = {
 	}
 	focus = {
 		id = TAR_bash_them_in_the_head
-		icon = GFX_focus_research
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
 		prerequisite = { focus = TAR_children_of_the_harpy }
 		x = 5
 		y = 2
@@ -2181,7 +2181,7 @@ if = {
 	}
 	focus = {
 		id = TAR_jorah_the_traitor
-		icon = GFX_focus_research
+		icon = GFX_focus_CZE_german_puppet
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
 			focus = TAR_cracking_down
@@ -2216,7 +2216,7 @@ if = {
 	}
 	focus = {
 		id = TAR_harpys_in_the_alleys
-		icon = GFX_focus_research
+		icon = GFX_focus_BRA_utilize_security_law
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
 			focus = TAR_cracking_down
@@ -2246,7 +2246,7 @@ if = {
 	}
 	focus = {
 		id = TAR_execute_slavers
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
 		}
@@ -2270,7 +2270,7 @@ if = {
 	}
 	focus = {
 		id = TAR_barristan_the_bold #Add flag for missing Grey Worm
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_farmland
 		prerequisite = {
 			focus = TAR_jorah_the_traitor
 		}
@@ -2317,7 +2317,7 @@ if = {
 	}
 	focus = {
 		id = TAR_jorah_returns_with_tyrion
-		icon = GFX_focus_research
+		icon = GFX_focus_CHL_invite_french_aristocracy
 		prerequisite = {
 			focus = TAR_jorah_the_traitor
 		}
@@ -2350,7 +2350,7 @@ if = {
 	
 	focus = {
 		id = TAR_cornered_in_the_fighting_pit
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = {
 			focus = TAR_jorah_returns_with_tyrion
 		}
@@ -2382,7 +2382,7 @@ if = {
 	}
 	focus = {
 		id = TAR_burn_the_coward_khals
-		icon = GFX_focus_research
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
 		prerequisite = {
 			focus = TAR_harpys_in_the_alleys
 			focus = TAR_cracking_down
@@ -2408,7 +2408,7 @@ if = {
 	}
 	focus = {
 		id = TAR_dany_returns
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_home_defense
 		prerequisite = {
 			focus = TAR_cornered_in_the_fighting_pit
 		}
@@ -2439,7 +2439,7 @@ if = {
 	}
 	focus = {
 		id = TAR_jorahs_justice
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = {
 			focus = TAR_dany_returns
 		}
@@ -2466,7 +2466,7 @@ if = {
 	}
 	focus = {
 		id = TAR_varys_shows_up
-		icon = GFX_focus_research
+		icon = GFX_focus_EST_era_of_silence
 		prerequisite = {
 			focus = TAR_cornered_in_the_fighting_pit
 		}
@@ -2492,7 +2492,7 @@ if = {
 	}
 	focus = {
 		id = TAR_tyrions_solution
-		icon = GFX_focus_research
+		icon = GFX_focus_ARG_develop_the_electricity_sector
 		prerequisite = {
 			focus = TAR_varys_shows_up
 		}
@@ -2544,7 +2544,7 @@ if = {
 	}
 	focus = {
 		id = TAR_westeros_was_always_the_plan
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = {
 			focus = TAR_dany_returns
 		}
@@ -2573,7 +2573,7 @@ if = {
 	}
 	focus = {
 		id = TAR_cracking_down
-		icon = GFX_focus_research
+		icon = GFX_focus_BRA_air_force
 		mutually_exclusive = { focus = TAR_bash_them_in_the_head }
 		prerequisite = { focus = TAR_children_of_the_harpy }
 		x = 1
@@ -2599,7 +2599,7 @@ if = {
 	}
 	focus = {
 		id = TAR_no_mercy_for_the_cowards
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_support_the_left_right
 		prerequisite = { focus = TAR_children_of_the_harpy }
 		x = 1
 		y = 3
@@ -2625,7 +2625,7 @@ if = {
 	
 	focus = {
 		id = TAR_harpy_vs_dragon
-		icon = GFX_focus_research
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
 		prerequisite = { focus = TAR_cracking_down }
 		x = -1
 		y = 3
@@ -2649,7 +2649,7 @@ if = {
 	
 	focus = {
 		id = TAR_police_division
-		icon = GFX_focus_research
+		icon = GFX_focus_ETH_peacekeeping_forces
 		prerequisite = { 
 			focus = TAR_harpy_vs_dragon
 		}
@@ -2679,7 +2679,7 @@ if = {
 	
 	focus = {
 		id = TAR_forgive_the_merciful_masters
-		icon = GFX_focus_research
+		icon = GFX_focus_ETH_the_abuna
 		prerequisite = {
 			focus = TAR_no_mercy_for_the_cowards
 		}
@@ -2706,7 +2706,7 @@ if = {
 	}
 	focus = {
 		id = TAR_a_city_patrol
-		icon = GFX_focus_research
+		icon = GFX_focus_SWE_lottakoren
 		prerequisite = {
 			focus = TAR_police_division
 		}
@@ -2731,7 +2731,7 @@ if = {
 	}
 	focus = {
 		id = TAR_clamping_down_on_slavers_bay
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_merchant_fleet
 		prerequisite = {
 			focus = TAR_a_city_patrol
 		}
@@ -2760,7 +2760,7 @@ if = {
 	}
 	focus = {
 		id = TAR_the_urge_for_home
-		icon = GFX_focus_research
+		icon = GFX_focus_ARG_defense_and_democracy
 		mutually_exclusive = { focus = TAR_doing_the_right_thing }
 		prerequisite = {
 			focus = TAR_clamping_down_on_slavers_bay
@@ -2791,7 +2791,7 @@ if = {
 	}
 	focus = {
 		id = TAR_doing_the_right_thing
-		icon = GFX_focus_research
+		icon = GFX_focus_CHL_invite_french_aristocracy
 		mutually_exclusive = { focus = TAR_the_urge_for_home }
 		prerequisite = {
 			focus = TAR_clamping_down_on_slavers_bay
@@ -2820,7 +2820,7 @@ if = {
 	}
 	focus = {
 		id = TAR_counting_our_army
-		icon = GFX_focus_research
+		icon = GFX_focus_ETH_keep_the_chitet
 		prerequisite = {
 			focus = TAR_play_the_game_of_thrones
 		}
@@ -2848,7 +2848,7 @@ if = {
 	focus = {
 		id = TAR_leave_the_dothraki
 		mutually_exclusive = { focus = TAR_bring_all_the_bloodriders }
-		icon = GFX_focus_research
+		icon = GFX_focus_URG_turmoil_of_paso_morlan
 		prerequisite = {
 			focus = TAR_counting_our_army
 		}
@@ -2876,7 +2876,7 @@ if = {
 	focus = {
 		id = TAR_bring_all_the_bloodriders
 		mutually_exclusive = { focus = TAR_leave_the_dothraki }
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_cavalry
 		prerequisite = {
 			focus = TAR_counting_our_army
 		}
@@ -2901,7 +2901,7 @@ if = {
 	}
 	focus = {
 		id = TAR_our_naval_plan
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_harpy_war
 		prerequisite = {
 			focus = TAR_play_the_game_of_thrones
 		}
@@ -2926,7 +2926,7 @@ if = {
 	}
 	focus = {
 		id = TAR_construct_what_we_can
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = {
 			focus = TAR_our_naval_plan
 		}
@@ -2955,7 +2955,7 @@ if = {
 	}
 	focus = {
 		id = TAR_contact_yara_and_theon
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_greyjoy_fleet
 		prerequisite = {
 			focus = TAR_construct_what_we_can
 		}
@@ -2984,7 +2984,7 @@ if = {
 	}
 	focus = {
 		id = TAR_a_strategic_military
-		icon = GFX_focus_research
+		icon = GFX_focus_POL_complete_april_constitution
 		mutually_exclusive = { focus = TAR_a_large_army }
 		prerequisite = {
 			focus = TAR_leave_the_dothraki
@@ -3015,7 +3015,7 @@ if = {
 	focus = {
 		id = TAR_a_large_army
 		mutually_exclusive = { focus = TAR_a_strategic_military }
-		icon = GFX_focus_research
+		icon = GFX_focus_SOV_restore_cossack_units
 		prerequisite = {
 			focus = TAR_bring_all_the_bloodriders
 		}
@@ -3044,7 +3044,7 @@ if = {
 	}
 	focus = {
 		id = TAR_set_sail_for_dragonstone
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_foothold_on_dragonstone
 		prerequisite = {
 			focus = TAR_a_strategic_military
 			focus = TAR_a_large_army
@@ -3107,7 +3107,7 @@ if = {
 	}
 	focus = {
 		id = TAR_an_unpopular_foreign_army
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_full_social_mobilization
 		prerequisite = {
 			focus = TAR_set_sail_for_dragonstone
 		}
@@ -3139,7 +3139,7 @@ if = {
 	}
 	focus = {
 		id = TAR_set_loose_the_dothraki
-		icon = GFX_focus_research
+		icon = GFX_focus_wonderweapons
 		prerequisite = {
 			focus = TAR_an_unpopular_foreign_army
 		}
@@ -3169,7 +3169,7 @@ if = {
 	}
 	focus = {
 		id = TAR_marching_into_the_lannisters
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = {
 			focus = TAR_an_unpopular_foreign_army
 		}
@@ -3196,7 +3196,7 @@ if = {
 	}
 	focus = {
 		id = TAR_a_westorosi_army
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = {
 			focus = TAR_set_sail_for_dragonstone
 		}
@@ -3227,7 +3227,7 @@ if = {
 	}
 	focus = {
 		id = TAR_unsullied_plan
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_unsullied_plan
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 			focus = TAR_an_unpopular_foreign_army
@@ -3266,7 +3266,7 @@ if = {
 	}
 	focus = {
 		id = TAR_garrison_our_allies
-		icon = GFX_focus_research
+		icon = GFX_focus_NOR_approach_kretsen
 		mutually_exclusive = { focus = TAR_take_the_rock }
 		prerequisite = {
 			focus = TAR_unsullied_plan
@@ -3315,7 +3315,7 @@ if = {
 	focus = {
 		id = TAR_take_the_rock
 		mutually_exclusive = { focus = TAR_garrison_our_allies }
-		icon = GFX_focus_research
+		icon = GFX_focus_SWE_the_lion_of_the_north
 		prerequisite = {
 			focus = TAR_unsullied_plan
 		}
@@ -3365,7 +3365,7 @@ if = {
 	}
 	focus = {
 		id = TAR_turn_to_olenna
-		icon = GFX_focus_research
+		icon = GFX_focus_ARG_towards_a_greater_argentina
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 			focus = TAR_an_unpopular_foreign_army
@@ -3394,7 +3394,7 @@ if = {
 	}
 	focus = {
 		id = TAR_ellaria_and_the_sandsnakes
-		icon = GFX_focus_research
+		icon = GFX_focus_CHL_taking_back_patagonia_mapuche
 		prerequisite = {
 			focus = TAR_turn_to_olenna
 		}
@@ -3421,7 +3421,7 @@ if = {
 	}
 	focus = {
 		id = TAR_convince_dorne
-		icon = GFX_focus_research
+		icon = GFX_focus_URG_colorados
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 		}
@@ -3452,7 +3452,7 @@ if = {
 	}
 	focus = {
 		id = TAR_nuetralize_the_reach
-		icon = GFX_focus_research
+		icon = GFX_focus_BRA_restore_brazilian_honor
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 		}
@@ -3486,7 +3486,7 @@ if = {
 	}
 	focus = {
 		id = TAR_the_north_remembers
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_starks
 		prerequisite = {
 			focus = TAR_a_westorosi_army
 			focus = TAR_an_unpopular_foreign_army
@@ -3517,7 +3517,7 @@ if = {
 	}
 	focus = {
 		id = TAR_warnings_of_the_walkers
-		icon = GFX_focus_research
+		icon = GFX_focus_ICE_hrafninn_flygur
 		prerequisite = {
 			focus = TAR_the_north_remembers
 		}
@@ -3548,7 +3548,7 @@ if = {
 	}
 	focus = {
 		id = TAR_ignore_them #This path has consequences
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_attack_allies
 		mutually_exclusive = { focus = TAR_take_the_dragons_beyond_the_wall }
 		prerequisite = {
 			focus = TAR_warnings_of_the_walkers
@@ -3583,7 +3583,7 @@ if = {
 	focus = {
 		id = TAR_take_the_dragons_beyond_the_wall
 		mutually_exclusive = { focus = TAR_ignore_them }
-		icon = GFX_focus_research
+		icon = GFX_focus_CHL_fuerza_aerea_de_chile
 		prerequisite = {
 			focus = TAR_warnings_of_the_walkers
 		}
@@ -3617,7 +3617,7 @@ if = {
 	}
 	focus = {
 		id = TAR_meeting_at_the_dragonpit
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = {
 			focus = TAR_take_the_dragons_beyond_the_wall
 		}
@@ -3645,7 +3645,7 @@ if = {
 	}
 	focus = {
 		id = TAR_cersei_promises_a_lannister_army
-		icon = GFX_focus_research
+		icon = GFX_focus_hol_united_netherlands
 		mutually_exclusive = { focus = TAR_jon_snow_fs_everything_up }
 		prerequisite = {
 			focus = TAR_meeting_at_the_dragonpit
@@ -3676,7 +3676,7 @@ if = {
 	}
 	focus = {
 		id = TAR_jon_snow_fs_everything_up
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_strike_at_democracy2
 		mutually_exclusive = { focus = TAR_cersei_promises_a_lannister_army }
 		prerequisite = {
 			focus = TAR_meeting_at_the_dragonpit
@@ -3704,7 +3704,7 @@ if = {
 	}
 	focus = {
 		id = TAR_hold_up_in_winterfell
-		icon = GFX_focus_research
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
 		prerequisite = {
 			focus = TAR_cersei_promises_a_lannister_army
 			focus = TAR_jon_snow_fs_everything_up
@@ -3755,7 +3755,7 @@ if = {
 	}
 	focus = {
 		id = TAR_the_long_night
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_white_walkers
 		prerequisite = {
 			focus = TAR_hold_up_in_winterfell
 		}
@@ -3794,7 +3794,7 @@ if = {
 	}
 	focus = {
 		id = TAR_continue_the_game
-		icon = GFX_focus_research
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		prerequisite = {
 			focus = TAR_the_north_remembers
 			focus = TAR_an_unpopular_foreign_army
@@ -3834,7 +3834,7 @@ if = {
 	}
 	focus = {
 		id = TAR_handling_eurons_fleet
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = {
 			focus = TAR_continue_the_game
 		}
@@ -3866,7 +3866,7 @@ if = {
 	}
 	focus = {
 		id = TAR_burn_it_down
-		icon = GFX_focus_research
+		icon = GFX_focus_ITA_new_horizons
 		mutually_exclusive = { focus = TAR_wear_them_out }
 		prerequisite = {
 			focus = TAR_handling_eurons_fleet
@@ -3903,7 +3903,7 @@ if = {
 	}
 	focus = {
 		id = TAR_wear_them_out
-		icon = GFX_focus_research
+		icon = GFX_focus_ITA_modernize_ansaldo_facilities
 		mutually_exclusive = { focus = TAR_burn_it_down }
 		prerequisite = {
 			focus = TAR_handling_eurons_fleet
@@ -3938,7 +3938,7 @@ if = {
 	}
 		focus = {
 		id = TAR_siege_on_kings_landing
-		icon = GFX_focus_research
+		icon = GFX_focus_CHL_mobilize_the_veteran_legionaries
 		prerequisite = {
 			focus = TAR_burn_it_down
 			focus = TAR_wear_them_out
@@ -3972,7 +3972,7 @@ if = {
 	}
 	focus = {
 		id = TAR_the_iron_throne
-		icon = GFX_focus_research
+		icon = GFX_focus_TAR_iron_throne
 		prerequisite = {
 			focus = TAR_siege_on_kings_landing
 		}
@@ -4025,7 +4025,7 @@ if = {
 	}
 	focus = {
 		id = TAR_dump_daario
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = {
 			focus = TAR_play_the_game_of_thrones
 		}
