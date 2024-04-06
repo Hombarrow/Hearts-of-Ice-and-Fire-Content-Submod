@@ -12,11 +12,14 @@ add_ideas = {
 	faith_of_7
 	andal
 	non_believers
+	GOT_idea_isolated_and_nuetral
 }
 
 	set_country_flag = MAN_northern_bandits
 
 recruit_character = VAL_jonarryn
+recruit_character = VAL_lysaarryn
+recruit_character = VAL_littlefinger
 recruit_character = VAL_eonhunter
 
 set_technology = {

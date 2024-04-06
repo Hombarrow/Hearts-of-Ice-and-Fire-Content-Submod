@@ -1,6 +1,6 @@
 ideas = { 
 	country = {
-		IRE_agricultural_state = { 
+		IRE_growing_strong = { 
 			picture = generic_production_bonus
 			removal_cost = -1 
 				
@@ -8,11 +8,11 @@ ideas = {
 
 
 			modifier = { 
-		consumer_goods_factor = -0.1
-		conscription  = 0.025
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.3
+				conscription  = 0.025
 			}
 		}
-
 		IRE_citadel = { 
 			picture = generic_research_bonus
 			removal_cost = -1 
@@ -24,11 +24,6 @@ ideas = {
 			research_speed_factor = 0.075
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_construction = { 
 			picture = generic_production_bonus
 			removal_cost = -1 
@@ -40,12 +35,6 @@ ideas = {
 			production_speed_buildings_factor = 0.15
 			}
 		}
-	}
-}
-
-
-ideas = { 
-	country = {
 		IRE_dockyard_construction = { 
 			picture = generic_production_bonus
 			removal_cost = -1 
@@ -57,11 +46,6 @@ ideas = {
 			production_speed_dockyard_factor = 0.15
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_navy_quantity = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -73,11 +57,6 @@ ideas = {
 			industrial_capacity_dockyard = 0.15
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_navy_quality = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -94,12 +73,6 @@ ideas = {
 				navy_screen_defence_factor = 0.10
 			}
 		}
-	}
-}
-
-
-ideas = { 
-	country = {
 		IRE_knights = { 
 			picture = generic_army_bonus
 			removal_cost = -1 
@@ -112,11 +85,6 @@ ideas = {
 			cavalry_defence_factor = 0.15
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_steel_knights = { 
 			picture = generic_army_bonus
 			removal_cost = -1 
@@ -147,12 +115,6 @@ ideas = {
                 
 			}
 		}
-	}
-}
-
-
-ideas = { 
-	country = {
 		IRE_artillery_spotters = { 
 			picture = generic_army_bonus
 			removal_cost = -1 
@@ -173,15 +135,9 @@ ideas = {
 					ap_attack = 0.15
 					instant = yes }
                 
-			}
+				}
 			}
 		}
-	}
-}
-
-
-ideas = { 
-	country = {
 		IRE_destroyers_amount = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -194,12 +150,6 @@ ideas = {
 					instant = yes }
 			}
 		}
-	}
-}	
-
-
-ideas = { 
-	country = {
 		IRE_cruisers_amount = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -217,11 +167,6 @@ ideas = {
 					instant = yes }
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_bb_amount = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -239,12 +184,6 @@ ideas = {
 					instant = yes }
 			}
 		}
-	}
-}
-
-
-ideas = { 
-	country = {
 		IRE_destroyers_quality = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -260,12 +199,6 @@ ideas = {
 					instant = yes }
 			}
 		}
-	}
-}	
-
-
-ideas = { 
-	country = {
 		IRE_cruisers_quality = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 
@@ -289,11 +222,6 @@ ideas = {
 					instant = yes }
 			}
 		}
-	}
-}
-
-ideas = { 
-	country = {
 		IRE_bb_quality = { 
 			picture = generic_navy_bonus
 			removal_cost = -1 

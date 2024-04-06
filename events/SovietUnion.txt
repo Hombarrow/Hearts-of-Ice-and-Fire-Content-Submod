@@ -1524,11 +1524,6 @@ country_event = {
 	trigger = {
 		tag = SOV
 		SOV = { any_owned_state = { is_coastal = yes } }
-		SOV = { has_government = communism }
-#		FROM = {
-#			tag = LIT
-#			any_owned_state = { is_claimed_by = SOV }
-#		}
 		NOT = { has_country_flag = selmyis_here }
 		ENG = { has_country_flag = selmyis_gone }
 	}
@@ -2295,58 +2290,6 @@ country_event = {
 		remove_ideas = trotskyite_plot_purged
 	}
 
-}
-
-
-#Khal Drogo injured
-country_event = {
-	id = soviet.54
-	title = soviet.54.t
-	desc = {
-		text = soviet.54.d_nopurge
-		trigger = {
-			NOT = {
-				has_government = communism
-			}
-		}
-	}
-	desc = {
-		text = soviet.54.d_purge
-		trigger = {
-			has_government = communism
-		}
-	}
-	picture = GFX_report_event_soviet_purge_speech
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = SOV
-		SOV = { has_offensive_war = yes }
-		SOV = { has_completed_focus = TAR_stallion_world } 
-		SOV = { has_country_leader = { ruling_only = yes name = "Khal Drogo" } }
-		NOT = {
-			has_government = communism
-		}
-		has_civil_war = no
-	}
-
-	mean_time_to_happen = {
-		days = 2
-	}
-
-	immediate = { set_global_flag = khal_drogo_poisoned }
-
-	option = {
-		name = soviet.54.a
-		activate_mission = TAR_drogo_is_dying
-#		if = {
-#			limit = {
-#				has_idea = trotskyite_plot
-#			}
-#			remove_ideas = trotskyite_plot
-#		}
-	}
 }
 
 

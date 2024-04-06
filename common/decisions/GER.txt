@@ -50,6 +50,12 @@ political_actions = {
 		available = {
 #			original_tag = GER
 			CAN = { is_neighbor_of = ROOT }
+			OR = {
+				TAR = {
+					has_global_flag = viserion_killed
+				}
+				has_completed_focus = WTT_attackthewall
+			}
 		}
 
 		visible = {

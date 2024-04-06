@@ -172,6 +172,9 @@
  got_news.667.a:0 "Holy Crap!"
  got_news.667.b:0 "YEEEES!"
  got_news.667.c:0 "This is Madness!"
+ targaryen.17.t:0 "Khal Drogo Injured"
+ targaryen.17.desc:0 "In disciplining one of his false followers, Mago, the Khal has gotten a minor injury. Should be no issue though, he'll be fine."
+ targaryen.17.a:0 "Hmm..."
  
  #Ideas
  TAR_idea_dothraki_screamers:0 "Dothraki Screamers"

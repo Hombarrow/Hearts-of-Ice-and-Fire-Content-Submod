@@ -13,6 +13,37 @@ characters={
 			id=-1
 		}
 	}
+	
+	VAL_lysaarryn={
+		name="Lysa Arryn"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/Portrait_Lysa_Arryn.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1955.1.1.1"
+			id=-1
+		}
+	}
+	
+	VAL_littlefinger={
+		name="Petyr Baelish"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/Portrait_Petyr_Baelish.dds"
+			}
+		}
+		traits = {
+			littlefinger
+		}
+		country_leader={
+			ideology=despotism
+			expire="1955.1.1.1"
+			id=-1
+		}
+	}
 
 	VAL_eonhunter={
 		name="Eon Hunter"

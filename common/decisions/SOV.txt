@@ -7,13 +7,7 @@ operations = {
 		icon = generic_oppression
 
 		available = {
-#			FIN = { controls_state = 33 }
-			OR = {
-				271 = { is_owned_and_controlled_by = SOV }
-#				any_allied_country = { owns_and_controls_state = 33 }
-				LEB = { is_subject_of = SOV }
-			}
-#			has_war_with = ENG
+			always = no
 		}
 
 		#cost = GER_mefo_bill_counter?10

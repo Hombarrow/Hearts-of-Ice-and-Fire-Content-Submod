@@ -1,0 +1,16 @@
+characters={
+	PER_kraznys={
+		name = "Kraznys mo Nakloz"
+		desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
+		portraits={
+			civilian={
+				large="gfx/leaders/PER/Portrait_Kraznys.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

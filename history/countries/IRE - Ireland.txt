@@ -264,6 +264,7 @@ elections_allowed = no
 
 add_ideas = {
 	FRA_victors_of_wwi
+	IRE_growing_strong
 	faith_of_7
 	andal
 	non_believers

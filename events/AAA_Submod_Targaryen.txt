@@ -257,7 +257,9 @@ country_event = {
 			target = PER
 			type = annex_everything 
 		}
-
+		PER = {
+			retire_character = PER_kraznys
+		}
 		hidden_effect = {
 			PER = { country_event = { hours = 1 id = targaryen.8 }}
 		}
@@ -766,41 +768,27 @@ country_event = {
 
 }
 
-# Lhazareen pillaged
+#Khal Drogo injured
 country_event = {
 	id = targaryen.17
 	title = targaryen.17.t
 	desc = targaryen.17.desc
-	picture = GFX_report_event_soviet_tanks
-	fire_only_once = yes
 	
-	trigger = {
-#		has_global_flag = yunkish_rebels
-		tag = SOV
+	picture = GFX_report_event_soviet_purge_speech
 
-		SOV = { has_country_leader = { ruling_only = yes name = "Khal Drogo" } }
-		USA = { has_war_with = LEB }
-		LEB = { has_capitulated = yes }
-		SOV = { has_completed_focus = TAR_takelhazar }
-		SOV = { has_civil_war = no }
-#		date > 1936.2.16 # Trigger at some point after 1936 elections
-	}
-
-	mean_time_to_happen = {
-		hours = 1	# Historical outbreak time after elections
-	}
-		
+	is_triggered_only = yes
+	
 	option = {
-		name = targaryen.17.a		#We'll be in Westeros in no time
-		ai_chance = { factor = 40 }
-
-		add_political_power = 250
-
+		name = targaryen.17.a
+		set_global_flag = khal_drogo_poisoned
+		activate_mission = TAR_drogo_is_dying
 		hidden_effect = {
-
+			country_event = {
+				id = targaryen.18
+				days = 20
+			}
 		}
 	}
-
 }
 
 # Miri Marz Dur has cure!
@@ -841,7 +829,10 @@ country_event = {
 		add_political_power = -50
 
 #		hidden_effect = {
-			country_event = { id = targaryen.20 }
+			country_event = { 
+				id = targaryen.20 
+				days = 3
+			}
 #		}
 	}
 
@@ -861,7 +852,13 @@ country_event = {
 		ai_chance = { factor = 40 }
 
 		add_political_power = -50
-
+		set_autonomy = {
+			target = OMA
+			autonomous_state = autonomy_free
+			end_wars = no
+			end_civil_wars = no
+		}
+		remove_from_faction = OMA
 		kill_country_leader = yes
 		remove_unit_leader = 401 #drogo, field marshal
 		add_ideas = TAR_depression
@@ -877,71 +874,6 @@ country_event = {
 
 }
 
-# Where are my dragons!?
-country_event = {
-	id = targaryen.21
-	title = targaryen.21.t
-	desc = targaryen.21.desc
-	picture = GFX_report_event_soviet_tanks
-	
-	is_triggered_only = yes
-		
-	option = {
-		name = targaryen.21.a		#But only life can pay for life.
-		ai_chance = { factor = 40 }
-
-		if = {
-			limit = { has_idea = drogon }
-			SOV = { add_ideas = drogon }
-			remove_ideas = drogon
-		}
-
-		add_political_power = -50
-
-		kill_country_leader = yes
-		remove_unit_leader = 401 #drogo, field marshal
-		add_ideas = TAR_depression
-		if = {
-			limit = { has_idea = dothraki_bloodriders }
-			remove_ideas = dothraki_bloodriders
-		}
-		set_global_flag = drogo_dead
-		hidden_effect = {
-			SOV = {	country_event = { id = soviet.18 days = 5 } }
-		}
-	}
-
-}
-
-# Qarth captured
-country_event = {
-	id = targaryen.22
-	title = targaryen.22.t
-	desc = targaryen.22.desc
-	picture = GFX_report_event_soviet_tanks
-	
-	is_triggered_only = yes
-		
-	option = {
-		name = targaryen.22.a		#But only life can pay for life.
-		ai_chance = { factor = 40 }
-
-		add_political_power = -50
-
-		kill_country_leader = yes
-		remove_unit_leader = 401 #drogo, field marshal
-		add_ideas = TAR_depression
-		if = {
-			limit = { has_idea = dothraki_bloodriders }
-			remove_ideas = dothraki_bloodriders
-		}
-		set_global_flag = drogo_dead
-		hidden_effect = {
-			SOV = {	country_event = { id = soviet.18 days = 5 } }
-		}
-	}
-
-}
 
 # Drogos dead
 country_event = {
@@ -957,9 +889,13 @@ country_event = {
 		ai_chance = { factor = 40 }
 
 		add_political_power = -50
-		TAR = {
-			release = OMA
+		set_autonomy = {
+			target = OMA
+			autonomous_state = autonomy_free
+			end_wars = no
+			end_civil_wars = no
 		}
+		remove_from_faction = OMA
 		kill_country_leader = yes
 		remove_unit_leader = 401 #drogo, field marshal
 		add_ideas = TAR_depression
@@ -1089,7 +1025,7 @@ country_event = {
 	title = targaryen.28.t
 	desc = targaryen.28.desc
 	picture = GFX_report_event_soviet_tanks
-	
+	fire_only_once = yes
 	trigger = {
 		AND = {
 			has_completed_focus = TAR_harpys_in_the_alleys
@@ -1122,7 +1058,7 @@ country_event = {
 	title = targaryen.29.t
 	desc = targaryen.29.desc
 	picture = GFX_report_event_soviet_tanks
-	
+	fire_only_once = yes
 	is_triggered_only = yes
 		
 	option = {
@@ -1143,7 +1079,7 @@ country_event = {
 	title = targaryen.30.t
 	desc = targaryen.30.desc
 	picture = GFX_report_event_soviet_tanks
-	
+	fire_only_once = yes
 	is_triggered_only = yes
 		
 	option = {
@@ -1160,7 +1096,7 @@ country_event = {
 	title = targaryen.31.t
 	desc = targaryen.31.desc
 	picture = GFX_report_event_soviet_tanks
-	
+	fire_only_once = yes
 	is_triggered_only = yes
 		
 	option = {
@@ -1807,7 +1743,7 @@ country_event = {
 		ai_chance = { 
 			factor = 25 
 			modifier = {
-				TAR = {
+				SOV = {
 					OR = {
 						has_completed_focus = TAR_takeastapor
 						owns_state = 321
@@ -1816,7 +1752,7 @@ country_event = {
 				factor = 75
 			}
 		}
-		TAR = {
+		SOV = {
 			country_event = {
 				id = targaryen.39
 			}
@@ -1829,7 +1765,7 @@ country_event = {
 		ai_chance = { 
 			factor = 75
 			modifier = {
-				TAR = {
+				SOV = {
 					NOT = {
 						OR = {
 							has_completed_focus = TAR_takeastapor
@@ -1840,7 +1776,7 @@ country_event = {
 				factor = 0
 			}
 		}
-		TAR = {
+		SOV = {
 			country_event = {
 				id = targaryen.40
 			}
@@ -1866,6 +1802,8 @@ country_event = {
 			factor = 25 
 		}
 		add_ideas = TAR_idea_missing_leadership
+		set_global_flag = TAR_flag_greyworm_missing
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -2111,8 +2049,7 @@ country_event = {
 	option = {
 		name = targaryen.999.a		#TEST
 		ai_chance = { factor = 40 }
-		retire_character = WTT_night_king
-		#SOV = { add_to_faction = IRE }
+		set_state_controller = 332
 	}
 
 }

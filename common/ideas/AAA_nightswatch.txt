@@ -66,6 +66,9 @@ ideas = {
 				generate_wargoal_tension = 1.0
 				guarantee_tension = 1.0
 				surrender_limit = 1.0
+				ai_focus_defense_factor = 2.5
+				defence = 0.1
+				army_speed_factor = 0.05
 			}
 		}
 

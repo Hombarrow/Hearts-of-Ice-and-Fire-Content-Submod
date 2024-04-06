@@ -518,7 +518,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			complete_national_focus = TAR_takelhazar
 			add_political_power = 50
 			SOV = { country_event = soviet.40 }
 			hidden_effect = {
@@ -553,6 +552,7 @@ focus_tree = {
 				SOV = { country_event = soviet.24 }
 				news_event = { id = news.322 }
 			}
+			complete_national_focus = TAR_takelhazar
 		}
 	}
 
@@ -579,7 +579,10 @@ focus_tree = {
 				target = LEB
 				type = annex_everything
 			}
-#			add_political_power = 150
+			country_event = {
+				id = targaryen.17
+				days = 15
+			}
 		}
 	}
 
@@ -3420,6 +3423,9 @@ if = {
 		
 
 		completion_reward = {
+			SPR = {
+				remove_ideas = GOT_idea_isolated_and_nuetral
+			}
 			SOV = { add_to_faction = SPR }
 		}
 	}

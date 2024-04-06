@@ -75,7 +75,6 @@ if = {
 }
 
 	add_ideas = crows
-	add_ideas = CAN_great_depression_1
 
 give_guarantee = ICE
 give_military_access = ICE

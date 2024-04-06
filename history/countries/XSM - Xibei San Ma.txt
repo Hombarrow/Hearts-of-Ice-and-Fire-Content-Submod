@@ -86,6 +86,8 @@ set_popularities = {
 	neutrality = 100
 }
 
+recruit_character = LAO_yitish_leng
+
 create_country_leader = {
 	name = "Ma Bufang"
 	desc = ""

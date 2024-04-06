@@ -14,7 +14,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				generate_wargoal_tension_against = 1
+				generate_wargoal_tension_against = 0.99
 				justify_war_goal_time = 10
 			}
 		}
@@ -32,8 +32,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				ai_get_ally_desire_factor = -1
-				join_faction_tension = 1
+				ai_get_ally_desire_factor = -999
+				join_faction_tension = 0.99
 			}
 		}
 		GOT_idea_isolated_and_nuetral = {
@@ -50,8 +50,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				ai_get_ally_desire_factor = -1
-				join_faction_tension = 1
+				ai_get_ally_desire_factor = -999
+				join_faction_tension = 0.99
 			}
 		}
 		TAR_idea_dothraki_screamers = {

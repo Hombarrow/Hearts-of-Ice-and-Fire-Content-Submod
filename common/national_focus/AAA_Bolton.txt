@@ -1,0 +1,2899 @@
+focus_tree = {
+	id = Bolton_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+#			tag = ANG
+		}
+	}
+	default = no
+	focus = {
+		id = BLT_befriendStark
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		mutually_exclusive = {
+			focus = BLT_antagonizeStark
+		}
+		x = 2
+		y = 0
+
+		search_filters = {FOCUS_FILTER_STABILITY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 50
+
+			hidden_effect = {
+				news_event = { id = news.331 hours = 24 random_hours = 4 }
+			}
+
+		}
+
+	}
+	focus = {
+		id = BLT_antagonizeStark
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		mutually_exclusive = {
+			focus = BLT_befriendStark
+		}
+		x = 10
+		y = 0
+		relative_position_id = BLT_befriendStark
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.15
+			army_experience = 15
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_forgethornwood
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = BLT_befriendStark
+		}
+		mutually_exclusive = {
+			focus = BLT_negotiatewithStark
+		}
+		bypass = {
+			has_full_control_of_state = 113 #Hornwood
+		}
+		x = -1
+		y = 1
+		relative_position_id = BLT_befriendStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+
+			113 = {
+				if = {
+					limit = {
+						is_claimed_by = ITA
+					}
+					remove_claim_by = ITA
+				}
+			}
+			add_war_support = -0.05
+			FIN = { add_opinion_modifier = { target = ITA modifier = BOL_Hforget } }
+
+		}
+
+	}
+	focus = {
+		id = BLT_negotiatewithStark
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_befriendStark
+		}
+		mutually_exclusive = {
+			focus = BLT_forgethornwood
+		}
+
+		bypass = {
+			OR = {
+			has_full_control_of_state = 113 #Hornwood
+			ARM = { is_subject_of = ITA } #Hornwood
+			}
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = BLT_befriendStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = italy.4 }	
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_allyStark
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_forgethornwood
+			focus = BLT_negotiatewithStark
+		}
+		mutually_exclusive = {
+			focus = BLT_PeacefulCoexistence
+		}
+
+		available = {
+			country_exists = FIN
+			FIN = {
+				is_faction_leader = yes
+			}
+			NOT = { is_in_faction_with = FIN }
+		}
+
+		bypass = {
+			is_in_faction_with = FIN
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = BLT_forgethornwood
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = "ITA"			
+					value = 200
+				}	
+#				add_opinion_modifier = { target = FRA modifier = improve_relation } 
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_SouthBorder
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_antagonizeStark
+		}
+		x = -1
+		y = 1
+		relative_position_id = BLT_antagonizeStark
+
+		available = {
+			OR = {
+				has_full_control_of_state = 122 #Dreadfort
+				has_full_control_of_state = 119 #Overton
+				has_full_control_of_state = 129 #Lake
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 122 #Dreadfort
+				}
+				122 = { #Dreadfort
+#					add_building_construction = {
+#						type = anti_air_building
+#						level = 1
+#						instant_build = yes
+#					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 6152
+						}
+						instant_build = yes
+					}
+#					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 129 #Lake
+				}
+				129 = { #Lake
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 11
+							id = 184
+						}
+						instant_build = yes
+					}
+#					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 119 #Overton
+				}
+				119 = { #Overton
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 7458
+							id = 171
+							id = 9154
+							id = 125
+							id = 6023
+							id = 3379
+							id = 276
+						}
+						instant_build = yes
+					}
+#					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_NorthBorder
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_antagonizeStark
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_antagonizeStark
+
+		available = {
+			OR = {
+				has_full_control_of_state = 122 #Dreadfort
+				has_full_control_of_state = 129 #Lake
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 122 #Dreadfort
+				}
+				122 = { #Dreadfort
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 11058
+							id = 6155
+							id = 9171
+							id = 296
+							id = 9268
+							id = 6363
+						}
+						instant_build = yes
+					}
+#					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 129 #Lake
+				}
+				129 = { #Lake
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 11052
+							id = 3098
+							id = 11112
+							id = 9175
+							id = 12646
+						}
+						instant_build = yes
+					}
+#					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_EmergencySupplies
+		icon = GFX_focus_SOV_the_road_of_life
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_SouthBorder
+		}
+		prerequisite = {
+			focus = BLT_NorthBorder
+		}
+		x = 0
+		y = 2
+		relative_position_id = BLT_antagonizeStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BLT_siberian_lessons
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_hornwoodonlywithForce
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_EmergencySupplies
+		}
+		mutually_exclusive = {
+			focus = BLT_borderskirmish
+		}
+
+		available = {
+			NOT = { is_in_faction_with = FIN }
+		}
+
+		bypass = {
+			has_full_control_of_state = 113 #Hornwood
+		}
+
+		x = 0
+		y = 3
+		relative_position_id = BLT_antagonizeStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { is_subject_of = FIN }
+					}
+				}
+				create_wargoal = { 
+					type = take_state_focus 
+					target = FIN 
+					generator = { 113 135 }
+				}
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_declareNeutrality
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = BLT_befriendStark
+			focus = BLT_antagonizeStark
+		}
+		x = 5
+		y = 1
+		relative_position_id = BLT_befriendStark
+
+		available = {
+			NOT = { is_in_faction_with = FIN }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				ITA = { has_war = yes }
+			}
+			modifier = {
+				factor = 40
+				FIN = { has_completed_focus = STR_embargo_bolton }
+			}
+			modifier = {
+				has_war_with = FIN
+				factor = 0
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 50
+
+			custom_effect_tooltip = BLT_neutral_tt
+
+			hidden_effect = {
+				news_event = { id = news.332 hours = 12 random_hours = 4 }
+			}
+
+		}
+
+	}
+	focus = {
+		id = BLT_OurDestiny
+		icon = GFX_focus_LIT_organize_the_iron_wolf
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_declareNeutrality
+			focus = BLT_EmergencySupplies
+			focus = BLT_PeacefulCoexistence
+		}
+		x = 0
+		y = 3
+		relative_position_id = BLT_declareNeutrality
+
+		available = {
+			has_army_manpower = { size > 350000 }
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+			is_in_faction = no
+			is_subject = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_political_power = 250			
+			set_rule = { can_send_volunteers = yes }
+			create_faction = "The Hounds of Justice"
+		}
+
+	}
+
+	focus = {
+		id = BLT_attack_karstark
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_EmergencySupplies
+			focus = BLT_PeacefulCoexistence
+		}
+		x = 1
+		y = 2
+		relative_position_id = BLT_declareNeutrality
+
+		available = {
+			NOR = { NOT = { is_in_faction_with = FIN } }
+			NOT = { is_in_faction_with = NOR }
+			is_subject = no
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NOR
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_borderskirmish
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_EmergencySupplies
+		}
+		available = {
+			NOT = { is_in_faction_with = FIN }
+			has_war = no
+		}
+		mutually_exclusive = {
+			focus = BLT_hornwoodonlywithForce
+		}
+		bypass = {
+			has_full_control_of_state = 113 #Hornwood
+		}
+		x = 2
+		y = 3
+		relative_position_id = BLT_antagonizeStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			unlock_decision_category_tooltip = BOL_hornwoodborder			
+		}
+
+	}
+	focus = {
+		id = BLT_BearAndTheMaidenFair
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_antagonizeStark
+			focus = BLT_befriendStark
+		}
+		x = 7
+		y = 1
+		relative_position_id = BLT_antagonizeStark
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_timed_idea = { idea = BLT_bearmaiden_fair days = 178 }
+		}
+
+	}
+
+	focus = {
+		id = BLT_decideonhornwood
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_JoinLannister
+			focus = BLT_hornwoodonlywithForce
+			focus = BLT_borderskirmish
+		}
+		x = 0
+		y = 4
+		relative_position_id = BLT_antagonizeStark
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+			has_full_control_of_state = 113 #Hornwood
+			ARM = { is_subject_of = ITA } #Hornwood
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			ITA = { 
+				country_event = { id = italy.18 } 
+			}
+			if = {
+				limit = {
+					OR = {
+					has_full_control_of_state = 135 #Widow's watch
+					EST = { is_subject_of = ITA } #Widow's watch
+					}
+				}
+				ITA = { country_event = { id = italy.19 } }
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_UltimateOpportunist
+		icon = GFX_focus_focus_fra_maquis
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_PeacefulCoexistence
+			focus = BLT_EmergencySupplies
+		}
+		x = -1
+		y = 2
+		relative_position_id = BLT_declareNeutrality
+
+		available = {
+			NOT = { is_in_faction_with = FIN }
+			113 = { is_owned_and_controlled_by = FIN }
+			FIN = {
+				any_enemy_country = {
+					is_major = yes
+				}
+				divisions_in_state = {
+					state = 113	
+					size < 2
+				}
+			}
+			country_exists = FIN
+			divisions_in_state = {
+				state = 119	
+				size > 4
+			}
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			ITA = { transfer_state = 113 }
+
+			hidden_effect = {
+				news_event = { id = news.319 hours = 24 random_hours = 2 }
+			}
+
+		}
+
+	}
+	focus = {
+		id = BLT_PeacefulCoexistence
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_negotiatewithStark
+			focus = BLT_forgethornwood
+		}
+		mutually_exclusive = {
+			focus = BLT_allyStark
+		}
+		x = 0
+		y = 1
+		relative_position_id = BLT_negotiatewithStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = italy.20 }	
+				add_opinion_modifier = { target = ITA modifier = BOL_Hpeaceful } 
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_StarkInvestments
+		icon = GFX_focus_SOV_merge_plants
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_allyStark
+			focus = BLT_PeacefulCoexistence
+		}
+		available = {
+			is_in_faction_with = FIN
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_allyStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FIN = {
+				country_event = { id = stark.21 }
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = BLT_StarkInvestments }
+		x = 0
+		y = 1
+		relative_position_id = BLT_StarkInvestments
+		cost = 10
+
+		available = {
+			is_in_faction_with = FIN
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_ConnectWinterfell
+		icon = GFX_focus_POL_warsaw_main_station
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_PeacefulCoexistence
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_PeacefulCoexistence
+
+		available = {
+			has_full_control_of_state = 122 #Dreadfort
+			has_full_control_of_state = 119 #Overton
+			has_full_control_of_state = 129 #Lake
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					controls_state = 122
+					controls_state = 119
+					controls_state = 129
+				}
+				build_railway = {
+					path = { 1678 7458 10478 9910 11971 6120 507 6526}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_CivilInvestment
+		icon = GFX_focus_generic_industry_3
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_allyStark
+		}
+		available = {
+			is_in_faction_with = FIN
+		}
+		x = -1
+		y = 1
+		relative_position_id = BLT_allyStark
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BLT_jointstark_investments
+			FIN = {
+				add_ideas = BLT_jointstark_investments
+			}
+		}
+
+	}
+	focus = {
+		id = BLT_JoinLannister
+		icon = GFX_focus_hol_united_netherlands
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_EmergencySupplies
+		}
+		x = -2
+		y = 3
+		relative_position_id = BLT_antagonizeStark
+
+
+		available = {
+			country_exists = HOL
+			HOL = {
+				is_faction_leader = yes
+			}
+			NOT = { is_in_faction_with = HOL }
+		}
+
+		bypass = {
+			is_in_faction_with = HOL
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			HOL = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = "ITA"			
+					value = 200
+				}	
+#				add_opinion_modifier = { target = FRA modifier = improve_relation } 
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_MarryFreyGirl
+		icon = GFX_focus_generic_royal_wedding
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_BearAndTheMaidenFair
+		}
+		x = -1
+		y = 1
+		relative_position_id = BLT_BearAndTheMaidenFair
+
+		available = {
+			NOT = { has_war_with = SER }
+			has_country_leader = {
+				character = BOL_roose
+				ruling_only = yes
+			}
+			num_of_factories > 25
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 125
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BOL_walda
+			BOL_walda = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = liberalism
+						traits = { }
+						expire = "1965.1.1.1"
+					}
+					promote_leader = yes 
+				}
+#				promote_character = yes
+#				promote_character = liberalism
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_CivFactory1
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_MarryFreyGirl
+		}
+		x = 0
+		y = 1
+		relative_position_id = BLT_MarryFreyGirl
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BLT_autarky_idea
+		}
+
+	}
+
+	focus = {
+		id = BLT_SearchOilCoast
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_CivFactory1
+		}
+		x = -1
+		y = 2
+		relative_position_id = BLT_MarryFreyGirl
+
+		available = {
+			122 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 122
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_LegitimizeRamsaySnow
+		icon = GFX_focus_LIT_support_polish_fascists
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_BearAndTheMaidenFair
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_BearAndTheMaidenFair
+
+		available = {
+			has_country_leader = {
+				character = BOL_roose
+				ruling_only = yes
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_war_support = 0.15
+			add_popularity = { ideology = fascism popularity = 0.15 }
+			BOL_ramsay = {
+				set_character_name = "Ramsay Bolton"
+			}
+			add_political_power = 50
+		}
+
+	}
+
+	focus = {
+		id = BLT_killRoose
+		icon = GFX_focus_hun_assassinate_horthy
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_LegitimizeRamsaySnow
+		}
+#		prerequisite = {
+#			focus = BLT_MarryFreyGirl
+#		}
+		x = 1
+		y = 2
+		relative_position_id = BLT_BearAndTheMaidenFair
+
+		available = {
+			has_global_flag = BLT_anheirisborn
+			NOT = { has_global_flag = BLT_heirisnotdead }
+			has_country_leader = {
+				character = BOL_roose
+				ruling_only = yes
+			}
+			has_war = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ITA = { 
+				country_event = { id = italy.23 } 
+			}
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_popularity = { ideology = fascism popularity = 0.25 }
+
+			hidden_effect = {
+
+				set_politics = {
+					ruling_party = fascism			
+					elections_allowed = no
+				}
+
+#				news_event = { id = bftb_news.10 hours = 24 random_hours = 4 }
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = BLT_MilFactory1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_CivFactory1
+			focus = BLT_killRoose
+		}
+		x = 1
+		y = 2
+		relative_position_id = BLT_MarryFreyGirl
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = breda
+			show_ideas_tooltip = lancia
+			show_ideas_tooltip = caproni
+			show_ideas_tooltip = ITA_cantiere_oto_improved
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_HoundsOfJustice
+		icon = GFX_focus_SOV_penal_battalions
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_killRoose
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_killRoose
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_ideas = BLT_houndsofjustice
+			add_corps_commander_role = {
+				Character = BOL_damon
+				traits = { cavalry_officer media_personality }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 1
+				legacy_id=326
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_research
+		icon = GFX_focus_research2
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_SearchOilCoast
+		}
+		mutually_exclusive = {
+			focus = BLT_hunters
+		}
+		x = 0
+		y = 1
+		relative_position_id = BLT_SearchOilCoast
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = BLT_expandmaesters
+		}
+
+	}
+	focus = {
+		id = BLT_hunters
+		icon = GFX_focus_generic_manpower
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_HoundsOfJustice
+		}
+		mutually_exclusive = {
+			focus = BLT_research
+		}
+		x = 0
+		y = 1
+		relative_position_id = BLT_HoundsOfJustice
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			if = {
+				limit = { has_idea = BLT_houndsofjustice }
+				swap_ideas = {
+					remove_idea = BLT_houndsofjustice
+					add_idea = BLT_fearthehunters
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_ClearTerrain
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = BLT_antagonizeStark
+			focus = BLT_befriendStark
+		}
+		x = 15
+		y = 1
+		relative_position_id = BLT_antagonizeStark
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+#					OR = {
+						is_core_of = ITA
+#						has_state_flag = BUL_historical_bulgarian_claim_flag
+#					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_industrial_effort
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = BLT_ClearTerrain }
+		x = 0
+		y = 1
+		relative_position_id = BLT_ClearTerrain
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.65
+				uses = 2
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = BLT_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BLT_ClearTerrain }
+		x = -3
+		y = 1
+		relative_position_id = BLT_ClearTerrain
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BLT_construction_effort }
+		x = 1
+		y = 1
+		relative_position_id = BLT_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BLT_construction_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BLT_construction_effort_2 }
+		prerequisite = { focus = BLT_infrastructure_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_construction_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = BLT_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BLT_ClearTerrain }
+		x = 3
+		y = 1
+		relative_position_id = BLT_ClearTerrain
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BLT_production_effort }
+		x = 1
+		y = 1
+		relative_position_id = BLT_production_effort
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#	focus = {
+#		id = BLT_production_effort_3
+#		icon = GFX_goal_generic_construct_mil_factory
+#		prerequisite = { focus = BLT_production_effort_2 }
+#		x = 0
+#		y = 3
+#		relative_position_id = BLT_production_effort_2
+#		cost = 10
+
+#		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+#		available_if_capitulated = yes
+
+#		ai_will_do = {
+#			factor = 2
+#		}
+
+#		bypass = {
+#			custom_trigger_tooltip = {
+#				tooltip = production_effort_tt
+#				all_owned_state = {
+#					free_building_slots = {
+#						building = arms_factory
+#						size < 1
+#						include_locked = yes
+#					}					
+#				}
+#			}
+#		}
+
+#		complete_tooltip = {
+#			add_extra_state_shared_building_slots = 1
+#			add_building_construction = {
+#				type = arms_factory
+#				level = 1
+#				instant_build = yes
+#			}
+#		}		
+
+#		completion_reward = {
+#			random_owned_controlled_state = {
+#				limit = {
+#					free_building_slots = {
+#						building = arms_factory
+#						size > 0
+#						include_locked = yes
+#					}
+#					OR = {
+#						is_in_home_area = yes
+#						NOT = {
+#							owner = {
+#								any_owned_state = {
+#									free_building_slots = {
+#										building = arms_factory
+#										size > 0
+#										include_locked = yes
+#									}
+#									is_in_home_area = yes
+#								}
+#							}
+#						}
+#					}
+#				}
+#				add_extra_state_shared_building_slots = 1
+#				add_building_construction = {
+#					type = arms_factory
+#					level = 1
+#					instant_build = yes
+#				}
+#			}
+#		}
+#	}
+
+	focus = {
+		id = BLT_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BLT_production_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_production_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = BLT_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = BLT_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = BLT_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = BLT_infrastructure_effort_2 }
+		prerequisite = { focus = BLT_production_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = BLT_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BLT_buhovo_uranium_mines
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {
+			focus = BLT_antagonizeStark
+			focus = BLT_befriendStark
+		}
+		x = 10
+		y = 0
+		relative_position_id = BLT_ClearTerrain
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = BLT_army_effort }
+		x = -3
+		y = 1
+		relative_position_id = BLT_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+			 	bonus = 1.0
+			 	uses = 2
+				category = infantry_weapons
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = BLT_army_effort }
+		x = 0
+		y = 1
+		relative_position_id = BLT_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = BLT_equipment_effort }
+		x = 1
+		y = 1
+		relative_position_id = BLT_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = BLT_equipment_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BLT_equipment_effort_3 }
+		prerequisite = { focus = BLT_equipment_effort_2 }
+		x = 1
+		y = 1
+		relative_position_id = BLT_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.65
+				uses = 3
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_mechanization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = BLT_army_effort }
+		x = 3
+		y = 1
+		relative_position_id = BLT_army_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_a_bandits_war
+				uses = 2
+				bonus = 0.75
+				category = motorized_equipment
+				category = recon_tech
+			}
+
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				add_tech_bonus = {
+					name = ITA_a_bandits_war
+					bonus = 1.5
+					uses = 1
+					category = cat_armored_cars
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = BLT_mechanization_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = BLT_mechanization_effort }
+		x = 1
+		y = 1
+		relative_position_id = BLT_mechanization_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = BLT_aviation_effort }
+		prerequisite = { focus = BLT_armor_effort }
+		x = -1
+		y = 1
+		relative_position_id = BLT_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = BLT_doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = BLT_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.45
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_extra_tech_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = BLT_extra_tech_slot }
+		prerequisite = { focus = BLT_construction_effort_3 }
+		available = {
+#			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = -2
+		y = 1
+		relative_position_id = BLT_extra_tech_slot
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = BLT_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		relative_position_id = BLT_army_effort
+		cost = 12
+		prerequisite = {
+			focus = BLT_antagonizeStark
+			focus = BLT_befriendStark
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 15
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 15
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = BLT_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = BLT_naval_effort }
+		x = -2
+		y = 1
+		relative_position_id = BLT_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = BLT_naval_effort }
+		x = 0
+		y = 1
+		relative_position_id = BLT_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 15
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.25
+				uses = 3
+#				category = land_doctrine
+				category = naval_doctrine
+#				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = BLT_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = BLT_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = BLT_flexible_navy }
+		x = -1
+		y = 1
+		relative_position_id = BLT_flexible_navy
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = {
+			focus = BLT_destroyer_effort
+			focus = BLT_submarine_effort
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_destroyer_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_ExpandCoast
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		x = 2
+		y = 1
+		relative_position_id = BLT_naval_effort
+		prerequisite = {
+			focus = BLT_naval_effort
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 15
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		
+		}
+
+	}
+	focus = {
+		id = BLT_MineCoast
+		icon = GFX_focus_generic_mine_warfare
+		cost = 10.00
+		x = 1
+		y = 1
+		relative_position_id = BLT_ExpandCoast
+		prerequisite = {
+			focus = BLT_ExpandCoast
+		}
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = BLT_mine_warfare_ns
+
+			add_tech_bonus = {
+				name = BLT_mine_warfare
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
+			}
+		}
+
+	}
+
+	focus = {
+		id = BLT_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = BLT_ExpandCoast }
+		x = -1
+		y = 1
+		relative_position_id = BLT_ExpandCoast
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = BLT_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = {
+			focus = BLT_cruiser_effort
+			focus = BLT_MineCoast
+		}
+		x = 1
+		y = 1
+		relative_position_id = BLT_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+}
