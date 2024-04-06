@@ -1852,7 +1852,7 @@ if = {
 		x = -3
 		y = 2
 		relative_position_id = TAR_breakerofchains
-		cost = 5
+		cost = 3
 		
 		available = {
 			owns_state = 321
@@ -2302,22 +2302,24 @@ if = {
 		}
 		completion_reward = {
 			remove_ideas = TAR_idea_missing_leadership
-			IF = {
-				limit = {
-					has_completed_focus = TAR_bash_them_in_the_head
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_completed_focus = TAR_bash_them_in_the_head
+					}
+					country_event = {
+						id = targaryen.38
+						days = 3
+					}
 				}
-				country_event = {
-					id = targaryen.37
-					days = 3
-				}
-			}
-			IF = {
-				limit = {
-					has_completed_focus = TAR_cracking_down
-				}
-				country_event = {
-					id = targaryen.38
-					days = 3
+				IF = {
+					limit = {
+						has_completed_focus = TAR_cracking_down
+					}
+					country_event = {
+						id = targaryen.37
+						days = 3
+					}
 				}
 			}
 		}
@@ -2494,7 +2496,10 @@ if = {
 
 		completion_reward = {
 			#Varys Recruit
-			recruit_character = TAR_varys_the_spider
+			hidden_effect = {
+				recruit_character = TAR_varys_the_spider
+			}
+			custom_effect_tooltip = TAR_tooltip_recruit_varys.tt
 		}
 	}
 	focus = {
@@ -2611,7 +2616,7 @@ if = {
 		x = 1
 		y = 3
 		relative_position_id = TAR_overlord
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2637,7 +2642,7 @@ if = {
 		x = -1
 		y = 3
 		relative_position_id = TAR_overlord
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -3521,7 +3526,10 @@ if = {
 
 		completion_reward = {
 			SOV = { add_to_faction = FIN }
-			recruit_character = TAR_petyr_baelish
+			hidden_effect = {
+				recruit_character = TAR_petyr_baelish
+			}
+			custom_effect_tooltip = TAR_tooltip_recruit_littlefinger.tt
 			complete_national_focus = TAR_warnings_of_the_walkers
 		}
 	}
@@ -3676,11 +3684,27 @@ if = {
 		
 
 		completion_reward = {
+			remove_ideas = TAR_idea_iron_fleet_in_the_blackwater
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_ideas = TAR_idea_the_gangs_all_here
 			GER = {
 				add_ideas = WTT_idea_wights_on_the_march
+			}
+			custom_effect_tooltip = TAR_tooltip_peace_with_westeros.tt
+			hidden_effect = {
+				white_peace = HOL
+				white_peace = ENG
+				white_peace = ROM
+				white_peace = BEL
+				white_peace = FRA
+				white_peace = IRE
+				white_peace = BUL
+				white_peace = CAN
+				white_peace = HUN
+				white_peace = SWE
+				white_peace = ITA
+				white_peace = NOR
 			}
 		}
 	}
@@ -3708,8 +3732,24 @@ if = {
 			GER = {
 				add_ideas = WTT_idea_wights_on_the_march
 			}
+			remove_ideas = TAR_idea_iron_fleet_in_the_blackwater
 			add_stability = -0.05
 			add_war_support = -0.05
+			custom_effect_tooltip = TAR_tooltip_peace_with_westeros.tt
+			hidden_effect = {
+				white_peace = HOL
+				white_peace = ENG
+				white_peace = ROM
+				white_peace = BEL
+				white_peace = FRA
+				white_peace = IRE
+				white_peace = BUL
+				white_peace = CAN
+				white_peace = HUN
+				white_peace = SWE
+				white_peace = ITA
+				white_peace = NOR
+			}
 		}
 	}
 	focus = {
@@ -3735,32 +3775,79 @@ if = {
 		
 
 		completion_reward = {
-			white_peace = HOL
-			white_peace = ENG
-			white_peace = ROM
-			white_peace = BEL
-			white_peace = FRA
-			play_song = "thenightking-iceandfire"
-			CAN = {
-				create_faction = "Westeros vs the Long Night"
-				add_to_faction = FIN 
-				add_to_faction = BUL
-				add_to_faction = ITA
-				add_to_faction = NOR
-				add_to_faction = DEN
-				add_to_faction = ENG
-				add_to_faction = HOL
-				add_to_faction = IRE
-				add_to_faction = BEL
-				add_to_faction = SPR
-				add_to_faction = HUN
+			if = {
+				limit = {
+					country_exists = CAN
+				}
+				CAN = {
+					create_faction = "Westeros vs the Long Night"
+					add_to_faction = FIN 
+					add_to_faction = BUL
+					add_to_faction = ITA
+					add_to_faction = NOR
+					add_to_faction = DEN
+					add_to_faction = ENG
+					add_to_faction = HOL
+					add_to_faction = IRE
+					add_to_faction = BEL
+					add_to_faction = SPR
+					add_to_faction = HUN
+					add_to_faction = SOV
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = SOV
+				}
+				SOV = {
+					create_faction = "Westeros vs the Long Night"
+					add_to_faction = FIN 
+					add_to_faction = BUL
+					add_to_faction = ITA
+					add_to_faction = NOR
+					add_to_faction = DEN
+					add_to_faction = ENG
+					add_to_faction = HOL
+					add_to_faction = IRE
+					add_to_faction = BEL
+					add_to_faction = SPR
+					add_to_faction = HUN
+				}
+			}
+			else = {
+				ENG = {
+					create_faction = "Westeros vs the Long Night"
+					add_to_faction = FIN 
+					add_to_faction = BUL
+					add_to_faction = ITA
+					add_to_faction = NOR
+					add_to_faction = DEN
+					add_to_faction = SOV
+					add_to_faction = HOL
+					add_to_faction = IRE
+					add_to_faction = BEL
+					add_to_faction = SPR
+					add_to_faction = HUN
+				}
 			}
 			GER = {
 				declare_war_on = {
 					target = CAN
 					type = annex_everything
 				}
+				hidden_effect = {
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ENG
+						type = annex_everything
+					}
+					
+				}
 			}
+			play_song = "thenightking-iceandfire"
 		}
 	}
 	focus = {
@@ -3799,6 +3886,14 @@ if = {
 				add_ideas = WTT_night_king_dead
 
 				retire_character = WTT_night_king
+			}
+			hidden_effect = {
+				CAN = {
+					set_state_controller = 101
+					set_state_controller = 493
+					set_state_controller = 379
+					set_state_controller = 357
+				}
 			}
 		}
 	}
@@ -3928,7 +4023,10 @@ if = {
 		}
 		
 		available = {
-			has_war = yes
+			AND = {
+				has_war_with = ROM
+				has_war_with = ENG
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -3977,7 +4075,7 @@ if = {
 
 		completion_reward = {
 			add_war_support = 0.05
-			transfer_state = 33
+			transfer_state = 396
 		}
 	}
 	focus = {

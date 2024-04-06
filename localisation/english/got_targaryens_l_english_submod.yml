@@ -77,6 +77,9 @@
  TAR_the_long_night:0 "The Long Night"
  TAR_bring_all_the_bloodriders:0 "Bring all the Bloodriders"
  TAR_set_sail_for_dragonstone:0 "Set sail for Dragonstone"
+ TAR_tooltip_peace_with_westeros.tt:0 "§YWhite Peace with all of Westeros§W"
+ TAR_tooltip_recruit_varys.tt:0 "Recruit §YVarys§W"
+ TAR_tooltip_recruit_littlefinger.tt:0 "Recruit §YPetyr Baelish§W"
  
  #Events
  soviet.63.t:0 "Partial Overlord of Slavers Bay"

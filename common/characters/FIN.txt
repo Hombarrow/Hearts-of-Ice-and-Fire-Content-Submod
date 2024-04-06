@@ -6,11 +6,11 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/CAN/Portrait_Stark_Ned.dds"
-				small=GFX_generic_political_advisor_europe_2
+				small=GFX_eddard_stark
 			}
 			civilian={
 				large="gfx/leaders/FIN/Portrait_Stark_Ned.dds"
-				small=GFX_generic_political_advisor_europe_2
+				small=GFX_eddard_stark
 			}
 		}
 		country_leader={
@@ -56,6 +56,40 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=2
+		}
+	}
+	
+	STR_maester_luwin={
+		name="Maester Luwin"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Maester_luwin.dds"
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Maester_luwin.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	
+	STR_bran_stark={
+		name="Bran Stark"
+		portraits={
+			army={
+				large="gfx/leaders/FIN/Portrait_Stark_Bran.dds"
+			}
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Stark_Bran.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 

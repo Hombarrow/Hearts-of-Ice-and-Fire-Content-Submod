@@ -55,7 +55,8 @@ ideas = {
 			picture = generic_oppression
 
 			modifier = {
-				surrender_limit = -1
+				max_surrender_limit_offset = -1
+				forced_surrender_limit = -1
 			}
 		}
 		WTT_idea_wights_on_the_march = {
@@ -117,7 +118,9 @@ ideas = {
 				}
 			}
 			modifier = {
-				army_core_attack_factor = 0.60                
+				army_core_attack_factor = 0.60       
+				army_attack_factor = 0.25
+				army_defence_factor = 0.15			
 			}
 		}
 

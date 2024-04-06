@@ -2049,7 +2049,7 @@ country_event = {
 	option = {
 		name = targaryen.999.a		#TEST
 		ai_chance = { factor = 40 }
-		set_state_controller = 332
+		set_state_controller = 117
 	}
 
 }
