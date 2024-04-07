@@ -9,6 +9,8 @@ set_technology = {
 	tech_support = 1
 #	mass_assault = 1
 }
+	
+recruit_character = CAM_leng_native_queen
 
 	add_ideas = mixed
 	add_ideas = atheist

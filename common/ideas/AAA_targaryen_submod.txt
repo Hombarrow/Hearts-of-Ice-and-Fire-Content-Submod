@@ -54,6 +54,23 @@ ideas = {
 				join_faction_tension = 0.99
 			}
 		}
+		TAR_idea_conquering_the_seven_kingdoms = {
+			picture = chi_war_of_resistance3
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.75
+			}
+		}
 		TAR_idea_dothraki_screamers = {
 			picture = chi_war_of_resistance3
 			
@@ -187,8 +204,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 				breakthrough_bonus_against = 0.1
 			}
 		}

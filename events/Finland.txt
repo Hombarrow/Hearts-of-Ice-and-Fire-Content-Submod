@@ -800,13 +800,13 @@ country_event = {
 
 	option = {
 		name = finland.18.a
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 1 }
 		FRA = { country_event = { id = france.29 days = 1 } }
 		activate_mission = STR_wedding_is_happening
 	}
 	option = {
 		name = finland.18.b
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 99 }
 		FRA = { country_event = { id = france.30 days = 1 } }
 	}
 }
@@ -863,7 +863,6 @@ country_event = {
 				remove_unit_leader = 2
 			}
 		kill_country_leader = yes
-#		remove_unit_leader = 406
 		retire_character = STR_greatjon
 		add_timed_idea = { idea = STR_great_depression days = 178 }
 		set_global_flag = red_wedding

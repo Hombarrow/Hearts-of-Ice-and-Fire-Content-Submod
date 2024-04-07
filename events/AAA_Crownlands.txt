@@ -1,0 +1,35 @@
+﻿###########################
+# Crownlands Events
+###########################
+
+add_namespace = crownlands
+
+# Joffrey Dies at Purple Wedding
+country_event = {
+	id = crownlands.1
+	title = crownlands.1.t
+	desc = crownlands.1.d
+	picture = GFX_report_event_albanian_partisans
+	
+	trigger = {
+		OR = {
+			IRE = {
+				is_in_faction_with = ENG
+			}
+			IRE = {
+				has_ideology = fascism_ideology
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = crownlands.1.a
+		ai_chance = { factor = 90 }
+		ENG = {
+			retire_character = CWN_joffrey
+		}
+	}
+
+}

@@ -26,20 +26,6 @@ country_event = {
 	option = {
 		name = leng.1.a
 		ai_chance = { factor = 90 }
-
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "Ahim II"
-			desc = "POLITICS_AHIM_II_DESC"
-			picture = "gfx/leaders/SHX/Portrait_Ahim.dds"
-
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-
-			}
-		}
-
 		hidden_effect = {
 			country_event = { days = 31 id = leng.2 }
 		}

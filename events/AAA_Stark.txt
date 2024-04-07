@@ -322,10 +322,12 @@ country_event = {
 		FIN = {	is_puppet = no }
 		has_global_flag = red_wedding
 		FIN = { has_country_leader = { ruling_only = yes name = "Stark Regency Council" } }
-		FIN = { NOT = { 
-			has_civil_war = yes
-			has_idea = STR_great_depression
-		} }
+		FIN = { 
+			NOT = { 
+				has_civil_war = yes
+				has_idea = STR_great_depression
+			} 
+		}
 	}
 
 	mean_time_to_happen = {
@@ -335,7 +337,7 @@ country_event = {
 #	is_triggered_only = yes
 	
 	option = {
-		name = stark.13.a #legitimize Jon Snow
+		name = stark.13.a #Temporary Rally
 		trigger = { NOT = { has_war_with = CAN } }
 		ai_chance = { factor = 60 }
 
@@ -343,7 +345,7 @@ country_event = {
 	}
 	option = {
 		name = stark.13.b #bring back Arya
-		ai_chance = { factor = 29 }
+		ai_chance = { factor = 1 }
 
 		hidden_effect = {
 			country_event = { id = stark.14 days = 7 } 
@@ -396,37 +398,21 @@ country_event = {
 	
 	option = {
 		name = stark.15.a #bye Lord Snow
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 99 }
 
 		add_manpower = 1000
 
 		FIN = { country_event = { id = stark.16 } } 
 
-		if = {
-			limit = { has_government = democratic }
-      			retire_country_leader = yes
-			remove_unit_leader = 30
-
-		}else = {
-			remove_unit_leader = 30
-			create_country_leader = {
-				name = "Eddison Tollett"
-				desc = "POLITICS_MACKENZIE_KING_DESC"
-				picture = "gfx/leaders/CAN/Portrait_General_Edd.dds"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					#
-				}
-			}
-
-		}
-
+      	retire_country_leader = yes
+		remove_unit_leader = 30
+		recruit_character = NWC_eddison_tollet
+		recruit_character = NWC_eddison_tollet_neutrality
 	}
 
 	option = {
 		name = stark.15.b #I didn't ask for this
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 0 }
 
 		FIN = { country_event = { id = stark.17 } } 
 
@@ -443,12 +429,12 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = stark.16.a #Jon Stark
+		name = stark.16.a #Jon Snow
 		ai_chance = { factor = 60 }
 
 		create_country_leader = {
-			name = "Jon Stark"
-			desc = "POLITICS_BARRISTAN_SELMY_DESC"
+			name = "Jon Snow"
+			desc = "POLITICS_JON_SNOW_DESC"
 	
 			picture = "Portrait_Jon_snow.dds"
 			ideology = liberalism
@@ -458,10 +444,9 @@ country_event = {
 		}
 
 		create_field_marshal = {
-			name = "Jon Stark"
+			name = "Jon Snow"
 			picture = "Portrait_Jon_snow.dds"
 			traits = {  defensive_doctrine }
-#			id = 30
 			skill = 4
 			attack_skill = 2
 			defense_skill = 4

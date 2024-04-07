@@ -8,7 +8,7 @@ set_research_slots = 2
 
 add_ideas = limited_exports
 add_ideas = mixed
-add_ideas = lordof_light #atheist
+add_ideas = atheist
 add_ideas = non_believers
 
 remove_ideas = USA_monroe_doctrine_idea

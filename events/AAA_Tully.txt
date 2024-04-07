@@ -1298,61 +1298,7 @@ country_event = {
 
 	option = {
 		name = france.29.a
-#		trigger = {
-#			AND = {
-#				has_global_flag = stark_support_frey
-#				has_global_flag = lan_support_frey
-#			}
-#		}
-#		random_list = {
-#			50 = {
-#				country_event = { id = france.33 days = 30 }
-#			}
-#			50 = {
-#				country_event = { id = france.32 days = 30 }
-#			}
-#		}
 	}
-
-#	option = {
-#		name = france.29.a
-#		trigger = {
-#			NOT = {
-#				has_global_flag = stark_support_frey
-#				has_global_flag = lan_support_frey
-#			}
-#		}
-#		random_list = {
-#			50 = {
-#				country_event = { id = france.33 days = 30 }
-#			}
-#			50 = {
-#				country_event = { id = france.32 days = 30 }
-#			}
-#		}
-#	}
-			
-#	option = {
-#		name = france.29.a
-#		trigger = {
-#			AND = {
-#				has_global_flag = stark_support_frey
-#				NOT = { has_global_flag = lan_support_frey }
-#			}
-#		}
-#		country_event = { id = france.33 days = 30 }
-#	}
-
-#	option = {
-#		name = france.29.a
-#		trigger = {
-#			AND = {
-#			NOT = { has_global_flag = stark_support_frey }
-#			has_global_flag = lan_support_frey
-#			}
-#		}
-#		country_event = { id = france.32 days = 30 }
-#	}
 }
 
 # Tully - No Queen Frey, Edmure is compensation
@@ -1364,62 +1310,43 @@ country_event = {
 
 	is_triggered_only	= yes
 
-#	option = {
-#		name = france.30.a
-#		trigger = {
-#			AND = {
-#				FRA = { has_completed_focus = TLY_frey_treaty }
-#				has_global_flag = lan_support_frey
-#			}
-#		}
-#		random_list = {
-#			50 = {
-#				country_event = { id = france.33 days = 30 }
-#			}
-#			50 = {
-#				country_event = { id = france.34 days = 30 }
-#			}
-#		}
-#	}
-
 	option = {
 		name = france.30.a
 		trigger = {
 			NOT = {
-#				FRA = { has_completed_focus = TLY_frey_treaty }
 				has_global_flag = lan_support_frey
+			}
+		}
+		ai_chance = { 
+			factor = 5
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
 			}
 		}
 		random_list = {
 			50 = {
 				country_event = { id = france.33 days = 30 }
 			}
-			50 = {
+			25 = {
 				country_event = { id = france.34 days = 30 }
 			}
 		}
 	}
-			
-#	option = {
-#		name = france.30.a
-#		trigger = {
-#			AND = {
-#				FRA = { has_completed_focus = TLY_frey_treaty }
-#				NOT = { has_global_flag = lan_support_frey }
-#			}
-#		}
-#		country_event = { id = france.33 days = 30 }
-#	}
 
 	option = {
-		name = france.30.a
+		name = france.30.b
 		trigger = {
-#			AND = {
-#			NOT = { FRA = { has_completed_focus = TLY_frey_treaty } }
 			has_global_flag = lan_support_frey
-#			}
 		}
-		country_event = { id = france.34 days = 30 }
+		ai_chance = { 
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 99
+			}
+		}
+		country_event = { id = france.33 days = 30 }
 	}
 }
 

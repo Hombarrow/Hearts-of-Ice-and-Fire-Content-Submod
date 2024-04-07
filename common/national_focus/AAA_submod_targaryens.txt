@@ -1276,7 +1276,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = TAR_newcivilianfactory
-		cost = 20
+		cost = 15
 
 		available_if_capitulated = yes
 
@@ -2048,6 +2048,15 @@ if = {
 					id = targaryen.24
 					days = 30
 				}
+				PER = {
+					kill_country_leader = yes
+				}
+				IRQ = {
+					kill_country_leader = yes
+				}
+				EGY = {
+					kill_country_leader = yes
+				}
 			}
 		}
 	}
@@ -2181,6 +2190,10 @@ if = {
 			hidden_effect = {
 				country_event = {
 					id = targaryen.25
+					days = 15
+				}
+				country_event = {
+					id = targaryen.53
 					days = 15
 				}
 			}
@@ -2399,7 +2412,7 @@ if = {
 		x = 5
 		y = 6
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2482,7 +2495,7 @@ if = {
 		x = 2
 		y = 7
 		relative_position_id = TAR_overlord
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -2511,7 +2524,7 @@ if = {
 		x = 2
 		y = 8
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2566,7 +2579,7 @@ if = {
 		x = 6
 		y = 8
 		relative_position_id = TAR_overlord
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2604,6 +2617,12 @@ if = {
 		
 
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = targaryen.53
+					days = 15
+				}
+			}
 			add_stability = -0.05
 			add_political_power = 50
 			TAR_scripted_effects_lower_harpy = yes
@@ -2671,7 +2690,7 @@ if = {
 		x = -2
 		y = 4
 		relative_position_id = TAR_overlord
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2784,7 +2803,7 @@ if = {
 		x = 1
 		y = 9
 		relative_position_id = TAR_overlord
-		cost = 8
+		cost = 5
 		
 		ai_will_do = {
 			factor = 20
@@ -3084,6 +3103,7 @@ if = {
 		
 
 		completion_reward = {
+			add_ideas = TAR_idea_conquering_the_seven_kingdoms
 			hidden_effect = {
 				add_ideas = TAR_idea_iron_fleet_in_the_blackwater
 			}
@@ -3096,7 +3116,7 @@ if = {
 				type = annex_everything
 			}
 			SOV = {
-				set_state_owner = 178
+				transfer_state = 178
 			}
 			load_oob = "TAR_westeros"
 			IF = {
@@ -3188,7 +3208,7 @@ if = {
 		x = 7
 		y = 16
 		relative_position_id = TAR_overlord
-		cost = 8
+		cost = 3
 		available = {
 			has_war = yes
 		}
@@ -3400,6 +3420,9 @@ if = {
 		
 
 		completion_reward = {
+			hidden_effect = {
+				white_peace = IRE
+			}
 			SOV = { add_to_faction = IRE }
 			recruit_character = TAR_olenna_tyrell
 		}
@@ -3428,6 +3451,9 @@ if = {
 		
 
 		completion_reward = {
+			hidden_effect = {
+				white_peace = SPR
+			}
 			SPR = {
 				remove_ideas = GOT_idea_isolated_and_nuetral
 			}
@@ -3529,6 +3555,7 @@ if = {
 			hidden_effect = {
 				recruit_character = TAR_petyr_baelish
 			}
+			recruit_character = NWC_jon_snow
 			custom_effect_tooltip = TAR_tooltip_recruit_littlefinger.tt
 			complete_national_focus = TAR_warnings_of_the_walkers
 		}
@@ -3705,6 +3732,10 @@ if = {
 				white_peace = SWE
 				white_peace = ITA
 				white_peace = NOR
+				country_event = {
+					id = targaryen.54
+					days = 35
+				}
 			}
 		}
 	}
@@ -4002,7 +4033,7 @@ if = {
 					days = 15
 				}
 			}
-			remove_idea = TAR_idea_iron_fleet_in_the_blackwater
+			remove_ideas = TAR_idea_iron_fleet_in_the_blackwater
 			custom_effect_tooltip = TAR_this_may_backfire.tt
 		}
 	}
@@ -4162,7 +4193,7 @@ if = {
 		id = TAR_queen_of_essos
 		icon = GFX_focus_research
 		prerequisite = {
-			focus = TAR_clamping_down_on_slavers_bay
+			focus = TAR_doing_the_right_thing
 		}
 		x = -2
 		y = 10
@@ -4180,7 +4211,7 @@ if = {
 		
 
 		completion_reward = {
-		
+			add_political_power = 250
 		}
 	}
 	focus = {
@@ -4205,7 +4236,10 @@ if = {
 		
 
 		completion_reward = {
-		
+			annex_country = {
+				target = POR
+				transfer_troops = yes
+			}
 		}
 	}
 	focus = {
@@ -4217,8 +4251,12 @@ if = {
 		x = -1
 		y = 11
 		relative_position_id = TAR_overlord
-		cost = 10
-
+		cost = 8
+			
+		available = {
+			has_completed_focus = TAR_burn_the_coward_khals
+		}
+			
 		ai_will_do = {
 			factor = 20
 		}
@@ -4230,7 +4268,20 @@ if = {
 		
 
 		completion_reward = {
-		
+			add_state_core = 549
+			add_state_core = 675
+			add_state_core = 420
+			add_state_core = 676
+			add_state_core = 411
+			add_state_core = 418
+			add_state_core = 417
+			add_state_core = 406
+			add_state_core = 419
+			add_state_core = 230
+			add_state_core = 407
+			add_state_core = 587
+			add_state_core = 255
+			add_state_core = 505
 		}
 	}
 

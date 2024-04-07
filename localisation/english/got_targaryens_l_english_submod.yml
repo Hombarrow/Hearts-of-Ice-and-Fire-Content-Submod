@@ -80,8 +80,13 @@
  TAR_tooltip_peace_with_westeros.tt:0 "§YWhite Peace with all of Westeros§W"
  TAR_tooltip_recruit_varys.tt:0 "Recruit §YVarys§W"
  TAR_tooltip_recruit_littlefinger.tt:0 "Recruit §YPetyr Baelish§W"
+ TAR_dump_daario:0 "Dump Daario"
  
  #Events
+ targaryen.54.t:0 "She Didn't Actually Send Anything"
+ targaryen.54.desc:0 "Turns out, Cersei didn't intend to actually send any forces to come to our aid. We just have Jaime Lannister and Bronn... Among others. Being a spiteful scheming moron seems to be her thing."
+ targaryen.54.a:0 "Bro... BRO."
+ got_news.666.desc:0 "Over the Blackwater Bay, Euron Greyjoy Shot down and killed one of the Great Dragons belonging to Daenarys. This is groundbreaking, crushing, or amazing news depending on the point of view."
  soviet.63.t:0 "Partial Overlord of Slavers Bay"
  soviet.63.d:0 "We're clearly the most powerful having taken Meereen and Astapor, but the New Ghiscari still have a clamp on Slaver's Bay. What should be our Capitol?"
  soviet.63.a:0 "Meereen"

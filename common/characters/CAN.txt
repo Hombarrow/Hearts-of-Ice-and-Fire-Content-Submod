@@ -28,7 +28,106 @@ characters={
 			legacy_id=-1
 		}
 	}
-
+	NWC_jon_snow={
+		name="Jon Snow"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_Jon_snow.dds"
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Jon_snow.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	NWC_eddison_tollet={
+		name="Eddison Tollet"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_General_Edd.dds"
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_General_Edd.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	NWC_eddison_tollet_neutrality={
+		name="Eddison Tollet"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_General_Edd.dds"
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_General_Edd.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	NWC_alliser_thorne={
+		name="Alliser Thorne"
+		portraits={
+			army={
+				large="gfx/leaders/CAN/Portrait_Alliser_Thorne.dds"
+			}
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Alliser_Thorne.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
 	NWC_halfhand={
 		name="Qhorin Halfhand"
 		portraits={

@@ -972,10 +972,12 @@ country_event = {
 		retire_character = TAR_ser_jorah
 		set_global_flag = TAR_flag_jorah_dead
 		set_global_flag = TAR_flag_jorahs_secret
+		complete_national_focus = TAR_jorah_the_traitor
 	}
 	option = {
 		name = targaryen.26.b
 		ai_chance = { factor = 100 }
+		complete_national_focus = TAR_jorah_the_traitor
 		retire_character = TAR_ser_jorah
 		set_global_flag = TAR_flag_jorahs_secret
 		hidden_effect = {
@@ -1938,7 +1940,7 @@ country_event = {
 			remove_ideas = rheagul_2
 			remove_ideas = rheagul_1
 		}
-		country_event = {
+		news_event = {
 			id = got_news.667
 		}
 	}
@@ -1963,6 +1965,24 @@ country_event = {
 	}
 }
 
+
+#She didnt sent Sh$t
+country_event = {
+	id = targaryen.54
+	title = targaryen.54.t
+	desc = targaryen.54.desc
+	picture = GFX_report_event_soviet_tanks
+	fire_only_once = no
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = targaryen.54.a
+		ai_chance = { 
+			factor = 5
+		}
+	}
+}
 
 news_event = {
 	id = got_news.666

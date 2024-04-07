@@ -162,67 +162,12 @@ set_politics = {
 	elections_allowed = yes
 }
 
-create_country_leader = {
-	name = "Eddison Tollett"
-	desc = "POLITICS_MACKENZIE_KING_DESC"
-	picture = "gfx/leaders/CAN/Portrait_General_Edd.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jon Snow"
-	desc = "POLITICS_MACKENZIE_KING_DESC"
-	picture = "gfx/leaders/CAN/Portrait_Jon_snow.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Alliser Thorne"
-	desc = "POLITICS_ADRIEN_ARCAND_DESC"
-	picture = "Portrait_Alliser_Thorne.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Tim-Bucktu"
-	desc = "POLITICS_TIM_BUCK_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
 #create_country_leader = {
-#	name = "Qhorin Halfhand"
-#	desc = "POLITICS_HALFHAND_DESC"
-#	picture = "gfx/leaders/CAN/Portrait_Halfhand.dds"
+#	name = "Tim-Bucktu"
+#	desc = "POLITICS_TIM_BUCK_DESC"
+#	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 #	expire = "1965.1.1"
-#	ideology = centrism
-#	traits = {
-#		#
-#	}
-#}
-
-#create_country_leader = {
-#	name = "Jeor Mormont"
-#	desc = "POLITICS_JS_WOODSWORTH_DESC"
-#	picture = "gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
-#	expire = "1965.1.1"
-#	ideology = centrism
+#	ideology = marxism
 #	traits = {
 #		#
 #	}
@@ -255,13 +200,6 @@ create_field_marshal = {
 	traits = { offensive_doctrine }
 	skill = 2
 }
-
-#create_field_marshal = {
-#	name = "Jeor Mormont"
-#	portrait_path = "gfx/leaders/CAN/Portrait_Jeor_mormont.dds"
-#	traits = { defensive_doctrine }
-#	skill = 2
-#}
 
 create_corps_commander = {
 	name = "Jon Snow"

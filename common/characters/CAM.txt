@@ -1,0 +1,14 @@
+characters={
+	CAM_leng_native_queen ={
+		name = "Native Leng Queen"
+		portraits={
+			civilian={
+				large="gfx/leaders/XSM/Portrait_leng_native.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			id=-1
+		}
+	}
+}
