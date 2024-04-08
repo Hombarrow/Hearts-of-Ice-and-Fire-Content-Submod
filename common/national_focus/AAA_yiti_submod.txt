@@ -1,0 +1,35 @@
+focus_tree = {
+	id = yiti_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1400 }
+	
+	
+	focus = {
+	id = YIT_the_golden_empire
+	icon = GFX_focus_AST_war_japan
+	
+	x = 4
+	y = 0
+	cost = 10
+	
+	ai_will_do = {
+		factor = 10
+	}
+
+	available_if_capitulated = yes
+	
+	completion_reward = {
+		add_political_power = 150			
+	}
+}
