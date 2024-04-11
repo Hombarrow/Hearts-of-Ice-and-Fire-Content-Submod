@@ -121,6 +121,7 @@ if = {
 
 recruit_character = CWN_king_robbo
 recruit_character = CWN_joffrey
+recruit_character = CWN_tommen
 recruit_character = CWN_cersei
 recruit_character = CWN_thehound
 recruit_character = TAR_barristan
@@ -158,18 +159,6 @@ set_convoys = 800
 
 		ENG_king_edward
 	}
-
-	
-create_country_leader = {
-	name = "Tyrion Lannister"
-	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
-	picture = "Portrait_Britain_Neville_Chamberlain.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		
-	}
-}
 	remove_ideas = robert_party #Dead
 
 	complete_national_focus = limited_rearmament_focus
@@ -319,18 +308,6 @@ set_politics = {
 #		inexperienced_imperialist				
 #	}
 #}
-
-create_country_leader = {
-	name = "Tommen Baratheon"
-	desc = "POLITICS_KING_TOMMEN_DESC"
-	picture = "Portrait_Tommen_Baratheon.dds"
-
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-#		vulnerable_king
-	}
-}
 
 create_country_leader = {
 	name = "The High Sparrow"

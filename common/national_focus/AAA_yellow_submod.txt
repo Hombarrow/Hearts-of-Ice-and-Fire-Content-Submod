@@ -16,20 +16,21 @@ focus_tree = {
 	
 	
 	focus = {
-	id = YEL_mountains_of_the_morn
-	icon = GFX_focus_AST_war_japan
-	
-	x = 4
-	y = 0
-	cost = 10
-	
-	ai_will_do = {
-		factor = 10
-	}
+		id = YEL_mountains_of_the_morn
+		icon = GFX_focus_TUR_reform_the_balkan_pact
+		
+		x = 4
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
-	available_if_capitulated = yes
-	
-	completion_reward = {
-		add_political_power = 150			
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_political_power = 150			
+		}
 	}
 }

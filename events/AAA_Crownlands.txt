@@ -30,6 +30,46 @@ country_event = {
 		ENG = {
 			retire_character = CWN_joffrey
 		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1935.11.14"
+			election_frequency = 48
+			elections_allowed = no
+		}
 	}
+}
 
+# Tommen Found Dead
+country_event = {
+	id = crownlands.2
+	title = crownlands.2.t
+	desc = crownlands.2.d
+	picture = GFX_report_event_albanian_partisans
+	
+	trigger = {
+		OR = {
+			IRE = {
+				is_in_faction_with = ENG
+			}
+			IRE = {
+				has_ideology = fascism_ideology
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = crownlands.2.a
+		ai_chance = { factor = 90 }
+		ENG = {
+			retire_character = CWN_tommen
+		}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1935.11.14"
+			election_frequency = 48
+			elections_allowed = no
+		}
+	}
 }

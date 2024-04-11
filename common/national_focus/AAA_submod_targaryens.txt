@@ -4139,7 +4139,7 @@ if = {
 	}
 	focus = {
 		id = TAR_play_the_game_of_thrones
-		icon = GFX_focus_research
+		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = {
 			focus = TAR_the_urge_for_home
 		}
@@ -4191,7 +4191,7 @@ if = {
 	}
 	focus = {
 		id = TAR_queen_of_essos
-		icon = GFX_focus_research
+		icon = GFX_focus_focus_fra_revolution_utmost
 		prerequisite = {
 			focus = TAR_doing_the_right_thing
 		}
@@ -4216,7 +4216,7 @@ if = {
 	}
 	focus = {
 		id = TAR_volantis_joins_our_cause
-		icon = GFX_focus_research
+		icon = GFX_focus_GRE_hellenic_armed_forces
 		prerequisite = {
 			focus = TAR_queen_of_essos
 		}
@@ -4244,7 +4244,7 @@ if = {
 	}
 	focus = {
 		id = TAR_integrating_the_dothraki_sea
-		icon = GFX_focus_research
+		icon = GFX_focus_ITA_comandante_diavolo
 		prerequisite = {
 			focus = TAR_queen_of_essos
 		}
@@ -4366,7 +4366,7 @@ if = {
 
 	focus = {
 		id = TAR_takeMantarys
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_total_war
 		prerequisite = { focus = TAR_continueliberating }
 		cost = 5
 		x = -1

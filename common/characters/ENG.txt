@@ -48,7 +48,25 @@ characters={
 			id=-1
 		}
 	}
-
+	CWN_tommen={
+		name="Tommen I Baratheon"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Tommen_Baratheon.dds"
+				#small=GFX_generic_political_advisor_europe_2
+			}
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Tommen_Baratheon.dds"
+				#small=GFX_generic_political_advisor_europe_2
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits={}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	CWN_cersei={
 		name="Cersei Lannister"
 		portraits={

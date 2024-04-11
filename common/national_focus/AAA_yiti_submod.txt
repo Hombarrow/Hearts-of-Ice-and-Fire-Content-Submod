@@ -16,20 +16,146 @@ focus_tree = {
 	
 	
 	focus = {
-	id = YIT_the_golden_empire
-	icon = GFX_focus_AST_war_japan
-	
-	x = 4
-	y = 0
-	cost = 10
-	
-	ai_will_do = {
-		factor = 10
-	}
+		id = YIT_the_golden_empire
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		
+		x = 4
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
-	available_if_capitulated = yes
-	
-	completion_reward = {
-		add_political_power = 150			
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_political_power = 150			
+		}
+	}
+	focus = {
+		id = YIT_running_the_empire
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		
+		x = 4
+		y = 1
+		cost = 10
+		
+		prerequisite = {
+			focus = YIT_the_golden_empire 
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_stability = 0.1		
+		}
+	}
+	focus = {
+		id = YIT_the_traitors
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		
+		x = 4
+		y = 2
+		cost = 10
+		
+		prerequisite = {
+			focus = YIT_running_the_empire
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_war_support = 0.05	
+		}
+	}
+	focus = {
+		id = YIT_focus_the_orange
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		mutually_exclusive = { focus = YIT_focus_the_yellow }
+		mutually_exclusive = { focus = YIT_hold_them_both` }
+		
+		x = 3
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = YIT_the_traitors
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			create_wargoal = {
+				target = OYT
+				type = annex_everything
+			}		
+		}
+	}
+	focus = {
+		id = YIT_focus_the_yellow
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		mutually_exclusive = { focus = YIT_focus_the_orange }
+		mutually_exclusive = { focus = YIT_hold_them_both }
+		
+		x = 5
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = YIT_the_traitors
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			create_wargoal = {
+				target = VIN
+				type = annex_everything
+			}		
+		}
+	}
+	focus = {
+		id = YIT_hold_them_both
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		mutually_exclusive = { focus = YIT_focus_the_orange }
+		mutually_exclusive = { focus = YIT_focus_the_yellow }
+		
+		x = 7
+		y = 3
+		cost = 10
+		
+		prerequisite = {
+			focus = YIT_the_traitors
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			create_wargoal = {
+				target = VIN
+				type = annex_everything
+			}		
+		}
 	}
 }
