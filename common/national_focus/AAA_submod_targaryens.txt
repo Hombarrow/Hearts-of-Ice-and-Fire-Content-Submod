@@ -2242,7 +2242,7 @@ if = {
 			focus = TAR_cracking_down
 		}
 		x = 5
-		y = 3
+		y = 4
 		relative_position_id = TAR_overlord
 		cost = 5
 
@@ -2262,6 +2262,7 @@ if = {
 					days = 65
 				}
 			}
+			custom_effect_tooltip = "They say the fighting pits are unsafe... even for the spectators"
 		}
 	}
 	focus = {
@@ -2270,7 +2271,7 @@ if = {
 		prerequisite = {
 			focus = TAR_bash_them_in_the_head
 		}
-		x = 5
+		x = 6
 		y = 5
 		relative_position_id = TAR_overlord
 		cost = 8
@@ -2409,7 +2410,7 @@ if = {
 			focus = TAR_harpys_in_the_alleys
 			focus = TAR_cracking_down
 		}
-		x = 5
+		x = 4
 		y = 6
 		relative_position_id = TAR_overlord
 		cost = 5
